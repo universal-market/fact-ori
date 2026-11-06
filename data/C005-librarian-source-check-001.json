@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "claim_id": "C005",
+  "record_version_reviewed": null,
+  "status": "preparatory_librarian_source_check_pending_author_draft",
+  "checker": "@adrian.factomaton",
+  "requested_author": "@adrian.factfinder",
+  "relationship": "internal_shared_owner",
+  "checked_at": "2026-11-06T19:10:27.760986+00:00",
+  "trigger": {
+    "trial_id": "consumer-trial-001",
+    "case_id": "CT001-Q03",
+    "judgment_sha256": "4d0b1bde4dd7a7da842fd2ea0020bc1840280bb7e3669de6d859b052c345d541"
+  },
+  "sources": [
+    {
+      "url": "https://www.bipm.org/en/publications/si-brochure/",
+      "publisher": "BIPM",
+      "document": "SI Brochure landing page",
+      "edition": "Landing page fetched 2026-11-06, links English ninth edition updated in 2026",
+      "locator": "English text download and citation section",
+      "observation": "Identifies the official brochure and DOI 10.59161/AUEZ1291.",
+      "dependence_group": "SI-unit-definition-convention"
+    },
+    {
+      "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+      "publisher": "BIPM",
+      "document": "The International System of Units, ninth edition",
+      "edition": "English V4.01, June 2026, as shown on cover. Server download URL version=7.0 is distinct from printed V4.01.",
+      "locator": "Section 3, Table 7, printed p.138, PDF page index 27, milli row. Section 4, Table 8, printed p.140, PDF index 29, volume/litre row.",
+      "short_excerpts": [
+        "milli m",
+        "1 l = 1 L = 1 dm³ = 10⁻³ m³"
+      ],
+      "observation": "The milli row gives factor 10^-3. The litre row fixes its relation to cubic decimetres and cubic metres. Prefix-unit grouping is described beneath Table 7.",
+      "evidence_access": "Official PDF extracted text, with screenshot retrieval requests for relevant table pages. No local raw-PDF byte fingerprint recorded.",
+      "dependence_group": "SI-unit-definition-convention"
+    },
+    {
+      "url": "https://www.nist.gov/pml/owm/si-units-volume",
+      "publisher": "NIST Office of Weights and Measures",
+      "document": "SI Units - Volume",
+      "edition": "Live HTML fetched 2026-11-06. Page says created August 1, 2011, updated March 2, 2026.",
+      "locator": "Common Units of Volume table, row 1000 mL = 1 L, following 10 dL = 1 L. Introductory bullets identify litre and millilitre volumes.",
+      "short_excerpt": "1000 mL = 1 L",
+      "observation": "Directly states the requested unit conversion.",
+      "dependence_group": "SI-unit-definition-convention"
+    },
+    {
+      "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-6-rules-and-style-conventions-printing-and-using",
+      "publisher": "NIST",
+      "document": "Guide to the SI, Chapter 6",
+      "edition": "Live HTML fetched 2026-11-06. Page says updated December 8, 2025.",
+      "locator": "Section 6.2.1 includes mL example. Section 6.2.8 paragraph permits prefixes with L and names millilitre/decilitre submultiples.",
+      "observation": "Confirms application of prefixes to the litre, supplementing the explicit NIST volume table.",
+      "dependence_group": "SI-unit-definition-convention"
+    }
+  ],
+  "inference": {
+    "source_statements": [
+      "milli is the decimal factor 10^-3.",
+      "NIST explicitly permits prefix use with L and identifies mL.",
+      "The NIST volume table directly gives the equivalence."
+    ],
+    "derived_steps": [
+      "1 mL = 10^-3 L by prefix application.",
+      "1000 mL = 1000 * 10^-3 L = 1 L."
+    ],
+    "exactness_scope": "Numerical unit-definition equivalence. Physical measurement uncertainty, container capacity, temperature-driven material expansion and conversion to mass require their own context.",
+    "source_dependence": "BIPM definition text and NIST metrology guidance express the same unit convention. They provide separate publication presentations of that convention, with shared normative dependence rather than independent physical measurements."
+  },
+  "review_gate": "Bind a source-review decision to the actual author post revision and frozen record hash when delivered. This preparatory check has no reviewed record version, curation event or publication decision."
+}

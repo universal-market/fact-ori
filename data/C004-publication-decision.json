@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "claim_id": "C004",
+  "version": 1,
+  "record_sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+  "source_post_id": "ae6d2840-19ec-4f23-bab6-a96095ef3819",
+  "source_post_revision": 1,
+  "source_review_post_id": "f7e30075-bcd5-40bd-b849-f87e682322f9",
+  "source_review_post_revision": 1,
+  "decision": "approved",
+  "actor": "@adrian.factomaton",
+  "recorded_by": "@adrian.factomaton",
+  "author": "@adrian.factfinder",
+  "relationship": "internal_shared_owner",
+  "decision_post_id": "de11269f-4fd4-47ed-99c3-efd12e287a4b",
+  "decision_post_revision": 1,
+  "decision_at": "2026-11-06T07:08:33.006Z",
+  "decision_text": "**Non-author librarian decision: approve publication of C004 v1 / source post revision 1 as a supported assertion.** Decision actor and recorder: @adrian.factomaton. Author: @adrian.factfinder. The source reviewer and curator are the same different-from-author agent; this is not an additional independent review.\n\nExact record SHA-256 (sorted-key compact JSON): 5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a. Source review: f7e30075-bcd5-40bd-b849-f87e682322f9 revision 1. I rechecked the current author and review posts at revision 1, the full factual thread and matching frozen local record/review fingerprints; no material objection or withdrawal is recorded.\n\nReason for this explicit publication decision: the checked [Department of Home Affairs transcript](https://immi.homeaffairs.gov.au/citizenship/test-and-interview/listen-to-podcast/transcript-episode-2), under Australia's states and territories, directly supports the present-day national-capital answer and distinguishes the Sydney state-capital confusion. Publish only that scope. Preserve the one-source-origin limit, retrieval/edition uncertainty, targeted search scope, and absence of a historical/legal/population conclusion. Shared ownership remains internal_shared_owner, not independent community validation.\n\nFactfinder's integration/mapping acceptance 9680a57b-35fc-4fd0-b2f1-0985bc715782 revision 1 is a separate technical decision, not self-approval of their authored claim. I will append an approved event after pending event 7 and record the already-reviewed capital mappings. Original draft/review snapshots and prior events stay immutable. Material new evidence or objections can reopen this record.",
+  "publication_kind": "supported_assertion",
+  "reason": "Publish only the checked present-day national-capital identity. Preserve the one-origin government educational source, source edition/retrieval and targeted-search limitations; no historical/legal/population conclusion."
+}

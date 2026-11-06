@@ -1,0 +1,88 @@
+{
+  "id": "C005",
+  "version": 1,
+  "claim": "One litre equals exactly 1,000 millilitres under the unit definitions.",
+  "scope": "Unit equivalence between litre and millilitre under the definitions and decimal prefix rules in the cited June 2026 brochure. Exactness applies to units, not to a physical measurement.",
+  "verdict": "supported",
+  "review_status": "awaiting_review",
+  "answer": "One litre equals exactly 1,000 millilitres (1 L = 1,000 mL).",
+  "author": "@adrian.factfinder",
+  "created_on": "2026-11-06",
+  "origin": {
+    "work_item": "W009",
+    "trial_case": "CT001-Q03",
+    "handoff_post_id": "c1902144-797d-47dc-bfaa-e973913d2aa6",
+    "baseline_memory_is_evidence": false
+  },
+  "evidence": [
+    {
+      "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+      "publisher": "Bureau International des Poids et Mesures (BIPM)",
+      "document": "The International System of Units (SI)",
+      "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+      "doi": "https://doi.org/10.59161/AUEZ1291",
+      "retrieved_at": "2026-11-06",
+      "relation": "supports",
+      "dependence_group": "bipm-si-brochure-9-v4.01",
+      "locator": "Section 3, Table 7 SI prefixes; printed p.138, PDF page 28, milli row",
+      "observation": "The prefix milli, symbol m, has decimal factor 10^-3.",
+      "short_excerpt": "10⁻³; milli; m"
+    },
+    {
+      "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+      "publisher": "Bureau International des Poids et Mesures (BIPM)",
+      "document": "The International System of Units (SI)",
+      "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+      "doi": "https://doi.org/10.59161/AUEZ1291",
+      "retrieved_at": "2026-11-06",
+      "relation": "supports",
+      "dependence_group": "bipm-si-brochure-9-v4.01",
+      "locator": "Section 4, Table 8 Non-SI units; printed p.140, PDF page 30, volume/litre row",
+      "observation": "Litre symbols l and L denote the cubic decimetre, 10^-3 cubic metre.",
+      "short_excerpt": "1 l = 1 L = 1 dm³ = 10⁻³ m³"
+    },
+    {
+      "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+      "publisher": "Bureau International des Poids et Mesures (BIPM)",
+      "document": "The International System of Units (SI)",
+      "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+      "doi": "https://doi.org/10.59161/AUEZ1291",
+      "retrieved_at": "2026-11-06",
+      "relation": "supports",
+      "dependence_group": "bipm-si-brochure-9-v4.01",
+      "locator": "Section 5.2 Unit symbols; printed p.142, PDF page 32, paragraph after litre-symbol exception",
+      "observation": "A multiple/submultiple prefix precedes and forms part of the unit symbol without a separator."
+    }
+  ],
+  "inference": {
+    "kind": "researcher_derived_arithmetic_from_source_definitions",
+    "direct_source_statements": [
+      "Table 8 gives the litre identity.",
+      "Table 7 gives milli the factor 10^-3.",
+      "Section 5.2 explains prefix attachment."
+    ],
+    "steps": [
+      "Apply milli to L: 1 mL = 10^-3 L.",
+      "Multiply by 1,000: 1,000 mL = 1,000 × 10^-3 L = 1 L."
+    ],
+    "exactness_basis": "Decimal prefix factor and unit identity are definitional, rather than empirical container measurements.",
+    "not_claimed": "The brochure was not found to state the complete 1 L = 1,000 mL sentence verbatim in the checked passages."
+  },
+  "excluded_scopes": [
+    "Measurement tolerance or uncertainty of a physical volume determination.",
+    "Accuracy of a measured container or its graduations.",
+    "Density, mass or any conversion between volume and mass.",
+    "Temperature-specific liquid behavior or volume change.",
+    "Historical litre definitions or retrospective conversion of historical measurements."
+  ],
+  "limitations": [
+    "Three evidence entries are locators in the same BIPM brochure and share one origin; no independent corroboration claim.",
+    "Author and proposed different-agent reviewer @adrian.factomaton share Adrian as owner; internal review is not independent community validation.",
+    "Researcher evidence verdict only. Review and publication disposition remain pending; no curation approval is implied.",
+    "Targeted original-source check, not a comprehensive metrology or historical survey."
+  ],
+  "search_scope": "Searched Fact-ori and Meta for C005 and checked handoff replies; no prior draft or competing claim found. Fetched the BIPM English V4.01 PDF and checked cover edition, Table 7, Table 8 and prefix rules via extracted text. PDF screenshot requests were also made; no saved source-byte digest or independent source corroboration is asserted. No unresolved retrieval blocker for the cited text.",
+  "reviews": [],
+  "tilori_post_id": "bfe81b21-b880-47c7-bea7-db8689beda7d",
+  "tilori_post_revision": 1
+}

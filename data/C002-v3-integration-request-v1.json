@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "task": "W013",
+  "phase": "staged_migration_technical_mapping_review",
+  "claim_id": "C002",
+  "version": 3,
+  "record_sha256": "c9c2061fdeb249719016c09cf155148271da8a0d8378c0111e49f81d0a73aeb9",
+  "implementer_author": "@adrian.factomaton",
+  "requested_reviewer": "@adrian.factfinder",
+  "relationship": "internal_shared_owner",
+  "files": {
+    "data/C002-v3-inputs-proposed.json": "0290e0a885ecc70e36e0d0225163aafb455eb5f3d97863e84051773fd60c074f",
+    "data/C002-v3-catalog-proposed.json": "6268261052433b64f388612ea085de0f6cf3700eec33f6dc09e48d13694095e1",
+    "data/C002-v3-curation-proposed.json": "18aa37dee61e2f4a12a2945ad15d5e33fa6f981d9bf506b6546e2b47a6a5e155",
+    "data/C002-v3-post-snapshot.json": "da92ec26838a43d163b02a83485e3e67e063096c3e02abea01a7af28a0ecec66",
+    "data/C002-v3-integration-prior-inputs.json": "c03b724a2449a7533febf6d0ac9844115b146d348f7e76801f9a38355db20ac5",
+    "data/C002-v3.json": "8f1a7eb466935664c214e403a6b3b3c47becd03476c487bd20eb7e12768d81a4",
+    "data/C002-v3-factfinder-review.json": "aa5a7ad937edce27ab619a3e9403f885cb006cfb7d8699ecf76706fb1aafabe4",
+    "data/C005-test-library-fixture.json": "43023008aaec4ab821139f54b733392ebbd4149bb0889dace7e9ab6cf454b0f0",
+    "scripts/library_view.py": "bf48b793284a408fc6b2e2155ba5ff9e270d2ec3aed911e8e4a20b5e3b0a996d",
+    "scripts/test_ask.py": "3156dccac442e4d42c0a62ae1ea9ced13472784d8755a505f5447b2e58ca7cfa",
+    "scripts/test_library_inputs.py": "21e6ac7f35d340dee6a3fbd399a967ac7dbd1c8cbd23a37abea5ad635f6f7de2",
+    "scripts/test_C005_integration.py": "d1d40fb5fd8452eb7f2aac0ea5bace19e11c2102a2624d2c354fb01a718725df",
+    "scripts/test_evaluate_discovery.py": "b33c4a3e0ce0c72a4d1fa2597a2f073763dbf8f0400994ed0b860dd63bde391b",
+    "scripts/test_C002_v3_integration.py": "664aa6082c7b85c9a56f700b4a7f0c2fa813abee4654a953a9fe46ad8eeb0a1d"
+  },
+  "expected_promoted_catalog_semantic_sha256": "84ccffe9b18532a2948c0301b63fe90148da0261756eea0c042ca7a4d071ab9c",
+  "promotion_plan": "After exact technical/mapping acceptance and separate explicit non-author curation, copy proposed input manifest into library-inputs.json, copy proposed catalog with routing_review_status changed to reviewed into query-catalog.json, and copy proposed event prefix plus real approved event 12 quoting exact curator post, actor, decision timestamp and recorder into curation-events.json. All frozen proposed bytes remain historical review inputs.",
+  "checks": {
+    "current_suite_passed": 88,
+    "isolated_simulated_promoted_full_suite_passed": 88,
+    "command": "python -B -m unittest discover -s scripts -p 'test_*.py'"
+  },
+  "runtime_before_activation": "C002 v2 approved, old reviewed catalog and input manifest. C002 v3 staged outside active inputs. Projection code adds only a known draft-status note to historical metadata.",
+  "fixture_changes": "C005 and historical discovery evaluation tests select frozen pre-C002-migration library inputs. Legacy no-manifest test filters versions outside legacy scope. Current query test verifies selected version equals current pinned route; dedicated migration tests explicitly require v3 and old-route withholding. Prior accepted code/test bytes retained in integration-prior-inputs.",
+  "limits": "Tests establish consistency and withholding boundaries. Original source dependence, shared-owner review and version history apply. Historical trial/evaluation outputs and labels remain frozen."
+}

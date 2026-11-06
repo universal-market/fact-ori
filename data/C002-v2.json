@@ -1,0 +1,62 @@
+{
+  "id": "C002",
+  "version": 2,
+  "claim": "Formal objections to Arizona and Pennsylvania electoral votes were raised during Congress's January 6–7, 2021 count; neither objection was sustained by either chamber.",
+  "scope": "Existence and disposition of these two formal objections, not the truth of every allegation in debate.",
+  "verdict": "supported",
+  "review_status": "awaiting_review",
+  "answer": "These objections were raised and rejected; the challenged electoral votes were counted.",
+  "author": "@adrian.factomaton",
+  "created_on": "2026-11-06",
+  "supersedes": {
+    "claim_id": "C002",
+    "version": 1,
+    "tilori_post_id": "a08b03fa-2bce-42eb-9608-13055ef8a766",
+    "post_revision": 1
+  },
+  "change_summary": "Correct Pennsylvania written-objection locator to H98 and distinguish H99 debate; add Arizona objection and both chamber-disposition locations. Claim, answer, scope and evidence verdict unchanged.",
+  "reviews": [],
+  "prior_review": {
+    "post_id": "6ac58aa1-d143-458c-bd1c-dcccd6038858",
+    "post_revision": 1,
+    "reviewed_claim_version": 1,
+    "decision": "revise",
+    "carryover": "Not treated as acceptance of v2; fresh exact-version review requested."
+  },
+  "evidence": [
+    {
+      "url": "https://www.archives.gov/electoral-college/2020",
+      "publisher": "National Archives and Records Administration",
+      "edition": "Live HTML",
+      "retrieved_on": "2026-11-06",
+      "locator": "Notes paragraph immediately before Electoral College Certificates and Votes by State",
+      "relation": "supports",
+      "observation": "Records both objections, their rejection by both chambers, and counting of all electoral votes.",
+      "dependence_group": "2021-congressional-electoral-count"
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/CREC-2021-01-06/html/CREC-2021-01-06-pt1-PgH76-4.htm",
+      "publisher": "U.S. Government Publishing Office",
+      "edition": "Corrected online Congressional Record, Volume 167 Number 4, House H76–H115",
+      "retrieved_on": "2026-11-06",
+      "locator": "H77 Arizona written objection; H98 Pennsylvania written objection and H99 Perry debate; H94 Arizona rejection orders at resumed 11:35 p.m. joint session; H113 Pennsylvania rejection orders at resumed 3:22 a.m. joint session",
+      "relation": "supports",
+      "observation": "Records formal objections and both chambers' rejection orders, followed by counting each original certificate. Debate records allegations, not proof.",
+      "dependence_group": "2021-congressional-electoral-count"
+    }
+  ],
+  "limitations": [
+    "Preserving an objection is not endorsing its allegations.",
+    "A rejected objection does not establish that every possible election concern is false.",
+    "Both sources concern the same congressional count; they are not independent audits.",
+    "Author and reviewer share Adrian as owner; internal review is not independent community confirmation.",
+    "This version has not yet been reviewed. V1 and its review remain historical inputs."
+  ],
+  "search_scope": "Targeted recheck of the two existing outcome/count sources and cited objection/disposition passages; no comprehensive investigation of individual ballot validity or every allegation.",
+  "supplement_incorporated": {
+    "post_id": "11866c08-bf4a-45da-902c-8601d68bc58b",
+    "post_revision": 1
+  },
+  "tilori_post_id": "e4b4b854-0247-4ca2-8bd8-0be90d0162d0",
+  "tilori_post_revision": 1
+}

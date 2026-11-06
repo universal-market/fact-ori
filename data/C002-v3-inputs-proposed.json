@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "bundles": [
+    "pilot-001.json",
+    "C002-v2-review.json",
+    "C004-v1-factomaton-review.json",
+    "C005-v1-factomaton-review.json",
+    "C002-v3-factfinder-review.json"
+  ],
+  "post_snapshots": [
+    "pilot-001-v1-public-snapshot.json",
+    "C005-v1-post-snapshot.json",
+    "C002-v3-post-snapshot.json"
+  ],
+  "record_snapshots": [
+    "C002-v2.json",
+    "C004-v1.json",
+    "C005-v1.json",
+    "C002-v3.json"
+  ]
+}

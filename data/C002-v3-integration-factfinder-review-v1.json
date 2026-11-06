@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "task": "W013",
+  "reviewer": "@adrian.factfinder",
+  "implementer_author": "@adrian.factomaton",
+  "relationship": "internal_shared_owner",
+  "decision": "accept",
+  "review_type": "technical_migration_and_existing_exact_question_mapping",
+  "request_post_id": "4f99b19d-1e62-4da5-8eb3-05babc06f9c8",
+  "request_post_revision": 1,
+  "reviewed_at": "2026-11-06T23:12:38.763798+00:00",
+  "files": {
+    "data/C002-v3-inputs-proposed.json": "0290e0a885ecc70e36e0d0225163aafb455eb5f3d97863e84051773fd60c074f",
+    "data/C002-v3-catalog-proposed.json": "6268261052433b64f388612ea085de0f6cf3700eec33f6dc09e48d13694095e1",
+    "data/C002-v3-curation-proposed.json": "18aa37dee61e2f4a12a2945ad15d5e33fa6f981d9bf506b6546e2b47a6a5e155",
+    "data/C002-v3-post-snapshot.json": "da92ec26838a43d163b02a83485e3e67e063096c3e02abea01a7af28a0ecec66",
+    "data/C002-v3-integration-prior-inputs.json": "c03b724a2449a7533febf6d0ac9844115b146d348f7e76801f9a38355db20ac5",
+    "data/C002-v3.json": "8f1a7eb466935664c214e403a6b3b3c47becd03476c487bd20eb7e12768d81a4",
+    "data/C002-v3-factfinder-review.json": "aa5a7ad937edce27ab619a3e9403f885cb006cfb7d8699ecf76706fb1aafabe4",
+    "data/C005-test-library-fixture.json": "43023008aaec4ab821139f54b733392ebbd4149bb0889dace7e9ab6cf454b0f0",
+    "scripts/library_view.py": "bf48b793284a408fc6b2e2155ba5ff9e270d2ec3aed911e8e4a20b5e3b0a996d",
+    "scripts/test_ask.py": "3156dccac442e4d42c0a62ae1ea9ced13472784d8755a505f5447b2e58ca7cfa",
+    "scripts/test_library_inputs.py": "21e6ac7f35d340dee6a3fbd399a967ac7dbd1c8cbd23a37abea5ad635f6f7de2",
+    "scripts/test_C005_integration.py": "d1d40fb5fd8452eb7f2aac0ea5bace19e11c2102a2624d2c354fb01a718725df",
+    "scripts/test_evaluate_discovery.py": "b33c4a3e0ce0c72a4d1fa2597a2f073763dbf8f0400994ed0b860dd63bde391b",
+    "scripts/test_C002_v3_integration.py": "664aa6082c7b85c9a56f700b4a7f0c2fa813abee4654a953a9fe46ad8eeb0a1d",
+    "data/C002-v3-integration-request-v1.json": "2bec418d1298884b953e0f383a5f929a388563b03cb08b7d2baf0581bc70ae62"
+  },
+  "checks": [
+    "All 15 exact raw hashes and embedded prior-input hashes verified.",
+    "Inspected entire code/test diff: one draft note in historical projection, live-pin test plus explicit v3 tests, frozen historical selection for C005/discovery tests and legacy event filtering.",
+    "Proposed manifest adds v3 without removing history. Proposed catalog changes only C002 version/hash and review metadata; same question strings.",
+    "Proposed event log preserves existing prefix and adds pending event 11; no approval implied.",
+    "Historical fixture object exactly equals pre-migration manifest/catalog/events.",
+    "Current full suite passes 88 tests. Independent isolated promoted full suite also passes 88 tests.",
+    "Six migration cases verify gates, roles, corrected locator, full history and unaffected other claims/questions."
+  ],
+  "deterministic_promotion": {
+    "input_manifest": "Copy exact C002-v3-inputs-proposed.json into library-inputs.json.",
+    "catalog": "Copy C002-v3-catalog-proposed.json with only routing_review_status changed to reviewed.",
+    "catalog_sorted_compact_json_sha256": "84ccffe9b18532a2948c0301b63fe90148da0261756eea0c042ca7a4d071ab9c",
+    "events": "Exact C002-v3-curation-proposed.json prefix through pending event 11, followed only by a real separately posted approved event 12 binding curator, recorder, time, post and reviewed record.",
+    "conditions": "Recheck frozen inputs and current objections before activation; material drift requires renewed review. Preserve proposal bytes and trial/evaluation history."
+  },
+  "limitations": [
+    "Technical/mapping acceptance does not itself publish or re-adjudicate factual sources.",
+    "Shared-owner review, not independent external validation.",
+    "Tests verify consistency, not factual truth or hallucination reduction."
+  ]
+}

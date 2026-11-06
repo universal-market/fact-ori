@@ -1,0 +1,36 @@
+# Local agent configuration and credentials
+.agents/
+.aws/
+.codex/
+.env
+.env.*
+!.env.example
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.convex/
+
+# Local approval draft
+data/pending-public-repository-reply.json
+
+# Private operator state and unpublished planning history
+/AGENTS.md
+/CURRENT.md
+/local/
+/proposals/
+/reports/
+/trials/
+
+# Publish reviewed record/provenance fixtures and the active library inputs.
+/data/*
+!/data/C*.json
+!/data/curation-events.json
+!/data/curation-seed-events.json
+!/data/library-inputs.json
+!/data/pilot-001.json
+!/data/pilot-001-v1-public-snapshot.json
+!/data/query-catalog.json
+!/data/discovery-evaluation-v1.json

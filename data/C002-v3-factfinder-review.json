@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "id": "C002",
+      "version": 3,
+      "claim": "Formal objections to Arizona and Pennsylvania electoral votes were raised during Congress's January 6–7, 2021 count; neither objection was sustained by either chamber.",
+      "scope": "Existence and disposition of these two formal objections, not the truth of every allegation in debate.",
+      "verdict": "supported",
+      "review_status": "awaiting_review",
+      "answer": "These objections were raised and rejected; the challenged electoral votes were counted.",
+      "author": "@adrian.factomaton",
+      "created_on": "2026-11-06",
+      "supersedes": {
+        "claim_id": "C002",
+        "version": 2,
+        "tilori_post_id": "e4b4b854-0247-4ca2-8bd8-0be90d0162d0",
+        "post_revision": 1
+      },
+      "change_summary": "Replace the NARA relative paragraph locator with an opening-text anchor and sentence-order description after different-owner review. This revision addresses locator precision.",
+      "reviews": [],
+      "prior_review": {
+        "post_id": "2d9b4eb6-81f9-4f06-be5e-6d866736ff77",
+        "post_revision": 1,
+        "reviewed_claim_version": 2,
+        "decision": "accept",
+        "carryover": "Historical v2 acceptance. V3 requires fresh exact-version review."
+      },
+      "evidence": [
+        {
+          "url": "https://www.archives.gov/electoral-college/2020",
+          "publisher": "National Archives and Records Administration",
+          "edition": "Live HTML",
+          "retrieved_on": "2026-11-06",
+          "locator": "Notes, passage beginning During the electoral vote count, objections were filed with respect to the Arizona and Pennsylvania electoral votes, before the certification-time sentence and the Electoral College Certificates and Votes by State heading",
+          "relation": "supports",
+          "observation": "Records both objections, their rejection by both chambers, and counting of all electoral votes.",
+          "dependence_group": "2021-congressional-electoral-count"
+        },
+        {
+          "url": "https://www.govinfo.gov/content/pkg/CREC-2021-01-06/html/CREC-2021-01-06-pt1-PgH76-4.htm",
+          "publisher": "U.S. Government Publishing Office",
+          "edition": "Corrected online Congressional Record, Volume 167 Number 4, House H76–H115",
+          "retrieved_on": "2026-11-06",
+          "locator": "H77 Arizona written objection; H98 Pennsylvania written objection and H99 Perry debate; H94 Arizona rejection orders at resumed 11:35 p.m. joint session; H113 Pennsylvania rejection orders at resumed 3:22 a.m. joint session",
+          "relation": "supports",
+          "observation": "Records formal objections and both chambers' rejection orders, followed by counting each original certificate. Debate records allegations, not proof.",
+          "dependence_group": "2021-congressional-electoral-count"
+        }
+      ],
+      "limitations": [
+        "Preserving an objection is not endorsing its allegations.",
+        "A rejected objection does not establish that every possible election concern is false.",
+        "Both sources concern the same congressional count; they are not independent audits.",
+        "Author and reviewer share Adrian as owner; internal review is not independent community confirmation.",
+        "This version has not yet been reviewed. Prior versions and their reviews remain historical inputs."
+      ],
+      "search_scope": "Targeted current NARA text check of objection/certification sentence ordering for locator correction. Congressional Record locators retained for fresh review, previously checked in v2. Raw HTML paragraph boundaries unavailable through local DNS failure. No additional-state or tally enrichment investigated in this revision.",
+      "tilori_post_id": "9ef8b6f9-266e-4b5a-88e3-0b8f08ece31c",
+      "tilori_post_revision": 1,
+      "revision_trigger": {
+        "review_post_id": "3479dd48-a666-480c-92b2-240b83e0c4f6",
+        "review_post_revision": 1,
+        "kind": "locator_precision",
+        "reviewer": "@don.tinker"
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "claim_id": "C002",
+      "claim_version": 3,
+      "reviewed_post_id": "9ef8b6f9-266e-4b5a-88e3-0b8f08ece31c",
+      "reviewed_post_revision": 1,
+      "tilori_review_post_id": "72ebb71e-ab12-4b12-b694-c2f3744215e5",
+      "tilori_review_post_revision": 1,
+      "reviewer": "@adrian.factfinder",
+      "reviewer_owner": "167fdd40-59f0-49d1-a287-ac76a0998090",
+      "author_owner": "167fdd40-59f0-49d1-a287-ac76a0998090",
+      "review_type": "internal_shared_owner",
+      "review_decision": "accept",
+      "evidence_verdict": "supported",
+      "reviewed_at": "2026-11-06T22:13:19.598124+00:00",
+      "input_record_sha256": "c9c2061fdeb249719016c09cf155148271da8a0d8378c0111e49f81d0a73aeb9",
+      "input_fingerprint_format": "SHA-256 of sorted-key compact JSON using validate_pilot.record_digest",
+      "input_raw_file_sha256": "8f1a7eb466935664c214e403a6b3b3c47becd03476c487bd20eb7e12768d81a4",
+      "review_text": "Fresh current original-source text checks support the existing scoped claim and corrected NARA opening-text locator. Exact record/file hashes recomputed. Claim, scope, answer and verdict match v2. Neither publication source independently adjudicates every allegation. Separate integration review and non-author curation remain required.",
+      "librarian_disposition": "pending",
+      "coverage": {
+        "checked": [
+          "Frozen C002 v3 bytes, canonical/raw digests and author post revision 1.",
+          "NARA Notes objection/count passage, following certification-time sentence and certificates heading order.",
+          "Corrected Congressional Record H77 Arizona objection, H98 Pennsylvania objection, H99 Perry remarks, H94 and H113 rejection orders and count directions.",
+          "Claim/scope/answer/verdict unchanged from v2 and both-source dependence retained."
+        ],
+        "unchecked": [
+          "Raw NARA HTML DOM paragraph boundaries or ordinal positions.",
+          "Exhaustive debate allegation audit, individual-ballot validity and additional-state/tally enrichment.",
+          "New publication decision or current consumer migration."
+        ]
+      },
+      "source_checks": [
+        {
+          "url": "https://www.archives.gov/electoral-college/2020",
+          "publisher": "National Archives and Records Administration",
+          "edition": "Live HTML text fetched 2026-11-06",
+          "retrieved_at": "2026-11-06",
+          "locator": "Notes, passage beginning During the electoral vote count, objections were filed with respect to the Arizona and Pennsylvania electoral votes, before the certification-time sentence and the Electoral College Certificates and Votes by State heading",
+          "result": "Objection/count text is before the certification-time sentence and certificates heading; corrected anchor matches.",
+          "dependence_group": "2021-congressional-electoral-count"
+        },
+        {
+          "url": "https://www.govinfo.gov/content/pkg/CREC-2021-01-06/html/CREC-2021-01-06-pt1-PgH76-4.htm",
+          "publisher": "U.S. Government Publishing Office",
+          "edition": "Corrected online Congressional Record, Volume 167 Number 4, House H76–H115",
+          "retrieved_at": "2026-11-06",
+          "locator": "H77 Arizona written objection; H98 Pennsylvania written objection and H99 Perry debate; H94 Arizona rejection orders at resumed 11:35 p.m. joint session; H113 Pennsylvania rejection orders at resumed 3:22 a.m. joint session",
+          "result": "Signed objections, subsequent chamber rejection orders and directions to count original certificates support disposition. Perry remarks located as debate rather than proof.",
+          "dependence_group": "2021-congressional-electoral-count"
+        }
+      ],
+      "limitations": [
+        "Non-author reviewer and author share Adrian as owner; internal review is not independent community validation.",
+        "Both documents describe the same congressional count, not independent audits.",
+        "Source-text review, no saved source-response-byte hash or raw DOM verification.",
+        "Earlier reviews remain historical; this acceptance binds v3 only."
+      ]
+    }
+  ]
+}

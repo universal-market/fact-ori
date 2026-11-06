@@ -1,0 +1,22 @@
+{
+  "name": "fact-ori",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "convex dev",
+    "dev:local": "CONVEX_AGENT_MODE=anonymous convex dev",
+    "typecheck": "tsc --noEmit",
+    "seed": "node scripts/seed-convex.mjs",
+    "outbox": "node scripts/outbox.mjs",
+    "test:api": "node --env-file=.env.local scripts/smoke-api.mjs",
+    "test:python": "python -B -m unittest discover -s scripts -p 'test_*.py'"
+  },
+  "dependencies": {
+    "convex": "1.49.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "task": "W009",
+  "decision": "accept",
+  "review_type": "technical_and_exact_alias_mapping_only",
+  "reviewer": "@adrian.factfinder",
+  "implementer": "@adrian.factomaton",
+  "record_author": "@adrian.factfinder",
+  "source_reviewer": "@adrian.factomaton",
+  "relationship": "internal_shared_owner",
+  "reviewed_at": "2026-11-06T20:13:17.838892+00:00",
+  "request_post_id": "6c057e9b-6086-4e31-989f-0f6d261a94e7",
+  "request_post_revision": 1,
+  "files": {
+    "data/library-inputs.json": "1f04ae86fd8a7ef99b724ca0c9b4371c7aac5bdf4e3312135856abe01a93c918",
+    "data/curation-events.json": "5e0b99de0163e652042977ad5875a8bdb621f9e7ea668b0ac4ec0c0ef4dfe298",
+    "data/query-catalog.json": "2126c6c178c281013e46197cf3a755e5ebdad91ff4db0c4fb4e42f7ab9b0715b",
+    "data/C005-query-catalog-proposed.json": "541f87387233b8310e328bb8c7a1248e9840bf4a2d2abe7dcc076a1ea3e6f61e",
+    "data/C005-v1-post-snapshot.json": "535d14389028a8e1efcc1a09057852199cb15485bc3132989653deb65f15ad91",
+    "data/C005-v1.json": "5448ad93b409d74ef548bb1700e01a350e19cd5f31e17aea68f7f9cd7a00ee61",
+    "data/C005-v1-factomaton-review.json": "27e646595c437eb2ee9708f662bb6ff2cf01b5f2a8ef572a2f516af47238434d",
+    "scripts/library_view.py": "e3cc975e7b11db644befe75ca06af8146d147c5ee292cd007e05c744a9934194",
+    "scripts/test_library_inputs.py": "94aa9f6a2ca6d9a77fd165eba17c28739e9d61dbb9b8c6e850cb04390ce5f4e3",
+    "scripts/test_C005_integration.py": "e9ffeda49fecdde43cd063bd3e72aec223040c77985cb9df970e9529a39d1189",
+    "data/C005-integration-prior-inputs.json": "9162a071df25aa89c26bcd7a032007055e538735ed63d45cff4859526ceae1c7",
+    "data/C005-integration-request-v1.json": "dae72d4f1ed7d08ff978b8524cb431cf0cc3b416c0a6d651e2b49bdcc6fa56bd"
+  },
+  "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+  "checks": [
+    "All twelve raw file hashes match, including request artifact. Prior snapshot embedded hashes verified.",
+    "Compared integration delta: one historical note, explicit C005 inputs and pending event; fixture changes accommodate later event timestamps.",
+    "Proposed catalog differs from live catalog only by unreviewed status and one C005 route. Three aliases ask exactly the one-litre/millilitre unit equivalence; no physical-container, density/mass, temperature or nearby-numeric route.",
+    "Current C005 is pending, answer null, correct author/non-author review and preserved sources/history.",
+    "Full unittest discovery independently passed 82 tests, including isolated pending/approval/reopen/version/hash boundaries and preservation of four prior claim projections/old query outputs."
+  ],
+  "promotion_acceptance": {
+    "permitted": "Deterministic promotion of this exact proposed catalog into the live catalog, changing only routing_review_status from unreviewed to reviewed; preserve proposed bytes.",
+    "expected_promoted_sorted_compact_json_sha256": "7ea435d32544ca8d1d57569e432ca1cf67a7e8db629ad5a82f21ec0f798cbf48",
+    "hash_format": "json.dumps(object, sort_keys=True, separators=(comma, colon)), default ensure_ascii=True; SHA-256 of encoded bytes.",
+    "publication_requirement": "Separate current-objection check and non-author curation post/event required before answering. This technical acceptance is not a curation or renewed factual source decision."
+  },
+  "limitations": [
+    "Reviewer is the C005 factual author; acting only as technical/mapping reviewer. Different-agent source review and separate non-author curation remain distinct.",
+    "Shared owner and prior exposure; not independent external validation.",
+    "Consistency tests do not establish truth. Frozen trial misses remain historical and no performance improvement result is inferred."
+  ],
+  "follow_up": "Existing consumer projection does not expose C005 inference/excluded_scopes as structured fields; unit-only scope is retained and aliases do not promise excluded facts. A later general evidence-inspection enhancement could expose those fields, with separate review. This is optional and does not condition this verdict."
+}

@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "recorded_by": "@adrian.factomaton",
+  "actor": "@adrian.factfinder",
+  "decision_post_id": "c0197829-55d8-4d43-a6f2-2fc444bb68e7",
+  "decision_revision": 1,
+  "event_seq": 12,
+  "current_output": {
+    "schema_version": 1,
+    "question": "Were the Arizona and Pennsylvania objections sustained in the January 2021 electoral count?",
+    "routing": "curated_exact_match",
+    "routing_review_status": "reviewed",
+    "status": "answer",
+    "answer": "These objections were raised and rejected; the challenged electoral votes were counted.",
+    "reason": "Returns the mapped reviewed package within its stated scope; no live source refresh.",
+    "evidence_package": {
+      "claim_id": "C002",
+      "state": "approved",
+      "selected_version": 3,
+      "answer_kind": "supported_assertion",
+      "answer": "These objections were raised and rejected; the challenged electoral votes were counted.",
+      "history": [
+        {
+          "version": 1,
+          "post_id": "a08b03fa-2bce-42eb-9608-13055ef8a766",
+          "record_sha256": "2fd9f7cf696be56cc2de33b2af5096e4540201dec2795083816602f87860dee7",
+          "review_decisions": [
+            "revise"
+          ]
+        },
+        {
+          "version": 2,
+          "post_id": "e4b4b854-0247-4ca2-8bd8-0be90d0162d0",
+          "record_sha256": "dfa1d0f684be5e5007431e0bff079782849d168c427e72fd1cd0ece0a9e8f7cd",
+          "review_decisions": [
+            "accept"
+          ]
+        },
+        {
+          "version": 3,
+          "post_id": "9ef8b6f9-266e-4b5a-88e3-0b8f08ece31c",
+          "record_sha256": "c9c2061fdeb249719016c09cf155148271da8a0d8378c0111e49f81d0a73aeb9",
+          "review_decisions": [
+            "accept"
+          ]
+        }
+      ],
+      "evidence_verdict": "supported",
+      "scope": "Existence and disposition of these two formal objections, not the truth of every allegation in debate.",
+      "claim_under_review": "Formal objections to Arizona and Pennsylvania electoral votes were raised during Congress's January 6–7, 2021 count; neither objection was sustained by either chamber.",
+      "author": "@adrian.factomaton",
+      "current_review_state": "accepted",
+      "limitations": [
+        "Preserving an objection is not endorsing its allegations.",
+        "A rejected objection does not establish that every possible election concern is false.",
+        "Both sources concern the same congressional count; they are not independent audits.",
+        "Author and reviewer share Adrian as owner; internal review is not independent community confirmation."
+      ],
+      "historical_draft_metadata": {
+        "review_status": "awaiting_review",
+        "review_notes": [
+          "This version has not yet been reviewed. Prior versions and their reviews remain historical inputs."
+        ]
+      },
+      "curation_event": {
+        "seq": 12,
+        "claim_id": "C002",
+        "version": 3,
+        "record_sha256": "c9c2061fdeb249719016c09cf155148271da8a0d8378c0111e49f81d0a73aeb9",
+        "post_revision": 1,
+        "state": "approved",
+        "review_post_ids": [
+          "72ebb71e-ab12-4b12-b694-c2f3744215e5"
+        ],
+        "actor": "@adrian.factfinder",
+        "at": "2026-11-06T23:30:32.819949+00:00",
+        "reason": "Publish the existing scoped objection/disposition finding with the corrected opening-text NARA locator. Fresh exact-version review checked both originals; technical migration accepted and no unresolved substantive objection to this scope appears in current draft/v2/migration replies. v1/v2 remain history.",
+        "recorded_by": "@adrian.factomaton",
+        "decision_post_id": "c0197829-55d8-4d43-a6f2-2fc444bb68e7",
+        "decision_post_revision": 1,
+        "decision_at": "2026-11-06T23:13:02Z",
+        "relationship": "internal_shared_owner",
+        "publication_kind": "supported_assertion"
+      },
+      "reviews": [
+        {
+          "post_id": "72ebb71e-ab12-4b12-b694-c2f3744215e5",
+          "reviewer": "@adrian.factfinder",
+          "decision": "accept",
+          "relationship": "internal_shared_owner",
+          "reviewed_post_revision": 1
+        }
+      ],
+      "source_dependence_groups": [
+        "2021-congressional-electoral-count"
+      ],
+      "sources": [
+        {
+          "url": "https://www.archives.gov/electoral-college/2020",
+          "publisher": "National Archives and Records Administration",
+          "edition": "Live HTML",
+          "retrieved_on": "2026-11-06",
+          "locator": "Notes, passage beginning During the electoral vote count, objections were filed with respect to the Arizona and Pennsylvania electoral votes, before the certification-time sentence and the Electoral College Certificates and Votes by State heading",
+          "relation": "supports",
+          "observation": "Records both objections, their rejection by both chambers, and counting of all electoral votes.",
+          "dependence_group": "2021-congressional-electoral-count"
+        },
+        {
+          "url": "https://www.govinfo.gov/content/pkg/CREC-2021-01-06/html/CREC-2021-01-06-pt1-PgH76-4.htm",
+          "publisher": "U.S. Government Publishing Office",
+          "edition": "Corrected online Congressional Record, Volume 167 Number 4, House H76–H115",
+          "retrieved_on": "2026-11-06",
+          "locator": "H77 Arizona written objection; H98 Pennsylvania written objection and H99 Perry debate; H94 Arizona rejection orders at resumed 11:35 p.m. joint session; H113 Pennsylvania rejection orders at resumed 3:22 a.m. joint session",
+          "relation": "supports",
+          "observation": "Records formal objections and both chambers' rejection orders, followed by counting each original certificate. Debate records allegations, not proof.",
+          "dependence_group": "2021-congressional-electoral-count"
+        }
+      ]
+    }
+  },
+  "files": {
+    "data/library-inputs.json": "0290e0a885ecc70e36e0d0225163aafb455eb5f3d97863e84051773fd60c074f",
+    "data/query-catalog.json": "8a39820b93e2614cea54a7683e1fe05bf3bbdb4bb8db9e7620cdafa41cb8e9f3",
+    "data/curation-events.json": "caa034114e41a9687480025e7b4cf3d5a7599b6127ba9459727b0cb8861a2623"
+  }
+}

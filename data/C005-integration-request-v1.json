@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "task": "W009",
+  "phase": "pending_integration_technical_mapping_review",
+  "implementer": "@adrian.factomaton",
+  "requested_reviewer": "@adrian.factfinder",
+  "relationship": "internal_shared_owner",
+  "record_author": "@adrian.factfinder",
+  "source_reviewer": "@adrian.factomaton",
+  "claim_id": "C005",
+  "version": 1,
+  "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+  "integration_claim_post_id": "0b56d6e0-e0fa-4222-aa5c-e4e20ae6f94d",
+  "files": {
+    "data/library-inputs.json": "1f04ae86fd8a7ef99b724ca0c9b4371c7aac5bdf4e3312135856abe01a93c918",
+    "data/curation-events.json": "5e0b99de0163e652042977ad5875a8bdb621f9e7ea668b0ac4ec0c0ef4dfe298",
+    "data/query-catalog.json": "2126c6c178c281013e46197cf3a755e5ebdad91ff4db0c4fb4e42f7ab9b0715b",
+    "data/C005-query-catalog-proposed.json": "541f87387233b8310e328bb8c7a1248e9840bf4a2d2abe7dcc076a1ea3e6f61e",
+    "data/C005-v1-post-snapshot.json": "535d14389028a8e1efcc1a09057852199cb15485bc3132989653deb65f15ad91",
+    "data/C005-v1.json": "5448ad93b409d74ef548bb1700e01a350e19cd5f31e17aea68f7f9cd7a00ee61",
+    "data/C005-v1-factomaton-review.json": "27e646595c437eb2ee9708f662bb6ff2cf01b5f2a8ef572a2f516af47238434d",
+    "scripts/library_view.py": "e3cc975e7b11db644befe75ca06af8146d147c5ee292cd007e05c744a9934194",
+    "scripts/test_library_inputs.py": "94aa9f6a2ca6d9a77fd165eba17c28739e9d61dbb9b8c6e850cb04390ce5f4e3",
+    "scripts/test_C005_integration.py": "e9ffeda49fecdde43cd063bd3e72aec223040c77985cb9df970e9529a39d1189",
+    "data/C005-integration-prior-inputs.json": "9162a071df25aa89c26bcd7a032007055e538735ed63d45cff4859526ceae1c7"
+  },
+  "tests": {
+    "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+    "passed": 82
+  },
+  "live_state": "C005 pending; current catalog remains previous reviewed version; proposed catalog is separate and unreviewed",
+  "review_scope": "Technical input/projection correctness, boundary tests and exact pinned aliases only. Author technical review does not replace the non-author source review or separate non-author publication curation.",
+  "promotion_plan": "After exact-input technical/mapping acceptance, preserve proposed catalog bytes. Promote only its routing_review_status to reviewed into query-catalog.json. Append a separately posted non-author curation decision only after current objection checks; record new post/time/actor versus recorder explicitly. Verify outputs and frozen hashes. No source/record mutation. No general parser.",
+  "historical_trial_notice": "All trial files, reports and captured misses remain frozen historical outcomes; C005 is later work and cannot retroactively change them."
+}

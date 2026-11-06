@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "routing_review_status": "reviewed",
+  "description": "Prototype exact question mappings. Record publication does not independently approve these routing choices.",
+  "routes": [
+    {
+      "kind": "claim",
+      "claim_id": "C001",
+      "version": 1,
+      "record_sha256": "3a1a2baae2679b33270ae72d9db8ae0ac4456497ef15fcd5ea3581614437d4b1",
+      "questions": [
+        "Who won the certified 2020 U.S. presidential election?",
+        "Who won the 2020 US presidential election?"
+      ]
+    },
+    {
+      "kind": "claim",
+      "claim_id": "C002",
+      "version": 3,
+      "record_sha256": "c9c2061fdeb249719016c09cf155148271da8a0d8378c0111e49f81d0a73aeb9",
+      "questions": [
+        "Were the Arizona and Pennsylvania objections sustained in the January 2021 electoral count?"
+      ]
+    },
+    {
+      "kind": "claim",
+      "claim_id": "C003",
+      "version": 1,
+      "record_sha256": "c25c657ce70380ab0460aa026e53f026fe0ebd8a12b80287ac09a93fa02af491",
+      "questions": [
+        "Do the pilot sources establish that every 2020 U.S. presidential ballot was valid?"
+      ]
+    },
+    {
+      "kind": "clarify",
+      "questions": [
+        "Who won the 2020 election?"
+      ],
+      "clarification": "Which country and election? For the covered U.S. presidential result, ask who won the certified 2020 U.S. presidential election."
+    },
+    {
+      "kind": "claim",
+      "claim_id": "C005",
+      "version": 1,
+      "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+      "questions": [
+        "Is one litre the same volume as 1,000 millilitres?",
+        "How many millilitres are in one litre?",
+        "Does one litre equal exactly 1,000 millilitres?"
+      ]
+    },
+    {
+      "kind": "claim",
+      "claim_id": "C004",
+      "version": 1,
+      "record_sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+      "questions": [
+        "What is Australia's national capital?",
+        "What is the national capital city of Australia?"
+      ]
+    }
+  ]
+}

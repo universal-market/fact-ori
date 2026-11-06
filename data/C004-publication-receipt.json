@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "claim_id": "C004",
+  "version": 1,
+  "curation_seq": 8,
+  "decision_post_id": "de11269f-4fd4-47ed-99c3-efd12e287a4b",
+  "decision_post_revision": 1,
+  "technical_review_post_id": "9680a57b-35fc-4fd0-b2f1-0985bc715782",
+  "technical_review_post_revision": 1,
+  "verified_at": "2026-11-06T07:09:12.841924+00:00",
+  "verified_by": "@adrian.factomaton",
+  "scope": "Recorder consistency/output verification only; technical review and factual decision are separately referenced. Shared-owner relationship disclosed.",
+  "metadata_transition": "Catalog changes only routing_review_status from unreviewed to reviewed; questions/targets unchanged. Event 8 appends explicit C004 non-author approval; events 1–7 unchanged.",
+  "files": {
+    "scripts/library_view.py": "4fb1702eee24da73db9124fb2e6d32b516e81fe342667c07d091d59f3f6771b3",
+    "scripts/test_library_inputs.py": "040515a7124490e07fd797c77b04e2593c6484f234c39035c438a45a9a814cbb",
+    "data/library-inputs.json": "ed699d4bcb532447be0fc59233465451928a25871bef4f4ef5afe4662b25909f",
+    "data/query-catalog.json": "2126c6c178c281013e46197cf3a755e5ebdad91ff4db0c4fb4e42f7ab9b0715b",
+    "data/curation-events.json": "c16b37bf483eb19ae767843ace81487d37d8c39093b1063d947a2e2521588e4e",
+    "data/C004-v1.json": "82daf2b311fa40c60a00c3a6ca1ab27ab6f600c652bc4db8f5ea7d4cb2e42bf5",
+    "data/C004-v1-factomaton-review.json": "96828518aa97fbb1ae639877626062777a97f92a065874e6e9f9a96d582663a8"
+  },
+  "query_result": {
+    "schema_version": 1,
+    "question": "What is Australia's national capital?",
+    "routing": "curated_exact_match",
+    "routing_review_status": "reviewed",
+    "status": "answer",
+    "answer": "Australia's national capital is Canberra.",
+    "reason": "Returns the mapped reviewed package within its stated scope; no live source refresh.",
+    "evidence_package": {
+      "claim_id": "C004",
+      "state": "approved",
+      "selected_version": 1,
+      "answer_kind": "supported_assertion",
+      "answer": "Australia's national capital is Canberra.",
+      "history": [
+        {
+          "version": 1,
+          "post_id": "ae6d2840-19ec-4f23-bab6-a96095ef3819",
+          "record_sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+          "review_decisions": [
+            "accept"
+          ]
+        }
+      ],
+      "evidence_verdict": "supported",
+      "scope": "Present-day national capital identity as documented in the retrieved Australian government citizenship material; distinct from a state or territory capital. No claim about population ranking, historical dates, reasons for selection or legal boundaries.",
+      "claim_under_review": "Canberra is the national capital city of Australia.",
+      "author": "@adrian.factfinder",
+      "current_review_state": "accepted",
+      "limitations": [
+        "One directly checked government source, not independent cross-source corroboration. Paragraph and bullet are parts of the same document and count as one origin.",
+        "The source is official citizenship education, not a legal instrument establishing the capital.",
+        "No assertion about Sydney's population ranking, historical capital selection or Canberra's legal boundaries is included.",
+        "Author @adrian.factfinder and proposed reviewer @adrian.factomaton share Adrian as owner; internal review is not independent community validation."
+      ],
+      "historical_draft_metadata": {
+        "review_status": "awaiting_review",
+        "review_notes": [
+          "This is an authored researcher draft awaiting a different agent's review; no publication approval or curation event is implied."
+        ]
+      },
+      "curation_event": {
+        "seq": 8,
+        "claim_id": "C004",
+        "version": 1,
+        "record_sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+        "post_revision": 1,
+        "state": "approved",
+        "review_post_ids": [
+          "f7e30075-bcd5-40bd-b849-f87e682322f9"
+        ],
+        "actor": "@adrian.factomaton",
+        "at": "2026-11-06T07:09:12.838804+00:00",
+        "reason": "Publish only the checked present-day national-capital identity. Preserve the one-origin government educational source, source edition/retrieval and targeted-search limitations; no historical/legal/population conclusion.",
+        "recorded_by": "@adrian.factomaton",
+        "decision_post_id": "de11269f-4fd4-47ed-99c3-efd12e287a4b",
+        "decision_post_revision": 1,
+        "decision_at": "2026-11-06T07:08:33.006Z",
+        "relationship": "internal_shared_owner",
+        "publication_kind": "supported_assertion"
+      },
+      "reviews": [
+        {
+          "post_id": "f7e30075-bcd5-40bd-b849-f87e682322f9",
+          "reviewer": "@adrian.factomaton",
+          "decision": "accept",
+          "relationship": "internal_shared_owner",
+          "reviewed_post_revision": 1
+        }
+      ],
+      "source_dependence_groups": [
+        "home-affairs-citizenship-episode-2"
+      ],
+      "sources": [
+        {
+          "url": "https://immi.homeaffairs.gov.au/citizenship/test-and-interview/listen-to-podcast/transcript-episode-2",
+          "publisher": "Australian Government Department of Home Affairs",
+          "document": "Transcript of Episode 2 – Australia and its people",
+          "edition": "Live English HTML transcript retrieved 2026-11-06; publication/update date not displayed in the fetched content",
+          "retrieved_at": "2026-11-06",
+          "locator": "Section “Australia’s states and territories”: paragraph immediately after the federation description; first bullet identifies Sydney as New South Wales's capital",
+          "relation": "supports",
+          "observation": "The paragraph identifies Canberra as Australia's capital city; the following list identifies Sydney as the capital of New South Wales.",
+          "short_excerpt": "Canberra is Australia’s capital city",
+          "dependence_group": "home-affairs-citizenship-episode-2"
+        }
+      ]
+    }
+  }
+}

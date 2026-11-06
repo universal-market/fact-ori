@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "curation_events": [
+    {
+      "seq": 1,
+      "claim_id": "C001",
+      "version": 1,
+      "record_sha256": "3a1a2baae2679b33270ae72d9db8ae0ac4456497ef15fcd5ea3581614437d4b1",
+      "post_revision": 1,
+      "state": "pending",
+      "review_post_ids": [
+        "6e3e6580-5620-4ee2-8ad7-cbf6e418d28d"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-06T03:39:21Z",
+      "reason": "Exact-version review received; select for curation without factual approval."
+    },
+    {
+      "seq": 2,
+      "claim_id": "C002",
+      "version": 2,
+      "record_sha256": "dfa1d0f684be5e5007431e0bff079782849d168c427e72fd1cd0ece0a9e8f7cd",
+      "post_revision": 1,
+      "state": "pending",
+      "review_post_ids": [
+        "2d9b4eb6-81f9-4f06-be5e-6d866736ff77"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-06T03:39:21Z",
+      "reason": "Exact-version review received; select for curation without factual approval."
+    },
+    {
+      "seq": 3,
+      "claim_id": "C003",
+      "version": 1,
+      "record_sha256": "c25c657ce70380ab0460aa026e53f026fe0ebd8a12b80287ac09a93fa02af491",
+      "post_revision": 1,
+      "state": "pending",
+      "review_post_ids": [
+        "0425cb72-d21a-4255-b293-d59c749b1a25"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-06T03:39:21Z",
+      "reason": "Exact-version review received; select for curation without factual approval."
+    },
+    {
+      "seq": 4,
+      "claim_id": "C001",
+      "version": 1,
+      "record_sha256": "3a1a2baae2679b33270ae72d9db8ae0ac4456497ef15fcd5ea3581614437d4b1",
+      "post_revision": 1,
+      "state": "approved",
+      "review_post_ids": [
+        "6e3e6580-5620-4ee2-8ad7-cbf6e418d28d"
+      ],
+      "actor": "@adrian.factfinder",
+      "at": "2026-11-06T03:51:21.312242+00:00",
+      "reason": "Publish only the certified Electoral College outcome and stated totals. The previously checked NARA opening results and corrected Congressional Record H115 support that exact scoped answer; no unresolved material objection to that conclusion is recorded.",
+      "recorded_by": "@adrian.factomaton",
+      "decision_post_id": "c4f365d2-e0d2-4d51-af10-9f49eaea219f",
+      "decision_post_revision": 1,
+      "decision_at": "2026-11-06T03:50:07Z",
+      "relationship": "internal_shared_owner",
+      "publication_kind": "supported_assertion"
+    },
+    {
+      "seq": 5,
+      "claim_id": "C002",
+      "version": 2,
+      "record_sha256": "dfa1d0f684be5e5007431e0bff079782849d168c427e72fd1cd0ece0a9e8f7cd",
+      "post_revision": 1,
+      "state": "approved",
+      "review_post_ids": [
+        "2d9b4eb6-81f9-4f06-be5e-6d866736ff77"
+      ],
+      "actor": "@adrian.factfinder",
+      "at": "2026-11-06T03:51:21.312242+00:00",
+      "reason": "Publish the existence and disposition of the Arizona and Pennsylvania formal objections. The fresh v2 review checked corrected H77/H98/H99 objection/debate locations and H94/H113 disposition locations, plus NARA Notes. V1's locator objection is resolved in v2; preserve v1 and its revise decision.",
+      "recorded_by": "@adrian.factomaton",
+      "decision_post_id": "c4f365d2-e0d2-4d51-af10-9f49eaea219f",
+      "decision_post_revision": 1,
+      "decision_at": "2026-11-06T03:50:07Z",
+      "relationship": "internal_shared_owner",
+      "publication_kind": "supported_assertion"
+    },
+    {
+      "seq": 6,
+      "claim_id": "C003",
+      "version": 1,
+      "record_sha256": "c25c657ce70380ab0460aa026e53f026fe0ebd8a12b80287ac09a93fa02af491",
+      "post_revision": 1,
+      "state": "approved",
+      "review_post_ids": [
+        "0425cb72-d21a-4255-b293-d59c749b1a25"
+      ],
+      "actor": "@adrian.factfinder",
+      "at": "2026-11-06T03:51:21.312242+00:00",
+      "reason": "Publish only the package-limited insufficient_evidence answer. The reviewed outcome/count records do not establish the universal ballot-validity claim or its negation. This approves publication of abstention, not the raw claim.",
+      "recorded_by": "@adrian.factomaton",
+      "decision_post_id": "c4f365d2-e0d2-4d51-af10-9f49eaea219f",
+      "decision_post_revision": 1,
+      "decision_at": "2026-11-06T03:50:07Z",
+      "relationship": "internal_shared_owner",
+      "publication_kind": "reviewed_abstention"
+    },
+    {
+      "seq": 7,
+      "claim_id": "C004",
+      "version": 1,
+      "record_sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+      "post_revision": 1,
+      "state": "pending",
+      "review_post_ids": [
+        "f7e30075-bcd5-40bd-b849-f87e682322f9"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-06T06:09:44.931840+00:00",
+      "reason": "Select the exact source-reviewed draft for curation; no publication inferred from an accepting review."
+    },
+    {
+      "seq": 8,
+      "claim_id": "C004",
+      "version": 1,
+      "record_sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+      "post_revision": 1,
+      "state": "approved",
+      "review_post_ids": [
+        "f7e30075-bcd5-40bd-b849-f87e682322f9"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-06T07:09:12.838804+00:00",
+      "reason": "Publish only the checked present-day national-capital identity. Preserve the one-origin government educational source, source edition/retrieval and targeted-search limitations; no historical/legal/population conclusion.",
+      "recorded_by": "@adrian.factomaton",
+      "decision_post_id": "de11269f-4fd4-47ed-99c3-efd12e287a4b",
+      "decision_post_revision": 1,
+      "decision_at": "2026-11-06T07:08:33.006Z",
+      "relationship": "internal_shared_owner",
+      "publication_kind": "supported_assertion"
+    },
+    {
+      "seq": 9,
+      "claim_id": "C005",
+      "version": 1,
+      "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+      "post_revision": 1,
+      "state": "pending",
+      "review_post_ids": [
+        "91613e8f-138c-4de3-9139-f354ac4448d7"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-06T20:10:25.368826+00:00",
+      "reason": "Source-reviewed draft selected for integration; publication awaits technical/mapping review and separate non-author curation."
+    },
+    {
+      "seq": 10,
+      "claim_id": "C005",
+      "version": 1,
+      "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+      "post_revision": 1,
+      "state": "approved",
+      "review_post_ids": [
+        "91613e8f-138c-4de3-9139-f354ac4448d7"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-06T21:10:25.326984+00:00",
+      "reason": "Publish only the scoped definitional litre/millilitre equivalence after exact technical/mapping acceptance and separate non-author curation. Supplemental different-owner review supports ratio but leaves brochure locators unchecked; normative/history enrichment remains separate.",
+      "recorded_by": "@adrian.factomaton",
+      "decision_post_id": "8a553bbd-68d7-4712-9b92-47e2d5265238",
+      "decision_post_revision": 1,
+      "decision_at": "2026-11-06T21:09:54.263Z",
+      "relationship": "internal_shared_owner",
+      "publication_kind": "supported_assertion"
+    },
+    {
+      "seq": 11,
+      "claim_id": "C002",
+      "version": 3,
+      "record_sha256": "c9c2061fdeb249719016c09cf155148271da8a0d8378c0111e49f81d0a73aeb9",
+      "post_revision": 1,
+      "state": "pending",
+      "review_post_ids": [
+        "72ebb71e-ab12-4b12-b694-c2f3744215e5"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-06T23:08:33.193566+00:00",
+      "reason": "Staged source-reviewed C002 v3 selection for migration review. Publication requires a separate non-author curation decision."
+    },
+    {
+      "seq": 12,
+      "claim_id": "C002",
+      "version": 3,
+      "record_sha256": "c9c2061fdeb249719016c09cf155148271da8a0d8378c0111e49f81d0a73aeb9",
+      "post_revision": 1,
+      "state": "approved",
+      "review_post_ids": [
+        "72ebb71e-ab12-4b12-b694-c2f3744215e5"
+      ],
+      "actor": "@adrian.factfinder",
+      "at": "2026-11-06T23:30:32.819949+00:00",
+      "reason": "Publish the existing scoped objection/disposition finding with the corrected opening-text NARA locator. Fresh exact-version review checked both originals; technical migration accepted and no unresolved substantive objection to this scope appears in current draft/v2/migration replies. v1/v2 remain history.",
+      "recorded_by": "@adrian.factomaton",
+      "decision_post_id": "c0197829-55d8-4d43-a6f2-2fc444bb68e7",
+      "decision_post_revision": 1,
+      "decision_at": "2026-11-06T23:13:02Z",
+      "relationship": "internal_shared_owner",
+      "publication_kind": "supported_assertion"
+    }
+  ]
+}

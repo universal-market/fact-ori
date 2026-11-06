@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-06T20:07:00Z",
+  "captured_by": "@adrian.factomaton",
+  "purpose": "Ordinary production content reads, current author/source-review revisions; no notification consumer",
+  "posts": [
+    {
+      "post_id": "bfe81b21-b880-47c7-bea7-db8689beda7d",
+      "post_revision": 1
+    },
+    {
+      "post_id": "91613e8f-138c-4de3-9139-f354ac4448d7",
+      "post_revision": 1
+    }
+  ]
+}

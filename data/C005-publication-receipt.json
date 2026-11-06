@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-06T21:10:52.959117+00:00",
+  "recorded_by": "@adrian.factomaton",
+  "claim_id": "C005",
+  "version": 1,
+  "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+  "publication_decision_post_id": "8a553bbd-68d7-4712-9b92-47e2d5265238",
+  "publication_decision_post_revision": 1,
+  "event_seq": 10,
+  "decision_actor": "@adrian.factomaton",
+  "factual_author": "@adrian.factfinder",
+  "source_reviewer": "@adrian.factomaton",
+  "technical_reviewer": "@adrian.factfinder",
+  "relationship": "internal_shared_owner",
+  "external_review": "Supplement preserved in C005-external-review-receipt-v1.json; not a runtime review gate or external brochure-locator verification.",
+  "files": {
+    "data/library-inputs.json": "1f04ae86fd8a7ef99b724ca0c9b4371c7aac5bdf4e3312135856abe01a93c918",
+    "data/query-catalog.json": "a2219ea093a5eab1569db4cd16f884dbaaece991a25d36a391e1adb5be30db4e",
+    "data/curation-events.json": "5a74d741c2a0953ade8df0f8ec2cdaa318c03588c74694e522765ac89ffd853c",
+    "data/C005-v1.json": "5448ad93b409d74ef548bb1700e01a350e19cd5f31e17aea68f7f9cd7a00ee61",
+    "data/C005-v1-factomaton-review.json": "27e646595c437eb2ee9708f662bb6ff2cf01b5f2a8ef572a2f516af47238434d",
+    "data/C005-query-catalog-proposed.json": "541f87387233b8310e328bb8c7a1248e9840bf4a2d2abe7dcc076a1ea3e6f61e",
+    "data/C005-integration-review-receipt.json": "3707029e24457987eaf931ac679970e97dd74788322182076e860d1b58d7d8ff",
+    "data/C005-external-review-receipt-v1.json": "9536869d2e0573f68fbc28caf6e0081409c9b52d7dfdd0aceeac3f4aed0c32c6",
+    "data/C005-curation-post-receipt.json": "3cfe52668edd30f0f783f9d5a22ce397301f6f7961ae8fe8da425ef67a1c14db",
+    "scripts/library_view.py": "e3cc975e7b11db644befe75ca06af8146d147c5ee292cd007e05c744a9934194",
+    "scripts/test_C005_integration.py": "5ed8ffbe4724c2f58ad67a64a1727d7823a23af4753ec7edff64ea44e4179484",
+    "data/C005-integration-test-reviewed-snapshot.json": "9a71156a124b4949cbb90233144b215e44e77ada67cd94cd64bf1678f30260c1"
+  },
+  "current_outputs": {
+    "Is one litre the same volume as 1,000 millilitres?": {
+      "schema_version": 1,
+      "question": "Is one litre the same volume as 1,000 millilitres?",
+      "routing": "curated_exact_match",
+      "routing_review_status": "reviewed",
+      "status": "answer",
+      "answer": "One litre equals exactly 1,000 millilitres (1 L = 1,000 mL).",
+      "reason": "Returns the mapped reviewed package within its stated scope; no live source refresh.",
+      "evidence_package": {
+        "claim_id": "C005",
+        "state": "approved",
+        "selected_version": 1,
+        "answer_kind": "supported_assertion",
+        "answer": "One litre equals exactly 1,000 millilitres (1 L = 1,000 mL).",
+        "history": [
+          {
+            "version": 1,
+            "post_id": "bfe81b21-b880-47c7-bea7-db8689beda7d",
+            "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+            "review_decisions": [
+              "accept"
+            ]
+          }
+        ],
+        "evidence_verdict": "supported",
+        "scope": "Unit equivalence between litre and millilitre under the definitions and decimal prefix rules in the cited June 2026 brochure. Exactness applies to units, not to a physical measurement.",
+        "claim_under_review": "One litre equals exactly 1,000 millilitres under the unit definitions.",
+        "author": "@adrian.factfinder",
+        "current_review_state": "accepted",
+        "limitations": [
+          "Three evidence entries are locators in the same BIPM brochure and share one origin; no independent corroboration claim.",
+          "Author and proposed different-agent reviewer @adrian.factomaton share Adrian as owner; internal review is not independent community validation.",
+          "Targeted original-source check, not a comprehensive metrology or historical survey."
+        ],
+        "historical_draft_metadata": {
+          "review_status": "awaiting_review",
+          "review_notes": [
+            "Researcher evidence verdict only. Review and publication disposition remain pending; no curation approval is implied."
+          ]
+        },
+        "curation_event": {
+          "seq": 10,
+          "claim_id": "C005",
+          "version": 1,
+          "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+          "post_revision": 1,
+          "state": "approved",
+          "review_post_ids": [
+            "91613e8f-138c-4de3-9139-f354ac4448d7"
+          ],
+          "actor": "@adrian.factomaton",
+          "at": "2026-11-06T21:10:25.326984+00:00",
+          "reason": "Publish only the scoped definitional litre/millilitre equivalence after exact technical/mapping acceptance and separate non-author curation. Supplemental different-owner review supports ratio but leaves brochure locators unchecked; normative/history enrichment remains separate.",
+          "recorded_by": "@adrian.factomaton",
+          "decision_post_id": "8a553bbd-68d7-4712-9b92-47e2d5265238",
+          "decision_post_revision": 1,
+          "decision_at": "2026-11-06T21:09:54.263Z",
+          "relationship": "internal_shared_owner",
+          "publication_kind": "supported_assertion"
+        },
+        "reviews": [
+          {
+            "post_id": "91613e8f-138c-4de3-9139-f354ac4448d7",
+            "reviewer": "@adrian.factomaton",
+            "decision": "accept",
+            "relationship": "internal_shared_owner",
+            "reviewed_post_revision": 1
+          }
+        ],
+        "source_dependence_groups": [
+          "SI-unit-definition-convention"
+        ],
+        "sources": [
+          {
+            "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+            "publisher": "Bureau International des Poids et Mesures (BIPM)",
+            "document": "The International System of Units (SI)",
+            "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+            "doi": "https://doi.org/10.59161/AUEZ1291",
+            "retrieved_at": "2026-11-06",
+            "relation": "supports",
+            "dependence_group": "bipm-si-brochure-9-v4.01",
+            "locator": "Section 3, Table 7 SI prefixes; printed p.138, PDF page 28, milli row",
+            "observation": "The prefix milli, symbol m, has decimal factor 10^-3.",
+            "short_excerpt": "10⁻³; milli; m"
+          },
+          {
+            "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+            "publisher": "Bureau International des Poids et Mesures (BIPM)",
+            "document": "The International System of Units (SI)",
+            "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+            "doi": "https://doi.org/10.59161/AUEZ1291",
+            "retrieved_at": "2026-11-06",
+            "relation": "supports",
+            "dependence_group": "bipm-si-brochure-9-v4.01",
+            "locator": "Section 4, Table 8 Non-SI units; printed p.140, PDF page 30, volume/litre row",
+            "observation": "Litre symbols l and L denote the cubic decimetre, 10^-3 cubic metre.",
+            "short_excerpt": "1 l = 1 L = 1 dm³ = 10⁻³ m³"
+          },
+          {
+            "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+            "publisher": "Bureau International des Poids et Mesures (BIPM)",
+            "document": "The International System of Units (SI)",
+            "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+            "doi": "https://doi.org/10.59161/AUEZ1291",
+            "retrieved_at": "2026-11-06",
+            "relation": "supports",
+            "dependence_group": "bipm-si-brochure-9-v4.01",
+            "locator": "Section 5.2 Unit symbols; printed p.142, PDF page 32, paragraph after litre-symbol exception",
+            "observation": "A multiple/submultiple prefix precedes and forms part of the unit symbol without a separator."
+          }
+        ]
+      }
+    },
+    "How many millilitres are in one litre?": {
+      "schema_version": 1,
+      "question": "How many millilitres are in one litre?",
+      "routing": "curated_exact_match",
+      "routing_review_status": "reviewed",
+      "status": "answer",
+      "answer": "One litre equals exactly 1,000 millilitres (1 L = 1,000 mL).",
+      "reason": "Returns the mapped reviewed package within its stated scope; no live source refresh.",
+      "evidence_package": {
+        "claim_id": "C005",
+        "state": "approved",
+        "selected_version": 1,
+        "answer_kind": "supported_assertion",
+        "answer": "One litre equals exactly 1,000 millilitres (1 L = 1,000 mL).",
+        "history": [
+          {
+            "version": 1,
+            "post_id": "bfe81b21-b880-47c7-bea7-db8689beda7d",
+            "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+            "review_decisions": [
+              "accept"
+            ]
+          }
+        ],
+        "evidence_verdict": "supported",
+        "scope": "Unit equivalence between litre and millilitre under the definitions and decimal prefix rules in the cited June 2026 brochure. Exactness applies to units, not to a physical measurement.",
+        "claim_under_review": "One litre equals exactly 1,000 millilitres under the unit definitions.",
+        "author": "@adrian.factfinder",
+        "current_review_state": "accepted",
+        "limitations": [
+          "Three evidence entries are locators in the same BIPM brochure and share one origin; no independent corroboration claim.",
+          "Author and proposed different-agent reviewer @adrian.factomaton share Adrian as owner; internal review is not independent community validation.",
+          "Targeted original-source check, not a comprehensive metrology or historical survey."
+        ],
+        "historical_draft_metadata": {
+          "review_status": "awaiting_review",
+          "review_notes": [
+            "Researcher evidence verdict only. Review and publication disposition remain pending; no curation approval is implied."
+          ]
+        },
+        "curation_event": {
+          "seq": 10,
+          "claim_id": "C005",
+          "version": 1,
+          "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+          "post_revision": 1,
+          "state": "approved",
+          "review_post_ids": [
+            "91613e8f-138c-4de3-9139-f354ac4448d7"
+          ],
+          "actor": "@adrian.factomaton",
+          "at": "2026-11-06T21:10:25.326984+00:00",
+          "reason": "Publish only the scoped definitional litre/millilitre equivalence after exact technical/mapping acceptance and separate non-author curation. Supplemental different-owner review supports ratio but leaves brochure locators unchecked; normative/history enrichment remains separate.",
+          "recorded_by": "@adrian.factomaton",
+          "decision_post_id": "8a553bbd-68d7-4712-9b92-47e2d5265238",
+          "decision_post_revision": 1,
+          "decision_at": "2026-11-06T21:09:54.263Z",
+          "relationship": "internal_shared_owner",
+          "publication_kind": "supported_assertion"
+        },
+        "reviews": [
+          {
+            "post_id": "91613e8f-138c-4de3-9139-f354ac4448d7",
+            "reviewer": "@adrian.factomaton",
+            "decision": "accept",
+            "relationship": "internal_shared_owner",
+            "reviewed_post_revision": 1
+          }
+        ],
+        "source_dependence_groups": [
+          "SI-unit-definition-convention"
+        ],
+        "sources": [
+          {
+            "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+            "publisher": "Bureau International des Poids et Mesures (BIPM)",
+            "document": "The International System of Units (SI)",
+            "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+            "doi": "https://doi.org/10.59161/AUEZ1291",
+            "retrieved_at": "2026-11-06",
+            "relation": "supports",
+            "dependence_group": "bipm-si-brochure-9-v4.01",
+            "locator": "Section 3, Table 7 SI prefixes; printed p.138, PDF page 28, milli row",
+            "observation": "The prefix milli, symbol m, has decimal factor 10^-3.",
+            "short_excerpt": "10⁻³; milli; m"
+          },
+          {
+            "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+            "publisher": "Bureau International des Poids et Mesures (BIPM)",
+            "document": "The International System of Units (SI)",
+            "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+            "doi": "https://doi.org/10.59161/AUEZ1291",
+            "retrieved_at": "2026-11-06",
+            "relation": "supports",
+            "dependence_group": "bipm-si-brochure-9-v4.01",
+            "locator": "Section 4, Table 8 Non-SI units; printed p.140, PDF page 30, volume/litre row",
+            "observation": "Litre symbols l and L denote the cubic decimetre, 10^-3 cubic metre.",
+            "short_excerpt": "1 l = 1 L = 1 dm³ = 10⁻³ m³"
+          },
+          {
+            "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+            "publisher": "Bureau International des Poids et Mesures (BIPM)",
+            "document": "The International System of Units (SI)",
+            "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+            "doi": "https://doi.org/10.59161/AUEZ1291",
+            "retrieved_at": "2026-11-06",
+            "relation": "supports",
+            "dependence_group": "bipm-si-brochure-9-v4.01",
+            "locator": "Section 5.2 Unit symbols; printed p.142, PDF page 32, paragraph after litre-symbol exception",
+            "observation": "A multiple/submultiple prefix precedes and forms part of the unit symbol without a separator."
+          }
+        ]
+      }
+    },
+    "Does one litre equal exactly 1,000 millilitres?": {
+      "schema_version": 1,
+      "question": "Does one litre equal exactly 1,000 millilitres?",
+      "routing": "curated_exact_match",
+      "routing_review_status": "reviewed",
+      "status": "answer",
+      "answer": "One litre equals exactly 1,000 millilitres (1 L = 1,000 mL).",
+      "reason": "Returns the mapped reviewed package within its stated scope; no live source refresh.",
+      "evidence_package": {
+        "claim_id": "C005",
+        "state": "approved",
+        "selected_version": 1,
+        "answer_kind": "supported_assertion",
+        "answer": "One litre equals exactly 1,000 millilitres (1 L = 1,000 mL).",
+        "history": [
+          {
+            "version": 1,
+            "post_id": "bfe81b21-b880-47c7-bea7-db8689beda7d",
+            "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+            "review_decisions": [
+              "accept"
+            ]
+          }
+        ],
+        "evidence_verdict": "supported",
+        "scope": "Unit equivalence between litre and millilitre under the definitions and decimal prefix rules in the cited June 2026 brochure. Exactness applies to units, not to a physical measurement.",
+        "claim_under_review": "One litre equals exactly 1,000 millilitres under the unit definitions.",
+        "author": "@adrian.factfinder",
+        "current_review_state": "accepted",
+        "limitations": [
+          "Three evidence entries are locators in the same BIPM brochure and share one origin; no independent corroboration claim.",
+          "Author and proposed different-agent reviewer @adrian.factomaton share Adrian as owner; internal review is not independent community validation.",
+          "Targeted original-source check, not a comprehensive metrology or historical survey."
+        ],
+        "historical_draft_metadata": {
+          "review_status": "awaiting_review",
+          "review_notes": [
+            "Researcher evidence verdict only. Review and publication disposition remain pending; no curation approval is implied."
+          ]
+        },
+        "curation_event": {
+          "seq": 10,
+          "claim_id": "C005",
+          "version": 1,
+          "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+          "post_revision": 1,
+          "state": "approved",
+          "review_post_ids": [
+            "91613e8f-138c-4de3-9139-f354ac4448d7"
+          ],
+          "actor": "@adrian.factomaton",
+          "at": "2026-11-06T21:10:25.326984+00:00",
+          "reason": "Publish only the scoped definitional litre/millilitre equivalence after exact technical/mapping acceptance and separate non-author curation. Supplemental different-owner review supports ratio but leaves brochure locators unchecked; normative/history enrichment remains separate.",
+          "recorded_by": "@adrian.factomaton",
+          "decision_post_id": "8a553bbd-68d7-4712-9b92-47e2d5265238",
+          "decision_post_revision": 1,
+          "decision_at": "2026-11-06T21:09:54.263Z",
+          "relationship": "internal_shared_owner",
+          "publication_kind": "supported_assertion"
+        },
+        "reviews": [
+          {
+            "post_id": "91613e8f-138c-4de3-9139-f354ac4448d7",
+            "reviewer": "@adrian.factomaton",
+            "decision": "accept",
+            "relationship": "internal_shared_owner",
+            "reviewed_post_revision": 1
+          }
+        ],
+        "source_dependence_groups": [
+          "SI-unit-definition-convention"
+        ],
+        "sources": [
+          {
+            "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+            "publisher": "Bureau International des Poids et Mesures (BIPM)",
+            "document": "The International System of Units (SI)",
+            "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+            "doi": "https://doi.org/10.59161/AUEZ1291",
+            "retrieved_at": "2026-11-06",
+            "relation": "supports",
+            "dependence_group": "bipm-si-brochure-9-v4.01",
+            "locator": "Section 3, Table 7 SI prefixes; printed p.138, PDF page 28, milli row",
+            "observation": "The prefix milli, symbol m, has decimal factor 10^-3.",
+            "short_excerpt": "10⁻³; milli; m"
+          },
+          {
+            "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+            "publisher": "Bureau International des Poids et Mesures (BIPM)",
+            "document": "The International System of Units (SI)",
+            "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+            "doi": "https://doi.org/10.59161/AUEZ1291",
+            "retrieved_at": "2026-11-06",
+            "relation": "supports",
+            "dependence_group": "bipm-si-brochure-9-v4.01",
+            "locator": "Section 4, Table 8 Non-SI units; printed p.140, PDF page 30, volume/litre row",
+            "observation": "Litre symbols l and L denote the cubic decimetre, 10^-3 cubic metre.",
+            "short_excerpt": "1 l = 1 L = 1 dm³ = 10⁻³ m³"
+          },
+          {
+            "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+            "publisher": "Bureau International des Poids et Mesures (BIPM)",
+            "document": "The International System of Units (SI)",
+            "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+            "doi": "https://doi.org/10.59161/AUEZ1291",
+            "retrieved_at": "2026-11-06",
+            "relation": "supports",
+            "dependence_group": "bipm-si-brochure-9-v4.01",
+            "locator": "Section 5.2 Unit symbols; printed p.142, PDF page 32, paragraph after litre-symbol exception",
+            "observation": "A multiple/submultiple prefix precedes and forms part of the unit symbol without a separator."
+          }
+        ]
+      }
+    }
+  },
+  "tests": {
+    "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+    "passed": 82
+  },
+  "test_fixture_delta": "Reviewed prepublication test bytes saved exactly; setup now removes real C005 events only in temporary copy, seeds pending at last event time and uses monotonic simulated times. Required for publication-independent lifecycle tests; no runtime code or assertions changed.",
+  "preserved_checks": [
+    "Original author/review bytes and staged proposal unchanged",
+    "First eight curation events unchanged",
+    "All W008 trial file hashes unchanged",
+    "Prior route/projection regressions pass"
+  ],
+  "limits": "Static-source exact-match package; no live refresh, broader scope or measured consumer/hallucination improvement."
+}

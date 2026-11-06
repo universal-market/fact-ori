@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "curation_events": [
+    {
+      "seq": 1,
+      "claim_id": "C001",
+      "version": 1,
+      "record_sha256": "3a1a2baae2679b33270ae72d9db8ae0ac4456497ef15fcd5ea3581614437d4b1",
+      "post_revision": 1,
+      "state": "pending",
+      "review_post_ids": [
+        "6e3e6580-5620-4ee2-8ad7-cbf6e418d28d"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-06T03:39:21Z",
+      "reason": "Exact-version review received; select for curation without factual approval."
+    },
+    {
+      "seq": 2,
+      "claim_id": "C002",
+      "version": 2,
+      "record_sha256": "dfa1d0f684be5e5007431e0bff079782849d168c427e72fd1cd0ece0a9e8f7cd",
+      "post_revision": 1,
+      "state": "pending",
+      "review_post_ids": [
+        "2d9b4eb6-81f9-4f06-be5e-6d866736ff77"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-06T03:39:21Z",
+      "reason": "Exact-version review received; select for curation without factual approval."
+    },
+    {
+      "seq": 3,
+      "claim_id": "C003",
+      "version": 1,
+      "record_sha256": "c25c657ce70380ab0460aa026e53f026fe0ebd8a12b80287ac09a93fa02af491",
+      "post_revision": 1,
+      "state": "pending",
+      "review_post_ids": [
+        "0425cb72-d21a-4255-b293-d59c749b1a25"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-06T03:39:21Z",
+      "reason": "Exact-version review received; select for curation without factual approval."
+    }
+  ]
+}

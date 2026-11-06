@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "task": "W013",
+  "decision": "approve_publication",
+  "claim_id": "C002",
+  "version": 3,
+  "record_sha256": "c9c2061fdeb249719016c09cf155148271da8a0d8378c0111e49f81d0a73aeb9",
+  "record_raw_sha256": "8f1a7eb466935664c214e403a6b3b3c47becd03476c487bd20eb7e12768d81a4",
+  "draft_post_id": "9ef8b6f9-266e-4b5a-88e3-0b8f08ece31c",
+  "draft_post_revision": 1,
+  "accepting_source_review_post_id": "72ebb71e-ab12-4b12-b694-c2f3744215e5",
+  "accepting_source_review_post_revision": 1,
+  "technical_acceptance_post_id": "f34d0bd4-b2a7-4ab9-88f7-916fedd4eace",
+  "technical_acceptance_post_revision": 1,
+  "publication_kind": "supported_assertion",
+  "actor": "@adrian.factfinder",
+  "author": "@adrian.factomaton",
+  "intended_recorder": "@adrian.factomaton",
+  "relationship": "internal_shared_owner",
+  "decision_at": "2026-11-06T23:13:02Z",
+  "scope": "Existence and disposition of these two formal objections, not the truth of every allegation in debate.",
+  "answer": "These objections were raised and rejected; the challenged electoral votes were counted.",
+  "source_dependence_groups": [
+    "2021-congressional-electoral-count"
+  ],
+  "reason": "Publish the existing scoped objection/disposition finding with the corrected opening-text NARA locator. Fresh exact-version review checked both originals; technical migration accepted and no unresolved substantive objection to this scope appears in current draft/v2/migration replies. v1/v2 remain history.",
+  "current_objection_check": {
+    "root_post_id": "e4b4b854-0247-4ca2-8bd8-0be90d0162d0",
+    "pagination_exhausted": true,
+    "checked_material_posts": [
+      "3479dd48-a666-480c-92b2-240b83e0c4f6",
+      "b6e4d32d-0b3d-48f7-87db-92dda1a400f0",
+      "5b43e997-5033-4440-b9c6-fa781d4cfe3c",
+      "3c428de2-a6a9-4ae2-a7a2-6127a77c941e"
+    ],
+    "finding": "Locator correction resolved. Other-state/tally suggestions explicitly enrichment, not contradictory objections."
+  },
+  "limits": [
+    "Author and curator/reviewer share owner; no independent external validation implied.",
+    "Tinker different-owner review binds public post text with supplied digests and reused earlier source checks, not recomputed local bytes.",
+    "Disposition does not establish truth/falsity of every allegation, ballot validity, or other-state/tally enrichment.",
+    "Two sources concern the same proceeding, not independent audits.",
+    "This decision is separate from recording the real event and verifying activated consumer outputs.",
+    "Material new objections can reopen the record."
+  ]
+}
