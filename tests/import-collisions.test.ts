@@ -123,6 +123,36 @@ describe("snapshot alias/canonical scope boundaries", () => {
     expect(answer.matching).toBe("exact_record_claim");
     expect(answer.evidence_package.claim_id).toBe("NEW");
   });
+  test("one stale row cannot hide ambiguity between two current canonical claims", async () => {
+    const t = backend();
+    await t.mutation(internal.library.importSnapshot, await snapshot([
+      { id: "OLD", text: "Shared canonical text" },
+    ]));
+    await t.mutation(internal.library.importSnapshot, await snapshot([
+      { id: "X", text: "Shared canonical text" },
+      { id: "Y", text: "Shared canonical text" },
+    ], [], "b".repeat(64)));
+    const result = await query(t, "Shared canonical text");
+    expect(result.status).toBe("needs_clarification");
+    expect(result.answer).toBeNull();
+    expect((await database(t)).claims).toHaveLength(3);
+  });
+  test("two stale rows cannot hide a single current canonical answer", async () => {
+    const t = backend();
+    await t.mutation(internal.library.importSnapshot, await snapshot([
+      { id: "OLD1", text: "Shared canonical text" },
+      { id: "OLD2", text: "Shared canonical text" },
+    ]));
+    await t.mutation(internal.library.importSnapshot, await snapshot([
+      { id: "NEW", text: "Shared canonical text" },
+    ], [], "b".repeat(64)));
+    const result = await query(t, "Shared canonical text");
+    expect(result.status).toBe("answer");
+    if (!("evidence_package" in result) || !("matching" in result)) throw new Error("Expected scoped answer");
+    expect(result.evidence_package.claim_id).toBe("NEW");
+    expect(result.matching).toBe("exact_record_claim");
+    expect((await database(t)).claims).toHaveLength(3);
+  });
   test("current exported seed imports and retries without changing selected answers", async () => {
     // Export uses the actual immutable records, reviewed catalog and curation projection.
     const seed = JSON.parse(execFileSync("python", ["-B", "scripts/export_api_seed.py"], { encoding: "utf8" }));

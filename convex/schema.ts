@@ -22,7 +22,7 @@ export default defineSchema({
     // original schemas. The internal importer is the only writer.
     evidencePackage: v.any(), sourceReviews: v.any(),
   }).index("by_claimId", ["claimId"])
-    .index("by_normalizedClaim", ["normalizedClaim"])
+    .index("by_normalizedClaim_and_importId", ["normalizedClaim", "importId"])
     .searchIndex("search_text", { searchField: "searchText", filterFields: ["state"] }),
   aliases: defineTable({
     normalizedText: v.string(), kind: v.union(v.literal("claim"), v.literal("clarify")),

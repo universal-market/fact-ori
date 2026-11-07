@@ -22,9 +22,9 @@ export const check = internalMutation({
     let claim = activeAlias?.claimId ? await ctx.db.query("claims").withIndex("by_claimId", (q) =>
       q.eq("claimId", activeAlias.claimId!)).unique() : null;
     if (!activeAlias) {
-      const matches = await ctx.db.query("claims").withIndex("by_normalizedClaim", (q) =>
-        q.eq("normalizedClaim", key)).take(2);
-      const active = matches.filter((item) => item.importId === meta.importId);
+      // Limit only current matches: retained imports must not hide ambiguity.
+      const active = await ctx.db.query("claims").withIndex("by_normalizedClaim_and_importId", (q) =>
+        q.eq("normalizedClaim", key).eq("importId", meta.importId)).take(2);
       if (active.length > 1) return { ...base, status: "needs_clarification", reason: "Several scoped records share this wording." };
       claim = active[0] ?? null;
     }

@@ -30,6 +30,8 @@ claim's normalized canonical wording, and clarification aliases that shadow any
 incoming canonical claim. A same-claim alias remains valid. Canonical wording
 shared by multiple claims without an alias returns clarification. These checks
 use the existing normalization; Unicode folding is not enabled.
+Canonical lookup selects the active import in its database index before limiting
+matches for ambiguity detection. Retained historical rows do not consume that limit.
 
 Other text returns `not_in_library`, `answer: null`, full-text candidates and
 their scope. Candidates carry `scope_match_established: false`.
