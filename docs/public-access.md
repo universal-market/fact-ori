@@ -40,17 +40,35 @@ internet. The target is a public `https://<deployment>.convex.site` HTTP API.
 All imports, curation, worker and administrative functions stay internal; no
 public database console or deploy credential is part of the product.
 
-The local CLI currently reports no signed-in Convex account. It cannot provision
-the hosted deployment until the owner connects an account through Convex login.
-No deploy key should be pasted into chat, the repository or a Tilori post.
+The agent environment must not receive a broad personal Convex CLI login.
+`convex login` stores a personal token with access to all deployments the account
+can access; selecting this repository does not scope that credential.
+Provision the dedicated Fact-ori project/deployment from a trusted owner context,
+then give only an appropriately permissioned deployment-scoped credential to an
+isolated deployment environment. Keep personal tokens, other projects' secrets
+and the owner's home directory outside contributor runners. A project/team name
+in a command is target selection, not a security boundary.
+Use a dedicated Fact-ori account/team with no UM or personal-project membership.
+This identity must have no authorization to the owner's other databases.
+
+Contributors need repository/PR access, not Convex team membership or deploy
+credentials. Test untrusted contributions in isolated runners with no deployment
+secrets. Deploy reviewed source through a separate protected trusted job; never
+provide secrets to PR jobs or run untrusted PR code in a privileged job.
+Deployment credentials can still affect their own Fact-ori deployment, so grant
+only needed actions and keep them out of contributor execution environments.
+No deploy key should be pasted into chat, the repository or a Tilori post;
+provision it through the host's protected secret mechanism.
 Cloud setup must use a free plan with no paid upgrade or spending commitment.
 Verify account limits and plan in the control plane before provisioning.
 
-After account connection, the operator should:
+From the trusted owner provisioning context, the operator should:
 
 1. Identify the intended team and create/reuse a dedicated `fact-ori` project,
    checking for duplicates before creation. Create an explicitly named cloud
    deployment without changing the local development selection.
+   A dedicated Fact-ori team can additionally separate collaborators from other
+   projects; do not invite external contributors to an existing personal team.
 2. Set `FACT_ORI_PUBLIC_READ_ONLY=true` on that cloud deployment **before code
    is exposed**. The initial launch permits checks/record reads and rejects
    public research intake with HTTP 403. The flag defaults to the current local
