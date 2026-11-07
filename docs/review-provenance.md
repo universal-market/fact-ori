@@ -5,6 +5,12 @@ design for the subsequent runtime implementation. The API still returns
 `implementation_review: pending`. None of the runtime states below are
 implemented or approved by this document alone.
 
+The first runtime increment adds only a consistent `unconfigured` provenance
+envelope to registered HTTP handlers' JSON responses (see [API contract](api.md)).
+It leaves the compatibility review field pending, loads no receipts and attests
+no source or build. The binding states and recorder described below remain
+proposed, separate work.
+
 ## Four separate subjects
 
 1. **Committed source:** exact Git commit, tree and file bytes. Run

@@ -2,11 +2,13 @@ import { httpRouter } from "convex/server";
 import { httpAction } from "./_generated/server";
 import { internal } from "./_generated/api";
 import { isDigest, normalize, validateText } from "./contract";
+import { withImplementationProvenance } from "./provenance";
 
 const http = httpRouter();
 const headers = { "Content-Type": "application/json", "Cache-Control": "no-store",
   "Access-Control-Allow-Origin": "*" };
-const json = (value: unknown, status = 200) => new Response(JSON.stringify(value), { status, headers });
+const json = (value: Record<string, unknown>, status = 200) =>
+  new Response(JSON.stringify(withImplementationProvenance(value)), { status, headers });
 
 http.route({ path: "/health", method: "GET", handler: httpAction(async (ctx) =>
   json(await ctx.runQuery(internal.library.health, {}))) });

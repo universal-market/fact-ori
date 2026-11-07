@@ -12,6 +12,7 @@ import type * as checks from "../checks.js";
 import type * as contract from "../contract.js";
 import type * as http from "../http.js";
 import type * as library from "../library.js";
+import type * as provenance from "../provenance.js";
 
 import type {
   ApiFromModules,
@@ -24,6 +25,7 @@ declare const fullApi: ApiFromModules<{
   contract: typeof contract;
   http: typeof http;
   library: typeof library;
+  provenance: typeof provenance;
 }>;
 
 /**
