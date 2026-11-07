@@ -48,6 +48,9 @@ full-text search. Semantic matching is a subsequent milestone.
 
 [API contract and operator bridge](docs/api.md)
 
+[Source identity tool and proposed review-provenance binding](docs/review-provenance.md)
+describe the next implementation increment; runtime review metadata remains pending.
+
 ## Evidence and review
 
 Frozen record versions and review receipts live under `data/`. The active
