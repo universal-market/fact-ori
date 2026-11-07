@@ -10,7 +10,7 @@
     "seed": "node scripts/seed-convex.mjs",
     "outbox": "node scripts/outbox.mjs",
     "test:api": "node --env-file=.env.local scripts/smoke-api.mjs",
-    "test:python": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+    "test:python": "node scripts/python.mjs -B -m unittest discover -s scripts -p 'test_*.py'",
     "test:convex": "vitest run"
   },
   "dependencies": {
