@@ -9,9 +9,12 @@ const headers = { "Content-Type": "application/json", "Cache-Control": "no-store
   "Access-Control-Allow-Origin": "*" };
 const json = (value: Record<string, unknown>, status = 200) =>
   new Response(JSON.stringify(withImplementationProvenance(value)), { status, headers });
+const publicIntakeEnabled = () => process.env.FACT_ORI_PUBLIC_READ_ONLY === undefined ||
+  process.env.FACT_ORI_PUBLIC_READ_ONLY === "false";
 
 http.route({ path: "/health", method: "GET", handler: httpAction(async (ctx) =>
-  json(await ctx.runQuery(internal.library.health, {}))) });
+  json({ ...await ctx.runQuery(internal.library.health, {}),
+    public_intake: publicIntakeEnabled() ? "enabled" : "disabled" })) });
 
 http.route({ path: "/v1/check", method: "POST", handler: httpAction(async (ctx, request) => {
   let body;
@@ -36,6 +39,10 @@ http.route({ path: "/v1/check", method: "POST", handler: httpAction(async (ctx, 
   const requestKey = request.headers.get("idempotency-key") ?? undefined;
   if (requestKey !== undefined && (!requestKey.trim() || requestKey.length > 128)) {
     return json({ error: "Idempotency-Key must contain 1–128 characters" }, 400);
+  }
+  // A misspelled configured value must not silently open public queue writes.
+  if (!publicIntakeEnabled() && body.public_review === true) {
+    return json({ error: "Public research intake is disabled on this deployment." }, 403);
   }
   try {
     const result = await ctx.runMutation(internal.checks.check, {

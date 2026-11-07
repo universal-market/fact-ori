@@ -1,0 +1,12 @@
+**
+!package.json
+!package-lock.json
+!convex/
+!convex/**
+!deploy/
+!deploy/self-hosted/
+!deploy/self-hosted/Dockerfile
+!deploy/self-hosted/deploy.sh
+!local/
+!local/self-hosted/
+!local/self-hosted/seed.json
