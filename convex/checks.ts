@@ -1,6 +1,8 @@
 import { v } from "convex/values";
+import { paginationOptsValidator } from "convex/server";
 import { internalMutation, internalQuery } from "./_generated/server";
 import { normalize } from "./contract";
+import { jobState } from "./schema";
 
 export const check = internalMutation({
   args: { text: v.string(), publicReview: v.boolean(), requestKey: v.optional(v.string()) },
@@ -10,9 +12,6 @@ export const check = internalMutation({
     if (!key || args.text.length > 4000) throw new Error("Invalid check text");
     const meta = await ctx.db.query("library").withIndex("by_name", (q) => q.eq("name", "current")).unique();
     if (!meta) return { status: "unavailable", answer: null, reason: "Library has not been imported." };
-    const request = args.requestKey ? await ctx.db.query("requestKeys").withIndex("by_key", (q) =>
-      q.eq("key", args.requestKey!)).unique() : null;
-    if (request && request.normalizedText !== key) return { status: "conflict", answer: null };
     const base = { text: args.text, verdict: null, answer: null, import_id: meta.importId,
       live_source_refresh: false, implementation_review: "pending" };
     const alias = await ctx.db.query("aliases").withIndex("by_normalizedText", (q) => q.eq("normalizedText", key)).unique();
@@ -53,9 +52,14 @@ export const check = internalMutation({
     }));
     let job = null;
     if (args.publicReview) {
+      // Keys bind public queue submissions. Other result paths persist no key.
+      const request = args.requestKey ? await ctx.db.query("requestKeys").withIndex("by_key", (q) =>
+        q.eq("key", args.requestKey!)).unique() : null;
+      if (request && request.normalizedText !== key) return { status: "conflict", answer: null };
       let existing = await ctx.db.query("jobs").withIndex("by_normalizedText", (q) => q.eq("normalizedText", key)).unique();
       if (!existing) {
-        const queued = await ctx.db.query("jobs").withIndex("by_status", (q) => q.eq("status", "not_started")).take(501);
+        const queued = await ctx.db.query("jobs").withIndex("by_status_and_leaseUntil", (q) =>
+          q.eq("status", "not_started").eq("leaseUntil", undefined)).take(501);
         if (queued.length >= 500) return { ...base, status: "queue_full", candidates };
         const now = Date.now();
         const id = await ctx.db.insert("jobs", { text: args.text, normalizedText: key,
@@ -81,19 +85,34 @@ export const getJob = internalQuery({
     if (!job) return null;
     return { id: job._id, text: job.text, status: job.status,
       created_at: job.createdAt, updated_at: job.updatedAt,
-      tilori_post_id: job.tiloriPostId ?? null };
+      tilori_post_id: job.tiloriPostId ?? null,
+      progress_source: job.postRevision === undefined ? "operator_handoff" : "tilori_post",
+      post_revision: job.postRevision ?? null, post_observed_at: job.postObservedAt ?? null,
+      progress_recorded_by: job.progressRecordedBy ?? null };
   },
 });
 
 export const listQueued = internalQuery({
   args: { now: v.number() }, returns: v.any(),
   handler: async (ctx, args) => {
-    const queued = await ctx.db.query("jobs").withIndex("by_status", (q) => q.eq("status", "not_started")).take(10);
+    const queued = await ctx.db.query("jobs").withIndex("by_status_and_leaseUntil", (q) =>
+      q.eq("status", "not_started").eq("leaseUntil", undefined)).take(10);
     const expired = await ctx.db.query("jobs").withIndex("by_status_and_leaseUntil", (q) =>
       q.eq("status", "in_progress").gt("leaseUntil", 0).lt("leaseUntil", args.now)).take(10);
     const jobs = [...queued, ...expired];
     return jobs.map((job) => ({ id: job._id, text: job.text, status: job.status,
       tilori_idempotency_key: `fact-ori-research-${job._id}` }));
+  },
+});
+
+export const listForReconciliation = internalQuery({
+  args: { status: jobState, paginationOpts: paginationOptsValidator }, returns: v.any(),
+  handler: async (ctx, args) => {
+    if (args.paginationOpts.numItems < 1 || args.paginationOpts.numItems > 100) {
+      throw new Error("Reconciliation page size must be 1–100");
+    }
+    return await ctx.db.query("jobs").withIndex("by_status_and_leaseUntil", (q) =>
+      q.eq("status", args.status).eq("leaseUntil", 0)).paginate(args.paginationOpts);
   },
 });
 
@@ -122,5 +141,36 @@ export const linkJob = internalMutation({
     }
     await ctx.db.patch(job._id, { tiloriPostId: args.postId, leaseUntil: 0, updatedAt: Date.now() });
     return null;
+  },
+});
+
+export const reconcileJob = internalMutation({
+  args: { id: v.id("jobs"), postId: v.string(), postRevision: v.number(),
+    status: jobState, observedAt: v.number(), expectedUpdatedAt: v.number(), recorder: v.string() },
+  returns: v.object({ status: jobState, updatedAt: v.number(), postRevision: v.number() }),
+  handler: async (ctx, args) => {
+    const job = await ctx.db.get(args.id);
+    if (!job || job.tiloriPostId !== args.postId) throw new Error("Current job/post binding required");
+    const now = Date.now();
+    if (!Number.isSafeInteger(args.postRevision) || args.postRevision < 1 ||
+        !Number.isSafeInteger(args.observedAt) || args.observedAt < job.createdAt || args.observedAt > now ||
+        !args.recorder.trim() || args.recorder.length > 120) {
+      throw new Error("Valid post revision, observation time and recorder required");
+    }
+    // Exact retries are harmless, including after the first update changed its CAS token.
+    if (job.postRevision === args.postRevision && job.postObservedAt === args.observedAt &&
+        job.status === args.status && job.progressRecordedBy === args.recorder) {
+      return { status: job.status, updatedAt: job.updatedAt, postRevision: args.postRevision };
+    }
+    if (job.updatedAt !== args.expectedUpdatedAt ||
+        (job.postObservedAt !== undefined && args.observedAt <= job.postObservedAt) ||
+        (job.postRevision !== undefined && args.postRevision < job.postRevision) ||
+        (job.postRevision === args.postRevision && job.status !== args.status)) {
+      throw new Error("Stale or inconsistent progress observation");
+    }
+    const updatedAt = Math.max(now, job.updatedAt + 1);
+    await ctx.db.patch(job._id, { status: args.status, updatedAt, postRevision: args.postRevision,
+      postObservedAt: args.observedAt, progressRecordedBy: args.recorder });
+    return { status: args.status, updatedAt, postRevision: args.postRevision };
   },
 });

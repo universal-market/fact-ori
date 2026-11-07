@@ -24,6 +24,7 @@ Keep the Convex development command running. In a second terminal:
 ```sh
 npm run seed
 npm run typecheck
+npm run test:convex
 npm run test:python
 npm run test:api
 ```

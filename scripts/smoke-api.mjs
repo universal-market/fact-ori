@@ -69,6 +69,18 @@ assert.ok(attempts.every((result) => result.code === 202 && result.body.answer =
 const jobId = attempts[0].body.job.id;
 assert.ok(attempts.every((result) => result.body.job.id === jobId));
 assert.equal((await check({ text: "A different claim", public_review: true }, "local-smoke-wall-0")).code, 409);
+// Valid keys only bind opted-in unresolved public intake, including after binding.
+for (const body of [
+  { text: "A different private claim" },
+  { text: capital.questions[0], public_review: true },
+  { text: catalog.routes.find((route) => route.kind === "clarify").questions[0], public_review: true },
+]) {
+  assert.equal((await check(body, "local-smoke-wall-0")).code, 200);
+}
+assert.equal((await check({ text: "Private input must not reserve a key" }, "local-smoke-consent-scope")).code, 200);
+const afterPrivate = await check({ text, public_review: true }, "local-smoke-consent-scope");
+assert.equal(afterPrivate.code, 202);
+assert.equal(afterPrivate.body.job.id, jobId);
 const job = await (await fetch(`${base}/v1/jobs/${jobId}`)).json();
 assert.equal(job.text, text);
 assert.equal((await fetch(`${base}/v1/jobs/invalid`)).status, 404);
