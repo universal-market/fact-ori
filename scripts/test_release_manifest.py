@@ -3,6 +3,7 @@ import json
 import subprocess
 import tempfile
 import unittest
+import zlib
 from pathlib import Path
 
 from release_manifest import build_manifest, canonical, public_path
@@ -90,6 +91,50 @@ class ReleaseManifestTests(unittest.TestCase):
             before["source_tree"],
         )
         self.assertEqual(build_manifest(self.root, before["source_commit"]), before)
+
+    def corrupt_object(self, oid, kind, data):
+        # Disposable fixture repository only: valid encoding, wrong object ID.
+        path = self.root / ".git" / "objects" / oid[:2] / oid[2:]
+        path.chmod(0o644)
+        path.write_bytes(zlib.compress(kind.encode() + b" " + str(len(data)).encode() + b"\0" + data))
+
+    def test_corrupt_blob_is_refused(self):
+        oid = self.git("rev-parse", "HEAD:convex/checks.ts").decode().strip()
+        self.corrupt_object(oid, "blob", b"tampered bytes\n")
+        self.assertEqual(self.git("cat-file", "blob", oid), b"tampered bytes\n")
+        with self.assertRaises(subprocess.CalledProcessError):
+            build_manifest(self.root)
+
+    def test_corrupt_tree_is_refused(self):
+        oid = self.git("rev-parse", "HEAD^{tree}").decode().strip()
+        data = self.git("cat-file", "tree", oid).replace(b"package-lock.json", b"zackage-lock.json")
+        self.corrupt_object(oid, "tree", data)
+        with self.assertRaises(subprocess.CalledProcessError):
+            build_manifest(self.root)
+
+    def test_corrupt_commit_is_refused(self):
+        oid = self.git("rev-parse", "HEAD").decode().strip()
+        data = self.git("cat-file", "commit", oid).replace(b"fixture\n", b"tampered\n")
+        self.corrupt_object(oid, "commit", data)
+        self.assertIn(b"tampered\n", self.git("cat-file", "commit", oid))
+        with self.assertRaises(subprocess.CalledProcessError):
+            build_manifest(self.root)
+
+    def test_sha256_repository_integrity_is_checked_by_git(self):
+        self.root = self.root / "sha256"
+        self.root.mkdir()
+        self.git("init", "-q", "--object-format=sha256")
+        self.git("config", "user.name", "Manifest fixture")
+        self.git("config", "user.email", "fixture@example.invalid")
+        self.write("a.txt", "original\n")
+        self.commit()
+        manifest = build_manifest(self.root)
+        self.assertEqual(len(manifest["source_commit"]), 64)
+        self.assertEqual(manifest["files"][0]["sha256"], hashlib.sha256(b"original\n").hexdigest())
+        oid = self.git("rev-parse", "HEAD:a.txt").decode().strip()
+        self.corrupt_object(oid, "blob", b"tampered\n")
+        with self.assertRaises(subprocess.CalledProcessError):
+            build_manifest(self.root)
 
     def test_historical_revision_uses_old_bytes_and_option_like_revision_fails(self):
         old = self.git("rev-parse", "HEAD").decode().strip()

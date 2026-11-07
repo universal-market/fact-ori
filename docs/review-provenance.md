@@ -36,6 +36,13 @@ implemented or approved by this document alone.
 The manifest reads Git objects from the selected revision, not working-tree
 files. Every Git invocation disables replacement objects, so local replacement
 refs cannot substitute blob bytes or a commit's tree behind an unchanged ID.
+Before collecting file hashes it runs `git fsck --strict --no-dangling <commit>`
+and refuses any nonzero exit. Git verifies object IDs and structure using the
+repository's object format; ordinary `cat-file` alone does not ensure integrity.
+This is a conservative repository check: unrelated corrupt objects can also
+cause refusal and large repositories may take longer. Use a stable object store
+while generating a manifest; this is not an atomic snapshot against concurrent
+object-store writes, nor protection against a compromised Git executable.
 It refuses symlinks, submodules and sensitive configuration/key paths
 before reading blob contents. This path check is not a general secret scanner;
 use only the project's audited public source repository. It emits hashes, not
@@ -109,6 +116,7 @@ this increment changes no answer gate.
 The current tool's tests cover deterministic byte/mode manifests, added and
 changed files, dirty/untracked exclusion with explicit limits, historical reads,
 same-tree/different-commit distinction, blob/commit replacement isolation,
+corrupt blob/tree/commit refusal,
 invalid revision handling, sensitive
 tracked paths and symlink refusal. These establish source-manifest behavior.
 

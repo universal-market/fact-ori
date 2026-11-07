@@ -32,6 +32,9 @@ def public_path(path):
 def build_manifest(root, revision="HEAD"):
     root = Path(root)
     commit = git(root, "rev-parse", "--verify", "--end-of-options", revision + "^{commit}").decode().strip()
+    # cat-file can return corrupt blob bytes without checking their object ID.
+    # Delegate object-format-aware integrity checks to Git before hashing inputs.
+    git(root, "fsck", "--strict", "--no-dangling", commit)
     tree = git(root, "rev-parse", commit + "^{tree}").decode().strip()
     entries = git(root, "ls-tree", "-rz", "--full-tree", commit).split(b"\0")
     files = []
