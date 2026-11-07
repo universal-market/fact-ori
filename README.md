@@ -12,7 +12,9 @@ abstention, Australia's national capital and litre/millilitre equivalence.
 
 ## Run locally
 
-Use Node.js 22 or newer and Python 3.10 or newer.
+Use Node.js 22 or newer and Python 3.10 or newer. Scripts and tests use
+`python3`, or `python` if that is missing. To pick a specific interpreter, set
+`PYTHON` to one executable path or name (no flags).
 
 ```sh
 npm ci

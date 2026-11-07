@@ -2,6 +2,7 @@
 import { convexTest } from "convex-test";
 import { describe, expect, test } from "vitest";
 import { execFileSync } from "node:child_process";
+import { python } from "../scripts/python.mjs";
 import schema from "../convex/schema";
 import { internal } from "../convex/_generated/api";
 
@@ -155,7 +156,7 @@ describe("snapshot alias/canonical scope boundaries", () => {
   });
   test("current exported seed imports and retries without changing selected answers", async () => {
     // Export uses the actual immutable records, reviewed catalog and curation projection.
-    const seed = JSON.parse(execFileSync("python", ["-B", "scripts/export_api_seed.py"], { encoding: "utf8" }));
+    const seed = JSON.parse(execFileSync(python(), ["-B", "scripts/export_api_seed.py"], { encoding: "utf8" }));
     const t = convexTest(schema, modules);
     const result = await t.mutation(internal.library.importSnapshot, seed);
     expect(result.claims).toBe(5);
