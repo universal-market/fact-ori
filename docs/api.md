@@ -46,6 +46,13 @@ paths reserve no key and persist no submission. Within the public queue,
 reusing a key for different normalized text returns HTTP 409. Queued requests
 return HTTP 202 and a stable job ID. The queue has a 500-unstarted-job cap.
 
+For a read-only public launch, the operator sets deployment environment variable
+`FACT_ORI_PUBLIC_READ_ONLY=true`. Then any valid `public_review: true` request
+returns HTTP 403 before dispatching the check mutation, storing no job or
+idempotency key. Omitted/false consent still permits ordinary evidence checks.
+Unset/false retains the local development intake behavior. This switch is not
+a read-traffic quota or rate limiter.
+
 Research jobs expose Tilori progress values `not_started`, `in_progress`,
 `blocked`, `done` and `canceled`. Evidence verdict and work progress are
 separate. `GET /v1/jobs/{id}` returns job state and the linked Tilori post ID.

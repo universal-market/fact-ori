@@ -48,6 +48,15 @@ full-text search. Semantic matching is a subsequent milestone.
 
 [API contract and operator bridge](docs/api.md)
 
+[Downloadable public evidence snapshot](public/library.json) contains the approved
+record versions, evidence packages, source reviews and exact query mappings.
+It is a static snapshot: fetch its latest version before use and inspect its
+curation timestamp and limitations. Regenerate it with
+`python -B scripts/export_public_snapshot.py --output public/library.json`.
+
+[Public access and cloud deployment](docs/public-access.md) describes the
+read-only launch boundary and the cloud account prerequisite.
+
 [Source identity tool and proposed review-provenance binding](docs/review-provenance.md)
 describe the next implementation increment; runtime review metadata remains pending.
 
