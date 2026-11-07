@@ -12,7 +12,10 @@ def canonical(value):
 
 
 def git(root, *args):
-    return subprocess.check_output(["git", "-C", str(root), *args], stderr=subprocess.PIPE)
+    # A replacement ref must never reinterpret the object named by our identity.
+    return subprocess.check_output(
+        ["git", "--no-replace-objects", "-C", str(root), *args], stderr=subprocess.PIPE
+    )
 
 
 def public_path(path):

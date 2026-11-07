@@ -13,7 +13,11 @@ implemented or approved by this document alone.
    Git commit/tree IDs and a SHA-256 over the canonical source subject. The
    canonical subject is every output field except `manifest_sha256` and `limits`.
    It includes documentation and published evidence inputs as well as code.
-   Files are sorted by path; generated output is not written into its own subject.
+   Files are sorted by Python Unicode code-point path order. Canonical JSON uses
+   UTF-8, sorted keys, compact separators and `ensure_ascii=False`; other
+   implementations must reproduce these rules rather than assume their native
+   JSON serialization is equivalent. Generated output is not written into its
+   own subject.
 2. **Built/deployed artifact:** build identity, source subject, dependency/runtime
    information and a deployment receipt from a controlled build/deploy path.
    Git bytes alone do not prove what is running. A local dirty checkout is not
@@ -30,7 +34,9 @@ implemented or approved by this document alone.
    a factual verdict, refreshes a source or authorizes publication.
 
 The manifest reads Git objects from the selected revision, not working-tree
-files. It refuses symlinks, submodules and sensitive configuration/key paths
+files. Every Git invocation disables replacement objects, so local replacement
+refs cannot substitute blob bytes or a commit's tree behind an unchanged ID.
+It refuses symlinks, submodules and sensitive configuration/key paths
 before reading blob contents. This path check is not a general secret scanner;
 use only the project's audited public source repository. It emits hashes, not
 file contents. Untracked environment and operator state never enter the manifest.
@@ -102,7 +108,8 @@ this increment changes no answer gate.
 
 The current tool's tests cover deterministic byte/mode manifests, added and
 changed files, dirty/untracked exclusion with explicit limits, historical reads,
-same-tree/different-commit distinction, invalid revision handling, sensitive
+same-tree/different-commit distinction, blob/commit replacement isolation,
+invalid revision handling, sensitive
 tracked paths and symlink refusal. These establish source-manifest behavior.
 
 Before replacing runtime pending metadata, implement and test missing, malformed,

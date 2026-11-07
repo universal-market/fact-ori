@@ -70,6 +70,27 @@ class ReleaseManifestTests(unittest.TestCase):
         self.assertNotEqual(before["source_commit"], after["source_commit"])
         self.assertNotEqual(before["manifest_sha256"], after["manifest_sha256"])
 
+    def test_replaced_blob_does_not_change_committed_source_identity(self):
+        before = build_manifest(self.root)
+        original = self.git("rev-parse", "HEAD:convex/checks.ts").decode().strip()
+        self.write("replacement.txt", "replacement bytes, never committed")
+        replacement = self.git("hash-object", "-w", "replacement.txt").decode().strip()
+        self.git("replace", original, replacement)
+        # Prove the fixture changes ordinary Git reads before testing isolation.
+        self.assertEqual(self.git("cat-file", "blob", original), b"replacement bytes, never committed")
+        self.assertEqual(build_manifest(self.root), before)
+
+    def test_replaced_commit_does_not_change_selected_tree(self):
+        before = build_manifest(self.root)
+        self.write("convex/checks.ts", "a different committed tree")
+        replacement = self.commit()
+        self.git("replace", before["source_commit"], replacement)
+        self.assertNotEqual(
+            self.git("rev-parse", before["source_commit"] + "^{tree}").decode().strip(),
+            before["source_tree"],
+        )
+        self.assertEqual(build_manifest(self.root, before["source_commit"]), before)
+
     def test_historical_revision_uses_old_bytes_and_option_like_revision_fails(self):
         old = self.git("rev-parse", "HEAD").decode().strip()
         before = build_manifest(self.root, old)
