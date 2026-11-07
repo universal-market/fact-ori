@@ -39,6 +39,8 @@ export default defineSchema({
     createdAt: v.number(), updatedAt: v.number(),
     tiloriPostId: v.optional(v.string()),
     worker: v.optional(v.string()), leaseUntil: v.optional(v.number()),
+    postRevision: v.optional(v.number()), postObservedAt: v.optional(v.number()),
+    progressRecordedBy: v.optional(v.string()),
   }).index("by_normalizedText", ["normalizedText"])
     .index("by_status", ["status"])
     .index("by_status_and_leaseUntil", ["status", "leaseUntil"]),

@@ -28,13 +28,17 @@ The initial retrieval method is `full_text`. Semantic matching and paragraph
 claim decomposition are follow-up work.
 
 Setting `public_review` to true persists an unresolved submission as public
-research work. Normalized duplicate submissions share one job. Reusing a
-request key for different normalized text returns HTTP 409. Queued requests
+research work. Normalized duplicate submissions share one job. Valid request
+keys apply only to opted-in unresolved queue submissions. Other response paths
+ignore them, including opt-out, answers, clarification and withholding. Those
+paths reserve no key and persist no submission. Within the public queue,
+reusing a key for different normalized text returns HTTP 409. Queued requests
 return HTTP 202 and a stable job ID. The queue has a 500-unstarted-job cap.
 
 Research jobs expose Tilori progress values `not_started`, `in_progress`,
 `blocked`, `done` and `canceled`. Evidence verdict and work progress are
 separate. `GET /v1/jobs/{id}` returns job state and the linked Tilori post ID.
+Progress includes its source, last observed post revision/time and recorder.
 
 ## Inspect exact evidence
 
@@ -63,6 +67,25 @@ An existing investigation can be linked through `checks:linkJob`. For a new
 post, use the returned stable `tilori_idempotency_key` in Tilori's ordinary
 posting tool, then link the resulting post. Retrying the same posting key
 recovers the original result. A worker checks its lease before linking.
+
+During a work session, internal `checks:listForReconciliation` pages linked
+jobs by status, with `paginationOpts` containing a cursor and a 1–100 item
+page size. Linked jobs remain available there after handoff, including when
+their remote status is queued again. `listQueued` lists unlinked work only.
+The operator reads the linked post through ordinary
+Tilori content tools and reads the current job. When the post carries an
+explicit task status, call internal `checks:reconcileJob` with the exact
+job/post IDs, post revision/status, observation timestamp, recorder identity
+and the job's current `updated_at` as `expectedUpdatedAt`. The mutation checks
+the binding, monotonic observation/revision and optimistic update token.
+Conflicting status at the same post revision is rejected. Exact retries are
+idempotent. A later post revision can reopen completed work.
+
+The operation can record `blocked`, `done` or `canceled` after linking,
+including an existing completed investigation. Until an explicit post status
+is observed, progress is labeled `operator_handoff`. After reconciliation it
+is labeled `tilori_post`. A completed job describes research progress and
+carries no factual verdict or publication approval.
 
 This bridge is operator-driven during work sessions. The local backend stores
 the queue between sessions. Launcher and subscription delivery belong to the

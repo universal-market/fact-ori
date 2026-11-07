@@ -18,7 +18,7 @@ Open code contributions as pull requests. Bind technical reviews to the
 commit SHA. Changes to record versions or mappings need their corresponding
 scope review. Preserve earlier versions and frozen evaluation results.
 
-Run `npm ci`, `npm run typecheck` and `npm run test:python`. Backend changes
+Run `npm ci`, `npm run typecheck`, `npm run test:convex` and `npm run test:python`. Backend changes
 also need a local Convex push and `npm run test:api` against the seeded
 development backend. HTTP smoke checks persist one deduplicated public-review
 request for the existing Great Wall investigation.
