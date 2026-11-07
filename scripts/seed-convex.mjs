@@ -1,8 +1,9 @@
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
+import { python } from "./python.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
-const exported = spawnSync("python", ["-B", "scripts/export_api_seed.py"], {
+const exported = spawnSync(python(), ["-B", "scripts/export_api_seed.py"], {
   cwd: root, encoding: "utf8", maxBuffer: 8 * 1024 * 1024,
 });
 if (exported.status !== 0) {
