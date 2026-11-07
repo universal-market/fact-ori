@@ -14,6 +14,7 @@ npm ci
 npm run typecheck
 npm run test:convex
 npm run test:python
+npm run test:gateway
 bash scripts/self-hosted.sh prepare
 ```
 
@@ -38,9 +39,21 @@ own volume. The operator container receives no Docker socket or host home.
 The gateway binds `127.0.0.1:43211` and allows only GET `/health`, POST
 `/v1/check`, GET `/v1/records/<claim-id>` and relevant OPTIONS. Jobs, admin,
 dashboard, generic Convex queries and other routes return 404 at the gateway.
+Raw request paths must also match the allowlist: encoded slashes/dots, dot
+segments and repeated-slash aliases cannot enter an allowed location while
+forwarding a different raw route. Health and check accept no query string;
+record query strings allow ASCII letters/digits, `=`, and `&` (including either
+version/hash order). Parameter validity remains the application's responsibility.
 A 16 KiB request limit and a small gateway rate limit bound pilot traffic;
 rate limiting uses the connection source, so tunnel traffic shares a bucket.
 This is a pilot resource bound, not per-user quotas or a DDoS guarantee.
+
+`npm run test:gateway` starts the actual pinned nginx image/config against an
+isolated echo upstream, uses raw HTTP request targets (without client URL
+normalization), and checks allowed routes, encoded/literal traversal rejection,
+methods and body size. It uses no database, credential or tunnel, then removes
+only its uniquely named disposable test containers/network. It does not prove
+Convex routing or application behavior; run the real API probe after deployment.
 
 ## Expose the verified API
 

@@ -1,0 +1,32 @@
+# Disposable credential-free boundary test. No database, tunnel or persistent volume.
+services:
+  backend:
+    image: node@sha256:5ec23b7c622b00547753bc6ffd78085dd868a68aeb41c8e0a1418f033e13d96d
+    command: [node, /fixture/upstream.mjs]
+    volumes: ['./upstream.mjs:/fixture/upstream.mjs:ro']
+    networks: [fixture]
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 128m
+    healthcheck:
+      test: [CMD, node, -e, 'fetch("http://127.0.0.1:3211/").then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))']
+      interval: 1s
+      timeout: 2s
+      retries: 10
+  gateway:
+    image: nginxinc/nginx-unprivileged@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03
+    entrypoint: [nginx, -g, 'daemon off;']
+    volumes: ['../../deploy/self-hosted/nginx.conf:/etc/nginx/nginx.conf:ro']
+    ports: ['127.0.0.1::8080']
+    networks: [fixture, loopback]
+    read_only: true
+    tmpfs: [/tmp:size=16m]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 64m
+    depends_on:
+      backend: {condition: service_healthy}
+networks:
+  fixture: {internal: true}
+  loopback: {}
