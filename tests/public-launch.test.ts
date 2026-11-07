@@ -15,6 +15,7 @@ test.each(["true", "TRUE", "1", "yes", "", "invalid"])("launch flag %j refuses i
   vi.stubEnv("FACT_ORI_PUBLIC_READ_ONLY", mode);
   const t = convexTest(schema, modules);
   await t.run(ctx => ctx.db.insert("library", { name: "current", importId: "fixture", importedAt: 1, claimCount: 0 }));
+  expect((await (await t.fetch("/health")).json()).public_intake).toBe("disabled");
   const response = await t.fetch("/v1/check", request(true));
   expect(response.status).toBe(403);
   const body = await response.json();
@@ -33,6 +34,7 @@ test("local intake remains opt-in when read-only launch is not enabled", async (
   vi.stubEnv("FACT_ORI_PUBLIC_READ_ONLY", "false");
   const t = convexTest(schema, modules);
   await t.run(ctx => ctx.db.insert("library", { name: "current", importId: "fixture", importedAt: 1, claimCount: 0 }));
+  expect((await (await t.fetch("/health")).json()).public_intake).toBe("enabled");
   expect((await t.fetch("/v1/check", request(true))).status).toBe(202);
   expect(await t.run(ctx => ctx.db.query("jobs").take(2))).toHaveLength(1);
 });

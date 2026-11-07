@@ -53,6 +53,9 @@ idempotency key. Omitted/false consent still permits ordinary evidence checks.
 Unset or exactly `false` retains local intake behavior; other configured values
 (including typos/empty strings) fail closed into read-only mode. This switch is not
 a read-traffic quota or rate limiter.
+`GET /health` reports the effective `public_intake` value (`enabled` or
+`disabled`) using this same predicate. The public launch probe requires
+`disabled` without attempting a queue write.
 
 Research jobs expose Tilori progress values `not_started`, `in_progress`,
 `blocked`, `done` and `canceled`. Evidence verdict and work progress are

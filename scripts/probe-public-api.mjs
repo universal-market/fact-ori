@@ -17,6 +17,7 @@ async function json(path, init) {
 }
 const health = await json("/health");
 assert.equal(health.status, "ready");
+assert.equal(health.public_intake, "disabled", "Public launch requires disabled research intake");
 assert.equal(health.import_id, snapshot.library_import_id);
 assert.equal(health.claims, snapshot.records.length + snapshot.withheld.length);
 for (const mapping of snapshot.exact_mappings) {

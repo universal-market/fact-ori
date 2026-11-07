@@ -54,8 +54,9 @@ It is a static snapshot: fetch its latest version before use and inspect its
 curation timestamp and limitations. Regenerate it with
 `python -B scripts/export_public_snapshot.py --output public/library.json`.
 
-[Public access and cloud deployment](docs/public-access.md) describes the
-read-only launch boundary and the cloud account prerequisite.
+[Public access](docs/public-access.md) describes the read-only launch boundary.
+[Self-hosted pilot](docs/self-hosted.md) runs an isolated local database with
+public HTTPS evidence endpoints, without a Convex account.
 
 [Source identity tool and proposed review-provenance binding](docs/review-provenance.md)
 describe the next implementation increment; runtime review metadata remains pending.

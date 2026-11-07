@@ -1,0 +1,72 @@
+name: fact-ori-pilot
+services:
+  backend:
+    image: ghcr.io/convex/convex-backend@sha256:df3e32d53c4305188f593c770c32640417ab2d5b4ba57013057741e80e52f6dd
+    restart: unless-stopped
+    stop_grace_period: 30s
+    stop_signal: SIGINT
+    volumes:
+      - factori-data:/convex/data
+    networks: [private]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 1g
+    cpus: 1.0
+    environment:
+      CONVEX_CLOUD_ORIGIN: http://backend:3210
+      CONVEX_SITE_ORIGIN: http://gateway:8080
+      DISABLE_BEACON: 'true'
+      DISABLE_METRICS_ENDPOINT: 'true'
+      REDACT_LOGS_TO_CLIENT: 'true'
+      RUST_LOG: warn
+    healthcheck:
+      test: [CMD, curl, -fsS, http://localhost:3210/version]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 15s
+  gateway:
+    image: nginxinc/nginx-unprivileged@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03
+    restart: unless-stopped
+    entrypoint: [nginx, -g, 'daemon off;']
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports: ['127.0.0.1:43211:8080']
+    networks: [private, public]
+    read_only: true
+    tmpfs: [/tmp:size=16m]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 64m
+    cpus: 0.5
+    depends_on:
+      backend: {condition: service_healthy}
+  deploy:
+    profiles: [operator]
+    build:
+      context: ../..
+      dockerfile: deploy/self-hosted/Dockerfile
+    networks: [private]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 1g
+    cpus: 1.0
+    depends_on:
+      backend: {condition: service_healthy}
+  tunnel:
+    profiles: [public]
+    image: cloudflare/cloudflared@sha256:4955524aeaa379e154023d5a027c250f7b35041a2e7e950cf13f144bc9b9c5ba
+    command: [tunnel, --no-autoupdate, --url, 'http://gateway:8080']
+    restart: unless-stopped
+    networks: [public]
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 128m
+    cpus: 0.5
+    depends_on: [gateway]
+networks:
+  private: {internal: true}
+  public: {}
+volumes:
+  factori-data: {}
