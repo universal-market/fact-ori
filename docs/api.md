@@ -105,6 +105,37 @@ existing Tilori connector.
 ## Current implementation boundary
 
 This is a local development API with `implementation_review: pending`.
+Every JSON response emitted by the registered HTTP handlers also includes:
+
+```json
+{
+  "implementation_review": "pending",
+  "implementation_provenance": {
+    "schema_version": 1,
+    "binding_state": "unconfigured",
+    "source": null,
+    "build": null,
+    "review_receipts": [],
+    "historical_receipts_loaded": false,
+    "reason": "Runtime source/build identity and authenticated review receipts are not configured."
+  }
+}
+```
+
+This includes health, evidence answers/abstentions, clarification, withholding,
+candidates, records, jobs and handled validation/backend errors. The envelope
+comes from server code, overriding any result-level review labels; public
+request fields cannot install it. `review_receipts: []` means no historical
+receipts are loaded into this runtime, not that the project has never been
+reviewed. It does not change the evidence verdict, publication state, HTTP status
+or queue consent. OPTIONS remains bodyless (204); unmatched routes and platform
+errors outside these handlers are outside this JSON contract.
+
+Only `unconfigured` is implemented. Source/build identity verification,
+authenticated immutable receipt recording, stale/withdrawn/missing receipt
+evaluation and scoped acceptance require a later reviewed increment. No receipt
+installation endpoint or deployment attestation is supplied by this envelope.
+
 Public writes are limited to opted-in research requests. Record import,
 curation selection and worker mutations are internal. Production launch
 requires a hosted deployment, client quotas/rate limits, reviewed request

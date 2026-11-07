@@ -6,14 +6,25 @@ assert.ok(["127.0.0.1", "localhost", "[::1]"].includes(new URL(base).hostname),
   "Run this mutating smoke check against a local development backend");
 const catalog = JSON.parse(readFileSync(new URL("../data/query-catalog.json", import.meta.url)));
 
+async function readJson(response) {
+  const body = await response.json();
+  assert.equal(body.implementation_review, "pending");
+  assert.equal(body.implementation_provenance.binding_state, "unconfigured");
+  assert.equal(body.implementation_provenance.source, null);
+  assert.equal(body.implementation_provenance.build, null);
+  assert.deepEqual(body.implementation_provenance.review_receipts, []);
+  assert.equal(body.implementation_provenance.historical_receipts_loaded, false);
+  return body;
+}
+
 async function check(body, key) {
   const response = await fetch(`${base}/v1/check`, { method: "POST",
     headers: { "Content-Type": "application/json", ...(key ? { "Idempotency-Key": key } : {}) },
     body: JSON.stringify(body) });
-  return { code: response.status, body: await response.json() };
+  return { code: response.status, body: await readJson(response) };
 }
 
-const health = await (await fetch(`${base}/health`)).json();
+const health = await readJson(await fetch(`${base}/health`));
 assert.equal(health.status, "ready");
 const events = JSON.parse(readFileSync(new URL("../data/curation-events.json", import.meta.url)));
 assert.equal(health.claims, new Set(events.curation_events.map((event) => event.claim_id)).size);
@@ -44,7 +55,7 @@ for (const text of ["What is Australia's national capital in 1901?",
   assert.ok(result.body.candidates.every((candidate) => candidate.scope_match_established === false));
 }
 const c005 = catalog.routes.find((route) => route.claim_id === "C005");
-const inspected = await (await fetch(`${base}/v1/records/C005?version=1&sha256=${c005.record_sha256}`)).json();
+const inspected = await readJson(await fetch(`${base}/v1/records/C005?version=1&sha256=${c005.record_sha256}`));
 assert.equal(inspected.status, "record");
 assert.ok(inspected.frozen_record.inference.steps.length);
 assert.ok(inspected.frozen_record.excluded_scopes.length);
@@ -62,6 +73,7 @@ for (const body of [{ text: "" }, { text: "x".repeat(4001) }, { text: "???" },
 const malformed = await fetch(`${base}/v1/check`, {
   method: "POST", headers: { "Content-Type": "application/json" }, body: "{" });
 assert.equal(malformed.status, 400);
+await readJson(malformed);
 const text = "The Great Wall of China is visible from the Moon with the naked eye.";
 const attempts = await Promise.all(Array.from({ length: 8 }, (_, index) =>
   check({ text, public_review: true }, `local-smoke-wall-${index}`)));
@@ -81,7 +93,7 @@ assert.equal((await check({ text: "Private input must not reserve a key" }, "loc
 const afterPrivate = await check({ text, public_review: true }, "local-smoke-consent-scope");
 assert.equal(afterPrivate.code, 202);
 assert.equal(afterPrivate.body.job.id, jobId);
-const job = await (await fetch(`${base}/v1/jobs/${jobId}`)).json();
+const job = await readJson(await fetch(`${base}/v1/jobs/${jobId}`));
 assert.equal(job.text, text);
 assert.equal((await fetch(`${base}/v1/jobs/invalid`)).status, 404);
 console.log(JSON.stringify({ status: "passed", exact_aliases: exactCount,
