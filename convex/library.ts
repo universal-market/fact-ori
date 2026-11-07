@@ -42,6 +42,7 @@ export const importSnapshot = internalMutation({
       if (!prior) await ctx.db.insert("recordVersions", row);
     }
     const claimIds = new Set<string>();
+    const canonicalTargets = new Map<string, Set<string>>();
     for (const row of args.claims) {
       const record = await ctx.db.query("recordVersions").withIndex("by_claimId_and_version", (q) =>
         q.eq("claimId", row.claimId).eq("version", row.version)).unique();
@@ -56,7 +57,11 @@ export const importSnapshot = internalMutation({
       const prior = await ctx.db.query("claims").withIndex("by_claimId", (q) => q.eq("claimId", row.claimId)).unique();
       if (prior && prior.version > row.version) throw new Error("Refusing a record-version rollback");
       const frozen = JSON.parse(record.canonicalRecord);
-      const value = { ...row, normalizedClaim: normalize(frozen.claim),
+      const normalizedClaim = normalize(frozen.claim);
+      const targets = canonicalTargets.get(normalizedClaim) ?? new Set<string>();
+      targets.add(row.claimId);
+      canonicalTargets.set(normalizedClaim, targets);
+      const value = { ...row, normalizedClaim,
         searchText: `${frozen.claim} ${frozen.scope}`, importId: args.importId };
       if (prior) await ctx.db.replace(prior._id, value);
       else await ctx.db.insert("claims", value);
@@ -72,6 +77,12 @@ export const importSnapshot = internalMutation({
           throw new Error("Alias needs exact current version and digest");
         }
       } else if (!row.clarification) throw new Error("Clarification text required");
+      // Only this incoming snapshot is active after commit. An alias may repeat
+      // its own canonical wording, but must not shadow another scoped claim.
+      const targets = canonicalTargets.get(normalizedText);
+      if (targets && (row.kind !== "claim" || targets.size !== 1 || !targets.has(row.claimId!))) {
+        throw new Error("Alias conflicts with canonical claim wording");
+      }
       const prior = await ctx.db.query("aliases").withIndex("by_normalizedText", (q) => q.eq("normalizedText", normalizedText)).unique();
       const value = { ...row, normalizedText, importId: args.importId };
       if (prior) await ctx.db.replace(prior._id, value);

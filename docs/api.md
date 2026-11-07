@@ -15,12 +15,23 @@ Idempotency-Key: optional-client-request-key
 {"text":"How many millilitres are in one litre?","public_review":false}
 ```
 
-Inputs contain 1–4000 characters. The initial implementation checks a single
+Inputs contain 1–4000 UTF-16 code units (JavaScript string length; an astral
+character uses two units). The initial implementation checks a single
 submitted question or canonical claim. Case, whitespace and trailing question
 marks are normalized. Reviewed exact aliases and exact frozen claim wording
 can return `answer` or `abstain` with a scoped evidence package and pinned
 inspection reference. Ambiguous mappings return `needs_clarification`.
 Approval or mapping drift returns `withheld`.
+
+Exact canonical wording selects the currently approved version; it is not a
+client-supplied version pin. The response identifies that version and hash for
+pinned inspection. Import rejects aliases that collide with another incoming
+claim's normalized canonical wording, and clarification aliases that shadow any
+incoming canonical claim. A same-claim alias remains valid. Canonical wording
+shared by multiple claims without an alias returns clarification. These checks
+use the existing normalization; Unicode folding is not enabled.
+Canonical lookup selects the active import in its database index before limiting
+matches for ambiguity detection. Retained historical rows do not consume that limit.
 
 Other text returns `not_in_library`, `answer: null`, full-text candidates and
 their scope. Candidates carry `scope_match_established: false`.
