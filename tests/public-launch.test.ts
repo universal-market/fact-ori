@@ -11,8 +11,8 @@ function request(public_review?: boolean) {
     body: JSON.stringify({ text: "An uncovered question", ...(public_review === undefined ? {} : { public_review }) }) };
 }
 
-test("read-only launch rejects intake without persisting text or keys, while checks work", async () => {
-  vi.stubEnv("FACT_ORI_PUBLIC_READ_ONLY", "true");
+test.each(["true", "TRUE", "1", "yes", "", "invalid"])("launch flag %j refuses intake without writes, while checks work", async (mode) => {
+  vi.stubEnv("FACT_ORI_PUBLIC_READ_ONLY", mode);
   const t = convexTest(schema, modules);
   await t.run(ctx => ctx.db.insert("library", { name: "current", importId: "fixture", importedAt: 1, claimCount: 0 }));
   const response = await t.fetch("/v1/check", request(true));

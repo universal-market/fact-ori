@@ -50,7 +50,8 @@ For a read-only public launch, the operator sets deployment environment variable
 `FACT_ORI_PUBLIC_READ_ONLY=true`. Then any valid `public_review: true` request
 returns HTTP 403 before dispatching the check mutation, storing no job or
 idempotency key. Omitted/false consent still permits ordinary evidence checks.
-Unset/false retains the local development intake behavior. This switch is not
+Unset or exactly `false` retains local intake behavior; other configured values
+(including typos/empty strings) fail closed into read-only mode. This switch is not
 a read-traffic quota or rate limiter.
 
 Research jobs expose Tilori progress values `not_started`, `in_progress`,

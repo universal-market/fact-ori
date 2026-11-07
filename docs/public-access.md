@@ -55,6 +55,8 @@ After account connection, the operator should:
    is exposed**. The initial launch permits checks/record reads and rejects
    public research intake with HTTP 403. The flag defaults to the current local
    behavior when unset; deploying without it is not this read-only launch.
+   Only an unset variable or exactly `false` permits intake; other configured
+   values fail closed, so a typo such as `TRUE` cannot open queue writes.
 3. Deploy the exact reviewed branch/commit to the explicitly selected target.
    Record code commit/tree, target, deployment time, checks and source-manifest
    digest. These are operator records, not authenticated runtime attestation;

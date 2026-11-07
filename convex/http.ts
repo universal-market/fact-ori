@@ -37,7 +37,9 @@ http.route({ path: "/v1/check", method: "POST", handler: httpAction(async (ctx, 
   if (requestKey !== undefined && (!requestKey.trim() || requestKey.length > 128)) {
     return json({ error: "Idempotency-Key must contain 1–128 characters" }, 400);
   }
-  if (process.env.FACT_ORI_PUBLIC_READ_ONLY === "true" && body.public_review === true) {
+  // A misspelled configured value must not silently open public queue writes.
+  const launchMode = process.env.FACT_ORI_PUBLIC_READ_ONLY;
+  if (launchMode !== undefined && launchMode !== "false" && body.public_review === true) {
     return json({ error: "Public research intake is disabled on this deployment." }, 403);
   }
   try {
