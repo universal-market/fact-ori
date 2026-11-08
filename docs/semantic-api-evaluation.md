@@ -56,3 +56,11 @@ verification time. Analysis IDs expire under the API retention policy; after
 expiry or an engine/library change, run the complete actual-model evaluation
 again to obtain fresh IDs before verifying a new deployment. The downloadable
 report remains a historical artifact, not a claim of current endpoint state.
+
+The 2026-11-08 release passed all14 authored cases on engine
+`2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d`.
+The [release metadata](../public/evaluations/2026-11-08-release-v1.json) binds the
+complete report and separate successful public-runtime receipt by raw SHA-256.
+Median case duration was85.75seconds; the maximum was192.06seconds. This includes
+an immediate curated clarification. Prior failures informed the extraction,
+scope and relevance fixes; the cases are expressly not held out.

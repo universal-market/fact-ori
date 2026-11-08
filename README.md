@@ -12,6 +12,21 @@ abstention, Australia's national capital, litre/millilitre equivalence and the
 SI definition of the speed of light in vacuum, plus a package-limited
 abstention on verified unaided Great Wall sightings from low Earth orbit.
 
+## Use the public API
+
+Current endpoint: [OpenAPI specification](https://involving-personality-source-mary.trycloudflare.com/openapi.json).
+
+```sh
+npm run check -- --origin https://involving-personality-source-mary.trycloudflare.com "How many ml make up a liter?"
+```
+
+The endpoint runs on this machine through a temporary Quick Tunnel; its URL can
+change after restart. Local CPU checks take minutes and expose resumable progress.
+The library currently contains seven reviewed records. See the
+[14-case model report](public/evaluations/2026-11-08-semantic-v1.json),
+[public verification receipt](public/evaluations/2026-11-08-public-verification-v1.json)
+and [evaluation limits](docs/semantic-api-evaluation.md).
+
 ## Run the full API
 
 Use Docker Compose, Node.js 22 or newer and Python 3.10 or newer. From a
