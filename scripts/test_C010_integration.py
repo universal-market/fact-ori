@@ -118,15 +118,15 @@ class C010IntegrationTests(unittest.TestCase):
         with self.assertRaises(InvalidLibrary):
             load_view(self.root)
 
-    def test_existing_projections_and_answers_unchanged(self):
+    def test_frozen_five_claim_baseline_and_answers_preserved(self):
         original = load_view(ROOT)
         self.transition('approved')
         staged = load_view(self.root)
+        baseline_ids = {'C001', 'C002', 'C003', 'C004', 'C005'}
         self.assertEqual([c for c in staged['claims'] if c['claim_id'] != 'C010'],
-                         [c for c in original['claims'] if c['claim_id'] != 'C010'])
+                         [c for c in original['claims'] if c['claim_id'] in baseline_ids])
         catalog = json.loads((ROOT / 'data/query-catalog.json').read_text())
-        for route in catalog['routes']:
-            if route.get('claim_id') == 'C010':
-                continue
-            for question in route['questions']:
-                self.assertEqual(self.ask(question), lookup(question, original, catalog))
+        prior_questions = [question for route in self.catalog['routes']
+                           if route.get('claim_id') != 'C010' for question in route['questions']]
+        for question in prior_questions:
+            self.assertEqual(self.ask(question), lookup(question, original, catalog))

@@ -159,8 +159,8 @@ describe("snapshot alias/canonical scope boundaries", () => {
     const seed = JSON.parse(execFileSync(python(), ["-B", "scripts/export_api_seed.py"], { encoding: "utf8" }));
     const t = convexTest(schema, modules);
     const result = await t.mutation(internal.library.importSnapshot, seed);
-    expect(result.claims).toBe(6);
-    expect(result.versions).toBe(9);
+    expect(result.claims).toBe(7);
+    expect(result.versions).toBe(11);
     expect(await t.mutation(internal.library.importSnapshot, seed)).toEqual(result);
     for (const alias of seed.aliases) {
       const answer = await query(t, alias.text);
@@ -170,8 +170,18 @@ describe("snapshot alias/canonical scope boundaries", () => {
         expect(answer.evidence_package.claim_id).toBe(alias.claimId);
         expect(answer.inspection.version).toBe(alias.version);
         expect(answer.inspection.sha256).toBe(alias.recordHash);
+        if (alias.claimId === "C009") {
+          expect(answer.status).toBe("abstain");
+          expect(answer.verdict).toBe("insufficient_evidence");
+        }
       }
     }
+    const c009 = seed.versions.find((version: { claimId: string; version: number }) =>
+      version.claimId === "C009" && version.version === 2);
+    const occurrence = await query(t, JSON.parse(c009.canonicalRecord).claim);
+    expect(occurrence.status).toBe("abstain");
+    if (!("verdict" in occurrence)) throw new Error("C009 response lacks its evidence verdict");
+    expect(occurrence.verdict).toBe("insufficient_evidence");
     const unknown = await query(t, "Unverified distant scope");
     expect(unknown.answer).toBeNull();
     expect(unknown.status).toBe("not_in_library");

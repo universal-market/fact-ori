@@ -76,6 +76,24 @@
         "How fast does light travel?"
       ],
       "clarification": "Do you mean light in vacuum in SI units? The reviewed C010/v2 record covers the definitional value 299,792,458 metres per second in vacuum. Ask: Is the speed of light in vacuum exactly 299,792,458 metres per second? Media and empirical measurement results are outside this record."
+    },
+    {
+      "kind": "claim",
+      "claim_id": "C009",
+      "version": 2,
+      "record_sha256": "eaeddadcf6f5812ed6672fa7633c9db4bf3f474a451a59bffbc21992e0be7e17",
+      "questions": [
+        "Has anyone seen the Great Wall of China from low Earth orbit with the naked eye?",
+        "Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye?"
+      ]
+    },
+    {
+      "kind": "clarify",
+      "questions": [
+        "Can you see the Great Wall of China from space?",
+        "Is the Great Wall of China visible from space?"
+      ],
+      "clarification": "From where, and do you mean an unaided sighting, a photograph, ease of seeing it, or an attributed report? C009/v2 assesses whether its reviewed source package establishes a verified unaided-eye sighting from low Earth orbit; it currently abstains and does not settle whether a sighting occurred. For that evidence assessment, ask: Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye? Other locations and predicates require separate review."
     }
   ]
 }
