@@ -25,6 +25,17 @@ curl http://127.0.0.1:43211/v1/check \
   -d '{"text":"Canberra is Australia’s capital. A litre contains 500 millilitres.","async":true}'
 ```
 
+For a client that follows asynchronous progress automatically:
+
+```sh
+npm run check -- "How many ml make up a liter?"
+# Add --origin HTTPS_ORIGIN for a public deployment.
+# Add --public-review only to consent to public research.
+```
+
+The dependency-free [JavaScript client](client/check.mjs) can also be imported
+directly. [OpenAPI](public/openapi.json) describes the machine-readable contract.
+
 The stack runs an isolated Convex database, local embedding and language models,
 a semantic API with durable SQLite analysis state, and an allowlisted gateway.
 The first prepare downloads roughly 9.3 GB of pinned free model weights. CPU

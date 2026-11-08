@@ -10,7 +10,9 @@
 !deploy/self-hosted/operator.mjs
 !deploy/self-hosted/semantic.Dockerfile
 !service/
-!service/**
+!service/engine.mjs
+!service/server.mjs
+!service/models.json
 !public/
 !public/library.json
 !public/openapi.json
