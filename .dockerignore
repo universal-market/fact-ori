@@ -13,6 +13,7 @@
 !service/**
 !public/
 !public/library.json
+!public/openapi.json
 !local/
 !local/self-hosted/
 !local/self-hosted/seed.json

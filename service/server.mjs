@@ -134,6 +134,19 @@ const server = createServer(async (req, res) => {
       send(res, 204, null);
       return;
     }
+    if (req.method === "GET" && url.pathname === "/openapi.json") {
+      send(
+        res,
+        200,
+        JSON.parse(
+          readFileSync(
+            process.env.OPENAPI_PATH ??
+              new URL("./openapi.json", import.meta.url),
+          ),
+        ),
+      );
+      return;
+    }
     if (req.method === "GET" && url.pathname === "/health") {
       const health = await engine.backendJson("/health");
       const current = ready && health.import_id === snapshot.library_import_id;

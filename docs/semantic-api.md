@@ -1,5 +1,7 @@
 # Semantic evidence API
 
+`GET /openapi.json` exposes the machine-readable contract.
+
 `POST /v1/check` accepts questions, assertions and paragraphs up to4,000
 characters. Curated aliases have a direct evidence response. Other wording
 uses local dense-vector retrieval followed by a scope assessment against each

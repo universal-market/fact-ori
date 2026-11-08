@@ -33,7 +33,7 @@ try {
   const port = Number(compose('port', 'gateway', '8080').split(':').at(-1));
   assert.ok(Number.isSafeInteger(port) && port > 0);
   for (const [path, method] of [
-    ['/health', 'GET'], ['/v1/check', 'POST'], ['/v1/check', 'OPTIONS'],
+    ['/health', 'GET'], ['/openapi.json', 'GET'], ['/v1/check', 'POST'], ['/v1/check', 'OPTIONS'],
     ['/v1/records/C005?version=1&sha256=abc', 'GET'],
     ['/v1/records/C005?sha256=abc&version=1', 'OPTIONS'],
     ['/v1/checks/00000000-0000-4000-8000-000000000001', 'GET'],
@@ -48,7 +48,7 @@ try {
     ['/v1/jobs/..%2F..%2Fhealth', 'GET'], ['/v1/jobs/../../health', 'GET'],
     ['/v1/jobs/..%2f..%2fhealth', 'GET'], ['/v1/jobs/%2e%2e/%2e%2e/health', 'GET'],
     ['/v1/jobs/..%252F..%252Fhealth', 'GET'], ['//health', 'GET'],
-    ['/%68ealth', 'GET'], ['/health?extra=1', 'GET'],
+    ['/%68ealth', 'GET'], ['/health?extra=1', 'GET'], ['/openapi.json?extra=1', 'GET'],
     ['/v1/jobs/../../v1/check', 'POST'], ['/v1/jobs/..%2F..%2Fv1/check', 'OPTIONS'],
     ['/v1/jobs/../../v1/records/C005?version=1&sha256=abc', 'GET'],
     ['/v1/jobs/..%2F..%2Fv1/records/C005?version=1&sha256=abc', 'OPTIONS'],

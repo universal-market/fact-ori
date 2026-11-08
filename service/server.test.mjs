@@ -94,6 +94,7 @@ test("durable HTTP analysis: consent, idempotency, restart, status and revision 
         MODEL_ORIGIN: upstreamOrigin,
         EVIDENCE_ORIGIN: upstreamOrigin,
         LIBRARY_PATH: resolve("public/library.json"),
+        OPENAPI_PATH: resolve("public/openapi.json"),
       },
       stdio: "ignore",
     });
@@ -134,6 +135,9 @@ test("durable HTTP analysis: consent, idempotency, restart, status and revision 
   }
   try {
     await start();
+    const spec = await (await fetch(origin + "/openapi.json")).json();
+    assert.equal(spec.openapi, "3.1.0");
+    assert.ok(spec.paths["/v1/check"].post.requestBody);
     assert.equal((await post({ text: "x", unexpected: true })).status, 400);
     delay = 200;
     const input = { text: "Do unicorns live on Mars?", async: true };
@@ -163,16 +167,14 @@ test("durable HTTP analysis: consent, idempotency, restart, status and revision 
     assert.equal((await post(input, "stable")).status, 409);
     const stateDb = new DatabaseSync(join(directory, "state.sqlite"));
     for (const state of ["processing", "failed"]) {
-      stateDb
-        .prepare("UPDATE requests SET state=?,result=? WHERE id=?")
-        .run(
-          state,
-          JSON.stringify({
-            import_id: snapshot.library_import_id,
-            results: [{ status: "answer", answer: "stale answer" }],
-          }),
-          queued.id,
-        );
+      stateDb.prepare("UPDATE requests SET state=?,result=? WHERE id=?").run(
+        state,
+        JSON.stringify({
+          import_id: snapshot.library_import_id,
+          results: [{ status: "answer", answer: "stale answer" }],
+        }),
+        queued.id,
+      );
       const stale = await fetch(origin + queued.poll_url);
       assert.equal(stale.status, 409);
       assert.equal((await stale.json()).results, undefined);
