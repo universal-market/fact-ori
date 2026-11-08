@@ -78,7 +78,7 @@ class LibraryInputTests(unittest.TestCase):
     def test_old_pilot_export_without_manifest_retains_old_inputs(self):
         (self.data / "library-inputs.json").unlink()
         events = self.read("curation-events.json")
-        events["curation_events"] = [e for e in events["curation_events"] if e["claim_id"] not in ("C004", "C005")
+        events["curation_events"] = [e for e in events["curation_events"] if e["claim_id"] in ("C001", "C002", "C003")
                                     and (e["claim_id"] != "C002" or e["version"] <= 2)]
         self.write("curation-events.json", events)
         self.assertEqual([c["claim_id"] for c in load_view(self.root)["claims"]], ["C001", "C002", "C003"])

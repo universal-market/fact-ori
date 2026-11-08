@@ -44,7 +44,8 @@ class DiscoveryTests(unittest.TestCase):
         for field, value in (("version", 9), ("record_sha256", "0" * 64)):
             with self.subTest(field=field):
                 catalog = copy.deepcopy(self.catalog)
-                catalog["routes"][-1][field] = value
+                next(route for route in catalog["routes"]
+                     if route.get("claim_id") == "C004")[field] = value
                 result = discover("Australia capital", self.view, catalog)
                 self.assertNotIn("C004", [c["claim_id"] for c in result["candidates"]])
 

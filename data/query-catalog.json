@@ -58,6 +58,24 @@
         "What is Australia's national capital?",
         "What is the national capital city of Australia?"
       ]
+    },
+    {
+      "kind": "claim",
+      "claim_id": "C010",
+      "version": 2,
+      "record_sha256": "9f71600732403f19558b6b7bebf188550bd0fd170ba33654eb8dc3d7787e5802",
+      "questions": [
+        "Is the speed of light in vacuum exactly 299,792,458 metres per second?"
+      ]
+    },
+    {
+      "kind": "clarify",
+      "questions": [
+        "Is the speed of light exactly 299,792,458 m/s?",
+        "Is the speed of light exact by definition?",
+        "How fast does light travel?"
+      ],
+      "clarification": "Do you mean light in vacuum in SI units? The reviewed C010/v2 record covers the definitional value 299,792,458 metres per second in vacuum. Ask: Is the speed of light in vacuum exactly 299,792,458 metres per second? Media and empirical measurement results are outside this record."
     }
   ]
 }
