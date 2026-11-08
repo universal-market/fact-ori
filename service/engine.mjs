@@ -360,6 +360,9 @@ export class FactEngine {
     let verdict, candidate;
     const scope_guards = [];
     for (const row of candidates) {
+      // Conservative candidate gate, not a truth probability. Calibrated against
+      // authored known-topic and out-of-library diagnostics for these model pins.
+      if (row.score < 0.7) continue;
       const conflict = explicitYearConflict(
         /\b[12]\d{3}\b/.test(claim.claim)
           ? claim.claim
@@ -381,6 +384,10 @@ export class FactEngine {
           "Use ambiguous if the claim or its relationship cannot be resolved. Never promote ambiguity into support. " +
           "Explain this relationship in at most20words. Return only the schema.",
         {
+          input: claim.claim,
+          kind: claim.kind,
+          unverified_input_context:
+            claim.input_context ?? claim.source_quote ?? claim.claim,
           reviewed_fact: {
             claim: row.record.claim,
             answer: row.evidence_package.answer,
@@ -389,10 +396,6 @@ export class FactEngine {
             exclusions: row.record.excluded_scopes ?? [],
             limitations: row.record.limitations,
           },
-          original_input_context:
-            claim.input_context ?? claim.source_quote ?? claim.claim,
-          input: claim.claim,
-          kind: claim.kind,
         },
         matchSchema,
       );
@@ -423,6 +426,7 @@ export class FactEngine {
       job: null,
       candidates: summaries,
       matching: "semantic_vector_and_scope_model",
+      minimum_candidate_similarity: 0.7,
       model_assessment: verdict ?? null,
       scope_guards,
       model: this.model.chatModel,

@@ -63,7 +63,12 @@ Local `nomic-embed-text:v1.5` and `qwen2.5:14b-instruct` run through isolated
 Ollama. `service/models.json` pins their exact content revisions. Vector-cache
 keys include the embedding revision and indexed content. Startup checks model
 identities. Retrieval ranks current approved records by cosine similarity and
-the relationship classifier evaluates the top two packages independently using
+only candidates scoring at least0.70 proceed to the relationship classifier. This
+conservative threshold is a coverage gate chosen from authored diagnostics for
+the pinned embedding model, not a truth probability or general accuracy claim.
+It can miss valid paraphrases; low-scoring inputs return missing coverage rather
+than inheriting the nearest record. The classifier evaluates at most two
+qualifying packages independently using
 explicit categories for same-property support/conflict, changed subject/predicate,
 changed conditions/dates, insufficient evidence and ambiguity.
 

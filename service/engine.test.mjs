@@ -438,3 +438,26 @@ test("research handoff preserves unverified input context without truncation", (
     scope: "atomic_claim",
   });
 });
+
+test("weak nearest neighbours cannot receive model verdicts", async () => {
+  const { engine } = fixture();
+  await engine.initialize();
+  engine.model.embed = async () => [Array.from({ length: 768 }, (_, i) => i % 2 ? 1 : -1)];
+  engine.model.json = async () => { throw new Error("Weak match must not be classified"); };
+  const result = await engine.match({ claim: "Unicorns live on Mars.", kind: "assertion" });
+  assert.equal(result.status, "not_in_library");
+  assert.equal(result.model_assessment, null);
+  assert.equal(result.minimum_candidate_similarity, 0.7);
+});
+test("unverified paragraph and target precede authoritative reviewed evidence", async () => {
+  const { engine } = fixture();
+  await engine.initialize();
+  engine.model.json = async (_system, input) => {
+    assert.equal(input.input, "A litre contains 500 millilitres.");
+    assert.equal(input.unverified_input_context, "Canberra is Australia's capital. A litre contains 500 millilitres.");
+    assert.equal(Object.keys(input).at(-1), "reviewed_fact");
+    return { relationship: "contradicts_same_claim", reason: "Reviewed conversion is 1000 millilitres." };
+  };
+  const result = await engine.match({ claim: "A litre contains 500 millilitres.", kind: "assertion", input_context: "Canberra is Australia's capital. A litre contains 500 millilitres." });
+  assert.equal(result.status, "contradicted");
+});
