@@ -180,6 +180,14 @@ test("durable HTTP analysis: consent, idempotency, restart, status and revision 
       assert.equal((await stale.json()).results, undefined);
       assert.equal((await post(input, "stable")).status, 409);
     }
+    importId = snapshot.library_import_id;
+    stateDb
+      .prepare(
+        "UPDATE requests SET engine_revision='previous-engine' WHERE id=?",
+      )
+      .run(queued.id);
+    assert.equal((await fetch(origin + queued.poll_url)).status, 409);
+    assert.equal((await post(input, "stable")).status, 409);
     stateDb.close();
   } finally {
     await stop();

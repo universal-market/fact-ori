@@ -64,7 +64,7 @@ const paragraph = await checkText(
   origin,
   "Canberra is Australia's capital. A liter contains 500 milliliters.",
   {
-    requestKey: `public-paragraph-verification-${snapshot.library_import_id.slice(0, 16)}`,
+    requestKey: `public-paragraph-verification-${health.engine_revision.slice(0, 16)}`,
   },
 );
 assert.deepEqual(
@@ -90,7 +90,7 @@ const expectedJob = researchCase.details[0].job;
 assert.ok(expectedJob?.id);
 const research = await checkText(origin, researchCase.text, {
   publicReview: true,
-  requestKey: `public-research-verification-${expectedJob.id}`,
+  requestKey: `public-research-verification-${health.engine_revision.slice(0, 12)}-${expectedJob.id}`,
 });
 assert.equal(research.status, "not_in_library");
 assert.equal(research.job.id, expectedJob.id);

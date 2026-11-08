@@ -8,7 +8,7 @@ const db = new DatabaseSync(process.env.STATE_PATH ?? "/state/semantic.sqlite");
 db.exec(`PRAGMA journal_mode=WAL;
  CREATE TABLE IF NOT EXISTS requests(id TEXT PRIMARY KEY, request_key TEXT UNIQUE, fingerprint TEXT NOT NULL,
  input TEXT NOT NULL, state TEXT NOT NULL, result TEXT, created INTEGER NOT NULL, updated INTEGER NOT NULL);
- UPDATE requests SET state='queued' WHERE state='processing';`);
+`);
 const model = new ModelClient(
   process.env.MODEL_ORIGIN ?? "http://inference:11434",
   process.env.CHAT_MODEL ?? "qwen2.5:14b-instruct",
@@ -23,6 +23,22 @@ const snapshot = JSON.parse(
 const modelPins = JSON.parse(
   readFileSync(new URL("./models.json", import.meta.url)),
 );
+const engineRevision = digest(
+  ["./engine.mjs", "./server.mjs", "./models.json"]
+    .map((path) => readFileSync(new URL(path, import.meta.url), "utf8"))
+    .join("\n"),
+);
+if (
+  !db
+    .prepare("PRAGMA table_info(requests)")
+    .all()
+    .some((column) => column.name === "engine_revision")
+)
+  db.exec("ALTER TABLE requests ADD COLUMN engine_revision TEXT");
+// Recompute interrupted work with this engine; never mix partial judgments from revisions.
+db.prepare(
+  "UPDATE requests SET state='queued',result=NULL,engine_revision=? WHERE state IN ('queued','processing')",
+).run(engineRevision);
 const engine = new FactEngine({ snapshot, model, db, backend });
 let ready = false,
   working = false;
@@ -47,6 +63,7 @@ function progress(row) {
           ? "failed"
           : "processing",
     id: row.id,
+    engine_revision: row.engine_revision,
     poll_url: `/v1/checks/${row.id}`,
     created_at: row.created,
     updated_at: row.updated,
@@ -82,12 +99,17 @@ async function pump() {
           JSON.parse(row.input),
           (results, import_id) => {
             db.prepare("UPDATE requests SET result=?,updated=? WHERE id=?").run(
-              JSON.stringify({ results, import_id }),
+              JSON.stringify({
+                results,
+                import_id,
+                engine_revision: engineRevision,
+              }),
               Date.now(),
               row.id,
             );
           },
         );
+        result.engine_revision = engineRevision;
         db.prepare(
           "UPDATE requests SET state='completed',result=?,updated=? WHERE id=?",
         ).run(JSON.stringify(result), Date.now(), row.id);
@@ -153,6 +175,7 @@ const server = createServer(async (req, res) => {
       send(res, current ? 200 : 503, {
         ...health,
         status: current && health.status === "ready" ? "ready" : "initializing",
+        engine_revision: engineRevision,
         semantic_search: ready,
         claim_decomposition: ready,
         chat_model: model.chatModel,
@@ -172,6 +195,15 @@ const server = createServer(async (req, res) => {
       const row = db
         .prepare("SELECT * FROM requests WHERE id=?")
         .get(url.pathname.split("/").at(-1));
+      if (row && row.engine_revision !== engineRevision) {
+        send(res, 409, {
+          id: row.id,
+          status: "stale",
+          reason:
+            "Analysis engine changed. Submit a new analysis with a new request key.",
+        });
+        return;
+      }
       if (row?.result) {
         const health = await engine.backendJson("/health");
         if (JSON.parse(row.result).import_id !== health.import_id) {
@@ -287,6 +319,15 @@ const server = createServer(async (req, res) => {
       });
       return;
     }
+    if (row && row.engine_revision !== engineRevision) {
+      send(res, 409, {
+        id: row.id,
+        status: "stale",
+        reason:
+          "Analysis engine changed. Submit a new analysis with a new request key.",
+      });
+      return;
+    }
     if (!row) {
       // Short-lived analysis state survives restart. Research jobs have separate durable lifecycles.
       db.prepare(
@@ -304,8 +345,16 @@ const server = createServer(async (req, res) => {
       const now = Date.now(),
         id = randomUUID();
       db.prepare(
-        "INSERT INTO requests(id,request_key,fingerprint,input,state,created,updated) VALUES (?,?,?,?,'queued',?,?)",
-      ).run(id, key ?? null, fingerprint, JSON.stringify(input), now, now);
+        "INSERT INTO requests(id,request_key,fingerprint,input,state,created,updated,engine_revision) VALUES (?,?,?,?,'queued',?,?,?)",
+      ).run(
+        id,
+        key ?? null,
+        fingerprint,
+        JSON.stringify(input),
+        now,
+        now,
+        engineRevision,
+      );
       row = db.prepare("SELECT * FROM requests WHERE id=?").get(id);
       void pump();
     }

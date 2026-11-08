@@ -108,6 +108,7 @@ for (const [id, text, expected] of cases) {
     pass,
     duration_ms: Date.now() - started,
     analysis_id,
+    engine_revision: value.engine_revision ?? null,
     error: value.error ?? null,
     details: results.map((r) => ({
       claim: r.claim,

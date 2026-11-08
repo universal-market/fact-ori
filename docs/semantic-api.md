@@ -72,3 +72,10 @@ alone do not establish a dated identity. This guard can withhold potentially
 related coverage; it does not replace model-assessed scope checks or establish
 a different year's outcome. Inference has two cache slots for the recurring
 text-audit and evidence-relation prompts and a 24 GiB memory cap.
+
+Analysis states bind an `engine_revision` fingerprint of the serving engine,
+HTTP service and pinned model configuration. Engine changes invalidate old
+terminal analyses and idempotent replays with409; interrupted work recomputes
+from its original input without retaining earlier partial judgments. Use a new
+request key to submit a fresh analysis. This self-reported fingerprint is not
+authenticated runtime/build attestation. Library revisions are checked separately.
