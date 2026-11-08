@@ -43,8 +43,9 @@ endpoints and its own SQLite state; it has no database administration key.
 Local inference has no public port. Model content revisions are pinned.
 
 Opted-in research intake is enabled (`public_intake: "enabled"`). Analysis
-requests persist submitted text/results for 24 hours under unguessable public
-IDs, whether or not research is requested. Do not submit private information.
+requests persist submitted text/results under unguessable public IDs, whether or
+not research is requested. Terminal requests expire24hours after submission;
+pending requests remain until processed. Do not submit private information.
 `public_review: true` separately consents to public research; unresolved claim
 text can become a Tilori post. Research jobs retain their durable history.
 See the [semantic API contract](semantic-api.md) for lifecycle and limits.

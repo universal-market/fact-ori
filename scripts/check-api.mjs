@@ -18,5 +18,16 @@ for (let i = 0; i < args.length; i++) {
 }
 const input = text.length ? text.join(" ") : readFileSync(0, "utf8");
 if (!input.trim()) throw Error("Text required");
-const result = await checkText(origin, input, { publicReview });
+let shown = false;
+const result = await checkText(origin, input, {
+  publicReview,
+  onProgress: (progress) => {
+    if (!shown) {
+      process.stderr.write(
+        `Analysis status: ${new URL(progress.poll_url, origin)}\n`,
+      );
+      shown = true;
+    }
+  },
+});
 console.log(JSON.stringify(result, null, 2));

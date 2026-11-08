@@ -31,8 +31,9 @@ Abstentions retain insufficient evidence and publication pins are revalidated.
 
 Analysis taking longer than20seconds returns202 with an ID and `poll_url`.
 `GET /v1/checks/{id}` returns progress and the completed result. SQLite analysis
-state survives restart. Completed analyses remain for24hours under unguessable
-public IDs, including submitted text and results. Library revision changes
+state survives restart. Completed/failed analyses expire24hours after submission,
+under unguessable public IDs; pending work remains until processed. State includes
+submitted text and results. Library revision changes
 invalidate completed and partial responses with409. Submit a new analysis to use new data.
 The analysis queue permits100 pending requests. At most12 atomic claims are
 supported per request and excessive extraction fails explicitly.

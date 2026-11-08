@@ -117,7 +117,7 @@
             }
           }
         },
-        "description": "Exact curated aliases return immediately. Other inputs are decomposed, audited, retrieved and assessed by local models. Poll the returned relative poll_url if HTTP202. Analysis text/results persist for24hours under public unguessable IDs. No research is submitted without public_review=true; that consent makes uncovered claims eligible for public Tilori posting. An analysis being complete does not mean every claim was resolved.",
+        "description": "Exact curated aliases return immediately. Other inputs are decomposed, audited, retrieved and assessed by local models. Poll the returned relative poll_url if HTTP202. Terminal analysis text/results expire24hours after submission under public unguessable IDs; pending work remains until processed. No research is submitted without public_review=true; that consent makes uncovered claims eligible for public Tilori posting. An analysis being complete does not mean every claim was resolved.",
         "parameters": [
           {
             "in": "header",
