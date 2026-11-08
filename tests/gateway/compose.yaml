@@ -4,7 +4,9 @@ services:
     image: node@sha256:5ec23b7c622b00547753bc6ffd78085dd868a68aeb41c8e0a1418f033e13d96d
     command: [node, /fixture/upstream.mjs]
     volumes: ['./upstream.mjs:/fixture/upstream.mjs:ro']
-    networks: [fixture]
+    networks:
+      fixture:
+        aliases: [semantic]
     read_only: true
     cap_drop: [ALL]
     security_opt: [no-new-privileges:true]

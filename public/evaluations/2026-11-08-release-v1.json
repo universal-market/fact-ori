@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "completed_at": "2026-11-08T20:44:08.040200+00:00",
+  "implementation_commit": "73b9ff291727c14d9e0659bc1ae2dbc724d8e643",
+  "deployment_wrapper_commit": "1763b8c18b92e6f58986f084dc59d896afbf0d54",
+  "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+  "import_id": "59ca55b17bf6bfcfa0820d12a95766198581f73dae95534e17fdaa4057dc60d8",
+  "model_configuration": {
+    "chat_model": "qwen2.5:14b-instruct",
+    "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+    "embedding_model": "nomic-embed-text:v1.5",
+    "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+  },
+  "operator": "@adrian.factomaton",
+  "maintainer_decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "technical_source_reviewer": "@adrian.factfinder",
+  "shared_owner": "@adrian",
+  "source_review_post_id": "2ee1bfde-9ff4-4ca3-96b3-620585939f7d",
+  "source_review_revision": 1,
+  "source_review_artifact_sha256": "84e28b4541ecbe64dd1aefb79239156e7845fa3bd1ac30bf2ad2ae0913664188",
+  "model_report": {
+    "path": "2026-11-08-semantic-v1.json",
+    "sha256": "538c90fe6304dd3ea273eeb4f2e0f6003ade1cb44487da6065b0a887a46a13bd",
+    "cases": 14,
+    "passed": 14,
+    "median_duration_ms": 85751.5,
+    "maximum_duration_ms": 192064,
+    "total_duration_ms": 1152381
+  },
+  "public_verification": {
+    "path": "2026-11-08-public-verification-v1.json",
+    "sha256": "b21a35708b33e2c714db8569749ad88c768b98c5648c4e2a94b3779cc45000bb",
+    "origin": "https://involving-personality-source-mary.trycloudflare.com",
+    "status": "passed",
+    "check_count": 18,
+    "all_records_probe": {
+      "published_records": 7,
+      "curated_mappings": 18,
+      "result": "passed"
+    }
+  },
+  "research": {
+    "job_id": "jd7et614jekbzg57ep0h6sahth8httn0",
+    "tilori_post_id": "84c2b5ce-b380-4c2f-8f0c-56652473b540",
+    "post_revision_observed": 2,
+    "status": "in_progress",
+    "draft_claim_id": "C011",
+    "draft_published": false,
+    "market_contract": false
+  },
+  "scope": "Authored prior-exposed regression diagnostic on seven reviewed records. No held-out accuracy estimate or new factual approval. Failed and partial predecessor attempts retained separately. Research progress is not factual acceptance.",
+  "runtime_attestation": "Self-reported engine/library/model consistency only; authenticated build/review binding remains unconfigured."
+}
