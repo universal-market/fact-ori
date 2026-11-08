@@ -132,7 +132,10 @@ class C009IntegrationTests(unittest.TestCase):
         original_catalog = json.loads((ROOT / 'data/query-catalog.json').read_text())
         self.transition('approved')
         staged = load_view(self.root)
-        self.assertEqual([c for c in staged['claims'] if c['claim_id'] != 'C009'], original['claims'])
+        self.assertEqual([c for c in staged['claims'] if c['claim_id'] != 'C009'],
+                         [c for c in original['claims'] if c['claim_id'] != 'C009'])
         for route in original_catalog['routes']:
+            if route.get('claim_id') == 'C009':
+                continue
             for question in route['questions']:
                 self.assertEqual(self.ask(question), lookup(question, original, original_catalog))

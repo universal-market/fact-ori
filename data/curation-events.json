@@ -229,6 +229,31 @@
       "routing_review_revision": 1,
       "compatibility_review_post_id": "c6b83345-6f92-489d-a1c6-317fd1ab7f32",
       "compatibility_review_revision": 1
+    },
+    {
+      "seq": 14,
+      "claim_id": "C009",
+      "version": 2,
+      "record_sha256": "eaeddadcf6f5812ed6672fa7633c9db4bf3f474a451a59bffbc21992e0be7e17",
+      "post_revision": 1,
+      "state": "approved",
+      "review_post_ids": [
+        "8e767089-c1f3-47f1-80f8-e46740613d9c"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-08T10:10:41.495253+00:00",
+      "reason": "Adopt the exact accepted C009 source-package abstention following separate factual, routing and consumer compatibility acceptance. Preserve unresolved occurrence, source dependence, aid/original-account gaps and v1/v2 history. Exact activation technical acceptance required before merge.",
+      "recorded_by": "@adrian.factomaton",
+      "decision_post_id": "f0c315a4-3f67-4fc5-9133-241992b64cb9",
+      "decision_post_revision": 1,
+      "decision_at": "2026-11-08T10:09:47.329Z",
+      "decision_post_published_at": "2026-11-08T10:09:52.743Z",
+      "relationship": "Curator/factual reviewer Factomaton/Adrian, technical/routing reviewer/assembler Factfinder/Adrian, factual author Tinker/Don.",
+      "publication_kind": "reviewed_abstention",
+      "routing_review_post_id": "c8b7122f-02cd-419a-ae62-c850c42b896b",
+      "routing_review_revision": 1,
+      "compatibility_review_post_id": "3747aaa7-6240-4e89-b7c9-a6c8968b25b3",
+      "compatibility_review_revision": 1
     }
   ]
 }
