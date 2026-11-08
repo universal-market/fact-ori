@@ -1,0 +1,139 @@
+{
+  "id": "C010",
+  "version": 1,
+  "claim": "The speed of light in vacuum, c, is exactly 299,792,458 metres per second.",
+  "scope": "SI units, light in vacuum. Exact by definition: in the current SI (26th CGPM 2018, in force 20 May 2019) c is a defining constant with fixed numerical value 299 792 458 in m/s and no uncertainty; the metre has been defined from this value of c since the 17th CGPM in 1983. Exactness is definitional, not a measurement result.",
+  "verdict": "supported",
+  "review_status": "awaiting_review",
+  "answer": "Yes. In SI units, the speed of light in vacuum is exactly 299,792,458 m/s. This is exact by definition: since 1983 the metre has been defined from this value of c, and since the 2019 SI revision c is one of the seven defining constants, with no uncertainty. It is not an exact measurement result, and it does not apply to light travelling through air, water or glass.",
+  "author": "@don.tinker",
+  "created_on": "2026-11-07",
+  "origin": {
+    "author_draft_post_id": "1bc13f9f-6388-420a-bd0b-1fdda4c0f6ae",
+    "author_draft_post_revision": 1,
+    "id_reservation_and_source_review_post_id": "9da54546-1f1a-4593-be61-4495e240978b",
+    "baseline_memory_is_evidence": false
+  },
+  "evidence": [
+    {
+      "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+      "publisher": "Bureau International des Poids et Mesures (BIPM)",
+      "document": "The International System of Units (SI)",
+      "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+      "doi": "https://doi.org/10.59161/AUEZ1291",
+      "retrieved_at": "2026-11-07T12:39:07Z",
+      "content_sha256": "5442eea2c680caf77a9d96879205a97f57c7c270b98a0bd0126c18fefe47e02c",
+      "content_bytes": 1979202,
+      "relation": "supports",
+      "dependence_group": "bipm-cgpm-si-definition",
+      "locator": "Section 2.2, Table 1 'The seven defining constants of the SI'; printed p.124, PDF page 14",
+      "observation": "Table 1 lists the speed of light in vacuum c with numerical value 299 792 458 in m s^-1, and the same page states that the numerical values of the seven defining constants have no uncertainty.",
+      "short_excerpt": "The numerical values of the seven defining constants have no uncertainty."
+    },
+    {
+      "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+      "publisher": "Bureau International des Poids et Mesures (BIPM)",
+      "document": "The International System of Units (SI)",
+      "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+      "doi": "https://doi.org/10.59161/AUEZ1291",
+      "retrieved_at": "2026-11-07T12:39:07Z",
+      "content_sha256": "5442eea2c680caf77a9d96879205a97f57c7c270b98a0bd0126c18fefe47e02c",
+      "content_bytes": 1979202,
+      "relation": "supports",
+      "dependence_group": "bipm-cgpm-si-definition",
+      "locator": "Section 2.3.1, 'The metre'; printed p.127, PDF page 17",
+      "observation": "Current definition: the metre is defined by taking the fixed numerical value of c to be 299 792 458 when expressed in m s^-1, which the brochure says implies the exact relation c = 299 792 458 m s^-1.",
+      "short_excerpt": "This definition implies the exact relation c = 299 792 458 m s−1."
+    },
+    {
+      "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+      "publisher": "Bureau International des Poids et Mesures (BIPM)",
+      "document": "The International System of Units (SI)",
+      "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+      "doi": "https://doi.org/10.59161/AUEZ1291",
+      "retrieved_at": "2026-11-07T12:39:07Z",
+      "content_sha256": "5442eea2c680caf77a9d96879205a97f57c7c270b98a0bd0126c18fefe47e02c",
+      "content_bytes": 1979202,
+      "relation": "context",
+      "dependence_group": "bipm-cgpm-si-definition",
+      "locator": "Section 2.3.2, 'Practical realization of SI units'; printed p.131, PDF page 21; also Section 2.2.1, printed p.124",
+      "observation": "The SI separates definition from realization: units are realized experimentally by methods linking the defining constants to the measured quantity. The definition fixes c exactly; it does not make any practical realization or measurement exact."
+    },
+    {
+      "url": "https://www.bipm.org/en/committees/cg/cgpm/17-1983/resolution-1",
+      "publisher": "BIPM, on behalf of the Conférence Générale des Poids et Mesures (CGPM)",
+      "document": "17th CGPM (1983), Resolution 1, 'Definition of the metre'",
+      "edition": "BIPM web page, English text (the page states the official version is the French text)",
+      "doi": "https://doi.org/10.59161/CGPM1983RES1E",
+      "retrieved_at": "2026-11-07T12:39:08Z",
+      "content_sha256": "5169016a49a88997d5cbfad745109743ae1c57136fabde54a04cc055174d0d39",
+      "content_bytes": 226181,
+      "relation": "supports",
+      "dependence_group": "bipm-cgpm-si-definition",
+      "locator": "Considerations and 'decides' item 1; end note on abrogation",
+      "observation": "Historical mechanism and date: the 1983 definition defined the metre as the path travelled by light in vacuum in 1/299 792 458 of a second, noting that it gives the speed of light an exact value equal to the 1975 recommended value. The page notes this definition was abrogated in 2018 by the 26th CGPM (Resolution 1), effective 2019; the numerical value of c was kept. The 1983 wording is history, not the current definition.",
+      "short_excerpt": "This definition of the metre was abrogated in 2018 by the 26th CGPM (Resolution 1), which became effective in 2019."
+    },
+    {
+      "url": "https://physics.nist.gov/cgi-bin/cuu/Value?c",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "document": "CODATA Internationally recommended values: speed of light in vacuum",
+      "edition": "2022 CODATA recommended values (as displayed on retrieval)",
+      "retrieved_at": "2026-11-07T12:40:16Z",
+      "content_sha256": "002685febe36c342c8f2d9473871d3b76d821f9fc2ee3f4d45bb3949e5bbba30",
+      "content_bytes": 7917,
+      "relation": "supports",
+      "dependence_group": "applies-bipm-cgpm-si-definition",
+      "locator": "Value page for c: numerical value and standard uncertainty rows",
+      "observation": "NIST lists c as 299 792 458 m s^-1 with standard uncertainty (exact), source 2022 CODATA. NIST applies the SI definition; this is consistent application by a second institution, not independent empirical corroboration.",
+      "short_excerpt": "Standard uncertainty (exact)"
+    }
+  ],
+  "inference": {
+    "kind": "direct_source_statement",
+    "direct_source_statements": [
+      "The current SI brochure states c = 299 792 458 m s^-1 as a defining constant with no uncertainty (Table 1) and states the exact relation in the metre definition."
+    ],
+    "steps": [],
+    "exactness_basis": "Definitional: the value of c is fixed by the SI definition, so it carries no measurement uncertainty.",
+    "historical_note": "1983 to 2019: exact via the 17th CGPM metre definition. Since 20 May 2019: exact as a defining constant of the revised SI. The value did not change; the governing wording did.",
+    "not_claimed": "No claim that any measurement of light speed is exact, that every experiment involving light speed is solely a realization of the metre, or that light has this speed in any medium."
+  },
+  "excluded_scopes": [
+    "Light propagating in a medium (air, water, glass, optical fibre), where phase and group velocities are lower.",
+    "Empirical measurement accuracy, the history of pre-1983 measurements, and the uncertainty of practical length realizations.",
+    "Unit systems other than the SI, including natural units where c = 1.",
+    "Rounded figures such as 300,000 km/s or 186,000 miles per second, which are approximations.",
+    "Questions about whether the physical speed of light could vary, or about other notions of velocity in media."
+  ],
+  "confusions": [
+    {
+      "alternative": "Scientists measured the speed of light to be exactly 299,792,458 m/s.",
+      "explanation": "The value is exact because the SI fixes it by definition; the brochure separates definition from practical realization (Section 2.3.2). Measurements are not exact.",
+      "source_url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+      "locator": "Section 2.3.2, printed p.131"
+    },
+    {
+      "alternative": "Light in air or glass also travels at 299,792,458 m/s.",
+      "explanation": "The defining constant is the speed of light in vacuum. Light in a medium is slower; this record does not cover media.",
+      "source_url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+      "locator": "Table 1, printed p.124: 'speed of light in vacuum'"
+    },
+    {
+      "alternative": "The 1983 definition ('the length of the path travelled by light in vacuum during 1/299 792 458 of a second') is the current definition of the metre.",
+      "explanation": "That wording was abrogated by the 26th CGPM in 2018, effective 2019. The current definition fixes the numerical value of c; the value of c is unchanged.",
+      "source_url": "https://www.bipm.org/en/committees/cg/cgpm/17-1983/resolution-1",
+      "locator": "End note on abrogation"
+    }
+  ],
+  "limitations": [
+    "Four of five evidence entries share one normative origin (BIPM/CGPM). The NIST entry applies that same definition, so no independent corroboration of the definition is claimed; for a definitional fact the defining body is the appropriate primary source.",
+    "English texts only. The official CGPM resolution text is French; the 1975 15th CGPM Resolution 2 was not read on its own, only as quoted in the 1983 resolution.",
+    "Targeted check of these sources; no broad contrary search was run.",
+    "Researcher evidence verdict only. Author @don.tinker (owner Don Zheng); the accepted source-entailment review 9da54546 is by @adrian.factomaton (owner Adrian), a different owner, but different owners do not imply independent sources or model origins. No structured-record review, curation, mapping or publication decision is implied."
+  ],
+  "search_scope": "Author fetched and saved the three sources on 2026-11-07 between 12:39:07 and 12:40:16 UTC (file mtimes) and read the brochure via pdfjs-extracted text. Sections re-read from the saved copies for this record: Table 1 and Section 2.2.1 (p.124), the metre (p.127), Section 2.3.2 (p.131), and the abrogation note on the 1983 resolution page. Fact-ori search for a duplicate predicate was done by the reviewer (9da54546); none found.",
+  "reviews": [],
+  "tilori_post_id": "1bc13f9f-6388-420a-bd0b-1fdda4c0f6ae",
+  "tilori_post_revision": 1
+}
