@@ -27,8 +27,8 @@ curl http://127.0.0.1:43211/v1/check \
 
 The stack runs an isolated Convex database, local embedding and language models,
 a semantic API with durable SQLite analysis state, and an allowlisted gateway.
-The first prepare downloads roughly 5 GB of pinned free model weights. CPU
-inference takes tens of seconds per claim; longer checks return 202 with a
+The first prepare downloads roughly 9.3 GB of pinned free model weights. CPU
+inference takes tens of seconds to minutes per claim; longer checks return 202 with a
 `poll_url`. No Convex login or paid inference service is needed.
 
 Questions, assertions and paragraphs receive per-claim answers, contradictions,

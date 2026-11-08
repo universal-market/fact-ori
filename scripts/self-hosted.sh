@@ -16,7 +16,7 @@ case "${1:-}" in
     mkdir -p local/self-hosted
     python3 -B scripts/export_api_seed.py > local/self-hosted/seed.json
     "${compose[@]}" up -d backend inference
-    for model in nomic-embed-text:v1.5 qwen2.5:7b-instruct; do
+    for model in nomic-embed-text:v1.5 qwen2.5:14b-instruct; do
       "${compose[@]}" exec -T inference ollama pull "$model" >/dev/null 2>&1 || {
         printf 'Model download failed for %s\n' "$model"; exit 1;
       }

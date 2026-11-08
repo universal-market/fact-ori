@@ -34,7 +34,7 @@ export class ModelClient {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
-      signal: AbortSignal.timeout(180000),
+      signal: AbortSignal.timeout(300000),
     });
     if (!response.ok)
       throw new Error(`Local inference HTTP ${response.status}`);
@@ -77,7 +77,7 @@ export class ModelClient {
         temperature: 0,
         seed: 42,
         num_ctx: 8192,
-        num_predict: 400,
+        num_predict: schema.properties.claims ? 1600 : 400,
         num_thread: 8,
       },
       keep_alive: "30m",

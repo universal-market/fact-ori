@@ -2,6 +2,11 @@ import assert from "node:assert/strict";
 import { writeFileSync } from "node:fs";
 const origin = process.argv[2] ?? "http://localhost:8081";
 const cases = [
+  [
+    "research-intake",
+    "Is Venus’s sidereal rotation retrograde?",
+    ["not_in_library"],
+  ],
   ["paraphrase-units", "How many ml make up a liter?", ["answer"]],
   ["paraphrase-capital", "What is the capital city of Australia?", ["answer"]],
   ["false-capital", "Australia's capital is Sydney.", ["contradicted"]],
@@ -54,9 +59,14 @@ for (const [id, text, expected] of cases) {
   let response = await fetch(origin + "/v1/check", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ text, async: true }),
+    body: JSON.stringify({
+      text,
+      async: true,
+      ...(id === "research-intake" ? { public_review: true } : {}),
+    }),
   });
   let value = await response.json();
+  const analysis_id = value.id ?? null;
   if (response.status === 202) {
     const poll = value.poll_url;
     while (Date.now() - started < 600000) {
@@ -82,11 +92,15 @@ for (const [id, text, expected] of cases) {
     actual,
     pass,
     duration_ms: Date.now() - started,
+    analysis_id,
     details: results.map((r) => ({
       claim: r.claim,
       status: r.status,
       reason: r.reason ?? null,
       inspection: r.inspection ?? null,
+      job: r.job ?? null,
+      extraction_audit: r.extraction_audit ?? null,
+      scope_assessment: r.scope_assessment ?? null,
       assessment: r.model_assessment ?? null,
     })),
   });

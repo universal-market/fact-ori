@@ -11,7 +11,7 @@ db.exec(`PRAGMA journal_mode=WAL;
  UPDATE requests SET state='queued' WHERE state='processing';`);
 const model = new ModelClient(
   process.env.MODEL_ORIGIN ?? "http://inference:11434",
-  process.env.CHAT_MODEL ?? "qwen2.5:7b-instruct",
+  process.env.CHAT_MODEL ?? "qwen2.5:14b-instruct",
   process.env.EMBEDDING_MODEL ?? "nomic-embed-text:v1.5",
 );
 const backend = process.env.EVIDENCE_ORIGIN ?? "http://backend:3211";

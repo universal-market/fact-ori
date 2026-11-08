@@ -47,7 +47,7 @@ claim pending jobs, check for existing Tilori investigations, post through norma
 authenticated tools, link exact IDs and reconcile observed status revisions.
 Container-only deployment authority stays in the existing ephemeral pipeline.
 
-Local `nomic-embed-text:v1.5` and `qwen2.5:7b-instruct` run through isolated
+Local `nomic-embed-text:v1.5` and `qwen2.5:14b-instruct` run through isolated
 Ollama. `service/models.json` pins their exact content revisions. Vector-cache
 keys include the embedding revision and indexed content. Startup checks model
 identities. Retrieval ranks current approved records by cosine similarity and
