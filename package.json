@@ -13,7 +13,7 @@
     "test:python": "node scripts/python.mjs -B -m unittest discover -s scripts -p 'test_*.py'",
     "test:convex": "vitest run",
     "test:gateway": "node scripts/test-gateway.mjs",
-    "test:semantic": "node service/engine.test.mjs && node service/server.test.mjs && node client/check.test.mjs",
+    "test:semantic": "node service/engine.test.mjs && node service/server.test.mjs && node client/check.test.mjs && node scripts/test-seed-stdin.mjs",
     "check": "node scripts/check-api.mjs"
   },
   "dependencies": {
