@@ -26,12 +26,20 @@ case "${1:-}" in
     # Do not add xtrace, tee, an env dump or a Docker socket mount.
     "${compose[@]}" exec -T backend ./generate_admin_key.sh |
       "${compose[@]}" run --rm -T deploy
-    "${compose[@]}" up -d semantic gateway
+    "${compose[@]}" up -d semantic
+    # Rebind replaced configuration files: reload alone can retain an old inode.
+    "${compose[@]}" up -d --force-recreate --no-deps gateway
     "${compose[@]}" exec -T gateway nginx -t
     "${compose[@]}" exec -T gateway nginx -s reload
     node --input-type=module -e '
+      import {engineFingerprint} from "./service/engine.mjs";
       for (let attempt=0; attempt<60; attempt++) {
-        try { if ((await fetch("http://127.0.0.1:43211/health")).ok) process.exit(0); } catch {}
+        try {
+          const response=await fetch("http://127.0.0.1:43211/health");
+          const health=await response.json();
+          if (response.ok && health.status === "ready" && health.semantic_search === true &&
+              health.claim_decomposition === true && health.engine_revision === engineFingerprint()) process.exit(0);
+        } catch {}
         await new Promise(resolve=>setTimeout(resolve,2000));
       }
       throw new Error("Semantic API did not become ready");

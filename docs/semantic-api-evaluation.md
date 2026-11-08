@@ -50,3 +50,9 @@ health configuration. Public verification rereads every stored analysis (and
 rechecks the curated immediate response) before fresh public paragraph/research
 requests. Source/report consistency remains self-reported, not authenticated
 runtime attestation.
+
+Historical public verification receipts describe the endpoint at their recorded
+verification time. Analysis IDs expire under the API retention policy; after
+expiry or an engine/library change, run the complete actual-model evaluation
+again to obtain fresh IDs before verifying a new deployment. The downloadable
+report remains a historical artifact, not a claim of current endpoint state.
