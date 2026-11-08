@@ -7,6 +7,12 @@
 !deploy/self-hosted/
 !deploy/self-hosted/Dockerfile
 !deploy/self-hosted/deploy.sh
+!deploy/self-hosted/operator.mjs
+!deploy/self-hosted/semantic.Dockerfile
+!service/
+!service/**
+!public/
+!public/library.json
 !local/
 !local/self-hosted/
 !local/self-hosted/seed.json

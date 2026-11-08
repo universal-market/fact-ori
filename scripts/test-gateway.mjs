@@ -36,6 +36,8 @@ try {
     ['/health', 'GET'], ['/v1/check', 'POST'], ['/v1/check', 'OPTIONS'],
     ['/v1/records/C005?version=1&sha256=abc', 'GET'],
     ['/v1/records/C005?sha256=abc&version=1', 'OPTIONS'],
+    ['/v1/checks/00000000-0000-4000-8000-000000000001', 'GET'],
+    ['/v1/jobs/abcdefghijklmnopqrstuvwxyz123456', 'GET'],
   ]) {
     const r = await raw(port, path, method); checked++;
     assert.equal(r.status, 200, path);

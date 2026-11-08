@@ -17,5 +17,6 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm run test:convex
+      - run: npm run test:semantic
       - run: npm run test:python
       - run: npm run test:gateway

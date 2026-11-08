@@ -1,5 +1,32 @@
 name: fact-ori-pilot
 services:
+  inference:
+    image: ollama/ollama@sha256:d4188c1dfa870386a14e299976aed96daeb83876b69e1a852c9d09ea76463b9f
+    restart: unless-stopped
+    volumes: [factori-models:/root/.ollama]
+    networks: [private, public]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 16g
+    cpus: 8.0
+    environment:
+      OLLAMA_NUM_PARALLEL: '1'
+      OLLAMA_MAX_LOADED_MODELS: '2'
+  semantic:
+    build:
+      context: ../..
+      dockerfile: deploy/self-hosted/semantic.Dockerfile
+    restart: unless-stopped
+    user: '1000:1000'
+    volumes: [factori-semantic:/state]
+    networks: [private]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 1g
+    cpus: 2.0
+    depends_on:
+      backend: {condition: service_healthy}
+      inference: {condition: service_started}
   backend:
     image: ghcr.io/convex/convex-backend@sha256:df3e32d53c4305188f593c770c32640417ab2d5b4ba57013057741e80e52f6dd
     restart: unless-stopped
@@ -70,3 +97,5 @@ networks:
   public: {}
 volumes:
   factori-data: {}
+  factori-models: {}
+  factori-semantic: {}

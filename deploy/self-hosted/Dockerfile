@@ -5,4 +5,5 @@ RUN npm ci --ignore-scripts --no-audit --no-fund
 COPY convex/ ./convex/
 COPY local/self-hosted/seed.json ./seed.json
 COPY deploy/self-hosted/deploy.sh ./deploy.sh
+COPY deploy/self-hosted/operator.mjs ./operator.mjs
 ENTRYPOINT ["sh", "/app/deploy.sh"]

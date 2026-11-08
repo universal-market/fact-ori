@@ -12,53 +12,52 @@ abstention, Australia's national capital, litre/millilitre equivalence and the
 SI definition of the speed of light in vacuum, plus a package-limited
 abstention on verified unaided Great Wall sightings from low Earth orbit.
 
-## Run locally
+## Run the full API
 
-Use Node.js 22 or newer and Python 3.10 or newer. Scripts and tests use
-`python3`, or `python` if that is missing. To pick a specific interpreter, set
-`PYTHON` to one executable path or name (no flags).
+Use Docker Compose, Node.js 22 or newer and Python 3.10 or newer. From a
+trusted maintainer checkout:
 
 ```sh
 npm ci
-npm run dev:local
-```
-
-Keep the Convex development command running. In a second terminal:
-
-```sh
-npm run seed
-npm run typecheck
-npm run test:convex
-npm run test:python
-npm run test:api
-```
-
-Convex starts its local backend and records its endpoints in `.env.local`.
-The HTTP endpoint normally listens on port 3211.
-
-```sh
-curl http://127.0.0.1:3211/health
-curl http://127.0.0.1:3211/v1/check \
+bash scripts/self-hosted.sh prepare
+curl http://127.0.0.1:43211/v1/check \
   -H 'Content-Type: application/json' \
-  -d '{"text":"How many millilitres are in one litre?"}'
+  -d '{"text":"Canberra is Australia’s capital. A litre contains 500 millilitres.","async":true}'
 ```
 
-Approved exact mappings return the scoped evidence package. Other wording
-returns candidate records for inspection and can enter the research queue
-when `public_review` is enabled. The current candidate search uses Convex
-full-text search. Semantic matching is a subsequent milestone.
+The stack runs an isolated Convex database, local embedding and language models,
+a semantic API with durable SQLite analysis state, and an allowlisted gateway.
+The first prepare downloads roughly 5 GB of pinned free model weights. CPU
+inference takes tens of seconds per claim; longer checks return 202 with a
+`poll_url`. No Convex login or paid inference service is needed.
 
-[API contract and operator bridge](docs/api.md)
+Questions, assertions and paragraphs receive per-claim answers, contradictions,
+scoped abstentions or explicit missing/ambiguous coverage. Dense-vector search
+finds related records; a local model assesses the relationship to each record’s
+reviewed answer and scope. Inferred query relationships are labeled
+`model_assessed`; they are not additional factual reviews. Evidence packages,
+source dependence, exact version pins and original reviews remain inspectable.
+
+Opt in with `public_review: true` to queue uncovered claims for public Tilori
+research. The librarian claims and links jobs during work sessions; job status
+tracks research progress separately from factual verdict. It is not an instant
+answer promise. Missing evidence never becomes a factual false verdict.
+
+[Semantic API and paragraph contract](docs/semantic-api.md) ·
+[Convex evidence API and operator bridge](docs/api.md) ·
+[Self-hosted deployment and operation](docs/self-hosted.md) ·
+[Public access boundary](docs/public-access.md)
+
+The standalone Convex development interface remains available with
+`npm run dev:local`, `npm run seed` and `npm run test:api`. That backend provides
+exact mappings, full-text candidates and durable jobs; the full semantic stack
+above adds local models, decomposition and asynchronous analysis.
 
 [Downloadable public evidence snapshot](public/library.json) contains the approved
 record versions, evidence packages, source reviews and exact query mappings.
-It is a static snapshot: fetch its latest version before use and inspect its
-curation timestamp and limitations. Regenerate it with
+Fetch its latest version before use and inspect its curation timestamp and
+limitations. Regenerate it with
 `python -B scripts/export_public_snapshot.py --output public/library.json`.
-
-[Public access](docs/public-access.md) describes the read-only launch boundary.
-[Self-hosted pilot](docs/self-hosted.md) runs an isolated local database with
-public HTTPS evidence endpoints, without a Convex account.
 
 [Source identity tool and proposed review-provenance binding](docs/review-provenance.md)
 describe the next implementation increment; runtime review metadata remains pending.

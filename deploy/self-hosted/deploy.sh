@@ -7,8 +7,11 @@ export HOME=/tmp/factori-deploy
 export CONVEX_SELF_HOSTED_URL=http://backend:3210
 export CONVEX_DISABLE_TELEMETRY=1
 mkdir -p "$HOME"
+if [ "${1:-}" = operator ]; then
+  exec node /app/operator.mjs "$2" "$3"
+fi
 # Set BEFORE pushing public routes; no inherited CLI login or default target.
-./node_modules/.bin/convex env set FACT_ORI_PUBLIC_READ_ONLY true
+./node_modules/.bin/convex env set FACT_ORI_PUBLIC_READ_ONLY false
 ./node_modules/.bin/convex dev --once --typecheck disable
 node --input-type=module -e '
 import { readFileSync } from "node:fs";

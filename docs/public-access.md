@@ -37,14 +37,17 @@ The owner approved self-hosting on this machine instead of creating another
 Convex account. This supersedes the earlier cloud-account prerequisite. Convex
 stores this deployment in its own Docker volume; the existing anonymous dev DB
 and all UM deployments remain separate. See [the self-hosted runbook](self-hosted.md).
-There is no live-query URL until the pilot is verified and its HTTPS tunnel is started.
+The full stack exposes semantic checking and paragraph analysis through an
+allowlisted HTTPS gateway. The semantic service sees only public evidence HTTP
+endpoints and its own SQLite state; it has no database administration key.
+Local inference has no public port. Model content revisions are pinned.
 
-Only approved evidence reads are initially public. Research intake is disabled.
-`/health` exposes `public_intake: "disabled"` from the same predicate that guards
-intake. The read-only probe requires that value before checking the import,
-reviewed exact mappings and pinned records; it never attempts a queue write.
-Unset or exactly `false` retains opt-in intake for private local development;
-all other configured values disable it. The launch sets `true` before code push.
+Opted-in research intake is enabled (`public_intake: "enabled"`). Analysis
+requests persist submitted text/results for 24 hours under unguessable public
+IDs, whether or not research is requested. Do not submit private information.
+`public_review: true` separately consents to public research; unresolved claim
+text can become a Tilori post. Research jobs retain their durable history.
+See the [semantic API contract](semantic-api.md) for lifecycle and limits.
 
 Public API access grants neither repository execution nor database administration.
 Contributors submit PRs and run tests in secret-free environments. Deploy only
@@ -61,6 +64,9 @@ needs deployment permission only; seed/import authority belongs in a separate
 trusted operation. Never give contributors broad personal tokens or cloud admin
 keys. No paid plan or spending commitment is authorized.
 
-Current capability boundary: full-text candidate retrieval and reviewed exact
-questions are implemented. Semantic search, paragraph decomposition, hosted
-quotas and authenticated runtime source/build/review binding remain unfinished.
+Current capability: exact aliases, dense semantic retrieval, model-assisted scope
+assessment, paragraph/compound claim decomposition, asynchronous restart-safe
+analysis and opted-in research jobs with Tilori handoff. Per-user quotas,
+authenticated runtime source/build/review binding, production uptime guarantees
+and general accuracy measurement remain future work. Seven reviewed records
+provide limited subject coverage; local model routing can err and is disclosed.

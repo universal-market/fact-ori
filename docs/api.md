@@ -1,4 +1,8 @@
-# API development contract
+# Convex evidence backend contract
+
+The public gateway adds [semantic matching, paragraph analysis and durable
+analysis requests](semantic-api.md). This document describes the underlying
+Convex backend, not the model facade.
 
 The local Convex HTTP endpoint defaults to `http://127.0.0.1:3211`.
 The generated `CONVEX_SITE_URL` in the ignored local environment file gives
@@ -35,8 +39,8 @@ matches for ambiguity detection. Retained historical rows do not consume that li
 
 Other text returns `not_in_library`, `answer: null`, full-text candidates and
 their scope. Candidates carry `scope_match_established: false`.
-The initial retrieval method is `full_text`. Semantic matching and paragraph
-claim decomposition are follow-up work.
+The initial retrieval method is `full_text`. The semantic facade consumes these candidates and reviewed packages through its
+separate public contract.
 
 Setting `public_review` to true persists an unresolved submission as public
 research work. Normalized duplicate submissions share one job. Valid request
@@ -54,8 +58,8 @@ Unset or exactly `false` retains local intake behavior; other configured values
 (including typos/empty strings) fail closed into read-only mode. This switch is not
 a read-traffic quota or rate limiter.
 `GET /health` reports the effective `public_intake` value (`enabled` or
-`disabled`) using this same predicate. The public launch probe requires
-`disabled` without attempting a queue write.
+`disabled`) using this same predicate. The probe defaults to `disabled`; pass `--intake-enabled` for the full deployment,
+which explicitly enables opted-in research requests. Neither mode writes a job.
 
 Research jobs expose Tilori progress values `not_started`, `in_progress`,
 `blocked`, `done` and `canceled`. Evidence verdict and work progress are
@@ -77,7 +81,12 @@ dates and `live_source_refresh: false`.
 
 ## Operator bridge
 
-`npm run outbox` lists up to ten queued and ten expired leased requests.
+For the self-hosted production instance use `bash scripts/self-hosted.sh outbox`
+and `bash scripts/self-hosted.sh operator FUNCTION JSON`. The allowlist permits
+only job reads/claim/link/reconciliation and library health. It uses the isolated
+instance-local authority pipeline; do not use a personal Convex login.
+
+For the standalone development backend, `npm run outbox` lists up to ten queued and ten expired leased requests.
 Operator functions are internal Convex functions accessed through the
 authenticated local CLI. A worker claims a specific job with
 `checks:claimJob`, a unique worker identifier and a five-minute lease.
