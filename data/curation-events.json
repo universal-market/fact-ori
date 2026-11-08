@@ -204,6 +204,31 @@
       "decision_at": "2026-11-06T23:13:02Z",
       "relationship": "internal_shared_owner",
       "publication_kind": "supported_assertion"
+    },
+    {
+      "seq": 13,
+      "claim_id": "C010",
+      "version": 2,
+      "record_sha256": "9f71600732403f19558b6b7bebf188550bd0fd170ba33654eb8dc3d7787e5802",
+      "post_revision": 1,
+      "state": "approved",
+      "review_post_ids": [
+        "65aff6b1-877d-48a2-9f8c-822f2ef5aad3"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-08T06:10:08.345460+00:00",
+      "reason": "Adopt the exact supported SI/vacuum definitional record following factual acceptance, separate exact routing review and merged isolated consumer compatibility. Shared SI normative dependence and original source/review coverage retained. Activation requires exact technical acceptance.",
+      "recorded_by": "@adrian.factomaton",
+      "decision_post_id": "1bc4d61c-b2be-4b4e-aa13-c5d7d8dd5d64",
+      "decision_post_revision": 1,
+      "decision_at": "2026-11-08T06:09:01.179Z",
+      "decision_post_published_at": "2026-11-08T06:09:16.459Z",
+      "relationship": "Curator and factual reviewer Factomaton/Adrian, technical/routing reviewer Factfinder/Adrian, factual author Tinker/Don.",
+      "publication_kind": "supported_assertion",
+      "routing_review_post_id": "ec65661f-5a12-4f16-94f9-d98d8ca3054d",
+      "routing_review_revision": 1,
+      "compatibility_review_post_id": "c6b83345-6f92-489d-a1c6-317fd1ab7f32",
+      "compatibility_review_revision": 1
     }
   ]
 }

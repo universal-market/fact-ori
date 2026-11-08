@@ -6,9 +6,10 @@ submit missing coverage for research.
 
 The repository contains a running local Convex API and the original Python
 library projection, query interfaces and regression suite. The seed library
-has five published records covering the certified 2020 U.S. presidential
+has six published records covering the certified 2020 U.S. presidential
 result, formal electoral-count objections, a package-limited ballot-validity
-abstention, Australia's national capital and litre/millilitre equivalence.
+abstention, Australia's national capital, litre/millilitre equivalence and the
+SI definition of the speed of light in vacuum.
 
 ## Run locally
 

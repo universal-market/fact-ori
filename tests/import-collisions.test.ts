@@ -159,8 +159,8 @@ describe("snapshot alias/canonical scope boundaries", () => {
     const seed = JSON.parse(execFileSync(python(), ["-B", "scripts/export_api_seed.py"], { encoding: "utf8" }));
     const t = convexTest(schema, modules);
     const result = await t.mutation(internal.library.importSnapshot, seed);
-    expect(result.claims).toBe(5);
-    expect(result.versions).toBe(7);
+    expect(result.claims).toBe(6);
+    expect(result.versions).toBe(9);
     expect(await t.mutation(internal.library.importSnapshot, seed)).toEqual(result);
     for (const alias of seed.aliases) {
       const answer = await query(t, alias.text);
