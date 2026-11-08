@@ -53,6 +53,21 @@ const cases = [
     ["answer", "contradicted"],
   ],
 ];
+// Exercise the previously failing scope and compound paths early; retain all cases.
+const priority = [
+  "wrong-year",
+  "compound",
+  "unknown",
+  "paragraph",
+  "false-capital",
+  "false-number",
+  "wrong-medium",
+];
+cases.sort(
+  (a, b) =>
+    (priority.includes(a[0]) ? priority.indexOf(a[0]) : 99) -
+    (priority.includes(b[0]) ? priority.indexOf(b[0]) : 99),
+);
 const report = [];
 for (const [id, text, expected] of cases) {
   const started = Date.now();

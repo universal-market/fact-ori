@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { DatabaseSync } from "node:sqlite";
 import { readFileSync } from "node:fs";
-import { FactEngine, cosine } from "./engine.mjs";
+import { FactEngine, cosine, explicitYearConflict } from "./engine.mjs";
 const library = JSON.parse(
   readFileSync(new URL("../public/library.json", import.meta.url)),
 );
@@ -263,4 +263,80 @@ test("verbatim false assertions and unanswered questions need no invented answer
     assert.equal(result[0].claim, text);
     assert.equal(result[0].extraction_audit.coverage, "atomic_text_preserved");
   }
+});
+
+test("explicit dated-claim mismatch cannot inherit a contradictory or supported answer", async () => {
+  assert.deepEqual(
+    explicitYearConflict(
+      "Who won in 2016?",
+      "The winner of the 2020 election.",
+    ),
+    { requested_years: ["2016"], reviewed_years: ["2020"] },
+  );
+  assert.equal(
+    explicitYearConflict("Who won in 2020?", "The 2020 election."),
+    null,
+  );
+  assert.equal(
+    explicitYearConflict(
+      "One litre is 2000 millilitres",
+      "One litre equals 1000 millilitres",
+    ),
+    null,
+  );
+  assert.ok(
+    explicitYearConflict(
+      "Who won the 1776 election?",
+      "The winner of the 2020 election",
+    ),
+  );
+  const { engine } = fixture("C001", { decision: "contradicted" });
+  await engine.initialize();
+  engine.model.json = async () => {
+    throw Error("Mismatched dated record must not reach classification");
+  };
+  const result = await engine.match({
+    claim: "Who won the 2016 US presidential election?",
+    kind: "question",
+  });
+  assert.equal(result.status, "not_in_library");
+  assert.equal(result.answer, null);
+  assert.equal(result.scope_guards.length, 1);
+});
+
+test("different conditions do not hide a later matching package", async () => {
+  const { engine } = fixture();
+  engine.snapshot = {
+    ...library,
+    records: [
+      library.records.find((r) => r.claim_id === "C010"),
+      library.records.find((r) => r.claim_id === "C005"),
+    ],
+  };
+  let n = 0;
+  engine.model.json = async () => ({
+    relationship:
+      ++n === 1 ? "different_conditions_or_dates" : "answers_same_question",
+    reason: "Evaluate each candidate separately",
+  });
+  await engine.initialize();
+  const result = await engine.match({
+    claim: "How many millilitres in a litre?",
+    kind: "question",
+  });
+  assert.equal(n, 2);
+  assert.equal(result.status, "answer");
+  assert.equal(result.inspection.claim_id, "C005");
+});
+test("uncovered conditions are missing coverage, eligible for opted-in research", async () => {
+  const { engine } = fixture("C010", {
+    relationship: "different_conditions_or_dates",
+  });
+  await engine.initialize();
+  const result = await engine.match({
+    claim: "Speed in water?",
+    kind: "question",
+  });
+  assert.equal(result.status, "not_in_library");
+  assert.equal(result.answer, null);
 });

@@ -65,3 +65,10 @@ Run `npm run test:semantic` for structural/scope regressions and
 paraphrase, contradiction, ambiguity, scope-change and compound-input cases.
 The launch receipt records actual model results and limits. Source freshness,
 shared origins, original review receipts and curation history remain inspectable.
+
+An independent conservative guard prevents answers from crossing explicit years
+when the reviewed claim has date/event language. Four-digit conversion values
+alone do not establish a dated identity. This guard can withhold potentially
+related coverage; it does not replace model-assessed scope checks or establish
+a different year's outcome. Inference has two cache slots for the recurring
+text-audit and evidence-relation prompts and a 24 GiB memory cap.

@@ -7,10 +7,11 @@ services:
     networks: [private, public]
     cap_drop: [ALL]
     security_opt: [no-new-privileges:true]
-    mem_limit: 16g
+    mem_limit: 24g
     cpus: 8.0
     environment:
-      OLLAMA_NUM_PARALLEL: '1'
+      OLLAMA_NUM_PARALLEL: '2'
+      OLLAMA_MULTIUSER_CACHE: 'true'
       OLLAMA_MAX_LOADED_MODELS: '2'
   semantic:
     build:
