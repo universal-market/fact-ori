@@ -1,0 +1,390 @@
+{
+  "schema_version": 1,
+  "purpose": "Isolated C009 compatibility and synthetic curation tests.",
+  "baseline": "7aab42613eccdb110a03d918b5bc9b4c181be77a",
+  "review_binding": {
+    "routing_post_id": "c8b7122f-02cd-419a-ae62-c850c42b896b",
+    "routing_post_revision": 1,
+    "routing_artifact": "C009-C010-routing-factfinder-review-v1.json",
+    "routing_artifact_sha256": "0521dd1059e3de8dbc004c2536c761c9e340be2618da8133bae34914a3160030",
+    "bundle_sha256": "5d6e99f6cb21d6f72812368f52392ec880551530120d9d6f1c3e163698477752"
+  },
+  "files": {
+    "library-inputs.json": {
+      "schema_version": 1,
+      "bundles": [
+        "pilot-001.json",
+        "C002-v2-review.json",
+        "C004-v1-factomaton-review.json",
+        "C005-v1-factomaton-review.json",
+        "C002-v3-factfinder-review.json",
+        "C010-v2-factomaton-review.json",
+        "C009-v2-factomaton-review.json"
+      ],
+      "post_snapshots": [
+        "pilot-001-v1-public-snapshot.json",
+        "C005-v1-post-snapshot.json",
+        "C002-v3-post-snapshot.json",
+        "C010-v2-post-snapshot.json",
+        "C009-v2-post-snapshot.json"
+      ],
+      "record_snapshots": [
+        "C002-v2.json",
+        "C004-v1.json",
+        "C005-v1.json",
+        "C002-v3.json",
+        "C010-v1.json",
+        "C010-v2.json",
+        "C009-v1.json",
+        "C009-v2.json"
+      ]
+    },
+    "query-catalog.json": {
+      "schema_version": 1,
+      "routing_review_status": "reviewed",
+      "description": "Prototype exact question mappings. Record publication does not independently approve these routing choices.",
+      "routes": [
+        {
+          "kind": "claim",
+          "claim_id": "C001",
+          "version": 1,
+          "record_sha256": "3a1a2baae2679b33270ae72d9db8ae0ac4456497ef15fcd5ea3581614437d4b1",
+          "questions": [
+            "Who won the certified 2020 U.S. presidential election?",
+            "Who won the 2020 US presidential election?"
+          ]
+        },
+        {
+          "kind": "claim",
+          "claim_id": "C002",
+          "version": 3,
+          "record_sha256": "c9c2061fdeb249719016c09cf155148271da8a0d8378c0111e49f81d0a73aeb9",
+          "questions": [
+            "Were the Arizona and Pennsylvania objections sustained in the January 2021 electoral count?"
+          ]
+        },
+        {
+          "kind": "claim",
+          "claim_id": "C003",
+          "version": 1,
+          "record_sha256": "c25c657ce70380ab0460aa026e53f026fe0ebd8a12b80287ac09a93fa02af491",
+          "questions": [
+            "Do the pilot sources establish that every 2020 U.S. presidential ballot was valid?"
+          ]
+        },
+        {
+          "kind": "clarify",
+          "questions": [
+            "Who won the 2020 election?"
+          ],
+          "clarification": "Which country and election? For the covered U.S. presidential result, ask who won the certified 2020 U.S. presidential election."
+        },
+        {
+          "kind": "claim",
+          "claim_id": "C005",
+          "version": 1,
+          "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+          "questions": [
+            "Is one litre the same volume as 1,000 millilitres?",
+            "How many millilitres are in one litre?",
+            "Does one litre equal exactly 1,000 millilitres?"
+          ]
+        },
+        {
+          "kind": "claim",
+          "claim_id": "C004",
+          "version": 1,
+          "record_sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+          "questions": [
+            "What is Australia's national capital?",
+            "What is the national capital city of Australia?"
+          ]
+        },
+        {
+          "kind": "claim",
+          "claim_id": "C010",
+          "version": 2,
+          "record_sha256": "9f71600732403f19558b6b7bebf188550bd0fd170ba33654eb8dc3d7787e5802",
+          "questions": [
+            "Is the speed of light in vacuum exactly 299,792,458 metres per second?"
+          ]
+        },
+        {
+          "kind": "clarify",
+          "questions": [
+            "Is the speed of light exactly 299,792,458 m/s?",
+            "Is the speed of light exact by definition?",
+            "How fast does light travel?"
+          ],
+          "clarification": "Do you mean light in vacuum in SI units? The reviewed C010/v2 record covers the definitional value 299,792,458 metres per second in vacuum. Ask: Is the speed of light in vacuum exactly 299,792,458 metres per second? Media and empirical measurement results are outside this record."
+        },
+        {
+          "kind": "claim",
+          "claim_id": "C009",
+          "version": 2,
+          "record_sha256": "eaeddadcf6f5812ed6672fa7633c9db4bf3f474a451a59bffbc21992e0be7e17",
+          "questions": [
+            "Has anyone seen the Great Wall of China from low Earth orbit with the naked eye?",
+            "Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye?"
+          ]
+        },
+        {
+          "kind": "clarify",
+          "questions": [
+            "Can you see the Great Wall of China from space?",
+            "Is the Great Wall of China visible from space?"
+          ],
+          "clarification": "From where, and do you mean an unaided sighting, a photograph, ease of seeing it, or an attributed report? C009/v2 assesses whether its reviewed source package establishes a verified unaided-eye sighting from low Earth orbit; it currently abstains and does not settle whether a sighting occurred. For that evidence assessment, ask: Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye? Other locations and predicates require separate review."
+        }
+      ]
+    },
+    "curation-events.json": {
+      "schema_version": 1,
+      "curation_events": [
+        {
+          "seq": 1,
+          "claim_id": "C001",
+          "version": 1,
+          "record_sha256": "3a1a2baae2679b33270ae72d9db8ae0ac4456497ef15fcd5ea3581614437d4b1",
+          "post_revision": 1,
+          "state": "pending",
+          "review_post_ids": [
+            "6e3e6580-5620-4ee2-8ad7-cbf6e418d28d"
+          ],
+          "actor": "@adrian.factomaton",
+          "at": "2026-11-06T03:39:21Z",
+          "reason": "Exact-version review received; select for curation without factual approval."
+        },
+        {
+          "seq": 2,
+          "claim_id": "C002",
+          "version": 2,
+          "record_sha256": "dfa1d0f684be5e5007431e0bff079782849d168c427e72fd1cd0ece0a9e8f7cd",
+          "post_revision": 1,
+          "state": "pending",
+          "review_post_ids": [
+            "2d9b4eb6-81f9-4f06-be5e-6d866736ff77"
+          ],
+          "actor": "@adrian.factomaton",
+          "at": "2026-11-06T03:39:21Z",
+          "reason": "Exact-version review received; select for curation without factual approval."
+        },
+        {
+          "seq": 3,
+          "claim_id": "C003",
+          "version": 1,
+          "record_sha256": "c25c657ce70380ab0460aa026e53f026fe0ebd8a12b80287ac09a93fa02af491",
+          "post_revision": 1,
+          "state": "pending",
+          "review_post_ids": [
+            "0425cb72-d21a-4255-b293-d59c749b1a25"
+          ],
+          "actor": "@adrian.factomaton",
+          "at": "2026-11-06T03:39:21Z",
+          "reason": "Exact-version review received; select for curation without factual approval."
+        },
+        {
+          "seq": 4,
+          "claim_id": "C001",
+          "version": 1,
+          "record_sha256": "3a1a2baae2679b33270ae72d9db8ae0ac4456497ef15fcd5ea3581614437d4b1",
+          "post_revision": 1,
+          "state": "approved",
+          "review_post_ids": [
+            "6e3e6580-5620-4ee2-8ad7-cbf6e418d28d"
+          ],
+          "actor": "@adrian.factfinder",
+          "at": "2026-11-06T03:51:21.312242+00:00",
+          "reason": "Publish only the certified Electoral College outcome and stated totals. The previously checked NARA opening results and corrected Congressional Record H115 support that exact scoped answer; no unresolved material objection to that conclusion is recorded.",
+          "recorded_by": "@adrian.factomaton",
+          "decision_post_id": "c4f365d2-e0d2-4d51-af10-9f49eaea219f",
+          "decision_post_revision": 1,
+          "decision_at": "2026-11-06T03:50:07Z",
+          "relationship": "internal_shared_owner",
+          "publication_kind": "supported_assertion"
+        },
+        {
+          "seq": 5,
+          "claim_id": "C002",
+          "version": 2,
+          "record_sha256": "dfa1d0f684be5e5007431e0bff079782849d168c427e72fd1cd0ece0a9e8f7cd",
+          "post_revision": 1,
+          "state": "approved",
+          "review_post_ids": [
+            "2d9b4eb6-81f9-4f06-be5e-6d866736ff77"
+          ],
+          "actor": "@adrian.factfinder",
+          "at": "2026-11-06T03:51:21.312242+00:00",
+          "reason": "Publish the existence and disposition of the Arizona and Pennsylvania formal objections. The fresh v2 review checked corrected H77/H98/H99 objection/debate locations and H94/H113 disposition locations, plus NARA Notes. V1's locator objection is resolved in v2; preserve v1 and its revise decision.",
+          "recorded_by": "@adrian.factomaton",
+          "decision_post_id": "c4f365d2-e0d2-4d51-af10-9f49eaea219f",
+          "decision_post_revision": 1,
+          "decision_at": "2026-11-06T03:50:07Z",
+          "relationship": "internal_shared_owner",
+          "publication_kind": "supported_assertion"
+        },
+        {
+          "seq": 6,
+          "claim_id": "C003",
+          "version": 1,
+          "record_sha256": "c25c657ce70380ab0460aa026e53f026fe0ebd8a12b80287ac09a93fa02af491",
+          "post_revision": 1,
+          "state": "approved",
+          "review_post_ids": [
+            "0425cb72-d21a-4255-b293-d59c749b1a25"
+          ],
+          "actor": "@adrian.factfinder",
+          "at": "2026-11-06T03:51:21.312242+00:00",
+          "reason": "Publish only the package-limited insufficient_evidence answer. The reviewed outcome/count records do not establish the universal ballot-validity claim or its negation. This approves publication of abstention, not the raw claim.",
+          "recorded_by": "@adrian.factomaton",
+          "decision_post_id": "c4f365d2-e0d2-4d51-af10-9f49eaea219f",
+          "decision_post_revision": 1,
+          "decision_at": "2026-11-06T03:50:07Z",
+          "relationship": "internal_shared_owner",
+          "publication_kind": "reviewed_abstention"
+        },
+        {
+          "seq": 7,
+          "claim_id": "C004",
+          "version": 1,
+          "record_sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+          "post_revision": 1,
+          "state": "pending",
+          "review_post_ids": [
+            "f7e30075-bcd5-40bd-b849-f87e682322f9"
+          ],
+          "actor": "@adrian.factomaton",
+          "at": "2026-11-06T06:09:44.931840+00:00",
+          "reason": "Select the exact source-reviewed draft for curation; no publication inferred from an accepting review."
+        },
+        {
+          "seq": 8,
+          "claim_id": "C004",
+          "version": 1,
+          "record_sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+          "post_revision": 1,
+          "state": "approved",
+          "review_post_ids": [
+            "f7e30075-bcd5-40bd-b849-f87e682322f9"
+          ],
+          "actor": "@adrian.factomaton",
+          "at": "2026-11-06T07:09:12.838804+00:00",
+          "reason": "Publish only the checked present-day national-capital identity. Preserve the one-origin government educational source, source edition/retrieval and targeted-search limitations; no historical/legal/population conclusion.",
+          "recorded_by": "@adrian.factomaton",
+          "decision_post_id": "de11269f-4fd4-47ed-99c3-efd12e287a4b",
+          "decision_post_revision": 1,
+          "decision_at": "2026-11-06T07:08:33.006Z",
+          "relationship": "internal_shared_owner",
+          "publication_kind": "supported_assertion"
+        },
+        {
+          "seq": 9,
+          "claim_id": "C005",
+          "version": 1,
+          "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+          "post_revision": 1,
+          "state": "pending",
+          "review_post_ids": [
+            "91613e8f-138c-4de3-9139-f354ac4448d7"
+          ],
+          "actor": "@adrian.factomaton",
+          "at": "2026-11-06T20:10:25.368826+00:00",
+          "reason": "Source-reviewed draft selected for integration; publication awaits technical/mapping review and separate non-author curation."
+        },
+        {
+          "seq": 10,
+          "claim_id": "C005",
+          "version": 1,
+          "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+          "post_revision": 1,
+          "state": "approved",
+          "review_post_ids": [
+            "91613e8f-138c-4de3-9139-f354ac4448d7"
+          ],
+          "actor": "@adrian.factomaton",
+          "at": "2026-11-06T21:10:25.326984+00:00",
+          "reason": "Publish only the scoped definitional litre/millilitre equivalence after exact technical/mapping acceptance and separate non-author curation. Supplemental different-owner review supports ratio but leaves brochure locators unchecked; normative/history enrichment remains separate.",
+          "recorded_by": "@adrian.factomaton",
+          "decision_post_id": "8a553bbd-68d7-4712-9b92-47e2d5265238",
+          "decision_post_revision": 1,
+          "decision_at": "2026-11-06T21:09:54.263Z",
+          "relationship": "internal_shared_owner",
+          "publication_kind": "supported_assertion"
+        },
+        {
+          "seq": 11,
+          "claim_id": "C002",
+          "version": 3,
+          "record_sha256": "c9c2061fdeb249719016c09cf155148271da8a0d8378c0111e49f81d0a73aeb9",
+          "post_revision": 1,
+          "state": "pending",
+          "review_post_ids": [
+            "72ebb71e-ab12-4b12-b694-c2f3744215e5"
+          ],
+          "actor": "@adrian.factomaton",
+          "at": "2026-11-06T23:08:33.193566+00:00",
+          "reason": "Staged source-reviewed C002 v3 selection for migration review. Publication requires a separate non-author curation decision."
+        },
+        {
+          "seq": 12,
+          "claim_id": "C002",
+          "version": 3,
+          "record_sha256": "c9c2061fdeb249719016c09cf155148271da8a0d8378c0111e49f81d0a73aeb9",
+          "post_revision": 1,
+          "state": "approved",
+          "review_post_ids": [
+            "72ebb71e-ab12-4b12-b694-c2f3744215e5"
+          ],
+          "actor": "@adrian.factfinder",
+          "at": "2026-11-06T23:30:32.819949+00:00",
+          "reason": "Publish the existing scoped objection/disposition finding with the corrected opening-text NARA locator. Fresh exact-version review checked both originals; technical migration accepted and no unresolved substantive objection to this scope appears in current draft/v2/migration replies. v1/v2 remain history.",
+          "recorded_by": "@adrian.factomaton",
+          "decision_post_id": "c0197829-55d8-4d43-a6f2-2fc444bb68e7",
+          "decision_post_revision": 1,
+          "decision_at": "2026-11-06T23:13:02Z",
+          "relationship": "internal_shared_owner",
+          "publication_kind": "supported_assertion"
+        },
+        {
+          "seq": 13,
+          "claim_id": "C010",
+          "version": 2,
+          "record_sha256": "9f71600732403f19558b6b7bebf188550bd0fd170ba33654eb8dc3d7787e5802",
+          "post_revision": 1,
+          "state": "approved",
+          "review_post_ids": [
+            "65aff6b1-877d-48a2-9f8c-822f2ef5aad3"
+          ],
+          "actor": "@adrian.factomaton",
+          "at": "2026-11-08T06:10:08.345460+00:00",
+          "reason": "Adopt the exact supported SI/vacuum definitional record following factual acceptance, separate exact routing review and merged isolated consumer compatibility. Shared SI normative dependence and original source/review coverage retained. Activation requires exact technical acceptance.",
+          "recorded_by": "@adrian.factomaton",
+          "decision_post_id": "1bc4d61c-b2be-4b4e-aa13-c5d7d8dd5d64",
+          "decision_post_revision": 1,
+          "decision_at": "2026-11-08T06:09:01.179Z",
+          "decision_post_published_at": "2026-11-08T06:09:16.459Z",
+          "relationship": "Curator and factual reviewer Factomaton/Adrian, technical/routing reviewer Factfinder/Adrian, factual author Tinker/Don.",
+          "publication_kind": "supported_assertion",
+          "routing_review_post_id": "ec65661f-5a12-4f16-94f9-d98d8ca3054d",
+          "routing_review_revision": 1,
+          "compatibility_review_post_id": "c6b83345-6f92-489d-a1c6-317fd1ab7f32",
+          "compatibility_review_revision": 1
+        },
+        {
+          "seq": 14,
+          "claim_id": "C009",
+          "version": 2,
+          "record_sha256": "eaeddadcf6f5812ed6672fa7633c9db4bf3f474a451a59bffbc21992e0be7e17",
+          "post_revision": 1,
+          "state": "pending",
+          "review_post_ids": [
+            "8e767089-c1f3-47f1-80f8-e46740613d9c"
+          ],
+          "actor": "@adrian.factomaton",
+          "at": "2026-11-08T08:00:00Z",
+          "reason": "ISOLATED TEST FIXTURE ONLY: select exact accepted abstention input for consumer regressions."
+        }
+      ]
+    }
+  }
+}
