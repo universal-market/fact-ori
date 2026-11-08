@@ -1,0 +1,78 @@
+{
+  "canonicalization": "factori-sorted-json-v1",
+  "numeric_domain": "integers within \u00b1(2^53-1), integer JSON tokens",
+  "vectors": [
+    {
+      "name": "empty",
+      "input_json": "{}\n",
+      "canonical_json": "{}",
+      "canonical_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "name": "nested-and-types",
+      "input_json": "{\n  \"z\": [\n    true,\n    false,\n    null,\n    0,\n    -7\n  ],\n  \"a\": {\n    \"b\": \"x\",\n    \"a\": []\n  }\n}\n",
+      "canonical_json": "{\"a\":{\"a\":[],\"b\":\"x\"},\"z\":[true,false,null,0,-7]}",
+      "canonical_sha256": "cbdb9d470a5bb8516263ade436acbee75065140dfb5b57f044e445f7d9383b85"
+    },
+    {
+      "name": "numeric-string-keys",
+      "input_json": "{\n  \"2\": \"two\",\n  \"10\": \"ten\",\n  \"1\": \"one\"\n}\n",
+      "canonical_json": "{\"1\":\"one\",\"10\":\"ten\",\"2\":\"two\"}",
+      "canonical_sha256": "88f1d5d864d29ee7e34bed097931cc725766463ad2b97c08685f0c20dbc66b21"
+    },
+    {
+      "name": "unicode-key-order",
+      "input_json": "{\n  \"\\ud83d\\ude00\": \"supplementary\",\n  \"\\ue000\": \"private\",\n  \"a\": \"ascii\",\n  \"\\ud800\": \"surrogate\"\n}\n",
+      "canonical_json": "{\"a\":\"ascii\",\"\\ud800\":\"surrogate\",\"\\ue000\":\"private\",\"\\ud83d\\ude00\":\"supplementary\"}",
+      "canonical_sha256": "c91519fa79c01d1b5a3937fc11455e2b720704882f875e285dc8952b637e0131"
+    },
+    {
+      "name": "unicode-values",
+      "input_json": "{\n  \"text\": \"\\u00e9 e\\u0301 \\ud83d\\ude00 \\u2028 \\u2029\",\n  \"surrogates\": \"\\ud800\\udfff\"\n}\n",
+      "canonical_json": "{\"surrogates\":\"\\ud800\\udfff\",\"text\":\"\\u00e9 e\\u0301 \\ud83d\\ude00 \\u2028 \\u2029\"}",
+      "canonical_sha256": "c15d85a3dfd30057abde8975a5fa8017134d4f054b9585cbab2330c70498c1f5"
+    },
+    {
+      "name": "controls",
+      "input_json": "\"\\u0000\\u0001\\u0002\\u0003\\u0004\\u0005\\u0006\\u0007\\b\\t\\n\\u000b\\f\\r\\u000e\\u000f\\u0010\\u0011\\u0012\\u0013\\u0014\\u0015\\u0016\\u0017\\u0018\\u0019\\u001a\\u001b\\u001c\\u001d\\u001e\\u001f\\u007f\\\"\\\\/\"\n",
+      "canonical_json": "\"\\u0000\\u0001\\u0002\\u0003\\u0004\\u0005\\u0006\\u0007\\b\\t\\n\\u000b\\f\\r\\u000e\\u000f\\u0010\\u0011\\u0012\\u0013\\u0014\\u0015\\u0016\\u0017\\u0018\\u0019\\u001a\\u001b\\u001c\\u001d\\u001e\\u001f\\u007f\\\"\\\\/\"",
+      "canonical_sha256": "8031faf5965603a18d33b66391ae19de472cea2a7a3f8cce2555831b54461ccb"
+    },
+    {
+      "name": "integer-boundaries",
+      "input_json": "[\n  -9007199254740991,\n  9007199254740991\n]\n",
+      "canonical_json": "[-9007199254740991,9007199254740991]",
+      "canonical_sha256": "cbad3dd0e71e92fb3519919946bde0ab3086ddacce65983bddec595cb27c19da"
+    },
+    {
+      "name": "detached-fields",
+      "input_json": "{\n  \"sha256\": \"included\",\n  \"supersedes\": {\n    \"sha256\": \"also-included\"\n  },\n  \"digest\": null\n}\n",
+      "canonical_json": "{\"digest\":null,\"sha256\":\"included\",\"supersedes\":{\"sha256\":\"also-included\"}}",
+      "canonical_sha256": "6c61d4894856d5963efa376fbad1b6038de780320fb7c5cc9b3938678fdd5115"
+    },
+    {
+      "name": "string-number-tokens",
+      "input_json": "\"1.5 1e0 9007199254740993 \\\\\\\"42.3\"\n",
+      "canonical_json": "\"1.5 1e0 9007199254740993 \\\\\\\"42.3\"",
+      "canonical_sha256": "10fdcd3470e05032737ef1d02c2169e533d82fe6ec9598bf3c8b5cc6cbbb4a6f"
+    },
+    {
+      "name": "composed",
+      "input_json": "\"\\u00e9\"\n",
+      "canonical_json": "\"\\u00e9\"",
+      "canonical_sha256": "abc3932c9ec58f042750738c49034e7ee67cf556d6be86832ac3dda38decb703"
+    },
+    {
+      "name": "decomposed",
+      "input_json": "\"e\\u0301\"\n",
+      "canonical_json": "\"e\\u0301\"",
+      "canonical_sha256": "8e0c35d689e13926898b948c3be0a6ec7277b6840a3a782d487921cf052d6008"
+    },
+    {
+      "name": "negative-zero-token",
+      "input_json": "-0\n",
+      "canonical_json": "0",
+      "canonical_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    }
+  ]
+}
