@@ -2,7 +2,14 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { DatabaseSync } from "node:sqlite";
 import { readFileSync } from "node:fs";
-import { FactEngine, cosine, explicitYearConflict } from "./engine.mjs";
+import {
+  FactEngine,
+  cosine,
+  explicitYearConflict,
+  checkedVerbatimSpans,
+  obscureContent,
+  researchSubmissionText,
+} from "./engine.mjs";
 const library = JSON.parse(
   readFileSync(new URL("../public/library.json", import.meta.url)),
 );
@@ -174,7 +181,7 @@ test("omitted source sentences fail explicitly instead of claiming full coverage
           claims: [
             {
               source_quote: "Water and ice.",
-              claim: "Water",
+              claim: "Water and ice.",
               kind: "assertion",
             },
           ],
@@ -248,7 +255,7 @@ test("full quoted span cannot hide omitted clauses or altered predicates", async
             coverage: "combined_clauses_need_splitting",
             reason: "Omitted or altered second predicate",
           };
-    await assert.rejects(engine.extract(text), /incomplete or uncertain/);
+    await assert.rejects(engine.extract(text), /verbatim/);
     assert.equal(extracted, true);
   }
 });
@@ -371,4 +378,63 @@ test("valid atomic clause quotes need not each contain the entire compound sente
   assert.equal(claims.length, 2);
   assert.equal(claims[1].start, text.indexOf("Sydney"));
   assert.equal(audits, 2);
+});
+
+test("verbatim coverage cannot drop entities, numbers, negations or conditions", () => {
+  for (const [text, quote] of [
+    ["A litre contains 500 ml.", "A litre contains"],
+    ["Sydney is not the capital.", "Sydney is"],
+    ["If heated, water boils.", "water boils"],
+  ])
+    assert.throws(
+      () => checkedVerbatimSpans(text, [{ source_quote: quote }]),
+      /cover every/,
+    );
+  assert.throws(
+    () =>
+      checkedVerbatimSpans("Canberra is a capital.", [{ source_quote: "Can" }]),
+    /cut through/,
+  );
+});
+test("complete quoted compound is still rejected by the structural atomicity gate", async () => {
+  const { engine } = fixture();
+  const text =
+    "Canberra is Australia's capital and Sydney is Australia's capital.";
+  engine.model.json = async (_s, _i, schema) =>
+    schema.properties.claims
+      ? { claims: [{ source_quote: text }] }
+      : {
+          coverage: "combined_clauses_need_splitting",
+          reason: "One item still combines assertions",
+        };
+  await assert.rejects(engine.extract(text), /incomplete or uncertain/);
+});
+test("syntax audit obscures factual names, values and predicates while retaining structure", () => {
+  const items = obscureContent([
+    "Canberra is Australia's capital",
+    "Sydney is Australia's capital",
+    "A litre contains 500 millilitres and not 1000 millilitres",
+  ]);
+  assert.equal(items[0], "TERM1 is TERM2 TERM3");
+  assert.equal(items[1], "TERM4 is TERM2 TERM3");
+  assert.ok(
+    !items.join(" ").match(/Canberra|Sydney|Australia|capital|500|1000|litre/),
+  );
+  assert.match(items[2], /contains .* and not /);
+});
+
+test("research handoff preserves unverified input context without truncation", () => {
+  const original = "In water, a light wave has a different speed. It may vary.";
+  const job = researchSubmissionText("It may vary.", original);
+  assert.equal(job.scope, "atomic_claim_with_context");
+  assert.ok(job.text.includes(original));
+  assert.ok(job.text.includes("It may vary."));
+  const long = "x".repeat(4000);
+  const bounded = researchSubmissionText("x", long);
+  assert.equal(bounded.text, long);
+  assert.equal(bounded.scope, "whole_input_with_context");
+  assert.deepEqual(researchSubmissionText("A question?", "A question?"), {
+    text: "A question?",
+    scope: "atomic_claim",
+  });
 });

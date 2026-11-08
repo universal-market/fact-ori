@@ -14,11 +14,15 @@ curl https://YOUR-API/v1/check -H 'Content-Type: application/json' \
   -d '{"text":"Canberra is Australia’s capital. A litre contains 500 millilitres.","async":true}'
 ```
 
-Sentence segmentation preserves original text. A model audits the whole input
-for atomicity and fidelity before any sentence can bypass further splitting.
-Combined clauses are decomposed and audited again; no conjunction allowlist
-establishes completeness. Failed/uncertain audits fail explicitly;
-successful extraction is labeled `model_assessed`, not human-verified.
+Sentence segmentation and extracted clauses retain literal source quotes; the
+service never accepts a rewritten claim. Code verifies full-word source spans
+and coverage of every original content token (only and/but separators may be
+omitted). The model audits atomicity on content-obscured text, independently for
+each item, so factual beliefs cannot correct the submitted assertions during
+parsing. Combined items are split into verbatim quotes and checked again.
+Shared input context is retained for references/conditions and is explicitly
+unverified, not factual evidence. Structural uncertainty fails explicitly;
+atomicity and query relationships remain `model_assessed` rather than human-reviewed.
 
 Each result contains the source quote and character offsets, extracted claim,
 status, evidence verdict, answer, candidate records and model assessment.
@@ -39,7 +43,10 @@ The analysis queue permits100 pending requests. At most12 atomic claims are
 supported per request and excessive extraction fails explicitly.
 
 `public_review: true` submits each `not_in_library` claim as a deduplicated durable
-research job. Its text becomes public when the librarian posts or links the
+research job, retaining unverified input context for shared conditions and
+references. If the target-plus-context would exceed4,000characters, the whole
+original input becomes one context-preserving job instead of being truncated.
+Its text becomes public when the librarian posts or links the
 investigation on Tilori. `GET /v1/jobs/{id}` exposes research progress and the
 linked post ID. Research completion and analysis completion are separate.
 `Idempotency-Key` binds the analysis text and public-review choice, with409 on

@@ -9,8 +9,8 @@ assert.ok(health.engine_revision);
 assert.ok(health.model_configuration);
 // Exercise the previously failing scope and compound paths early; retain all cases.
 const priority = [
-  "wrong-year",
   "compound",
+  "wrong-year",
   "unknown",
   "paragraph",
   "false-capital",
@@ -82,6 +82,8 @@ for (const [id, text, expected] of cases) {
   if (process.argv[3])
     writeFileSync(process.argv[3], JSON.stringify(report, null, 2) + "\n");
   console.log(JSON.stringify(report.at(-1)));
+  if (!pass && !process.argv.includes("--continue-on-failure"))
+    throw new Error(`Case ${id} failed; partial report checkpointed.`);
 }
 if (process.argv[3])
   writeFileSync(process.argv[3], JSON.stringify(report, null, 2) + "\n");
