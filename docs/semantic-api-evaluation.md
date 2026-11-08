@@ -64,3 +64,29 @@ complete report and separate successful public-runtime receipt by raw SHA-256.
 Median case duration was85.75seconds; the maximum was192.06seconds. This includes
 an immediate curated clarification. Prior failures informed the extraction,
 scope and relevance fixes; the cases are expressly not held out.
+
+Versioned growth evaluation uses an explicitly selected, reviewed contract:
+
+```sh
+EVALUATION_SNAPSHOT_PATH=local/C011-activation-bundle-v2-2026-11-08/library.json \
+  node scripts/evaluate-semantic-api.mjs CANDIDATE_ORIGIN REPORT.json --contract=library-growth-v2
+EVALUATION_SNAPSHOT_PATH=local/C011-activation-bundle-v2-2026-11-08/library.json \
+  node scripts/verify-semantic-deployment.mjs HTTPS_ORIGIN REPORT.json RECEIPT.json --contract=library-growth-v2
+```
+
+The registry pins the accepted 17-case protocol's raw bytes, library import,
+snapshot subject and complete snapshot bytes. Both tools select the contract
+explicitly; the default remains `seven-record-v1`. A mismatched library fails
+before the evaluator submits any checks. New report rows bind the full contract
+and snapshot identity alongside engine/model/import identities. Every growth row
+requires those bindings; the verifier rereads every result through the public API.
+Original v1 reports remain valid historical inputs under their original contract.
+
+The frozen growth fixture retains its creation-time proposal label; acceptance
+is separately recorded in Tilori review52956c47 r1. The old Venus research request
+becomes covered after its independent source/curation/routing decisions. The new
+intake case asks the chemical symbol of gold and tests missing library coverage,
+not chemistry truth. Added Venus paraphrase/atmosphere cases and unchanged prior
+compatibility cases total17. This contract has not yet produced a real-model
+passing report. A matching staged candidate and separate new research-job linkage
+are required for actual evaluation and subsequent public verification.

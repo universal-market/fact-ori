@@ -1,0 +1,152 @@
+{
+  "schema_version": 2,
+  "kind": "authored_library_growth_regression",
+  "status": "proposed_for_review_not_executed",
+  "library_import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+  "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+  "preserved_predecessor": "public/evaluations/2026-11-08-semantic-v1.json",
+  "expectation_changes": [
+    {
+      "old_id": "research-intake",
+      "old_text": "Is Venus\u2019s sidereal rotation retrograde?",
+      "old_expected": [
+        "not_in_library"
+      ],
+      "new_id": "known-venus",
+      "new_expected": [
+        "answer"
+      ],
+      "reason": "An independently recorded source/curation/routing decision adds exact approved coverage; predecessor remains historical unchanged."
+    }
+  ],
+  "public_review_case_id": "research-intake",
+  "cases": [
+    [
+      "known-venus",
+      "Is Venus\u2019s sidereal rotation retrograde?",
+      [
+        "answer"
+      ]
+    ],
+    [
+      "paraphrase-units",
+      "How many ml make up a liter?",
+      [
+        "answer"
+      ]
+    ],
+    [
+      "paraphrase-capital",
+      "What is the capital city of Australia?",
+      [
+        "answer"
+      ]
+    ],
+    [
+      "false-capital",
+      "Australia's capital is Sydney.",
+      [
+        "contradicted"
+      ]
+    ],
+    [
+      "false-number",
+      "A liter contains 500 milliliters.",
+      [
+        "contradicted"
+      ]
+    ],
+    [
+      "wrong-predicate",
+      "One litre weighs 1000 grams.",
+      [
+        "not_in_library",
+        "needs_clarification"
+      ]
+    ],
+    [
+      "wrong-medium",
+      "Light travels at exactly 299792458 metres per second in water.",
+      [
+        "not_in_library",
+        "needs_clarification"
+      ]
+    ],
+    [
+      "wrong-year",
+      "Who won the 2016 US presidential election?",
+      [
+        "not_in_library",
+        "needs_clarification"
+      ]
+    ],
+    [
+      "election-paraphrase",
+      "Who won the certified United States presidential election in 2020?",
+      [
+        "answer"
+      ]
+    ],
+    [
+      "unresolved-ballots",
+      "Were all ballots cast in the 2020 US presidential election valid?",
+      [
+        "abstain"
+      ]
+    ],
+    [
+      "ambiguous-space",
+      "Can you see the Great Wall of China from space?",
+      [
+        "needs_clarification"
+      ]
+    ],
+    [
+      "unknown",
+      "Do unicorns live on Mars?",
+      [
+        "not_in_library"
+      ]
+    ],
+    [
+      "paragraph",
+      "Canberra is Australia's capital. A liter contains 500 milliliters. Unicorns live on Mars.",
+      [
+        "answer",
+        "contradicted",
+        "not_in_library"
+      ]
+    ],
+    [
+      "compound",
+      "Canberra is Australia's capital and Sydney is Australia's capital.",
+      [
+        "answer",
+        "contradicted"
+      ]
+    ],
+    [
+      "research-intake",
+      "What is the chemical symbol for gold?",
+      [
+        "not_in_library"
+      ]
+    ],
+    [
+      "venus-paraphrase",
+      "Does the solid surface of Venus have retrograde rotation against the background stars?",
+      [
+        "answer"
+      ]
+    ],
+    [
+      "venus-wrong-atmosphere",
+      "Do Venus's atmospheric winds take exactly 243 days to rotate?",
+      [
+        "not_in_library",
+        "needs_clarification"
+      ]
+    ]
+  ],
+  "limits": "Authored/prior-exposed regression, not general accuracy. Existing compatibility cases retain labels. New expectations frozen before inference; no results exist."
+}
