@@ -1,10 +1,14 @@
 import assert from "node:assert/strict";
 import { writeFileSync } from "node:fs";
 const origin = process.argv[2] ?? "http://localhost:8081";
-import { EVALUATION_CASES } from "./semantic-report.mjs";
-const cases = EVALUATION_CASES.slice();
+const outputPath = process.argv[3]?.startsWith("--") ? undefined : process.argv[3];
+import { evaluationContract, contractMetadata, evaluationSnapshot } from "./semantic-report.mjs";
+const contract = evaluationContract(process.argv.find(a => a.startsWith("--contract="))?.split("=")[1]);
+evaluationSnapshot(contract); // Pin actual reviewed snapshot bytes before any request.
+const cases = contract.cases.slice();
 const health = await (await fetch(origin + "/health")).json();
 assert.equal(health.status, "ready");
+assert.equal(health.import_id, contract.importId, "Contract library mismatch before submission");
 assert.ok(health.engine_revision);
 assert.ok(health.model_configuration);
 // Exercise the previously failing scope and compound paths early; retain all cases.
@@ -65,6 +69,7 @@ for (const [id, text, expected] of cases) {
     engine_revision: value.engine_revision ?? null,
     import_id: value.import_id ?? null,
     model_configuration: health.model_configuration,
+    evaluation_contract: contractMetadata(contract),
     error: value.error ?? null,
     details: results.map((r) => ({
       claim: r.claim,
@@ -79,14 +84,14 @@ for (const [id, text, expected] of cases) {
       assessment: r.model_assessment ?? null,
     })),
   });
-  if (process.argv[3])
-    writeFileSync(process.argv[3], JSON.stringify(report, null, 2) + "\n");
+  if (outputPath)
+    writeFileSync(outputPath, JSON.stringify(report, null, 2) + "\n");
   console.log(JSON.stringify(report.at(-1)));
   if (!pass && !process.argv.includes("--continue-on-failure"))
     throw new Error(`Case ${id} failed; partial report checkpointed.`);
 }
-if (process.argv[3])
-  writeFileSync(process.argv[3], JSON.stringify(report, null, 2) + "\n");
+if (outputPath)
+  writeFileSync(outputPath, JSON.stringify(report, null, 2) + "\n");
 assert.ok(
   report.every((r) => r.pass),
   "Semantic acceptance cases failed",

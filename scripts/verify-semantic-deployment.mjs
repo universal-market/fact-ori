@@ -4,14 +4,18 @@ import { checkText } from "../client/check.mjs";
 import { engineFingerprint } from "../service/engine.mjs";
 import {
   validateSemanticReport,
-  EVALUATION_CASES,
+  evaluationContract,
+  contractMetadata,
+  evaluationSnapshot,
 } from "./semantic-report.mjs";
 const origin = process.argv[2];
+const receiptPath = process.argv[4]?.startsWith("--") ? undefined : process.argv[4];
+const contract = evaluationContract(process.argv.find(a => a.startsWith("--contract="))?.split("=")[1]);
 const baseline = JSON.parse(readFileSync(process.argv[3], "utf8"));
 assert.equal(
   baseline.length,
-  14,
-  "A complete 14-case actual-model report is required",
+  contract.cases.length,
+  "A complete approved-contract actual-model report is required",
 );
 assert.ok(
   baseline.every((r) => r.pass),
@@ -20,13 +24,12 @@ assert.ok(
 const pins = JSON.parse(
   readFileSync(new URL("../service/models.json", import.meta.url)),
 );
-const snapshot = JSON.parse(
-  readFileSync(new URL("../public/library.json", import.meta.url)),
-);
+const snapshot = evaluationSnapshot(contract);
 const receipt = {
   origin,
   verified_at: new Date().toISOString(),
   import_id: snapshot.library_import_id,
+  evaluation_contract: contractMetadata(contract),
   checks: [],
 };
 async function get(path, status = 200) {
@@ -43,6 +46,8 @@ assert.equal(health.semantic_search, true);
 assert.equal(health.claim_decomposition, true);
 assert.equal(health.public_intake, "enabled");
 assert.equal(health.import_id, snapshot.library_import_id);
+assert.equal(snapshot.library_import_id, contract.importId, "Contract library mismatch");
+assert.equal(snapshot.snapshot_sha256, contract.snapshotSha256, "Contract snapshot mismatch");
 const modelConfiguration = {
   chat_model: "qwen2.5:14b-instruct",
   chat_revision: pins["qwen2.5:14b-instruct"],
@@ -55,6 +60,7 @@ validateSemanticReport(baseline, {
   engineRevision: engineFingerprint(),
   importId: snapshot.library_import_id,
   modelConfiguration,
+  contract,
 });
 receipt.health = health;
 const spec = await get("/openapi.json");
@@ -62,7 +68,7 @@ assert.equal(spec.openapi, "3.1.0");
 assert.ok(spec.paths["/v1/jobs/{id}"]);
 receipt.checks.push("public_openapi");
 for (const row of baseline) {
-  const expected = EVALUATION_CASES.find((c) => c[0] === row.id);
+  const expected = contract.cases.find((c) => c[0] === row.id);
   let result;
   if (row.analysis_id) {
     const state = await get(`/v1/checks/${row.analysis_id}`);
@@ -91,7 +97,7 @@ const paragraph = await checkText(
   origin,
   "Canberra is Australia's capital. A liter contains 500 milliliters.",
   {
-    requestKey: `public-paragraph-verification-${health.engine_revision.slice(0, 16)}`,
+    requestKey: `public-paragraph-verification-${health.engine_revision.slice(0, 16)}-${contract.importId.slice(0, 12)}`,
   },
 );
 assert.deepEqual(
@@ -140,8 +146,8 @@ for (const path of [
   await get(path, 404);
 receipt.checks.push("admin_routes_withheld");
 receipt.status = "passed";
-if (process.argv[4])
-  writeFileSync(process.argv[4], JSON.stringify(receipt, null, 2) + "\n");
+if (receiptPath)
+  writeFileSync(receiptPath, JSON.stringify(receipt, null, 2) + "\n");
 console.log(
   JSON.stringify({ status: receipt.status, checks: receipt.checks, origin }),
 );

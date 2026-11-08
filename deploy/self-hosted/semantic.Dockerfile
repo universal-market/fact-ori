@@ -4,6 +4,8 @@ COPY service/ ./
 COPY public/library.json ./library.json
 COPY public/openapi.json ./openapi.json
 COPY scripts/semantic-report.mjs ./semantic-report.mjs
+COPY scripts/evaluation-contracts/ ./evaluation-contracts/
 RUN mkdir -p /state && chown node:node /state
+ENV EVALUATION_SNAPSHOT_PATH=/app/library.json
 USER node
 CMD ["node", "server.mjs"]

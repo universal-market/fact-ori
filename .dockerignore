@@ -22,3 +22,6 @@
 
 !scripts/
 !scripts/semantic-report.mjs
+
+!scripts/evaluation-contracts/
+!scripts/evaluation-contracts/library-growth-v2.json
