@@ -12,8 +12,11 @@ mkdir -p "$HOME"
 ./node_modules/.bin/convex dev --once --typecheck disable
 node --input-type=module -e '
 import { readFileSync } from "node:fs";
-import { spawnSync } from "node:child_process";
+import { ConvexHttpClient } from "convex/browser";
+import { makeFunctionReference } from "convex/server";
 const seed = JSON.parse(readFileSync("seed.json", "utf8"));
-const child = spawnSync("./node_modules/.bin/convex", ["run", "library:importSnapshot", JSON.stringify(seed)], {stdio:"inherit"});
-process.exit(child.status ?? 1);
+const client = new ConvexHttpClient(process.env.CONVEX_SELF_HOSTED_URL);
+client.setAdminAuth(process.env.CONVEX_SELF_HOSTED_ADMIN_KEY);
+const result = await client.mutation(makeFunctionReference("library:importSnapshot"), seed);
+console.log(JSON.stringify(result));
 '
