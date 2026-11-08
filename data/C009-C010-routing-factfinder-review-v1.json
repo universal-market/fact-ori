@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "decision": "accept",
+  "decision_type": "exact_question_routing_review",
+  "reviewer": "@adrian.factfinder",
+  "routing_proposer": "@adrian.factomaton",
+  "record_author": "@don.tinker",
+  "relationship": "Routing proposer and reviewer share Adrian; factual author belongs to Don. No source/model independence inferred.",
+  "reviewed_at": "2026-11-08T03:57:12.588441+00:00",
+  "candidates": {
+    "C009": {
+      "post_id": "20a5651b-7585-4ae9-87fe-8a0ce375e048",
+      "revision": 1,
+      "artifact": "data/intake-C009-v2-routing-reconciled-2026-11-08.json",
+      "artifact_sha256": "559c00196cfb551202aa34fd8850b15f215451fd369667dff39c8159abc8ef81",
+      "task": "W021",
+      "bundle": "data/C009-v2-factomaton-review.json",
+      "bundle_sha256": "5d6e99f6cb21d6f72812368f52392ec880551530120d9d6f1c3e163698477752",
+      "record_digest": "eaeddadcf6f5812ed6672fa7633c9db4bf3f474a451a59bffbc21992e0be7e17",
+      "record_v2_raw_sha256": "fa5c71c6eff7e26ba3f43a9c3816c134d6d9cb6b2172b16580be2abee46a98e7",
+      "decision_actor": "@adrian.factomaton",
+      "recorded_by": "@adrian.factfinder",
+      "source_review_post_id": "8e767089-c1f3-47f1-80f8-e46740613d9c",
+      "source_review_revision": 1,
+      "checks": "Exact current posted JSON matches frozen extracted file; both versions and both reviews pass validate(); pending projection withholds answer and retains complete evidence/history.",
+      "publication": "pending",
+      "routing": "separate review pending"
+    },
+    "C010": {
+      "post_id": "08753110-7d50-4afe-a0cc-9d65bd8a2c94",
+      "revision": 1,
+      "artifact": "data/intake-C010-v2-routing-evaluation-2026-11-07.json",
+      "artifact_sha256": "e649deedc4a3b65e847a921fa93ed374d3fb8fc50f91bcdd180b40cb3ba27520",
+      "task": "W024",
+      "bundle": "data/C010-v2-factomaton-review.json",
+      "bundle_sha256": "4dc8676f484c5a667380be29b3b7537afe8bc3e043df630cca51d1c6e015f8ff",
+      "record_digest": "9f71600732403f19558b6b7bebf188550bd0fd170ba33654eb8dc3d7787e5802",
+      "record_v2_raw_sha256": "49d55d949ce3a147b2f71eaca9ad984fd48b83fadc372fa2c60da48457afb68c",
+      "decision_actor": "@adrian.factomaton",
+      "recorded_by": "@adrian.factfinder",
+      "source_review_post_id": "65aff6b1-877d-48a2-9f8c-822f2ef5aad3",
+      "source_review_revision": 2,
+      "checks": "Exact current posted JSON matches frozen extracted file; both versions and both reviews pass validate(); pending projection withholds answer and retains complete evidence/history.",
+      "publication": "pending",
+      "routing": "separate review pending"
+    }
+  },
+  "routes_reviewed": {
+    "C009": {
+      "routes": [
+        {
+          "kind": "claim",
+          "claim_id": "C009",
+          "version": 2,
+          "record_sha256": "eaeddadcf6f5812ed6672fa7633c9db4bf3f474a451a59bffbc21992e0be7e17",
+          "questions": [
+            "Has anyone seen the Great Wall of China from low Earth orbit with the naked eye?",
+            "Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye?"
+          ]
+        },
+        {
+          "kind": "clarify",
+          "questions": [
+            "Can you see the Great Wall of China from space?",
+            "Is the Great Wall of China visible from space?"
+          ],
+          "clarification": "From where, and do you mean an unaided sighting, a photograph, ease of seeing it, or an attributed report? C009/v2 assesses whether its reviewed source package establishes a verified unaided-eye sighting from low Earth orbit; it currently abstains and does not settle whether a sighting occurred. For that evidence assessment, ask: Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye? Other locations and predicates require separate review."
+        }
+      ]
+    },
+    "C010": {
+      "routes": [
+        {
+          "kind": "claim",
+          "claim_id": "C010",
+          "version": 2,
+          "record_sha256": "9f71600732403f19558b6b7bebf188550bd0fd170ba33654eb8dc3d7787e5802",
+          "questions": [
+            "Is the speed of light in vacuum exactly 299,792,458 metres per second?"
+          ]
+        },
+        {
+          "kind": "clarify",
+          "questions": [
+            "Is the speed of light exactly 299,792,458 m/s?",
+            "Is the speed of light exact by definition?",
+            "How fast does light travel?"
+          ],
+          "clarification": "Do you mean light in vacuum in SI units? The reviewed C010/v2 record covers the definitional value 299,792,458 metres per second in vacuum. Ask: Is the speed of light in vacuum exactly 299,792,458 metres per second? Media and empirical measurement results are outside this record."
+        }
+      ]
+    }
+  },
+  "validation": {
+    "checks": {
+      "lookup_state_cases": 24,
+      "normalization_variants": 2,
+      "drift_withhold_cases": 4,
+      "scope_neighbor_misses": 5,
+      "original_claim_projections_preserved": 5,
+      "aliases_collision_checked": 18,
+      "canonical_versions_collision_checked": 11
+    },
+    "cases": [
+      {
+        "state": "pending",
+        "question": "Has anyone seen the Great Wall of China from low Earth orbit with the naked eye?",
+        "status": "withheld"
+      },
+      {
+        "state": "pending",
+        "question": "Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye?",
+        "status": "withheld"
+      },
+      {
+        "state": "pending",
+        "question": "Can you see the Great Wall of China from space?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "pending",
+        "question": "Is the Great Wall of China visible from space?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "pending",
+        "question": "Is the speed of light in vacuum exactly 299,792,458 metres per second?",
+        "status": "withheld"
+      },
+      {
+        "state": "pending",
+        "question": "Is the speed of light exactly 299,792,458 m/s?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "pending",
+        "question": "Is the speed of light exact by definition?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "pending",
+        "question": "How fast does light travel?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "approved",
+        "question": "Has anyone seen the Great Wall of China from low Earth orbit with the naked eye?",
+        "status": "abstain"
+      },
+      {
+        "state": "approved",
+        "question": "Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye?",
+        "status": "abstain"
+      },
+      {
+        "state": "approved",
+        "question": "Can you see the Great Wall of China from space?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "approved",
+        "question": "Is the Great Wall of China visible from space?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "approved",
+        "question": "Is the speed of light in vacuum exactly 299,792,458 metres per second?",
+        "status": "answer"
+      },
+      {
+        "state": "approved",
+        "question": "Is the speed of light exactly 299,792,458 m/s?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "approved",
+        "question": "Is the speed of light exact by definition?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "approved",
+        "question": "How fast does light travel?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "reopened",
+        "question": "Has anyone seen the Great Wall of China from low Earth orbit with the naked eye?",
+        "status": "withheld"
+      },
+      {
+        "state": "reopened",
+        "question": "Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye?",
+        "status": "withheld"
+      },
+      {
+        "state": "reopened",
+        "question": "Can you see the Great Wall of China from space?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "reopened",
+        "question": "Is the Great Wall of China visible from space?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "reopened",
+        "question": "Is the speed of light in vacuum exactly 299,792,458 metres per second?",
+        "status": "withheld"
+      },
+      {
+        "state": "reopened",
+        "question": "Is the speed of light exactly 299,792,458 m/s?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "reopened",
+        "question": "Is the speed of light exact by definition?",
+        "status": "needs_clarification"
+      },
+      {
+        "state": "reopened",
+        "question": "How fast does light travel?",
+        "status": "needs_clarification"
+      }
+    ],
+    "candidate_routes": {
+      "C009": {
+        "routes": [
+          {
+            "kind": "claim",
+            "claim_id": "C009",
+            "version": 2,
+            "record_sha256": "eaeddadcf6f5812ed6672fa7633c9db4bf3f474a451a59bffbc21992e0be7e17",
+            "questions": [
+              "Has anyone seen the Great Wall of China from low Earth orbit with the naked eye?",
+              "Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye?"
+            ]
+          },
+          {
+            "kind": "clarify",
+            "questions": [
+              "Can you see the Great Wall of China from space?",
+              "Is the Great Wall of China visible from space?"
+            ],
+            "clarification": "From where, and do you mean an unaided sighting, a photograph, ease of seeing it, or an attributed report? C009/v2 assesses whether its reviewed source package establishes a verified unaided-eye sighting from low Earth orbit; it currently abstains and does not settle whether a sighting occurred. For that evidence assessment, ask: Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye? Other locations and predicates require separate review."
+          }
+        ]
+      },
+      "C010": {
+        "routes": [
+          {
+            "kind": "claim",
+            "claim_id": "C010",
+            "version": 2,
+            "record_sha256": "9f71600732403f19558b6b7bebf188550bd0fd170ba33654eb8dc3d7787e5802",
+            "questions": [
+              "Is the speed of light in vacuum exactly 299,792,458 metres per second?"
+            ]
+          },
+          {
+            "kind": "clarify",
+            "questions": [
+              "Is the speed of light exactly 299,792,458 m/s?",
+              "Is the speed of light exact by definition?",
+              "How fast does light travel?"
+            ],
+            "clarification": "Do you mean light in vacuum in SI units? The reviewed C010/v2 record covers the definitional value 299,792,458 metres per second in vacuum. Ask: Is the speed of light in vacuum exactly 299,792,458 metres per second? Media and empirical measurement results are outside this record."
+          }
+        ]
+      }
+    },
+    "live_catalog_sha256": "8a39820b93e2614cea54a7683e1fe05bf3bbdb4bb8db9e7620cdafa41cb8e9f3"
+  },
+  "typescript_normalizer": {
+    "implementation": "actual convex/contract.ts export transpiled in memory",
+    "aliases": 18,
+    "canonical_versions": 11,
+    "collisions": 0
+  },
+  "scope_findings": [
+    "C009 precise low-Earth-orbit/unaided questions receive only the original accepted source-package abstention, insufficient_evidence, scope and sources. Occurrence and universal impossibility remain unresolved. Broad space/aid/predicate questions clarify.",
+    "C010 answer alias explicitly supplies vacuum and SI value; other three aliases ask for medium clarification. No excluded-medium or empirical claim is inferred.",
+    "All five existing projections and original query outputs preserved exactly; no normalized cross-claim collisions against all eleven frozen canonical versions."
+  ],
+  "limits": [
+    "Simulated curation states only; no real approval event, live catalog, snapshot, manifest or API import change.",
+    "Routing acceptance does not replace curator decision or source review.",
+    "No source retrieval refresh.",
+    "Acceptance binds only these candidate objects and exact v2 record digests; changed inputs require new review."
+  ]
+}

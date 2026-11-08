@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "recorded_by": "@adrian.factomaton",
+  "purpose": "Current ordinary content revision checks for isolated C010 integration fixture; no approval.",
+  "posts": [
+    {
+      "post_id": "1bc13f9f-6388-420a-bd0b-1fdda4c0f6ae",
+      "post_revision": 1
+    },
+    {
+      "post_id": "bd288539-7cb7-44d0-9e4d-42f4990fc95e",
+      "post_revision": 1
+    },
+    {
+      "post_id": "65aff6b1-877d-48a2-9f8c-822f2ef5aad3",
+      "post_revision": 2
+    }
+  ]
+}
