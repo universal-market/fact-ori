@@ -24,18 +24,23 @@ function fixture(id = "C005", assessment = {}) {
             claim: s.segment.trim(),
           })),
         };
-      if (schema.properties.complete)
+      if (schema.properties.coverage)
         return {
-          complete: true,
-          faithful: true,
-          reason: "All source atoms preserved",
+          coverage: "atomic_text_preserved",
+          reason: "All atomic texts preserved",
         };
-      if (schema.properties.compatible)
-        return { compatible: false, reason: "Material scope difference" };
       return {
-        decision: "supported",
+        relationship: assessment.scope_difference
+          ? "different_conditions_or_dates"
+          : {
+              supported: "supports_same_claim",
+              answered: "answers_same_question",
+              contradicted: "contradicts_same_claim",
+              abstain: "insufficient_evidence_same_predicate",
+              ambiguous: "ambiguous",
+              unrelated: "different_subject_or_predicate",
+            }[assessment.decision ?? "supported"],
         reason: "Stored evidence supports the predicate.",
-        scope_difference: "",
         ...assessment,
       };
     },
@@ -110,7 +115,7 @@ test("invalid model decisions and reasons fail closed", async () => {
   for (const bad of [
     { decision: "true" },
     { reason: null },
-    { scope_difference: 42 },
+    { relationship: null },
   ]) {
     const { engine } = fixture("C005", bad);
     await engine.initialize();
@@ -138,7 +143,13 @@ test("compound extraction rejects invented numerical claims and missing source s
     { source_quote: "absent", claim: "water", kind: "assertion" },
   ]) {
     const { engine } = fixture();
-    engine.model.json = async () => ({ claims: [output] });
+    engine.model.json = async (_s, _i, schema) =>
+      schema.properties.coverage
+        ? {
+            coverage: "combined_clauses_need_splitting",
+            reason: "Needs splitting",
+          }
+        : { claims: [output] };
     await assert.rejects(engine.extract("One litre and some water"));
   }
 });
@@ -153,11 +164,21 @@ test("repeated sentences retain distinct source offsets", async () => {
 });
 test("omitted source sentences fail explicitly instead of claiming full coverage", async () => {
   const { engine } = fixture();
-  engine.model.json = async () => ({
-    claims: [
-      { source_quote: "Water and ice.", claim: "Water", kind: "assertion" },
-    ],
-  });
+  engine.model.json = async (_s, _i, schema) =>
+    schema.properties.coverage
+      ? {
+          coverage: "combined_clauses_need_splitting",
+          reason: "Needs splitting",
+        }
+      : {
+          claims: [
+            {
+              source_quote: "Water and ice.",
+              claim: "Water",
+              kind: "assertion",
+            },
+          ],
+        };
   await assert.rejects(
     engine.extract("Water and ice. A second fact."),
     /cover every/,
@@ -180,16 +201,8 @@ test("research intake failure preserves the unknown result without fabricated jo
   assert.equal(result.job, null);
 });
 
-test("scope adjudication distinguishes contradictory values from changed conditions", async () => {
-  const { engine } = fixture("C005", {
-    decision: "contradicted",
-    scope_difference: "Different numeric value",
-  });
-  const classify = engine.model.json;
-  engine.model.json = async (s, i, schema) =>
-    schema.properties.compatible
-      ? { compatible: true, reason: "Same volume equivalence" }
-      : classify(s, i, schema);
+test("explicit relationship separates conflicting values from changed conditions", async () => {
+  const { engine } = fixture("C005", { decision: "contradicted" });
   await engine.initialize();
   assert.equal(
     (await engine.match({ claim: "One litre is 500 ml", kind: "assertion" }))
@@ -201,8 +214,7 @@ test("scope adjudication distinguishes contradictory values from changed conditi
 test("ambiguous validity cannot become supported through scope compatibility", async () => {
   const { engine } = fixture("C004", { decision: "ambiguous" });
   engine.model.json = async () => ({
-    decision: "ambiguous",
-    scope_difference: "",
+    relationship: "ambiguous",
     reason: "Two possible capitals",
   });
   await engine.initialize();
@@ -233,11 +245,22 @@ test("full quoted span cannot hide omitted clauses or altered predicates", async
             ],
           })
         : {
-            complete: false,
-            faithful: false,
+            coverage: "combined_clauses_need_splitting",
             reason: "Omitted or altered second predicate",
           };
     await assert.rejects(engine.extract(text), /incomplete or uncertain/);
     assert.equal(extracted, true);
+  }
+});
+
+test("verbatim false assertions and unanswered questions need no invented answer", async () => {
+  const { engine } = fixture();
+  for (const text of [
+    "A litre contains 500 millilitres.",
+    "Who won in 2016?",
+  ]) {
+    const result = await engine.extract(text);
+    assert.equal(result[0].claim, text);
+    assert.equal(result[0].extraction_audit.coverage, "atomic_text_preserved");
   }
 });

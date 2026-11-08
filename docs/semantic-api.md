@@ -14,8 +14,10 @@ curl https://YOUR-API/v1/check -H 'Content-Type: application/json' \
   -d '{"text":"Canberra is Australia’s capital. A litre contains 500 millilitres.","async":true}'
 ```
 
-Decomposition always examines the whole input and a separate model pass audits
-clause completeness and fidelity. Failed/uncertain audits fail explicitly;
+Sentence segmentation preserves original text. A model audits the whole input
+for atomicity and fidelity before any sentence can bypass further splitting.
+Combined clauses are decomposed and audited again; no conjunction allowlist
+establishes completeness. Failed/uncertain audits fail explicitly;
 successful extraction is labeled `model_assessed`, not human-verified.
 
 Each result contains the source quote and character offsets, extracted claim,
@@ -53,7 +55,9 @@ Local `nomic-embed-text:v1.5` and `qwen2.5:14b-instruct` run through isolated
 Ollama. `service/models.json` pins their exact content revisions. Vector-cache
 keys include the embedding revision and indexed content. Startup checks model
 identities. Retrieval ranks current approved records by cosine similarity and
-the scope classifier evaluates the top two packages independently.
+the relationship classifier evaluates the top two packages independently using
+explicit categories for same-property support/conflict, changed subject/predicate,
+changed conditions/dates, insufficient evidence and ambiguity.
 
 Run `npm run test:semantic` for structural/scope regressions and
 `node scripts/evaluate-semantic-api.mjs ORIGIN REPORT.json` for real-model

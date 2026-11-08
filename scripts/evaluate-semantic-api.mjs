@@ -93,6 +93,7 @@ for (const [id, text, expected] of cases) {
     pass,
     duration_ms: Date.now() - started,
     analysis_id,
+    error: value.error ?? null,
     details: results.map((r) => ({
       claim: r.claim,
       status: r.status,
@@ -104,6 +105,8 @@ for (const [id, text, expected] of cases) {
       assessment: r.model_assessment ?? null,
     })),
   });
+  if (process.argv[3])
+    writeFileSync(process.argv[3], JSON.stringify(report, null, 2) + "\n");
   console.log(JSON.stringify(report.at(-1)));
 }
 if (process.argv[3])

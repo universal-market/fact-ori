@@ -47,10 +47,10 @@ test("durable HTTP analysis: consent, idempotency, restart, status and revision 
                     },
                   ],
                 }
-              : body.format.properties.complete
-                ? { complete: true, faithful: true, reason: "Covered" }
+              : body.format.properties.coverage
+                ? { coverage: "atomic_text_preserved", reason: "Covered" }
                 : {
-                    decision: "unrelated",
+                    relationship: "different_subject_or_predicate",
                     reason: "Uncovered predicate",
                     scope_difference: "",
                   },
