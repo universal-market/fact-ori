@@ -12,6 +12,10 @@ curl https://YOUR-API/v1/check -H 'Content-Type: application/json' \
   -d '{"text":"Canberra is Australia’s capital. A litre contains 500 millilitres.","async":true}'
 ```
 
+Decomposition always examines the whole input and a separate model pass audits
+clause completeness and fidelity. Failed/uncertain audits fail explicitly;
+successful extraction is labeled `model_assessed`, not human-verified.
+
 Each result contains the source quote and character offsets, extracted claim,
 status, evidence verdict, answer, candidate records and model assessment.
 Compound inputs return a `results` array. Statuses include `answer`,
@@ -25,7 +29,7 @@ Analysis taking longer than20seconds returns202 with an ID and `poll_url`.
 `GET /v1/checks/{id}` returns progress and the completed result. SQLite analysis
 state survives restart. Completed analyses remain for24hours under unguessable
 public IDs, including submitted text and results. Library revision changes
-invalidate completed responses with409. Submit a new analysis to use new data.
+invalidate completed and partial responses with409. Submit a new analysis to use new data.
 The analysis queue permits100 pending requests. At most12 atomic claims are
 supported per request and excessive extraction fails explicitly.
 

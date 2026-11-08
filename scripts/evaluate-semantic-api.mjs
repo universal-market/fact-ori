@@ -59,7 +59,7 @@ for (const [id, text, expected] of cases) {
   let value = await response.json();
   if (response.status === 202) {
     const poll = value.poll_url;
-    while (Date.now() - started < 300000) {
+    while (Date.now() - started < 600000) {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       value = await (await fetch(origin + poll)).json();
       if (value.result) {

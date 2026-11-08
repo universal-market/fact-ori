@@ -1,4 +1,5 @@
 import test from "node:test";
+import { DatabaseSync } from "node:sqlite";
 import assert from "node:assert/strict";
 import { createServer } from "node:http";
 import { spawn } from "node:child_process";
@@ -36,11 +37,24 @@ test("durable HTTP analysis: consent, idempotency, restart, status and revision 
       await pause(delay);
       result = {
         message: {
-          content: JSON.stringify({
-            decision: "unrelated",
-            reason: "Uncovered predicate",
-            scope_difference: "",
-          }),
+          content: JSON.stringify(
+            body.format.properties.claims
+              ? {
+                  claims: [
+                    {
+                      source_quote: JSON.parse(body.messages[1].content).text,
+                      claim: JSON.parse(body.messages[1].content).text,
+                    },
+                  ],
+                }
+              : body.format.properties.complete
+                ? { complete: true, faithful: true, reason: "Covered" }
+                : {
+                    decision: "unrelated",
+                    reason: "Uncovered predicate",
+                    scope_difference: "",
+                  },
+          ),
         },
       };
     } else if (req.url === "/health")
@@ -147,6 +161,24 @@ test("durable HTTP analysis: consent, idempotency, restart, status and revision 
     importId = "new-library";
     assert.equal((await fetch(origin + queued.poll_url)).status, 409);
     assert.equal((await post(input, "stable")).status, 409);
+    const stateDb = new DatabaseSync(join(directory, "state.sqlite"));
+    for (const state of ["processing", "failed"]) {
+      stateDb
+        .prepare("UPDATE requests SET state=?,result=? WHERE id=?")
+        .run(
+          state,
+          JSON.stringify({
+            import_id: snapshot.library_import_id,
+            results: [{ status: "answer", answer: "stale answer" }],
+          }),
+          queued.id,
+        );
+      const stale = await fetch(origin + queued.poll_url);
+      assert.equal(stale.status, 409);
+      assert.equal((await stale.json()).results, undefined);
+      assert.equal((await post(input, "stable")).status, 409);
+    }
+    stateDb.close();
   } finally {
     await stop();
     await new Promise((r) => upstream.close(r));

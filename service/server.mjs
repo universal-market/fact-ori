@@ -78,13 +78,16 @@ async function pump() {
         "UPDATE requests SET state='processing',updated=? WHERE id=?",
       ).run(Date.now(), row.id);
       try {
-        const result = await engine.run(JSON.parse(row.input), (results) => {
-          db.prepare("UPDATE requests SET result=?,updated=? WHERE id=?").run(
-            JSON.stringify({ results }),
-            Date.now(),
-            row.id,
-          );
-        });
+        const result = await engine.run(
+          JSON.parse(row.input),
+          (results, import_id) => {
+            db.prepare("UPDATE requests SET result=?,updated=? WHERE id=?").run(
+              JSON.stringify({ results, import_id }),
+              Date.now(),
+              row.id,
+            );
+          },
+        );
         db.prepare(
           "UPDATE requests SET state='completed',result=?,updated=? WHERE id=?",
         ).run(JSON.stringify(result), Date.now(), row.id);
@@ -105,7 +108,13 @@ async function pump() {
         db.prepare(
           "UPDATE requests SET state='failed',result=?,updated=? WHERE id=?",
         ).run(
-          JSON.stringify({ results, error: error.message }),
+          JSON.stringify({
+            results,
+            import_id: partial.result
+              ? JSON.parse(partial.result).import_id
+              : snapshot.library_import_id,
+            error: error.message,
+          }),
           Date.now(),
           row.id,
         );
@@ -150,7 +159,7 @@ const server = createServer(async (req, res) => {
       const row = db
         .prepare("SELECT * FROM requests WHERE id=?")
         .get(url.pathname.split("/").at(-1));
-      if (row?.state === "completed") {
+      if (row?.result) {
         const health = await engine.backendJson("/health");
         if (JSON.parse(row.result).import_id !== health.import_id) {
           send(res, 409, {
@@ -297,7 +306,7 @@ const server = createServer(async (req, res) => {
         row = db.prepare("SELECT * FROM requests WHERE id=?").get(row.id);
       }
     }
-    if (row.state === "completed") {
+    if (row.result) {
       const health = await engine.backendJson("/health");
       if (JSON.parse(row.result).import_id !== health.import_id) {
         send(res, 409, {
@@ -307,6 +316,8 @@ const server = createServer(async (req, res) => {
         });
         return;
       }
+    }
+    if (row.state === "completed") {
       send(res, 200, { ...JSON.parse(row.result), analysis_id: row.id });
       return;
     }

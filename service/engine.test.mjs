@@ -12,15 +12,33 @@ function fixture(id = "C005", assessment = {}) {
     embeddingModel: "test",
     chatModel: "test",
     embed: async (texts) => texts.map(() => Array(768).fill(1)),
-    json: async (_system, _input, schema) =>
-      schema.properties.compatible
-        ? { compatible: false, reason: "Material scope difference" }
-        : {
-            decision: "supported",
-            reason: "Stored evidence supports the predicate.",
-            scope_difference: "",
-            ...assessment,
-          },
+    json: async (_system, input, schema) => {
+      if (schema.properties.claims)
+        return {
+          claims: [
+            ...new Intl.Segmenter("en", { granularity: "sentence" }).segment(
+              input.text,
+            ),
+          ].map((s) => ({
+            source_quote: s.segment.trim(),
+            claim: s.segment.trim(),
+          })),
+        };
+      if (schema.properties.complete)
+        return {
+          complete: true,
+          faithful: true,
+          reason: "All source atoms preserved",
+        };
+      if (schema.properties.compatible)
+        return { compatible: false, reason: "Material scope difference" };
+      return {
+        decision: "supported",
+        reason: "Stored evidence supports the predicate.",
+        scope_difference: "",
+        ...assessment,
+      };
+    },
   };
   const engine = new FactEngine({
     snapshot: { ...library, records: [record] },
@@ -178,4 +196,48 @@ test("scope adjudication distinguishes contradictory values from changed conditi
       .status,
     "contradicted",
   );
+});
+
+test("ambiguous validity cannot become supported through scope compatibility", async () => {
+  const { engine } = fixture("C004", { decision: "ambiguous" });
+  engine.model.json = async () => ({
+    decision: "ambiguous",
+    scope_difference: "",
+    reason: "Two possible capitals",
+  });
+  await engine.initialize();
+  assert.equal(
+    (
+      await engine.match({
+        claim: "The Australian capital might be Canberra or Sydney.",
+        kind: "assertion",
+      })
+    ).status,
+    "needs_clarification",
+  );
+});
+test("full quoted span cannot hide omitted clauses or altered predicates", async () => {
+  for (const text of [
+    "Canberra is Australia's capital and Sydney is Australia's capital.",
+    "Canberra is Australia's capital, Sydney is Australia's capital.",
+    "Canberra is Australia's capital while Sydney is not Australia's capital.",
+  ]) {
+    const { engine } = fixture();
+    let extracted = false;
+    engine.model.json = async (_s, _i, schema) =>
+      schema.properties.claims
+        ? ((extracted = true),
+          {
+            claims: [
+              { source_quote: text, claim: "Canberra is Australia's capital." },
+            ],
+          })
+        : {
+            complete: false,
+            faithful: false,
+            reason: "Omitted or altered second predicate",
+          };
+    await assert.rejects(engine.extract(text), /incomplete or uncertain/);
+    assert.equal(extracted, true);
+  }
 });
