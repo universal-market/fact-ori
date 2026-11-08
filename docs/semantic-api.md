@@ -29,12 +29,13 @@ invalidate completed responses with409. Submit a new analysis to use new data.
 The analysis queue permits100 pending requests. At most12 atomic claims are
 supported per request and excessive extraction fails explicitly.
 
-`public_review: true` submits each unresolved claim as a deduplicated durable
+`public_review: true` submits each `not_in_library` claim as a deduplicated durable
 research job. Its text becomes public when the librarian posts or links the
 investigation on Tilori. `GET /v1/jobs/{id}` exposes research progress and the
 linked post ID. Research completion and analysis completion are separate.
 `Idempotency-Key` binds the analysis text and public-review choice, with409 on
-conflicting reuse. Research intake retains its500-unstarted-job limit.
+conflicting reuse. Research intake retains its500-unstarted-job limit. A queue/backend failure retains
+the analysis with `research_submission: unavailable` and no fabricated job.
 
 Operators use `bash scripts/self-hosted.sh outbox` and the allowlisted
 `operator` command for the isolated production instance. Librarian work sessions
