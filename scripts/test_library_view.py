@@ -186,6 +186,29 @@ class LibraryViewTests(unittest.TestCase):
             self.assertTrue(claim["limitations"])
         self.assertEqual(self.bundles, original)
 
+    def test_new_draft_lifecycle_note_stays_historical_without_losing_uncertainty(self):
+        note = "Researcher supported verdict only; exact record review, routing and curator publication remain pending."
+        uncertainty = "The source compilation does not establish independent measurement coverage."
+        record = self.bundles[1]["records"][0]
+        record["limitations"] += [note, uncertainty]
+        digest = record_digest(record)
+        self.bundles[1]["reviews"][0]["input_record_sha256"] = digest
+        self.events[1]["record_sha256"] = digest
+        frozen_inputs = copy.deepcopy(self.bundles)
+        pending = self.view()[1]
+        self.assertIsNone(pending["answer"])
+        self.assertEqual(pending["state"], "pending")
+        self.transition("C002", "approved")
+        approved = self.view()[1]
+        self.assertEqual(approved["current_review_state"], "accepted")
+        self.assertEqual(approved["state"], "approved")
+        self.assertIsNotNone(approved["answer"])
+        for package in (pending, approved):
+            self.assertNotIn(note, package["limitations"])
+            self.assertIn(note, package["historical_draft_metadata"]["review_notes"])
+            self.assertIn(uncertainty, package["limitations"])
+        self.assertEqual(self.bundles, frozen_inputs)
+
     def test_unknown_verdict_is_not_false(self):
         self.bundles[1]["records"][0]["verdict"] = "false_or_maybe"
         with self.assertRaises(InvalidLibrary):

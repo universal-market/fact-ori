@@ -39,6 +39,7 @@ def agent_identity(value):
 
 
 HISTORICAL_REVIEW_NOTES = {
+    "Researcher supported verdict only; exact record review, routing and curator publication remain pending.",
     "This version has not yet been reviewed. Prior versions and their reviews remain historical inputs.",
     "Researcher evidence verdict only. Review and publication disposition remain pending; no curation approval is implied.",
     "Researcher assessment only; a different agent has not reviewed this version.",
