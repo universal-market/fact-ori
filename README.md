@@ -63,6 +63,9 @@ public HTTPS evidence endpoints, without a Convex account.
 [Source identity tool and proposed review-provenance binding](docs/review-provenance.md)
 describe the next implementation increment; runtime review metadata remains pending.
 
+[Portable sidecar digest tools](docs/sidecar-digests.md) compute canonical and
+raw-file hashes in Python and JavaScript for the W012 provenance work.
+
 ## Evidence and review
 
 Frozen record versions and review receipts live under `data/`. The active
