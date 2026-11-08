@@ -1,7 +1,14 @@
 import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 
 export const digest = (value) =>
   createHash("sha256").update(value).digest("hex");
+export const engineFingerprint = () =>
+  digest(
+    ["./engine.mjs", "./server.mjs", "./models.json"]
+      .map((path) => readFileSync(new URL(path, import.meta.url), "utf8"))
+      .join("\n"),
+  );
 const enumString = (values) => ({ type: "string", enum: values });
 const object = (properties) => ({
   type: "object",

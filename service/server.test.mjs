@@ -85,6 +85,33 @@ test("durable HTTP analysis: consent, idempotency, restart, status and revision 
   const port = portServer.address().port;
   await new Promise((r) => portServer.close(r));
   const origin = `http://127.0.0.1:${port}`;
+  const legacyComplete = "11111111-1111-4111-8111-111111111111",
+    legacyProcessing = "22222222-2222-4222-8222-222222222222";
+  const legacyDb = new DatabaseSync(join(directory, "state.sqlite"));
+  legacyDb.exec(
+    "CREATE TABLE requests(id TEXT PRIMARY KEY,request_key TEXT UNIQUE,fingerprint TEXT NOT NULL,input TEXT NOT NULL,state TEXT NOT NULL,result TEXT,created INTEGER NOT NULL,updated INTEGER NOT NULL)",
+  );
+  for (const [id, state] of [
+    [legacyComplete, "completed"],
+    [legacyProcessing, "processing"],
+  ])
+    legacyDb
+      .prepare("INSERT INTO requests VALUES (?,?,?,?,?,?,?,?)")
+      .run(
+        id,
+        null,
+        "legacy",
+        JSON.stringify({ text: "A legacy analysis.", async: true }),
+        state,
+        JSON.stringify({
+          import_id: importId,
+          results: [{ status: "answer", answer: "old partial judgment" }],
+        }),
+        Date.now(),
+        Date.now(),
+      );
+  legacyDb.close();
+
   async function start() {
     child = spawn(process.execPath, ["service/server.mjs"], {
       env: {
@@ -135,6 +162,13 @@ test("durable HTTP analysis: consent, idempotency, restart, status and revision 
   }
   try {
     await start();
+    assert.equal(
+      (await fetch(origin + `/v1/checks/${legacyComplete}`)).status,
+      409,
+    );
+    const resumed = await complete(`/v1/checks/${legacyProcessing}`);
+    assert.equal(resumed.result.status, "not_in_library");
+    assert.equal(resumed.result.results[0].answer, null);
     const spec = await (await fetch(origin + "/openapi.json")).json();
     assert.equal(spec.openapi, "3.1.0");
     assert.ok(spec.paths["/v1/check"].post.requestBody);

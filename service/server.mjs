@@ -2,7 +2,12 @@ import { createServer } from "node:http";
 import { readFileSync } from "node:fs";
 import { DatabaseSync } from "node:sqlite";
 import { randomUUID } from "node:crypto";
-import { FactEngine, ModelClient, digest } from "./engine.mjs";
+import {
+  FactEngine,
+  ModelClient,
+  digest,
+  engineFingerprint,
+} from "./engine.mjs";
 
 const db = new DatabaseSync(process.env.STATE_PATH ?? "/state/semantic.sqlite");
 db.exec(`PRAGMA journal_mode=WAL;
@@ -23,11 +28,7 @@ const snapshot = JSON.parse(
 const modelPins = JSON.parse(
   readFileSync(new URL("./models.json", import.meta.url)),
 );
-const engineRevision = digest(
-  ["./engine.mjs", "./server.mjs", "./models.json"]
-    .map((path) => readFileSync(new URL(path, import.meta.url), "utf8"))
-    .join("\n"),
-);
+const engineRevision = engineFingerprint();
 if (
   !db
     .prepare("PRAGMA table_info(requests)")
@@ -176,6 +177,12 @@ const server = createServer(async (req, res) => {
         ...health,
         status: current && health.status === "ready" ? "ready" : "initializing",
         engine_revision: engineRevision,
+        model_configuration: {
+          chat_model: model.chatModel,
+          chat_revision: model.chatRevision ?? null,
+          embedding_model: model.embeddingModel,
+          embedding_revision: model.embeddingRevision ?? null,
+        },
         semantic_search: ready,
         claim_decomposition: ready,
         chat_model: model.chatModel,
@@ -292,6 +299,7 @@ const server = createServer(async (req, res) => {
     ) {
       send(res, 200, {
         ...exact,
+        engine_revision: engineRevision,
         results: [
           {
             claim: input.text,

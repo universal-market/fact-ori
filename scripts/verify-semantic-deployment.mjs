@@ -1,6 +1,11 @@
 import assert from "node:assert/strict";
 import { readFileSync, writeFileSync } from "node:fs";
 import { checkText } from "../client/check.mjs";
+import { engineFingerprint } from "../service/engine.mjs";
+import {
+  validateSemanticReport,
+  EVALUATION_CASES,
+} from "./semantic-report.mjs";
 const origin = process.argv[2];
 const baseline = JSON.parse(readFileSync(process.argv[3], "utf8"));
 assert.equal(
@@ -38,27 +43,49 @@ assert.equal(health.semantic_search, true);
 assert.equal(health.claim_decomposition, true);
 assert.equal(health.public_intake, "enabled");
 assert.equal(health.import_id, snapshot.library_import_id);
-assert.ok(pins[health.chat_model]);
+const modelConfiguration = {
+  chat_model: "qwen2.5:14b-instruct",
+  chat_revision: pins["qwen2.5:14b-instruct"],
+  embedding_model: "nomic-embed-text:v1.5",
+  embedding_revision: pins["nomic-embed-text:v1.5"],
+};
+assert.equal(health.engine_revision, engineFingerprint());
+assert.deepEqual(health.model_configuration, modelConfiguration);
+validateSemanticReport(baseline, {
+  engineRevision: engineFingerprint(),
+  importId: snapshot.library_import_id,
+  modelConfiguration,
+});
 receipt.health = health;
 const spec = await get("/openapi.json");
 assert.equal(spec.openapi, "3.1.0");
 assert.ok(spec.paths["/v1/jobs/{id}"]);
 receipt.checks.push("public_openapi");
-for (const name of [
-  "false-capital",
-  "wrong-medium",
-  "unresolved-ballots",
-  "paragraph",
-  "compound",
-]) {
-  const row = baseline.find((r) => r.id === name);
-  const progress = await get(`/v1/checks/${row.analysis_id}`);
-  assert.equal(progress.status, "complete");
+for (const row of baseline) {
+  const expected = EVALUATION_CASES.find((c) => c[0] === row.id);
+  let result;
+  if (row.analysis_id) {
+    const state = await get(`/v1/checks/${row.analysis_id}`);
+    assert.equal(state.status, "complete");
+    result = state.result;
+  } else {
+    const r = await fetch(new URL("/v1/check", origin), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: expected[1], public_review: false }),
+      signal: AbortSignal.timeout(30000),
+    });
+    assert.equal(r.status, 200);
+    result = await r.json();
+  }
+  assert.equal(result.text, expected[1]);
+  assert.equal(result.engine_revision, engineFingerprint());
+  assert.equal(result.import_id, snapshot.library_import_id);
   assert.deepEqual(
-    progress.result.results.map((r) => r.status),
+    result.results.map((r) => r.status),
     row.actual,
   );
-  receipt.checks.push(`public_analysis:${name}`);
+  receipt.checks.push(`public_analysis:${row.id}`);
 }
 const paragraph = await checkText(
   origin,

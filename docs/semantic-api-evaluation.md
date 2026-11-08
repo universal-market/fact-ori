@@ -42,3 +42,11 @@ source offsets use JavaScript UTF-16 positions. All inferred relationships and
 extraction audits remain explicitly model-assessed. Local CPU inference can take
 minutes; the public API returns durable asynchronous progress rather than holding
 an HTTP connection until all claims finish.
+
+Release validation rejects duplicate/missing case IDs, changed inputs/expected
+labels, non-boolean pass flags, and missing/mixed source, library or model
+bindings. Every row must match the checked-out engine fingerprint and serving
+health configuration. Public verification rereads every stored analysis (and
+rechecks the curated immediate response) before fresh public paragraph/research
+requests. Source/report consistency remains self-reported, not authenticated
+runtime attestation.

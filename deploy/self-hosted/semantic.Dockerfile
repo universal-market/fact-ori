@@ -3,6 +3,7 @@ WORKDIR /app
 COPY service/ ./
 COPY public/library.json ./library.json
 COPY public/openapi.json ./openapi.json
+COPY scripts/semantic-report.mjs ./semantic-report.mjs
 RUN mkdir -p /state && chown node:node /state
 USER node
 CMD ["node", "server.mjs"]

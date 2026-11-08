@@ -19,3 +19,6 @@
 !local/
 !local/self-hosted/
 !local/self-hosted/seed.json
+
+!scripts/
+!scripts/semantic-report.mjs

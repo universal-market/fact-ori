@@ -70,8 +70,8 @@ An independent conservative guard prevents answers from crossing explicit years
 when the reviewed claim has date/event language. Four-digit conversion values
 alone do not establish a dated identity. This guard can withhold potentially
 related coverage; it does not replace model-assessed scope checks or establish
-a different year's outcome. Inference has two cache slots for the recurring
-text-audit and evidence-relation prompts and a 24 GiB memory cap.
+a different year's outcome. Inference uses one cache slot and a 24 GiB memory cap. The two-slot/multi-user
+cache experiment caused an actual inference-server abort and is disabled.
 
 Analysis states bind an `engine_revision` fingerprint of the serving engine,
 HTTP service and pinned model configuration. Engine changes invalidate old
