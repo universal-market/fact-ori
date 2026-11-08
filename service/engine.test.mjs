@@ -340,3 +340,35 @@ test("uncovered conditions are missing coverage, eligible for opted-in research"
   assert.equal(result.status, "not_in_library");
   assert.equal(result.answer, null);
 });
+
+test("valid atomic clause quotes need not each contain the entire compound sentence", async () => {
+  const { engine } = fixture();
+  const text =
+    "Canberra is Australia's capital and Sydney is Australia's capital.";
+  let audits = 0;
+  engine.model.json = async (_s, _i, schema) =>
+    schema.properties.claims
+      ? {
+          claims: [
+            {
+              source_quote: "Canberra is Australia's capital",
+              claim: "Canberra is Australia's capital",
+            },
+            {
+              source_quote: "Sydney is Australia's capital",
+              claim: "Sydney is Australia's capital",
+            },
+          ],
+        }
+      : {
+          coverage:
+            ++audits === 1
+              ? "combined_clauses_need_splitting"
+              : "atomic_text_preserved",
+          reason: "Both atomic clauses preserved",
+        };
+  const claims = await engine.extract(text);
+  assert.equal(claims.length, 2);
+  assert.equal(claims[1].start, text.indexOf("Sydney"));
+  assert.equal(audits, 2);
+});
