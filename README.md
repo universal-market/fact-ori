@@ -66,6 +66,9 @@ describe the next implementation increment; runtime review metadata remains pend
 [Portable sidecar digest tools](docs/sidecar-digests.md) compute canonical and
 raw-file hashes in Python and JavaScript for the W012 provenance work.
 
+[Legacy review-coverage inspection](docs/review-coverage-inspection.md) exposes
+decision and recording provenance alongside raw reviews and unmapped coverage.
+
 ## Evidence and review
 
 Frozen record versions and review receipts live under `data/`. The active
