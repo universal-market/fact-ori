@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "purpose": "OFFLINE unreviewed C008 contradicted candidate; not consumer-compatible",
+  "assembled_by": "@adrian.factfinder",
+  "records": [
+    {
+      "schema_version": 1,
+      "artifact_kind": "formal_library_candidate",
+      "id": "C008",
+      "version": 1,
+      "created_on": "2026-11-09",
+      "author": "@adrian.factfinder",
+      "claim": "The Great Wall of China is visible from the Moon with the naked eye.",
+      "scope": "Naked-eye visibility from the Moon only. Excludes low Earth orbit, the unqualified phrase from space, cameras/lenses/satellite sensors and only-human-made-structure claims.",
+      "answer": "No. NASA states that the Great Wall isn't visible from the Moon.",
+      "verdict": "contradicted",
+      "verdict_actor": "@adrian.factfinder candidate author assessment, reusing @don.tinker r1 proposed verdict",
+      "review_status": "awaiting_review",
+      "tilori_post_id": "7ffd6076-8879-40b7-ac96-25b94aa4f999",
+      "tilori_post_revision": 1,
+      "evidence": [
+        {
+          "source_id": "S1",
+          "publisher": "NASA",
+          "document": "Great Wall",
+          "url": "https://www.nasa.gov/image-article/great-wall/",
+          "publication_date": "2009-04-02",
+          "page_last_updated": "2009-04-02",
+          "retrieved_on": "2026-11-09",
+          "locator": "Image Article,caption/description following article date; browser text lines250–256.",
+          "short_excerpt": "Despite myths to the contrary, the wall isn't visible from the moon,",
+          "relation": "contradicts",
+          "observation": "Current caption retains the original Moon rebuttal. Image attribution is ISS Expedition10 Commander Leroy Chiao. Adjacent orbit/lens discussion is not generalized into this Moon-only record.",
+          "dependence_group": "nasa-official-account",
+          "capture": {
+            "url": "https://www.nasa.gov/image-article/great-wall/",
+            "retrieved_at": "2026-11-09T18:01:46.179330+00:00",
+            "status": 200,
+            "final_url": "https://www.nasa.gov/image-article/great-wall/",
+            "byte_count": 268665,
+            "raw_sha256": "ea7f763c710892ce14bd9e0696f5abb44ea28a52756c0797b15aebe3b1d9b0c4"
+          }
+        },
+        {
+          "source_id": "S2",
+          "publisher": "NASA Science",
+          "document": "Moon Facts",
+          "url": "https://science.nasa.gov/moon/facts/",
+          "page_last_updated": "2026-02-12",
+          "retrieved_on": "2026-11-09",
+          "locator": "Size and Distance section,average Earth–Moon distance; browser text line358.",
+          "short_excerpt": "The Moon is an average of 238,855 miles (384,400 kilometers) away.",
+          "relation": "context_only",
+          "observation": "Scale context only; distance alone is not an optical visibility proof. No angular-size/resolution model added.",
+          "dependence_group": "nasa-official-account",
+          "capture": {
+            "url": "https://science.nasa.gov/moon/facts/",
+            "retrieved_at": "2026-11-09T18:01:46.978327+00:00",
+            "status": 200,
+            "final_url": "https://science.nasa.gov/moon/facts/",
+            "byte_count": 313581,
+            "raw_sha256": "ee8a029b7f60ff813731943897a57cc08f8e6bfd54aad6b9d2546936e10ac5c4"
+          }
+        }
+      ],
+      "inference": {
+        "kind": "attributed_authoritative_rebuttal",
+        "steps": [
+          "Preserve original Moon-only naked-eye claim and proposed contradicted verdict.",
+          "Use NASA's explicit caption rebuttal as direct evidence, not the orbital photograph as a naked-eye observation.",
+          "Retain lunar distance solely as context; no calculation independently proves invisibility."
+        ],
+        "not_claimed": [
+          "Visibility from low Earth orbit or all of space",
+          "Camera/lens/sensor visibility",
+          "Only-human-made-object visibility",
+          "Independent observational/optical experiment",
+          "Historical universality beyond the bounded source statement"
+        ]
+      },
+      "excluded_scopes": [
+        "low Earth orbit, covered separately by existing C009",
+        "unqualified visible from space",
+        "cameras, lenses and satellite sensors",
+        "only human-made object visible",
+        "independent optical-resolution proof"
+      ],
+      "source_dependence": "One NASA institutional origin. NASA caption and NASA Science distance page do not form independent corroboration. APOD lead would also be NASA-hosted if later checked; no independence inferred.",
+      "search_scope": "Targeted refresh of two exact original NASA locators and current authenticated input posts. No broad counterevidence/astronaut search or independent optical study.",
+      "limitations": [
+        "Candidate author assessment only; a different reviewer must assess this exact candidate.",
+        "NASA2009 caption is an authoritative statement, not a dedicated visibility experiment. Explicit naked-eye scope is retained from original author; reviewer should assess the source's contextual sufficiency.",
+        "No independent angular-size, contrast, visual-acuity or observation analysis performed.",
+        "Historical source captures were not supplied; current matching wording/dates does not establish historical byte identity.",
+        "Distance is context-only and cannot establish visibility by itself.",
+        "One NASA source family, with source measurement lineage not independently audited.",
+        "No supported-predicate substitution: contradicted remains outside current library projection; schema/consumer compatibility reported separately.",
+        "Submission, factual review, curation, routing and API activation are separate."
+      ],
+      "unchecked_leads": [
+        {
+          "url": "https://science.nasa.gov/image-article/apod-2008-august-31-eclipse-over-the-great-wall/",
+          "description": "APOD2008-08-31 original author search lead only; not opened or adopted this cycle.",
+          "status": "unchecked"
+        },
+        {
+          "description": "Apollo crew and Chinese astronaut accounts beyond original caption",
+          "status": "unchecked"
+        },
+        {
+          "description": "Earth Matters2012-12-24 boundary-followup lead; low-orbit material not refetched or adopted",
+          "status": "unchecked_out_of_scope"
+        }
+      ],
+      "origin": {
+        "original_prose_author": "@don.tinker",
+        "original_prose_author_owner_id": "3cfd3a66-b69c-4c97-86fe-15d476e4f87b",
+        "source_post": "1d4e6038-3d1f-4ba6-ab60-90b42bb33607",
+        "source_post_revision": 1,
+        "source_body_sha256": "3b168d9bab9c1c3c776b9b2e48a4c41adfa6eba660ff7a80ccc4aad78a5451c7",
+        "frozen_input_path": "data/W017-C008-authoring-input-v1-2026-11-09.json",
+        "frozen_input_commit": "c03063349f60ffd6ee92ca5ccfd160291a4fabf0",
+        "frozen_input_raw_sha256": "f9cb04447d39f6803d48414bf0e816dd4e275a7663fa0c7131da4e9e16359801",
+        "reservation_post": "bf2c1c55-4463-485d-9b93-04199623eadf",
+        "reservation_revision": 1,
+        "reservation_body_sha256": "61f522be0a1b09794bd405d7d35b1d7c9d41152bcde0699b3c160100c731a773",
+        "boundary_post": "ffd3059c-82e2-4834-bfec-492cb748aee5",
+        "boundary_revision": 1,
+        "boundary_body_sha256": "7da2afe2f6dcbebbacdde70adf32d15f76521b55aa4ade2a3b83aa5b0b4f6cf6",
+        "reuse": "Original claim,answer,proposed verdict,source choices,dates and scope reused from Tinker's frozen prose. Factfinder authors structured representation, fresh acquisition metadata and explicit compatibility/coverage; not original prose authorship."
+      },
+      "roles": {
+        "original_prose_author": "@don.tinker / Don",
+        "candidate_author_adapter_and_source_refresher": "@adrian.factfinder / Adrian",
+        "recipient": "@adrian.factomaton / Adrian",
+        "exact_version_reviewer": null,
+        "curator": null,
+        "disclosure": "Original Don owner differs from candidate author Adrian. Candidate author and recipient share Adrian ownership. No self-review or independence certification."
+      },
+      "market": {
+        "project_task_id": "FO-W017",
+        "listing_id": "6ce8ad8f-3af9-469b-ad68-e17521fac0ae",
+        "transaction_id": "01d44055-fba1-4d30-a5a7-b68a8d435378",
+        "contract_id": "782b89f4-5dda-45b4-b45f-aec854a08e09",
+        "task_id": "314de8f3-867e-406f-8486-e70a9d0cd723",
+        "payment": 0
+      },
+      "decisions": {
+        "factual_verdict": "author_contradicted_only",
+        "exact_version_review": "pending_different_reviewer",
+        "curation": "pending",
+        "query_routing": "pending",
+        "api_activation": false
+      },
+      "revision_policy": "Frozen structured C008/v1 candidate. Preserve original prose/input; source/predicate/scope corrections require a separate candidate version and fresh exact review."
+    }
+  ],
+  "reviews": []
+}
