@@ -33,9 +33,16 @@ retains those original fields in an operational annotation and binds the later
 observed evidence-thread link and blocked status at revision 2. The blocker is
 Market assignment availability, not a factual assessment or completed research.
 No model input, label, verdict, timing or analysis ID changed in this derivative.
-The original report remains immutable. Final public-runtime verification is
-pending two separately submitted finite paragraph/research requests; no polling
-agent is left running.
+The original report remains immutable. Final
+[public-runtime verification](../public/evaluations/2026-11-09-public-verification-growth-v2.json)
+passed at its recorded time after the two separately submitted finite
+paragraph/research requests completed. The verifier reused their stable keys,
+reread all 17 public results and checked evidence pins, research deduplication,
+linked status/revision/recorder, OpenAPI and withheld administration routes.
+The Gold job remains blocked on assignment, without a factual verdict. The
+original Venus job was separately closed after verified C011 publication;
+research progress remains distinct from evidence acceptance. No polling agent
+was left running.
 
 Run the isolated stack from a trusted checkout, then:
 

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-09T04:12:18.315326+00:00",
+  "operator": "@adrian.factomaton",
+  "decision_actor": "@adrian.factomaton",
+  "recorded_by": "@adrian.factomaton",
+  "status": "operator_verified_eight_record_public_release",
+  "source_integration_commit": "3c8f7bbb94228f11a51732dddefe4447ce4c29bb",
+  "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+  "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+  "model_configuration": {
+    "chat_model": "qwen2.5:14b-instruct",
+    "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+    "embedding_model": "nomic-embed-text:v1.5",
+    "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+  },
+  "evaluation_contract": {
+    "id": "library-growth-v2",
+    "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+    "case_count": 17,
+    "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+    "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "public_records": 8,
+  "curated_mappings": 23,
+  "model_report": {
+    "path": "2026-11-09-semantic-growth-v2.json",
+    "sha256": "fefc4195abeb3ed5f08511fb973c97cd0608b43d5b98445423a91c2a02c561a9",
+    "cases": 17,
+    "passed": 17
+  },
+  "reconciled_operational_baseline": {
+    "path": "2026-11-09-semantic-growth-v2-reconciled.json",
+    "sha256": "fc9ff7ceab99f9a9c8d369969df21dd702a5e768fff846b2405890e46af17b0f",
+    "scope": "Later Gold job progress annotation; original analysis-completion job and all model outputs retained"
+  },
+  "public_verification": {
+    "path": "2026-11-09-public-verification-growth-v2.json",
+    "sha256": "1cf5cad6accbe3e19c1a8dddfbf91ce8ecc732069eed7d8a2eaf3efee645f27d",
+    "status": "passed",
+    "verified_at": "2026-11-09T04:09:21.592Z",
+    "checks": 21,
+    "origin": "https://involving-personality-source-mary.trycloudflare.com",
+    "fresh_continuation_ids": [
+      "ec701078-ac0c-40a2-92f7-270a4eac0d98",
+      "5ffa6131-2be6-4d06-892d-0de26f99d432"
+    ]
+  },
+  "Venus_completion": {
+    "claim_id": "C011",
+    "version": 1,
+    "canonical_sha256": "f5a122af75770cf06e1e209e2a29548240b11f4c2b7111a85d92be1d47afb444",
+    "original_job_id": "jd7et614jekbzg57ep0h6sahth8httn0",
+    "status": "done",
+    "evidence_post_id": "84c2b5ce-b380-4c2f-8f0c-56652473b540",
+    "post_revision": 3,
+    "public_job_receipt_sha256": "36594eb712985d2fe949754745f5a3548afe931aa54986d1c4bc0cb57a1e2607",
+    "completion_post_id": "44fc45fd-3be4-4e5a-b2b5-8d508f173efd",
+    "actor_and_recorder": "@adrian.factomaton"
+  },
+  "Gold_intake": {
+    "job_id": "jd7a5va0qgmcx9rrrej96p88jn8hx00d",
+    "evidence_post_id": "e8202cdc-44a0-4ea0-8f8e-982bc59cccb2",
+    "post_revision": 2,
+    "status": "blocked",
+    "factual_verdict": null,
+    "research_assignment": null,
+    "market_contract": null,
+    "note": "Blocked assignment; volunteer evidence is not reviewed/curated coverage"
+  },
+  "reviews": {
+    "record_author": "@adrian.factfinder",
+    "factual_reviewer_curator": "@adrian.factomaton",
+    "routing_reviewer": "@adrian.factfinder",
+    "technical_integration_reviewer": "@adrian.factfinder",
+    "shared_owner": "@adrian",
+    "integration_review_post_id": "35945802-3ffa-475e-bb4f-767176a21261",
+    "integration_review_revision": 1,
+    "runtime_verifier_actor": "@adrian.factomaton",
+    "new_separate_public_report_peer_review": "pending Market coordination; not inferred from prior source review"
+  },
+  "limits": [
+    "Authored prior-exposed diagnostic; not held-out accuracy or independent replication",
+    "Existing factual/source/routing/curation/source-dependence limitations remain attached",
+    "Engine/model/import consistency is self-reported; authenticated running-build/review attestation remains unconfigured",
+    "Verification receipt describes endpoint at recorded time; temporary tunnel URL and retained analysis IDs may expire",
+    "No paid transactions or new permissions; no polling agent or recurrence changes"
+  ]
+}

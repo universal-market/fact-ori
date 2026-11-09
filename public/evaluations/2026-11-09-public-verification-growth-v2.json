@@ -1,0 +1,109 @@
+{
+  "origin": "https://involving-personality-source-mary.trycloudflare.com",
+  "verified_at": "2026-11-09T04:09:21.592Z",
+  "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+  "evaluation_contract": {
+    "id": "library-growth-v2",
+    "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+    "case_count": 17,
+    "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+    "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "checks": [
+    "public_openapi",
+    "public_analysis:known-venus",
+    "public_analysis:paraphrase-units",
+    "public_analysis:paraphrase-capital",
+    "public_analysis:false-capital",
+    "public_analysis:false-number",
+    "public_analysis:wrong-predicate",
+    "public_analysis:wrong-medium",
+    "public_analysis:wrong-year",
+    "public_analysis:election-paraphrase",
+    "public_analysis:unresolved-ballots",
+    "public_analysis:ambiguous-space",
+    "public_analysis:unknown",
+    "public_analysis:paragraph",
+    "public_analysis:compound",
+    "public_analysis:research-intake",
+    "public_analysis:venus-paraphrase",
+    "public_analysis:venus-wrong-atmosphere",
+    "actual_public_paragraph_post_and_pinned_evidence",
+    "actual_public_opt_in_dedup_and_reconciled_tilori_status",
+    "admin_routes_withheld"
+  ],
+  "health": {
+    "claims": 8,
+    "implementation_review": "pending",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "status": "ready",
+    "version": "0.1.0",
+    "public_intake": "enabled",
+    "implementation_provenance": {
+      "schema_version": 1,
+      "binding_state": "unconfigured",
+      "source": null,
+      "build": null,
+      "review_receipts": [],
+      "historical_receipts_loaded": false,
+      "reason": "Runtime source/build identity and authenticated review receipts are not configured."
+    },
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "semantic_search": true,
+    "claim_decomposition": true,
+    "chat_model": "qwen2.5:14b-instruct",
+    "embedding_model": "nomic-embed-text:v1.5",
+    "analysis_queue": 0
+  },
+  "paragraph": {
+    "analysis_id": "ec701078-ac0c-40a2-92f7-270a4eac0d98",
+    "statuses": [
+      "answer",
+      "contradicted"
+    ],
+    "pins": [
+      {
+        "claim_id": "C004",
+        "version": 1,
+        "sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a"
+      },
+      {
+        "claim_id": "C005",
+        "version": 1,
+        "sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28"
+      }
+    ]
+  },
+  "research": {
+    "analysis_id": "5ffa6131-2be6-4d06-892d-0de26f99d432",
+    "job": {
+      "created_at": 1794191586702,
+      "id": "jd7a5va0qgmcx9rrrej96p88jn8hx00d",
+      "post_observed_at": 1794194060533,
+      "post_revision": 2,
+      "progress_recorded_by": "@adrian.factomaton",
+      "progress_source": "tilori_post",
+      "status": "blocked",
+      "text": "What is the chemical symbol for gold?",
+      "tilori_post_id": "e8202cdc-44a0-4ea0-8f8e-982bc59cccb2",
+      "updated_at": 1794194061689,
+      "implementation_review": "pending",
+      "implementation_provenance": {
+        "schema_version": 1,
+        "binding_state": "unconfigured",
+        "source": null,
+        "build": null,
+        "review_receipts": [],
+        "historical_receipts_loaded": false,
+        "reason": "Runtime source/build identity and authenticated review receipts are not configured."
+      }
+    }
+  },
+  "status": "passed"
+}

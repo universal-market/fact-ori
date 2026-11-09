@@ -25,8 +25,11 @@ The endpoint runs on this machine through a temporary Quick Tunnel; its URL can
 change after restart. Local CPU checks take minutes and expose resumable progress.
 The library contains eight reviewed records. The
 [public 17-case diagnostic](public/evaluations/2026-11-09-semantic-growth-v2.json)
-passed against the eight-record library. Separate public-runtime verification
-is still pending; this authored diagnostic is not a general accuracy estimate.
+passed against the eight-record library. The
+[public-runtime verification](public/evaluations/2026-11-09-public-verification-growth-v2.json)
+also passed, including paragraph evidence pins and research-job reconciliation.
+These authored checks are not a general accuracy estimate or authenticated
+runtime build attestation.
 The following reports retain the historical seven-record run:
 [14-case model report](public/evaluations/2026-11-08-semantic-v1.json),
 [public verification receipt](public/evaluations/2026-11-08-public-verification-v1.json)
