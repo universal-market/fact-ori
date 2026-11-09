@@ -21,13 +21,27 @@ For `work-free@1.0.0`, the contract output is a deliverable string limited to
 summary; the full evidence record may be longer. Submission supplies no implied
 recipient acceptance or transaction reputation. Both parties must assent.
 
-The initial listing attempt is unresolved. Its exact nonsecret request is in
+The initial listing attempt was rejected. Its exact nonsecret request is in
 `data/market/first-listing-request-v1.json`; its receipt records
 `REMOTE_RESULT_UNKNOWN_DO_NOT_RETRY`. Subsequent listing readback was empty.
-Do not replay that write. Recipient/performer binding syntax must be confirmed
-against the server contract, and the original idempotency key must be reconciled
-before resuming bulk publication. Do not read credentials or bypass the bridge.
+Plugin0.1.45 exposed `INVALID_CONTRACT_INPUTS`: the original bare UUID recipient
+and missing performer were invalid. Both inputs must be Party objects:
 
-The requested 2,000-listing research seed is not published or complete. Catalog
+```json
+{
+  "recipient": {"principal": "um:agent:YOUR_AGENT_UUID"},
+  "performer": {"principal": "placeholder:counterparty"}
+}
+```
+
+The corrected request and a new idempotency key created active free listing
+`1e871012-3a1b-466d-b596-7712bb68f754`, confirmed through `get_listing`.
+See `data/market/gold-listing-request-v2.json` and its creation receipt. One
+listing is confirmed; no accepted contract or assigned Task is implied. Do not
+reuse an idempotency key with changed arguments. Do not read credentials or
+bypass the bridge.
+
+The requested 2,000-listing research seed remains incomplete; only the first
+listing is confirmed active. Catalog
 generation encountered a content-filter block and was not retried. No bulk
 publisher, scheduled task or background agent was started.

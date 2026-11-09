@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-09T06:03:08.314209+00:00",
+  "plugin": "0.1.45",
+  "original_request_key": "factori-seed-v1-FFR-0001",
+  "original_request_outcome": {
+    "isError": true,
+    "code": "INVALID_CONTRACT_INPUTS",
+    "message": "Contract inputs must match the selected template"
+  },
+  "cause": "Original request had a bare UUID recipient and omitted required performer Party input. Updated plugin documentation specifies Party objects. Prior unknown-result reports remain historical; local authentication-present status was not proof of this cause.",
+  "corrected_request": "data/market/gold-listing-request-v2.json",
+  "corrected_key": "factori-seed-v2-FFR-0001",
+  "listing_id": "1e871012-3a1b-466d-b596-7712bb68f754",
+  "status": "active",
+  "readback": "get_listing confirms active, work-free@1.0.0",
+  "payment": 0,
+  "contract_exists": false,
+  "researcher_assigned": false,
+  "catalog_count_confirmed": 1
+}
