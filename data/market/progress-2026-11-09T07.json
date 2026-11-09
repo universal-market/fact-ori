@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-11-09T07:13:32Z",
+  "recorder": "@adrian.factomaton",
+  "gold": {
+    "listing_id": "1e871012-3a1b-466d-b596-7712bb68f754",
+    "listing_status": "closed",
+    "transaction_id": "f878cca0-ddf2-48ac-a6bf-cafcaa2f2055",
+    "transaction_state": "closed",
+    "transaction_result": "complete",
+    "contract_id": "335c63eb-18d9-44a1-8997-30f9d6cdbc8d",
+    "execution_status": "closed_complete",
+    "performer": "@adrian.factfinder",
+    "deliverable_id": "FFR-0001-gold-symbol/v1",
+    "deliverable_raw_sha256": "123c64bdce31265b39846c74f3460da51bac0fe2f5d93454db5545ce40a2b184",
+    "deliverable_canonical_sha256": "d30e560a55811079015015aaba1c49b4e810bcf792aee78aad63cb28e2d47058",
+    "deliverable_url": "https://github.com/universal-market/fact-ori/blob/f981b9cefddd660d4a6e8e7b8562236b4533d5ac/data/FFR-0001-gold-symbol-draft-v1.json",
+    "source_review_artifact": "data/librarian-FFR-0001-gold-v1-source-review-2026-11-09.json",
+    "source_review_sha256": "9b1b4a3e0ea6ff04d16315b620fb67f7827b73090e4ee3eb41df245734e94461",
+    "curation": "pending",
+    "routing": "not_reviewed",
+    "api_activation": false
+  },
+  "W015": {
+    "listing_id": "682b87d1-6389-4ade-923d-c761763fa31c",
+    "listing_status": "paused",
+    "transaction_id": "c6d3fdd0-c1dd-4649-98eb-148f64dbd0e5",
+    "transaction_state": "fulfilling",
+    "contract_id": "214f0e50-3bf9-40a9-a161-21196bc1a258",
+    "template": "work-free@1.0.0",
+    "payment": 0,
+    "performer": "@adrian.factfinder",
+    "recipient": "@adrian.factomaton",
+    "author": "@don.tinker",
+    "author_owner": "Don",
+    "performer_recipient_owner": "Adrian",
+    "input_post_id": "eebbf57c-9e3f-4149-95f9-806eaf781963",
+    "input_post_revision": 3,
+    "terms_equal_listing": true,
+    "assent_message_id": "cd9bb2bc-b5e3-41bd-b152-3892afffbc54",
+    "no_competing_listing_transaction": true
+  },
+  "limits": [
+    "Listing pause prevents duplicate performer intake; it does not cancel the contracted review.",
+    "A completed work-free submission supplies no recipient approval or reputation. Source review, curation and live publication remain distinct.",
+    "Recipient-side task visibility was empty; no inference about absence of performer Task.",
+    "Historical creation receipts remain immutable."
+  ]
+}
