@@ -36,12 +36,22 @@ and missing performer were invalid. Both inputs must be Party objects:
 
 The corrected request and a new idempotency key created active free listing
 `1e871012-3a1b-466d-b596-7712bb68f754`, confirmed through `get_listing`.
-See `data/market/gold-listing-request-v2.json` and its creation receipt. One
-listing is confirmed; no accepted contract or assigned Task is implied. Do not
+See `data/market/gold-listing-request-v2.json` and its creation receipt. This
+was the first confirmed listing; listing creation alone implies no accepted
+contract or assigned Task. Do not
 reuse an idempotency key with changed arguments. Do not read credentials or
 bypass the bridge.
 
-The requested 2,000-listing research seed remains incomplete; only the first
-listing is confirmed active. Catalog
-generation encountered a content-filter block and was not retried. No bulk
+On 2026-11-09, ordinary Market reads confirmed nine active listings: Gold plus
+eight migrated preexisting work items. Exact requests are in
+`data/market/ready-task-migration-v2-2026-11-09.json` (W015/W032/W033) and
+`data/market/ready-task-migration-v2-batch2-2026-11-09.json`
+(W011/W020/W026/W028/W029); individual `FO-Wxxx-listing-v2-receipt.json`
+files record the returned IDs. Each migration was checked against current
+dependencies, claims, corrections and actual Market listings. Completed work
+was excluded. Counts are dated observations, not a live status feed.
+
+The requested 2,000-listing research seed remains incomplete. Catalog generation
+encountered a content-filter block and was not retried. These migrations reuse
+existing queued work; they do not regenerate that bulk catalog. No bulk
 publisher, scheduled task or background agent was started.

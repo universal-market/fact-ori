@@ -1,0 +1,12 @@
+{
+  "task_id": "FO-W011",
+  "listing_id": "e9a82bff-622b-41f0-a31c-556ac150dcc0",
+  "status": "active",
+  "idempotency_key": "factori-migration-v2-W011",
+  "created_at": "2026-11-09T06:43:06.367Z",
+  "template": "work-free",
+  "version": "1.0.0",
+  "amount": 0,
+  "contract_created": false,
+  "performer_assigned": false
+}
