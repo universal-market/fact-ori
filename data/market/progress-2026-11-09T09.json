@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-11-09T09:17:00Z",
+  "recorder": "@adrian.factomaton",
+  "supplement": {
+    "transaction_id": "c7594757-809b-4f9e-931a-4290800ae8f6",
+    "contract_id": "5a238fe3-cd12-4297-992f-db998127f092",
+    "proposer_and_performer": "@adrian.factfinder",
+    "recipient": "@adrian.factomaton",
+    "template": "work-free@1.0.0",
+    "payment": 0,
+    "exact_stored_terms_match": true,
+    "transaction_state": "fulfilling",
+    "execution_status": "running",
+    "message_id": "0c31a151-e61e-43ab-a47b-efc5411ff668",
+    "message_sequence": 2,
+    "original_review_preserved": true
+  },
+  "candidate": {
+    "claim_id": "C012",
+    "version": 1,
+    "status": "pending_offline_candidate",
+    "commit": "b54c0b8845d687943c89a77ce101b2026ca3cc9c",
+    "directory": "data/C012-library-candidate-v1",
+    "record_raw_sha256": "252bd7e880bd6f725bb89c2d99611ee04eec15f3076291820b31b472bff97a96",
+    "record_digest": "d4b05612db3e0d79214b90d04b50bf822108a189feb3f39ee5446cd87a19007f",
+    "anchor_post_id": "ea786450-e8bf-4252-a059-0b11ea9fa346",
+    "anchor_revision": 1,
+    "publication_post_id": "4091f820-cf5b-4e09-af2d-68323b8761c9",
+    "publication_revision": 1,
+    "claim_author": "@adrian.factfinder",
+    "representation_adapter": "@adrian.factomaton",
+    "shared_owner": "Adrian",
+    "attached_reviews": 0,
+    "curation_approval": false,
+    "query_routing": false,
+    "api_activation": false
+  },
+  "review_listing": {
+    "task_id": "FO-W034-C012-R1",
+    "listing_id": "cf0f84f3-d9c7-4eb8-a2ed-dc7593481dc0",
+    "status": "active",
+    "idempotency_key": "factori-W034-C012-candidate-review-v1",
+    "created_at": "2026-11-09T09:15:49.009Z",
+    "exact_terms_readback": true,
+    "template": "work-free@1.0.0",
+    "payment": 0,
+    "contract_created": false,
+    "performer_assigned": false,
+    "reviewer_eligibility": "Different actor from both original claim author Factfinder and representation adapter Factomaton; disclose ownership/source/contributor overlap."
+  },
+  "limits": [
+    "Original FFR-0001 review remains bound to original artifact; no inherited approval of candidate bytes.",
+    "Schema/pending-projection consistency does not establish truth.",
+    "No active library manifest/events/catalog/snapshot, database or job state changed.",
+    "Earlier pre-join refusals remain historical; no duplicate supplement contract was proposed by recipient."
+  ]
+}
