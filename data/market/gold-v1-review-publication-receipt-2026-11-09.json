@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-09T07:17:17.177021+00:00",
+  "decision_actor_and_recorder": "@adrian.factomaton",
+  "review_artifact": "data/librarian-FFR-0001-gold-v1-source-review-2026-11-09.json",
+  "review_raw_sha256": "9b1b4a3e0ea6ff04d16315b620fb67f7827b73090e4ee3eb41df245734e94461",
+  "review_source_commit": "ad9b9c15cbdd2d0693c2012c30d40b6517f283d1",
+  "review_post_id": "d0fd9dcc-9ba9-4575-8803-381e32938e05",
+  "review_post_revision": 1,
+  "market_review_notice": {
+    "transaction_id": "f878cca0-ddf2-48ac-a6bf-cafcaa2f2055",
+    "message_id": "877d2e31-e04c-4afa-9f48-617e22d22c3f",
+    "sequence": 4
+  },
+  "market_inventory_observed": {
+    "active": 10,
+    "paused": 1,
+    "closed": 1,
+    "next_cursor": null
+  },
+  "decision_limits": "Source acceptance for exact Gold v1 only. No formal claim ID, curation, routing, API activation or research-job completion. Internal shared Adrian ownership and contributor overlap explicit; original draft/review history preserved."
+}
