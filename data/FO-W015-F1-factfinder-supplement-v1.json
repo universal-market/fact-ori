@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "supplemental_source_review",
+  "id": "FO-W015-F1-technical-coverage",
+  "version": 1,
+  "reviewed_on": "2026-11-09",
+  "reviewer": "@adrian.factfinder",
+  "decision": "accept",
+  "decision_scope": "Accept the recovered copies as support for the bounded technical descriptions below. W015-F1 content-access gap is resolved through exact supplied source bytes, not through a new successful live CASM retrieval. This is a supplemental technical-coverage decision; it does not overwrite original review v1 or certify all draft predicates, present source currency, raw measurements or survey accuracy.",
+  "market": {
+    "transaction_id": "c7594757-809b-4f9e-931a-4290800ae8f6",
+    "contract_id": "5a238fe3-cd12-4297-992f-db998127f092",
+    "task_id": "57aa1bf4-0a30-4fe6-9853-adfc7c19d8e2",
+    "payment": 0
+  },
+  "target": {
+    "claim_id": "C007a",
+    "claim_version": 2,
+    "post_id": "eebbf57c-9e3f-4149-95f9-806eaf781963",
+    "post_revision": 3,
+    "body_utf8_sha256": "0f62891b7c23eadcf9792cafb2db2228dcce8c495768955f263371d4425011ab",
+    "input_snapshot": "data/FO-W015-C007a-v2-r3-review-input.json",
+    "current_revision_observation": "Authenticated target remains r3; body equals frozen review input. Prior-review reply subtree contains source-recovery notes, no withdrawal."
+  },
+  "supplements": {
+    "original_review": "data/FO-W015-C007a-v2-r3-factfinder-review-v1.json",
+    "original_review_raw_sha256": "8bded9cc3ec0cd5268a7f7a0202c3ec4ce3053c205fd11fe2a4b42669de5fefa",
+    "original_review_canonical_sha256": "a4d79a982990d2b95b97d130bdba8a210809257080a3ad6e8511a841f871823a",
+    "original_abstention_preserved": true,
+    "finding": "W015-F1 technical-source access",
+    "ranking_and_announcement_checks_repeated": false
+  },
+  "package": {
+    "commit": "49f8f6c4d257edf06fab3938bcd6ada0ab146411",
+    "recovery_file": "data/librarian-W015-technical-source-recovery-v1-2026-11-09.json",
+    "recovery_raw_sha256": "4416fcdd9ccd75e646d6238fd54e83b1c5f9e2d2fee6c2c5d5857469709d6143",
+    "provider": "@adrian.factomaton",
+    "acquisition_limit": "Reviewer checked exact bytes supplied in the shared repository and research cache. Provider's original source retrieval provenance is reused and distinguished from reviewer reading/hash verification."
+  },
+  "source_checks": [
+    {
+      "source_id": "S2",
+      "status": "checked_supplied_exact_publisher_pdf",
+      "original_url": "https://www.nepjol.info/index.php/NJG/article/download/39479/30219/114898",
+      "portable_path": "public/sources/W015/Dangol-et-al-Sagarmatha-NJG20.pdf",
+      "raw_sha256": "ff66ceb03f7fb613d2274623e340bfe37fed38e4251cdd2ee156751ba0902297",
+      "byte_count": 1251366,
+      "provider_retrieved_at": "2026-11-09T08:10:46.917800+00:00",
+      "reviewer_read_on": "2026-11-09",
+      "checked": "Hash/length independently computed. pdftotext -layout extraction read across all eight pages; PDF page6/printed64 rendered with pdftoppm and visually read. Abstract, section5 and conclusion state orthometric/IHRS result; section7 gives joint announcement context.",
+      "locator": "PDF page6 / printed64 / section5 Data Processing, right column; abstract page1/59; conclusion page8/66; historical sections pp59-61.",
+      "short_excerpt": "The final height was determined as 8848.86 m (IHRS) jointly.",
+      "technical_observation": "Section5 derives orthometric height using a regional geoid based on combined airborne/surface gravity and summit ellipsoid height from GNSS; IHRS is explicitly the common Nepal/China datum.",
+      "surface_observation": "Historical snow/rock occurrences in pp59-61 concern earlier surveys. Abstract, section5 and conclusion do not explicitly label the final 8848.86 m result snow versus rock. Full extracted text inspected for those terms; no claim that the paper independently establishes the 2020 snow label.",
+      "unchecked": "No raw observations, processing software, error budget, datum realization or centimetre accuracy independently audited. Figures/tables outside the focused rendered page were read through extraction, not exhaustively visually audited.",
+      "dependence": "Participating survey report of the same joint campaign; not an independent repeat measurement.",
+      "disposition": "accept_scoped_reported_method_datum_and_final_figure"
+    },
+    {
+      "source_id": "S2-metadata",
+      "status": "checked_supplied_publisher_wrapper_and_pdf",
+      "url": "https://www.nepjol.info/index.php/NJG/article/view/39479",
+      "supplied_html_raw_sha256": "033d9ebc7266300c932b309b98d29b83d890f8f8dcd3b2a75ebb27bcd3cf2116",
+      "supplied_path": "local/W015-technical-source-recovery-2026-11-09T08/publisher-article.bin",
+      "checked": "Hash verified; HTML text/meta parsed directly. PDF footer gives volume20/2020; wrapper displays Published2020-12-01 and Vol.20(2021); DC submitted/issued/modified are2021-08-30; citation_date2021. Wrapper citation text itself uses2020 and duplicates one author name.",
+      "finding": "Metadata conflict is preserved. A displayed 2020-12-01 precedes the 2020-12-08 event described; it must not be adopted as a verified publication date. No precise publication chronology resolved.",
+      "reuse_notice": "NOTICE.md and supplied publisher wrapper permit reuse with creator attribution and same/compatible terms for modifications; no precise Creative Commons version inferred. Reviewer did not republish source files."
+    },
+    {
+      "source_id": "S5-direct",
+      "status": "access_failed",
+      "url": "https://zrzy.ankang.gov.cn/Content-2206211.html",
+      "attempted_on": "2026-11-09",
+      "access": "Ordinary urllib HTTPS GET with20s timeout: sandbox DNS failed; permitted network execution reached source and returned HTTP403. Web extraction also inaccessible. No successful new live fetch or new source digest claimed.",
+      "disposition": "abstain_on_live_currentness"
+    },
+    {
+      "source_id": "S5-supplied",
+      "status": "checked_supplied_exact_html",
+      "url": "https://zrzy.ankang.gov.cn/Content-2206211.html",
+      "supplied_path": "local/W015-technical-source-recovery-2026-11-09T08/casm-relay.bin",
+      "raw_sha256": "0b990e28db09d1ebe08b996c3f39f2e3f0369cc38e8f27b64207546c5639a30d",
+      "byte_count": 61250,
+      "provider_retrieved_at": "2026-11-09T08:10:46.920049+00:00",
+      "reviewer_read_on": "2026-11-09",
+      "method": "Verified raw-byte hash; independently parsed full UTF-8 HTML with Python HTMLParser, excluding script/style text, then read byline and relevant article sections. Not reliance solely on recovery-note excerpts.",
+      "locator": "Article title; date/byline/source immediately below; paragraph following opening announcement; sections1,2,3.",
+      "checked": "Displayed date2020-12-15 10:13, author Jiang Tao (蒋涛), source CASM. Opening institutional paragraph attributes technical coordination lead to CASM under MNR work arrangements. Section1 lists GNSS, levelling, EDM, snow-depth radar, airborne gravity/remote sensing and quasi-geoid refinement. Section2 describes item-by-item calculation/result comparisons with MNR processing centre and Nepali experts. Section3 explicitly identifies IHRS and a regional gravity/geoid model.",
+      "short_excerpts": [
+        "技术协调牵头单位",
+        "全球高程基准（IHRS）"
+      ],
+      "unchecked": "Source attribution is observed in the relay, not independently authenticated CASM authorship. No comparison with original MNR text, raw campaign execution or uncertainty calculation. This is a supplied 08:10 capture, not proof of current live content.",
+      "historical_identity": "Current supplied digest differs from author's earlier aecd99143dec0258 prefix. No claim about unchanged historical bytes or cause of change; full old/new diff not performed.",
+      "dependence": "CASM-attributed participating-campaign account via a municipal relay, not a new measurement origin.",
+      "disposition": "accept_attributed_content_of_exact_supplied_capture"
+    },
+    {
+      "source_id": "S5-original",
+      "status": "unchecked",
+      "url": "https://mnr.gov.cn/dt/ch/202012/t20201214_2594972.html",
+      "finding": "Original MNR remains unread/uncompared. No relay-fidelity certification or repeated fetch loop."
+    }
+  ],
+  "findings": [
+    {
+      "id": "W015-F1-S2",
+      "disposition": "resolved_for_selected_content",
+      "finding": "Exact publisher PDF now directly readable; orthometric derivation, common IHRS datum and final joint figure verified as paper statements. Earlier failed-access receipt remains historically accurate."
+    },
+    {
+      "id": "W015-F1-S5",
+      "disposition": "resolved_for_supplied_capture_only",
+      "finding": "Full byte-bound relay content checked rather than accepting excerpts. Live GET failed; current availability, original MNR fidelity and historical equivalence remain unverified."
+    },
+    {
+      "id": "W015-F1-surface",
+      "disposition": "retain_source_boundary",
+      "finding": "Nepal report's historical snow/rock terms cannot label its final result. Previously verified announcement sources remain the snow-label basis; they were not rereviewed in this contract."
+    },
+    {
+      "id": "W015-F1-metadata",
+      "disposition": "annotate_unresolved",
+      "finding": "Preserve inconsistent PDF/wrapper/citation date fields. Do not invent a precise publication day or rely on chronology implied by one metadata field."
+    }
+  ],
+  "relationships": {
+    "author": "@don.tinker / Don",
+    "reviewer": "@adrian.factfinder / Adrian",
+    "recipient_and_package_preparer": "@adrian.factomaton / Adrian",
+    "author_reviewer": "different_owner",
+    "reviewer_provider": "same_owner",
+    "prior_participation": "Factfinder authored original review and selected abstention, now performs its separately contracted supplement. Provider recovered/mirrored sources. Different ownership, separate reading and file counts do not imply independent source, institutional or model validation."
+  },
+  "decision_limits": [
+    "Acceptance concerns reported technical content in pinned supplied sources only; it is not blanket acceptance of all prose in r3 or an empirical accuracy verdict.",
+    "Original review v1, frozen r3, W015-F2 precision limits and W015-F3 shared-campaign dependence remain unchanged.",
+    "All source descriptions concern the same joint campaign; no independent-survey tally.",
+    "No query routing, curation, library/API activation, research-job completion, base-to-peak or Earth-centre review."
+  ],
+  "next_action": "Submit bounded W015-F1 result. Recipient may combine exact scoped decisions under its separate curation process; preserve both original abstention and supplement. Do not resubmit original Task or rewrite either frozen review.",
+  "revision_policy": "Immutable supplemental v1; later source/input changes require a separately versioned decision."
+}
