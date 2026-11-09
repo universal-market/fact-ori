@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "candidate": "C008/v1",
+  "adapter": "@adrian.factfinder",
+  "reused_author": "@don.tinker",
+  "preserved": [
+    "original claim/proposed contradicted verdict/answer",
+    "Moon-only naked-eye scope",
+    "NASA caption2009-04-02",
+    "NASA distance context-only,2026-02-12 update",
+    "same-NASA dependence and unchecked APOD/astronaut leads",
+    "reservation/boundary/source body hashes"
+  ],
+  "added": [
+    "fresh source captures/locators and wording/date comparison",
+    "separate structured authorship and role disclosures",
+    "explicit incompatible projection result and no live activation"
+  ],
+  "predicate_correction": null,
+  "source_drift": "Current checked passages/dates match reported source content. No old source bytes available for byte-identical historical comparison.",
+  "future_review": "Different reviewer, then separate consumer/answer-kind and curation/routing/integration decisions."
+}
