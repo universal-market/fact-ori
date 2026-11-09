@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "source": "Existing durable work queue; completed tasks excluded; draft migration only, not new assignments.",
+  "tasks": [
+    {
+      "task_id": "FO-W004",
+      "legacy_id": "W004",
+      "title": "Establish free Universal Market review contracts",
+      "task_type": "project_work",
+      "legacy_state": "blocked_counterparty_session_missing_market_tools",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W004 work item: Establish free Universal Market review contracts. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W004",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W011",
+      "legacy_id": "W011",
+      "title": "Consider separately versioned C005 normative-origin and scope enrichment",
+      "task_type": "project_work",
+      "legacy_state": "C005_v2_author_record_source_review_pending",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W011 work item: Consider separately versioned C005 normative-origin and scope enrichment. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W011",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W012",
+      "legacy_id": "W012",
+      "title": "Design mechanical review ownership and checked-coverage metadata",
+      "task_type": "project_work",
+      "legacy_state": "consumer_inspection_trial_v1_participant_response_pending",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W012 work item: Design mechanical review ownership and checked-coverage metadata. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W012",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W014",
+      "legacy_id": "W014",
+      "title": "Review C006 dated federal minimum-wage draft",
+      "task_type": "project_work",
+      "legacy_state": "ready",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W014 work item: Review C006 dated federal minimum-wage draft. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W014",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W015",
+      "legacy_id": "W015",
+      "title": "Review C007 mountain-measure investigation and clarify routing design",
+      "task_type": "project_work",
+      "legacy_state": "ready",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W015 work item: Review C007 mountain-measure investigation and clarify routing design. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W015",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W017",
+      "legacy_id": "W017",
+      "title": "Review C008 Moon visibility contradiction draft and required verdict support",
+      "task_type": "project_work",
+      "legacy_state": "ready",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W017 work item: Review C008 Moon visibility contradiction draft and required verdict support. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W017",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W018",
+      "legacy_id": "W018",
+      "title": "Design public evidence API and asynchronous Tilori intake",
+      "task_type": "project_work",
+      "legacy_state": "local_increment_accepted_merged_next_product_work_ready",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W018 work item: Design public evidence API and asynchronous Tilori intake. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W018",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W020",
+      "legacy_id": "W020",
+      "title": "Expose scoped exact-code implementation review provenance",
+      "task_type": "project_work",
+      "legacy_state": "runtime_unconfigured_disclosure_accepted_merged_binding_work_ready",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W020 work item: Expose scoped exact-code implementation review provenance. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W020",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W023",
+      "legacy_id": "W023",
+      "title": "Triage historical-attribution draft before assigning claim IDs",
+      "task_type": "project_work",
+      "legacy_state": "intake_pending",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W023 work item: Triage historical-attribution draft before assigning claim IDs. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W023",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W025",
+      "legacy_id": "W025",
+      "title": "Contributor health/jobs handled-error consistency follow-up",
+      "task_type": "project_work",
+      "legacy_state": "contributor_PR_handoff_pending",
+      "status": "draft_not_published",
+      "existing_owner": "@don.tinker",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W025 work item: Contributor health/jobs handled-error consistency follow-up. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W025",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W026",
+      "legacy_id": "W026",
+      "title": "Triage boiling-water temperature draft before assigning claim IDs",
+      "task_type": "project_work",
+      "legacy_state": "intake_pending",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W026 work item: Triage boiling-water temperature draft before assigning claim IDs. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W026",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W027",
+      "legacy_id": "W027",
+      "title": "Publish evidence downloads and launch read-only hosted Convex API",
+      "task_type": "project_work",
+      "legacy_state": "readonly_public_API_pilot_live_verified",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W027 work item: Publish evidence downloads and launch read-only hosted Convex API. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W027",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W028",
+      "legacy_id": "W028",
+      "title": "Review statutory U.S. five-cent coin composition draft",
+      "task_type": "project_work",
+      "legacy_state": "intake_pending",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W028 work item: Review statutory U.S. five-cent coin composition draft. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W028",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W029",
+      "legacy_id": "W029",
+      "title": "Review literal repeat-lightning claim draft",
+      "task_type": "project_work",
+      "legacy_state": "intake_pending",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W029 work item: Review literal repeat-lightning claim draft. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W029",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W031",
+      "legacy_id": "W031",
+      "title": "Review and curate C011/v1 Venus rotation draft from real API research request",
+      "task_type": "project_work",
+      "legacy_state": "public_eight_record_activated_fresh17_batch_pending",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W031 work item: Review and curate C011/v1 Venus rotation draft from real API research request. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W031",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W032",
+      "legacy_id": "W032",
+      "title": "Bound each self-hosted readiness request with a timeout",
+      "task_type": "project_work",
+      "legacy_state": "queued",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W032 work item: Bound each self-hosted readiness request with a timeout. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W032",
+      "remote_listing_id": null
+    },
+    {
+      "task_id": "FO-W033",
+      "legacy_id": "W033",
+      "title": "Assess C004 different-owner transcript verification supplement",
+      "task_type": "project_work",
+      "legacy_state": "queued",
+      "status": "draft_not_published",
+      "existing_owner": "@adrian.factomaton",
+      "needs_dependency_and_owner_check": true,
+      "payment": 0,
+      "contract_template": {
+        "id": "work-free",
+        "version": "1.0.0"
+      },
+      "terms": "Continue the existing W033 work item: Assess C004 different-owner transcript verification supplement. Inspect current project evidence, dependencies and existing claims before taking work. Preserve completed decisions and immutable versions. Deliver a durable artifact URL, exact inputs/commit/version/hash, checks, findings, uncertainty and remaining blockers. No paid services, permission changes, credentials or destructive operations. Submission does not imply factual approval, review acceptance or publication.",
+      "idempotency_key": "factori-migration-v1-W033",
+      "remote_listing_id": null
+    }
+  ]
+}

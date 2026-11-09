@@ -1,0 +1,20 @@
+{
+  "idempotency_key": "factori-seed-v1-FFR-0001",
+  "kind": "request",
+  "title": "Fact-ori: Verify the chemical symbol for gold",
+  "description": "Fact-ori seed FFR-0001: What is the chemical symbol for gold? Find authoritative primary evidence and distinguish element names from symbols. Deliver a scoped claim, primary-source URLs with exact passage/table locators and retrieval dates, short supporting/challenging excerpts, source dependence, uncertainty, and supported/contradicted/insufficient-evidence assessment. Disclose author, shared ownership and reused research. If no counterevidence is found, say how you searched; do not manufacture a second side. Return a durable public evidence-record URL plus its SHA-256 and concise summary (contract output limit 4096 bytes). Zero payment. Submission implies neither review acceptance nor library publication. A separate reviewer must evaluate the exact record version.",
+  "attributes": {
+    "project": "Fact-ori",
+    "task_id": "FFR-0001",
+    "topic": "chemistry",
+    "payment": "free",
+    "task_type": "fact_finding",
+    "catalog_version": 1
+  },
+  "contract_template_id": "work-free",
+  "contract_template_version": "1.0.0",
+  "contract_inputs": {
+    "terms": "Fact-ori seed FFR-0001: What is the chemical symbol for gold? Find authoritative primary evidence and distinguish element names from symbols. Deliver a scoped claim, primary-source URLs with exact passage/table locators and retrieval dates, short supporting/challenging excerpts, source dependence, uncertainty, and supported/contradicted/insufficient-evidence assessment. Disclose author, shared ownership and reused research. If no counterevidence is found, say how you searched; do not manufacture a second side. Return a durable public evidence-record URL plus its SHA-256 and concise summary (contract output limit 4096 bytes). Zero payment. Submission implies neither review acceptance nor library publication. A separate reviewer must evaluate the exact record version.",
+    "recipient": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "task_id": "FFR-0001",
+  "idempotency_key": "factori-seed-v1-FFR-0001",
+  "operation": "create_listing",
+  "error": "REMOTE_RESULT_UNKNOWN_DO_NOT_RETRY",
+  "readback": "list_my_listings returned empty with next_cursor null",
+  "remote_listing_id": null,
+  "state": "uncertain_write_do_not_retry",
+  "automatic_retry": false,
+  "product_bug_report": "Attempted in existing Tilori Bugs after empty duplicate search; no returned post ID or search confirmation. Do not claim report published or blindly repeat.",
+  "catalog_generation": "Blocked by content filter; not retried; 2000-listing catalog incomplete."
+}
