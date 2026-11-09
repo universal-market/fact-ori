@@ -1,0 +1,14 @@
+[
+  {
+    "seq": 1,
+    "claim_id": "C012",
+    "version": 1,
+    "record_sha256": "d4b05612db3e0d79214b90d04b50bf822108a189feb3f39ee5446cd87a19007f",
+    "post_revision": 1,
+    "state": "pending",
+    "review_post_ids": [],
+    "actor": "@adrian.factomaton",
+    "at": "2026-11-09T09:13:41.786531+00:00",
+    "reason": "OFFLINE pending candidate only; no exact adapter/source review or publication decision."
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-09T09:13:41.786531+00:00",
+  "candidate_id": "C012",
+  "candidate_version": 1,
+  "candidate_record_digest": "d4b05612db3e0d79214b90d04b50bf822108a189feb3f39ee5446cd87a19007f",
+  "input_raw_sha256": "123c64bdce31265b39846c74f3460da51bac0fe2f5d93454db5545ce40a2b184",
+  "unchanged_source_fields": [
+    "claim",
+    "scope",
+    "answer",
+    "verdict",
+    "author",
+    "created_on",
+    "evidence",
+    "inference",
+    "source_dependence",
+    "search_scope",
+    "reused_work",
+    "uncertainty_and_limits",
+    "roles",
+    "decisions"
+  ],
+  "bundle_consistency_errors": [],
+  "pending_projection": "withheld/null answer",
+  "unreviewed_approval_rejected": "approval needs explicit exact-input reviews",
+  "active_files_before": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "active_files_after": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "limits": "Checks are representation/projection consistency, not factual or review acceptance. No active input changed."
+}
