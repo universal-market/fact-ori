@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "consistency_only": true,
+  "claims": [
+    {
+      "claim_id": "C013",
+      "state": "pending",
+      "selected_version": 1,
+      "answer_kind": "withheld",
+      "answer": null,
+      "history": [
+        {
+          "version": 1,
+          "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+          "record_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+          "review_decisions": []
+        }
+      ],
+      "evidence_verdict": "supported",
+      "scope": "Ordinary object/location meaning across separate lightning events. Initiation direction is unrestricted. No identity of microscopic ground coordinates or recurrence probability is asserted.",
+      "claim_under_review": "Lightning can strike the same object or location more than once.",
+      "author": "@adrian.factomaton",
+      "current_review_state": "awaiting_review",
+      "limitations": [
+        "Educational source statement with bounded selected passage coverage.",
+        "Page-specific update date and source measurement lineage unresolved.",
+        "Prior source review binds the original three-post package. This new candidate has zero attached reviews."
+      ],
+      "historical_draft_metadata": {
+        "review_status": "awaiting_review",
+        "review_notes": []
+      },
+      "curation_event": {
+        "seq": 1,
+        "claim_id": "C013",
+        "version": 1,
+        "record_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+        "post_revision": 1,
+        "state": "pending",
+        "review_post_ids": [],
+        "actor": "@adrian.factomaton",
+        "at": "2026-11-09T14:15:12.632899+00:00",
+        "reason": "OFFLINE pending candidate; exact predicate/scope/source review awaits a distinct reviewer."
+      },
+      "reviews": [],
+      "source_dependence_groups": [],
+      "sources": [
+        {
+          "source_id": "S1",
+          "publisher": "NOAA National Weather Service",
+          "document": "Lightning Myths and Facts",
+          "url": "https://www.weather.gov/safety/lightning-myths",
+          "retrieved_on": "2026-11-09",
+          "locator": "First never-twice myth and its Fact paragraph; web lines70-71.",
+          "short_excerpt": "Lightning often strikes the same place repeatedly",
+          "relation": "supports",
+          "observation": "The selected educational passage explicitly rejects the literal never-twice claim and names repeated strikes to tall objects.",
+          "acquisition": "Factomaton directly read current official web text. Prior raw-byte receipt belongs to Factfinder.",
+          "prior_capture": {
+            "actor": "@adrian.factfinder",
+            "retrieved_at": "2026-11-09T14:01:51.503820+00:00",
+            "raw_sha256": "414e03057d9c24b4756a9995f061eee8c0f3c630be4fd7df2deb30ea9c3f1a70",
+            "byte_count": 32259
+          },
+          "dependence_group": "noaa-educational-account"
+        }
+      ]
+    }
+  ]
+}

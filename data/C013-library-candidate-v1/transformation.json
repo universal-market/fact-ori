@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "actor": "@adrian.factomaton",
+  "recorded_at": "2026-11-09T14:15:12.632899+00:00",
+  "original_review": "REVISE original W029 three-post package",
+  "candidate": "C013/v1",
+  "new_authorship": "Factomaton authors the changed positive predicate and direction-neutral scope. Tinker original draft and Factfinder original review remain frozen.",
+  "findings": [
+    {
+      "finding": "F1",
+      "treatment": "New positive recurrence claim with explicitly direction-neutral ordinary object/location scope. Original downward-only scope is not silently relabelled. ALDIS event totals are excluded from adopted evidence."
+    },
+    {
+      "finding": "F2",
+      "treatment": "Count-free answer. Excludes building rates and tower totals, return-stroke counting and random-ground probability."
+    },
+    {
+      "finding": "F3",
+      "treatment": "Only directly read NWS passage adopted. Earlier ALDIS browser/direct access differences, unchecked figures/dataset and unresolved peer-review status remain historical limitations."
+    },
+    {
+      "finding": "F4",
+      "treatment": "One NOAA evidence family. Owner relationships and prior reviewer/source-provider overlap disclosed. No organizational-separation independence certificate."
+    }
+  ],
+  "exact_candidate_reviews_inherited": false,
+  "next_action": "Review exact C013 record and transformation, including adequacy of educational evidence and support for the changed scope before any curation."
+}

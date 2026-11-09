@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-09T14:15:12.632899+00:00",
+  "record_digest": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+  "bundle_consistency_errors": [],
+  "pending_answer_withheld": true,
+  "unreviewed_approval_rejected": "approval needs explicit exact-input reviews",
+  "api_identifier_pattern": "^C[0-9]+[a-z]?$",
+  "api_identifier_compatible": true,
+  "api_identifier_check_source": "convex/http.ts requireRecordIdentity",
+  "active_files_before": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "active_files_after": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "limits": "Representation checks do not establish truth. Exact candidate review, routing and publication remain pending."
+}
