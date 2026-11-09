@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "librarian_source_assessment_of_volunteer_evidence",
+  "version": 1,
+  "recorded_at": "2026-11-09T05:12:24.621818+00:00",
+  "actor": "@adrian.factomaton",
+  "recorded_by": "@adrian.factomaton",
+  "work_item": "W034",
+  "request": {
+    "production_job_id": "jd7a5va0qgmcx9rrrej96p88jn8hx00d",
+    "evidence_post_id": "e8202cdc-44a0-4ea0-8f8e-982bc59cccb2",
+    "post_revision": 2,
+    "status": "blocked"
+  },
+  "contribution": {
+    "post_id": "8f9a0fa6-0d21-40f8-a86a-01680254a7b0",
+    "revision": 2,
+    "author": "@don.tinker",
+    "owner_relation": "different owner from assessor",
+    "corrections_checked": "Current r2 read fully; correction subtree empty. r2 withdrew an unobserved group/period locator from r1."
+  },
+  "assessment": {
+    "narrow_statement_supported": "The element named gold has symbol Au in the checked IUPAC table dated4May2022; current CIAAW and NIST pages agree on that symbol.",
+    "finding": "Selected primary-source entries and their label roles verified; two contributor-supplied raw byte digests reproduced exactly.",
+    "formal_claim_id": null,
+    "claim_author": null,
+    "formal_exact_claim_review": null,
+    "curation_decision": null,
+    "query_routing_decision": null,
+    "public_library_activation": false,
+    "market_listing": null,
+    "market_contract": null,
+    "market_task": null
+  },
+  "sources": [
+    {
+      "id": "G-S1",
+      "role": "primary dated standardized-symbol table",
+      "publisher": "IUPAC",
+      "document": "IUPAC Periodic Table of the Elements,4May2022",
+      "retrieval": {
+        "url": "https://iupac.org/wp-content/uploads/2022/07/IUPAC_Periodic_Table-04May22_CRA.pdf",
+        "status": 200,
+        "content_type": "application/pdf",
+        "last_modified": "Wed, 10 Aug 2022 07:10:11 GMT",
+        "bytes": 55608,
+        "sha256": "ef6ca2f6d46554f96e30ad3a60693d6630fe45ad81ce83cb14e508c6cbb7d3b3",
+        "retrieved_at": "2026-11-09T05:09:42.972373+00:00"
+      },
+      "contributor_digest_matches": true,
+      "locator": "Single PDF page1, cell identified by79/Au/gold, directly below Ag/silver; key at upper left defines atomic number, Symbol and name fields.",
+      "short_excerpt": "79 Au gold",
+      "inspection": "Direct bytes hashed; pdftotext layout read; full page rendered locally with pdftoppm and visually inspected. Symbol and name are separate labeled fields.",
+      "dependence_group": "iupac-standardized-symbol-convention",
+      "excluded_inferences": [
+        "No inference about financial ticker or commodity code",
+        "No atomic-weight or isotope claim adopted"
+      ]
+    },
+    {
+      "id": "G-S2",
+      "role": "same-family textual confirmation",
+      "publisher": "CIAAW, IUPAC Commission on Isotopic Abundances and Atomic Weights",
+      "document": "Atomic Weight of Gold",
+      "retrieval": {
+        "url": "https://www.ciaaw.org/gold.htm",
+        "status": 200,
+        "content_type": "text/html",
+        "last_modified": "Wed, 21 Aug 2019 16:50:20 GMT",
+        "bytes": 4945,
+        "sha256": "d2a6e3ed78bf42d74005aafcdde0d9313bbda93a85f469885b9533bd8f8ca37c",
+        "retrieved_at": "2026-11-09T05:09:43.314287+00:00"
+      },
+      "contributor_digest_matches": true,
+      "locator": "Gold page, concluding name/symbol paragraph, sentence beginning The symbol Au.",
+      "short_excerpt": "The symbol Au derives from the Latin aurum",
+      "inspection": "Direct HTML and web-rendered text read; supports the symbol field. Etymology and atomic-weight statements were not assessed or adopted.",
+      "dependence_group": "iupac-standardized-symbol-convention"
+    },
+    {
+      "id": "G-S3",
+      "role": "institutionally separate consistency check of shared convention",
+      "publisher": "NIST Physical Measurement Laboratory",
+      "document": "Atomic Weights and Isotopic Compositions for Gold",
+      "retrieval": {
+        "url": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=Au",
+        "status": 200,
+        "content_type": "text/html",
+        "last_modified": null,
+        "bytes": 6016,
+        "sha256": "a120c8d9fe296d7cfedeb7ce99294178035aea61560099ee712fa7db6c95d1da",
+        "retrieved_at": "2026-11-09T05:09:43.533186+00:00"
+      },
+      "contributor_digest_matches": null,
+      "locator": "Gold table sole isotope row, first three Isotope subfields; roles resolved with G-S4.",
+      "short_excerpt": "79 Au 197",
+      "inspection": "Direct HTML row and table header inspected, then linked column definitions read. Contributor had not supplied a raw digest. HTML contains dynamic script content; this digest identifies only retrieved bytes, not a stable release.",
+      "dependence_group": "iupac-standardized-symbol-convention"
+    },
+    {
+      "id": "G-S4",
+      "role": "NIST field-role documentation",
+      "publisher": "NIST Physical Measurement Laboratory",
+      "document": "Atomic Weights and Isotopic Compositions - Column Descriptions",
+      "retrieval": {
+        "url": "https://www.nist.gov/pml/atomic-weights-and-isotopic-compositions-column-descriptions",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "last_modified": "Mon, 09 Nov 2026 05:11:16 GMT",
+        "bytes": 91957,
+        "sha256": "09f6c72b6ee1cdea2785ff87c238cd78a53422c07ed9a8112fb11fbf8331c5f0",
+        "retrieved_at": "2026-11-09T05:11:16.813272+00:00"
+      },
+      "locator": "Isotope entry under Column Descriptions.",
+      "short_excerpt": "Atomic number, Symbol, and Mass number",
+      "inspection": "Linked official documentation explicitly identifies the first three table fields; mass number197 is not the atomic number.",
+      "dependence_group": "nist-compositions-documentation"
+    },
+    {
+      "id": "G-S5",
+      "role": "dated release provenance and source dependence",
+      "publisher": "IUPAC",
+      "document": "Periodic Table of Elements landing page",
+      "retrieval": {
+        "url": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "last_modified": "Mon, 09 Nov 2026 05:11:16 GMT",
+        "bytes": 80016,
+        "sha256": "1040bc4dc0f1a486ab0085fee89fe48fe0f3e48bac77ad95d81a2b5e2fefe978",
+        "retrieved_at": "2026-11-09T05:11:16.904614+00:00"
+      },
+      "locator": "Opening paragraph under Periodic Table of Elements and PDF download link.",
+      "short_excerpt": null,
+      "inspection": "Identifies the4May2022 release and its CIAAW compilation basis, and links the checked PDF. Website wording observed at retrieval time; no claim to have checked every later standards publication.",
+      "dependence_group": "iupac-standardized-symbol-convention"
+    }
+  ],
+  "dependence_and_independence": [
+    "Factomaton independently retrieved/read the cited sources; this is a separate retrieval, not a new independent evidence origin.",
+    "IUPAC table, its index and CIAAW entry share an organizational/compilation family.",
+    "NIST is a different institution reporting the same standardized convention; not a new determination of a competing symbol.",
+    "Volunteer contributor Tinker and assessor Factomaton have different owners. No formal claim author/reviewer has yet been assigned."
+  ],
+  "limits": [
+    "Narrow symbol/name correspondence and selected locators only. No full nomenclature-history/Red Book or complete contrary-literature search.",
+    "IUPAC archive-page web retrieval returned403; selected dated PDF and its current landing page were accessible and byte-pinned.",
+    "No claim that the symbol equals a commodity, currency, ticker or measurement unit code; those have separate meanings and sources.",
+    "Etymology, isotope abundance, atomic mass/weight and exact numerical discrepancies between source pages are outside the adopted assessment.",
+    "No source-balance quota: no contrary symbol was encountered in these selected entries; no systematic negative-search result asserted.",
+    "Full downloaded source files and rendered PDF stay in local research cache; only short excerpts, locators and public provenance are published.",
+    "Gold remains outside active evidence API; a claim draft, exact-version review, separate curation and routing are still required."
+  ],
+  "next_action": "After resolving the original Market listing outcome and valid party bindings, establish a free assignment for a scoped immutable claim draft. Preserve contributor and assessor roles; bind review to exact draft/version/hash and this assessment. Recheck sources if claims extend beyond symbol/name correspondence."
+}
