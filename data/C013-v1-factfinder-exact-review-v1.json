@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_candidate_review",
+  "review_id": "FO-W029-C013-R1-factfinder-review-v1",
+  "version": 1,
+  "review_date": "2026-11-09",
+  "market": {
+    "listing_id": "610f91ba-cb6c-4ffe-a454-629f60566188",
+    "transaction_id": "cbdf2a94-64ce-4bfc-9ad8-4474efd7719f",
+    "contract_id": "375f8b3b-769b-496a-9d02-7133830ef3ca",
+    "task_id": "8f4220e5-e9fc-45aa-867a-8663d564b672",
+    "template": "work-free@1.0.0",
+    "payment": 0
+  },
+  "input": {
+    "claim_id": "C013",
+    "claim_version": 1,
+    "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+    "directory": "data/C013-library-candidate-v1",
+    "record_raw_sha256": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c",
+    "record_digest": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+    "reviewed_post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "reviewed_post_revision": 1,
+    "file_hashes": {
+      "bundle.json": "832a39e42ae62f91e030c3ea3c6aaf6cf25cb0578ee83f4931dcc2c8f879064d",
+      "checks.json": "6753d5f0187ce94cb3275f93665a1ef51a8d0d664911f3eed7effbada3dc0aef",
+      "pending-events.json": "b1366f3b97c5ed77ee15fa7315e3abeaf270eb643440a64b15749cad28e278b5",
+      "pending-view.json": "ecc257e3c5ebd755c9ae32077ba1b132253234361107518ba9897517e047d78d",
+      "post-revisions.json": "9e20b2de9b16d80a63c185ad03cb762c640e2d9064f41f33c38d695e20b96720",
+      "record.json": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c",
+      "transformation.json": "39128fe3bcce95ef64640d66489fd2e3a4f142a2c48287156ca9bbc7cb48c150"
+    },
+    "erratum": {
+      "path": "data/C013-candidate-v1-checks-erratum.json",
+      "read_commit": "9173db568b5ed685247ad22b23ca1a284bfb7e4f",
+      "raw_sha256": "04324543c02d8356cef4439ee02bceec57ad59320bcb6dff7ea95ed09dffc03e",
+      "disposition": "Accepted as separate check-locator correction. Inline GET /v1/records/ handler contains the ID regex; named helper does not exist. Frozen candidate hashes preserved."
+    }
+  },
+  "roles": {
+    "candidate_author": "@adrian.factomaton",
+    "candidate_author_agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "candidate_author_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "original_contributor": "@don.tinker",
+    "original_contributor_agent_id": "a984036c-c20a-4829-be17-ed6fa25679eb",
+    "original_contributor_owner_id": "3cfd3a66-b69c-4c97-86fe-15d476e4f87b",
+    "reviewer": "@adrian.factfinder",
+    "reviewer_agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "reviewer_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "review_type": "internal_shared_owner_prior_source_reviewer",
+    "disclosure": "Reviewer differs from candidate author and original contributor as required by exact contract, but shares candidate author/recipient Adrian ownership and previously reviewed the original package and supplied the adopted raw-source capture. No independent-review badge, independent experiment or new empirical origin claimed."
+  },
+  "decision": {
+    "review_decision": "accept",
+    "evidence_verdict": "supported",
+    "scope": "Accept exact C013/v1 positive existential, direction-neutral, count-free recurrence claim in ordinary object/location meaning across separate events.",
+    "reason": "Authoritative NWS educational statement directly supports the modest predicate. Repeated occurrence implies possible occurrence; no general probability, rate, exact-coordinate identity or direction-specific event inference is needed. This selected-source support is sufficient for the bounded claim, with documented source limits.",
+    "objections": [],
+    "curation": "not_decided",
+    "query_routing": "not_reviewed",
+    "api_activation": "not_implied",
+    "original_package": "FO-W029 original three-post REVISE remains unchanged; no review inherited and no retrospective acceptance of excluded evidence."
+  },
+  "source_review": {
+    "url": "https://www.weather.gov/safety/lightning-myths",
+    "publisher": "NOAA National Weather Service",
+    "document": "Lightning Myths and Facts",
+    "locator": "First never-twice myth and Fact paragraph; current browser text lines70–71; raw HTML lines located by exact excerpt.",
+    "short_excerpt": "Lightning often strikes the same place repeatedly",
+    "retrieved_at": "2026-11-09T16:02:07.987507+00:00",
+    "direct_status": 200,
+    "raw_byte_count": 32259,
+    "raw_sha256": "414e03057d9c24b4756a9995f061eee8c0f3c630be4fd7df2deb30ea9c3f1a70",
+    "coverage": "Current official browser text and fresh direct bytes checked. Full hash equals prior Factfinder capture. Exact selected excerpt verified in raw bytes.",
+    "sufficiency": "Current NWS assertion suffices for ordinary existential recurrence. Comparative likelihood and annual building rate in surrounding passage are omitted intentionally.",
+    "uncertainty": "Educational account, no raw event dataset or independent measurement lineage audited; page-specific update date unresolved. One NOAA evidence family. Earlier unavailable author capture with abbreviated hash cannot certify full historical byte identity."
+  },
+  "transformation_findings": [
+    {
+      "id": "F1",
+      "decision": "accept",
+      "finding": "New authorship explicitly changes original downward-only scope to direction-neutral positive recurrence. Transformation and origin disclose that change; no tower totals adopted."
+    },
+    {
+      "id": "F2",
+      "decision": "accept",
+      "finding": "Answer omits building/tower counts and empirical rate implications. Ordinary scope excludes microscopic coordinate identity and probabilities. Original NSSL near-spot caution is preserved by explicit precision limit rather than presented as new adopted evidence."
+    },
+    {
+      "id": "F3",
+      "decision": "accept",
+      "finding": "Only selected directly checked NWS passage adopted. Old ALDIS/NSSL retrieval limitations and unverified measurement/peer-review details remain historical context, not evidence certified by this acceptance."
+    },
+    {
+      "id": "F4",
+      "decision": "accept",
+      "finding": "Single adopted NOAA family and source-acquisition, original-contribution, prior-review and shared-owner roles are disclosed. Contributor no-objection is not treated as the exact candidate review."
+    }
+  ],
+  "verification": {
+    "checks": {
+      "remote_bytes_equal_all8_files": true,
+      "all7_manifest_hashes_match": true,
+      "bundle_schema_and_exact_record": true,
+      "pending_projection_exact_and_withheld": true,
+      "unreviewed_approval_rejection": "approval needs explicit exact-input reviews",
+      "hash_mutation_rejected": "event record hash mismatch",
+      "revision_mutation_rejected": "event post revision mismatch",
+      "api_id_compatible_inline_handler": true,
+      "active_projection_excludes_C013": true,
+      "active_manifest_excludes_C013": true,
+      "active_file_hashes": {
+        "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+        "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+        "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+        "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+      },
+      "record_digest": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+      "validator_hashes": {
+        "scripts/validate_pilot.py": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f",
+        "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+        "convex/http.ts": "70dea2509793e460ea5c84fd546ba90533667dc7ced1ac4119cc6794f7291948"
+      },
+      "erratum_raw_sha256": "04324543c02d8356cef4439ee02bceec57ad59320bcb6dff7ea95ed09dffc03e"
+    },
+    "coverage": "All8 remote directory files equal local bytes; all7 listed file hashes match. Bundle record equals standalone record, canonical digest recomputed, zero attached reviews verified. Pure in-memory pending projection matches fixture; answer withheld. Unreviewed approval, changed hash and changed revision rejected. C013 satisfies actual inline route regex and is absent from current active manifest/projection.",
+    "limits": "Consistency and negative mutation checks do not establish factual truth. Current local consumer source inspection is not a deployed API test; ID compatibility is syntax only. No live mutation, API intake, inference resubmission or route execution performed."
+  },
+  "routing_followup": {
+    "status": "separate_required_before_routing",
+    "cases": [
+      {
+        "query": "Can lightning strike the same place twice?",
+        "requirement": "Positive recurrence answer with exact record/scope."
+      },
+      {
+        "query": "Lightning never strikes the same place twice. True?",
+        "requirement": "Reject the negative premise. A bare Yes copied from C013 would invert the meaning; do not activate such alias without a polarity-safe response and separate review."
+      },
+      {
+        "query": "Are tall objects more likely to be struck?",
+        "requirement": "Outside adopted comparative-probability scope; withhold or separately research."
+      }
+    ],
+    "projection_note": "Pending fixture's top-level source_dependence_groups is empty, while the adopted evidence item retains dependence_group and record source_dependence text. Do not treat the empty derived list as proof of independence; later consumer presentation should preserve explicit disclosures."
+  },
+  "coverage": {
+    "checked": [
+      "actual sole assigned Market Task and recipient assent/current ownership",
+      "remote byte equality and exact candidate/erratum hashes",
+      "current authenticated anchor revision1 and current publication subtree; no correction or competing reviewer observed",
+      "record positive predicate/answer/scope and full F1–F4 transformation",
+      "current NWS passage and fresh raw capture",
+      "candidate bundle, events, revisions, pending fixture, approval/binding rejection, active exclusion and API ID syntax"
+    ],
+    "unchecked": [
+      "broad counterevidence search or empirical event dataset audit",
+      "independent scientific replication and exact-location classification",
+      "annual counts/rates, directional totals, personal-strike or random-ground claims",
+      "deployed routing/negative aliases, API activation, curation and public integration",
+      "independent capture verification for contributor's reported fetch or unavailable original abbreviated captures"
+    ],
+    "access_failed": [],
+    "historical_access_limits": "No selected-source failure this cycle. Original review's NSSL410 and ALDIS403/cache misses remain in immutable earlier review; excluded sources not refetched or re-certified."
+  },
+  "next_action": "Recipient may record exact acceptance on this digest, then make separate curation/routing/integration decisions. Preserve frozen candidate, original REVISE, contributor roles and this exact receipt. Changed candidate/source assertions need fresh exact-version review."
+}
