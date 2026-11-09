@@ -1,0 +1,958 @@
+[
+  {
+    "id": "known-venus",
+    "text": "Is Venus’s sidereal rotation retrograde?",
+    "expected": [
+      "answer"
+    ],
+    "actual": [
+      "answer"
+    ],
+    "pass": true,
+    "duration_ms": null,
+    "timing_basis": "immediate duration not recorded",
+    "analysis_id": null,
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "Is Venus’s sidereal rotation retrograde?",
+        "status": "answer",
+        "reason": null,
+        "inspection": {
+          "claim_id": "C011",
+          "sha256": "f5a122af75770cf06e1e209e2a29548240b11f4c2b7111a85d92be1d47afb444",
+          "version": 1
+        },
+        "model_revision": null,
+        "embedding_revision": null,
+        "job": null,
+        "extraction_audit": null,
+        "scope_assessment": null,
+        "assessment": null
+      }
+    ]
+  },
+  {
+    "id": "paraphrase-units",
+    "text": "How many ml make up a liter?",
+    "expected": [
+      "answer"
+    ],
+    "actual": [
+      "answer"
+    ],
+    "pass": true,
+    "duration_ms": 91909,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "840800b8-c792-4244-b907-afb3babe5bf7",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "How many ml make up a liter?",
+        "status": "answer",
+        "reason": "Both input and reviewed fact address the conversion between litres and millilitres.",
+        "inspection": {
+          "claim_id": "C005",
+          "version": 1,
+          "sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28"
+        },
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "The item expresses one question asking about the relationship between two terms in terms of quantity."
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "answers_same_question",
+          "reason": "Both input and reviewed fact address the conversion between litres and millilitres.",
+          "decision": "answered"
+        }
+      }
+    ]
+  },
+  {
+    "id": "paraphrase-capital",
+    "text": "What is the capital city of Australia?",
+    "expected": [
+      "answer"
+    ],
+    "actual": [
+      "answer"
+    ],
+    "pass": true,
+    "duration_ms": 177756,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "9d63f666-abd0-46fa-94e1-d1b75ff3cb97",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "What is the capital city of Australia?",
+        "status": "answer",
+        "reason": "The input and reviewed fact both inquire about the current national capital of Australia, which is answered as Canberra.",
+        "inspection": {
+          "claim_id": "C004",
+          "version": 1,
+          "sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a"
+        },
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "The item 'what is the TERM1 TERM2 of TERM3?' expresses a single question and does not combine multiple assertions or questions."
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "answers_same_question",
+          "reason": "The input and reviewed fact both inquire about the current national capital of Australia, which is answered as Canberra.",
+          "decision": "answered"
+        }
+      }
+    ]
+  },
+  {
+    "id": "false-capital",
+    "text": "Australia's capital is Sydney.",
+    "expected": [
+      "contradicted"
+    ],
+    "actual": [
+      "contradicted"
+    ],
+    "pass": true,
+    "duration_ms": 261053,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "30d92234-da34-4fbe-b082-b36bee6d30fe",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "Australia's capital is Sydney.",
+        "status": "contradicted",
+        "reason": "Proposes Sydney instead of Canberra for Australia's national capital identity.",
+        "inspection": {
+          "claim_id": "C004",
+          "version": 1,
+          "sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a"
+        },
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "The item expresses a single assertion in the form of 'X is Y', which is syntactically atomic."
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "contradicts_same_claim",
+          "reason": "Proposes Sydney instead of Canberra for Australia's national capital identity.",
+          "decision": "contradicted"
+        }
+      }
+    ]
+  },
+  {
+    "id": "false-number",
+    "text": "A liter contains 500 milliliters.",
+    "expected": [
+      "contradicted"
+    ],
+    "actual": [
+      "contradicted"
+    ],
+    "pass": true,
+    "duration_ms": 352962,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "357239dd-0885-4d6c-97db-2fa6735de25a",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "A liter contains 500 milliliters.",
+        "status": "contradicted",
+        "reason": "The input contradicts the reviewed fact that 1 liter equals exactly 1,000 milliliters.",
+        "inspection": {
+          "claim_id": "C005",
+          "version": 1,
+          "sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28"
+        },
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "The item expresses a single assertion that a contains both TERM2 and TERM3, which is one unit of meaning for assessment purposes."
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "contradicts_same_claim",
+          "reason": "The input contradicts the reviewed fact that 1 liter equals exactly 1,000 milliliters.",
+          "decision": "contradicted"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong-predicate",
+    "text": "One litre weighs 1000 grams.",
+    "expected": [
+      "not_in_library",
+      "needs_clarification"
+    ],
+    "actual": [
+      "not_in_library"
+    ],
+    "pass": true,
+    "duration_ms": 442158,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "543e5b8d-c7e1-49a3-8be7-31250ffa1d91",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "One litre weighs 1000 grams.",
+        "status": "not_in_library",
+        "reason": null,
+        "inspection": null,
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "The item expresses a single assertion about the weight of TERM1 TERM2 being equal to TERM3 TERM4."
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "different_conditions_or_dates",
+          "reason": "The input discusses weight (mass), while the reviewed fact addresses volume equivalence between litre and millilitre.",
+          "decision": "different_scope"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong-medium",
+    "text": "Light travels at exactly 299792458 metres per second in water.",
+    "expected": [
+      "not_in_library",
+      "needs_clarification"
+    ],
+    "actual": [
+      "not_in_library"
+    ],
+    "pass": true,
+    "duration_ms": 563523,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "b0160f64-ee33-4e1c-942d-b902b9bfa5fc",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "Light travels at exactly 299792458 metres per second in water.",
+        "status": "not_in_library",
+        "reason": null,
+        "inspection": null,
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "The item expresses a single assertion about TERM1 traveling at a specific speed and condition."
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "different_conditions_or_dates",
+          "reason": "Speed of light in vacuum versus water.",
+          "decision": "different_scope"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong-year",
+    "text": "Who won the 2016 US presidential election?",
+    "expected": [
+      "not_in_library",
+      "needs_clarification"
+    ],
+    "actual": [
+      "not_in_library"
+    ],
+    "pass": true,
+    "duration_ms": 588189,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "4a6f6061-efd8-4251-b0e3-fb81f83227a8",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "Who won the 2016 US presidential election?",
+        "status": "not_in_library",
+        "reason": "Explicit year/dated quantity differs from the reviewed claim; no answer inherited across that scope.",
+        "inspection": null,
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "The item expresses a single question about who won an event or competition."
+        },
+        "scope_assessment": null,
+        "assessment": null
+      }
+    ]
+  },
+  {
+    "id": "election-paraphrase",
+    "text": "Who won the certified United States presidential election in 2020?",
+    "expected": [
+      "answer"
+    ],
+    "actual": [
+      "answer"
+    ],
+    "pass": true,
+    "duration_ms": 669667,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "c7d24d76-aa19-4e8c-aafb-10b75e7d7a22",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "Who won the certified United States presidential election in 2020?",
+        "status": "answer",
+        "reason": "The input and reviewed fact both ask about the winner of the certified 2020 U.S. presidential election.",
+        "inspection": {
+          "claim_id": "C001",
+          "version": 1,
+          "sha256": "3a1a2baae2679b33270ae72d9db8ae0ac4456497ef15fcd5ea3581614437d4b1"
+        },
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "Each item expresses one assertion/question."
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "answers_same_question",
+          "reason": "The input and reviewed fact both ask about the winner of the certified 2020 U.S. presidential election.",
+          "decision": "answered"
+        }
+      }
+    ]
+  },
+  {
+    "id": "unresolved-ballots",
+    "text": "Were all ballots cast in the 2020 US presidential election valid?",
+    "expected": [
+      "abstain"
+    ],
+    "actual": [
+      "abstain"
+    ],
+    "pass": true,
+    "duration_ms": 751517,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "7e0ef7a6-8f94-40a4-8a50-0ffe2916f64c",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "Were all ballots cast in the 2020 US presidential election valid?",
+        "status": "abstain",
+        "reason": "The reviewed records do not establish if all ballots were valid, abstaining from affirming or negating the claim.",
+        "inspection": {
+          "claim_id": "C003",
+          "version": 1,
+          "sha256": "c25c657ce70380ab0460aa026e53f026fe0ebd8a12b80287ac09a93fa02af491"
+        },
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "The single item expresses one question without combining multiple assertions or questions."
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "insufficient_evidence_same_predicate",
+          "reason": "The reviewed records do not establish if all ballots were valid, abstaining from affirming or negating the claim.",
+          "decision": "abstain"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ambiguous-space",
+    "text": "Can you see the Great Wall of China from space?",
+    "expected": [
+      "needs_clarification"
+    ],
+    "actual": [
+      "needs_clarification"
+    ],
+    "pass": true,
+    "duration_ms": null,
+    "timing_basis": "immediate duration not recorded",
+    "analysis_id": null,
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "Can you see the Great Wall of China from space?",
+        "status": "needs_clarification",
+        "reason": "From where, and do you mean an unaided sighting, a photograph, ease of seeing it, or an attributed report? C009/v2 assesses whether its reviewed source package establishes a verified unaided-eye sighting from low Earth orbit; it currently abstains and does not settle whether a sighting occurred. For that evidence assessment, ask: Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye? Other locations and predicates require separate review.",
+        "inspection": null,
+        "model_revision": null,
+        "embedding_revision": null,
+        "job": null,
+        "extraction_audit": null,
+        "scope_assessment": null,
+        "assessment": null
+      }
+    ]
+  },
+  {
+    "id": "unknown",
+    "text": "Do unicorns live on Mars?",
+    "expected": [
+      "not_in_library"
+    ],
+    "actual": [
+      "not_in_library"
+    ],
+    "pass": true,
+    "duration_ms": 778000,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "a9bf8caf-9f51-4f73-9118-678d03924f3d",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "Do unicorns live on Mars?",
+        "status": "not_in_library",
+        "reason": null,
+        "inspection": null,
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "The item 'do TERM1 live on TERM2?' expresses a single question and does not combine multiple assertions or questions."
+        },
+        "scope_assessment": null,
+        "assessment": null
+      }
+    ]
+  },
+  {
+    "id": "paragraph",
+    "text": "Canberra is Australia's capital. A liter contains 500 milliliters. Unicorns live on Mars.",
+    "expected": [
+      "answer",
+      "contradicted",
+      "not_in_library"
+    ],
+    "actual": [
+      "answer",
+      "contradicted",
+      "not_in_library"
+    ],
+    "pass": true,
+    "duration_ms": 930504,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "aa753e96-bd15-42b7-8cd1-868b3e34a897",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "Canberra is Australia's capital.",
+        "status": "answer",
+        "reason": "The input and reviewed fact both assert Canberra as Australia's capital city, matching the scope.",
+        "inspection": {
+          "claim_id": "C004",
+          "version": 1,
+          "sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a"
+        },
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": ""
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "answers_same_question",
+          "reason": "The input and reviewed fact both assert Canberra as Australia's capital city, matching the scope.",
+          "decision": "answered"
+        }
+      },
+      {
+        "claim": "A liter contains 500 milliliters.",
+        "status": "contradicted",
+        "reason": "The input contradicts the reviewed fact about the exact equivalence between litre and millilitre units.",
+        "inspection": {
+          "claim_id": "C005",
+          "version": 1,
+          "sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28"
+        },
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": ""
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "contradicts_same_claim",
+          "reason": "The input contradicts the reviewed fact about the exact equivalence between litre and millilitre units.",
+          "decision": "contradicted"
+        }
+      },
+      {
+        "claim": "Unicorns live on Mars.",
+        "status": "not_in_library",
+        "reason": null,
+        "inspection": null,
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": ""
+        },
+        "scope_assessment": null,
+        "assessment": null
+      }
+    ]
+  },
+  {
+    "id": "compound",
+    "text": "Canberra is Australia's capital and Sydney is Australia's capital.",
+    "expected": [
+      "answer",
+      "contradicted"
+    ],
+    "actual": [
+      "answer",
+      "contradicted"
+    ],
+    "pass": true,
+    "duration_ms": 1121257,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "85dc2a2d-75ee-4017-9801-085921a36490",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "Canberra is Australia's capital",
+        "status": "answer",
+        "reason": "The input and reviewed fact both assert Canberra as Australia's capital city, matching the scope.",
+        "inspection": {
+          "claim_id": "C004",
+          "version": 1,
+          "sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a"
+        },
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "Each item expresses one assertion."
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "answers_same_question",
+          "reason": "The input and reviewed fact both assert Canberra as Australia's capital city, matching the scope.",
+          "decision": "answered"
+        }
+      },
+      {
+        "claim": "Sydney is Australia's capital",
+        "status": "contradicted",
+        "reason": "Proposes Sydney instead of Canberra as Australia's capital, conflicting with reviewed fact.",
+        "inspection": {
+          "claim_id": "C004",
+          "version": 1,
+          "sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a"
+        },
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "Each item expresses one assertion."
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "contradicts_same_claim",
+          "reason": "Proposes Sydney instead of Canberra as Australia's capital, conflicting with reviewed fact.",
+          "decision": "contradicted"
+        }
+      }
+    ]
+  },
+  {
+    "id": "research-intake",
+    "text": "What is the chemical symbol for gold?",
+    "expected": [
+      "not_in_library"
+    ],
+    "actual": [
+      "not_in_library"
+    ],
+    "pass": true,
+    "duration_ms": 1151095,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "92abd624-806d-4037-9490-4f21b140390e",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "What is the chemical symbol for gold?",
+        "status": "not_in_library",
+        "reason": null,
+        "inspection": null,
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": {
+          "id": "jd7a5va0qgmcx9rrrej96p88jn8hx00d",
+          "status": "not_started",
+          "tilori_post_id": null
+        },
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "The item 'what is the TERM1 TERM2 for TERM3?' expresses a single question asking for an explanation or definition of something, which fits the criteria of expressing one assertion/question."
+        },
+        "scope_assessment": null,
+        "assessment": null
+      }
+    ]
+  },
+  {
+    "id": "venus-paraphrase",
+    "text": "Does the solid surface of Venus have retrograde rotation against the background stars?",
+    "expected": [
+      "answer"
+    ],
+    "actual": [
+      "answer"
+    ],
+    "pass": true,
+    "duration_ms": 1262147,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "840deb3b-09fd-4923-a362-e2abe1a4ce87",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "Does the solid surface of Venus have retrograde rotation against the background stars?",
+        "status": "answer",
+        "reason": "The input directly asks about Venus's solid surface retrograde rotation relative to the background stars, which is answered by the reviewed fact.",
+        "inspection": {
+          "claim_id": "C011",
+          "version": 1,
+          "sha256": "f5a122af75770cf06e1e209e2a29548240b11f4c2b7111a85d92be1d47afb444"
+        },
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": ""
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "answers_same_question",
+          "reason": "The input directly asks about Venus's solid surface retrograde rotation relative to the background stars, which is answered by the reviewed fact.",
+          "decision": "answered"
+        }
+      }
+    ]
+  },
+  {
+    "id": "venus-wrong-atmosphere",
+    "text": "Do Venus's atmospheric winds take exactly 243 days to rotate?",
+    "expected": [
+      "not_in_library",
+      "needs_clarification"
+    ],
+    "actual": [
+      "not_in_library"
+    ],
+    "pass": true,
+    "duration_ms": 1370491,
+    "timing_basis": "queue-inclusive request creation to last update",
+    "analysis_id": "82ed6ae5-c916-40cd-92db-9550fbb52aed",
+    "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+    "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "model_configuration": {
+      "chat_model": "qwen2.5:14b-instruct",
+      "chat_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "embedding_model": "nomic-embed-text:v1.5",
+      "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+    },
+    "evaluation_contract": {
+      "id": "library-growth-v2",
+      "sha256": "22bdbf7e82abe6880e790b27b5c93c80eb133a7e4b7f86b72e689a209c269045",
+      "case_count": 17,
+      "snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "error": null,
+    "details": [
+      {
+        "claim": "Do Venus's atmospheric winds take exactly 243 days to rotate?",
+        "status": "not_in_library",
+        "reason": null,
+        "inspection": null,
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "job": null,
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "The item expresses a single question about performing specific actions to rotate something."
+        },
+        "scope_assessment": null,
+        "assessment": {
+          "relationship": "different_conditions_or_dates",
+          "reason": "Atmospheric winds are excluded from the scope of Venus's solid-body rotation.",
+          "decision": "different_scope"
+        }
+      }
+    ]
+  }
+]

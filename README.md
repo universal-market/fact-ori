@@ -23,10 +23,11 @@ npm run check -- --origin https://involving-personality-source-mary.trycloudflar
 
 The endpoint runs on this machine through a temporary Quick Tunnel; its URL can
 change after restart. Local CPU checks take minutes and expose resumable progress.
-The library contains eight reviewed records. The eight-record candidate passed
-the versioned 17-case private regression diagnostic; fresh public validation is
-in progress. The following reports retain the historical seven-record run:
-See the
+The library contains eight reviewed records. The
+[public 17-case diagnostic](public/evaluations/2026-11-09-semantic-growth-v2.json)
+passed against the eight-record library. Separate public-runtime verification
+is still pending; this authored diagnostic is not a general accuracy estimate.
+The following reports retain the historical seven-record run:
 [14-case model report](public/evaluations/2026-11-08-semantic-v1.json),
 [public verification receipt](public/evaluations/2026-11-08-public-verification-v1.json)
 and [evaluation limits](docs/semantic-api-evaluation.md).

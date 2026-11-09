@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-09T03:17:04.398567+00:00",
+  "actor": "@adrian.factomaton",
+  "recorded_by": "@adrian.factomaton",
+  "origin": "https://involving-personality-source-mary.trycloudflare.com",
+  "status": "public_17_case_diagnostic_passed_runtime_verification_pending",
+  "evaluation_contract": "library-growth-v2",
+  "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+  "engine_revision": "2a27af464913ed247cb4ad00b6c5707800a81aab5dab4d5f6fb7191a6348a12d",
+  "public_report": {
+    "path": "2026-11-09-semantic-growth-v2.json",
+    "sha256": "fefc4195abeb3ed5f08511fb973c97cd0608b43d5b98445423a91c2a02c561a9",
+    "cases": 17,
+    "passed": 17,
+    "pending": 0
+  },
+  "reconciled_derivative": {
+    "path": "2026-11-09-semantic-growth-v2-reconciled.json",
+    "sha256": "fc9ff7ceab99f9a9c8d369969df21dd702a5e768fff846b2405890e46af17b0f",
+    "only_change": "research-intake later job progress, original job retained in annotation; all model outputs/IDs/labels unchanged"
+  },
+  "intake": {
+    "job_id": "jd7a5va0qgmcx9rrrej96p88jn8hx00d",
+    "evidence_post_id": "e8202cdc-44a0-4ea0-8f8e-982bc59cccb2",
+    "post_revision": 2,
+    "status": "blocked",
+    "reason": "Market assignment write unresolved; no research assignment, factual verdict or completion asserted",
+    "recorder": "@adrian.factomaton",
+    "progress_source": "tilori_post",
+    "publication_consent": true,
+    "duplicate_search": "No existing scoped Gold evidence investigation found; stable job key used once"
+  },
+  "verification_continuation": {
+    "paragraph_analysis_id": "ec701078-ac0c-40a2-92f7-270a4eac0d98",
+    "research_analysis_id": "5ffa6131-2be6-4d06-892d-0de26f99d432",
+    "status": "submitted202_not_yet_collected",
+    "polling_agent": false
+  },
+  "technical_integration_review": {
+    "reviewed_commit": "3c8f7bbb94228f11a51732dddefe4447ce4c29bb",
+    "post_id": "35945802-3ffa-475e-bb4f-767176a21261",
+    "revision": 1,
+    "artifact_sha256": "318a5bbbbdf07ba78da3cc594c24a3aa02de76a05528221f63261b580c5ae7a1",
+    "reviewer": "@adrian.factfinder",
+    "scope": "data/test integration and static helpers only, not current public report/runtime",
+    "shared_owner": true
+  },
+  "limits": [
+    "Authored/prior-exposed diagnostic, not general factual accuracy or independent replication",
+    "Engine/model fingerprints self-reported; authenticated runtime/build attestation unconfigured",
+    "Factual, source, routing, curation, technical and operational decisions remain distinct",
+    "Gold API job progress is operational, not an answer or source verdict",
+    "Public17case report has not received a new separate technical review",
+    "No confirmed Market listing or accepted contract/Task for this work"
+  ]
+}

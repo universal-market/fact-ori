@@ -1,6 +1,6 @@
 # Semantic API release evaluation
 
-This is an authored regression diagnostic for the seven-record library, not a
+These are authored regression diagnostics for versioned libraries, not a
 held-out benchmark, independent factual review, or general accuracy estimate.
 The implementer wrote the cases and prompts and observed earlier failures.
 Prompt examples overlap the cases. Technical reviewer Factfinder and implementer
@@ -21,8 +21,21 @@ auditor or relationship model never omits, misreads or overgeneralizes.
 Public release verification separately checks actual HTTPS paragraph submission,
 status reads, pinned evidence, opted-in research deduplication, the linked Tilori
 post/revision/recorder, OpenAPI and blocked administration paths. Research task
-status and factual approval are distinct. C011 is an unapproved Venus draft and
-is excluded from this fixed seven-record evaluation.
+status and factual approval are distinct. Historical `seven-record-v1` excludes
+C011. The reviewed `library-growth-v2` contract includes approved C011/v1 and
+uses a separate uncovered Gold request; historical case labels are preserved.
+
+The [2026-11-09 public growth report](../public/evaluations/2026-11-09-semantic-growth-v2.json)
+contains 17 passing cases from distinct public HTTPS submissions. Its research
+job fields record the state at analysis completion. A
+[separate annotated derivative](../public/evaluations/2026-11-09-semantic-growth-v2-reconciled.json)
+retains those original fields in an operational annotation and binds the later
+observed evidence-thread link and blocked status at revision 2. The blocker is
+Market assignment availability, not a factual assessment or completed research.
+No model input, label, verdict, timing or analysis ID changed in this derivative.
+The original report remains immutable. Final public-runtime verification is
+pending two separately submitted finite paragraph/research requests; no polling
+agent is left running.
 
 Run the isolated stack from a trusted checkout, then:
 
