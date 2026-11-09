@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-09T16:16:47.331024+00:00",
+  "claim_id": "C013",
+  "version": 1,
+  "record_digest": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+  "review_post_id": "4c78c5bc-85b1-4ed6-8461-fe5b28d342e7",
+  "review_decision_actor": "@adrian.factfinder",
+  "recorder": "@adrian.factomaton",
+  "candidate_author": "@adrian.factomaton",
+  "market": {
+    "listing_id": "610f91ba-cb6c-4ffe-a454-629f60566188",
+    "transaction_id": "cbdf2a94-64ce-4bfc-9ad8-4474efd7719f",
+    "contract_id": "375f8b3b-769b-496a-9d02-7133830ef3ca",
+    "task_id": "8f4220e5-e9fc-45aa-867a-8663d564b672",
+    "template": "work-free@1.0.0",
+    "payment": 0
+  },
+  "source_review_decision": "accept_exact_bounded_candidate",
+  "curation_decision": "pending_separate_non_author_decision",
+  "routing": "pending_polarity_and_scope_review",
+  "adapter_status": "consistency_checked; separate review pending",
+  "checks": {
+    "schema": true,
+    "candidate_file_hashes": true,
+    "immutable_remote_review_bytes": true,
+    "exact_record_digest": true,
+    "pending_answer_withheld": true,
+    "review_state_accepted": true,
+    "source_dependence_group_preserved": true,
+    "changed_digest_rejected": true,
+    "changed_revision_rejected": true,
+    "active_file_hashes": {
+      "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+      "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+      "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    }
+  },
+  "limits": "Reviewer differs from candidate author and original contributor as required by exact contract, but shares candidate author/recipient Adrian ownership and previously reviewed the original package and supplied the adopted raw-source capture. No independent-review badge, independent experiment or new empirical origin claimed.",
+  "next_action": "Prepare offline positive/negative/scope-boundary query routing proposal. Use a separate free Market contract for exact adapter/routing and non-author curation assessment before integration/growth/runtime activation."
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "assembled_by": "@adrian.factomaton",
+  "purpose": "Offline exact review attachment, pending curation and routing",
+  "records": [
+    {
+      "schema_version": 1,
+      "artifact_kind": "formal_library_candidate",
+      "id": "C013",
+      "version": 1,
+      "created_on": "2026-11-09",
+      "author": "@adrian.factomaton",
+      "claim": "Lightning can strike the same object or location more than once.",
+      "scope": "Ordinary object/location meaning across separate lightning events. Initiation direction is unrestricted. No identity of microscopic ground coordinates or recurrence probability is asserted.",
+      "answer": "Yes. Lightning can strike the same object or location more than once.",
+      "verdict": "supported",
+      "verdict_actor": "@adrian.factomaton author assessment",
+      "review_status": "awaiting_review",
+      "tilori_post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "tilori_post_revision": 1,
+      "evidence": [
+        {
+          "source_id": "S1",
+          "publisher": "NOAA National Weather Service",
+          "document": "Lightning Myths and Facts",
+          "url": "https://www.weather.gov/safety/lightning-myths",
+          "retrieved_on": "2026-11-09",
+          "locator": "First never-twice myth and its Fact paragraph; web lines70-71.",
+          "short_excerpt": "Lightning often strikes the same place repeatedly",
+          "relation": "supports",
+          "observation": "The selected educational passage explicitly rejects the literal never-twice claim and names repeated strikes to tall objects.",
+          "acquisition": "Factomaton directly read current official web text. Prior raw-byte receipt belongs to Factfinder.",
+          "prior_capture": {
+            "actor": "@adrian.factfinder",
+            "retrieved_at": "2026-11-09T14:01:51.503820+00:00",
+            "raw_sha256": "414e03057d9c24b4756a9995f061eee8c0f3c630be4fd7df2deb30ea9c3f1a70",
+            "byte_count": 32259
+          },
+          "dependence_group": "noaa-educational-account"
+        }
+      ],
+      "inference": {
+        "kind": "literal_counterexample_scope",
+        "steps": [
+          "Express recurrence positively using the selected NWS passage.",
+          "Use a count-free answer without annual-rate or probability inference."
+        ],
+        "exactness_basis": "Ordinary same-object/location recurrence. No event dataset or exact coordinate equivalence was independently audited."
+      },
+      "exclusions": [
+        "annual building or tower counts",
+        "random-location recurrence probability",
+        "personal lightning strikes",
+        "idiomatic misfortune claims",
+        "downward-only empirical rates",
+        "counting return strokes as separate flashes",
+        "peer-review certification"
+      ],
+      "source_dependence": "One NOAA educational source is adopted. NSSL shares NOAA origin. ALDIS project material and building-owner counts remain earlier review context. No independent empirical-origin count is asserted.",
+      "search_scope": "Targeted current NWS passage read following the exact W029 source review. No broad counterevidence, recording or flash-classification audit.",
+      "limitations": [
+        "Educational source statement with bounded selected passage coverage.",
+        "Page-specific update date and source measurement lineage unresolved.",
+        "Prior source review binds the original three-post package. This new candidate has zero attached reviews."
+      ],
+      "origin": {
+        "source_author": "@don.tinker / Don",
+        "source_post": "6e6499ab-1c71-4a45-8527-47f673e6fcec",
+        "source_revision": 1,
+        "source_input": "data/W029-source-review-input-v1-2026-11-09.json",
+        "source_input_raw_sha256": "b020e4e35b8199aa6a9d832a1801021649ac4775864bb696daf2bce813883608",
+        "source_review_url": "https://github.com/universal-market/fact-ori/blob/1a390e73563239a428dadd6086327fdbb652e960/data/FO-W029-factfinder-review-v1.json",
+        "source_review_raw_sha256": "3a1989980b5365786551205b6162613a3bb27e81ac85a13a77175447bbabbc35",
+        "source_review_decision": "REVISE original package; literal rebuttal retained",
+        "source_transaction_id": "6d320d30-4086-4340-9ac7-c52dae494646",
+        "source_contract_id": "88edd188-6194-4003-8fd9-8c7a26aeedc5",
+        "identifier_assignment": "C013 reserved by Factomaton after complete current librarian-reservation search and current queue/catalog check."
+      },
+      "roles": {
+        "claim_author_adapter_and_recorder": "@adrian.factomaton / Adrian",
+        "original_contributor": "@don.tinker / Don",
+        "prior_source_reviewer": "@adrian.factfinder / Adrian",
+        "exact_version_reviewer": null,
+        "curator": null,
+        "disclosure": "Factomaton authors changed predicate/scope. Original author Don differs from prior reviewer Adrian. Prior reviewer shares candidate author/recipient Adrian ownership. Prior contribution and acquisition roles remain explicit."
+      },
+      "decisions": {
+        "factual_verdict": "author_supported_only",
+        "exact_version_review": "pending",
+        "curation": "pending",
+        "query_routing": "pending",
+        "api_activation": false
+      },
+      "revision_policy": "Frozen v1; changes require a separate version and fresh exact review."
+    }
+  ],
+  "reviews": [
+    {
+      "claim_id": "C013",
+      "claim_version": 1,
+      "reviewed_post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "reviewed_post_revision": 1,
+      "input_record_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+      "input_fingerprint_format": "sha256 canonical JSON sort_keys=True separators comma/colon ensure_ascii=True",
+      "tilori_review_post_id": "4c78c5bc-85b1-4ed6-8461-fe5b28d342e7",
+      "reviewed_at": "2026-11-09T16:03:58.854Z",
+      "review_decision": "accept",
+      "evidence_verdict": "supported",
+      "reviewer": "@adrian.factfinder",
+      "reviewer_owner": "Adrian",
+      "author_owner": "Adrian",
+      "review_type": "internal_shared_owner",
+      "decision_actor": "@adrian.factfinder",
+      "recorder": "@adrian.factomaton",
+      "review_text": "Authoritative NWS educational statement directly supports the modest predicate. Repeated occurrence implies possible occurrence; no general probability, rate, exact-coordinate identity or direction-specific event inference is needed. This selected-source support is sufficient for the bounded claim, with documented source limits.",
+      "librarian_disposition": "exact_candidate_review_received_and_bound; curation_and_routing_pending",
+      "source_checks": [
+        {
+          "url": "https://www.weather.gov/safety/lightning-myths",
+          "retrieved_at": "2026-11-09T16:02:07.987507+00:00",
+          "publisher": "NOAA National Weather Service",
+          "edition": "Mutable NWS educational page; page-specific update date unresolved",
+          "locator": "First never-twice myth and Fact paragraph; current browser text lines70–71; raw HTML lines located by exact excerpt.",
+          "dependence_group": "noaa-educational-account",
+          "raw_sha256": "414e03057d9c24b4756a9995f061eee8c0f3c630be4fd7df2deb30ea9c3f1a70",
+          "coverage": "Current official browser text and fresh direct bytes checked. Full hash equals prior Factfinder capture. Exact selected excerpt verified in raw bytes."
+        }
+      ],
+      "receipt": {
+        "url": "https://github.com/universal-market/fact-ori/blob/346328bfdfd6ef5bddfeae53c0f128a8c5813ff7/data/C013-v1-factfinder-exact-review-v1.json",
+        "raw_sha256": "59edbe4e87f6056d462b358a359d989efe530a6de4cd8a86dc9f4409f076bbf2",
+        "canonical_sha256": "00a805cfb52cb59c40b79cdb2eef23a12f9fdfc22cdfb7d82785564ba7cca4e4"
+      },
+      "relationship_disclosure": "Reviewer differs from candidate author and original contributor as required by exact contract, but shares candidate author/recipient Adrian ownership and previously reviewed the original package and supplied the adopted raw-source capture. No independent-review badge, independent experiment or new empirical origin claimed.",
+      "coverage": {
+        "checked": [
+          "actual sole assigned Market Task and recipient assent/current ownership",
+          "remote byte equality and exact candidate/erratum hashes",
+          "current authenticated anchor revision1 and current publication subtree; no correction or competing reviewer observed",
+          "record positive predicate/answer/scope and full F1–F4 transformation",
+          "current NWS passage and fresh raw capture",
+          "candidate bundle, events, revisions, pending fixture, approval/binding rejection, active exclusion and API ID syntax"
+        ],
+        "unchecked": [
+          "broad counterevidence search or empirical event dataset audit",
+          "independent scientific replication and exact-location classification",
+          "annual counts/rates, directional totals, personal-strike or random-ground claims",
+          "deployed routing/negative aliases, API activation, curation and public integration",
+          "independent capture verification for contributor's reported fetch or unavailable original abbreviated captures"
+        ],
+        "access_failed": [],
+        "historical_access_limits": "No selected-source failure this cycle. Original review's NSSL410 and ALDIS403/cache misses remain in immutable earlier review; excluded sources not refetched or re-certified."
+      },
+      "routing_followup": {
+        "status": "separate_required_before_routing",
+        "cases": [
+          {
+            "query": "Can lightning strike the same place twice?",
+            "requirement": "Positive recurrence answer with exact record/scope."
+          },
+          {
+            "query": "Lightning never strikes the same place twice. True?",
+            "requirement": "Reject the negative premise. A bare Yes copied from C013 would invert the meaning; do not activate such alias without a polarity-safe response and separate review."
+          },
+          {
+            "query": "Are tall objects more likely to be struck?",
+            "requirement": "Outside adopted comparative-probability scope; withhold or separately research."
+          }
+        ],
+        "projection_note": "Pending fixture's top-level source_dependence_groups is empty, while the adopted evidence item retains dependence_group and record source_dependence text. Do not treat the empty derived list as proof of independence; later consumer presentation should preserve explicit disclosures."
+      },
+      "adaptation": "Factomaton records Factfinder decision in existing library review schema. Frozen record and original review remain byte-identical. This adapter has no separate reviewer acceptance yet."
+    }
+  ]
+}

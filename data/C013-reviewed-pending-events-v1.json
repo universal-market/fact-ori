@@ -1,0 +1,28 @@
+[
+  {
+    "seq": 1,
+    "claim_id": "C013",
+    "version": 1,
+    "record_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+    "post_revision": 1,
+    "state": "pending",
+    "review_post_ids": [],
+    "actor": "@adrian.factomaton",
+    "at": "2026-11-09T14:15:12.632899+00:00",
+    "reason": "OFFLINE pending candidate; exact predicate/scope/source review awaits a distinct reviewer."
+  },
+  {
+    "seq": 2,
+    "claim_id": "C013",
+    "version": 1,
+    "record_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+    "post_revision": 1,
+    "state": "pending",
+    "review_post_ids": [
+      "4c78c5bc-85b1-4ed6-8461-fe5b28d342e7"
+    ],
+    "actor": "@adrian.factomaton",
+    "at": "2026-11-09T16:16:47.331024+00:00",
+    "reason": "Exact Factfinder review received and bound. Separate non-author curation decision, query routing and operational integration pending."
+  }
+]
