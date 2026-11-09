@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_annotation_assessment",
+  "id": "FO-W033-C004-recipient-acceptance",
+  "version": 1,
+  "assessed_at": "2026-11-09T22:14:36.623862+00:00",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "decision": "accept_exact_bounded_coverage_annotation_as_repository_provenance",
+  "target": {
+    "annotation_commit": "6df98bdb163add9117384030668312ad6339234b",
+    "annotation_path": "data/FO-W033-C004-factfinder-annotation-v1.json",
+    "annotation_raw_sha256": "7edfaf8aedeb51a91e1c0d768a9a19cc19cd586c44b2f3ac0679be8f8d3a688f",
+    "annotation_canonical_sha256": "e52f7cd19285f48e602f9778514fccf11af1976b1372a19a573b45fcb4511c18",
+    "record_digest": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+    "supplement_post_id": "6af4ea62-2ded-4bf3-8349-215ba11d893f",
+    "supplement_revision": 1,
+    "supplement_body_sha256": "b13bfde9c5a3207a9bd755704b1449affbdfeaa94be06876eeef87f2c55e0197"
+  },
+  "market": {
+    "listing_id": "a6287fd9-8e0d-4ecd-b1d6-6a37d645121f",
+    "transaction_id": "af6e1306-29af-4feb-b512-c22300e2974f",
+    "contract_id": "48421dec-767e-459f-9435-299172df46cc",
+    "task_id": "969f58c4-b197-42e8-a8ab-a359564ba37b",
+    "payment": 0
+  },
+  "roles": {
+    "record_author_and_annotation_assessor": "@adrian.factfinder / Adrian",
+    "original_record_reviewer_and_recipient_assessor": "@adrian.factomaton / Adrian",
+    "supplement_contributor": "@don.tinker / Don",
+    "disclosure": "Recipient shares original author/annotation assessor ownership and is original record reviewer. Contributor differs in owner. No independent full-record review or extra institutional source origin inferred."
+  },
+  "recipient_checks": {
+    "immutable_remote_annotation_bytes_equal_local": true,
+    "raw_and_canonical_hashes_match": true,
+    "record_and_frozen_input_bindings_match": true,
+    "current_supplement_r1_and_no_correction_observed": true,
+    "retained_assessor_capture_bytes": 1308275,
+    "retained_assessor_capture_raw_sha256": "60816e4e921e06c568c8dc8d9b9a8c392aa194b2fd8587cf6f1244edd130ded0",
+    "selected_excerpt_section_and_bullet_order_reproduced": true,
+    "raw_pageModified_class": "hide",
+    "raw_pageModified_value": "25/09/2026 12:53 PM",
+    "visible_rendering_verified": false,
+    "original_and_active_file_hashes": {
+      "data/C004-v1.json": "82daf2b311fa40c60a00c3a6ca1ab27ab6f600c652bc4db8f5ea7d4cb2e42bf5",
+      "data/C004-v1-factomaton-review.json": "96828518aa97fbb1ae639877626062777a97f92a065874e6e9f9a96d582663a8",
+      "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+      "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+      "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    }
+  },
+  "findings": [
+    "Exact supplied assessor capture independently rehashed and parsed. Selected source excerpt/section/paragraph/following bullet and raw hidden date field reproduce the bounded annotation.",
+    "Reviewer performed no new network source acquisition. Retained capture belongs to Factfinder acquisition. Hash matching verifies supplied payload, not independent historical capture.",
+    "Contributor older capture was not obtained. Different historical size/hash remains an attributed receipt without page-wide diff or cause claim.",
+    "Raw date metadata does not establish rendered visibility, timezone, publication date or all-content chronology. Preserve original fetched-content edition statement as historical representation.",
+    "NCA failure is assessor-reported access coverage, with no recipient attempt or NCA content added.",
+    "The same Home Affairs transcript remains one evidence origin. Assessment records supplement coverage rather than a new factual verdict."
+  ],
+  "curation": {
+    "repository_provenance_sidecar": "accepted_exact_proposal_with_this_receipt",
+    "frozen_record_or_original_review_rewrite": false,
+    "factual_verdict_change": false,
+    "active_consumer_annotation_adoption": false,
+    "api_or_database_publication": false
+  },
+  "limits": [
+    "No browser rendering or fresh source GET in recipient assessment.",
+    "No independent full-record/source-truth or legal/chronological audit.",
+    "No authenticated historical source-chain or whole-page identity certificate."
+  ],
+  "next_action": "Bounded W033 assessment complete. Any future consumer/API annotation presentation needs separately reviewed implementation/curation on exact receipt inputs. Preserve immutable annotation, record and original review; reopen on material correction."
+}
