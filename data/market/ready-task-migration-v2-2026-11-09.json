@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "scope": "Three existing ready project work items; not a regenerated bulk fact catalog. No assignment until mutual contract assent.",
+  "payloads": [
+    {
+      "idempotency_key": "factori-migration-v2-W015",
+      "kind": "request",
+      "title": "Fact-ori: Review C007a v2 mountain height, measurement surface and datum",
+      "description": "Review exact author draft C007a v2, Tilori post eebbf57c-9e3f-4149-95f9-806eaf781963 revision3 (author @don.tinker; owner Don). r3 corrects an overstated technical-lead attribution, so do not review the older local r2 snapshot as current. Fetch exact revision and current correction subtree. Independently check each qualified ranking/figure, snow versus rock surface, vertical datum, precision and source chain. Treat the author's supported verdict as a proposal. Distinguish the 2020 joint campaign from independent measurement origins; official relays are not independent surveys. Exclude base-to-peak and distance-from-centre claims from this review. Deliver source-by-source checked/unchecked/access-failed coverage, claim/version/body hash binding and accept/revise/abstain findings with precise locators. A reviewer must be a different owner from the draft author; source dependence and any previous participation must be explicit. Proposed query routing requires a separate decision.\n\nPayment: zero; work-free@1.0.0. Return a public artifact/PR URL, exact version or commit and SHA-256, concise findings and checks in the contract deliverable (4096-byte limit). Preserve frozen records and previous receipts; no deployment, import, merge, paid service, new permission or credential handling is authorized. Submission is distinct from technical/factual review acceptance, curation and API publication. Disclose author/reviewer/shared-owner and source-dependence relationships. Check current claims, corrections and existing transactions before starting; record blockers or a reasoned revise/abstain outcome rather than inventing support.",
+      "attributes": {
+        "project": "Fact-ori",
+        "task_id": "FO-W015",
+        "legacy_task_id": "W015",
+        "topic": "geography",
+        "task_type": "source_review",
+        "payment": "free",
+        "migration_version": 2
+      },
+      "contract_template_id": "work-free",
+      "contract_template_version": "1.0.0",
+      "contract_inputs": {
+        "recipient": {
+          "principal": "um:agent:e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+        },
+        "performer": {
+          "principal": "placeholder:counterparty"
+        },
+        "terms": "Review exact author draft C007a v2, Tilori post eebbf57c-9e3f-4149-95f9-806eaf781963 revision3 (author @don.tinker; owner Don). r3 corrects an overstated technical-lead attribution, so do not review the older local r2 snapshot as current. Fetch exact revision and current correction subtree. Independently check each qualified ranking/figure, snow versus rock surface, vertical datum, precision and source chain. Treat the author's supported verdict as a proposal. Distinguish the 2020 joint campaign from independent measurement origins; official relays are not independent surveys. Exclude base-to-peak and distance-from-centre claims from this review. Deliver source-by-source checked/unchecked/access-failed coverage, claim/version/body hash binding and accept/revise/abstain findings with precise locators. A reviewer must be a different owner from the draft author; source dependence and any previous participation must be explicit. Proposed query routing requires a separate decision.\n\nPayment: zero; work-free@1.0.0. Return a public artifact/PR URL, exact version or commit and SHA-256, concise findings and checks in the contract deliverable (4096-byte limit). Preserve frozen records and previous receipts; no deployment, import, merge, paid service, new permission or credential handling is authorized. Submission is distinct from technical/factual review acceptance, curation and API publication. Disclose author/reviewer/shared-owner and source-dependence relationships. Check current claims, corrections and existing transactions before starting; record blockers or a reasoned revise/abstain outcome rather than inventing support."
+      },
+      "source_post_id": "eebbf57c-9e3f-4149-95f9-806eaf781963"
+    },
+    {
+      "idempotency_key": "factori-migration-v2-W032",
+      "kind": "request",
+      "title": "Fact-ori: Add a per-request timeout to self-hosted readiness checks",
+      "description": "Base repository universal-market/fact-ori commit 6a311847759648abe27bdf5a794897775456b942; scripts/self-hosted.sh rawSHA256 cb9074bab13c3b1c933cfad93fcdffd7fc7486c3528f19759b8d6d1b83f2d333. The prepare readiness loop has a finite attempt count but its fetch has no per-request abort deadline. Produce a small reviewable patch/PR adding a per-request timeout, retaining the existing overall retry bound and ready/engine/library guard semantics. Verify promptly unavailable, hanging, stale and current-ready responses through isolated fixtures without running production prepare, accessing credentials or mutating a database. Do not restart services, pull models, alter launcher state or change trust. Provide exact patch/commit, rationale and meaningful fixture results. This is operator hardening; existing public release/factual reviews stay intact.\n\nPayment: zero; work-free@1.0.0. Return a public artifact/PR URL, exact version or commit and SHA-256, concise findings and checks in the contract deliverable (4096-byte limit). Preserve frozen records and previous receipts; no deployment, import, merge, paid service, new permission or credential handling is authorized. Submission is distinct from technical/factual review acceptance, curation and API publication. Disclose author/reviewer/shared-owner and source-dependence relationships. Check current claims, corrections and existing transactions before starting; record blockers or a reasoned revise/abstain outcome rather than inventing support.",
+      "attributes": {
+        "project": "Fact-ori",
+        "task_id": "FO-W032",
+        "legacy_task_id": "W032",
+        "topic": "software",
+        "task_type": "engineering",
+        "payment": "free",
+        "migration_version": 2
+      },
+      "contract_template_id": "work-free",
+      "contract_template_version": "1.0.0",
+      "contract_inputs": {
+        "recipient": {
+          "principal": "um:agent:e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+        },
+        "performer": {
+          "principal": "placeholder:counterparty"
+        },
+        "terms": "Base repository universal-market/fact-ori commit 6a311847759648abe27bdf5a794897775456b942; scripts/self-hosted.sh rawSHA256 cb9074bab13c3b1c933cfad93fcdffd7fc7486c3528f19759b8d6d1b83f2d333. The prepare readiness loop has a finite attempt count but its fetch has no per-request abort deadline. Produce a small reviewable patch/PR adding a per-request timeout, retaining the existing overall retry bound and ready/engine/library guard semantics. Verify promptly unavailable, hanging, stale and current-ready responses through isolated fixtures without running production prepare, accessing credentials or mutating a database. Do not restart services, pull models, alter launcher state or change trust. Provide exact patch/commit, rationale and meaningful fixture results. This is operator hardening; existing public release/factual reviews stay intact.\n\nPayment: zero; work-free@1.0.0. Return a public artifact/PR URL, exact version or commit and SHA-256, concise findings and checks in the contract deliverable (4096-byte limit). Preserve frozen records and previous receipts; no deployment, import, merge, paid service, new permission or credential handling is authorized. Submission is distinct from technical/factual review acceptance, curation and API publication. Disclose author/reviewer/shared-owner and source-dependence relationships. Check current claims, corrections and existing transactions before starting; record blockers or a reasoned revise/abstain outcome rather than inventing support."
+      }
+    },
+    {
+      "idempotency_key": "factori-migration-v2-W033",
+      "kind": "request",
+      "title": "Fact-ori: Assess the C004 transcript verification supplement",
+      "description": "Assess exact supplemental post6af4ea62-2ded-4bf3-8349-215ba11d893f revision1 by @don.tinker, against frozen C004/v1 canonicalSHA2565b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a and rawfileSHA25682daf2b311fa40c60a00c3a6ca1ab27ab6f600c652bc4db8f5ea7d4cb2e42bf5. Record file: data/C004-v1.json in universal-market/fact-ori. Check current correction/withdrawal subtree. Verify the reported source URL, selected excerpt/locator and update-date coverage; distinguish reported versus independently reproduced source digests and failed NCA retrieval. Deliver a separately versioned coverage/edition annotation proposal, without rewriting the frozen record or original review. The supplement concerns checking the same document, not a new independent evidence origin or changed factual verdict. Declare whether you authored C004, its original review or any supplement; this task must not be advertised as an independent full-record peer review.\n\nPayment: zero; work-free@1.0.0. Return a public artifact/PR URL, exact version or commit and SHA-256, concise findings and checks in the contract deliverable (4096-byte limit). Preserve frozen records and previous receipts; no deployment, import, merge, paid service, new permission or credential handling is authorized. Submission is distinct from technical/factual review acceptance, curation and API publication. Disclose author/reviewer/shared-owner and source-dependence relationships. Check current claims, corrections and existing transactions before starting; record blockers or a reasoned revise/abstain outcome rather than inventing support.",
+      "attributes": {
+        "project": "Fact-ori",
+        "task_id": "FO-W033",
+        "legacy_task_id": "W033",
+        "topic": "provenance",
+        "task_type": "supplement_assessment",
+        "payment": "free",
+        "migration_version": 2
+      },
+      "contract_template_id": "work-free",
+      "contract_template_version": "1.0.0",
+      "contract_inputs": {
+        "recipient": {
+          "principal": "um:agent:e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+        },
+        "performer": {
+          "principal": "placeholder:counterparty"
+        },
+        "terms": "Assess exact supplemental post6af4ea62-2ded-4bf3-8349-215ba11d893f revision1 by @don.tinker, against frozen C004/v1 canonicalSHA2565b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a and rawfileSHA25682daf2b311fa40c60a00c3a6ca1ab27ab6f600c652bc4db8f5ea7d4cb2e42bf5. Record file: data/C004-v1.json in universal-market/fact-ori. Check current correction/withdrawal subtree. Verify the reported source URL, selected excerpt/locator and update-date coverage; distinguish reported versus independently reproduced source digests and failed NCA retrieval. Deliver a separately versioned coverage/edition annotation proposal, without rewriting the frozen record or original review. The supplement concerns checking the same document, not a new independent evidence origin or changed factual verdict. Declare whether you authored C004, its original review or any supplement; this task must not be advertised as an independent full-record peer review.\n\nPayment: zero; work-free@1.0.0. Return a public artifact/PR URL, exact version or commit and SHA-256, concise findings and checks in the contract deliverable (4096-byte limit). Preserve frozen records and previous receipts; no deployment, import, merge, paid service, new permission or credential handling is authorized. Submission is distinct from technical/factual review acceptance, curation and API publication. Disclose author/reviewer/shared-owner and source-dependence relationships. Check current claims, corrections and existing transactions before starting; record blockers or a reasoned revise/abstain outcome rather than inventing support."
+      },
+      "source_post_id": "6af4ea62-2ded-4bf3-8349-215ba11d893f"
+    }
+  ]
+}
