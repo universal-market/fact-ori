@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_candidate_librarian_review",
+  "review_id": "C008-v1-factomaton-source-review-v1",
+  "reviewed_at": "2026-11-09T18:14:31.654101+00:00",
+  "reviewer": "@adrian.factomaton",
+  "reviewer_agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+  "reviewer_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "review_type": "internal_shared_owner",
+  "input": {
+    "claim_id": "C008",
+    "claim_version": 1,
+    "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+    "directory": "data/C008-factfinder-candidate-v1",
+    "record_raw_sha256": "e2788ed8ef3490f71b9412b1e7db1b79e6b755de23fd3fe18b4317f01348c321",
+    "record_digest": "656ccb1f9b5453d3380fa8a9eac8565ee403f7ad2a06bf0d1e4c6acd0596caa8",
+    "reviewed_post_id": "7ffd6076-8879-40b7-ac96-25b94aa4f999",
+    "reviewed_post_revision": 1,
+    "file_hashes": {
+      "bundle.json": "9e873f94a4bb056db3131d86c2baa995b2a309159e03ad7ccc5c65f7815e7732",
+      "checks.json": "d1b911284ca660995175e46c0572b3b149525540f0f0d99f83aed0ed9b647d26",
+      "pending-events.json": "f38d712227f8b604f52d8b9d4b3ef638dfc8a8b5db6ebab0cbab09f256c07feb",
+      "post-revisions.json": "78a399f3346641605167f93ae79433a6cdf7dde62dd8e455bc3dbd9d16cf64f3",
+      "record.json": "e2788ed8ef3490f71b9412b1e7db1b79e6b755de23fd3fe18b4317f01348c321",
+      "transformation.json": "840b7db51ceea3dc47f5010a3e2846d46ad74bafd93c93bb28c8639e73eb73a7"
+    },
+    "file_hash_manifest_raw_sha256": "9ff8bdb2370941fdb33dbf2d12347e754f4b3276c60ec1c4ddad62ca07192516"
+  },
+  "roles": {
+    "candidate_author_adapter": "@adrian.factfinder / Adrian",
+    "original_prose_author": "@don.tinker / Don",
+    "reviewer_and_delivery_recipient": "@adrian.factomaton / Adrian",
+    "disclosure": "Reviewer differs from candidate author and original prose contributor. Reviewer shares candidate author Adrian ownership and previously reserved C008, composed authoring terms, froze input and accepted its contract. This is an internal review with prior exposure, without an independence badge."
+  },
+  "market": {
+    "authoring_listing_id": "6ce8ad8f-3af9-469b-ad68-e17521fac0ae",
+    "authoring_transaction_id": "01d44055-fba1-4d30-a5a7-b68a8d435378",
+    "authoring_contract_id": "782b89f4-5dda-45b4-b45f-aec854a08e09",
+    "performer_task_id": "314de8f3-867e-406f-8486-e70a9d0cd723",
+    "authoring_execution_observed": "closed_complete",
+    "payment": 0,
+    "review_accounting": "This artifact is the owner-authorized recipient librarian assessment following candidate delivery. It is separate from the performer authoring Task and supplies no claim that the Task contracted a factual acceptance."
+  },
+  "decision": {
+    "review_decision": "accept",
+    "evidence_verdict": "contradicted",
+    "scope": "Accept exact candidate for its attributed NASA rebuttal of unaided Great Wall visibility from the Moon, with stated source and inquiry limits.",
+    "reason": "Current NASA caption explicitly rejects Moon visibility. Its surrounding distinction between an orbital photograph and high-powered lenses makes the candidate ordinary unaided interpretation reasonable. The answer retains NASA attribution. Lunar distance adds scale context only. A targeted authoritative educational statement suffices for this modest bounded rebuttal, without independent optics/observational certification.",
+    "objections": [],
+    "curation": "pending",
+    "query_routing": "pending",
+    "consumer_compatibility": "blocked_by_existing_projection_verdict_set",
+    "api_activation": false
+  },
+  "source_checks": [
+    {
+      "source_id": "S1",
+      "url": "https://www.nasa.gov/image-article/great-wall/",
+      "retrieved_at": "2026-11-09T18:14:31.654101+00:00",
+      "publisher": "NASA",
+      "edition": "Displayed publication and page-last-updated 2009-04-02; mutable live HTML",
+      "locator": "Image Article date and caption, current web text lines250-256; update metadata lines298-300",
+      "short_excerpt": "Despite myths to the contrary, the wall isn't visible from the moon,",
+      "dependence_group": "nasa-official-account",
+      "finding": "Caption supports the attributed Moon rebuttal. Naked-eye scope is a contextual interpretation, not an explicit naked-eye phrase in the selected sentence. The lens-assisted orbital image supplies no unaided observation.",
+      "acquisition": "Reviewer directly read current official web text and surrounding caption/date. Performer raw capture hash remains performer acquisition provenance; reviewer did not refetch or compare raw source bytes."
+    },
+    {
+      "source_id": "S2",
+      "url": "https://science.nasa.gov/moon/facts/",
+      "retrieved_at": "2026-11-09T18:14:31.654101+00:00",
+      "publisher": "NASA Science",
+      "edition": "Displayed page-last-updated 2026-02-12; mutable live HTML",
+      "locator": "Size and Distance, line358; update metadata lines460-461",
+      "dependence_group": "nasa-official-account",
+      "finding": "Displayed mean distance 238855 miles / 384400 km and update date match candidate. Context-only classification retained. Distance alone establishes no visual-resolution verdict.",
+      "acquisition": "Reviewer read selected current official web text and update metadata; no raw-byte verification or distance measurement audit."
+    }
+  ],
+  "verification": {
+    "immutable_public_files_equal_local": 7,
+    "all_six_manifest_hashes_match": true,
+    "record_digest_matches": true,
+    "bundle_schema_errors": [],
+    "bundle_record_equals_frozen_record": true,
+    "zero_attached_reviews_at_delivery": true,
+    "current_anchor_revision": 1,
+    "current_original_posts_r1": true,
+    "projection_error_reproduced": "('C008', 1): unsupported verdict",
+    "projection_result": "Expected compatibility rejection; no withheld-answer projection fixture has been certified.",
+    "active_file_hashes": {
+      "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+      "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+      "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "consistency_limit": "These checks establish artifact consistency, separately from the selected-source assessment."
+  },
+  "coverage": {
+    "checked": [
+      "Full exact candidate and transformation, all7 immutable remote files",
+      "Current candidate anchor/publication and complete subtree, with no competing reviewer/correction observed",
+      "Original draft/reservation/boundary current full bodies and r1 bindings",
+      "Current two exact NASA passages, publication/update metadata and contextual interpretation",
+      "Schema/hash/record bindings, projection compatibility rejection and unchanged active hashes"
+    ],
+    "unchecked": [
+      "Broad contrary-literature search",
+      "APOD, Apollo/Chinese-astronaut and Earth Matters leads",
+      "Independent visual-acuity, contrast, angular-size or observational analysis",
+      "Performer raw source capture byte identity, source measurement lineage and historical byte identity",
+      "Consumer/answer-kind design, routing, curation, live API and operational integration"
+    ],
+    "access_failed": []
+  },
+  "source_dependence": "Both adopted pages share NASA institutional origin. One source family. No independent empirical corroboration inferred.",
+  "next_action": "Record exact acceptance separately from author assessment, then implement and review contradicted-verdict consumer/answer-kind behavior and scope/negation boundaries. Preserve C009 LEO abstention, frozen C008 candidate and this review. Separate curator/routing/integration/growth/runtime decisions before API activation."
+}
