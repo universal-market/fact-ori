@@ -6,11 +6,12 @@ submit missing coverage for research.
 
 The repository contains a running local Convex API and the original Python
 library projection, query interfaces and regression suite. The seed library
-has seven published records covering the certified 2020 U.S. presidential
+has eight published records covering the certified 2020 U.S. presidential
 result, formal electoral-count objections, a package-limited ballot-validity
 abstention, Australia's national capital, litre/millilitre equivalence and the
 SI definition of the speed of light in vacuum, plus a package-limited
-abstention on verified unaided Great Wall sightings from low Earth orbit.
+abstention on verified unaided Great Wall sightings from low Earth orbit, and
+Venus's scoped retrograde sidereal axial rotation.
 
 ## Use the public API
 
@@ -22,7 +23,10 @@ npm run check -- --origin https://involving-personality-source-mary.trycloudflar
 
 The endpoint runs on this machine through a temporary Quick Tunnel; its URL can
 change after restart. Local CPU checks take minutes and expose resumable progress.
-The library currently contains seven reviewed records. See the
+The library contains eight reviewed records. The eight-record candidate passed
+the versioned 17-case private regression diagnostic; fresh public validation is
+in progress. The following reports retain the historical seven-record run:
+See the
 [14-case model report](public/evaluations/2026-11-08-semantic-v1.json),
 [public verification receipt](public/evaluations/2026-11-08-public-verification-v1.json)
 and [evaluation limits](docs/semantic-api-evaluation.md).

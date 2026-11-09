@@ -254,6 +254,31 @@
       "routing_review_revision": 1,
       "compatibility_review_post_id": "3747aaa7-6240-4e89-b7c9-a6c8968b25b3",
       "compatibility_review_revision": 1
+    },
+    {
+      "seq": 15,
+      "claim_id": "C011",
+      "version": 1,
+      "record_sha256": "f5a122af75770cf06e1e209e2a29548240b11f4c2b7111a85d92be1d47afb444",
+      "post_revision": 1,
+      "state": "approved",
+      "review_post_ids": [
+        "ccfe7fe5-300f-4560-a7aa-87fe01ed3d19"
+      ],
+      "actor": "@adrian.factomaton",
+      "recorded_by": "@adrian.factomaton",
+      "at": "2026-11-08T22:12:54.590978+00:00",
+      "reason": "Scoped supported-assertion inclusion approved by exact non-author source review, separate accepted routes and merged consumer compatibility fix. Operational activation and model/library-growth validation remain pending.",
+      "decision_post_id": "2a7a629a-8314-4ee6-a039-028c9f24847f",
+      "decision_post_revision": 1,
+      "decision_at": "2026-11-08T22:11:39.088Z",
+      "decision_post_published_at": "2026-11-08T22:11:39.088Z",
+      "relationship": "Record author/routing reviewer Factfinder and factual reviewer/curator/recorder Factomaton share Adrian ownership.",
+      "publication_kind": "supported_assertion",
+      "routing_review_post_id": "49fd0cf4-e5d5-4796-a930-e8fd86f64adf",
+      "routing_review_revision": 1,
+      "compatibility_review_post_id": "d56358b1-9393-4ede-8bb6-82883f52c5d8",
+      "compatibility_review_revision": 1
     }
   ]
 }

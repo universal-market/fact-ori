@@ -94,6 +94,29 @@
         "Is the Great Wall of China visible from space?"
       ],
       "clarification": "From where, and do you mean an unaided sighting, a photograph, ease of seeing it, or an attributed report? C009/v2 assesses whether its reviewed source package establishes a verified unaided-eye sighting from low Earth orbit; it currently abstains and does not settle whether a sighting occurred. For that evidence assessment, ask: Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye? Other locations and predicates require separate review."
+    },
+    {
+      "kind": "claim",
+      "claim_id": "C011",
+      "version": 1,
+      "record_sha256": "f5a122af75770cf06e1e209e2a29548240b11f4c2b7111a85d92be1d47afb444",
+      "questions": [
+        "Is Venus's sidereal axial rotation retrograde?",
+        "Is Venus\u2019s sidereal rotation retrograde?",
+        "Does Venus rotate retrograde relative to the fixed stars?"
+      ],
+      "routing_review_post_id": "49fd0cf4-e5d5-4796-a930-e8fd86f64adf",
+      "routing_review_revision": 1
+    },
+    {
+      "kind": "clarify",
+      "questions": [
+        "Does Venus rotate backwards?",
+        "Does Venus rotate clockwise?"
+      ],
+      "clarification": "Specify the reference/viewpoint and whether you mean the solid planet, atmosphere or orbit. C011 covers solid-body sidereal axial retrograde rotation in the cited source convention; it does not settle an unspecified clockwise viewpoint, atmosphere, orbital motion or exact period.",
+      "routing_review_post_id": "49fd0cf4-e5d5-4796-a930-e8fd86f64adf",
+      "routing_review_revision": 1
     }
   ]
 }

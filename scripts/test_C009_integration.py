@@ -128,8 +128,10 @@ class C009IntegrationTests(unittest.TestCase):
             load_view(self.root)
 
     def test_existing_six_claims_and_fourteen_responses_preserved(self):
-        original = load_view(ROOT)
-        original_catalog = json.loads((ROOT / 'data/query-catalog.json').read_text())
+        # Compare this historical fixture before/after its C009 transition;
+        # later additions to the live library are outside this fixture.
+        original = load_view(self.root)
+        original_catalog = copy.deepcopy(self.catalog)
         self.transition('approved')
         staged = load_view(self.root)
         self.assertEqual([c for c in staged['claims'] if c['claim_id'] != 'C009'],

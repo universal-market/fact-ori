@@ -24,7 +24,7 @@ class PublicSnapshotTests(unittest.TestCase):
         self.assertEqual(actual, json.loads((ROOT / "public/library.json").read_text()))
         subject = {k: v for k, v in actual.items() if k != "snapshot_sha256"}
         self.assertEqual(hashlib.sha256(canonical(subject)).hexdigest(), actual["snapshot_sha256"])
-        self.assertEqual(len(actual["records"]), 7)
+        self.assertEqual(len(actual["records"]), 8)
         for row in actual["records"]:
             self.assertEqual(record_digest(row["record"]), row["sha256"])
             self.assertEqual(row["evidence_package"]["state"], "approved")

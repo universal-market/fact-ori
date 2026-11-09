@@ -7,14 +7,16 @@
     "C005-v1-factomaton-review.json",
     "C002-v3-factfinder-review.json",
     "C010-v2-factomaton-review.json",
-    "C009-v2-factomaton-review.json"
+    "C009-v2-factomaton-review.json",
+    "C011-candidate-review-bundle.json"
   ],
   "post_snapshots": [
     "pilot-001-v1-public-snapshot.json",
     "C005-v1-post-snapshot.json",
     "C002-v3-post-snapshot.json",
     "C010-v2-post-snapshot.json",
-    "C009-v2-post-snapshot.json"
+    "C009-v2-post-snapshot.json",
+    "C011-candidate-post-snapshot.json"
   ],
   "record_snapshots": [
     "C002-v2.json",
@@ -24,6 +26,7 @@
     "C010-v1.json",
     "C010-v2.json",
     "C009-v1.json",
-    "C009-v2.json"
+    "C009-v2.json",
+    "C011-v1.json"
   ]
 }

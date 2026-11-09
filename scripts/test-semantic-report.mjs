@@ -116,7 +116,7 @@ test("growth contract cannot be redefined or reused for another library or case 
   assert.throws(() => evaluationContract("unreviewed"), /Unknown/);
 });
 test("snapshot loader verifies reviewed raw bytes rather than trusting embedded hash fields", () => {
-  const contract = evaluationContract();
+  const contract = evaluationContract("library-growth-v2");
   const snapshot = evaluationSnapshot(contract);
   assert.equal(snapshot.library_import_id, contract.importId);
   const dir = mkdtempSync(join(tmpdir(), "factori-contract-"));
