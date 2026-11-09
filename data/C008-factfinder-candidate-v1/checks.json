@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "record_digest": "656ccb1f9b5453d3380fa8a9eac8565ee403f7ad2a06bf0d1e4c6acd0596caa8",
+  "bundle_consistency_errors": [],
+  "projection_status": "rejected_expected",
+  "projection_error": "('C008', 1): unsupported verdict",
+  "reason": "Current library_view.derive_view permits only supported/insufficient_evidence; no verdict change or consumer patch performed.",
+  "zero_attached_reviews": true,
+  "current_post_bindings_equal_frozen_input": true,
+  "api_identifier_compatible": true,
+  "active_projection_excludes_C008": true,
+  "active_file_hashes": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "validation_code_hashes": {
+    "scripts/validate_pilot.py": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e"
+  },
+  "factual_review_performed": false,
+  "limits": "Consistency/schema result only. Candidate author cannot supply its separate factual acceptance."
+}
