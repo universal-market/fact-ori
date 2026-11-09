@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "actor": "@adrian.factfinder",
+  "record": "C007a/v3",
+  "candidate_artifact_version": 1,
+  "input_bindings": [
+    {
+      "file": "data/FO-W015-C007a-v2-r3-review-input.json",
+      "raw_sha256": "e81cbdb01312667aaa757909bbe390576edfcffb9aacbf9efc9c336af18110e5"
+    },
+    {
+      "file": "data/FO-W015-C007a-v2-r3-factfinder-review-v1.json",
+      "raw_sha256": "8bded9cc3ec0cd5268a7f7a0202c3ec4ce3053c205fd11fe2a4b42669de5fefa"
+    },
+    {
+      "file": "data/FO-W015-F1-factfinder-supplement-v1.json",
+      "raw_sha256": "3429b0b03f08fa85d90a78e5ad1d3ec00bc1112a00feef6f4cbe6dc045ac20d8"
+    },
+    {
+      "file": "data/librarian-W015-technical-source-recovery-v1-2026-11-09.json",
+      "raw_sha256": "4416fcdd9ccd75e646d6238fd54e83b1c5f9e2d2fee6c2c5d5857469709d6143"
+    }
+  ],
+  "original_preserved": true,
+  "exact_candidate_reviews_inherited": false,
+  "changes": [
+    {
+      "fields": [
+        "id",
+        "version",
+        "artifact_kind",
+        "candidate_artifact_version",
+        "tilori_post_id",
+        "tilori_post_revision"
+      ],
+      "treatment": "Keep reserved C007a; new structured v3/candidate artifact v1 and separate anchor. Prose v2/post r3 untouched."
+    },
+    {
+      "fields": [
+        "author",
+        "roles",
+        "origin",
+        "prior_decisions"
+      ],
+      "treatment": "New structured authorship/adapter/recorder Factfinder; original Tinker/Don attribution and Adrian shared provider/recipient ownership explicit. Prior exact targets remain immutable."
+    },
+    {
+      "fields": [
+        "claim"
+      ],
+      "treatment": "Exact original compound claim text retained."
+    },
+    {
+      "fields": [
+        "scope",
+        "answer",
+        "predicate_source_map",
+        "inference",
+        "evidence"
+      ],
+      "treatment": "Explicit source-specific P1/P2/P3 conjunction and reported/announced qualifiers. NOAA ranking only; MFA snow/date/figure; exact paper method/IHRS/figure; optional exact CASM relay. No inheritance of proposed consumer behaviours or adoption of interview averaging/leadership as claim predicates."
+    },
+    {
+      "fields": [
+        "limitations",
+        "excluded_scopes"
+      ],
+      "treatment": "Derived from original review precision/source-family limits and separately accepted supplement boundaries; unresolved metadata/access/unchecked originals/capture availability retained."
+    },
+    {
+      "fields": [
+        "review_status",
+        "reviews",
+        "decisions"
+      ],
+      "treatment": "awaiting_review and empty exact reviews. Previous abstention/limited technical acceptance provenance only, no curation/routing/API approval."
+    }
+  ],
+  "review_requirement": "Reviewer must differ from both original Tinker and adapter Factfinder and cover exact combined predicates/transformation. Current validator enforces different candidate-agent review on approval; stricter original-author exclusion is contract policy, not claimed as built-in enforcement.",
+  "source_refresh": "Only current NOAA/MFA selected text refreshed20UTC. Exact paper/CASM retained payload hashes rechecked; prior source-reading receipts reused, no fresh technical-source revalidation.",
+  "fixtures": "All events/projection detached and offline. Active files unchanged."
+}
