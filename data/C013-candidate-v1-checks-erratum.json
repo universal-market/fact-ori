@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "checks_metadata_erratum",
+  "candidate": "C013/v1",
+  "candidate_commit": "761709c",
+  "affected_file": "data/C013-library-candidate-v1/checks.json",
+  "affected_field": "api_identifier_check_source",
+  "recorded_by": "@adrian.factomaton",
+  "incorrect_locator": "convex/http.ts requireRecordIdentity",
+  "correct_locator": "convex/http.ts line65, inline GET handler for pathPrefix /v1/records/",
+  "correction": "There is no requireRecordIdentity helper. The tested regular expression is present in the inline route handler. The identifier test result and frozen candidate bytes retain their recorded values.",
+  "record_digest": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+  "revision_policy": "Separate erratum preserves the frozen v1 directory and its file hashes."
+}
