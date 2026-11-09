@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "derivative_transformation_and_review_disposition",
+  "actor": "@adrian.factomaton",
+  "recorded_at": "2026-11-09T12:13:49.151492+00:00",
+  "original_review_decision": "REVISE",
+  "original_review_raw_sha256": "ee9ea6cc368202403a4009a166128ddb46d8e34dd8df858a46f78ed666f05ec9",
+  "candidate_id": "W026-A",
+  "candidate_record_digest": "27eb95ed3a3d6a2471023c65210f9e74871cb56e9ca03c89e61cfe6027b390d4",
+  "authoring_decision": "Create a new narrow reference-property candidate. Original five posts and review remain frozen. This is not a corrected rewrite or acceptance of the complete original package.",
+  "findings": [
+    {
+      "finding": "F1",
+      "disposition": "Numerical compilation comparison excluded from candidate. Conditional arithmetic independently checked.",
+      "given_mean_K": "373.17",
+      "conversion_offset": "273.15",
+      "mean_C": "100.02",
+      "printed_interval_K": [
+        "373.13",
+        "373.21"
+      ],
+      "reference_K": "373.124",
+      "inside_printed_interval": false,
+      "limit": "Arithmetic on reported inputs only. No inference about statistical significance or uncertainty convention."
+    },
+    {
+      "finding": "F2",
+      "disposition": "Weather records and universal pressure/boiling bounds excluded."
+    },
+    {
+      "finding": "F3",
+      "disposition": "All interpolation and inaccessible NIST numeric outputs excluded. Prior arithmetic checks remain conditional on supplied endpoints."
+    },
+    {
+      "finding": "F4",
+      "disposition": "Retained rounded IAPWS approximate reference value with pressure/purity/ITS-90 scope. Entire scale-history claim excluded."
+    },
+    {
+      "finding": "F5",
+      "disposition": "Educational guideline and inferred local boiling distribution excluded."
+    }
+  ],
+  "review_inheritance": false,
+  "next_action": "Exact candidate review must assess narrowed scope, source binding, new author attribution, omissions and identifier status. Reviewer differs from candidate author and original draft author; prior source-review/ownership overlap disclosed."
+}

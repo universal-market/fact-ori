@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-09T12:13:49.151492+00:00",
+  "record_digest": "27eb95ed3a3d6a2471023c65210f9e74871cb56e9ca03c89e61cfe6027b390d4",
+  "bundle_errors": [],
+  "pending_answer_withheld": true,
+  "unreviewed_approval_rejection": "approval needs explicit exact-input reviews",
+  "active_files_before": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "active_files_after": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "truth_claim": "Consistency checks do not establish factual truth."
+}

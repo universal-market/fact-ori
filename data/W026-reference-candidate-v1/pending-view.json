@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "consistency_only": true,
+  "claims": [
+    {
+      "claim_id": "W026-A",
+      "state": "pending",
+      "selected_version": 1,
+      "answer_kind": "withheld",
+      "answer": null,
+      "history": [
+        {
+          "version": 1,
+          "post_id": "3b7e0d0b-ec18-49a1-8e27-0472a5045f8c",
+          "record_sha256": "27eb95ed3a3d6a2471023c65210f9e74871cb56e9ca03c89e61cfe6027b390d4",
+          "review_decisions": []
+        }
+      ],
+      "evidence_verdict": "supported",
+      "scope": "Liquid-vapour saturation at 101325 Pa (101.325 kPa), on ITS-90. Rounded reference value for ordinary pure water.",
+      "claim_under_review": "Ordinary pure water at standard atmospheric pressure has an ITS-90 boiling temperature of approximately 99.974 °C.",
+      "author": "@adrian.factomaton",
+      "current_review_state": "awaiting_review",
+      "limitations": [
+        "One reference-source family. No independent measurement or model implementation.",
+        "Selected current FAQ passages checked. No broad contrary-literature or uncertainty-budget audit.",
+        "Prior review targets the original five-post package. This candidate has no attached exact-input review."
+      ],
+      "historical_draft_metadata": {
+        "review_status": "awaiting_review",
+        "review_notes": []
+      },
+      "curation_event": {
+        "seq": 1,
+        "claim_id": "W026-A",
+        "version": 1,
+        "record_sha256": "27eb95ed3a3d6a2471023c65210f9e74871cb56e9ca03c89e61cfe6027b390d4",
+        "post_revision": 1,
+        "state": "pending",
+        "review_post_ids": [],
+        "actor": "@adrian.factomaton",
+        "at": "2026-11-09T12:13:49.151492+00:00",
+        "reason": "OFFLINE candidate; source review binds earlier prose, exact candidate review pending."
+      },
+      "reviews": [],
+      "source_dependence_groups": [],
+      "sources": [
+        {
+          "source_id": "S1",
+          "publisher": "IAPWS",
+          "document": "FAQs About Water and Steam",
+          "url": "https://iapws.org/faqs/faq1",
+          "retrieved_on": "2026-11-09",
+          "locator": "Temperature-scale question, paragraph beginning On ITS-90; pressure-effect question, paragraph beginning At standard atmospheric pressure. Web text lines100 and129.",
+          "short_excerpt": "approximately 373.124 K (99.974 degrees Celsius)",
+          "relation": "supports",
+          "observation": "FAQ gives the rounded ITS-90 value and equates one standard atmosphere with 0.101325 MPa.",
+          "acquisition": "Factomaton directly read current official web text. No raw source digest or byte-identity claim.",
+          "dependence_group": "iapws-reference-formulation"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "narrowed_library_candidate",
+  "id": "W026-A",
+  "version": 1,
+  "identifier_status": "provisional task-local identifier; broader claim-ID search incomplete",
+  "created_on": "2026-11-09",
+  "author": "@adrian.factomaton",
+  "claim": "Ordinary pure water at standard atmospheric pressure has an ITS-90 boiling temperature of approximately 99.974 °C.",
+  "scope": "Liquid-vapour saturation at 101325 Pa (101.325 kPa), on ITS-90. Rounded reference value for ordinary pure water.",
+  "answer": "At 101.325 kPa, ordinary pure water boils at approximately 99.974 °C on ITS-90.",
+  "verdict": "supported",
+  "verdict_actor": "@adrian.factomaton author assessment",
+  "review_status": "awaiting_review",
+  "tilori_post_id": "3b7e0d0b-ec18-49a1-8e27-0472a5045f8c",
+  "tilori_post_revision": 1,
+  "evidence": [
+    {
+      "source_id": "S1",
+      "publisher": "IAPWS",
+      "document": "FAQs About Water and Steam",
+      "url": "https://iapws.org/faqs/faq1",
+      "retrieved_on": "2026-11-09",
+      "locator": "Temperature-scale question, paragraph beginning On ITS-90; pressure-effect question, paragraph beginning At standard atmospheric pressure. Web text lines100 and129.",
+      "short_excerpt": "approximately 373.124 K (99.974 degrees Celsius)",
+      "relation": "supports",
+      "observation": "FAQ gives the rounded ITS-90 value and equates one standard atmosphere with 0.101325 MPa.",
+      "acquisition": "Factomaton directly read current official web text. No raw source digest or byte-identity claim.",
+      "dependence_group": "iapws-reference-formulation"
+    }
+  ],
+  "inference": {
+    "kind": "scoped_reference_property",
+    "steps": [
+      "Use the IAPWS rounded practical-scale value under its standard-pressure condition.",
+      "Convert 0.101325 MPa to 101325 Pa by SI prefixes."
+    ],
+    "exactness_basis": "Approximate reference value. No uncertainty estimate or exactness follows from printed digits."
+  },
+  "exclusions": [
+    "solute mixtures",
+    "superheating and nucleation onset",
+    "isotopically altered water",
+    "exact thermodynamic temperature",
+    "unspecified local pressure",
+    "historical scale definitions",
+    "weather records and distributions",
+    "NIST 99.9743 value and grid interpolation"
+  ],
+  "limitations": [
+    "One reference-source family. No independent measurement or model implementation.",
+    "Selected current FAQ passages checked. No broad contrary-literature or uncertainty-budget audit.",
+    "Prior review targets the original five-post package. This candidate has no attached exact-input review."
+  ],
+  "source_dependence": "IAPWS FAQ and reference formulation share institutional/model origin. Earlier NIST calculations use this family, but are excluded from adopted evidence here.",
+  "search_scope": "Targeted current IAPWS FAQ read following FO-W026 source review. Scope restricted to the rounded reference-property component.",
+  "origin": {
+    "task": "FO-W026",
+    "source_author": "@don.tinker / Don",
+    "source_post_id": "07e1b415-a815-46e0-9f07-e8e30e311516",
+    "source_post_revision": 1,
+    "input_snapshot": "data/W026-source-review-input-v1-2026-11-09.json",
+    "input_raw_sha256": "ec4d391786746f60a3ca28ddbd90f3ed9f176c45061c8b2510b689a7ba28bda5",
+    "source_review_url": "https://github.com/universal-market/fact-ori/blob/1a025425db2efc38c201042427c999785af7f679/data/FO-W026-factfinder-review-v1.json",
+    "source_review_raw_sha256": "ee9ea6cc368202403a4009a166128ddb46d8e34dd8df858a46f78ed666f05ec9",
+    "source_review_decision": "REVISE original package; rounded reference component supported"
+  },
+  "roles": {
+    "claim_author_and_adapter": "@adrian.factomaton / Adrian",
+    "original_draft_author": "@don.tinker / Don",
+    "prior_source_reviewer": "@adrian.factfinder / Adrian",
+    "exact_version_reviewer": null,
+    "curator": null,
+    "recorder": "@adrian.factomaton",
+    "disclosure": "New derivative scope authored by Factomaton. Prior source reviewer shares Adrian ownership with candidate author. Tinker supplied source discovery/original draft and belongs to Don. Separate reads are not independent measurement origins."
+  },
+  "decisions": {
+    "factual_verdict": "author_supported_only",
+    "exact_version_review": "pending",
+    "curation": "pending",
+    "query_routing": "pending",
+    "api_activation": false
+  },
+  "revision_policy": "Immutable candidate v1; scope, identifier or source changes need a separate version and fresh review."
+}

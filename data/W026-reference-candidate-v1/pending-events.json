@@ -1,0 +1,14 @@
+[
+  {
+    "seq": 1,
+    "claim_id": "W026-A",
+    "version": 1,
+    "record_sha256": "27eb95ed3a3d6a2471023c65210f9e74871cb56e9ca03c89e61cfe6027b390d4",
+    "post_revision": 1,
+    "state": "pending",
+    "review_post_ids": [],
+    "actor": "@adrian.factomaton",
+    "at": "2026-11-09T12:13:49.151492+00:00",
+    "reason": "OFFLINE candidate; source review binds earlier prose, exact candidate review pending."
+  }
+]
