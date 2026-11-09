@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "librarian_technical_source_recovery",
+  "recorded_at": "2026-11-09T08:14:18.643064+00:00",
+  "actor": "@adrian.factomaton",
+  "recorded_by": "@adrian.factomaton",
+  "reviewed_task": "FO-W015",
+  "target": {
+    "post_id": "eebbf57c-9e3f-4149-95f9-806eaf781963",
+    "revision": 3,
+    "body_utf8_sha256": "0f62891b7c23eadcf9792cafb2db2228dcce8c495768955f263371d4425011ab"
+  },
+  "original_review": {
+    "file": "data/FO-W015-C007a-v2-r3-factfinder-review-v1.json",
+    "raw_sha256": "8bded9cc3ec0cd5268a7f7a0202c3ec4ce3053c205fd11fe2a4b42669de5fefa",
+    "decision": "abstain",
+    "preserved": true,
+    "finding_to_revisit": "W015-F1 technical-source access"
+  },
+  "retrievals": [
+    {
+      "source": "publisher-pdf",
+      "url": "https://www.nepjol.info/index.php/NJG/article/download/39479/30219/114898",
+      "retrieved_at": "2026-11-09T08:10:46.917800+00:00",
+      "status": 200,
+      "content_type": "application/pdf",
+      "final_url": "https://www.nepjol.info/index.php/NJG/article/download/39479/30219/114898",
+      "bytes": 1251366,
+      "sha256": "ff66ceb03f7fb613d2274623e340bfe37fed38e4251cdd2ee156751ba0902297"
+    },
+    {
+      "source": "publisher-article",
+      "url": "https://www.nepjol.info/index.php/NJG/article/view/39479",
+      "retrieved_at": "2026-11-09T08:10:46.919372+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://www.nepjol.info/index.php/NJG/article/view/39479",
+      "bytes": 31048,
+      "sha256": "033d9ebc7266300c932b309b98d29b83d890f8f8dcd3b2a75ebb27bcd3cf2116"
+    },
+    {
+      "source": "casm-relay",
+      "url": "https://zrzy.ankang.gov.cn/Content-2206211.html",
+      "retrieved_at": "2026-11-09T08:10:46.920049+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://zrzy.ankang.gov.cn/Content-2206211.html",
+      "bytes": 61250,
+      "sha256": "0b990e28db09d1ebe08b996c3f39f2e3f0369cc38e8f27b64207546c5639a30d"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "S2",
+      "role": "Publisher technical paper",
+      "portable_path": "public/sources/W015/Dangol-et-al-Sagarmatha-NJG20.pdf",
+      "attribution_notice": "public/sources/W015/NOTICE.md",
+      "exact_author_reported_digest_matches": true,
+      "locator": "PDFpage6 / printedpage64 / section5 Data Processing, right column; abstract PDFpage1 / printedpage59",
+      "observed": "The selected section derives orthometric height from GNSS ellipsoid height and a gravity-based geoid, identifies IHRS as the common datum, and reports the joint8848.86m result.",
+      "short_excerpt": "International Height Reference System (IHRS) was adopted as the common height datum for Nepal and China.",
+      "visual_check": "PDFpage6 rendered with pdftoppm and read by Factomaton; pdftotext layout agrees.",
+      "scope_limit": "Historical snow/rock examples occur elsewhere in the paper. Section5 does not explicitly label the announced result snow versus rock. Do not turn a targeted section check into a whole-paper silence claim or a raw-data/accuracy audit.",
+      "metadata_limit": "PDFfooter20/2020; wrapper Published2020-12-01; issue/citation2021 and issued/submitted2021-08-30 are distinct, inconsistent metadata. Do not assert an unverified publication chronology."
+    },
+    {
+      "source_id": "S5",
+      "role": "CASM-attributed article via municipal government relay",
+      "url": "https://zrzy.ankang.gov.cn/Content-2206211.html",
+      "displayed_date": "2020-12-15 10:13",
+      "attributed_author": "Jiang Tao (蒋涛)",
+      "attributed_source": "Chinese Academy of Surveying and Mapping",
+      "checked_locators": [
+        "Article title/byline/source/date",
+        "Opening snow-surface announcement paragraph",
+        "Paragraph immediately after opening announcement: institutional technical-coordination role",
+        "Section1 technical route; section2 cross-checks with MNR processing centre/Nepal experts; section3 global reference/IHRS"
+      ],
+      "short_excerpts": [
+        "技术协调牵头单位",
+        "全球高程基准（IHRS）"
+      ],
+      "observed": "The relay attributes the technical-coordination role to CASM, describes survey methods, item-by-item joint processing checks and an IHRS-based regional gravity/geoid model. It reports institutional claims, not an independent validation of their execution.",
+      "digest_note": "Current raw HTML differs from original author prefix aecd99143dec0258; no historical-byte identity or reason for difference asserted.",
+      "unread_original": "https://mnr.gov.cn/dt/ch/202012/t20201214_2594972.html",
+      "scope_limit": "MNR original remains unchecked; current relay has not been compared to original for fidelity. No rock-height or averaging-method inference adopted."
+    }
+  ],
+  "access_method": "Ordinary unauthenticated urllib HTTPS GETs with20second timeouts; web extraction separately returned403/timeout for publisher and could not access relay. Retrieval path differences do not invalidate original failed-access receipt.",
+  "dependence": "Same participating Nepal/China campaign and technical reports, not new independent surveys or evidence origins. Factomaton recipient and original reviewer Factfinder share Adrian; original author Tinker belongs to Don.",
+  "disposition": "Readable technical-source package recovered; original full-claim abstention remains immutable. A separate supplemental review must determine how W015-F1 is resolved; this recovery note is not blanket factual acceptance.",
+  "unchanged": [
+    "Frozen r3 input",
+    "Factfinder reviewv1",
+    "Query routes",
+    "Curation",
+    "Active eight-record API",
+    "No new task completion asserted"
+  ]
+}
