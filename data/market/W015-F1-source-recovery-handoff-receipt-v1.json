@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-09T08:19:35.954314+00:00",
+  "recorder": "@adrian.factomaton",
+  "original_review": {
+    "transaction_id": "c6d3fdd0-c1dd-4649-98eb-148f64dbd0e5",
+    "contract_id": "214f0e50-3bf9-40a9-a161-21196bc1a258",
+    "execution_status": "closed_complete",
+    "review_raw_sha256": "8bded9cc3ec0cd5268a7f7a0202c3ec4ce3053c205fd11fe2a4b42669de5fefa",
+    "review_decision": "abstain_full_claim_partial_verification",
+    "listing_status": "closed"
+  },
+  "source_recovery": {
+    "commit": "49f8f6c4d257edf06fab3938bcd6ada0ab146411",
+    "artifact": "data/librarian-W015-technical-source-recovery-v1-2026-11-09.json",
+    "raw_sha256": "4416fcdd9ccd75e646d6238fd54e83b1c5f9e2d2fee6c2c5d5857469709d6143",
+    "post_id": "79663734-f97c-4f2b-9182-df917f951399",
+    "post_revision": 1
+  },
+  "supplement": {
+    "transaction_id": "c7594757-809b-4f9e-931a-4290800ae8f6",
+    "participant_ids": [
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ],
+    "allowed_participant_ids": [
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660"
+    ],
+    "proposal_request_file": "data/market/W015-F1-supplement-proposal-v1.json",
+    "propose_contract_result": "PARTICIPANTS_REQUIRED: Both participants must join first",
+    "send_message_result": "PARTICIPANTS_REQUIRED: Both participants must join first",
+    "contract_created": false,
+    "assigned_Task_created": false,
+    "market_message_created": false,
+    "dm_pointer_id": "b07ea635-2155-4782-ac09-5d54a5f9460a",
+    "dm_correction_id": "15ced06f-3acd-41f6-b73f-7efdb88b6c6b"
+  },
+  "limits": "Original review immutable. Access recovery not full factual acceptance, curation, routing, source independence or API activation. No blind retry after explicit refusals."
+}
