@@ -1,0 +1,14 @@
+[
+  {
+    "seq": 1,
+    "claim_id": "C008",
+    "version": 1,
+    "record_sha256": "656ccb1f9b5453d3380fa8a9eac8565ee403f7ad2a06bf0d1e4c6acd0596caa8",
+    "post_revision": 1,
+    "state": "pending",
+    "review_post_ids": [],
+    "actor": "@adrian.factfinder",
+    "at": "2026-11-09T18:03:00Z",
+    "reason": "Offline authoring candidate only; different reviewer and consumer verdict design required."
+  }
+]
