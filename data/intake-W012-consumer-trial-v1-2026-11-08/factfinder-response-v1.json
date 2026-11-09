@@ -1,0 +1,151 @@
+{
+  "trial_id": "W012-inspection-consumer-v1",
+  "participant": "@adrian.factfinder",
+  "source_commit": "d2b00d86bb83761a3cd3f0349c315d9d55b87846",
+  "input_hashes": {
+    "C005": "518176988ef95c98dbe9616e324c5ddc683b282dac47a6c3c4502080bea08f9a",
+    "C009": "0465495048884a23298f14a28d9dccc9dc1c74befe230ee3925ea351417604ac",
+    "C010": "35f71bb3b0dafd2f6dbb3def8e74632d3d6362dfcb3425ade2f2176dc17c728b"
+  },
+  "prior_exposure": "Previously reviewed the adapter implementation and the source/record/review artifacts; assembled C009/C010 receipts. Participant and implementer/question author/later assessor Factomaton share Adrian ownership. Diagnostic convenience sample, not held-out or independent validation.",
+  "recorded_at": "2026-11-08T16:12:19.601016+00:00",
+  "input_policy": "Answers use only frozen protocol and three hash-verified inspection files. Assessor rubric not read; no source refresh or new implementation review.",
+  "answers": [
+    {
+      "id": "I01",
+      "claim_id": "C005",
+      "answer": "Neither an original review decision time nor original receipt recording time is established: decision_at and recorded_at are null. legacy_reviewed_at preserves 2026-11-06T19:12:47.935720+00:00 with explicitly unspecified legacy semantics. It cannot be relabelled as decision or recording time. Inspection assembled_at is a separate generation time.",
+      "evidence_pointers": [
+        "/reviews/0/decision/decision_at",
+        "/reviews/0/decision/recorded_at",
+        "/reviews/0/decision/legacy_reviewed_at",
+        "/reviews/0/decision/legacy_reviewed_at_basis",
+        "/assembly/assembled_at"
+      ],
+      "uncertainty_or_friction": "Missing original times are explicit; reading a plausible timestamp alone would overstate its meaning."
+    },
+    {
+      "id": "I02",
+      "claim_id": "C005",
+      "answer": "Declared relationship is internal_shared_owner; declared author/reviewer owner IDs match. Verified relationship is unknown because an authenticated observation verifier is pending. The inspection does not establish historical ownership verification or independent community validation.",
+      "evidence_pointers": [
+        "/reviews/0/ownership",
+        "/record/limitations/1"
+      ],
+      "uncertainty_or_friction": "Declared and verified fields are adjacent and clear. Matching owner strings are declarations here, not authenticated observations."
+    },
+    {
+      "id": "I03",
+      "claim_id": "C005",
+      "answer": "No exact frozen evidence target has a normalized checked-coverage mapping: record_target_mapping is empty and normalization_status is unmapped_legacy; all inventory extents are unknown. The three legacy entries declare checks of specified BIPM/NIST passages, but do not create reviewed pointer mappings even where URLs or locators appear to align.",
+      "evidence_pointers": [
+        "/reviews/0/coverage/record_target_mapping",
+        "/reviews/0/coverage/normalization_status",
+        "/reviews/0/coverage/legacy_source_checks",
+        "/target_inventory"
+      ],
+      "uncertainty_or_friction": "Human-readable locator evidence exists, but translating it into exact targets would require a separately reviewed mapping. Unknown is not a statement that nobody checked a passage."
+    },
+    {
+      "id": "I04",
+      "claim_id": "C005",
+      "answer": "The three authored evidence entries are locators in one BIPM brochure, not three independent sources. Reviewer BIPM/NIST checks apply the same SI unit-definition convention; their common dependence_group and the definitional inference do not support counting them as independent empirical corroborations. The unit equivalence is a derivation from definitions, not a container measurement.",
+      "evidence_pointers": [
+        "/record/limitations/0",
+        "/record/inference",
+        "/reviews/0/coverage/legacy_source_checks/0/dependence_group",
+        "/reviews/0/coverage/legacy_source_checks/1/dependence_group",
+        "/reviews/0/coverage/legacy_source_checks/2/dependence_group"
+      ],
+      "uncertainty_or_friction": "Dependence information is split between the record and review. Different publisher names alone do not establish independent origins; model independence is not established."
+    },
+    {
+      "id": "I05",
+      "claim_id": "C009",
+      "answer": "Factomaton (@adrian.factomaton) made the factual review decision; Factfinder (@adrian.factfinder) assembled/recorded its receipt. decision_actor is the stated actor basis, distinct from recorded_by. This is factual-review provenance, not a reassignment of the separate curator decision.",
+      "evidence_pointers": [
+        "/reviews/0/decision/actor",
+        "/reviews/0/decision/actor_basis",
+        "/reviews/0/decision/reviewer",
+        "/reviews/0/decision/recorded_by",
+        "/reviews/0/decision/recorded_at"
+      ],
+      "uncertainty_or_friction": "The projected fields make this distinction easy; raw_review retains the original object if more provenance is needed."
+    },
+    {
+      "id": "I06",
+      "claim_id": "C009",
+      "answer": "The selected package justifies a source-package abstention (reviewed_abstention, insufficient_evidence): reviewed sources do not establish whether a verified unaided-eye sighting from low Earth orbit occurred. It neither verifies a successful sighting nor establishes universal impossibility. General visibility assertions, an attributed publisher paraphrase of personal sightings, photographs and verified unaided observations remain distinct; original-account, aid and identification gaps persist.",
+      "evidence_pointers": [
+        "/evidence_package/answer_kind",
+        "/evidence_package/evidence_verdict",
+        "/evidence_package/answer",
+        "/record/scope",
+        "/record/inference/steps",
+        "/record/inference/not_claimed"
+      ],
+      "uncertainty_or_friction": "The answer and scope agree. Positive raw claim text is an investigation target, not a positive verdict. Historical draft limitations about awaiting publication must not override the selected evidence-package state."
+    },
+    {
+      "id": "I07",
+      "claim_id": "C009",
+      "answer": "matches_embedded_text establishes only agreement between the declared body hash and the embedded review_text. live_receipt_status is not_checked, so the current live revision and withdrawal state are unknown. An empty unresolved_reasons list here does not certify a current, unwithdrawn remote receipt.",
+      "evidence_pointers": [
+        "/reviews/0/binding/declared_review_body_sha256",
+        "/reviews/0/binding/embedded_review_text_sha256",
+        "/reviews/0/binding/embedded_body_status",
+        "/reviews/0/binding/live_receipt_status",
+        "/reviews/0/binding/unresolved_reasons",
+        "/limits"
+      ],
+      "uncertainty_or_friction": "Empty unresolved_reasons alongside not_checked could invite overconfidence; an explicit separate live-verification gap summary would help."
+    },
+    {
+      "id": "I08",
+      "claim_id": "C009",
+      "answer": "Inspection assembly time establishes generation of this projection, not a fresh source retrieval or source currency. The selected review carries checks forward from original receipt 043a466e-db3b-4201-9621-3b3d172abc9d with original acquisition dates (for example ESA S1 2026-11-07T22:08:58.624260+00:00); some NASA checks have only day precision. legacy_source_coverage says retained NBC/Register/ScientificAmerican passages were re-read locally with no new source acquisition. Historical author HTML-byte reproduction and original-account/fresh-S5 gaps remain excluded.",
+      "evidence_pointers": [
+        "/assembly/assembled_at",
+        "/reviews/0/coverage/legacy_source_checks/0/acquisition_basis",
+        "/reviews/0/coverage/legacy_source_checks/0/original_check_receipt",
+        "/reviews/0/coverage/legacy_source_checks/0/retrieved_at",
+        "/reviews/0/coverage/legacy_source_checks/1/retrieval_time_basis",
+        "/reviews/0/coverage/legacy_source_coverage/mode",
+        "/reviews/0/coverage/legacy_source_coverage/prior_scope/excluded",
+        "/reviews/0/coverage/legacy_source_coverage/prior_scope/byte_identity"
+      ],
+      "uncertainty_or_friction": "Dates and re-read/acquisition distinctions are deeply nested and repeated. Assembly cannot establish present source validity; no new retrieval was performed in this consumer pass."
+    },
+    {
+      "id": "I09",
+      "claim_id": "C010",
+      "answer": "Within SI units and vacuum propagation, c has fixed numerical value exactly 299,792,458 m/s by definition. It is a current defining constant under the 2018 SI revision effective 20 May 2019; the prior 1983 metre definition is historical wording, not the current formulation. Definitional exactness does not make practical measurements/realizations exact and does not establish propagation behavior in media or a value in other unit systems.",
+      "evidence_pointers": [
+        "/record/scope",
+        "/record/inference/exactness_basis",
+        "/record/inference/historical_note",
+        "/record/inference/not_claimed",
+        "/record/excluded_scopes",
+        "/evidence_package/answer"
+      ],
+      "uncertainty_or_friction": "Scope and inference state the boundary explicitly. Multiple SI presentations retain common normative origin rather than independent measurements."
+    },
+    {
+      "id": "I10",
+      "claim_id": "C010",
+      "answer": "Unknown target extents mean this inspection has no normalized reviewed coverage assignment for those exact pointers. They do not negate the raw declarations of selected English passage checks or imply no review occurred. legacy_source_checks and legacy_source_coverage retain carried-forward locators, original receipt/capture times and exclusions. record_target_mapping stays empty/unmapped_legacy; neither shared URLs nor a reproduced capture hash automatically establishes target entailment, full-document coverage or current freshness.",
+      "evidence_pointers": [
+        "/target_inventory",
+        "/reviews/0/coverage/normalization_status",
+        "/reviews/0/coverage/record_target_mapping",
+        "/reviews/0/coverage/legacy_source_checks",
+        "/reviews/0/coverage/legacy_source_coverage",
+        "/reviews/0/coverage/capture_byte_verification"
+      ],
+      "uncertainty_or_friction": "Unknown normalized coverage and detailed legacy check declarations coexist. A compact locator-to-inventory navigation aid would help, provided it does not silently claim a verified mapping."
+    }
+  ],
+  "overall_friction": "178658 input bytes (23312/90356/64990) are large for ten questions. Used selective JSON parsing to inspect projected decision/ownership/coverage and relevant record/package fields, rather than dumping all repeated raw content. No input-access blocker or observed truncation in the selected extracts; this does not benchmark a reader given a single full dump. Repetition of record, evidence_package and raw review makes navigation harder. Main friction: empty unresolved_reasons can be mistaken for full remote verification despite live_receipt_status=not_checked; legacy coverage details require deeper navigation. A concise gap/actor/time summary and pointer navigation could improve use without inventing mappings or stronger verification. No source-truth or general comprehension score claimed.",
+  "elapsed_time_basis": "Unknown; no measured trial duration.",
+  "assessment_status": "Not assessed by participant; response and later assessor artifact remain separate."
+}

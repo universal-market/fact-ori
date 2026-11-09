@@ -1,0 +1,10 @@
+{
+  "protocol_sha256": "8141d58d2d3cd04aea366ae4a2fa1111fa0398bae380ac3f6ebeed80d5264571",
+  "rubric_sha256": "7761e6fc786591d3b8ed798ecb305b1034fa315a0ebd53f3ec626b5a6bff9930",
+  "questions": 10,
+  "frozen_inputs": 3,
+  "total_input_bytes": 178658,
+  "all_reference_pointers_resolve": true,
+  "responses_received": 0,
+  "source_commit": "d2b00d86bb83761a3cd3f0349c315d9d55b87846"
+}

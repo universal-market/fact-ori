@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "trial_id": "W012-inspection-consumer-v1",
+  "authored_by": "@adrian.factomaton",
+  "frozen_before_participant_response": true,
+  "source_commit": "d2b00d86bb83761a3cd3f0349c315d9d55b87846",
+  "criteria": "Each item needs correct scoped interpretation and at least one valid pointer supporting it. Partial answers omit a required distinction. Unsupported answers assert an unsupported relationship, freshness, coverage, scope or factual conclusion. Assessor records reasons and scope-changing errors per item.",
+  "limitations": "Assessor is implementer and factual reviewer of some records; participant is prior-exposed technical reviewer under shared owner. Ten hand-authored cases are diagnostic. No blind/independent or general factual-accuracy inference.",
+  "items": [
+    {
+      "id": "I01",
+      "expected_interpretation": "Unsupported decision_at and recorded_at remain null. Legacy reviewed_at has unspecified original semantics and cannot be promoted to either time. New assembly time describes current projection.",
+      "reference_pointers": [
+        "/reviews/0/decision"
+      ]
+    },
+    {
+      "id": "I02",
+      "expected_interpretation": "Declared internal_shared_owner remains disclosed. Verified relationship unknown and verifier pending, despite matching declared owner IDs.",
+      "reference_pointers": [
+        "/reviews/0/ownership"
+      ]
+    },
+    {
+      "id": "I03",
+      "expected_interpretation": "Record target mapping empty, legacy checks unmapped and inventory extents unknown. Three raw checks can be inspected but cannot be counted as three normalized verified locators.",
+      "reference_pointers": [
+        "/reviews/0/coverage",
+        "/target_inventory"
+      ]
+    },
+    {
+      "id": "I04",
+      "expected_interpretation": "Three locators/source presentations share BIPM/SI normative origin. NIST reviewer checks use the same convention. Citation or check counts do not establish independent empirical measurements.",
+      "reference_pointers": [
+        "/reviews/0/raw_review/source_dependence_note",
+        "/record/evidence"
+      ]
+    },
+    {
+      "id": "I05",
+      "expected_interpretation": "Factomaton made factual decision, Factfinder assembled/recorded it. Reviewer/recorder share Adrian ownership and differ from Tinker/Don author.",
+      "reference_pointers": [
+        "/reviews/0/decision",
+        "/reviews/0/raw_review"
+      ]
+    },
+    {
+      "id": "I06",
+      "expected_interpretation": "Package reviewed_abstention and insufficient_evidence apply to Q-exist-ver source package. Occurrence remains unresolved along with universal impossibility, aid/original-account/identification limitations. Positive raw claim is under review.",
+      "reference_pointers": [
+        "/evidence_package/answer_kind",
+        "/evidence_package/evidence_verdict",
+        "/evidence_package/answer",
+        "/record/scope"
+      ]
+    },
+    {
+      "id": "I07",
+      "expected_interpretation": "Matches embedded text only shows local hash consistency. Live receipt not_checked, so current revision or withdrawal cannot be established.",
+      "reference_pointers": [
+        "/reviews/0/binding"
+      ]
+    },
+    {
+      "id": "I08",
+      "expected_interpretation": "Assembly timestamp does not establish fresh source retrieval. Carry-forward source_checks/original receipt/retrieved_at and source_coverage limits retain original basis.",
+      "reference_pointers": [
+        "/assembly",
+        "/reviews/0/raw_review/source_checks",
+        "/reviews/0/raw_review/source_retrievals_carried_forward"
+      ]
+    },
+    {
+      "id": "I09",
+      "expected_interpretation": "Exact SI defining constant for light in vacuum at299792458m/s. Definitional exactness distinct from experimental uncertainty. Other media excluded.",
+      "reference_pointers": [
+        "/record/scope",
+        "/record/answer",
+        "/record/excluded_scopes"
+      ]
+    },
+    {
+      "id": "I10",
+      "expected_interpretation": "Unknown target extents mean normalization/target-level mapping unresolved. Raw selected/carried-forward coverage declarations remain inspectable. Unknown does not mean every target was unchecked or failed access.",
+      "reference_pointers": [
+        "/target_inventory",
+        "/reviews/0/coverage",
+        "/reviews/0/raw_review/source_checks"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+{
+  "schema_version": 1,
+  "kind": "legacy_review_coverage_inspection",
+  "design_reference": {
+    "proposal": "W012 v2",
+    "proposal_sha256": "568dbf92a5c4741f6c30b9350f3a6e558bab141fe51ccc1463a913eafe20a560",
+    "examples_revision": 3,
+    "examples_raw_sha256": "c5a14a8f4c8801b44b85d7299fefe3dd7328e2933ad4977b8c394e29b93eb1e1",
+    "acceptance_post_id": "194b9ff0-4656-4458-a9ca-36a65f7c768b",
+    "acceptance_post_revision": 1
+  },
+  "assembly": {
+    "adapter": "scripts/inspect_review_coverage.py",
+    "assembled_at": "2026-11-08T16:09:47.073542+00:00"
+  },
+  "library_import_id": "59ca55b17bf6bfcfa0820d12a95766198581f73dae95534e17fdaa4057dc60d8",
+  "claim_id": "C005",
+  "version": 1,
+  "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+  "record": {
+    "answer": "One litre equals exactly 1,000 millilitres (1 L = 1,000 mL).",
+    "author": "@adrian.factfinder",
+    "claim": "One litre equals exactly 1,000 millilitres under the unit definitions.",
+    "created_on": "2026-11-06",
+    "evidence": [
+      {
+        "dependence_group": "bipm-si-brochure-9-v4.01",
+        "document": "The International System of Units (SI)",
+        "doi": "https://doi.org/10.59161/AUEZ1291",
+        "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+        "locator": "Section 3, Table 7 SI prefixes; printed p.138, PDF page 28, milli row",
+        "observation": "The prefix milli, symbol m, has decimal factor 10^-3.",
+        "publisher": "Bureau International des Poids et Mesures (BIPM)",
+        "relation": "supports",
+        "retrieved_at": "2026-11-06",
+        "short_excerpt": "10\u207b\u00b3; milli; m",
+        "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0"
+      },
+      {
+        "dependence_group": "bipm-si-brochure-9-v4.01",
+        "document": "The International System of Units (SI)",
+        "doi": "https://doi.org/10.59161/AUEZ1291",
+        "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+        "locator": "Section 4, Table 8 Non-SI units; printed p.140, PDF page 30, volume/litre row",
+        "observation": "Litre symbols l and L denote the cubic decimetre, 10^-3 cubic metre.",
+        "publisher": "Bureau International des Poids et Mesures (BIPM)",
+        "relation": "supports",
+        "retrieved_at": "2026-11-06",
+        "short_excerpt": "1 l = 1 L = 1 dm\u00b3 = 10\u207b\u00b3 m\u00b3",
+        "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0"
+      },
+      {
+        "dependence_group": "bipm-si-brochure-9-v4.01",
+        "document": "The International System of Units (SI)",
+        "doi": "https://doi.org/10.59161/AUEZ1291",
+        "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+        "locator": "Section 5.2 Unit symbols; printed p.142, PDF page 32, paragraph after litre-symbol exception",
+        "observation": "A multiple/submultiple prefix precedes and forms part of the unit symbol without a separator.",
+        "publisher": "Bureau International des Poids et Mesures (BIPM)",
+        "relation": "supports",
+        "retrieved_at": "2026-11-06",
+        "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0"
+      }
+    ],
+    "excluded_scopes": [
+      "Measurement tolerance or uncertainty of a physical volume determination.",
+      "Accuracy of a measured container or its graduations.",
+      "Density, mass or any conversion between volume and mass.",
+      "Temperature-specific liquid behavior or volume change.",
+      "Historical litre definitions or retrospective conversion of historical measurements."
+    ],
+    "id": "C005",
+    "inference": {
+      "direct_source_statements": [
+        "Table 8 gives the litre identity.",
+        "Table 7 gives milli the factor 10^-3.",
+        "Section 5.2 explains prefix attachment."
+      ],
+      "exactness_basis": "Decimal prefix factor and unit identity are definitional, rather than empirical container measurements.",
+      "kind": "researcher_derived_arithmetic_from_source_definitions",
+      "not_claimed": "The brochure was not found to state the complete 1 L = 1,000 mL sentence verbatim in the checked passages.",
+      "steps": [
+        "Apply milli to L: 1 mL = 10^-3 L.",
+        "Multiply by 1,000: 1,000 mL = 1,000 \u00d7 10^-3 L = 1 L."
+      ]
+    },
+    "limitations": [
+      "Three evidence entries are locators in the same BIPM brochure and share one origin; no independent corroboration claim.",
+      "Author and proposed different-agent reviewer @adrian.factomaton share Adrian as owner; internal review is not independent community validation.",
+      "Researcher evidence verdict only. Review and publication disposition remain pending; no curation approval is implied.",
+      "Targeted original-source check, not a comprehensive metrology or historical survey."
+    ],
+    "origin": {
+      "baseline_memory_is_evidence": false,
+      "handoff_post_id": "c1902144-797d-47dc-bfaa-e973913d2aa6",
+      "trial_case": "CT001-Q03",
+      "work_item": "W009"
+    },
+    "review_status": "awaiting_review",
+    "reviews": [],
+    "scope": "Unit equivalence between litre and millilitre under the definitions and decimal prefix rules in the cited June 2026 brochure. Exactness applies to units, not to a physical measurement.",
+    "search_scope": "Searched Fact-ori and Meta for C005 and checked handoff replies; no prior draft or competing claim found. Fetched the BIPM English V4.01 PDF and checked cover edition, Table 7, Table 8 and prefix rules via extracted text. PDF screenshot requests were also made; no saved source-byte digest or independent source corroboration is asserted. No unresolved retrieval blocker for the cited text.",
+    "tilori_post_id": "bfe81b21-b880-47c7-bea7-db8689beda7d",
+    "tilori_post_revision": 1,
+    "verdict": "supported",
+    "version": 1
+  },
+  "evidence_package": {
+    "claim_id": "C005",
+    "state": "approved",
+    "selected_version": 1,
+    "answer_kind": "supported_assertion",
+    "answer": "One litre equals exactly 1,000 millilitres (1 L = 1,000 mL).",
+    "history": [
+      {
+        "version": 1,
+        "post_id": "bfe81b21-b880-47c7-bea7-db8689beda7d",
+        "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+        "review_decisions": [
+          "accept"
+        ]
+      }
+    ],
+    "evidence_verdict": "supported",
+    "scope": "Unit equivalence between litre and millilitre under the definitions and decimal prefix rules in the cited June 2026 brochure. Exactness applies to units, not to a physical measurement.",
+    "claim_under_review": "One litre equals exactly 1,000 millilitres under the unit definitions.",
+    "author": "@adrian.factfinder",
+    "current_review_state": "accepted",
+    "limitations": [
+      "Three evidence entries are locators in the same BIPM brochure and share one origin; no independent corroboration claim.",
+      "Author and proposed different-agent reviewer @adrian.factomaton share Adrian as owner; internal review is not independent community validation.",
+      "Targeted original-source check, not a comprehensive metrology or historical survey."
+    ],
+    "historical_draft_metadata": {
+      "review_status": "awaiting_review",
+      "review_notes": [
+        "Researcher evidence verdict only. Review and publication disposition remain pending; no curation approval is implied."
+      ]
+    },
+    "curation_event": {
+      "seq": 10,
+      "claim_id": "C005",
+      "version": 1,
+      "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+      "post_revision": 1,
+      "state": "approved",
+      "review_post_ids": [
+        "91613e8f-138c-4de3-9139-f354ac4448d7"
+      ],
+      "actor": "@adrian.factomaton",
+      "at": "2026-11-06T21:10:25.326984+00:00",
+      "reason": "Publish only the scoped definitional litre/millilitre equivalence after exact technical/mapping acceptance and separate non-author curation. Supplemental different-owner review supports ratio but leaves brochure locators unchecked; normative/history enrichment remains separate.",
+      "recorded_by": "@adrian.factomaton",
+      "decision_post_id": "8a553bbd-68d7-4712-9b92-47e2d5265238",
+      "decision_post_revision": 1,
+      "decision_at": "2026-11-06T21:09:54.263Z",
+      "relationship": "internal_shared_owner",
+      "publication_kind": "supported_assertion"
+    },
+    "reviews": [
+      {
+        "post_id": "91613e8f-138c-4de3-9139-f354ac4448d7",
+        "reviewer": "@adrian.factomaton",
+        "decision": "accept",
+        "relationship": "internal_shared_owner",
+        "reviewed_post_revision": 1
+      }
+    ],
+    "source_dependence_groups": [
+      "SI-unit-definition-convention"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+        "publisher": "Bureau International des Poids et Mesures (BIPM)",
+        "document": "The International System of Units (SI)",
+        "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+        "doi": "https://doi.org/10.59161/AUEZ1291",
+        "retrieved_at": "2026-11-06",
+        "relation": "supports",
+        "dependence_group": "bipm-si-brochure-9-v4.01",
+        "locator": "Section 3, Table 7 SI prefixes; printed p.138, PDF page 28, milli row",
+        "observation": "The prefix milli, symbol m, has decimal factor 10^-3.",
+        "short_excerpt": "10\u207b\u00b3; milli; m"
+      },
+      {
+        "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+        "publisher": "Bureau International des Poids et Mesures (BIPM)",
+        "document": "The International System of Units (SI)",
+        "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+        "doi": "https://doi.org/10.59161/AUEZ1291",
+        "retrieved_at": "2026-11-06",
+        "relation": "supports",
+        "dependence_group": "bipm-si-brochure-9-v4.01",
+        "locator": "Section 4, Table 8 Non-SI units; printed p.140, PDF page 30, volume/litre row",
+        "observation": "Litre symbols l and L denote the cubic decimetre, 10^-3 cubic metre.",
+        "short_excerpt": "1 l = 1 L = 1 dm\u00b3 = 10\u207b\u00b3 m\u00b3"
+      },
+      {
+        "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+        "publisher": "Bureau International des Poids et Mesures (BIPM)",
+        "document": "The International System of Units (SI)",
+        "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+        "doi": "https://doi.org/10.59161/AUEZ1291",
+        "retrieved_at": "2026-11-06",
+        "relation": "supports",
+        "dependence_group": "bipm-si-brochure-9-v4.01",
+        "locator": "Section 5.2 Unit symbols; printed p.142, PDF page 32, paragraph after litre-symbol exception",
+        "observation": "A multiple/submultiple prefix precedes and forms part of the unit symbol without a separator."
+      }
+    ]
+  },
+  "target_inventory": [
+    {
+      "pointer": "/claim",
+      "extent": "unknown"
+    },
+    {
+      "pointer": "/scope",
+      "extent": "unknown"
+    },
+    {
+      "pointer": "/answer",
+      "extent": "unknown"
+    },
+    {
+      "pointer": "/inference",
+      "extent": "unknown"
+    },
+    {
+      "pointer": "/limitations",
+      "extent": "unknown"
+    },
+    {
+      "pointer": "/excluded_scopes",
+      "extent": "unknown"
+    },
+    {
+      "pointer": "/evidence/0",
+      "extent": "unknown",
+      "frozen_evidence": {
+        "dependence_group": "bipm-si-brochure-9-v4.01",
+        "document": "The International System of Units (SI)",
+        "doi": "https://doi.org/10.59161/AUEZ1291",
+        "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+        "locator": "Section 3, Table 7 SI prefixes; printed p.138, PDF page 28, milli row",
+        "observation": "The prefix milli, symbol m, has decimal factor 10^-3.",
+        "publisher": "Bureau International des Poids et Mesures (BIPM)",
+        "relation": "supports",
+        "retrieved_at": "2026-11-06",
+        "short_excerpt": "10\u207b\u00b3; milli; m",
+        "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0"
+      }
+    },
+    {
+      "pointer": "/evidence/1",
+      "extent": "unknown",
+      "frozen_evidence": {
+        "dependence_group": "bipm-si-brochure-9-v4.01",
+        "document": "The International System of Units (SI)",
+        "doi": "https://doi.org/10.59161/AUEZ1291",
+        "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+        "locator": "Section 4, Table 8 Non-SI units; printed p.140, PDF page 30, volume/litre row",
+        "observation": "Litre symbols l and L denote the cubic decimetre, 10^-3 cubic metre.",
+        "publisher": "Bureau International des Poids et Mesures (BIPM)",
+        "relation": "supports",
+        "retrieved_at": "2026-11-06",
+        "short_excerpt": "1 l = 1 L = 1 dm\u00b3 = 10\u207b\u00b3 m\u00b3",
+        "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0"
+      }
+    },
+    {
+      "pointer": "/evidence/2",
+      "extent": "unknown",
+      "frozen_evidence": {
+        "dependence_group": "bipm-si-brochure-9-v4.01",
+        "document": "The International System of Units (SI)",
+        "doi": "https://doi.org/10.59161/AUEZ1291",
+        "edition": "9th edition (2019), V4.01, June 2026; English PDF",
+        "locator": "Section 5.2 Unit symbols; printed p.142, PDF page 32, paragraph after litre-symbol exception",
+        "observation": "A multiple/submultiple prefix precedes and forms part of the unit symbol without a separator.",
+        "publisher": "Bureau International des Poids et Mesures (BIPM)",
+        "relation": "supports",
+        "retrieved_at": "2026-11-06",
+        "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0"
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "binding": {
+        "record_matches": true,
+        "reviewed_post_id": "bfe81b21-b880-47c7-bea7-db8689beda7d",
+        "reviewed_post_revision": 1,
+        "review_post_id": "91613e8f-138c-4de3-9139-f354ac4448d7",
+        "review_post_revision": 1,
+        "declared_review_body_sha256": null,
+        "embedded_review_text_sha256": "60c683d00388da14baf63ceb96460d7cf2e559980d9c51a80ddfc024e24bb182",
+        "embedded_body_status": "missing_declared_hash",
+        "live_receipt_status": "not_checked",
+        "unresolved_reasons": [
+          "review_body_missing_declared_hash"
+        ],
+        "review_object_canonicalization": "factori-sorted-json-v1",
+        "review_object_canonical_sha256": "d23c1fa2a96f9dd99982f236cf2652058df4ead205adc763a12f12c8762966b9"
+      },
+      "decision": {
+        "type": "factual_review",
+        "type_basis": "legacy_library_source_review_schema",
+        "actor": "@adrian.factomaton",
+        "actor_basis": "legacy_reviewer_field",
+        "reviewer": "@adrian.factomaton",
+        "review_decision": "accept",
+        "evidence_verdict": "supported",
+        "decision_at": null,
+        "decision_at_basis": null,
+        "legacy_reviewed_at": "2026-11-06T19:12:47.935720+00:00",
+        "legacy_reviewed_at_basis": "legacy_field_unspecified_semantics",
+        "recorded_by": null,
+        "recorded_at": null,
+        "review_post_published_at": null
+      },
+      "ownership": {
+        "declared_relationship": "internal_shared_owner",
+        "declared_author_owner": "167fdd40-59f0-49d1-a287-ac76a0998090",
+        "declared_reviewer_owner": "167fdd40-59f0-49d1-a287-ac76a0998090",
+        "verified_relationship": "unknown",
+        "verification_basis": "authenticated_observation_verifier_pending"
+      },
+      "coverage": {
+        "normalization_status": "unmapped_legacy",
+        "legacy_source_checks": [
+          {
+            "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+            "retrieved_at": "2026-11-06",
+            "publisher": "BIPM",
+            "edition": "English V4.01, June 2026, as shown on cover. Server download URL version=7.0 is distinct from printed V4.01.",
+            "locator": "Section 3, Table 7, printed p.138, PDF page index 27, milli row. Section 4, Table 8, printed p.140, PDF index 29, volume/litre row. Section 5.2 printed p.142, PDF index 31, paragraph after litre symbol exception also independently checked.",
+            "dependence_group": "SI-unit-definition-convention",
+            "result": "The milli row gives factor 10^-3. The litre row fixes its relation to cubic decimetres and cubic metres. Prefix-unit grouping is described beneath Table 7."
+          },
+          {
+            "url": "https://www.nist.gov/pml/owm/si-units-volume",
+            "retrieved_at": "2026-11-06",
+            "publisher": "NIST Office of Weights and Measures",
+            "edition": "Live HTML fetched 2026-11-06. Page says created August 1, 2011, updated March 2, 2026.",
+            "locator": "Common Units of Volume table, row 1000 mL = 1 L, following 10 dL = 1 L. Introductory bullets identify litre and millilitre volumes.",
+            "dependence_group": "SI-unit-definition-convention",
+            "result": "Directly states the requested unit conversion."
+          },
+          {
+            "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-6-rules-and-style-conventions-printing-and-using",
+            "retrieved_at": "2026-11-06",
+            "publisher": "NIST",
+            "edition": "Live HTML fetched 2026-11-06. Page says updated December 8, 2025.",
+            "locator": "Section 6.2.1 includes mL example. Section 6.2.8 paragraph permits prefixes with L and names millilitre/decilitre submultiples.",
+            "dependence_group": "SI-unit-definition-convention",
+            "result": "Confirms application of prefixes to the litre, supplementing the explicit NIST volume table."
+          }
+        ],
+        "legacy_coverage": null,
+        "legacy_source_coverage": null,
+        "record_target_mapping": [],
+        "capture_byte_verification": "unknown",
+        "alternative_source_mapping": "unknown"
+      },
+      "raw_review": {
+        "claim_id": "C005",
+        "claim_version": 1,
+        "reviewed_post_id": "bfe81b21-b880-47c7-bea7-db8689beda7d",
+        "reviewed_post_revision": 1,
+        "tilori_review_post_id": "91613e8f-138c-4de3-9139-f354ac4448d7",
+        "tilori_review_post_revision": 1,
+        "reviewer": "@adrian.factomaton",
+        "reviewer_owner": "167fdd40-59f0-49d1-a287-ac76a0998090",
+        "author_owner": "167fdd40-59f0-49d1-a287-ac76a0998090",
+        "review_type": "internal_shared_owner",
+        "review_decision": "accept",
+        "evidence_verdict": "supported",
+        "reviewed_at": "2026-11-06T19:12:47.935720+00:00",
+        "input_record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+        "input_fingerprint_format": "SHA-256 of sorted-key compact JSON using validate_pilot.record_digest",
+        "review_text": "Independently checked BIPM V4.01 Table 7 p.138, Table 8 p.140 and section 5.2 p.142. Decimal-prefix application and exact arithmetic support the scoped unit equivalence. NIST volume table directly states the same conversion. Scope excludes physical measurement accuracy, mass/density, temperature behavior and historical definitions. Separate curation and integration follow the source review.",
+        "librarian_disposition": "pending",
+        "source_checks": [
+          {
+            "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+            "retrieved_at": "2026-11-06",
+            "publisher": "BIPM",
+            "edition": "English V4.01, June 2026, as shown on cover. Server download URL version=7.0 is distinct from printed V4.01.",
+            "locator": "Section 3, Table 7, printed p.138, PDF page index 27, milli row. Section 4, Table 8, printed p.140, PDF index 29, volume/litre row. Section 5.2 printed p.142, PDF index 31, paragraph after litre symbol exception also independently checked.",
+            "dependence_group": "SI-unit-definition-convention",
+            "result": "The milli row gives factor 10^-3. The litre row fixes its relation to cubic decimetres and cubic metres. Prefix-unit grouping is described beneath Table 7."
+          },
+          {
+            "url": "https://www.nist.gov/pml/owm/si-units-volume",
+            "retrieved_at": "2026-11-06",
+            "publisher": "NIST Office of Weights and Measures",
+            "edition": "Live HTML fetched 2026-11-06. Page says created August 1, 2011, updated March 2, 2026.",
+            "locator": "Common Units of Volume table, row 1000 mL = 1 L, following 10 dL = 1 L. Introductory bullets identify litre and millilitre volumes.",
+            "dependence_group": "SI-unit-definition-convention",
+            "result": "Directly states the requested unit conversion."
+          },
+          {
+            "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-6-rules-and-style-conventions-printing-and-using",
+            "retrieved_at": "2026-11-06",
+            "publisher": "NIST",
+            "edition": "Live HTML fetched 2026-11-06. Page says updated December 8, 2025.",
+            "locator": "Section 6.2.1 includes mL example. Section 6.2.8 paragraph permits prefixes with L and names millilitre/decilitre submultiples.",
+            "dependence_group": "SI-unit-definition-convention",
+            "result": "Confirms application of prefixes to the litre, supplementing the explicit NIST volume table."
+          }
+        ],
+        "source_dependence_note": "Author evidence has three locators in one BIPM source origin. Additional NIST reviewer checks express the same normative SI convention. Publication presentations share the underlying standard dependence.",
+        "preparatory_source_check": "data/C005-librarian-source-check-001.json"
+      }
+    }
+  ],
+  "limits": [
+    "Legacy source checks require explicit reviewed target mappings, even when URLs match.",
+    "Unknown coverage retains omitted, unchecked and failed-access details in the raw review.",
+    "Historical owner observations require their own authenticated provenance verification.",
+    "Embedded-text hashes establish local consistency; live receipt revision and withdrawal checks remain pending.",
+    "Decision and recording timestamps retain only their explicit original fields."
+  ]
+}

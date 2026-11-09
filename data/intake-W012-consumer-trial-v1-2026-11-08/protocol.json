@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "trial_id": "W012-inspection-consumer-v1",
+  "author": "@adrian.factomaton",
+  "created_at": "2026-11-08T16:09:47.259303+00:00",
+  "source_commit": "d2b00d86bb83761a3cd3f0349c315d9d55b87846",
+  "entry_point": "python -B scripts/inspect_review_coverage.py CLAIM_ID",
+  "inputs": [
+    {
+      "claim_id": "C005",
+      "path": "data/intake-W012-consumer-trial-v1-2026-11-08/C005-inspection.json",
+      "raw_sha256": "518176988ef95c98dbe9616e324c5ddc683b282dac47a6c3c4502080bea08f9a",
+      "bytes": 23312,
+      "inspection_assembled_at": "2026-11-08T16:09:47.073542+00:00",
+      "record_version": 1,
+      "record_sha256": "b504d25ad24114e3b9bf95886ba0557eaa6920bc3650a37c27cb848f893fbb28",
+      "import_id": "59ca55b17bf6bfcfa0820d12a95766198581f73dae95534e17fdaa4057dc60d8"
+    },
+    {
+      "claim_id": "C009",
+      "path": "data/intake-W012-consumer-trial-v1-2026-11-08/C009-inspection.json",
+      "raw_sha256": "0465495048884a23298f14a28d9dccc9dc1c74befe230ee3925ea351417604ac",
+      "bytes": 90356,
+      "inspection_assembled_at": "2026-11-08T16:09:47.157170+00:00",
+      "record_version": 2,
+      "record_sha256": "eaeddadcf6f5812ed6672fa7633c9db4bf3f474a451a59bffbc21992e0be7e17",
+      "import_id": "59ca55b17bf6bfcfa0820d12a95766198581f73dae95534e17fdaa4057dc60d8"
+    },
+    {
+      "claim_id": "C010",
+      "path": "data/intake-W012-consumer-trial-v1-2026-11-08/C010-inspection.json",
+      "raw_sha256": "35f71bb3b0dafd2f6dbb3def8e74632d3d6362dfcb3425ade2f2176dc17c728b",
+      "bytes": 64990,
+      "inspection_assembled_at": "2026-11-08T16:09:47.248012+00:00",
+      "record_version": 2,
+      "record_sha256": "9f71600732403f19558b6b7bebf188550bd0fd170ba33654eb8dc3d7787e5802",
+      "import_id": "59ca55b17bf6bfcfa0820d12a95766198581f73dae95534e17fdaa4057dc60d8"
+    }
+  ],
+  "participant": "@adrian.factfinder",
+  "prior_exposure": "Participant reviewed the adapter and these records; shared Adrian ownership with implementer/assessor. Diagnostic convenience sample.",
+  "task": "Answer each question using the specified frozen inspection only. Cite JSON pointers into that file and report ambiguity, missing information, navigation effort or truncation. Mark unsupported conclusions unknown. Preserve original outputs.",
+  "questions": [
+    {
+      "id": "I01",
+      "claim_id": "C005",
+      "question": "What original review decision time and original receipt recording time can you establish? Explain the meaning of legacy_reviewed_at."
+    },
+    {
+      "id": "I02",
+      "claim_id": "C005",
+      "question": "What owner relationship is declared, and what owner relationship is verified by this inspection?"
+    },
+    {
+      "id": "I03",
+      "claim_id": "C005",
+      "question": "Which exact frozen evidence targets have normalized checked-coverage mappings? What can the three legacy source-check entries establish about that mapping?"
+    },
+    {
+      "id": "I04",
+      "claim_id": "C005",
+      "question": "How should a consumer interpret the independence of the cited/reviewer sources when reasoning about the unit equivalence?"
+    },
+    {
+      "id": "I05",
+      "claim_id": "C009",
+      "question": "Who made the factual review decision, and who assembled/recorded its receipt?"
+    },
+    {
+      "id": "I06",
+      "claim_id": "C009",
+      "question": "What answer does the selected evidence package justify about a verified unaided Great Wall sighting, and what remains unresolved?"
+    },
+    {
+      "id": "I07",
+      "claim_id": "C009",
+      "question": "What can the embedded-body hash comparison establish about the current live review revision and withdrawal state?"
+    },
+    {
+      "id": "I08",
+      "claim_id": "C009",
+      "question": "What can inspection assembly time establish about source retrieval freshness? Identify the relevant original or carried-forward provenance."
+    },
+    {
+      "id": "I09",
+      "claim_id": "C010",
+      "question": "What scope and type of exactness does the selected speed-of-light record establish?"
+    },
+    {
+      "id": "I10",
+      "claim_id": "C010",
+      "question": "How should a consumer interpret unknown inventory target extents alongside legacy source-check declarations?"
+    }
+  ],
+  "response_format": {
+    "trial_id": "W012-inspection-consumer-v1",
+    "participant": "@adrian.factfinder",
+    "source_commit": "d2b00d86bb83761a3cd3f0349c315d9d55b87846",
+    "input_hashes": {
+      "C005": "518176988ef95c98dbe9616e324c5ddc683b282dac47a6c3c4502080bea08f9a",
+      "C009": "0465495048884a23298f14a28d9dccc9dc1c74befe230ee3925ea351417604ac",
+      "C010": "35f71bb3b0dafd2f6dbb3def8e74632d3d6362dfcb3425ade2f2176dc17c728b"
+    },
+    "prior_exposure": "Describe source/implementation familiarity",
+    "answers": [
+      {
+        "id": "I01",
+        "answer": "text",
+        "evidence_pointers": [
+          "/..."
+        ],
+        "uncertainty_or_friction": "text"
+      }
+    ],
+    "overall_friction": "text",
+    "elapsed_time_basis": "Measured duration if available, otherwise unknown"
+  },
+  "assessment": "Assessor freezes a separate rubric before participant response. Report per-item supported/partial/unsupported and scope-changing errors with cited evidence; retain response and assessment separately. This trial measures interpretation of this output and existing prior-exposed records."
+}
