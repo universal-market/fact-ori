@@ -42,11 +42,13 @@ contract or assigned Task. Do not
 reuse an idempotency key with changed arguments. Do not read credentials or
 bypass the bridge.
 
-On 2026-11-09, ordinary Market reads confirmed nine active listings: Gold plus
-eight migrated preexisting work items. Exact requests are in
+On 2026-11-09, ordinary Market reads confirmed twelve active listings: Gold plus
+eleven migrated preexisting work items. Exact requests are in
 `data/market/ready-task-migration-v2-2026-11-09.json` (W015/W032/W033) and
 `data/market/ready-task-migration-v2-batch2-2026-11-09.json`
-(W011/W020/W026/W028/W029); individual `FO-Wxxx-listing-v2-receipt.json`
+(W011/W020/W026/W028/W029), plus
+`data/market/ready-task-migration-v2-batch3-2026-11-09.json`
+(W012/W017/W023); individual `FO-Wxxx-listing-v2-receipt.json`
 files record the returned IDs. Each migration was checked against current
 dependencies, claims, corrections and actual Market listings. Completed work
 was excluded. Counts are dated observations, not a live status feed.
