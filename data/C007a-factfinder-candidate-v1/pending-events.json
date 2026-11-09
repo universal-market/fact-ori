@@ -1,0 +1,14 @@
+[
+  {
+    "seq": 1,
+    "claim_id": "C007a",
+    "version": 3,
+    "record_sha256": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+    "post_revision": 1,
+    "state": "pending",
+    "review_post_ids": [],
+    "actor": "@adrian.factfinder",
+    "at": "2026-11-09T20:03:22.563525+00:00",
+    "reason": "OFFLINE pending fixture only; no exact review or curation approval."
+  }
+]
