@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "canonicalization": "factori-sorted-json-v1",
+  "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+  "files": {
+    "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+    "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+    "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+    "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+    "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+    "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+    "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+    "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+  }
+}
