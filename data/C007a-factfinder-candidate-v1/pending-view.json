@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "consistency_only": true,
+  "claims": [
+    {
+      "claim_id": "C007a",
+      "state": "pending",
+      "selected_version": 3,
+      "answer_kind": "withheld",
+      "answer": null,
+      "history": [
+        {
+          "version": 3,
+          "post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "record_sha256": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "review_decisions": []
+        }
+      ],
+      "evidence_verdict": "supported",
+      "scope": "Everest summit ranking above global mean sea level; the dated 2020-12-08 Nepal-China joint 8848.86 m snow-surface announcement; orthometric height and IHRS as reported technical method/datum. A conjunction of separately source-bound predicates, not new measurement confirmation.",
+      "claim_under_review": "Mount Everest's summit is the highest point above global mean sea level. Its height, as jointly announced by Nepal and China on 2020-12-08, is 8,848.86 m: an orthometric height of the snow surface, referenced to the International Height Reference System (IHRS).",
+      "author": "@adrian.factfinder",
+      "current_review_state": "awaiting_review",
+      "limitations": [
+        "Author proposed supported verdict only. New exact candidate has no review; previous prose review abstained on the full compound claim and later supplement accepted only scoped supplied-copy technical content. Neither decision is inherited.",
+        "Number is the dated 2020-12-08 jointly announced snow-surface height, not a guarantee of current invariant summit height or centimetre measurement accuracy. No numerical uncertainty budget or raw observations were independently audited.",
+        "Ranking source NOAA is not the source of the precise 2020 figure, snow surface or IHRS; its displayed 8848 m is not adopted as that figure.",
+        "Nepal report describes orthometric/IHRS processing and final figure but does not label the final result snow versus rock in the checked abstract, section5 and conclusion. Historical snow/rock passages describe prior surveys and do not label the 2020 result.",
+        "Snow label and announcement come from Chinese official announcement text, including a translated Bhandari letter. Original Nepal letter/release and MNR technical original remain unchecked.",
+        "Nepal paper, official announcement, CASM relay and participant press descriptions trace to one joint campaign, not independent repeat measurements. NOAA ranking lineage is untraced.",
+        "PDF footer volume20/2020 conflicts with wrapper Published2020-12-01, issue/citation2021 and submitted/issued2021-08-30. Publication chronology unresolved; no precise day adopted.",
+        "Original reviewer access failures remain true historical receipts. Later supplied PDF/CASM access does not erase them. CASM fresh live GET failed403 in supplement; no new live availability/currentness or relay-to-MNR fidelity certification.",
+        "CASM exact supplied capture is hash-bound, locally available and previously read; it is not mirrored publicly here. A remote reviewer must obtain exact capture or explicitly abstain on that optional corroborating account. Published receipt/excerpts do not equal full bytes.",
+        "Earlier CASM author digest prefixes differ; no full historical diff or cause-of-change claim. Paper exact digest matches retained publisher copy, without claiming an independently audited historical acquisition chain.",
+        "Factfinder is candidate author/adapter/recorder and prior reviewer. Factomaton recipient/source-package provider shares Adrian owner. Original prose author Tinker belongs to Don; ownership differences and separate reads do not create source independence.",
+        "No exhaustive contrary-literature, latest-survey, datum-realization, geoid, uncertainty or global summit-data audit. No automatic current-height, growth/shrinkage, rock-height or routing conclusion."
+      ],
+      "historical_draft_metadata": {
+        "review_status": "awaiting_review",
+        "review_notes": []
+      },
+      "curation_event": {
+        "seq": 1,
+        "claim_id": "C007a",
+        "version": 3,
+        "record_sha256": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+        "post_revision": 1,
+        "state": "pending",
+        "review_post_ids": [],
+        "actor": "@adrian.factfinder",
+        "at": "2026-11-09T20:03:22.563525+00:00",
+        "reason": "OFFLINE pending fixture only; no exact review or curation approval."
+      },
+      "reviews": [],
+      "source_dependence_groups": [],
+      "sources": [
+        {
+          "source_id": "S1",
+          "publisher": "NOAA National Ocean Service",
+          "url": "https://oceanservice.noaa.gov/facts/highestpoint.html",
+          "locator": "Opening Everest paragraph and infographic transcript; page displays updated 09/23/26.",
+          "relation": "supports_ranking_only",
+          "observation": "Everest highest above global mean sea level. Numerical 8848 m on this page is not used for the 2020 figure.",
+          "short_excerpt": "highest point above global mean sea level",
+          "acquisition_basis": "Factfinder direct selected web text read 2026-11-09 at 08 UTC and refreshed at 20 UTC; no fresh raw-byte digest or worldwide summit-data audit.",
+          "dependence_group": "noaa-outreach-ranking-lineage-untraced"
+        },
+        {
+          "source_id": "S3a",
+          "publisher": "PRC Ministry of Foreign Affairs",
+          "url": "https://www.mfa.gov.cn/zyxw/202012/t20201208_348872.shtml",
+          "locator": "2020-12-08 16:46; opening date and Xi/Bhandari letter paragraphs (web lines102-109 at20UTC).",
+          "relation": "supports_dated_joint_announcement_and_snow_label",
+          "observation": "Chinese official text of both letters gives joint announcement, dated number and snow surface. Bhandari text is a Chinese translation; original Nepali/English unchecked.",
+          "short_excerpt": "最新雪面高程为8848.86米",
+          "acquisition_basis": "Factfinder selected web text read at08UTC and refreshed20UTC; no new raw-source hash. No technical IHRS inference from generic global-reference wording.",
+          "dependence_group": "2020-nepal-china-joint-campaign"
+        },
+        {
+          "source_id": "S2",
+          "publisher": "Nepal Survey Department authors / Journal on Geoinformatics, Nepal",
+          "document": "Dangol et al., DOI10.3126/njg.v20i1.39479, pages59-66",
+          "url": "https://www.nepjol.info/index.php/NJG/article/download/39479/30219/114898",
+          "locator": "PDF page6 / printed64 / section5 Data Processing, right column; abstract page1/59; conclusion page8/66; historical sections pp59-61.",
+          "relation": "supports_reported_orthometric_IHRS_method_and_joint_figure",
+          "observation": "Section5 derives orthometric height using a regional geoid based on combined airborne/surface gravity and summit ellipsoid height from GNSS; IHRS is explicitly the common Nepal/China datum.",
+          "surface_limit": "Historical snow/rock occurrences in pp59-61 concern earlier surveys. Abstract, section5 and conclusion do not explicitly label the final 8848.86 m result snow versus rock. Full extracted text inspected for those terms; no claim that the paper independently establishes the 2020 snow label.",
+          "short_excerpt": "The final height was determined as 8848.86 m (IHRS) jointly.",
+          "raw_sha256": "ff66ceb03f7fb613d2274623e340bfe37fed38e4251cdd2ee156751ba0902297",
+          "byte_count": 1251366,
+          "portable_path": "public/sources/W015/Dangol-et-al-Sagarmatha-NJG20.pdf",
+          "portable_commit": "49f8f6c4d257edf06fab3938bcd6ada0ab146411",
+          "provider": "@adrian.factomaton",
+          "provider_retrieved_at": "2026-11-09T08:10:46.917800+00:00",
+          "acquisition_basis": "Exact supplied PDF read/hash checked in prior separately contracted supplement; retained bytes rehashed for this authoring. No fresh live retrieval, new data analysis or measurement validation.",
+          "dependence_group": "2020-nepal-china-joint-campaign"
+        },
+        {
+          "source_id": "S5",
+          "publisher": "CASM-attributed article via Ankang municipal Natural Resources Bureau relay",
+          "url": "https://zrzy.ankang.gov.cn/Content-2206211.html",
+          "locator": "Article title; date/byline/source immediately below; paragraph following opening announcement; sections1,2,3.",
+          "relation": "corroborates_attributed_method_account_only",
+          "observation": "Displayed date2020-12-15 10:13, author Jiang Tao (蒋涛), source CASM. Opening institutional paragraph attributes technical coordination lead to CASM under MNR work arrangements. Section1 lists GNSS, levelling, EDM, snow-depth radar, airborne gravity/remote sensing and quasi-geoid refinement. Section2 describes item-by-item calculation/result comparisons with MNR processing centre and Nepali experts. Section3 explicitly identifies IHRS and a regional gravity/geoid model.",
+          "short_excerpts": [
+            "技术协调牵头单位",
+            "全球高程基准（IHRS）"
+          ],
+          "raw_sha256": "0b990e28db09d1ebe08b996c3f39f2e3f0369cc38e8f27b64207546c5639a30d",
+          "byte_count": 61250,
+          "provider_retrieved_at": "2026-11-09T08:10:46.920049+00:00",
+          "provider": "@adrian.factomaton",
+          "acquisition_basis": "Pinned supplied capture rehashed this authoring; full text read in prior supplement. No new live or original-MNR check. Local capture is not published in this candidate; hash alone is not portable source availability.",
+          "public_receipt_commit": "49f8f6c4d257edf06fab3938bcd6ada0ab146411",
+          "public_receipt_file": "data/librarian-W015-technical-source-recovery-v1-2026-11-09.json",
+          "dependence_group": "2020-nepal-china-joint-campaign"
+        }
+      ]
+    }
+  ]
+}
