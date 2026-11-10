@@ -1,0 +1,463 @@
+{
+  "reviewed_commit": "8d0600725a25626012f17d6fa5324a8b904ddfe5",
+  "checks_passed": 49,
+  "results": [
+    {
+      "name": "identifier:'C0'",
+      "pass": true,
+      "detail": {
+        "accepted": true
+      }
+    },
+    {
+      "name": "identifier:'C004'",
+      "pass": true,
+      "detail": {
+        "accepted": true
+      }
+    },
+    {
+      "name": "identifier:'C007a'",
+      "pass": true,
+      "detail": {
+        "accepted": true
+      }
+    },
+    {
+      "name": "identifier:'C13'",
+      "pass": true,
+      "detail": {
+        "accepted": true
+      }
+    },
+    {
+      "name": "identifier:'C0001z'",
+      "pass": true,
+      "detail": {
+        "accepted": true
+      }
+    },
+    {
+      "name": "identifier:'W026-A'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:''",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'c004'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C004AA'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C004A'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C004aa'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C004\\n'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C004\\r'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C004\\r\\n'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C004\\u2028'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C004\\u2029'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:' C004'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C004 '",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C\u0664'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C\uff14'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'\uff23004'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C-1'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C+1'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C1.0'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C1/a'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C1%0A'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:'C1\\x00'",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:None",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:1",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:True",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:[]",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "identifier:{}",
+      "pass": true,
+      "detail": {
+        "accepted": false
+      }
+    },
+    {
+      "name": "http-path-domain",
+      "pass": true,
+      "detail": [
+        {
+          "id": "C0",
+          "raw": true,
+          "path": true
+        },
+        {
+          "id": "C004",
+          "raw": true,
+          "path": true
+        },
+        {
+          "id": "C007a",
+          "raw": true,
+          "path": true
+        },
+        {
+          "id": "C13",
+          "raw": true,
+          "path": true
+        },
+        {
+          "id": "C0001z",
+          "raw": true,
+          "path": true
+        },
+        {
+          "id": "W026-A",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "c004",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C004AA",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C004A",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C004aa",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C004\n",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C004\r",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C004\r\n",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C004\u2028",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C004\u2029",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": " C004",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C004 ",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C\u0664",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C\uff14",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "\uff23004",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C-1",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C+1",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C1.0",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C1/a",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C1%0A",
+          "raw": false,
+          "path": false
+        },
+        {
+          "id": "C1\u0000",
+          "raw": false,
+          "path": false
+        }
+      ]
+    },
+    {
+      "name": "raw-http-regex-domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "unselected-record:build_snapshot",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "unselected-record:export_public",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "historical-record:build_snapshot",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "historical-record:export_public",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "claim-route:build_snapshot",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "claim-route:export_public",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "empty:both-exports",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "clarification:both-exports",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "suffix-history:both-exports",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "real-unselected-task-local-passes-lower-level",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "real-unselected-task-local-rejected:build_snapshot",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "real-unselected-task-local-rejected:export_public",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "checked-in-public-snapshot-serialization-observed",
+      "pass": true,
+      "detail": {
+        "cli_serialization_byte_equal": false,
+        "cli_bytes_sha256": "2e3dec7cae705a0fdd14ff625ebc6ad2bb5bad8731ec3d9ff96ff371e4bb82e8",
+        "checked_in_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+        "ascii_escaped_indented_equal": true
+      }
+    },
+    {
+      "name": "public-snapshot-object-reproduction",
+      "pass": true,
+      "detail": null
+    }
+  ]
+}
