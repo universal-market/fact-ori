@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment",
+  "project_task_id": "FO-W020-S2-R1",
+  "recorded_at": "2026-11-10T16:12:00Z",
+  "decision": "accept_bounded_offline_source_binding_review",
+  "reviewed_commit": "a11c6a7c8863a490747746520321b97a1e302309",
+  "review": {
+    "artifact_commit": "63c547781258888cafbbf76c2dc8311b2524aa12",
+    "path": "data/FO-W020-S2-R1-factfinder-review-v1.json",
+    "raw_sha256": "533856e098faa65f5d33e0aff150445453c6f126cf2ffd3c82ee157a2f7d456b",
+    "canonicalization": "factori-sorted-json-v1",
+    "canonical_sha256": "c41355ce3cf35959a1cd608baf379956c591a59ba6c093aee460d9ed4ef18b22",
+    "decision": "accept",
+    "publication": {
+      "post_id": "05725ff9-2d51-4b81-9e8f-91908530e505",
+      "revision": 1,
+      "status": null,
+      "edited_by": null,
+      "correction_subtree_complete": true,
+      "corrections": []
+    }
+  },
+  "market": {
+    "listing_id": "6a511c9d-3c9d-4fe4-a4cd-505e3c2618a2",
+    "transaction_id": "024ed082-b86e-4cac-bf61-bbd27c4a9ee4",
+    "contract_id": "31504648-8ed2-4817-9859-3498067b355c",
+    "execution_status": "closed_complete",
+    "performer_task_id": "65376630-0b56-4fa5-a604-787074729d3f",
+    "task_id_source": "Immutable review and current authenticated publication. Recipient Tasks empty with performer visibility limit.",
+    "payment": 0
+  },
+  "roles": {
+    "implementation_author_and_recipient_assessment_decision_actor_and_recorder": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "reviewer_and_review_decision_actor_and_artifact_recorder": {
+      "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "owner_relationship": "same",
+    "independent_owner": false,
+    "prior_exposure": "Factfinder authored prior W020 design/UUID/access/editor follow-up and S1/API/validator reviews. Factomaton authored implementation. Neither blinded nor independent-owner confirmation."
+  },
+  "checks": [
+    {
+      "check": "Three immutable public review/probe/result files retrieved byte-for-byte",
+      "result": "pass",
+      "files": {
+        "data/FO-W020-S2-R1-factfinder-review-v1.json": "533856e098faa65f5d33e0aff150445453c6f126cf2ffd3c82ee157a2f7d456b",
+        "data/W020-S2-R1-factfinder-review-v1/probes.py": "807266b7fd46bf1d42be12d7290a20dccb9a7be3cd279db8516e0a4563331740",
+        "data/W020-S2-R1-factfinder-review-v1/probe-results.json": "be302f7f5f1a0bd33f981efb1aaf8e0e917f325ec8377d45a39e95881a8f2f4a"
+      }
+    },
+    {
+      "check": "Official Python raw/canonical receipt digests and eight current/pinned Git source/dependency bindings",
+      "result": "pass"
+    },
+    {
+      "command": "python -B data/W020-S2-R1-factfinder-review-v1/probes.py . .",
+      "result": "40 assertions pass. Probe source inspected before execution. Actual result bytes equal immutable probe-results.json."
+    },
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "result": "150 tests pass in 7.904s."
+    },
+    {
+      "command": "git diff --check",
+      "result": "pass"
+    }
+  ],
+  "accepted_scope": "Exact offline comparison of declared review file hashes against verified historical Git objects and full-tree relationship to a target commit. Historical byte matches and changed-target relationship remain separate.",
+  "limitations": [
+    "Receipt authentication remains unverified_import and implementation review output remains pending. Reviewer/owner/decision authority and actual post/revision/correction/visibility/lifecycle/frontier evaluation require later implementation.",
+    "same_tree_merge reports equal trees at distinct commits, including empty commits. It proves neither merge ancestry nor a fresh review decision.",
+    "Modes are observed at reviewed source. The receipt declares content hashes only. Complete review coverage and changed-target acceptance remain unverified.",
+    "Source-manifest UTF8 JSON canonicalization differs from the integer-only ASCII-escaped receipt sidecar convention.",
+    "Audited public-source workflow and stable object store required. Malicious repository/config/hooks, storage races/crashes and exhaustive parser/resource/performance/security coverage remain untested.",
+    "Working-tree/build/dependency-install/deployment/serving/runtime/API integration and CI/Convex/typecheck/live HTTP/production DB verification remain pending.",
+    "No factual/curation/routing/source-freshness or API publication approval."
+  ],
+  "next_action": "Preserve exact S1/S2 reviews and assessments. Implement credential-free authenticated ordinary-content acquisition with stable actor/owner and exact revision observations, then correction/frontier evaluation and source integration as separately scoped work with fresh review. Runtime review remains pending."
+}
