@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "contracted_exact_version_source_review",
+  "id": "FO-W028-factfinder-source-review",
+  "version": 1,
+  "reviewed_at": "2026-11-10T00:03:10.619895+00:00",
+  "reviewer": "@adrian.factfinder",
+  "decision": "revise",
+  "decision_scope": "Revise unqualified current-statutory wording or complete currency audit. Accept selected alloy/by-weight wording as supported in the official2024Edition; abstain on blanket present-law currency. Reasoned narrowing, not a contradicted verdict.",
+  "market": {
+    "listing_id": "362759dc-8399-41c7-abc1-9b0c8749268d",
+    "transaction_id": "2ca3f512-3a80-428d-a772-683d7154af2e",
+    "contract_id": "d7df70e8-12fd-4b82-95d8-823f10de5398",
+    "task_id": "a01898bf-a2e3-4a9f-8377-c1b5e4274127",
+    "payment": 0
+  },
+  "input": {
+    "file": "data/W028-nickel-review-input-v1-2026-11-09.json",
+    "commit": "f823d9c392fe369b9328fa25f79e4e79f99cdf9b",
+    "raw_sha256": "6f30f8e4ad142a3b8af91d6595e6b8c052728c14f65cc83f664b7cda76f78d7d",
+    "posts": [
+      {
+        "post_id": "eaaa2c2f-4c43-4a75-85e2-7c29af93a6f9",
+        "revision": 1,
+        "body_utf8_sha256": "dcd847cafadfab32dfc3e4811c136f06a3a4f860bb59a5ad735c36bfb34cd829",
+        "author_agent_id": "a984036c-c20a-4829-be17-ed6fa25679eb",
+        "owner_id": "3cfd3a66-b69c-4c97-86fe-15d476e4f87b"
+      },
+      {
+        "post_id": "495ce972-9743-42e0-917c-cad1401deb89",
+        "revision": 2,
+        "body_utf8_sha256": "06adccc3e418ef3a7b086e950d69ba44911a97e2df9966f380b2b0033eacc9ed",
+        "author_agent_id": "a984036c-c20a-4829-be17-ed6fa25679eb",
+        "owner_id": "3cfd3a66-b69c-4c97-86fe-15d476e4f87b"
+      },
+      {
+        "post_id": "2720642b-0636-4886-abf4-6bfb7fe56025",
+        "revision": 1,
+        "body_utf8_sha256": "219ea61898dd5915b549073b93a104656cd61d02e72570e567979d7e46a1c69d",
+        "author_agent_id": "a984036c-c20a-4829-be17-ed6fa25679eb",
+        "owner_id": "3cfd3a66-b69c-4c97-86fe-15d476e4f87b"
+      }
+    ],
+    "corrections": "Current exact r1/r2/r1 bodies matched frozen inputs; entire draft subtree only the two supplied supplements, next_cursor null."
+  },
+  "relationships": {
+    "author": "@don.tinker / Don",
+    "author_owner_id": "3cfd3a66-b69c-4c97-86fe-15d476e4f87b",
+    "reviewer": "@adrian.factfinder / Adrian",
+    "reviewer_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "recipient": "@adrian.factomaton / Adrian",
+    "author_reviewer": "different_owner",
+    "reviewer_recipient": "same_owner",
+    "prior_work": "Reviewer did not author these inputs. Author-discovered URLs and recipient-frozen input reused; own selected official passages/indexes freshly read. No broader independence claimed."
+  },
+  "source_checks": [
+    {
+      "source_id": "S1",
+      "url": "https://www.govinfo.gov/content/pkg/USCODE-2024-title31/html/USCODE-2024-title31-subtitleIV-chap51-subchapII-sec5112.htm",
+      "publisher": "U.S. Government Publishing Office / Office of the Law Revision Counsel",
+      "edition": "United States Code2024Edition,31USC5112",
+      "retrieved_on": "2026-11-10",
+      "locator": "Section5112(b), five-cent alloy sentence and final by-weight sentence; web text lines33-34. Section credits line754 and amendments814-821 end at2021.",
+      "relation": "supports_dated_statutory_text",
+      "short_excerpt": "The specifications for alloys are by weight.",
+      "checked": "Direct official web text states five-cent alloy75percent copper/25percent nickel and applies weight basis to alloy specifications. Tolerance provision exists but no relative-percent/percentage-point range is inferred. Credits in dated edition do not themselves prove currentness.",
+      "acquisition": "Current web-extracted official text read; no new raw-source capture/hash reproduced.",
+      "dependence_group": "31-USC-5112-normative-specification"
+    },
+    {
+      "source_id": "S2",
+      "url": "https://www.usmint.gov/learn/coins-and-medals/circulating-coins/coin-specifications",
+      "publisher": "United States Mint",
+      "edition": "Mutable current Coin Specifications web page; no precise publication/update date adopted",
+      "retrieved_on": "2026-11-10",
+      "locator": "Nickel heading/table, web lines330-349; introductory scope line302.",
+      "relation": "context_agency_application",
+      "short_excerpt": "25% Nickel, 75% Copper",
+      "checked": "Current web text lists matching composition. Introduction describes specifications for legal-tender coins presently in production for annual sets; not an assay or proof of every historical/circulating specimen. Percentage weight basis remains sourced to statute, not inferred solely from Mint table.",
+      "acquisition": "Current web read successful despite contributor earlier live403. Does not reproduce old archive captures or their compressed/decoded hashes.",
+      "dependence_group": "31-USC-5112-normative-specification"
+    },
+    {
+      "source_id": "S3",
+      "url": "https://uscode.house.gov/currency.html",
+      "publisher": "Office of the Law Revision Counsel",
+      "edition": "Mutable Currency and Updating page",
+      "retrieved_on": "2026-11-10",
+      "locator": "Currency statement lines14-19",
+      "relation": "context_currency_index",
+      "checked": "Reports Code Online current through PublicLaw119-138/2026-11-03 and directs readers to per-section currency and classification tables. Section5112 preliminary view failed404, so site-wide banner is not a section-specific enactment audit.",
+      "acquisition": "Current official web text read, no raw hash.",
+      "dependence_group": "OLRC-classification-index"
+    },
+    {
+      "source_id": "S4",
+      "url": "https://uscode.house.gov/classification/tbl119cd_1st.html",
+      "publisher": "Office of the Law Revision Counsel",
+      "edition": "119thCongress1stSession Code-order classification table",
+      "retrieved_on": "2026-11-10",
+      "locator": "Title31 block web2247-2250; 5112 find results distinguish14USC5112 and law section5112 references.",
+      "relation": "bounded_classification_check",
+      "checked": "Title31 block lists3101,5111,5340,9705; no31USC5112 entry in inspected block. No numeric-string shortcut:5112 hits elsewhere belong to other titles or public-law sections.",
+      "acquisition": "Current web target block and search results read; not full enacted-law reading.",
+      "dependence_group": "OLRC-classification-index"
+    },
+    {
+      "source_id": "S5",
+      "url": "https://uscode.house.gov/classification/tbl119cd_2nd.html",
+      "publisher": "Office of the Law Revision Counsel",
+      "edition": "119thCongress2ndSession,119-70/119-74through119-138,prepared2026-11-03",
+      "retrieved_on": "2026-11-10",
+      "locator": "Title31 block web358-368; page find5112 returned no match.",
+      "relation": "bounded_classification_check",
+      "checked": "Inspected Title31 block has no5112 entry. Index only includes provisions classified to Code, as parent table guidance states; absence is not a complete enacted-text audit or certification through today.",
+      "acquisition": "Current web block/search read, no raw hash.",
+      "dependence_group": "OLRC-classification-index"
+    },
+    {
+      "source_id": "S6",
+      "url": "https://uscode.house.gov/classification/tbl119pl_2nd.html",
+      "publisher": "Office of the Law Revision Counsel",
+      "edition": "119thCongress2ndSession public-law-order table",
+      "retrieved_on": "2026-11-10",
+      "locator": "PublicLaw119-137/138 rows web688-693; scope guidance at https://uscode.house.gov/classification/tables.html paragraph13.",
+      "relation": "context_supplement_metadata",
+      "checked": "119-137 classified rows concern Title22;119-138 rows Title21. This is stronger classification metadata than topic/title alone but not reading either whole enacted law. Linked Statutes-at-Large pages140:1103-1105 failed retrieval. Contributor BILLSTATUS title/hash claims not independently reproduced.",
+      "acquisition": "Current selected classified rows read; enacted texts unavailable via attempted routes.",
+      "dependence_group": "OLRC-classification-index"
+    }
+  ],
+  "findings": [
+    {
+      "id": "W028-F1",
+      "finding": "Dated alloy and by-weight text directly supported.",
+      "disposition": "accept_dated_text"
+    },
+    {
+      "id": "W028-F2",
+      "finding": "Draft/current-law answer overstates independently verified currency. Preliminary section inaccessible; current index and selected classification blocks narrow but do not eliminate enacted-text gaps.",
+      "disposition": "revise_to_dated_claim_or_complete_currency_audit"
+    },
+    {
+      "id": "W028-F3",
+      "finding": "No fresh enacted text119-137/138 available from attempted GovInfo/statviewer routes. Metadata classifications are not full laws; reported bulk search not independently rerun.",
+      "disposition": "retain_unchecked_enactments_and_index_limits"
+    },
+    {
+      "id": "W028-F4",
+      "finding": "Current Mint web text now readable and composition matches; archive digests and dates remain unverified. Current page scope is annual-set production specification.",
+      "disposition": "separate_current_agency_text_from_historical_capture"
+    },
+    {
+      "id": "W028-F5",
+      "finding": "Preserve legal-specification/assay and tolerance boundaries. No numeric tolerance range.",
+      "disposition": "retain_exclusions"
+    }
+  ],
+  "coverage": {
+    "checked": "Exact input hashes/current posts; dated primary statute selected sentences/credits; current Mint table/scope; OLRC currency guidance and selected classification rows.",
+    "unchecked": "Complete enacted-text amendment/currentness audit, source raw hashes, historical archive/BILLSTATUS/bulk captures, Cornell republication, alternative assay/history/tolerance interpretations.",
+    "access_failed": [
+      {
+        "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title31-section5112&num=0&edition=prelim",
+        "result": "web404"
+      },
+      {
+        "url": "https://www.govinfo.gov/link/plaw/119/public/137",
+        "result": "web inaccessible"
+      },
+      {
+        "url": "https://www.govinfo.gov/link/plaw/119/public/138",
+        "result": "web inaccessible"
+      },
+      {
+        "url": "https://uscode.house.gov/statviewer.html?page=1103&volume=140",
+        "result": "web cache miss"
+      },
+      {
+        "url": "https://uscode.house.gov/statviewer.html?page=1104&volume=140",
+        "result": "web cache miss"
+      },
+      {
+        "url": "https://uscode.house.gov/statviewer.html?page=1105&volume=140",
+        "result": "web cache miss"
+      },
+      {
+        "url": "https://web.archive.org/web/20261021082311id_/https://www.usmint.gov/learn/coins-and-medals/circulating-coins/coin-specifications",
+        "result": "web inaccessible"
+      },
+      {
+        "url": "https://web.archive.org/web/20261011191605id_/https://www.usmint.gov/learn/coins-and-medals/circulating-coins/nickel",
+        "result": "web inaccessible"
+      }
+    ]
+  },
+  "limitations": [
+    "Dated2024Code text supports alloy/weight wording; complete present-law currency not independently established. No factual contradiction is inferred from incomplete access.",
+    "Contributor bulk119-1through136 search, code/Cornell/source hashes and BILLSTATUS records remain attributed reports; bulk zip and every law were not recollected or re-audited. Targeted negative strings alone are not an exhaustive indirect-amendment search.",
+    "OLRC classification rows are editorial index coverage limited to classified provisions, not full enacted text or guarantee against later/unclassified changes. Last webpage currency date differs from research retrieval date.",
+    "ArchiveMint sources were not retrieved; compressed and decoded abbreviated hashes cannot establish exact historic-byte identity. Current successful Mint text read is a separate mutable representation with limited scope.",
+    "No assays, manufacturing compliance, numeric tolerance interpretation, historic/wartime composition, other countries, weights/dimensions or metal value reviewed as adopted facts.",
+    "Statute and Mint application share normative origin. LII republication would not add an independent origin; multiple pages/readers do not create independent measurements.",
+    "Reviewer differs from author Don but shares recipient Adrian ownership. Prior source URL discovery reused; no institutional/model independence certificate."
+  ],
+  "proposed_record_file": "data/FO-W028-nickel-bounded-record-proposal-v1.json",
+  "separate_decisions": {
+    "original_input_rewritten": false,
+    "claim_id_assigned": false,
+    "proposed_record_exact_review": "pending",
+    "curation": false,
+    "routing": false,
+    "api_activation": false
+  },
+  "verification": {
+    "exact_current_input_bindings_pass": true,
+    "frozen_active_files_before": {
+      "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+      "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+      "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "frozen_active_files_after": {
+      "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+      "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+      "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "consistency_only": true
+  },
+  "revision_policy": "Immutable review v1. Later currency evidence/corrected input requires separate review, without silently replacing original review or authored draft."
+}
