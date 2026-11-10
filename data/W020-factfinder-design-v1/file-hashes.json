@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "canonicalization": "factori-sorted-json-v1",
+  "files": {
+    "README.md": "367b0e3389196e023e7904d78a45c96e8ee39ff0f229bd35ff5d6971253bccca",
+    "evaluate.py": "578ac2d9aefceee0a52fc689ef4320950bf57c93b4d836aa7982ab62e39528cf",
+    "fixtures.json": "fadcd99551e79f3af082eb0006a43f7b7798e5424e069e087620bd79a8f9ba26",
+    "run.json": "eb7a5e88b99c66bba15e5dab00eee3afc4fe2aeb4fb8c447cc9456416170e2fa",
+    "verification.json": "3d5d2fbd5d952aa89f1779a4c7a7b6f529ee6e6c2b19036b179d27912afb8274"
+  }
+}
