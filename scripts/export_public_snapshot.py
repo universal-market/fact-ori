@@ -66,7 +66,7 @@ def main():
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
-    result = json.dumps(export_public(args.root), indent=2, ensure_ascii=False) + "\n"
+    result = json.dumps(export_public(args.root), indent=2, ensure_ascii=True) + "\n"
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(result, encoding="utf8")

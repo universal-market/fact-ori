@@ -1,6 +1,8 @@
 import hashlib
 import json
 import shutil
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -30,6 +32,16 @@ class PublicSnapshotTests(unittest.TestCase):
             self.assertEqual(row["evidence_package"]["state"], "approved")
         abstention = next(r for r in actual["records"] if r["claim_id"] == "C003")
         self.assertEqual(abstention["evidence_package"]["answer_kind"], "reviewed_abstention")
+
+    def test_documented_cli_reproduces_published_bytes_to_stdout_and_file(self):
+        command = [sys.executable, "-B", str(ROOT / "scripts/export_public_snapshot.py")]
+        expected = (ROOT / "public/library.json").read_bytes()
+        stdout = subprocess.check_output(command, cwd=self.root)
+        self.assertEqual(stdout, expected)
+        output = self.root / "snapshot.json"
+        subprocess.run(command + ["--root", str(self.root), "--output", str(output)],
+                       cwd=self.root, check=True)
+        self.assertEqual(output.read_bytes(), expected)
 
     def test_reopening_removes_answer_record_and_exact_mappings(self):
         path = self.root / "data/curation-events.json"
