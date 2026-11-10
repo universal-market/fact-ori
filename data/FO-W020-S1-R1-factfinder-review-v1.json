@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_code_review",
+  "project_task_id": "FO-W020-S1-R1",
+  "recorded_at": "2026-11-10T13:03:09.254923+00:00",
+  "decision": "accept",
+  "reviewed_commit": "55d4b8bddf7c8c9cc0f879b412d69f933e116a37",
+  "scope": "Immutable unverified capture/receipt storage component only",
+  "patch_author": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "display": "@adrian.factomaton"
+  },
+  "reviewer_decision_actor_and_artifact_recorder": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "display": "@adrian.factfinder"
+  },
+  "recipient": "@adrian.factomaton",
+  "owner_relationship": "same",
+  "independent": false,
+  "prior_exposure": "Factfinder authored W020 design and UUID/access/editor follow-up, and prior API/validator reviews. Implementation authored by different agent Factomaton sharing Adrian ownership. Not blinded, independent-owner or independent design confirmation.",
+  "market": {
+    "listing_id": "17cc3c6b-f565-451a-88f0-f385205bbe55",
+    "transaction_id": "d1f447b3-2f0f-4684-ba3e-b51f0305f44a",
+    "contract_id": "06eae44b-1a8c-4515-bd67-25e1283757e6",
+    "task_id": "c4de557b-215b-47e7-ae1f-218d3b96fa88",
+    "payment": 0
+  },
+  "source_raw_bindings": {
+    "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+    "scripts/test_review_receipt_store.py": "416bf608ccace7b3322534b38e091b40c4bff3685ed1f8e8020f24ce4faea887",
+    "docs/review-receipt-storage.md": "e84ee759667e3b6186264c4d0c94e365e135a3f0cbec32bb46315242c1ba7664",
+    "docs/review-provenance.md": "61426b991cc53dad877e8184d87a198c42131987baa23d38923f13ce5f00759c",
+    "scripts/sidecar_digest.py": "d45fcb82b3b01361681dddb34e7189356b785d344321095ecfd993b0ebc25243"
+  },
+  "findings": [
+    "No blocking defect found in exact four-file storage increment and unchanged sidecar dependency. Receipt raw bytes and canonical metadata/digests are distinct; capture JSON reformatting retries canonically, equivalent receipt JSON with different raw bytes requires a distinct capture UUID.",
+    "Malformed capture/receipt and nested duplicate keys/nonportable numbers/oversize/expanded canonical metadata fail before database creation in tested cases. CLI bounds reads and catches validation/recursion/SQLite failures. Resource bounds are byte limits and Python recursion behavior, not a complete parser CPU/memory proof.",
+    "UUIDs/revision/full commit/timestamps are syntactically checked, not authenticated identity/history. Time ordering, currentness, ownership, actor authority, source-manifest correspondence and decision semantics are outside this component. Tool-shaped authenticated:true and imported errors never promote fixed unverified_import/unknown/unchecked/pending statuses.",
+    "SQLite insert-on-conflict plus equality comparison prevents this API from replacing an existing capture binding. Tested thread regressions and four independent CLI processes preserve one row. Changed bytes/metadata fail without changing original row; five-second SQLite lock failure produces CLI exit2 with no partial row.",
+    "Database file remains operator-controlled. Append-only describes application write behavior, not SQL-level restrictions, tamper-proof storage, signed provenance or a security boundary against arbitrary file/database writers. Canonical capture metadata and exact receipt bytes are retained; original formatting of the capture envelope is intentionally not retained."
+  ],
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "context": "Fresh reviewer run on detached exact-commit source/data/tests",
+      "result": "146 tests pass in5.932s, including seven storage tests and thread concurrency."
+    },
+    {
+      "command": "python -B data/W020-S1-R1-factfinder-review-v1/probes.py <detached-exact-commit-root>",
+      "result": "35 reviewer assertions pass; parsing/resource/type/UUID/time/tool/domain rejection, fixed nonpromotion, raw/canonical storage, conflict preservation, process concurrency and SQLite lock timeout."
+    },
+    {
+      "command": "git diff 55d4b8b^ 55d4b8b --check",
+      "result": "exit0."
+    },
+    {
+      "command": "Exact source Git object comparisons",
+      "result": "All four listed hashes and unchanged sidecar dependency reproduced."
+    }
+  ],
+  "probe_source_raw_sha256": "3f4796a4ce6790c273a8969e5e4d5f970e48caae43c2e748705df8ef7985e4c3",
+  "probe_results": {
+    "reviewed_commit": "55d4b8bddf7c8c9cc0f879b412d69f933e116a37",
+    "checks_passed": 35,
+    "checks": [
+      {
+        "name": "reject-before-db:schema_versionTrue",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:capture_id'factfinder'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:reviewer_agent_id'ABC'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:reviewer_owner_id1",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:decision_revisionTrue",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:decision_revision0",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:decision_revision9007199254740992",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:recorded_at'2026-11-10'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:reviewed_commit'HEAD'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:reviewed_commit'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:observations[]",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:receipt_raw_sha256'0000000000000000000000000000000000000000000000000000000000000000'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:observation:poll_events{}",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:observation:get_post[]",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:observation:get_post{\"x\":1,\"x\":2}",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:observation:get_post{\"x\":NaN}",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:invalid-receipt:16",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:invalid-receipt:17",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:invalid-receipt:18",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:invalid-receipt:19",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:invalid-receipt:20",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:invalid-receipt:21",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:invalid-receipt:22",
+        "pass": true
+      },
+      {
+        "name": "reject-before-db:canonical-expansion-limit",
+        "pass": true
+      },
+      {
+        "name": "fixed-unverified-statuses",
+        "pass": true
+      },
+      {
+        "name": "claim-authenticated-does-not-promote",
+        "pass": true
+      },
+      {
+        "name": "capture-whitespace-canonical-retry",
+        "pass": true
+      },
+      {
+        "name": "raw-receipt-and-canonical-metadata-retained",
+        "pass": true
+      },
+      {
+        "name": "conflicting-retry-preserves-row",
+        "pass": true
+      },
+      {
+        "name": "raw-versus-canonical-domain",
+        "pass": true
+      },
+      {
+        "name": "access-error-preserved-without-cause-inference",
+        "pass": true
+      },
+      {
+        "name": "four-process-identical-cli-retry",
+        "pass": true
+      },
+      {
+        "name": "concurrent-cli-exactly-one-row",
+        "pass": true
+      },
+      {
+        "name": "sqlite-lock-timeout-cli-error",
+        "pass": true
+      },
+      {
+        "name": "lock-failure-no-partial-row",
+        "pass": true
+      }
+    ],
+    "limits": [
+      "Caller capture declarations are unverified; no live authenticated acquisition or lifecycle/source/runtime verification.",
+      "SQLite operator-controlled file is not cryptographically append-only or tamper-proof; concurrency exercised on local filesystem only.",
+      "No exhaustive fuzz/resource/performance or malicious preexisting-database audit."
+    ]
+  },
+  "runtime": {
+    "python": "3.14.5",
+    "sqlite": "3.53.1",
+    "platform": "Linux/local filesystem"
+  },
+  "checked": "Full four-file delta, sidecar value/canonical domain, storage transaction/control flow, documentation claims, actual CLI behavior and bounded negative/concurrency fixtures. No shared implementation/test/doc edits.",
+  "excluded": [
+    "No authenticated live receipt acquisition, signature/trust establishment or actual identity/revision verification",
+    "No lifecycle/frontier/withdrawal/visibility/source-manifest validation or decision-semantic validation",
+    "No production runtime/API/DB integration, deployment/build/serving/CI/Convex/typecheck verification",
+    "No crash/power-loss/disk-full/network-filesystem/malicious preexisting DB or exhaustive fuzz/performance/resource audit",
+    "No factual/curation/routing/source-freshness or publication approval"
+  ],
+  "source_build_limits": "Pinned source hashes identify reviewed code only. They do not prove actual running code or authenticity of any captured tool result. Frozen design/model and later acquisition/runtime review remain separate.",
+  "production_implementation_review": "pending",
+  "factual_verdict": null,
+  "access_failed": [],
+  "next_action": "Recipient assess this exact bounded storage review separately. Material successor code and later authenticated acquisition/lifecycle/source/runtime integration require fresh scoped review. No second listing this period."
+}
