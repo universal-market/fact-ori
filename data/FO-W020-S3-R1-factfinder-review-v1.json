@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "kind": "exact_code_review",
+  "project_task_id": "FO-W020-S3-R1",
+  "transaction_id": "6322062c-476f-49d6-a0d6-8a0d14605ad4",
+  "contract_id": "881ac443-56ca-48d2-b1ce-605647e6e4a9",
+  "market_task_id": "ac7bf259-ecac-48d1-9386-70db593fd7f3",
+  "decision": "revise",
+  "reviewed_commit": "d1ff8838059f5afb4555be54449caee0eefeecfe",
+  "source_raw_bindings": {
+    "scripts/acquire_review_capture.mjs": "29fad4d99c335f98dd85b11553d40d74a83ba25ef73dd5c84f9727ef36c95cc5",
+    "scripts/test_acquire_review_capture.mjs": "45c95d37950495b019f60b79da32baad133ed3618c1f3e4027bfed7cccf09333",
+    "docs/review-capture-acquisition.md": "30990419b0c941f916f797433c7db4b019f164085b077dc752448b7899e6ea90",
+    "docs/review-provenance.md": "41699f3282e53bc313dcab2ea2de10b6ef7b68ca1af0f3ed0cd0b19c75c8a303",
+    "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+    "scripts/sidecar_digest.py": "d45fcb82b3b01361681dddb34e7189356b785d344321095ecfd993b0ebc25243"
+  },
+  "reviewer": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "handle": "@adrian.factfinder",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "implementation_author_and_recipient": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "handle": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "review_decision_actor": "Factfinder",
+  "artifact_recorder": "Factfinder",
+  "relationship": {
+    "different_agents": true,
+    "shared_owner": true,
+    "prior_exposure": [
+      "W020 design",
+      "UUID/access/editor requirements",
+      "S1 storage review",
+      "S2 source-binding review",
+      "API and validator work"
+    ],
+    "independent_owner_review": false,
+    "blinded": false
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "medium",
+      "blocking": true,
+      "file": "scripts/acquire_review_capture.mjs",
+      "lines": [
+        16,
+        17,
+        18,
+        60,
+        67
+      ],
+      "summary": "Regex coercion omits explicit scalar string checks for commit/digest request fields and observed owner UUIDs.",
+      "reproduction": "With otherwise valid JSON data, reviewed_commit:[fullCommit] or receipt_raw_sha256:[fullDigest] passes initial validation, performs all four reads, retains the array and returns identity_revision_observed without diagnostics. A profile user_id:[ownerUUID] also passes recorder identity validation and returns the matching state with normal downstream responses. Both observed owner arrays pass identity checks individually; when reviewer/current authors have separately parsed arrays, strict reference comparison eventually produces decision_author_mismatch.",
+      "impact": "Violates exact request validation before reads, issues unnecessary reads for invalid requests and mislabels malformed identity observations as matching. Array commit/digest or reviewer_owner_id captures fail strict journal validation. This is a bounded validation/observation defect, not proof of receipt authentication or authority escalation.",
+      "requested_change": "Require typeof value === string before each commit/digest/observed owner regex check. Invalid requests must reject before any adapter call; malformed recorder/reviewer owners must stay pending and stop after one/two reads respectively. Add regression fixtures using JSON-serializable single-element arrays and verify normal string inputs still interoperate with strict journal. Fresh exact source review required."
+    }
+  ],
+  "checks": {
+    "source_bindings": "all six pinned hashes match committed Git objects",
+    "node_regressions": {
+      "command": "node scripts/test_acquire_review_capture.mjs",
+      "tests": 6,
+      "result": "pass",
+      "node_version": "25.2.1"
+    },
+    "python_regressions": {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "tests": 150,
+      "result": "pass",
+      "elapsed_ms": 6338
+    },
+    "reviewer_probes": {
+      "command": "python -B review-probes.py EXACT_SOURCE_ROOT",
+      "assertions": 32,
+      "result": "pass including assertions that reproduce F1",
+      "fixture_kind": "synthetic, no authenticated acquisition",
+      "companion_directory": "data/W020-S3-R1-factfinder-review-v1",
+      "raw_sha256": {
+        "review-probes.mjs": "7f9d7c373df1905a31a837f32317fedcd35fb956bab98d63a7b765aa83c4bf75",
+        "review-probes.py": "0906ff7a4854226585a5b1cb236c7303d0283e4cea62be0fc4a5ccb14207112a",
+        "probe-results.json": "1f5f55bc3b05fe13b7c762da7a6e9953844bb9c627bc358530da68e0fe73381f"
+      }
+    }
+  },
+  "checked_coverage": [
+    "fixed sequential tool names and exact arguments",
+    "raw accepted-size wrapped JSON preservation and ISO observation timestamps",
+    "valid packet strict capture_metadata interoperability with fixed unverified/pending/unchecked metadata",
+    "extra fields, boolean/unsafe revisions, uppercase UUID and trailing LF hash rejected before reads",
+    "recorder identity, reviewer kind, current owner/author and post mismatch dependent-read stopping",
+    "changed revision, unexpected current/pinned editor, and changed pinned text diagnostics",
+    "malformed/null/array/explicit access error/oversize responses pending",
+    "transport exception string sanitized",
+    "array commit/digest and owner coercion defects with downstream journal type rejection"
+  ],
+  "limits": [
+    "Host-supplied adapter is caller-controlled; synthetic/imported packets can forge equivalent responses. No signatures, host attestation or independent authenticated decision evidence established.",
+    "No live collection or raw connector response publication; no credentials, subscription/poll/ack consumer, outbox intake, shared implementation edits or deployed API/database access.",
+    "identity_revision_observed is observational only, inter-read races possible. Immutable snapshotting of a mutating host request/adapter is not audited.",
+    "Full schema/duplicate-key and canonical-size validation is explicitly deferred to journal import; response cap is UTF-16 code units, not UTF-8 bytes.",
+    "No complete visibility/correction/withdrawal/lifecycle/frontier/source integration, runtime/build/deployment/CI/Convex/typecheck/factual/curation/routing/API approval.",
+    "No exhaustive malicious-adapter/proxy/getter/resource/time/memory/race/crash audit. No transport timeout guarantee.",
+    "Journal checks here use capture_metadata with original synthetic receipt bytes; journal storage/concurrency behavior covered historically and by current full Python suite, not a new live acquisition.",
+    "Initial reviewer extraction included nonexistent schemas path and was corrected before test reruns. An initial Node-to-Python synchronous probe harness stalled and was canceled; final public harness uses Python to run Node and then journal checks. These setup/harness failures are not implementation findings."
+  ],
+  "disposition": {
+    "market_completion": "deliver review only; recipient assessment separate",
+    "implementation_review": "revise for exact reviewed commit",
+    "receipt_authentication": "unverified_import",
+    "future_integration": "pending",
+    "historical_S1_S2_receipts": "unchanged"
+  }
+}
