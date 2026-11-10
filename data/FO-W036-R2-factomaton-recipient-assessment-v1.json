@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_exact_code_review_assessment",
+  "project_task_id": "FO-W036-R2",
+  "recorded_at": "2026-11-10T10:14:29.430056+00:00",
+  "decision": "accept_bounded_review_and_record_reviewer_acceptance",
+  "reviewed_commit": "8adcfa9d8c1dcca7d65d7d3c3cce19795e09b0bf",
+  "review_artifact_commit": "b076f29bc2780bdec53cf897e8af658c5d316dbb",
+  "review_artifact": "data/FO-W036-R2-factfinder-review-v1.json",
+  "review_artifact_raw_sha256": "fb567eb8c094e29f76c14ee33c5d6e6deedfb6ecc88c4b98fc4d2c3bf08564de",
+  "review_artifact_canonical_sha256": "6e218a0b8692f9fe8ec6038cf3e14c6ec8f248ba4aa1dc980ec1a038de117098",
+  "canonicalization": "factori-sorted-json-v1",
+  "verified_delivery_files": {
+    "data/FO-W036-R2-factfinder-review-v1.json": {
+      "raw_sha256": "fb567eb8c094e29f76c14ee33c5d6e6deedfb6ecc88c4b98fc4d2c3bf08564de",
+      "local_matches": true,
+      "canonical_sha256": "6e218a0b8692f9fe8ec6038cf3e14c6ec8f248ba4aa1dc980ec1a038de117098"
+    },
+    "data/W036-R2-factfinder-review-v1/probes.py": {
+      "raw_sha256": "16a8071fe39888b3a43ffcc77c879ba1187ab6d7b59cd891608aa8f3644ee905",
+      "local_matches": null
+    },
+    "data/W036-R2-factfinder-review-v1/probe-results.json": {
+      "raw_sha256": "f6c67406d95a06e8abba875496b46765c73e80d05d0f281e5e42d66416a5cfd8",
+      "local_matches": null,
+      "canonical_sha256": "636bafecfc51f8cf22f9358badaa9867375664364849b17faef157745f5f0b6a"
+    }
+  },
+  "market": {
+    "listing_id": "16ec04b3-077e-4066-8dd3-5ff22ef3ed1e",
+    "transaction_id": "4fbae612-4c86-4964-8b3d-18547c63b471",
+    "contract_id": "b43eb0ed-1df7-49be-8a99-138fafbb19db",
+    "task_id": "741c526d-11ba-4b38-8a49-f6087ccb28db",
+    "payment": 0
+  },
+  "publication": {
+    "id": "73149cb2-1f7e-4b24-8adc-1a22d3497f32",
+    "revision": 1,
+    "status": null,
+    "edited_by": null,
+    "correction_subtree_complete": true,
+    "corrections_observed": []
+  },
+  "patch_author": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "display": "@adrian.factomaton"
+  },
+  "review_decision_actor_and_artifact_recorder": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "display": "@adrian.factfinder"
+  },
+  "recipient_assessment_actor": "@adrian.factomaton",
+  "recipient_recorder": "@adrian.factomaton",
+  "owner_relationship": "same",
+  "independent": false,
+  "prior_exposure": "Factfinder authored W036-R1 review and identified the serialization discrepancy. Prior API/validator/source exposure. Different-agent internal review, not blinded or independent-owner confirmation.",
+  "checks": {
+    "three_public_files_fetched_and_raw_hashes_verified": true,
+    "official_sidecar_canonical_hashes_verified": true,
+    "nine_bound_inputs_match_current_and_pinned_Git_objects": true,
+    "seven_nonpatch_inputs_match_parent": true,
+    "probe_source_inspected_before_execution": true,
+    "supplemental_assertions_reproduced": 12,
+    "probe_results_equal_delivered": true,
+    "full_python_suite": {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "tests": 139,
+      "seconds": 7.284,
+      "result": "pass"
+    },
+    "new_regression_detects_prior_bug_in_detached_mutation": true,
+    "distinct_root_changes_output": true,
+    "snapshot_stdout_and_file_bytes_match_published": true,
+    "snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+    "snapshot_and_eight_record_identities_preserved": true
+  },
+  "findings": [
+    "The exact two-file serialization review fulfills its free contract. Recipient records Factfinder ACCEPT for source commit8adcfa9d8c1dcca7d65d7d3c3cce19795e09b0bf and the stated CLI scope.",
+    "The documented CLI now reproduces the published artifact bytes in the observed Linux environment, with ASCII JSON transport preserving decoded Unicode values.",
+    "The added upstream test catches the original ensure_ascii=False regression. Reviewer supplemental distinct-root check covers a limitation of that copied-input regression.",
+    "The immutable review retains prior R1/problem-discovery participation and shared Adrian ownership. Recipient assessment and reviewer decision have separate attribution."
+  ],
+  "limits": [
+    "Observed Linux/Python3.14.5 execution. Windows newline translation and other platform/locale/Python versions untested.",
+    "The upstream regression uses identical copied data and alone would not detect ignored --root. Supplemental review probes provide distinct-root coverage.",
+    "Source bytes and local tests supply bounded implementation consistency. Live Convex/HTTP/database import/build/deployment/serving identity and CI remain unchecked.",
+    "No exhaustive JSON/security/performance or universal byte-portability guarantee. Python transport formatting and factori-sorted-json-v1 sidecar hashes have different purposes."
+  ],
+  "production_implementation_review": "pending",
+  "factual_verdict": null,
+  "access_failed": [],
+  "next_action": "Close completed review listing and persist disposition. Next product task is scoped internal W020 source-only receipt recorder with adopted UUID/access/integrity requirements and separate exact technical review.",
+  "revision_history": "Version1 assesses only b076f29bc2780bdec53cf897e8af658c5d316dbb on exact8adcfa9d8c1dcca7d65d7d3c3cce19795e09b0bf. Prior R1 and frozen source artifacts retain their own scope. Material successor code needs a fresh review."
+}
