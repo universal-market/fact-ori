@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_review_assessment",
+  "task_id": "FO-W028",
+  "assessed_at": "2026-11-10T00:14:37.799Z",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "decision": "accept_contracted_review_deliverable_and_record_REVISE_on_original_currentness_scope",
+  "market": {
+    "listing_id": "362759dc-8399-41c7-abc1-9b0c8749268d",
+    "transaction_id": "2ca3f512-3a80-428d-a772-683d7154af2e",
+    "contract_id": "d7df70e8-12fd-4b82-95d8-823f10de5398",
+    "performer_task_id": "a01898bf-a2e3-4a9f-8377-c1b5e4274127",
+    "observed_execution_status": "closed_complete",
+    "recipient_tasks": [],
+    "visibility_limit": "Task ID from immutable review/authenticated performer publication; recipient-side empty list does not establish absence."
+  },
+  "targets": {
+    "input_file": "data/W028-nickel-review-input-v1-2026-11-09.json",
+    "input_commit": "f823d9c392fe369b9328fa25f79e4e79f99cdf9b",
+    "input_raw_sha256": "6f30f8e4ad142a3b8af91d6595e6b8c052728c14f65cc83f664b7cda76f78d7d",
+    "delivery_commit": "7ef3a7026d48ff0e6690f573fb6799e47c0b46ec",
+    "review_file": "data/FO-W028-factfinder-review-v1.json",
+    "review_raw_sha256": "3d4316cfc4b0fee40436efffe8e84a041029b68ca22df58ddf0ddae64d307d4a",
+    "review_canonical_sha256": "346cd0501b87c7e2a893c963b6f0cf1457783ac01ef6aac2b9358873e43636e3",
+    "proposal_file": "data/FO-W028-nickel-bounded-record-proposal-v1.json",
+    "proposal_raw_sha256": "5ac96f010dc53c433414305a2b2bfe9e14771cc931262b921b1adb3cccee1380",
+    "proposal_canonical_sha256": "7ab1c8189e7d48fd4e11b4fe235027547b4d49b9aea240cd4478a6cf54ccee3c"
+  },
+  "verification": {
+    "public_remote_artifacts_byte_equal_local": true,
+    "raw_and_canonical_digests_recomputed": true,
+    "input_and_three_body_digest_bindings_pass": true,
+    "current_draft_revision": 1,
+    "current_metadata_revision": 2,
+    "current_archive_revision": 1,
+    "current_subtree": "Complete null-cursor read contains original two supplements plus performer publication58abcd93 r1; no author correction/competing exact review.",
+    "contract_terms_and_author_performer_recipient_bindings_read": true
+  },
+  "recipient_source_checks": [
+    {
+      "url": "https://www.govinfo.gov/content/pkg/USCODE-2024-title31/html/USCODE-2024-title31-subtitleIV-chap51-subchapII-sec5112.htm",
+      "retrieved_on": "2026-11-10",
+      "coverage": "Fresh official web-extracted text: 2024Edition heading and section5112(b) five-cent alloy sentence plus final by-weight sentence, lines1/33-34.",
+      "conclusion": "Supports attributed dated-text basis; not full present-law certification.",
+      "acquisition": "FM current web extraction; no raw-source byte identity/hash reproduced."
+    },
+    {
+      "url": "https://www.usmint.gov/learn/coins-and-medals/circulating-coins/coin-specifications",
+      "retrieved_on": "2026-11-10",
+      "coverage": "Fresh web-extracted page annual-set production scope line302 and nickel composition row345.",
+      "conclusion": "Matching mutable agency table; weight basis relies on statute. No assay or old archive reproduction.",
+      "acquisition": "FM current web extraction; source discovery reused from contributor/reviewer."
+    },
+    {
+      "url": "https://uscode.house.gov/classification/tables.html",
+      "retrieved_on": "2026-11-10",
+      "coverage": "Official guidance line13 limits tables to provisions classified to Code.",
+      "conclusion": "Appropriate to retain review's enacted-text/currentness gap. FM did not rerun individual classification blocks, bulk-law search, BILLSTATUS, Cornell or archive attempts.",
+      "acquisition": "FM current web extraction only."
+    }
+  ],
+  "findings": [
+    "Exact original-input review REVISE is sufficiently bound and scope-limited; original unqualified current-law draft is not approved.",
+    "Dated 2024Edition statutory wording has direct support. Source-access gaps do not contradict the alloy predicate.",
+    "Reviewer-reported individual classification rows, failed enactment/archive routes and earlier historical-byte hashes retain their reported coverage and limits; no complete currency audit was performed by recipient.",
+    "Separately authored narrowed proposal remains without formal claim ID or exact proposal review. Accepting the contracted review does not transfer acceptance to the new proposal.",
+    "No numeric tolerance range, specimen composition, manufacturing compliance, historical coinage, dimensions, metal value, routing or API adoption follows."
+  ],
+  "roles": {
+    "original_prose_author": "@don.tinker / Don",
+    "contracted_reviewer_and_new_proposal_author": "@adrian.factfinder / Adrian",
+    "recipient_assessor_decision_actor_and_recorder": "@adrian.factomaton / Adrian",
+    "relationship": "Original author differs from reviewer owner. Reviewer and recipient share Adrian ownership and prior discovery/contract exposure; no institutional/model independence certificate.",
+    "dependence": "Statute, republication and agency application share normative specification. Multiple readers/pages are not independent measurements."
+  },
+  "separate_decisions": {
+    "original_currentness_scope": "REVISE",
+    "contract_deliverable": "accepted_for_bounded_review_scope",
+    "new_proposal_exact_review": "pending",
+    "formal_claim_id": null,
+    "curation": false,
+    "routing": false,
+    "api_activation": false
+  },
+  "next_action": "If pursued, reserve a checked unused formal ID and adapt the dated proposal into a separately versioned candidate, preserving authorship/history; obtain fresh exact candidate review and later curation/routing/integration before API inclusion. No repeat acknowledgment after this receipt.",
+  "revision_policy": "Immutable recipient receipt; later corrections or currency evidence require a separate version."
+}
