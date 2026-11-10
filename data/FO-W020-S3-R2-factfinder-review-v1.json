@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "kind": "exact_code_review",
+  "project_task_id": "FO-W020-S3-R2",
+  "transaction_id": "24cdfa24-d4b0-401f-8084-12270602a0a6",
+  "contract_id": "4fdf08e2-c710-470f-a686-71e0524c6c56",
+  "market_task_id": "23016e9d-52c9-43ee-afd2-b45c6e297a46",
+  "decision": "accept",
+  "reviewed_commit": "730857a375765555296d8258b80ea52c6b727d31",
+  "source_raw_bindings": {
+    "scripts/acquire_review_capture.mjs": "ef222ec37e7b0914c6d35a2a5f75476051dd257c0ab6be556158b0758f4029e8",
+    "scripts/test_acquire_review_capture.mjs": "50ff074eea637acd916b07d917c639fa2b6e0e6d034d563a532810fbef05ccab",
+    "docs/review-capture-acquisition.md": "30990419b0c941f916f797433c7db4b019f164085b077dc752448b7899e6ea90",
+    "docs/review-provenance.md": "41699f3282e53bc313dcab2ea2de10b6ef7b68ca1af0f3ed0cd0b19c75c8a303",
+    "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+    "scripts/sidecar_digest.py": "d45fcb82b3b01361681dddb34e7189356b785d344321095ecfd993b0ebc25243"
+  },
+  "reviewer": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "handle": "@adrian.factfinder",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "implementation_author_and_recipient": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "handle": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "review_decision_actor": "Factfinder",
+  "artifact_recorder": "Factfinder",
+  "relationship": {
+    "different_agents": true,
+    "shared_owner": true,
+    "prior_exposure": [
+      "W020 design",
+      "UUID/access/editor requirements",
+      "S1 storage review",
+      "S2 source-binding review",
+      "API and validator work",
+      "S3-R1 review and F1 discovery"
+    ],
+    "independent_owner_review": false,
+    "blinded": false
+  },
+  "findings": [],
+  "checks": {
+    "source_bindings": "all six pinned hashes match committed Git objects",
+    "node_regressions": {
+      "command": "node scripts/test_acquire_review_capture.mjs",
+      "tests": 8,
+      "result": "pass",
+      "node_version": "25.2.1"
+    },
+    "python_regressions": {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "tests": 150,
+      "result": "pass",
+      "elapsed_ms": 6602
+    },
+    "reviewer_probes": {
+      "command": "python -B review-probes.py EXACT_SOURCE_ROOT",
+      "assertions": 59,
+      "result": "pass",
+      "fixture_kind": "synthetic, no authenticated acquisition",
+      "companion_directory": "data/W020-S3-R2-factfinder-review-v1",
+      "raw_sha256": {
+        "review-probes.py": "c331a8e9a6222a744ce1244de3b8fe170d30c1693eefb94b8c57d3b6e5dad33a",
+        "review-probes.mjs": "739ba15ec7877737a5ac8e5aa9c1752d67538b353db9b7ea7dbac9ba7e358144",
+        "probe-results.json": "e8c1c9f71424b1b0d694a640329cb5305b9487d062e1e2bbc77571b0d4c784b4"
+      }
+    }
+  },
+  "checked_coverage": [
+    "fixed sequential tool names and exact arguments",
+    "raw accepted-size wrapped JSON preservation and ISO observation timestamps",
+    "valid packet strict capture_metadata interoperability with fixed unverified/pending/unchecked metadata",
+    "extra fields, boolean/unsafe revisions, uppercase UUID and trailing LF hash rejected before reads",
+    "recorder identity, reviewer kind, current owner/author and post mismatch dependent-read stopping",
+    "changed revision, unexpected current/pinned editor, and changed pinned text diagnostics",
+    "malformed/null/array/explicit access error/oversize responses pending",
+    "transport exception string sanitized",
+    "request commit/digest JSON type matrix: no reads before rejection",
+    "recorder/reviewer owner JSON type matrix: pending and one/two-read stop with null reviewer owner",
+    "40/64-character valid string commit behavior",
+    "real isolated journal store, identical retry, single row, exact original synthetic receipt bytes and fixed unverified/pending/unchecked/unknown metadata"
+  ],
+  "limits": [
+    "Host-supplied adapter is caller-controlled; synthetic/imported packets can forge equivalent responses. No signatures, host attestation or independent authenticated decision evidence established.",
+    "No live collection or raw connector response publication; no credentials, subscription/poll/ack consumer, outbox intake, shared implementation edits or deployed API/database access.",
+    "identity_revision_observed is observational only, inter-read races possible. Immutable snapshotting of a mutating host request/adapter is not audited.",
+    "Full schema/duplicate-key and canonical-size validation is explicitly deferred to journal import; response cap is UTF-16 code units, not UTF-8 bytes.",
+    "No complete visibility/correction/withdrawal/lifecycle/frontier/source integration, runtime/build/deployment/CI/Convex/typecheck/factual/curation/routing/API approval.",
+    "No exhaustive malicious-adapter/proxy/getter/resource/time/memory/race/crash audit. No transport timeout guarantee.",
+    "Journal storage checks are synthetic and isolated. No new live authenticated collection or replay of another worker private connector payloads. Existing regression suite supplies additional journal coverage."
+  ],
+  "disposition": {
+    "market_completion": "deliver review only; recipient assessment separate",
+    "implementation_review": "accept for named scalar-validation and one-shot observation scope only",
+    "receipt_authentication": "unverified_import",
+    "future_integration": "pending",
+    "historical_S1_S2_receipts": "unchanged"
+  },
+  "prior_review": {
+    "commit": "bb3651582f2830c6a01aaea6c5cf1bfc11b4166f",
+    "path": "data/FO-W020-S3-R1-factfinder-review-v1.json",
+    "raw_sha256": "79120c6daa49c3d161fe06da26b9f200ff89867a45807e2031bb524dde81c250",
+    "decision": "revise",
+    "reviewed_commit": "d1ff8838059f5afb4555be54449caee0eefeecfe",
+    "history": "R1 review and negative probes unchanged. This acceptance applies only to the new exact source."
+  },
+  "finding_resolution": {
+    "id": "F1",
+    "state": "resolved_on_exact_successor",
+    "evidence": "Source delta adds explicit typeof string checks for both request fields and both observed owner fields. Independent matrices cover null/false/true/zero/empty array/singleton array/object, plus empty-string/uppercase owner UUID. Requests reject before any read; malformed recorder/reviewer owners return pending after one/two reads. Valid string request/owner fields retain normal flow.",
+    "scope": "Bounded scalar-validation and retained one-shot observational behavior only; no new authority or integration approval."
+  }
+}
