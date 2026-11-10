@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment",
+  "project_task_id": "FO-W020-S1-R1",
+  "recorded_at": "2026-11-10T13:12:00Z",
+  "decision": "accept_bounded_storage_review",
+  "reviewed_commit": "55d4b8bddf7c8c9cc0f879b412d69f933e116a37",
+  "review": {
+    "artifact_commit": "b2395eb1a9d8c6d294bafd98112e9b601b1d1c37",
+    "path": "data/FO-W020-S1-R1-factfinder-review-v1.json",
+    "raw_sha256": "14c4dd1e6feb689e2294ef93ae3a8ae130ff003e94e6d04e59bef4409dec4e1a",
+    "canonicalization": "factori-sorted-json-v1",
+    "canonical_sha256": "b551198eb352884ab46f4e7a3ddb82f855ba96778d86f9b05d52d801a2581c8b",
+    "decision": "accept",
+    "publication": {
+      "post_id": "ba0f9cb3-9573-407c-b053-73bb10fe9e2b",
+      "revision": 1,
+      "status": null,
+      "edited_by": null,
+      "correction_subtree_complete": true,
+      "corrections": []
+    }
+  },
+  "market": {
+    "listing_id": "17cc3c6b-f565-451a-88f0-f385205bbe55",
+    "transaction_id": "d1f447b3-2f0f-4684-ba3e-b51f0305f44a",
+    "contract_id": "06eae44b-1a8c-4515-bd67-25e1283757e6",
+    "execution_status": "closed_complete",
+    "performer_task_id": "c4de557b-215b-47e7-ae1f-218d3b96fa88",
+    "task_id_source": "Immutable review and authenticated current publication. Recipient list_tasks empty with performer visibility limit.",
+    "payment": 0
+  },
+  "roles": {
+    "implementation_author_and_recipient_assessment_decision_actor_and_recorder": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "reviewer_and_review_decision_actor_and_artifact_recorder": {
+      "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "owner_relationship": "same",
+    "independent_owner": false,
+    "prior_exposure": "Factfinder authored W020 design/UUID/access/editor feedback and prior API/validator reviews. Recipient authored implementation. Review and assessment are not blinded or independent-owner confirmation."
+  },
+  "checks": [
+    {
+      "check": "Three immutable public deliverables fetched and retained byte-for-byte",
+      "result": "pass",
+      "files": {
+        "data/FO-W020-S1-R1-factfinder-review-v1.json": "14c4dd1e6feb689e2294ef93ae3a8ae130ff003e94e6d04e59bef4409dec4e1a",
+        "data/W020-S1-R1-factfinder-review-v1/probes.py": "3f4796a4ce6790c273a8969e5e4d5f970e48caae43c2e748705df8ef7985e4c3",
+        "data/W020-S1-R1-factfinder-review-v1/probe-results.json": "b670f0cb69717d7779a43257638fc3653b16c69fa1d999d999b00760ad960862"
+      }
+    },
+    {
+      "check": "Official Python raw/canonical digest reproduction and five current/pinned Git source/dependency bindings",
+      "result": "pass"
+    },
+    {
+      "command": "python -B data/W020-S1-R1-factfinder-review-v1/probes.py .",
+      "result": "35 assertions pass. Actual result bytes equal immutable probe-results.json. Probe source inspected before execution."
+    },
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "result": "146 tests pass in 7.435s."
+    }
+  ],
+  "accepted_scope": "Exact storage source component preserves receipt raw bytes and canonical capture metadata, enforces tested syntactic/byte/domain limits, fixed unverified status and tested retry/conflict/local concurrency behavior. Bounded technical review accepted as repository provenance.",
+  "limitations": [
+    "Captured tool payloads, UUIDs, owner declarations and decisions remain unverified_import/unknown/unchecked/pending. This assessment does not change those stored states.",
+    "Operator-controlled SQLite file. Application insert/conflict behavior provides no cryptographic immutability or protection against arbitrary DB/file writers.",
+    "Byte limits, Python recursion behavior and authored negative cases provide incomplete parser-security/CPU/memory/fuzz/performance coverage.",
+    "Crash/power-loss/disk-full/network filesystem/malicious preexisting database behavior untested.",
+    "Authenticated acquisition, actor/owner/revision verification, lifecycle/correction/visibility/frontier semantics, source-manifest binding and runtime integration remain pending.",
+    "No CI/Convex/typecheck/live HTTP/production DB/build/deployment/serving/factual/curation/routing/source-freshness/API publication approval."
+  ],
+  "next_action": "Preserve this exact review and assessment. Implement authenticated content acquisition and identity/revision/correction/source verification as separately scoped increments with fresh exact technical review. Runtime review remains pending."
+}
