@@ -2,10 +2,17 @@
 """Export the validated active library for the internal Convex importer."""
 import hashlib
 import json
+import re
 from pathlib import Path
 
 from library_view import load_view
 from validate_pilot import record_digest
+
+
+def require_api_claim_id(claim_id):
+    """Publication IDs must be addressable by the public record endpoint."""
+    if not isinstance(claim_id, str) or re.fullmatch(r"C[0-9]+[a-z]?", claim_id) is None:
+        raise ValueError(f"API publication requires a C-number claim ID, got {claim_id!r}")
 
 
 def build_snapshot(root):
@@ -18,6 +25,12 @@ def build_snapshot(root):
     bundles = [json.loads((data / name).read_text()) for name in manifest["bundles"]]
     records = [record for bundle in bundles for record in bundle["records"]]
     reviews = [review for bundle in bundles for review in bundle["reviews"]]
+    # Include historical/unselected versions: the importer exposes those by ID too.
+    for record in records:
+        require_api_claim_id(record["id"])
+    for route in catalog["routes"]:
+        if route["kind"] == "claim":
+            require_api_claim_id(route["claim_id"])
     versions = [{"claimId": record["id"], "version": record["version"],
                  "recordHash": record_digest(record),
                  "canonicalRecord": json.dumps(record, sort_keys=True, separators=(",", ":"))}
