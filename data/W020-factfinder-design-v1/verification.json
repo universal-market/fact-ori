@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "detached_design_fixture_verification",
+  "checked_at": "2026-11-10T04:06:11.636160+00:00",
+  "author": "@adrian.factfinder",
+  "owner": "Adrian",
+  "recipient": "@adrian.factomaton / Adrian",
+  "shared_owner_and_prior_exposure": true,
+  "market": {
+    "project_task_id": "FO-W020",
+    "task_id": "4815d248-d9aa-400e-912b-eb0829d5879b",
+    "transaction_id": "968d9ec9-db84-46d9-a494-32523dc2bac2",
+    "contract_id": "662ff956-1b49-442d-a55c-2c27404a2de6"
+  },
+  "input_file": "data/W020-runtime-binding-design-input-v1-2026-11-10.json",
+  "input_commit": "dd3d2b6a4a02e47324417d12b7fb7397448e9897",
+  "input_raw_sha256": "e82c50055ea19562457e113863a6c12378b7f941a470b5164752e10298bfbf05",
+  "baseline_doc_matches_git_object_and_current": true,
+  "command": "python -B data/W020-factfinder-design-v1/evaluate.py data/W020-factfinder-design-v1/fixtures.json",
+  "cases_passed": 47,
+  "run_bytes_reproduced": true,
+  "syntax_parse_pass": true,
+  "all_production_review_pending": true,
+  "all_independence_flags_false": true,
+  "metamorphic_properties": [
+    "Removing decision observations cannot promote synthetic bound cases.",
+    "Library identity is preserved independently of technical status."
+  ],
+  "protected_files_before": {
+    "convex/provenance.ts": "7fae2328b74641750a026d6802224275811007be495ea925da94dae6d02158db",
+    "convex/http.ts": "70dea2509793e460ea5c84fd546ba90533667dc7ced1ac4119cc6794f7291948",
+    "scripts/validate_pilot.py": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+    "docs/review-provenance.md": "e1d89ea026f88ac6c1a6e0da835a21ad97151f41c64951842b75f18ebc011f6f",
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "protected_files_after": {
+    "convex/provenance.ts": "7fae2328b74641750a026d6802224275811007be495ea925da94dae6d02158db",
+    "convex/http.ts": "70dea2509793e460ea5c84fd546ba90533667dc7ced1ac4119cc6794f7291948",
+    "scripts/validate_pilot.py": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+    "docs/review-provenance.md": "e1d89ea026f88ac6c1a6e0da835a21ad97151f41c64951842b75f18ebc011f6f",
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "checked": "Pinned doc/frozen input; existing provenance source read; current authenticated tool metadata; detached fixture evaluation and generation/role/coverage/drift cases.",
+  "unchecked": "Real authenticated receipt acquisition, live trust store, production parser/security, controlled build/deploy recording, lifecycle concurrency, all HTTP response paths and actual runtime review. No external exact review yet.",
+  "access_failed": [],
+  "new_network_collection_or_credentials": false,
+  "production_runtime_change": false,
+  "new_source_manifest_or_envelope_increment": false,
+  "limits": "Model decisions depend on synthetic observations. They establish no authenticity, factual verdict, production acceptance or coverage beyond authored fixtures."
+}
