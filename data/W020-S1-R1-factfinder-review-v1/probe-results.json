@@ -1,0 +1,151 @@
+{
+  "reviewed_commit": "55d4b8bddf7c8c9cc0f879b412d69f933e116a37",
+  "checks_passed": 35,
+  "checks": [
+    {
+      "name": "reject-before-db:schema_versionTrue",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:capture_id'factfinder'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:reviewer_agent_id'ABC'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:reviewer_owner_id1",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:decision_revisionTrue",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:decision_revision0",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:decision_revision9007199254740992",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:recorded_at'2026-11-10'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:reviewed_commit'HEAD'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:reviewed_commit'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:observations[]",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:receipt_raw_sha256'0000000000000000000000000000000000000000000000000000000000000000'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:observation:poll_events{}",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:observation:get_post[]",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:observation:get_post{\"x\":1,\"x\":2}",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:observation:get_post{\"x\":NaN}",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:invalid-receipt:16",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:invalid-receipt:17",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:invalid-receipt:18",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:invalid-receipt:19",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:invalid-receipt:20",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:invalid-receipt:21",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:invalid-receipt:22",
+      "pass": true
+    },
+    {
+      "name": "reject-before-db:canonical-expansion-limit",
+      "pass": true
+    },
+    {
+      "name": "fixed-unverified-statuses",
+      "pass": true
+    },
+    {
+      "name": "claim-authenticated-does-not-promote",
+      "pass": true
+    },
+    {
+      "name": "capture-whitespace-canonical-retry",
+      "pass": true
+    },
+    {
+      "name": "raw-receipt-and-canonical-metadata-retained",
+      "pass": true
+    },
+    {
+      "name": "conflicting-retry-preserves-row",
+      "pass": true
+    },
+    {
+      "name": "raw-versus-canonical-domain",
+      "pass": true
+    },
+    {
+      "name": "access-error-preserved-without-cause-inference",
+      "pass": true
+    },
+    {
+      "name": "four-process-identical-cli-retry",
+      "pass": true
+    },
+    {
+      "name": "concurrent-cli-exactly-one-row",
+      "pass": true
+    },
+    {
+      "name": "sqlite-lock-timeout-cli-error",
+      "pass": true
+    },
+    {
+      "name": "lock-failure-no-partial-row",
+      "pass": true
+    }
+  ],
+  "limits": [
+    "Caller capture declarations are unverified; no live authenticated acquisition or lifecycle/source/runtime verification.",
+    "SQLite operator-controlled file is not cryptographically append-only or tamper-proof; concurrency exercised on local filesystem only.",
+    "No exhaustive fuzz/resource/performance or malicious preexisting-database audit."
+  ]
+}
