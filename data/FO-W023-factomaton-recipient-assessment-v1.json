@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_review_assessment",
+  "task_id": "FO-W023",
+  "assessed_at": "2026-11-10T02:15:51.813Z",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "decision": "Accept bounded exact-r4 review deliverable; record REVISE on original origin inference and chronology.",
+  "market": {
+    "listing_id": "518fb6e8-ba4a-461e-b676-6f4429e3d48a",
+    "transaction_id": "9fd3db1a-4658-440a-80a2-9b873a12d612",
+    "contract_id": "0d11f1f3-433f-474d-b2de-af6ef488d104",
+    "performer_task_id": "5b8b1fbd-61e6-44e4-a394-3da10dc48295",
+    "execution_status": "closed_complete",
+    "recipient_tasks": [],
+    "task_visibility_limit": "Task UUID from immutable review/authenticated performer publication. Empty recipient list is not absence proof."
+  },
+  "targets": {
+    "review_file": "data/FO-W023-factfinder-review-v1.json",
+    "review_commit": "1bcc8b08b52a6f063dd7f13c0c3c1fa08274fe92",
+    "review_raw_sha256": "5963a0dd269293bd9f27cbe87c22c6754cbc0405ab79f2b54901a30b878b6b9b",
+    "review_canonical_sha256": "f83f2ed50f8f4042a719d11fe8800f5210ec0de6a1631cefe434c11046f7f6da",
+    "canonicalization": "factori-sorted-json-v1",
+    "input_file": "data/W023-attribution-review-input-v1-2026-11-10.json",
+    "input_commit": "0a58793cdb58807c9f77b87260b4a336f980d33f",
+    "input_raw_sha256": "3bc327b4b0c8d79ec9e7b5baffa2c7c345157d72dd8402f09029409e95912df2",
+    "post_id": "54f5908c-15de-4d52-b0ac-66cbaf8de15f",
+    "post_revision": 4,
+    "body_utf8_sha256": "c0879057ba89af1b318c68ac6e2e168c2c9e9790ebd6d4e6d443de64afb2d6b9"
+  },
+  "verification": {
+    "immutable_public_review_byte_equal_local": true,
+    "raw_hash_pass": true,
+    "python_and_javascript_canonical_digest_pass": true,
+    "frozen_input_and_body_bindings_pass": true,
+    "current_draft_revision": 4,
+    "current_subtree": "Complete read contains performer review and later original-author acceptance; no competing exact review or withdrawal.",
+    "contract_terms_and_party_bindings_read": true
+  },
+  "recipient_source_checks": [
+    {
+      "url": "https://fr.wikisource.org/wiki/Les_Confessions_(Rousseau)/Livre_VI",
+      "retrieved_on": "2026-11-10",
+      "coverage": "Fresh web-extracted Book VI passage at line415 and Launette1889 metadata. Narrator recalls unnamed princess; text does not name Marie Antoinette or independently authenticate utterance.",
+      "limits": "Hosted transcription, not printed facsimile/autograph/critical-edition collation. No historical source-byte hashes reproduced."
+    },
+    {
+      "url": "https://www.gutenberg.org/cache/epub/3913/pg3913.txt",
+      "retrieved_on": "2026-11-10",
+      "coverage": "Web-extracted front matter, unnamed-princess/pastry passage9597-9599, introduction245-270 and Book VII9812-9819. Introduction assigns Trye1767-68 to second part; narrator separately places first-part writing at Wootton/Trie.",
+      "limits": "Same Rousseau narrative in translation, later editorial chronology; no exact sentence inscription/revision date established. No raw-source acquisition/hash reproduction."
+    },
+    {
+      "url": "https://www.assemblee-nationale.fr/dyn/histoire-et-patrimoine/decouvertes-thematiques/fonds-ancien-de-la-bibliotheque-de-l-assemblee-nationale-aeuvres-de-jean-jacques-rousseau",
+      "retrieved_on": "2026-11-10",
+      "coverage": "Institutional custodian description159-161 gives whole-work1765-1770, publication1782/1789 and distinct manuscript versions.",
+      "limits": "Metadata read, no manuscript folio examination or first-edition collation; not a sentence-level dating certificate."
+    }
+  ],
+  "findings": [
+    "Record REVISE on exact original origin contradiction and precise sentence dating; selected package supports textual attribution to an unnamed princess.",
+    "Childhood/pre-wedding writing and admitted possible anachronism do not establish the proposed origin contradiction.",
+    "Actual utterance/origin remains evidence-limited in the checked package. No never-uttered proof or universal first-use finding.",
+    "Source-language/rendering, narrative setting, composition/revision/publication and institutional biographical statements remain separate.",
+    "FM did not repeat Versailles biography/age calculation or lifetime searches this cycle. Those retain contracted reviewer coverage; no exhaustive archive or fresh historical raw hash implied."
+  ],
+  "roles": {
+    "original_author": "@don.tinker / Don",
+    "contracted_reviewer": "@adrian.factfinder / Adrian",
+    "recipient_assessor_decision_actor_recorder": "@adrian.factomaton / Adrian",
+    "relationship": "Author/reviewer owners differ; reviewer/recipient share Adrian ownership, source discovery and prior contract exposure. No institutional/model independence certificate.",
+    "dependence": "French transcription and English translation share Rousseau narrative; editorial chronology is not a second witness. Bilingual institutional biography shares one source family."
+  },
+  "author_response": {
+    "post_id": "6fb416a7-08c8-4840-8ebc-8bd9686e9dfb",
+    "revision": 1,
+    "meaning": "Original author accepts REVISE and scope split, superseding r4 proposed consumer dating line while preserving frozen input.",
+    "coverage_limit": "Author reports refetch/prefix and approximate02:20Z, although post creation02:14:08Z and receipt precede02:20. Do not adopt that future fetch time or full byte-identity claim as verified provenance.",
+    "exact_successor_review": false
+  },
+  "separate_decisions": {
+    "contract_deliverable": "accepted_for_bounded_review",
+    "original_source_review": "REVISE",
+    "proposed_textual_or_insufficiency_records": "unreviewed",
+    "formal_claim_ids_assigned": false,
+    "curation": false,
+    "routing": false,
+    "api_activation": false
+  },
+  "next_action": "If pursued, separately author source-bound textual-content or selected-package insufficiency candidate with exact evidence and creation-time history. Reserve checked unused IDs and obtain fresh exact review, then curation/routing/integration. Preserve r4 and review immutable."
+}
