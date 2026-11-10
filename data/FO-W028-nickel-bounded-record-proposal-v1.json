@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "bounded_record_proposal_not_library_input",
+  "proposal_version": 1,
+  "formal_claim_id": null,
+  "original_prose_author": "@don.tinker / Don",
+  "bounded_proposal_author_and_recorder": "@adrian.factfinder / Adrian",
+  "claim": "In the United States Code2024Edition,31USC5112(b) specifies the five-cent coin alloy as75percent copper and25percent nickel, by weight.",
+  "scope": "Dated codified statutory specification, not present-law currency certification or physical composition assay.",
+  "answer": "The2024Edition statutory specification is75percent copper and25percent nickel by weight.",
+  "proposed_factual_verdict": "supported_in_dated_text",
+  "review_status": "awaiting_exact_proposal_review",
+  "reviews": [],
+  "evidence": [
+    {
+      "source_id": "S1",
+      "url": "https://www.govinfo.gov/content/pkg/USCODE-2024-title31/html/USCODE-2024-title31-subtitleIV-chap51-subchapII-sec5112.htm",
+      "publisher": "U.S. Government Publishing Office / Office of the Law Revision Counsel",
+      "edition": "United States Code2024Edition,31USC5112",
+      "retrieved_on": "2026-11-10",
+      "locator": "Section5112(b), five-cent alloy sentence and final by-weight sentence; web text lines33-34. Section credits line754 and amendments814-821 end at2021.",
+      "relation": "supports_dated_statutory_text",
+      "short_excerpt": "The specifications for alloys are by weight.",
+      "checked": "Direct official web text states five-cent alloy75percent copper/25percent nickel and applies weight basis to alloy specifications. Tolerance provision exists but no relative-percent/percentage-point range is inferred. Credits in dated edition do not themselves prove currentness.",
+      "acquisition": "Current web-extracted official text read; no new raw-source capture/hash reproduced.",
+      "dependence_group": "31-USC-5112-normative-specification"
+    }
+  ],
+  "context": [
+    {
+      "source_id": "S2",
+      "url": "https://www.usmint.gov/learn/coins-and-medals/circulating-coins/coin-specifications",
+      "publisher": "United States Mint",
+      "edition": "Mutable current Coin Specifications web page; no precise publication/update date adopted",
+      "retrieved_on": "2026-11-10",
+      "locator": "Nickel heading/table, web lines330-349; introductory scope line302.",
+      "relation": "context_agency_application",
+      "short_excerpt": "25% Nickel, 75% Copper",
+      "checked": "Current web text lists matching composition. Introduction describes specifications for legal-tender coins presently in production for annual sets; not an assay or proof of every historical/circulating specimen. Percentage weight basis remains sourced to statute, not inferred solely from Mint table.",
+      "acquisition": "Current web read successful despite contributor earlier live403. Does not reproduce old archive captures or their compressed/decoded hashes.",
+      "dependence_group": "31-USC-5112-normative-specification"
+    }
+  ],
+  "limitations": [
+    "Dated2024Code text supports alloy/weight wording; complete present-law currency not independently established. No factual contradiction is inferred from incomplete access.",
+    "Contributor bulk119-1through136 search, code/Cornell/source hashes and BILLSTATUS records remain attributed reports; bulk zip and every law were not recollected or re-audited. Targeted negative strings alone are not an exhaustive indirect-amendment search.",
+    "OLRC classification rows are editorial index coverage limited to classified provisions, not full enacted text or guarantee against later/unclassified changes. Last webpage currency date differs from research retrieval date.",
+    "ArchiveMint sources were not retrieved; compressed and decoded abbreviated hashes cannot establish exact historic-byte identity. Current successful Mint text read is a separate mutable representation with limited scope.",
+    "No assays, manufacturing compliance, numeric tolerance interpretation, historic/wartime composition, other countries, weights/dimensions or metal value reviewed as adopted facts.",
+    "Statute and Mint application share normative origin. LII republication would not add an independent origin; multiple pages/readers do not create independent measurements.",
+    "Reviewer differs from author Don but shares recipient Adrian ownership. Prior source URL discovery reused; no institutional/model independence certificate."
+  ],
+  "excluded_scopes": [
+    "Current law after checked edition without completed currency review.",
+    "Physical assay/compliance, numeric tolerance range, all historical issues, other jurisdictions.",
+    "Dimensions, weight, metal value and query aliases."
+  ],
+  "origin": {
+    "input_file": "data/W028-nickel-review-input-v1-2026-11-09.json",
+    "input_raw_sha256": "6f30f8e4ad142a3b8af91d6595e6b8c052728c14f65cc83f664b7cda76f78d7d",
+    "review_file": "data/FO-W028-factfinder-review-v1.json",
+    "transformation": "Narrow original current-statute wording to attributed2024Edition claim; do not assign formal C-ID or inherit source review into new proposal."
+  },
+  "decisions": {
+    "curation": false,
+    "routing": false,
+    "api_activation": false
+  }
+}
