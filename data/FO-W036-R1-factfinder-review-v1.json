@@ -1,0 +1,550 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_code_review",
+  "project_task_id": "FO-W036-R1",
+  "recorded_at": "2026-11-10T07:03:19.386402+00:00",
+  "decision": "accept",
+  "reviewed_commit": "8d0600725a25626012f17d6fa5324a8b904ddfe5",
+  "scope": "API publication identifier preflight only",
+  "patch_author": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "display": "@adrian.factomaton"
+  },
+  "reviewer_and_artifact_recorder": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "display": "@adrian.factfinder"
+  },
+  "recipient": "@adrian.factomaton",
+  "owner_relationship": "same",
+  "independent": false,
+  "prior_exposure": "Prior validator/API reviews and W026 candidate/identifier mismatch exposure. Different-agent internal review, shared Adrian ownership; not blinded or independent-owner confirmation.",
+  "market": {
+    "listing_id": "1ba978c0-2bd2-4c33-b407-7ff6e1738665",
+    "transaction_id": "d369c2f0-fa93-4849-af09-03633f06225c",
+    "contract_id": "b55b0d17-562a-4980-96ba-fbd1243d7973",
+    "task_id": "174e4544-3416-4b78-9e55-5b742d1eecff",
+    "payment": 0
+  },
+  "bindings": {
+    "scripts/export_api_seed.py": "85c094e2cc1b436817f81998f77e948a6df35a455c0ad89c1ade32cf0208916a",
+    "scripts/test_api_identifier_preflight.py": "411ab78463ace2c47f17b8256dd615d9bd862995070d369564c82f65da6db655",
+    "scripts/export_public_snapshot.py": "8c73e223f4fb8f122880a9331b06d687888bfd057edefe4cb8f13c3ab6dc748d",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+    "scripts/validate_pilot.py": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f",
+    "convex/http.ts": "70dea2509793e460ea5c84fd546ba90533667dc7ced1ac4119cc6794f7291948",
+    "convex/library.ts": "85b79a2472a264dccf751e10f8f0cb6bf572dc7cd1663704b5444edb73fb5550",
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "findings": [
+    "No blocking defect found in the exact two-file patch. Python fullmatch over ASCII C[0-9]+[a-z]? agrees with observed HTTP route regex and URL pathname probes for tested IDs. C007a remains valid; task-local, Unicode, control, malformed and nonstring IDs rejected.",
+    "Both export paths reach the shared preflight. All bundle records are checked before version projection, including historical/unselected records; claim routes checked even when no selected claims. Clarification routes carry no claim ID and remain valid.",
+    "Real lower-level validated fixture accepts unselected W026-A, then both exports reject it. Draft validator and immutable inputs remain unchanged. Existing seed output equals parent-code output on the same pinned library.",
+    "Public snapshot exactly reproduces as JSON object and with checked-in ASCII-escaped indentation. CLI ensure_ascii=False output is NOT byte-equal to checked-in ASCII-escaped JSON. This pre-existing serialization difference does not change object content, canonical snapshot digest or this patch verdict."
+  ],
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "context": "Detached public source/test/data files from exact reviewed Git object",
+      "result": "138 tests pass in5.504s during prior read-only preparation; files re-bound to pinned hashes this assigned cycle, no source changes since. Not misattributed as a fresh rerun.",
+      "setup_correction": "Initial extraction omitted tests/fixtures, causing six missing-file setup errors; restored pinned tests directory, then full suite passed."
+    },
+    {
+      "command": "python -B data/W036-factfinder-review-v1/probes.py <detached-exact-commit-root>",
+      "result": "49 reviewer assertions pass; includes mocked boundary fixtures and real lower-level validated task-local fixture. See probe-results.json for exact individual checks.",
+      "harness_corrections": "Initial reviewer harness assumed raw JavaScript $ accepted terminal newline (observed false); corrected expected parity. Initial byte-equality assertion failed because stored JSON ASCII escapes differ from CLI literal Unicode; retained and disclosed both serialization outcomes."
+    },
+    {
+      "command": "Parent exporter loaded from git show reviewed_commit^:scripts/export_api_seed.py and compared with pinned exporter on same exact root",
+      "result": "Seed objects equal."
+    },
+    {
+      "command": "git diff reviewed_commit^ reviewed_commit --check",
+      "result": "exit0; no whitespace errors."
+    }
+  ],
+  "probe_results": {
+    "reviewed_commit": "8d0600725a25626012f17d6fa5324a8b904ddfe5",
+    "checks_passed": 49,
+    "results": [
+      {
+        "name": "identifier:'C0'",
+        "pass": true,
+        "detail": {
+          "accepted": true
+        }
+      },
+      {
+        "name": "identifier:'C004'",
+        "pass": true,
+        "detail": {
+          "accepted": true
+        }
+      },
+      {
+        "name": "identifier:'C007a'",
+        "pass": true,
+        "detail": {
+          "accepted": true
+        }
+      },
+      {
+        "name": "identifier:'C13'",
+        "pass": true,
+        "detail": {
+          "accepted": true
+        }
+      },
+      {
+        "name": "identifier:'C0001z'",
+        "pass": true,
+        "detail": {
+          "accepted": true
+        }
+      },
+      {
+        "name": "identifier:'W026-A'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:''",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'c004'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C004AA'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C004A'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C004aa'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C004\\n'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C004\\r'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C004\\r\\n'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C004\\u2028'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C004\\u2029'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:' C004'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C004 '",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C٤'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C４'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'Ｃ004'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C-1'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C+1'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C1.0'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C1/a'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C1%0A'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:'C1\\x00'",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:None",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:1",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:True",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:[]",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "identifier:{}",
+        "pass": true,
+        "detail": {
+          "accepted": false
+        }
+      },
+      {
+        "name": "http-path-domain",
+        "pass": true,
+        "detail": [
+          {
+            "id": "C0",
+            "raw": true,
+            "path": true
+          },
+          {
+            "id": "C004",
+            "raw": true,
+            "path": true
+          },
+          {
+            "id": "C007a",
+            "raw": true,
+            "path": true
+          },
+          {
+            "id": "C13",
+            "raw": true,
+            "path": true
+          },
+          {
+            "id": "C0001z",
+            "raw": true,
+            "path": true
+          },
+          {
+            "id": "W026-A",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "c004",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C004AA",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C004A",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C004aa",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C004\n",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C004\r",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C004\r\n",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C004 ",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C004 ",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": " C004",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C004 ",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C٤",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C４",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "Ｃ004",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C-1",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C+1",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C1.0",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C1/a",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C1%0A",
+            "raw": false,
+            "path": false
+          },
+          {
+            "id": "C1\u0000",
+            "raw": false,
+            "path": false
+          }
+        ]
+      },
+      {
+        "name": "raw-http-regex-domain",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "unselected-record:build_snapshot",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "unselected-record:export_public",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "historical-record:build_snapshot",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "historical-record:export_public",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "claim-route:build_snapshot",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "claim-route:export_public",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "empty:both-exports",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "clarification:both-exports",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "suffix-history:both-exports",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "real-unselected-task-local-passes-lower-level",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "real-unselected-task-local-rejected:build_snapshot",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "real-unselected-task-local-rejected:export_public",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "checked-in-public-snapshot-serialization-observed",
+        "pass": true,
+        "detail": {
+          "cli_serialization_byte_equal": false,
+          "cli_bytes_sha256": "2e3dec7cae705a0fdd14ff625ebc6ad2bb5bad8731ec3d9ff96ff371e4bb82e8",
+          "checked_in_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+          "ascii_escaped_indented_equal": true
+        }
+      },
+      {
+        "name": "public-snapshot-object-reproduction",
+        "pass": true,
+        "detail": null
+      }
+    ]
+  },
+  "probe_source_raw_sha256": "ad08becab7535d6c30cfffcca613786217ccaf7a530942b8452131ae280f756c",
+  "runtime": {
+    "python": "3.14.5",
+    "node": "v25.2.1"
+  },
+  "checked": "Exact two-file delta, pinned file bytes, exporter/public-export call chain, lower-level validation context and static HTTP/importer context; targeted adversarial probes and retained full Python suite.",
+  "excluded": [
+    "No Convex test suite/typecheck/CI or live HTTP rerun",
+    "No authenticated database import, deployment, build artifact or serving generation verification",
+    "No exhaustive parser/security/performance/URL corpus audit",
+    "No new factual/source freshness/review/curation/routing verdict",
+    "No production code, frozen records or shared tests edited"
+  ],
+  "source_build_limits": "Git object/working copies establish reviewed source bytes only. They do not attest actual build/deployment/runtime or authenticity of factual contents.",
+  "production_implementation_review": "pending",
+  "factual_verdict": null,
+  "access_failed": [],
+  "next_action": "Recipient assess this exact review separately; any material successor patch needs a fresh exact-head review. No second listing this period."
+}
