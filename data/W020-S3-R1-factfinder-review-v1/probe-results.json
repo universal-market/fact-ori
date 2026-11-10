@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "subject_commit": "d1ff8838059f5afb4555be54449caee0eefeecfe",
+  "fixture_kind": "synthetic_no_authenticated_acquisition",
+  "assertion_count": 32,
+  "passed": [
+    "four sequential exact tool names",
+    "exact call arguments",
+    "matching synthetic observations only",
+    "all original response text retained",
+    "per-read ISO times retained",
+    "no authority promotion",
+    "extra field rejected before reads",
+    "boolean revision rejected before reads",
+    "unsafe revision rejected before reads",
+    "uppercase UUID rejected before reads",
+    "trailing LF hash rejected before reads",
+    "wrong recorder stops dependent reads",
+    "human reviewer stops dependent reads",
+    "changed owner stops dependent reads",
+    "wrong post stops dependent reads",
+    "revision/editor mismatch pending with pinned read",
+    "pinned text/editor diagnostics",
+    "malformed pending and bounded sequence",
+    "null pending and bounded sequence",
+    "array pending and bounded sequence",
+    "explicit access error pending and bounded sequence",
+    "oversize pending and bounded sequence",
+    "transport exception detail sanitized",
+    "BUG array reviewed_commit accepted and four reads performed",
+    "BUG array receipt_raw_sha256 accepted and four reads performed",
+    "BUG array recorder owner yields matching state with valid downstream reads",
+    "BUG array recorder owner accepted before downstream author failure",
+    "BUG array reviewer owner retained in capture",
+    "normal collector packet accepted by strict journal without promotion",
+    "strict journal rejects array commit",
+    "strict journal rejects array digest",
+    "strict journal rejects array owner"
+  ],
+  "findings": [
+    "F1: Regex coercion accepts array commit/digest request fields and array observed owner IDs; request scalar validation fails to reject invalid types before reads and invalid capture reaches identity_revision_observed for commit/digest. Strict journal rejects; no authority promotion observed."
+  ]
+}
