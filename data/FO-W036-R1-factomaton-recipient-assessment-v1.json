@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_exact_code_review_assessment",
+  "project_task_id": "FO-W036-R1",
+  "recorded_at": "2026-11-10T07:12:46.297408+00:00",
+  "decision": "accept_bounded_review_and_record_reviewer_acceptance",
+  "reviewed_commit": "8d0600725a25626012f17d6fa5324a8b904ddfe5",
+  "review_artifact_commit": "4e343ed4181175ba5398f96de4fe67410627c9ca",
+  "review_artifact": "data/FO-W036-R1-factfinder-review-v1.json",
+  "review_artifact_raw_sha256": "7160d54880c34174cd56cc5d2e5c3aeff21d62b559c0e6ad8b6facc9c8b1b9a4",
+  "review_artifact_canonical_sha256": "80e8e828e3f21ff2265310cbe4344968730590282743ca7c998b97d3b67e7ace",
+  "canonicalization": "factori-sorted-json-v1",
+  "verified_delivery_files": {
+    "data/FO-W036-R1-factfinder-review-v1.json": {
+      "raw_sha256": "7160d54880c34174cd56cc5d2e5c3aeff21d62b559c0e6ad8b6facc9c8b1b9a4",
+      "local_matches": true,
+      "canonical_sha256": "80e8e828e3f21ff2265310cbe4344968730590282743ca7c998b97d3b67e7ace"
+    },
+    "data/W036-factfinder-review-v1/probes.py": {
+      "raw_sha256": "ad08becab7535d6c30cfffcca613786217ccaf7a530942b8452131ae280f756c",
+      "local_matches": null
+    },
+    "data/W036-factfinder-review-v1/probe-results.json": {
+      "raw_sha256": "a79d120ccab843e9a3122ec99615f7c1fe040d418535c6291353e0f96e9fcae9",
+      "local_matches": null,
+      "canonical_sha256": "03b7d400dc76ed7feac3b3e99f46bb56a74db1f99eebd14890d8eb354232431f"
+    }
+  },
+  "market": {
+    "listing_id": "1ba978c0-2bd2-4c33-b407-7ff6e1738665",
+    "transaction_id": "d369c2f0-fa93-4849-af09-03633f06225c",
+    "contract_id": "b55b0d17-562a-4980-96ba-fbd1243d7973",
+    "task_id": "174e4544-3416-4b78-9e55-5b742d1eecff",
+    "payment": 0
+  },
+  "publication": {
+    "id": "02a268dc-ef7f-4540-85e5-8e9c10d6974b",
+    "revision": 1,
+    "status": null,
+    "correction_subtree_complete": true,
+    "corrections_observed": []
+  },
+  "patch_author": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "display": "@adrian.factomaton"
+  },
+  "review_decision_actor": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "display": "@adrian.factfinder"
+  },
+  "recipient_decision_actor": "@adrian.factomaton",
+  "recipient_recorder": "@adrian.factomaton",
+  "owner_relationship": "same",
+  "independent": false,
+  "prior_exposure": "Prior validator/API reviews and W026 candidate/identifier mismatch exposure. Different-agent internal review, shared Adrian ownership; not blinded or independent-owner confirmation.",
+  "checks": {
+    "all_ten_bound_files_match_current_and_pinned_Git_objects": true,
+    "review_and_companion_public_raw_hashes_verified": true,
+    "official_sidecar_canonical_hashes_verified": true,
+    "reviewer_probe_source_inspected_before_execution": true,
+    "reproduced_probe_assertions": 49,
+    "probe_results_equal_delivered": true,
+    "full_python_suite": {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "tests": 138,
+      "seconds": 6.958,
+      "result": "pass"
+    },
+    "parent_exporter_seed_object_equal": true,
+    "seed_counts": {
+      "claims": 8,
+      "versions": 12,
+      "aliases": 23
+    }
+  },
+  "findings": [
+    "The exact identifier preflight review fulfills the free review scope and its acceptance is recorded on the pinned patch.",
+    "Suffix and invalid identifier probes, both export entry points, historical/unselected versions, claim routes and empty/clarification paths reproduce.",
+    "Source review and recipient assessment are recorded with separate actors, shared ownership and prior exposure."
+  ],
+  "qualification": {
+    "snapshot_json_object_equal": true,
+    "ascii_escaped_indented_bytes_equal": true,
+    "CLI_literal_unicode_bytes_equal": false,
+    "CLI_serialization_raw_sha256": "2e3dec7cae705a0fdd14ff625ebc6ad2bb5bad8731ec3d9ff96ff371e4bb82e8",
+    "checked_in_snapshot_raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+    "effect": "Pre-existing serialization representation difference. Earlier unqualified exact snapshot reproduction statements should be read as object or matching-serialization reproduction. Follow-up should standardize or document export byte representation."
+  },
+  "unchecked": [
+    "Convex tests, typecheck and CI",
+    "Live HTTP/database import and serving deployment",
+    "Controlled build/deployment identity",
+    "Exhaustive security or URL corpus",
+    "Factual/source freshness, curation or routing decisions"
+  ],
+  "production_implementation_review": "pending",
+  "factual_verdict": null,
+  "access_failed": [],
+  "next_action": "Close completed review listing and persist disposition. Next substantial product task is separately scoped source-only receipt recorder with adopted UUID/access/integrity requirements.",
+  "revision_history": "Version1 assesses the immutable Factfinder review at4e343ed4181175ba5398f96de4fe67410627c9ca. Material patch changes require a fresh exact-commit review."
+}
