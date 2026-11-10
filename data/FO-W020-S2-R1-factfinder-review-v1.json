@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_code_review",
+  "project_task_id": "FO-W020-S2-R1",
+  "recorded_at": "2026-11-10T16:03:00.950432+00:00",
+  "decision": "accept",
+  "reviewed_commit": "a11c6a7c8863a490747746520321b97a1e302309",
+  "scope": "Offline declared file/hash and full committed Git tree relationship observation only",
+  "patch_author": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "display": "@adrian.factomaton"
+  },
+  "reviewer_decision_actor_and_artifact_recorder": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "display": "@adrian.factfinder"
+  },
+  "recipient": "@adrian.factomaton",
+  "owner_relationship": "same",
+  "independent": false,
+  "prior_exposure": "Factfinder authored W020 design/UUID/access/editor follow-up and S1/API/validator reviews. Different-agent implementation review sharing Adrian ownership, not blinded or independent-owner confirmation.",
+  "market": {
+    "listing_id": "6a511c9d-3c9d-4fe4-a4cd-505e3c2618a2",
+    "transaction_id": "024ed082-b86e-4cac-bf61-bbd27c4a9ee4",
+    "contract_id": "31504648-8ed2-4817-9859-3498067b355c",
+    "task_id": "65376630-0b56-4fa5-a604-787074729d3f",
+    "payment": 0
+  },
+  "source_raw_bindings": {
+    "scripts/review_source_binding.py": "86af9deef253ffcd890e434e3e3e080172935873967d691cb713c323396c53bf",
+    "scripts/test_review_source_binding.py": "a1de311e2c2e8642093a044472e6a85a7a5d3ed4280f4bfd5264c4bdfa82a7c6",
+    "docs/review-source-binding.md": "128990a9253f29aff764f6a5e65b6c22ca6bf7d584f3c474eddd13a546a17a31",
+    "docs/review-provenance.md": "3220d765da648711681acf97bb1cd7e75cc453f2ecf4e84028ba852aed509697",
+    "scripts/release_manifest.py": "bfb64cb39175aa8d49f03f835d06ba7a18d38d7ea7a64a866f7383d284f195b2",
+    "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+    "scripts/sidecar_digest.py": "d45fcb82b3b01361681dddb34e7189356b785d344321095ecfd993b0ebc25243",
+    "scripts/test_release_manifest.py": "8b4463f3a0e410ed2434ce009cf208892f5bb4e42ab93a99d947007e59fe47d0"
+  },
+  "findings": [
+    "No blocking defect found in exact four-file source-binding increment and four pinned dependencies. Strict bounded receipt/parser checks reject tested malformed schema/commit/path/hash inputs before build_manifest/Git reads.",
+    "Every declared path is compared with the reviewed commit, not the target. Missing or unequal hashes produce explicit nonmatching diagnostics. Historical hashes legitimately remain matched after target content/mode/full-tree drift; target_relationship separately reports drift. This distinction is not acceptance of changed target code.",
+    "same_tree_merge denotes only distinct commits with equal full committed trees, including empty-commit cases; it establishes neither actual merge ancestry nor a new reviewer decision. Observed reviewed-source modes are reported, but the receipt declares content hashes only. Mode acceptance and complete implementation coverage are not established.",
+    "Raw/canonical receipt domains remain distinct. Imported authenticated:true and accept decisions never promote fixed unverified_import/pending output. No journal is opened or mutated by source-binding code.",
+    "Reused Git manifest logic disables replacement interpretation and runs object-integrity checks. Full Python regressions include existing replacement/corruption/path fixtures. Reviewer supplemental replacement-ref probe retains original source identity. Audited public source repositories, stable object storage, existing denylist and full-tree limitations remain prerequisites."
+  ],
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "context": "Fresh reviewer run on detached exact-commit public source/data/tests",
+      "result": "150 tests pass in6.309s, including four new binding tests and inherited source-manifest tests."
+    },
+    {
+      "command": "python -B data/W020-S2-R1-factfinder-review-v1/probes.py <detached-exact-commit-root> <public-project-root>",
+      "result": "40 reviewer assertions pass: schema/path/digest/resource rejection before Git, same commit/equal tree/different tree, mode/byte/working-tree distinctions, missing/mismatch, raw/canonical domains, actual CLI/error, replacement isolation and real immutable S1 receipt historical/target comparisons."
+    },
+    {
+      "command": "Eight pinned Git-object/source-byte comparisons",
+      "result": "All listed source/test/doc/dependency hashes reproduced."
+    },
+    {
+      "command": "git diff a11c6a7^ a11c6a7 --check",
+      "result": "exit0."
+    }
+  ],
+  "probe_source_raw_sha256": "807266b7fd46bf1d42be12d7290a20dccb9a7be3cd279db8516e0a4563331740",
+  "probe_results": {
+    "reviewed_commit": "a11c6a7c8863a490747746520321b97a1e302309",
+    "checks_passed": 40,
+    "checks": [
+      {
+        "name": "reject-before-git:schema_versionTrue",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:artifact_kind'other'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:reviewed_commit'HEAD'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:reviewed_commit'-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:reviewed_commit'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:source_raw_bindings{}",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:path:''",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:path:'.'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:path:'../safe.txt'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:path:'/safe.txt'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:path:'a//b'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:path:'./safe.txt'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:path:'a/../safe.txt'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:path:'.env.local'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:path:'.aws/config'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:path:'keys/test.pem'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:path:'safe.txt\\x00'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:digest:'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:digest:'000000000000000000000000000000000000000000000000000000000000000'",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:digest:1",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:digest:None",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:duplicate",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:float",
+        "pass": true
+      },
+      {
+        "name": "reject-before-git:oversize",
+        "pass": true
+      },
+      {
+        "name": "same-commit-and-byte-match",
+        "pass": true
+      },
+      {
+        "name": "imported-acceptance-does-not-promote",
+        "pass": true
+      },
+      {
+        "name": "mode-observed",
+        "pass": true
+      },
+      {
+        "name": "raw-canonical-domains",
+        "pass": true
+      },
+      {
+        "name": "missing-and-mismatch-diagnostics",
+        "pass": true
+      },
+      {
+        "name": "distinct-commit-equal-tree",
+        "pass": true
+      },
+      {
+        "name": "historical-mode-scope-disclosed",
+        "pass": true
+      },
+      {
+        "name": "executable-reviewed-mode-observed",
+        "pass": true
+      },
+      {
+        "name": "historical-hashes-match-after-target-byte-drift",
+        "pass": true
+      },
+      {
+        "name": "working-tree-not-used",
+        "pass": true
+      },
+      {
+        "name": "actual-cli-match",
+        "pass": true
+      },
+      {
+        "name": "cli-invalid-argv-exit2",
+        "pass": true
+      },
+      {
+        "name": "replacement-isolation",
+        "pass": true
+      },
+      {
+        "name": "real-S1-five-historical-bindings",
+        "pass": true
+      },
+      {
+        "name": "real-S1-historical-matches-distinct-target-tree",
+        "pass": true
+      },
+      {
+        "name": "real-S1-no-promotion",
+        "pass": true
+      }
+    ],
+    "limits": [
+      "Matching declarations are historical byte correspondence, not current target acceptance or complete review coverage.",
+      "Modes are observed at reviewed source, not authenticated reviewed mode claims.",
+      "Audited public Git workflow only; no crash/race/malicious-repository or exhaustive resource/security proof."
+    ]
+  },
+  "runtime": {
+    "python": "3.14.5",
+    "platform": "Linux/local Git repositories"
+  },
+  "checked": "Complete source-binding/docs/test delta; parser/source-manifest/sidecar dependencies; actual source CLI and adversarial synthetic repos plus real S1 declared bindings. No shared production/test/docs or original journal/record artifacts changed.",
+  "excluded": [
+    "No live authenticated acquisition, reviewer/owner/decision authenticity, actual post/revision/correction/visibility/frontier evaluation",
+    "No proof of complete declared coverage, historical reviewer mode claims or changed-target acceptance",
+    "No working-tree/build/dependency-install/deployment/serving/runtime/API integration attestation",
+    "No malicious repository/Git-config/hooks/external storage adversary audit, crash/fsck-read race/power-loss or exhaustive parser/performance/resource proof",
+    "No CI/Convex/typecheck/live HTTP/production DB/factual/curation/routing/source-freshness approval"
+  ],
+  "source_build_limits": "Whole committed public trees only. Source manifest canon is its existing UTF8 JSON convention, distinct from integer-only ASCII-escaped factori-sorted-json-v1 receipt sidecars. Git hashes/byte matches are not authenticated review authority or built/deployed code.",
+  "receipt_authentication": "unverified_import",
+  "production_implementation_review": "pending",
+  "factual_verdict": null,
+  "access_failed": [],
+  "next_action": "Recipient assess exact review separately. Preserve S1/design history; later acquisition/lifecycle/frontier/source-coverage/runtime increments or material patch revisions require fresh scoped exact review. No second listing this period."
+}
