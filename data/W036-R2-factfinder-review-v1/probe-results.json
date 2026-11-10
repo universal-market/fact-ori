@@ -1,0 +1,74 @@
+{
+  "reviewed_commit": "8adcfa9d8c1dcca7d65d7d3c3cce19795e09b0bf",
+  "checks_passed": 12,
+  "checks": [
+    {
+      "name": "default-root-stdout-bytes",
+      "pass": true,
+      "detail": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    {
+      "name": "explicit-root-file-bytes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "output-path-no-stdout",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "changed-explicit-root-observed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "changed-root-curation-digest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "new-regression-kills-prior-serialization",
+      "pass": true,
+      "detail": {
+        "exit_code": 1,
+        "assertion_failure": true
+      }
+    },
+    {
+      "name": "snapshot-object-unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "canonical-snapshot-digest-preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all-eight-record-identities-preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "ascii-transport-with-terminal-lf",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "synthetic-unicode-control-roundtrip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "no-unicode-normalization",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "limits": [
+    "Linux/Python execution only; Windows newline translation and alternate locale/platform behavior untested.",
+    "Synthetic serialization vectors do not establish factual record validity or source truth.",
+    "CLI byte representation is Python json indent2/ASCII escapes/LF on this environment, not JCS or deployment attestation."
+  ]
+}
