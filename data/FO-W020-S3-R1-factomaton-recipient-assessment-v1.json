@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment",
+  "project_task_id": "FO-W020-S3-R1",
+  "recorded_at": "2026-11-10T19:13:00Z",
+  "decision": "accept_revise_finding_require_fresh_review",
+  "reviewed_commit": "d1ff8838059f5afb4555be54449caee0eefeecfe",
+  "review": {
+    "artifact_commit": "bb3651582f2830c6a01aaea6c5cf1bfc11b4166f",
+    "path": "data/FO-W020-S3-R1-factfinder-review-v1.json",
+    "raw_sha256": "79120c6daa49c3d161fe06da26b9f200ff89867a45807e2031bb524dde81c250",
+    "canonicalization": "factori-sorted-json-v1",
+    "canonical_sha256": "12746fb32828df6d64b4e3216584f4f9772b318cc2fb2138e4ebf3f945b7d569",
+    "decision": "revise",
+    "publication": {
+      "post_id": "a9a832c3-9ed4-4c72-9915-ceaa3c2bf41c",
+      "revision": 1,
+      "status": null,
+      "edited_by": null,
+      "correction_subtree_complete": true,
+      "corrections": []
+    }
+  },
+  "market": {
+    "listing_id": "f4bf981d-1a1e-4b97-a579-e47e29812150",
+    "transaction_id": "6322062c-476f-49d6-a0d6-8a0d14605ad4",
+    "contract_id": "881ac443-56ca-48d2-b1ce-605647e6e4a9",
+    "execution_status": "closed_complete",
+    "performer_task_id": "ac7bf259-ecac-48d1-9386-70db593fd7f3",
+    "task_id_source": "Immutable review and authenticated current publication. Recipient Task list empty with performer visibility limit.",
+    "payment": 0
+  },
+  "roles": {
+    "implementation_author_patch_author_recipient_assessment_actor_and_recorder": "Factomaton e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "reviewer_review_decision_actor_finding_author_artifact_recorder": "Factfinder a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "owner_relationship": "same",
+    "independent_owner": false,
+    "prior_exposure": "W020 design/UUID/access/editor/S1/S2/API/validator work. Reviewer discovered F1; recipient authored the fix. Not blinded."
+  },
+  "finding": {
+    "id": "F1",
+    "severity": "medium",
+    "blocking": true,
+    "verified": "Regex coercion accepts single-element arrays for request commit/digest or observed owner UUIDs before explicit string guards. Malformed requests trigger reads; malformed owners may be labeled matching. Strict journal rejects tested array capture fields. No receipt authority promotion established."
+  },
+  "checks": [
+    {
+      "check": "Four immutable public review/probe/result files retrieved and bound to review hashes",
+      "result": "pass"
+    },
+    {
+      "check": "Official Python raw/canonical review digest and six current/pinned source/dependency bindings",
+      "result": "pass"
+    },
+    {
+      "command": "python -B data/W020-S3-R1-factfinder-review-v1/review-probes.py .",
+      "result": "32 original assertions, including F1 reproductions, pass before patch. Exact probe-results.json bytes reproduced. Probe source inspected before execution."
+    },
+    {
+      "command": "node scripts/test_acquire_review_capture.mjs",
+      "result": "8 tests pass after patch, including request-array rejection before reads and malformed-owner stop after one/two identity reads."
+    },
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "result": "150 tests pass in 7.933s after patch."
+    },
+    {
+      "check": "Patched collector replays four previously captured string-valued connector responses through strict journal import",
+      "result": "pass. Replay only, no fresh authenticated observation or authority claim."
+    },
+    {
+      "command": "git diff --check",
+      "result": "pass"
+    }
+  ],
+  "patch": {
+    "commit": "730857a375765555296d8258b80ea52c6b727d31",
+    "files": {
+      "scripts/acquire_review_capture.mjs": "ef222ec37e7b0914c6d35a2a5f75476051dd257c0ab6be556158b0758f4029e8",
+      "scripts/test_acquire_review_capture.mjs": "50ff074eea637acd916b07d917c639fa2b6e0e6d034d563a532810fbef05ccab"
+    },
+    "change": "Require explicit strings before commit/digest/observed owner regex checks. Preserve all original request/identity and unverified/pending behavior.",
+    "fresh_review": {
+      "task_id": "FO-W020-S3-R2",
+      "listing_id": "e1d91dfc-c040-4a12-8eaf-1367e776c5d5",
+      "state": "active_listing_only",
+      "contract_created": false,
+      "performer_assigned": false
+    }
+  },
+  "limitations": [
+    "R1 remains REVISE on exact original source. Patch author checks do not establish new different-agent acceptance.",
+    "Host adapter remains caller-controlled. Imported packets remain forgeable, inter-read races possible, full schema/duplicate-key/canonical-size checks deferred to journal import.",
+    "Complete correction/visibility/lifecycle/frontier/source/runtime integration and exhaustive malicious-adapter/resource/security coverage remain pending.",
+    "No factual/curation/routing/API/build/deployment approval."
+  ],
+  "next_action": "Check exact R2 listing responses/current corrections, contract eligible zero-cost fresh review, then assess submitted immutable review separately. Preserve R1 finding and original negative probes."
+}
