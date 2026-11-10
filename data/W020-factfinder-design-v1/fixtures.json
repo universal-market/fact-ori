@@ -1,0 +1,1033 @@
+{
+  "schema_version": 1,
+  "fixture_kind": "synthetic_only_no_trust_or_production_attestation",
+  "base": {
+    "schema_version": 1,
+    "now": 1100,
+    "receipt": {
+      "schema_version": 1,
+      "id": "synthetic-receipt-1",
+      "decision_post": "synthetic-post-1",
+      "post_revision": 1,
+      "reviewer": "synthetic-reviewer",
+      "recorder": "synthetic-recorder",
+      "decision": "accept",
+      "source": {
+        "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "files": {
+          "app.py": {
+            "mode": "100644",
+            "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        "dependency_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "schema_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+      },
+      "source_digest": "b9143251c4eedf665137b28ff4145e5a0b4fc2ef48eec9c60242ca954cdde162",
+      "checked_coverage": [
+        "identity-binding",
+        "scope-evaluation"
+      ],
+      "excluded_coverage": [
+        "factual-truth",
+        "production-readiness"
+      ]
+    },
+    "source": {
+      "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "files": {
+        "app.py": {
+          "mode": "100644",
+          "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        }
+      },
+      "dependency_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "schema_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+    },
+    "implementer": "synthetic-implementer",
+    "required_coverage": [
+      "identity-binding",
+      "scope-evaluation"
+    ],
+    "build_id": "synthetic-build-1",
+    "deployment_id": "synthetic-deploy-1",
+    "runtime_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "serving_artifact_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+    "serving_generation": 1,
+    "library": {
+      "import_id": "synthetic-library-1",
+      "record_hashes": [
+        "2222222222222222222222222222222222222222222222222222222222222222"
+      ]
+    },
+    "synthetic_observations": {
+      "checked_at": 1000,
+      "lifecycle_complete": true,
+      "posts": {
+        "synthetic-post-1": {
+          "revision": 1,
+          "latest_revision": 1,
+          "actor": "synthetic-reviewer",
+          "decision": "accept",
+          "status": "active",
+          "receipt_digest": "a4f3c042ce4222bdb92c2e9b810daaff35cdbcba957a20e9af3414d92fde1b49"
+        }
+      },
+      "agent_owners": {
+        "synthetic-reviewer": "synthetic-owner-A",
+        "synthetic-implementer": "synthetic-owner-A",
+        "synthetic-recorder": "synthetic-owner-B"
+      },
+      "builds": {
+        "synthetic-build-1": {
+          "source_digest": "b9143251c4eedf665137b28ff4145e5a0b4fc2ef48eec9c60242ca954cdde162",
+          "clean_inputs": true,
+          "dependency_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "runtime_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+          "artifact_digest": "1111111111111111111111111111111111111111111111111111111111111111"
+        }
+      },
+      "deployments": {
+        "synthetic-deploy-1": {
+          "build_id": "synthetic-build-1",
+          "artifact_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+          "observed_generation": 1
+        }
+      },
+      "history": []
+    }
+  },
+  "cases": [
+    {
+      "id": "same-owner-complete-synthetic-chain",
+      "patches": [],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "scope_bound",
+        "reason": "synthetic_chain_matches",
+        "owner_relationship": "same",
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder"
+      }
+    },
+    {
+      "id": "different-owner-is-not-independence",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "agent_owners",
+            "synthetic-reviewer"
+          ],
+          "value": "synthetic-owner-C"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "scope_bound",
+        "reason": "synthetic_chain_matches",
+        "owner_relationship": "different",
+        "independent": false
+      }
+    },
+    {
+      "id": "unknown-owner-never-becomes-different",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "agent_owners",
+            "synthetic-reviewer"
+          ],
+          "value": null
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "owner_unknown",
+        "owner_relationship": "unknown"
+      }
+    },
+    {
+      "id": "missing-receipt",
+      "patches": [
+        {
+          "path": [
+            "receipt"
+          ],
+          "value": null
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "receipt_missing"
+      }
+    },
+    {
+      "id": "unsupported-envelope-schema",
+      "patches": [
+        {
+          "path": [
+            "schema_version"
+          ],
+          "value": 2
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "schema_unsupported"
+      }
+    },
+    {
+      "id": "boolean-envelope-schema",
+      "patches": [
+        {
+          "path": [
+            "schema_version"
+          ],
+          "value": true
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "schema_unsupported"
+      }
+    },
+    {
+      "id": "unsupported-receipt-schema",
+      "patches": [
+        {
+          "path": [
+            "receipt",
+            "schema_version"
+          ],
+          "value": 2
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "receipt_schema_unsupported"
+      }
+    },
+    {
+      "id": "missing-authenticated-observation",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "posts"
+          ],
+          "value": {}
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "decision_unobserved"
+      }
+    },
+    {
+      "id": "forged-edited-receipt-bytes",
+      "patches": [
+        {
+          "path": [
+            "receipt",
+            "checked_coverage"
+          ],
+          "value": [
+            "identity-binding"
+          ]
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "receipt_not_observed_bytes"
+      }
+    },
+    {
+      "id": "forged-reviewer-even-with-byte-pin",
+      "patches": [
+        {
+          "path": [
+            "receipt",
+            "reviewer"
+          ],
+          "value": "synthetic-recorder"
+        }
+      ],
+      "reobserve_receipt": true,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "decision_actor_or_meaning_mismatch"
+      }
+    },
+    {
+      "id": "forged-decision-even-with-byte-pin",
+      "patches": [
+        {
+          "path": [
+            "receipt",
+            "decision"
+          ],
+          "value": "revise"
+        }
+      ],
+      "reobserve_receipt": true,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "decision_actor_or_meaning_mismatch"
+      }
+    },
+    {
+      "id": "third-party-editor-not-original-reviewer",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "posts",
+            "synthetic-post-1",
+            "actor"
+          ],
+          "value": "synthetic-recorder"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "decision_actor_or_meaning_mismatch"
+      }
+    },
+    {
+      "id": "self-review",
+      "patches": [
+        {
+          "path": [
+            "receipt",
+            "reviewer"
+          ],
+          "value": "synthetic-implementer"
+        },
+        {
+          "path": [
+            "synthetic_observations",
+            "posts",
+            "synthetic-post-1",
+            "actor"
+          ],
+          "value": "synthetic-implementer"
+        }
+      ],
+      "reobserve_receipt": true,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "self_review"
+      }
+    },
+    {
+      "id": "recording-actor-does-not-become-reviewer",
+      "patches": [
+        {
+          "path": [
+            "receipt",
+            "recorder"
+          ],
+          "value": "synthetic-other-recorder"
+        }
+      ],
+      "reobserve_receipt": true,
+      "expected": {
+        "simulation_binding": "scope_bound",
+        "reason": "synthetic_chain_matches",
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-other-recorder",
+        "owner_relationship": "same"
+      }
+    },
+    {
+      "id": "stale-observation",
+      "patches": [
+        {
+          "path": [
+            "now"
+          ],
+          "value": 1701
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "observations_stale_or_future"
+      }
+    },
+    {
+      "id": "future-observation",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "checked_at"
+          ],
+          "value": 1200
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "observations_stale_or_future"
+      }
+    },
+    {
+      "id": "unknown-correction-frontier",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "lifecycle_complete"
+          ],
+          "value": false
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "lifecycle_unknown"
+      }
+    },
+    {
+      "id": "post-edit-invalidates-old-decision",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "posts",
+            "synthetic-post-1",
+            "latest_revision"
+          ],
+          "value": 2
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "decision_revision_changed"
+      }
+    },
+    {
+      "id": "withdrawn-receipt",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "posts",
+            "synthetic-post-1",
+            "status"
+          ],
+          "value": "withdrawn"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "decision_withdrawn"
+      }
+    },
+    {
+      "id": "corrected-old-receipt",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "posts",
+            "synthetic-post-1",
+            "status"
+          ],
+          "value": "superseded"
+        },
+        {
+          "path": [
+            "synthetic_observations",
+            "history"
+          ],
+          "value": [
+            "synthetic-receipt-1 superseded by synthetic-receipt-2"
+          ]
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "decision_superseded"
+      }
+    },
+    {
+      "id": "fresh-exact-replacement-retains-history",
+      "patches": [
+        {
+          "path": [
+            "receipt",
+            "id"
+          ],
+          "value": "synthetic-receipt-2"
+        },
+        {
+          "path": [
+            "receipt",
+            "post_revision"
+          ],
+          "value": 2
+        },
+        {
+          "path": [
+            "synthetic_observations",
+            "posts",
+            "synthetic-post-1",
+            "revision"
+          ],
+          "value": 2
+        },
+        {
+          "path": [
+            "synthetic_observations",
+            "posts",
+            "synthetic-post-1",
+            "latest_revision"
+          ],
+          "value": 2
+        },
+        {
+          "path": [
+            "synthetic_observations",
+            "history"
+          ],
+          "value": [
+            "synthetic-receipt-1 superseded"
+          ]
+        }
+      ],
+      "reobserve_receipt": true,
+      "expected": {
+        "simulation_binding": "scope_bound",
+        "reason": "synthetic_chain_matches",
+        "receipt_id": "synthetic-receipt-2"
+      }
+    },
+    {
+      "id": "observed-revise",
+      "patches": [
+        {
+          "path": [
+            "receipt",
+            "decision"
+          ],
+          "value": "revise"
+        },
+        {
+          "path": [
+            "synthetic_observations",
+            "posts",
+            "synthetic-post-1",
+            "decision"
+          ],
+          "value": "revise"
+        }
+      ],
+      "reobserve_receipt": true,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "review_revise"
+      }
+    },
+    {
+      "id": "observed-unresolved",
+      "patches": [
+        {
+          "path": [
+            "receipt",
+            "decision"
+          ],
+          "value": "unresolved"
+        },
+        {
+          "path": [
+            "synthetic_observations",
+            "posts",
+            "synthetic-post-1",
+            "decision"
+          ],
+          "value": "unresolved"
+        }
+      ],
+      "reobserve_receipt": true,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "review_unresolved"
+      }
+    },
+    {
+      "id": "partial-coverage",
+      "patches": [
+        {
+          "path": [
+            "receipt",
+            "checked_coverage"
+          ],
+          "value": [
+            "identity-binding"
+          ]
+        }
+      ],
+      "reobserve_receipt": true,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "coverage_partial"
+      }
+    },
+    {
+      "id": "explicitly-excluded-required-scope",
+      "patches": [
+        {
+          "path": [
+            "receipt",
+            "excluded_coverage"
+          ],
+          "value": [
+            "scope-evaluation"
+          ]
+        }
+      ],
+      "reobserve_receipt": true,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "coverage_partial"
+      }
+    },
+    {
+      "id": "empty-requested-scope",
+      "patches": [
+        {
+          "path": [
+            "required_coverage"
+          ],
+          "value": []
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "required_coverage_invalid"
+      }
+    },
+    {
+      "id": "malformed-coverage-string",
+      "patches": [
+        {
+          "path": [
+            "receipt",
+            "checked_coverage"
+          ],
+          "value": "identity-binding"
+        }
+      ],
+      "reobserve_receipt": true,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "receipt_coverage_invalid"
+      }
+    },
+    {
+      "id": "changed-file",
+      "patches": [
+        {
+          "path": [
+            "source",
+            "files",
+            "app.py",
+            "sha256"
+          ],
+          "value": "3333333333333333333333333333333333333333333333333333333333333333"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "source_drift"
+      }
+    },
+    {
+      "id": "added-file",
+      "patches": [
+        {
+          "path": [
+            "source",
+            "files",
+            "new.py"
+          ],
+          "value": {
+            "mode": "100644",
+            "sha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "source_drift"
+      }
+    },
+    {
+      "id": "mode-drift",
+      "patches": [
+        {
+          "path": [
+            "source",
+            "files",
+            "app.py",
+            "mode"
+          ],
+          "value": "100755"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "source_drift"
+      }
+    },
+    {
+      "id": "dependency-lock-drift",
+      "patches": [
+        {
+          "path": [
+            "source",
+            "dependency_digest"
+          ],
+          "value": "5555555555555555555555555555555555555555555555555555555555555555"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "source_drift"
+      }
+    },
+    {
+      "id": "schema-drift",
+      "patches": [
+        {
+          "path": [
+            "source",
+            "schema_digest"
+          ],
+          "value": "6666666666666666666666666666666666666666666666666666666666666666"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "source_drift"
+      }
+    },
+    {
+      "id": "caller-commit-string",
+      "patches": [
+        {
+          "path": [
+            "source",
+            "commit"
+          ],
+          "value": "7777777777777777777777777777777777777777"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "source_drift"
+      }
+    },
+    {
+      "id": "invalid-receipt-source-digest",
+      "patches": [
+        {
+          "path": [
+            "receipt",
+            "source_digest"
+          ],
+          "value": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "reobserve_receipt": true,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "receipt_source_digest_invalid"
+      }
+    },
+    {
+      "id": "explicit-same-tree-merge",
+      "patches": [
+        {
+          "path": [
+            "source"
+          ],
+          "value": {
+            "commit": "8888888888888888888888888888888888888888",
+            "tree": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "files": {
+              "app.py": {
+                "mode": "100644",
+                "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+              }
+            },
+            "dependency_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "schema_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+          }
+        },
+        {
+          "path": [
+            "synthetic_observations",
+            "same_tree_merge"
+          ],
+          "value": {
+            "reviewed_source_digest": "b9143251c4eedf665137b28ff4145e5a0b4fc2ef48eec9c60242ca954cdde162",
+            "current_source_digest": "083077bb4ec6b020db3fc4be546c07c90fe9e69bb6bb26e8705a496b4158d52a"
+          }
+        },
+        {
+          "path": [
+            "synthetic_observations",
+            "builds",
+            "synthetic-build-1",
+            "source_digest"
+          ],
+          "value": "083077bb4ec6b020db3fc4be546c07c90fe9e69bb6bb26e8705a496b4158d52a"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "scope_bound",
+        "reason": "synthetic_chain_matches",
+        "source_relation": "same_tree_merge_not_new_commit_review",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "8888888888888888888888888888888888888888"
+      }
+    },
+    {
+      "id": "source-only-not-deployment",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "builds"
+          ],
+          "value": {}
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "build_unobserved"
+      }
+    },
+    {
+      "id": "dirty-or-extra-deploy-inputs",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "builds",
+            "synthetic-build-1",
+            "clean_inputs"
+          ],
+          "value": false
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "build_source_or_dirty_inputs"
+      }
+    },
+    {
+      "id": "build-source-mismatch",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "builds",
+            "synthetic-build-1",
+            "source_digest"
+          ],
+          "value": "9999999999999999999999999999999999999999999999999999999999999999"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "build_source_or_dirty_inputs"
+      }
+    },
+    {
+      "id": "build-lock-mismatch",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "builds",
+            "synthetic-build-1",
+            "dependency_digest"
+          ],
+          "value": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "build_dependencies_or_runtime_drift"
+      }
+    },
+    {
+      "id": "runtime-environment-drift",
+      "patches": [
+        {
+          "path": [
+            "runtime_digest"
+          ],
+          "value": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "build_dependencies_or_runtime_drift"
+      }
+    },
+    {
+      "id": "unobserved-serving-deployment",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "deployments"
+          ],
+          "value": {}
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "deployment_unobserved"
+      }
+    },
+    {
+      "id": "deployment-build-mismatch",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "deployments",
+            "synthetic-deploy-1",
+            "build_id"
+          ],
+          "value": "synthetic-build-other"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "deployment_build_mismatch"
+      }
+    },
+    {
+      "id": "artifact-mismatch",
+      "patches": [
+        {
+          "path": [
+            "synthetic_observations",
+            "deployments",
+            "synthetic-deploy-1",
+            "artifact_digest"
+          ],
+          "value": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "deployment_build_mismatch"
+      }
+    },
+    {
+      "id": "serving-artifact-drift",
+      "patches": [
+        {
+          "path": [
+            "serving_artifact_digest"
+          ],
+          "value": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "serving_generation_or_artifact_drift"
+      }
+    },
+    {
+      "id": "serving-generation-drift",
+      "patches": [
+        {
+          "path": [
+            "serving_generation"
+          ],
+          "value": 2
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "serving_generation_or_artifact_drift"
+      }
+    },
+    {
+      "id": "library-import-separate-from-technical-binding",
+      "patches": [
+        {
+          "path": [
+            "library",
+            "import_id"
+          ],
+          "value": "synthetic-library-2"
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "scope_bound",
+        "reason": "synthetic_chain_matches",
+        "factual_verdict": null
+      }
+    },
+    {
+      "id": "malformed-required-input",
+      "patches": [
+        {
+          "path": [
+            "runtime_digest"
+          ],
+          "delete": true
+        }
+      ],
+      "reobserve_receipt": false,
+      "expected": {
+        "simulation_binding": "pending",
+        "reason": "malformed"
+      }
+    }
+  ]
+}
