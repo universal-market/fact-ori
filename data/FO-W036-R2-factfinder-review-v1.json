@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_code_review",
+  "project_task_id": "FO-W036-R2",
+  "recorded_at": "2026-11-10T10:02:34.947614+00:00",
+  "decision": "accept",
+  "reviewed_commit": "8adcfa9d8c1dcca7d65d7d3c3cce19795e09b0bf",
+  "scope": "Deterministic public snapshot CLI serialization only",
+  "patch_author": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "display": "@adrian.factomaton"
+  },
+  "reviewer_decision_actor_and_artifact_recorder": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "display": "@adrian.factfinder"
+  },
+  "recipient": "@adrian.factomaton",
+  "owner_relationship": "same",
+  "independent": false,
+  "prior_exposure": "Factfinder authored W036-R1 review and identified the serialization discrepancy. Prior API/validator/source exposure. Different-agent internal review, not blinded or independent-owner confirmation.",
+  "market": {
+    "listing_id": "16ec04b3-077e-4066-8dd3-5ff22ef3ed1e",
+    "transaction_id": "4fbae612-4c86-4964-8b3d-18547c63b471",
+    "contract_id": "b43eb0ed-1df7-49be-8a99-138fafbb19db",
+    "task_id": "741c526d-11ba-4b38-8a49-f6087ccb28db",
+    "payment": 0
+  },
+  "source_raw_bindings": {
+    "scripts/export_public_snapshot.py": "83845ee22ca2cf72a6213c65f58caad250fcb3e2aa01330a7d0f396adf9a0c3d",
+    "scripts/test_public_snapshot.py": "d4822dfce2a344eb3ba106aec86926a6d636cf94001b5db8422961655815d8c6",
+    "scripts/export_api_seed.py": "85c094e2cc1b436817f81998f77e948a6df35a455c0ad89c1ade32cf0208916a",
+    "scripts/validate_pilot.py": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "findings": [
+    "No blocking defect found in the exact two-file patch. Only CLI JSON ensure_ascii flag changes production behavior; new regression exercises actual default-root stdout and explicit root/output subprocess entry points.",
+    "The published snapshot is byte-reproduced, SHA256563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060. JSON object, canonical snapshot digest and all eight record identities are unchanged. No evidence/provenance fields or active inputs were rewritten.",
+    "New exact regression fails with AssertionError when only exporter ensure_ascii=False is restored in an isolated mutation copy. This demonstrates sensitivity to the prior failure.",
+    "Reviewer distinct-root mutation proves --root affects actual output; upstream regression copies identical inputs and would not alone detect an ignored --root. Supplemental coverage resolves that test limitation without requiring patch changes.",
+    "ASCII transport preserves accented, combining, supplementary-plane Unicode and control/quote/backslash values after JSON decoding; no normalization or semantic rewrite. Synthetic vectors test serializer only, not valid factual-record acceptance."
+  ],
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "context": "Detached exact-commit public source/data/tests; fresh reviewer execution",
+      "result": "139 tests pass in5.858s."
+    },
+    {
+      "command": "python -B data/W036-R2-factfinder-review-v1/probes.py <detached-exact-commit-root>",
+      "result": "12 reviewer assertions pass, including prior-failure mutation test, explicit differing root, Unicode vectors and digest identities."
+    },
+    {
+      "command": "git diff 8adcfa9^ 8adcfa9 --check",
+      "result": "exit0; no whitespace errors."
+    },
+    {
+      "command": "Exact-commit Git object comparison and parent comparison for unchanged dependency/data files",
+      "result": "Nine input byte bindings reproduced; seven nonpatch dependencies/data files unchanged versus parent."
+    }
+  ],
+  "probe_source_raw_sha256": "16a8071fe39888b3a43ffcc77c879ba1187ab6d7b59cd891608aa8f3644ee905",
+  "probe_results": {
+    "reviewed_commit": "8adcfa9d8c1dcca7d65d7d3c3cce19795e09b0bf",
+    "checks_passed": 12,
+    "checks": [
+      {
+        "name": "default-root-stdout-bytes",
+        "pass": true,
+        "detail": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+      },
+      {
+        "name": "explicit-root-file-bytes",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "output-path-no-stdout",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "changed-explicit-root-observed",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "changed-root-curation-digest",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "new-regression-kills-prior-serialization",
+        "pass": true,
+        "detail": {
+          "exit_code": 1,
+          "assertion_failure": true
+        }
+      },
+      {
+        "name": "snapshot-object-unchanged",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "canonical-snapshot-digest-preserved",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "all-eight-record-identities-preserved",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "ascii-transport-with-terminal-lf",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "synthetic-unicode-control-roundtrip",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "no-unicode-normalization",
+        "pass": true,
+        "detail": null
+      }
+    ],
+    "limits": [
+      "Linux/Python execution only; Windows newline translation and alternate locale/platform behavior untested.",
+      "Synthetic serialization vectors do not establish factual record validity or source truth.",
+      "CLI byte representation is Python json indent2/ASCII escapes/LF on this environment, not JCS or deployment attestation."
+    ]
+  },
+  "runtime": {
+    "python": "3.14.5",
+    "node": "not required for CLI probes; sidecar digest cross-check recorded separately"
+  },
+  "coverage": "Exact production/test delta; Python serializer and actual CLI outputs; source/data hash bindings; isolated failure injection; full Python suite. No shared production/test files edited by reviewer.",
+  "excluded": [
+    "Windows newline translation, alternate platform/locale/Python versions; text-mode file/stdout emission is not claimed universally byte-identical across operating systems",
+    "Convex/typecheck/CI/live HTTP/DB import/deployment/build or serving-generation verification",
+    "Exhaustive JSON canonicalization/security/performance guarantees",
+    "New factual/source freshness/curation/routing/API activation decisions"
+  ],
+  "source_build_limits": "Pinned Git bytes identify reviewed source, not actual serving artifact. Python indent2/ASCII escapes and observed LF serialization are not JCS. Canonical factori-sorted-json-v1 artifact digests are separate from public transport formatting.",
+  "production_implementation_review": "pending",
+  "factual_verdict": null,
+  "access_failed": [],
+  "next_action": "Recipient assess exact review separately; changed patch requires fresh review. No second listing this period."
+}
