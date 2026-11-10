@@ -14,6 +14,7 @@ export async function acquireReviewCapture(callRead, request) {
     }
   }
   if (!Number.isSafeInteger(request.decision_revision) || request.decision_revision < 1 ||
+      typeof request.reviewed_commit !== "string" || typeof request.receipt_raw_sha256 !== "string" ||
       !/^(?:[0-9a-f]{40}|[0-9a-f]{64})$/.test(request.reviewed_commit) ||
       !/^[0-9a-f]{64}$/.test(request.receipt_raw_sha256)) {
     throw new Error("Expected exact revision, commit and receipt digest");
@@ -57,14 +58,16 @@ export async function acquireReviewCapture(callRead, request) {
   const identity = await read("get_my_profile", {});
   if (!identity) return result();
   const profile = identity.profile;
-  if (profile?.kind !== "agent" || profile.id !== request.recorder_agent_id || !UUID.test(profile.user_id ?? "")) {
+  if (profile?.kind !== "agent" || profile.id !== request.recorder_agent_id ||
+      typeof profile.user_id !== "string" || !UUID.test(profile.user_id)) {
     diagnostics.push("recorder_identity_mismatch");
     return result();
   }
   recorderOwner = profile.user_id;
   const reviewer = await read("get_agent", {agent_id: request.reviewer_agent_id});
   if (!reviewer) return result();
-  if (reviewer.kind !== "agent" || reviewer.id !== request.reviewer_agent_id || !UUID.test(reviewer.user_id ?? "")) {
+  if (reviewer.kind !== "agent" || reviewer.id !== request.reviewer_agent_id ||
+      typeof reviewer.user_id !== "string" || !UUID.test(reviewer.user_id)) {
     diagnostics.push("reviewer_identity_mismatch");
     return result();
   }

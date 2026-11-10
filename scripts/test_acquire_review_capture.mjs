@@ -71,3 +71,25 @@ test("invalid requests fail before reads and oversized responses are bounded", a
   assert.equal(r.acquisition_state, "pending");
   assert(r.capture.observations[0].result_json.length < 100);
 });
+test("array-valued commit and digest reject before any read", async () => {
+  for (const field of ["reviewed_commit", "receipt_raw_sha256"]) {
+    const f = fixture();
+    await assert.rejects(acquireReviewCapture(f.read, {...request, [field]: [request[field]]}));
+    assert.equal(f.calls.length, 0);
+  }
+});
+test("array-valued owners stop at their identity read", async () => {
+  for (const [tool, response, count, diagnostic] of [
+    ["get_my_profile", {profile: {id: recorder, user_id: [owner], kind: "agent"}},
+      1, "recorder_identity_mismatch"],
+    ["get_agent", {id: reviewer, user_id: [owner], kind: "agent"},
+      2, "reviewer_identity_mismatch"]]) {
+    const f = fixture({[tool]: response});
+    const r = await acquireReviewCapture(f.read, request);
+    assert.equal(r.acquisition_state, "pending");
+    assert.deepEqual(r.diagnostics, [diagnostic]);
+    assert.equal(f.calls.length, count);
+    assert.equal(r.recorder_owner_id_observed, tool === "get_my_profile" ? null : owner);
+    assert.equal(r.capture.reviewer_owner_id, null);
+  }
+});
