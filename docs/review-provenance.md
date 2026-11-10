@@ -123,6 +123,10 @@ The [internal receipt journal](review-receipt-storage.md) implements strict
 capture storage as the first recorder component. Imported captures retain
 unverified status pending authenticated acquisition and binding verification.
 
+The [declared source-binding check](review-source-binding.md) compares receipt
+file hashes with verified Git objects and reports full-tree target relationships.
+Imported receipt authentication and runtime review remain pending.
+
 The current tool's tests cover deterministic byte/mode manifests, added and
 changed files, dirty/untracked exclusion with explicit limits, historical reads,
 same-tree/different-commit distinction, blob/commit replacement isolation,
