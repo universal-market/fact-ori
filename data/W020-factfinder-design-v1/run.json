@@ -1,0 +1,1043 @@
+{
+  "schema_version": 1,
+  "simulation_only": true,
+  "cases_passed": 47,
+  "cases": [
+    {
+      "id": "same-owner-complete-synthetic-chain",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "scope_bound",
+        "reason": "synthetic_chain_matches",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact",
+        "checked_scope": [
+          "identity-binding",
+          "scope-evaluation"
+        ],
+        "excluded_scope": [
+          "factual-truth",
+          "production-readiness"
+        ],
+        "receipt_id": "synthetic-receipt-1",
+        "factual_verdict": null
+      }
+    },
+    {
+      "id": "different-owner-is-not-independence",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "scope_bound",
+        "reason": "synthetic_chain_matches",
+        "owner_relationship": "different",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact",
+        "checked_scope": [
+          "identity-binding",
+          "scope-evaluation"
+        ],
+        "excluded_scope": [
+          "factual-truth",
+          "production-readiness"
+        ],
+        "receipt_id": "synthetic-receipt-1",
+        "factual_verdict": null
+      }
+    },
+    {
+      "id": "unknown-owner-never-becomes-different",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "owner_unknown",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "missing-receipt",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "receipt_missing",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "unsupported-envelope-schema",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "schema_unsupported",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "boolean-envelope-schema",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "schema_unsupported",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "unsupported-receipt-schema",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "receipt_schema_unsupported",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "missing-authenticated-observation",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "decision_unobserved",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "forged-edited-receipt-bytes",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "receipt_not_observed_bytes",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "forged-reviewer-even-with-byte-pin",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "decision_actor_or_meaning_mismatch",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "forged-decision-even-with-byte-pin",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "decision_actor_or_meaning_mismatch",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "third-party-editor-not-original-reviewer",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "decision_actor_or_meaning_mismatch",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "self-review",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "self_review",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "recording-actor-does-not-become-reviewer",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "scope_bound",
+        "reason": "synthetic_chain_matches",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-other-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact",
+        "checked_scope": [
+          "identity-binding",
+          "scope-evaluation"
+        ],
+        "excluded_scope": [
+          "factual-truth",
+          "production-readiness"
+        ],
+        "receipt_id": "synthetic-receipt-1",
+        "factual_verdict": null
+      }
+    },
+    {
+      "id": "stale-observation",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "observations_stale_or_future",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "future-observation",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "observations_stale_or_future",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "unknown-correction-frontier",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "lifecycle_unknown",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "post-edit-invalidates-old-decision",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "decision_revision_changed",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "withdrawn-receipt",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "decision_withdrawn",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "corrected-old-receipt",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "decision_superseded",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fresh-exact-replacement-retains-history",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "scope_bound",
+        "reason": "synthetic_chain_matches",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact",
+        "checked_scope": [
+          "identity-binding",
+          "scope-evaluation"
+        ],
+        "excluded_scope": [
+          "factual-truth",
+          "production-readiness"
+        ],
+        "receipt_id": "synthetic-receipt-2",
+        "factual_verdict": null
+      }
+    },
+    {
+      "id": "observed-revise",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "review_revise",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "observed-unresolved",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "review_unresolved",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "partial-coverage",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "coverage_partial",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "explicitly-excluded-required-scope",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "coverage_partial",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "empty-requested-scope",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "required_coverage_invalid",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "malformed-coverage-string",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "receipt_coverage_invalid",
+        "owner_relationship": "unknown",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        }
+      }
+    },
+    {
+      "id": "changed-file",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "source_drift",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "added-file",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "source_drift",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "mode-drift",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "source_drift",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "dependency-lock-drift",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "source_drift",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "schema-drift",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "source_drift",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "caller-commit-string",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "source_drift",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "7777777777777777777777777777777777777777",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "invalid-receipt-source-digest",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "receipt_source_digest_invalid",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "explicit-same-tree-merge",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "scope_bound",
+        "reason": "synthetic_chain_matches",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "8888888888888888888888888888888888888888",
+        "source_relation": "same_tree_merge_not_new_commit_review",
+        "checked_scope": [
+          "identity-binding",
+          "scope-evaluation"
+        ],
+        "excluded_scope": [
+          "factual-truth",
+          "production-readiness"
+        ],
+        "receipt_id": "synthetic-receipt-1",
+        "factual_verdict": null
+      }
+    },
+    {
+      "id": "source-only-not-deployment",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "build_unobserved",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "dirty-or-extra-deploy-inputs",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "build_source_or_dirty_inputs",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "build-source-mismatch",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "build_source_or_dirty_inputs",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "build-lock-mismatch",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "build_dependencies_or_runtime_drift",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "runtime-environment-drift",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "build_dependencies_or_runtime_drift",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "unobserved-serving-deployment",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "deployment_unobserved",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "deployment-build-mismatch",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "deployment_build_mismatch",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "artifact-mismatch",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "deployment_build_mismatch",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "serving-artifact-drift",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "serving_generation_or_artifact_drift",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "serving-generation-drift",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "serving_generation_or_artifact_drift",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    },
+    {
+      "id": "library-import-separate-from-technical-binding",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "scope_bound",
+        "reason": "synthetic_chain_matches",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-2",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact",
+        "checked_scope": [
+          "identity-binding",
+          "scope-evaluation"
+        ],
+        "excluded_scope": [
+          "factual-truth",
+          "production-readiness"
+        ],
+        "receipt_id": "synthetic-receipt-1",
+        "factual_verdict": null
+      }
+    },
+    {
+      "id": "malformed-required-input",
+      "pass": true,
+      "result": {
+        "simulation_only": true,
+        "production_implementation_review": "pending",
+        "simulation_binding": "pending",
+        "reason": "malformed",
+        "owner_relationship": "same",
+        "independent": false,
+        "library_identity": {
+          "import_id": "synthetic-library-1",
+          "record_hashes": [
+            "2222222222222222222222222222222222222222222222222222222222222222"
+          ]
+        },
+        "decision_actor": "synthetic-reviewer",
+        "recorder": "synthetic-recorder",
+        "reviewed_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "current_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_relation": "exact"
+      }
+    }
+  ],
+  "limits": "Synthetic fixture assertions only; no network, authentication, keys, live receipt, build or deployment verification."
+}
