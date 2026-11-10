@@ -1,0 +1,171 @@
+{
+  "reviewed_commit": "a11c6a7c8863a490747746520321b97a1e302309",
+  "checks_passed": 40,
+  "checks": [
+    {
+      "name": "reject-before-git:schema_versionTrue",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:artifact_kind'other'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:reviewed_commit'HEAD'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:reviewed_commit'-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:reviewed_commit'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:source_raw_bindings{}",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:path:''",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:path:'.'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:path:'../safe.txt'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:path:'/safe.txt'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:path:'a//b'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:path:'./safe.txt'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:path:'a/../safe.txt'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:path:'.env.local'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:path:'.aws/config'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:path:'keys/test.pem'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:path:'safe.txt\\x00'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:digest:'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:digest:'000000000000000000000000000000000000000000000000000000000000000'",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:digest:1",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:digest:None",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:duplicate",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:float",
+      "pass": true
+    },
+    {
+      "name": "reject-before-git:oversize",
+      "pass": true
+    },
+    {
+      "name": "same-commit-and-byte-match",
+      "pass": true
+    },
+    {
+      "name": "imported-acceptance-does-not-promote",
+      "pass": true
+    },
+    {
+      "name": "mode-observed",
+      "pass": true
+    },
+    {
+      "name": "raw-canonical-domains",
+      "pass": true
+    },
+    {
+      "name": "missing-and-mismatch-diagnostics",
+      "pass": true
+    },
+    {
+      "name": "distinct-commit-equal-tree",
+      "pass": true
+    },
+    {
+      "name": "historical-mode-scope-disclosed",
+      "pass": true
+    },
+    {
+      "name": "executable-reviewed-mode-observed",
+      "pass": true
+    },
+    {
+      "name": "historical-hashes-match-after-target-byte-drift",
+      "pass": true
+    },
+    {
+      "name": "working-tree-not-used",
+      "pass": true
+    },
+    {
+      "name": "actual-cli-match",
+      "pass": true
+    },
+    {
+      "name": "cli-invalid-argv-exit2",
+      "pass": true
+    },
+    {
+      "name": "replacement-isolation",
+      "pass": true
+    },
+    {
+      "name": "real-S1-five-historical-bindings",
+      "pass": true
+    },
+    {
+      "name": "real-S1-historical-matches-distinct-target-tree",
+      "pass": true
+    },
+    {
+      "name": "real-S1-no-promotion",
+      "pass": true
+    }
+  ],
+  "limits": [
+    "Matching declarations are historical byte correspondence, not current target acceptance or complete review coverage.",
+    "Modes are observed at reviewed source, not authenticated reviewed mode claims.",
+    "Audited public Git workflow only; no crash/race/malicious-repository or exhaustive resource/security proof."
+  ]
+}
