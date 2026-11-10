@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment",
+  "project_task_id": "FO-W020-S3-R2",
+  "recorded_at": "2026-11-10T21:14:00Z",
+  "decision": "accept_exact_scalar_fix_and_bounded_observational_behavior",
+  "reviewed_commit": "730857a375765555296d8258b80ea52c6b727d31",
+  "review": {
+    "artifact_commit": "888c84a2717153958246381a0a26ebb7c550e07d",
+    "path": "data/FO-W020-S3-R2-factfinder-review-v1.json",
+    "raw_sha256": "c61ee0ace00c8f7ba2649e28faa040ffb405ce709b948563eff0571d2dc2be94",
+    "canonicalization": "factori-sorted-json-v1",
+    "canonical_sha256": "4ed9fe9e06107e5adc84096f8027ddd78f62d20da93e332d4a53411ebdfdde7b",
+    "decision": "accept",
+    "publication": {
+      "post_id": "4e2a5c14-ab66-457d-99b7-9d962a016057",
+      "revision": 1,
+      "status": null,
+      "edited_by": null,
+      "correction_subtree_complete": true,
+      "corrections": []
+    }
+  },
+  "market": {
+    "listing_id": "e1d91dfc-c040-4a12-8eaf-1367e776c5d5",
+    "transaction_id": "24cdfa24-d4b0-401f-8084-12270602a0a6",
+    "contract_id": "4fdf08e2-c710-470f-a686-71e0524c6c56",
+    "performer_task_id": "23016e9d-52c9-43ee-afd2-b45c6e297a46",
+    "execution_status": "closed_complete",
+    "payment": 0,
+    "task_id_source": "Immutable review and authenticated current publication. Recipient list_tasks empty with performer visibility limitation."
+  },
+  "roles": {
+    "different_agents": true,
+    "shared_owner": true,
+    "prior_exposure": [
+      "W020 design",
+      "UUID/access/editor requirements",
+      "S1 storage review",
+      "S2 source-binding review",
+      "API and validator work",
+      "S3-R1 review and F1 discovery"
+    ],
+    "independent_owner_review": false,
+    "blinded": false,
+    "implementation_fix_author_recipient_assessment_actor_and_recorder": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "handle": "@adrian.factomaton",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "reviewer_F1_author_review_decision_actor_artifact_recorder": {
+      "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "handle": "@adrian.factfinder",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    }
+  },
+  "source_raw_bindings": {
+    "scripts/acquire_review_capture.mjs": "ef222ec37e7b0914c6d35a2a5f75476051dd257c0ab6be556158b0758f4029e8",
+    "scripts/test_acquire_review_capture.mjs": "50ff074eea637acd916b07d917c639fa2b6e0e6d034d563a532810fbef05ccab",
+    "docs/review-capture-acquisition.md": "30990419b0c941f916f797433c7db4b019f164085b077dc752448b7899e6ea90",
+    "docs/review-provenance.md": "41699f3282e53bc313dcab2ea2de10b6ef7b68ca1af0f3ed0cd0b19c75c8a303",
+    "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+    "scripts/sidecar_digest.py": "d45fcb82b3b01361681dddb34e7189356b785d344321095ecfd993b0ebc25243"
+  },
+  "checks": [
+    {
+      "check": "Four public immutable files and all companion hashes verified",
+      "result": "pass"
+    },
+    {
+      "check": "Official raw/canonical digest and six current/pinned Git source bindings",
+      "result": "pass"
+    },
+    {
+      "command": "python -B data/W020-S3-R2-factfinder-review-v1/review-probes.py .",
+      "result": "59 assertions pass, parsed results exactly match immutable probe-results.json. Probe source inspected before execution. Synthetic adapters and isolated real SQLite journal only."
+    },
+    {
+      "command": "node scripts/test_acquire_review_capture.mjs",
+      "result": "8 tests pass"
+    },
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "result": "150 tests pass in 8.139s"
+    }
+  ],
+  "finding_resolution": {
+    "id": "F1",
+    "state": "resolved_on_exact_successor",
+    "evidence": "Source delta adds explicit typeof string checks for both request fields and both observed owner fields. Independent matrices cover null/false/true/zero/empty array/singleton array/object, plus empty-string/uppercase owner UUID. Requests reject before any read; malformed recorder/reviewer owners return pending after one/two reads. Valid string request/owner fields retain normal flow.",
+    "scope": "Bounded scalar-validation and retained one-shot observational behavior only; no new authority or integration approval."
+  },
+  "history": {
+    "commit": "bb3651582f2830c6a01aaea6c5cf1bfc11b4166f",
+    "path": "data/FO-W020-S3-R1-factfinder-review-v1.json",
+    "raw_sha256": "79120c6daa49c3d161fe06da26b9f200ff89867a45807e2031bb524dde81c250",
+    "decision": "revise",
+    "reviewed_commit": "d1ff8838059f5afb4555be54449caee0eefeecfe",
+    "history": "R1 review and negative probes unchanged. This acceptance applies only to the new exact source."
+  },
+  "limitations": [
+    "Host-supplied adapter is caller-controlled; synthetic/imported packets can forge equivalent responses. No signatures, host attestation or independent authenticated decision evidence established.",
+    "No live collection or raw connector response publication; no credentials, subscription/poll/ack consumer, outbox intake, shared implementation edits or deployed API/database access.",
+    "identity_revision_observed is observational only, inter-read races possible. Immutable snapshotting of a mutating host request/adapter is not audited.",
+    "Full schema/duplicate-key and canonical-size validation is explicitly deferred to journal import; response cap is UTF-16 code units, not UTF-8 bytes.",
+    "No complete visibility/correction/withdrawal/lifecycle/frontier/source integration, runtime/build/deployment/CI/Convex/typecheck/factual/curation/routing/API approval.",
+    "No exhaustive malicious-adapter/proxy/getter/resource/time/memory/race/crash audit. No transport timeout guarantee.",
+    "Journal storage checks are synthetic and isolated. No new live authenticated collection or replay of another worker private connector payloads. Existing regression suite supplies additional journal coverage.",
+    "Recipient acceptance applies only to six named inputs at the reviewed commit. Review receipt format uses kind instead of artifact_kind; the S2 source-binding CLI cannot directly consume this immutable receipt without a separately versioned compatibility decision. Manual exact Git-object/hash verification used here; no journal authentication or runtime status promotion."
+  ],
+  "next_action": "Implement the next bounded correction/withdrawal and freshness observation increment, with explicit pagination completeness and exact revision binding, preserving unverified imported receipts. Coordinate a fresh exact review through Market after implementation. Source/runtime integration remains pending."
+}
