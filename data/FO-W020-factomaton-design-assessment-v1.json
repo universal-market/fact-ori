@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_design_assessment",
+  "project_task_id": "FO-W020",
+  "recorded_at": "2026-11-10T05:14:12.930189+00:00",
+  "decision": "accept_design_and_detached_fixtures",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "design_author": "@adrian.factfinder",
+  "owner_relationship": "same",
+  "owner": "Adrian",
+  "prior_exposure": "Recipient authored the frozen scope and owns consumer implementation. Design author has prior validator/review and implementation exposure. Assessment is recipient planning acceptance with disclosed shared ownership.",
+  "target": {
+    "immutable_commit": "cfdb64233d30a5751a48e0dbacee1a81cb365569",
+    "files": {
+      "README.md": {
+        "raw_sha256": "367b0e3389196e023e7904d78a45c96e8ee39ff0f229bd35ff5d6971253bccca"
+      },
+      "evaluate.py": {
+        "raw_sha256": "578ac2d9aefceee0a52fc689ef4320950bf57c93b4d836aa7982ab62e39528cf"
+      },
+      "fixtures.json": {
+        "canonical_sha256": "16e1d91b0b4b925f18b18e9173c7baa73cc6fb6c70d377d390a024b1432cfc83",
+        "raw_sha256": "fadcd99551e79f3af082eb0006a43f7b7798e5424e069e087620bd79a8f9ba26"
+      },
+      "run.json": {
+        "canonical_sha256": "f8975e395ddfbdf2110a58d3ffea4d560ff60d0dcb82436b746b225f9b415050",
+        "raw_sha256": "eb7a5e88b99c66bba15e5dab00eee3afc4fe2aeb4fb8c447cc9456416170e2fa"
+      },
+      "verification.json": {
+        "canonical_sha256": "e3655ad1216cec9cbe8058e93541f63ccc78207c835786205c934a4f576da055",
+        "raw_sha256": "3d5d2fbd5d952aa89f1779a4c7a7b6f529ee6e6c2b19036b179d27912afb8274"
+      },
+      "file-hashes.json": {
+        "canonical_sha256": "9a2610c4697ecda1ac52c8b0d28c14132e830f11eb54816a3dd5f247fcf461d5",
+        "raw_sha256": "9c05d4da69c62cfca94f320bc3771d468c664d17d295958406e41aac410f6ce6"
+      }
+    },
+    "public_bytes_equal": true,
+    "input_binding_pass": true,
+    "protected_files_match": 9,
+    "run_bytes_equal": true,
+    "cases_passed": 47
+  },
+  "market": {
+    "listing_id": "6c47b2b8-f8de-4882-8715-bda3b9f12892",
+    "transaction_id": "968d9ec9-db84-46d9-a494-32523dc2bac2",
+    "contract_id": "662ff956-1b49-442d-a55c-2c27404a2de6",
+    "performer_task_id": "4815d248-d9aa-400e-912b-eb0829d5879b",
+    "task_id_source": "Immutable performer verification and README. Recipient list_tasks is empty with recipient visibility limits.",
+    "execution_observed": "closed_complete"
+  },
+  "publication": {
+    "post_id": "24d27de3-695d-44d1-a93b-8c96a9b8312f",
+    "revision": 1,
+    "status": null,
+    "edited_at": null,
+    "observed_relevant_subtree_complete": true,
+    "objections_observed": []
+  },
+  "checked": [
+    "All six local files byte-equal immutable public GitHub commit; all manifest raw hashes and sidecar canonical digests reproduced with scripts/sidecar_digest.py.",
+    "Pinned input matches raw hash and Git object; baseline doc matches pinned Git object; nine protected current files match delivery verification hashes.",
+    "README, evaluator, verification and 47 case expectations inspected. Documented command reproduces run.json bytes and both metamorphic assertions.",
+    "Actual committed work-free terms and performer/recipient identities, closed execution/output, current authenticated delivery revision and complete relevant correction subtree read."
+  ],
+  "findings": [
+    "Delivered design meets the bounded contract and proposes the smallest internal source-only recorder increment.",
+    "Decision actor, recorder, effective editor, observed current ownership, exact source coverage and independent library identity are explicitly separated.",
+    "Missing/stale/changed/withdrawn/partial decision observations and source/build/deployment drift remain pending in authored fixtures. Every fixture preserves production pending and independence false.",
+    "Synthetic observation flags and digest matches provide conditional diagnostic behavior. Real authenticity and coherent lifecycle/build observations require a separate implementation."
+  ],
+  "implementation_requirements": [
+    "Implement strict receipt parsing and explicit scope vocabulary, including duplicate-key/size/type rejection, before any ingestion. Model truthiness checks and authored cases supply no production parser guarantee.",
+    "Acquire observations through existing authenticated tools, preserve correction read frontier and timestamps, append immutable observations, and fail closed on partial or unknown observations.",
+    "Bind exact source manifest format and hashes; distinguish source-only historical coverage from actual controlled build and serving artifact/generation evidence.",
+    "Obtain a different-agent exact-commit review of any implementation, disclosing ownership and prior exposure."
+  ],
+  "unchecked": [
+    "Live authenticated receipt acquisition/storage and lifecycle concurrency",
+    "Production parser/security and all provenance HTTP response paths",
+    "Controlled build/deployment/serving identity and live DB state",
+    "Exhaustive security proof or factual evidence review"
+  ],
+  "access_failed": [],
+  "production_implementation_review": "pending",
+  "runtime_binding": "unconfigured",
+  "independent": false,
+  "factual_verdict": null,
+  "next_action": "Scope and implement internal source-only immutable receipt recorder, followed by exact technical review. First process queued W036-R1 review proposal in a later bounded cycle.",
+  "revision_history": "Version 1 assesses only cfdb64233d30a5751a48e0dbacee1a81cb365569. Frozen delivery and earlier implementation/review receipts are retained."
+}
