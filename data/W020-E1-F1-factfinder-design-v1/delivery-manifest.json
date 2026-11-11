@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "kind": "design_delivery_manifest",
+  "project_task_id": "FO-W020-E1-F1",
+  "market_task_id": "31251034-5e86-4c0f-be8a-a032cc6b794f",
+  "contract_id": "4f49e8dc-bc07-4b8f-bed1-18fb35f5b0d9",
+  "transaction_id": "88739329-e098-48aa-b9e7-6ed869e65c22",
+  "canonicalization": "factori-sorted-json-v1",
+  "decision": "proposed_design_for_separate_recipient_assessment",
+  "designer": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "role": "designer/decision actor/artifact recorder"
+  },
+  "implementation_author_and_recipient": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "relationship": {
+    "shared_owner": true,
+    "blinded": false,
+    "independent_owner_review": false,
+    "prior_exposure": "W020 design/S1-S8/API/validator work"
+  },
+  "input_bindings": {
+    "public_evaluation_commit": "911f0dc9e9600c2ad96ac611abae938c72760706",
+    "public_evaluation_raw_sha256": "6c48e880ef3e54195ba4367d82312ccd57c0b0a68ecdd2e7cbb98d4b4854521a",
+    "report_source_commit": "d513747dcd82f9a7b854f58eced7b3bb1a32afb7",
+    "source_raw_bindings": {
+      "scripts/review_input_report.py": "708ab2c5fb5ff86c570afdec929d0d818287d11b5872592d36d2eeb6900d3bfd",
+      "docs/review-input-report.md": "6fb0b1be6586ce276767990187f5a12593675f4f940c1d51cad4e0b45d957c27"
+    }
+  },
+  "files": {
+    "README.md": {
+      "raw_sha256": "e2a6ea1d0c8cbae3547805cc651bdaa7ac44109429479368e09ff64618951f12",
+      "bytes": 9304
+    },
+    "check-fixtures.py": {
+      "raw_sha256": "cd50f55f9540c68698131f0b8a1b544499d8d12070656c7ccf7f3319cbaa2ba1",
+      "bytes": 8559
+    },
+    "disposition.schema.json": {
+      "raw_sha256": "88ab80da04d5f247a135f829748986a116f326a878d1fc86a233770c3913bbe1",
+      "bytes": 16220,
+      "canonical_sha256": "71c5fb9afc30fce980d8280d0cbb5621288c955be485253857f6db6afc5e411d"
+    },
+    "example.synthetic.json": {
+      "raw_sha256": "589babe4f8476081b13a6edcfb88784561964e9b57be8b52ff19b1a5f2e080ab",
+      "bytes": 3474,
+      "canonical_sha256": "716d937fceff772bc25911f2840f475a9ebdf37f2f4fe8959628754dc9992750"
+    },
+    "fixture-results.json": {
+      "raw_sha256": "65f6c7400eaeee53174909ee8d3923dc12e7e5eafbce7d262d018b7ae95ef179",
+      "bytes": 9167,
+      "canonical_sha256": "f98329331b520d482aaa8806d4c930c8684ffba2462519e75e654d71ee0becd6"
+    },
+    "fixtures.json": {
+      "raw_sha256": "1187dc3011ce7af5b8a8e5e6ee110dda8ae93fac5403175d7ed26050a5618f4b",
+      "bytes": 38725,
+      "canonical_sha256": "7ce3ba0107637a52eee3f9133f968b770e75f93677856ac3f461a704e62b0343"
+    },
+    "known-case.json": {
+      "raw_sha256": "ef38fdbd6713b7a428a523e7f81b13574716c1d5fba97c1f81fc8af2685eea17",
+      "bytes": 2316,
+      "canonical_sha256": "418bdae67bcffc27da1e02a83b5e4cb1a86875e92aca084a79feca931eab6f53"
+    },
+    "observations.synthetic.json": {
+      "raw_sha256": "4c76cd2d165d7c6b54993c2ce9cb34117c95f2943155182f8d9ea46f155edb77",
+      "bytes": 2335,
+      "canonical_sha256": "02cd57bd7b68b421f01d9eab38bed2177aa68e8ca8da1c0d04a16022cae5d6ab"
+    }
+  },
+  "verification": {
+    "command": "python -B check-fixtures.py",
+    "synthetic_cases": 62,
+    "result": "pass",
+    "repeat_result_bytes_equal": true,
+    "whole_project_regression_rerun": false,
+    "independent_json_schema_engine": "not available; exact companion-keyword subset oracle only"
+  },
+  "checked": "Exact synthetic version/hash/identity/set/correction/role bindings, actor versus recorder and own-author/shared-owner disclosure, invalidation and fixed pending gates/diagnostics. Frozen public input and report/doc hashes verified.",
+  "unchecked": "No semantic decision adequacy, trusted provenance/actor authority/full raw capture replay/freshness/visibility/full correction absence/required review completeness/independence/build/runtime/factual/curation/routing/API approval or general hostile-host/security guarantee. Known real case not instantiated as a disposition; public summary lacks exact body/title/private observation inputs.",
+  "scope": "Source-only design/schema/synthetic fixtures and known-case analysis; no shared implementation edits, recapture, private payload reuse, credentials, transport consumers, runtime integration or automatic diagnostic clearing.",
+  "next_action": "Separate recipient design/fixture assessment before any implementation; exact changed source would need a fresh technical review. Preserve original reports, diagnostics, unmet gates and immutable history."
+}

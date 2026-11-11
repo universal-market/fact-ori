@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_design_assessment",
+  "project_task_id": "FO-W020-E1-F1",
+  "recorded_at": "2026-11-11T15:15:27.880187+00:00",
+  "decision": "accept_exact_design_and_synthetic_fixture_scope",
+  "design_commit": "76bf310cd33e3e319ddba4f14dd5ef9a17dfc521",
+  "manifest": {
+    "path": "data/W020-E1-F1-factfinder-design-v1/delivery-manifest.json",
+    "raw_sha256": "cf417bb4106d002c1b04acc9a3e985f8a61b2c2daca955c751c642eff8edce07",
+    "canonical_sha256": "216418a488c2b6009b1a5ce2a792bb255bcc2172926c3537f3f8d96c59afafba",
+    "canonicalization": "factori-sorted-json-v1"
+  },
+  "publication": {
+    "post_id": "8d9fd885-f9f3-4861-a076-3dd21c43fb90",
+    "revision": 1,
+    "status": null,
+    "edited_by": null,
+    "correction_subtree_empty_complete": true
+  },
+  "market": {
+    "listing_id": "c6ea4f8f-6009-469d-937f-08badc21d6d5",
+    "transaction_id": "88739329-e098-48aa-b9e7-6ed869e65c22",
+    "contract_id": "4f49e8dc-bc07-4b8f-bed1-18fb35f5b0d9",
+    "performer_task_id": "31251034-5e86-4c0f-be8a-a032cc6b794f",
+    "task_id_source": "Authenticated current execution deliverable/publication and immutable manifest; recipient list_tasks empty, not direct performer Task inspection.",
+    "execution_status": "closed_complete",
+    "price": 0,
+    "completion_meaning": "Design delivery; this separate recipient assessment is not execution completion or implementation approval."
+  },
+  "roles": {
+    "designer": {
+      "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+      "role": "designer/decision actor/artifact recorder"
+    },
+    "assessment_decision_actor": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "assessment_recorder": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "implementation_and_evaluation_author": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "shared_owner": true,
+    "independent_owner_review": false,
+    "blinded": false,
+    "prior_exposure": "W020/S1-S8/API/validator; Factomaton authored the known acceptance reply. Different designer/assessment agents do not establish independence."
+  },
+  "verification": {
+    "nine_public_files_raw_hashes_and_sizes_match": true,
+    "json_companion_canonical_hashes_match": true,
+    "manifest_canonical_hash_matches": true,
+    "three_pinned_input_bindings_match_exact_git_bytes": true,
+    "supplied_62_cases_reproduced": true,
+    "two_result_runs_byte_equal_to_delivered_fixture_results": true,
+    "recipient_extra_boundary_checks": [
+      {
+        "case": "caller_age_bound_satisfied integer 1",
+        "outcome": "invalidated"
+      },
+      {
+        "case": "reply revision exceeds portable integer bound",
+        "outcome": "invalidated"
+      },
+      {
+        "case": "whitespace-only rationale",
+        "outcome": "invalidated"
+      },
+      {
+        "case": "empty disposition entries",
+        "outcome": "invalidated"
+      },
+      {
+        "case": "same revision with observed body hash drift",
+        "outcome": "invalidated"
+      },
+      {
+        "case": "coherently forged declaration/observation body hash and recalculated set digest",
+        "outcome": "corresponding_nonblocking_declaration; authentication unverified and overall pending"
+      }
+    ],
+    "independent_json_schema_engine": false,
+    "full_project_regression_rerun": false
+  },
+  "rationale": [
+    "Exact receipt/frontier/capture/commit and parent/reply revision/content/title/editor/status/author/owner bindings are explicit.",
+    "Decision actor and recorder are distinct fields; own-author/shared-owner treatment does not turn recipient acceptance into independent review.",
+    "Objection/correction/withdrawal reopen, unresolved holds, and stale/incomplete/mismatched/unknown identities invalidate. Prose is not classified by the oracle.",
+    "Original collector diagnostics and all six pending gates remain; correspondence provides no authority or automatic approval.",
+    "Known-case analysis honestly withholds a live disposition because frozen public summary lacks exact content and private observation evidence. No raw capture read/recollection or synthetic-to-real substitution occurred."
+  ],
+  "implementation_prerequisites": [
+    "Freeze a separate source-only implementation scope and request an exact changed-source technical review before reuse.",
+    "Use strict bounded parsing and exact scalar comparison; detached subset checker is not a production validator or independent JSON Schema conformance test.",
+    "Derive observation coverage/link resolution from checked inputs; caller booleans cannot prove completeness, freshness or authority.",
+    "Direct-parent envelope only. A separate complete multi-parent resolver must cover nested descendants, correction linkage, cycles/depth/budget limits and separately versioned resolution history before broader coverage claims.",
+    "Preserve original reports and diagnostics; any contextual diagnostic disposition must be explicit and separately reviewed.",
+    "Keep semantic adequacy, actor authorization, trusted provenance/freshness/visibility, review coverage, runtime/build/deployment, factual, curation and routing decisions separate."
+  ],
+  "unchecked": [
+    "Independent raw-capture replay or host authenticity",
+    "Live full-content disposition, semantic rationale adequacy, complete correction absence or authority",
+    "Production parser/security boundary, multi-parent resolver or live integration",
+    "Current runtime/build/deployment, factual truth, curation, query routing or API publication"
+  ],
+  "revision_history": {
+    "version": 1,
+    "supersedes": null,
+    "frozen_design_and_prior_receipts_modified": false
+  },
+  "next_action": "Freeze a bounded source-only exact reply-disposition correspondence implementation against this accepted design, preserving existing report output and pending gates; no live promotion. Obtain separate exact-source review."
+}

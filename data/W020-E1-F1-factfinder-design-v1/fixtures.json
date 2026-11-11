@@ -1,0 +1,1434 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic_design_mutation_recipes",
+  "base_disposition": "example.synthetic.json",
+  "base_observations": "observations.synthetic.json",
+  "cases": [
+    {
+      "id": "nonblocking-own-author-shared-owner-different-recorder",
+      "operations": [],
+      "expected": "corresponding_nonblocking_declaration"
+    },
+    {
+      "id": "same-actor-recorder-is-explicit",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "recorder"
+          ],
+          "value": {
+            "agent_id": "00000001-1111-4111-8111-111111111111",
+            "owner_id": "33333333-3333-4333-8333-333333333333"
+          }
+        }
+      ],
+      "expected": "corresponding_nonblocking_declaration"
+    },
+    {
+      "id": "changed-receipt_raw_sha256",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "bindings",
+            "receipt_raw_sha256"
+          ],
+          "value": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "changed-frontier_raw_sha256",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "bindings",
+            "frontier_raw_sha256"
+          ],
+          "value": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "changed-capture_id",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "bindings",
+            "capture_id"
+          ],
+          "value": "66666666-6666-4666-8666-666666666666"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "changed-reviewed_commit",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "bindings",
+            "reviewed_commit"
+          ],
+          "value": "dddddddddddddddddddddddddddddddddddddddd"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "changed-target_commit",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "bindings",
+            "target_commit"
+          ],
+          "value": "dddddddddddddddddddddddddddddddddddddddd"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "parent-edit",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "parent",
+            "revision"
+          ],
+          "value": 2
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "parent-body",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "parent",
+            "body_sha256"
+          ],
+          "value": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "reply-edit",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "replies",
+            0,
+            "revision"
+          ],
+          "value": 2
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "reply-body",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "replies",
+            0,
+            "body_sha256"
+          ],
+          "value": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "reply-title",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "replies",
+            0,
+            "title_sha256"
+          ],
+          "value": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "reply-status",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "replies",
+            0,
+            "status"
+          ],
+          "value": "closed"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "reply-editor",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "replies",
+            0,
+            "edited_by"
+          ],
+          "value": {
+            "agent_id": "00000002-1111-4111-8111-111111111111",
+            "owner_id": "33333333-3333-4333-8333-333333333333"
+          }
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "reply-author",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "replies",
+            0,
+            "author"
+          ],
+          "value": {
+            "agent_id": "00000002-1111-4111-8111-111111111111",
+            "owner_id": "33333333-3333-4333-8333-333333333333"
+          }
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "reply-reparent",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "replies",
+            0,
+            "parent_post_id"
+          ],
+          "value": null
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "unknown-decision-actor",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "decision_actor"
+          ],
+          "value": {
+            "agent_id": "00000099-1111-4111-8111-111111111111",
+            "owner_id": "33333333-3333-4333-8333-333333333333"
+          }
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "unknown-recorder",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "recorder"
+          ],
+          "value": {
+            "agent_id": "00000099-1111-4111-8111-111111111111",
+            "owner_id": "33333333-3333-4333-8333-333333333333"
+          }
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "unknown-author-owner",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "known_actors"
+          ],
+          "value": [
+            {
+              "agent_id": "00000002-1111-4111-8111-111111111111",
+              "owner_id": "33333333-3333-4333-8333-333333333333"
+            },
+            {
+              "agent_id": "00000003-1111-4111-8111-111111111111",
+              "owner_id": "33333333-3333-4333-8333-333333333333"
+            }
+          ]
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "changed-implementation-author",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "implementation_author"
+          ],
+          "value": {
+            "agent_id": "00000002-1111-4111-8111-111111111111",
+            "owner_id": "33333333-3333-4333-8333-333333333333"
+          }
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "changed-reviewer",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "reviewer"
+          ],
+          "value": {
+            "agent_id": "00000001-1111-4111-8111-111111111111",
+            "owner_id": "33333333-3333-4333-8333-333333333333"
+          }
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "new-uncovered-reply",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "replies"
+          ],
+          "value": [
+            {
+              "post_id": "00000011-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "93e7794ffc33473a3fdfc7227dface50bafed41fca0d062c6685e1a8b3d3a51e",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000010-2222-4222-8222-222222222222"
+            },
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "0cd28c990ea8cab1c12180911c2bc3d752e73f6d330cc37b697f832f28bb21f0",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000002-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000010-2222-4222-8222-222222222222"
+            }
+          ]
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "removed-reply",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "replies"
+          ],
+          "value": []
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "duplicate-disposition-entry",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries"
+          ],
+          "value": [
+            {
+              "reply": {
+                "post_id": "00000011-2222-4222-8222-222222222222",
+                "revision": 1,
+                "body_sha256": "93e7794ffc33473a3fdfc7227dface50bafed41fca0d062c6685e1a8b3d3a51e",
+                "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+                "author": {
+                  "agent_id": "00000001-1111-4111-8111-111111111111",
+                  "owner_id": "33333333-3333-4333-8333-333333333333"
+                },
+                "edited_by": null,
+                "status": null,
+                "parent_post_id": "00000010-2222-4222-8222-222222222222"
+              },
+              "decision_actor": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "recorder": {
+                "agent_id": "00000003-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "basis": "full_body_exact_revision",
+              "classification": "nonblocking_context",
+              "rationale": "Synthetic recipient publication adds no observed objection; this is a declared contextual decision, not independent approval.",
+              "affected_targets": [],
+              "correction_chain": []
+            },
+            {
+              "reply": {
+                "post_id": "00000011-2222-4222-8222-222222222222",
+                "revision": 1,
+                "body_sha256": "93e7794ffc33473a3fdfc7227dface50bafed41fca0d062c6685e1a8b3d3a51e",
+                "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+                "author": {
+                  "agent_id": "00000001-1111-4111-8111-111111111111",
+                  "owner_id": "33333333-3333-4333-8333-333333333333"
+                },
+                "edited_by": null,
+                "status": null,
+                "parent_post_id": "00000010-2222-4222-8222-222222222222"
+              },
+              "decision_actor": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "recorder": {
+                "agent_id": "00000003-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "basis": "full_body_exact_revision",
+              "classification": "nonblocking_context",
+              "rationale": "Synthetic recipient publication adds no observed objection; this is a declared contextual decision, not independent approval.",
+              "affected_targets": [],
+              "correction_chain": []
+            }
+          ]
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "duplicate-observed-reply",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "replies"
+          ],
+          "value": [
+            {
+              "post_id": "00000011-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "93e7794ffc33473a3fdfc7227dface50bafed41fca0d062c6685e1a8b3d3a51e",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000010-2222-4222-8222-222222222222"
+            },
+            {
+              "post_id": "00000011-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "93e7794ffc33473a3fdfc7227dface50bafed41fca0d062c6685e1a8b3d3a51e",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000010-2222-4222-8222-222222222222"
+            }
+          ]
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "omitted-correction-chain",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "corrections"
+          ],
+          "value": [
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "0cd28c990ea8cab1c12180911c2bc3d752e73f6d330cc37b697f832f28bb21f0",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000002-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000010-2222-4222-8222-222222222222"
+            }
+          ]
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "frontier_complete-false",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "frontier_complete"
+          ],
+          "value": false
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "frontier_complete-missing",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "frontier_complete"
+          ],
+          "delete": true
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "full_content_available-false",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "full_content_available"
+          ],
+          "value": false
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "full_content_available-missing",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "full_content_available"
+          ],
+          "delete": true
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "correction_chain_complete-false",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "correction_chain_complete"
+          ],
+          "value": false
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "correction_chain_complete-missing",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "correction_chain_complete"
+          ],
+          "delete": true
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "caller_age_bound_satisfied-false",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "caller_age_bound_satisfied"
+          ],
+          "value": false
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "caller_age_bound_satisfied-missing",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "caller_age_bound_satisfied"
+          ],
+          "delete": true
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "unknown-owner-null",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "decision_actor",
+            "owner_id"
+          ],
+          "value": null
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "missing-reply-body_sha256",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "reply",
+            "body_sha256"
+          ],
+          "delete": true
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "missing-reply-revision",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "reply",
+            "revision"
+          ],
+          "delete": true
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "boolean-revision",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "reply",
+            "revision"
+          ],
+          "value": true
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "empty-rationale",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "rationale"
+          ],
+          "value": ""
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "unchecked-full-body",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "basis"
+          ],
+          "value": "summary_only"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "supplied-authentication",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "authentication"
+          ],
+          "value": "verified"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "supplied-recipient-approval",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "recipient_decision"
+          ],
+          "value": "accept"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "removed-gates",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "coverage",
+            "unchecked"
+          ],
+          "value": []
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "cleared-collector-diagnostics",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "collector_diagnostics"
+          ],
+          "value": []
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "unknown-extra-approval-field",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "approved"
+          ],
+          "value": true
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "unresolved",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "classification"
+          ],
+          "value": "unresolved"
+        }
+      ],
+      "expected": "hold_unresolved"
+    },
+    {
+      "id": "material_objection",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "classification"
+          ],
+          "value": "material_objection"
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "affected_targets"
+          ],
+          "value": [
+            {
+              "post_id": "00000010-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "5c4d495d6a5aa9353220cf7bb56e32fafa33fbd7a26218976a7259717c126cfe"
+            }
+          ]
+        }
+      ],
+      "expected": "reopen_required"
+    },
+    {
+      "id": "material_objection-missing-target",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "classification"
+          ],
+          "value": "material_objection"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "correction",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "classification"
+          ],
+          "value": "correction"
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "affected_targets"
+          ],
+          "value": [
+            {
+              "post_id": "00000010-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "5c4d495d6a5aa9353220cf7bb56e32fafa33fbd7a26218976a7259717c126cfe"
+            }
+          ]
+        }
+      ],
+      "expected": "reopen_required"
+    },
+    {
+      "id": "correction-missing-target",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "classification"
+          ],
+          "value": "correction"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "withdrawal",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "classification"
+          ],
+          "value": "withdrawal"
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "affected_targets"
+          ],
+          "value": [
+            {
+              "post_id": "00000010-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "5c4d495d6a5aa9353220cf7bb56e32fafa33fbd7a26218976a7259717c126cfe"
+            }
+          ]
+        }
+      ],
+      "expected": "reopen_required"
+    },
+    {
+      "id": "withdrawal-missing-target",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "classification"
+          ],
+          "value": "withdrawal"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "correction-target-not-covered",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "classification"
+          ],
+          "value": "correction"
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "affected_targets"
+          ],
+          "value": [
+            {
+              "post_id": "00000010-2222-4222-8222-222222222222",
+              "revision": 2,
+              "body_sha256": "5c4d495d6a5aa9353220cf7bb56e32fafa33fbd7a26218976a7259717c126cfe"
+            }
+          ]
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "third-party-withdrawal-is-not-author-withdrawal",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "classification"
+          ],
+          "value": "withdrawal"
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "affected_targets"
+          ],
+          "value": [
+            {
+              "post_id": "00000010-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "5c4d495d6a5aa9353220cf7bb56e32fafa33fbd7a26218976a7259717c126cfe"
+            }
+          ]
+        }
+      ],
+      "expected": "reopen_required"
+    },
+    {
+      "id": "nonblocking-cannot-hide-affected-target",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "affected_targets"
+          ],
+          "value": [
+            {
+              "post_id": "00000010-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "5c4d495d6a5aa9353220cf7bb56e32fafa33fbd7a26218976a7259717c126cfe"
+            }
+          ]
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "additional-collector-diagnostic",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "collector_diagnostics"
+          ],
+          "value": [
+            "replies_require_full_review",
+            "opaque_error"
+          ]
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "covered-correction-chain-cannot-be-all-nonblocking",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "corrections"
+          ],
+          "value": [
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000011-2222-4222-8222-222222222222"
+            }
+          ]
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "correction_chain"
+          ],
+          "value": [
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000011-2222-4222-8222-222222222222"
+            }
+          ]
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "coverage",
+            "correction_set_sha256"
+          ],
+          "value": "239d05bf9ea94d1e7ed88c4c65239377743a470c24f0d69dcbc753ffcf61b229"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "covered-correction-chain-unresolved",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "corrections"
+          ],
+          "value": [
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000011-2222-4222-8222-222222222222"
+            }
+          ]
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "correction_chain"
+          ],
+          "value": [
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000011-2222-4222-8222-222222222222"
+            }
+          ]
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "coverage",
+            "correction_set_sha256"
+          ],
+          "value": "239d05bf9ea94d1e7ed88c4c65239377743a470c24f0d69dcbc753ffcf61b229"
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "classification"
+          ],
+          "value": "unresolved"
+        }
+      ],
+      "expected": "hold_unresolved"
+    },
+    {
+      "id": "covered-correction-chain-reopens",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "corrections"
+          ],
+          "value": [
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000011-2222-4222-8222-222222222222"
+            }
+          ]
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "correction_chain"
+          ],
+          "value": [
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000011-2222-4222-8222-222222222222"
+            }
+          ]
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "coverage",
+            "correction_set_sha256"
+          ],
+          "value": "239d05bf9ea94d1e7ed88c4c65239377743a470c24f0d69dcbc753ffcf61b229"
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "classification"
+          ],
+          "value": "correction"
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "affected_targets"
+          ],
+          "value": [
+            {
+              "post_id": "00000010-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "5c4d495d6a5aa9353220cf7bb56e32fafa33fbd7a26218976a7259717c126cfe"
+            }
+          ]
+        }
+      ],
+      "expected": "reopen_required"
+    },
+    {
+      "id": "changed-correction-chain-body",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "corrections"
+          ],
+          "value": [
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000011-2222-4222-8222-222222222222"
+            }
+          ]
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "correction_chain"
+          ],
+          "value": [
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000011-2222-4222-8222-222222222222"
+            }
+          ]
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "coverage",
+            "correction_set_sha256"
+          ],
+          "value": "239d05bf9ea94d1e7ed88c4c65239377743a470c24f0d69dcbc753ffcf61b229"
+        },
+        {
+          "side": "observations",
+          "path": [
+            "corrections",
+            0,
+            "body_sha256"
+          ],
+          "value": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "duplicate-correction-chain",
+      "operations": [
+        {
+          "side": "observations",
+          "path": [
+            "corrections"
+          ],
+          "value": [
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000011-2222-4222-8222-222222222222"
+            }
+          ]
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "correction_chain"
+          ],
+          "value": [
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000011-2222-4222-8222-222222222222"
+            }
+          ]
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "coverage",
+            "correction_set_sha256"
+          ],
+          "value": "239d05bf9ea94d1e7ed88c4c65239377743a470c24f0d69dcbc753ffcf61b229"
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "correction_chain"
+          ],
+          "value": [
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000011-2222-4222-8222-222222222222"
+            },
+            {
+              "post_id": "00000012-2222-4222-8222-222222222222",
+              "revision": 1,
+              "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+              "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+              "author": {
+                "agent_id": "00000001-1111-4111-8111-111111111111",
+                "owner_id": "33333333-3333-4333-8333-333333333333"
+              },
+              "edited_by": null,
+              "status": null,
+              "parent_post_id": "00000011-2222-4222-8222-222222222222"
+            }
+          ]
+        }
+      ],
+      "expected": "invalidated"
+    },
+    {
+      "id": "unresolved-preserves-existing-collector-diagnostics",
+      "operations": [
+        {
+          "side": "disposition",
+          "path": [
+            "entries",
+            0,
+            "classification"
+          ],
+          "value": "unresolved"
+        },
+        {
+          "side": "observations",
+          "path": [
+            "collector_diagnostics"
+          ],
+          "value": [
+            "replies_require_full_review",
+            "opaque_error"
+          ]
+        },
+        {
+          "side": "disposition",
+          "path": [
+            "collector_diagnostics"
+          ],
+          "value": [
+            "replies_require_full_review",
+            "opaque_error"
+          ]
+        }
+      ],
+      "expected": "hold_unresolved"
+    }
+  ]
+}

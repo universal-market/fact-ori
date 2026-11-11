@@ -1,0 +1,390 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic_design_fixture_results",
+  "cases": 62,
+  "per_case_guarantees": [
+    "expected outcome",
+    "fixed pending gates and unverified authentication",
+    "collector diagnostics retained",
+    "no automatic author withdrawal",
+    "unchanged fixture inputs"
+  ],
+  "schema_validation": "detached subset interpreter for companion schema keywords only; not independent standards conformance",
+  "rows": [
+    {
+      "id": "nonblocking-own-author-shared-owner-different-recorder",
+      "expected": "corresponding_nonblocking_declaration",
+      "actual": "corresponding_nonblocking_declaration",
+      "pass": true
+    },
+    {
+      "id": "same-actor-recorder-is-explicit",
+      "expected": "corresponding_nonblocking_declaration",
+      "actual": "corresponding_nonblocking_declaration",
+      "pass": true
+    },
+    {
+      "id": "changed-receipt_raw_sha256",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "changed-frontier_raw_sha256",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "changed-capture_id",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "changed-reviewed_commit",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "changed-target_commit",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "parent-edit",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "parent-body",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "reply-edit",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "reply-body",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "reply-title",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "reply-status",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "reply-editor",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "reply-author",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "reply-reparent",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "unknown-decision-actor",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "unknown-recorder",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "unknown-author-owner",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "changed-implementation-author",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "changed-reviewer",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "new-uncovered-reply",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "removed-reply",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "duplicate-disposition-entry",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "duplicate-observed-reply",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "omitted-correction-chain",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "frontier_complete-false",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "frontier_complete-missing",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "full_content_available-false",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "full_content_available-missing",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "correction_chain_complete-false",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "correction_chain_complete-missing",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "caller_age_bound_satisfied-false",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "caller_age_bound_satisfied-missing",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "unknown-owner-null",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "missing-reply-body_sha256",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "missing-reply-revision",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "boolean-revision",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "empty-rationale",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "unchecked-full-body",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "supplied-authentication",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "supplied-recipient-approval",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "removed-gates",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "cleared-collector-diagnostics",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "unknown-extra-approval-field",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "unresolved",
+      "expected": "hold_unresolved",
+      "actual": "hold_unresolved",
+      "pass": true
+    },
+    {
+      "id": "material_objection",
+      "expected": "reopen_required",
+      "actual": "reopen_required",
+      "pass": true
+    },
+    {
+      "id": "material_objection-missing-target",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "correction",
+      "expected": "reopen_required",
+      "actual": "reopen_required",
+      "pass": true
+    },
+    {
+      "id": "correction-missing-target",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "withdrawal",
+      "expected": "reopen_required",
+      "actual": "reopen_required",
+      "pass": true
+    },
+    {
+      "id": "withdrawal-missing-target",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "correction-target-not-covered",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "third-party-withdrawal-is-not-author-withdrawal",
+      "expected": "reopen_required",
+      "actual": "reopen_required",
+      "pass": true
+    },
+    {
+      "id": "nonblocking-cannot-hide-affected-target",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "additional-collector-diagnostic",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "covered-correction-chain-cannot-be-all-nonblocking",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "covered-correction-chain-unresolved",
+      "expected": "hold_unresolved",
+      "actual": "hold_unresolved",
+      "pass": true
+    },
+    {
+      "id": "covered-correction-chain-reopens",
+      "expected": "reopen_required",
+      "actual": "reopen_required",
+      "pass": true
+    },
+    {
+      "id": "changed-correction-chain-body",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "duplicate-correction-chain",
+      "expected": "invalidated",
+      "actual": "invalidated",
+      "pass": true
+    },
+    {
+      "id": "unresolved-preserves-existing-collector-diagnostics",
+      "expected": "hold_unresolved",
+      "actual": "hold_unresolved",
+      "pass": true
+    }
+  ],
+  "live_disposition_issued": false,
+  "collector_diagnostics_cleared": false,
+  "authority_or_runtime_promoted": false
+}

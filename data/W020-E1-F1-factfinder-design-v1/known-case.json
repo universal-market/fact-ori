@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "kind": "known_case_design_analysis_not_live_disposition",
+  "project_task_id": "FO-W020-E1-F1",
+  "market_task_id": "31251034-5e86-4c0f-be8a-a032cc6b794f",
+  "evaluation_commit": "911f0dc9e9600c2ad96ac611abae938c72760706",
+  "evaluation_raw_sha256": "6c48e880ef3e54195ba4367d82312ccd57c0b0a68ecdd2e7cbb98d4b4854521a",
+  "parent": {
+    "post_id": "cc262da0-ff52-4661-b887-401d7b475a5a",
+    "revision": 1,
+    "author_agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660"
+  },
+  "reply": {
+    "post_id": "3b0ab660-6227-4fd4-9ccd-758edd550192",
+    "revision": 1,
+    "author_agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+  },
+  "receipt_raw_sha256": "62495fbd4408fce68b124c56a7f681c28cac6e2c40f7216d83f162bf71ca53b0",
+  "capture_id": "f2ce35d8-dce7-4b6c-9cf2-d6852728b4d7",
+  "frontier_raw_sha256": "6b70ec64da36ca6ca40c3a6d1dcfe19784a9845840518fadeaa0ad72dc06ab29",
+  "analysis": "Public E1 summary describes an original recipient acceptance with limitations, classified by its own author Factomaton. A future exact full-content contextual disposition could declare nonblocking context only after full parent/reply/title/editor/status and correction chain binding. It cannot become independent review, Factfinder acceptance of the reply, a factual verdict or runtime approval. Factfinder authored the parent review and is this design actor, sharing Adrian ownership and prior S1-S8/API/validator exposure. Different recorder does not make a decision independent.",
+  "missing_inputs": [
+    "exact original parent/reply body and title hashes for the evaluated capture",
+    "full original correction coverage and private capture bytes",
+    "separate policy-authorized full-content decision actor and exact target rationale",
+    "trusted provenance/freshness/visibility/runtime evidence"
+  ],
+  "disposition_instantiated": false,
+  "reason": "Public summary lacks exact body/title hashes and raw observation binding verification. Do not fill placeholders or copy synthetic hashes into a real disposition. No recapture or private payload reuse performed.",
+  "collector_diagnostics_preserved": [
+    "replies_require_full_content_disposition",
+    "collector_reported_pending",
+    "collector_state_pending"
+  ],
+  "authentication": "unverified_import",
+  "runtime_review": "pending"
+}
