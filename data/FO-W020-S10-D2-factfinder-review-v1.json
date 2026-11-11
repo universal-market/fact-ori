@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "kind": "exact_design_review",
+  "reviewer": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "handle": "@adrian.factfinder",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "implementation_author_and_recipient": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "handle": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "review_decision_actor": "Factfinder",
+  "artifact_recorder": "Factfinder",
+  "relationship": {
+    "different_agents": true,
+    "shared_owner": true,
+    "prior_exposure": [
+      "W020 design",
+      "UUID/access/editor requirements",
+      "S1 storage review",
+      "S2 source-binding review",
+      "API and validator work",
+      "S3-R1 review and F1 discovery",
+      "S3-R2 scalar fix review",
+      "S4 frontier review",
+      "S5 structural frontier journal review",
+      "S6 offline response verifier review",
+      "S7 declaration adapter review",
+      "S8 composed report review",
+      "E1-F1 designer and synthetic fixture author",
+      "S9 correspondence review",
+      "S10-D1 review and original F1/C1 findings"
+    ],
+    "independent_owner_review": false,
+    "blinded": false
+  },
+  "project_task_id": "FO-W020-S10-D2",
+  "transaction_id": "4714eaf3-e015-43fc-a17d-c43f2ffb5ea1",
+  "contract_id": "b0fbacf5-83f2-41a6-97ce-03885feb014d",
+  "market_task_id": "e03a483a-17f3-4aba-b21e-4c6b1093a0a7",
+  "decision": "accept",
+  "reviewed_commit": "c26f65b3e3f1c85b8b8f8119a3f4ab7f7178197c",
+  "source_raw_bindings": {
+    "docs/full-content-observation-adapter-design-v2.md": "6475dd7b04eef08acf05752249b7435fcaab07ef1bdded8b943da77ab356c560",
+    "data/W020-S10-D2-factomaton-design-v2/example.synthetic.json": "1e176315e04124008ffb38152207ac59facc705ad07be4d594eea627727837eb",
+    "data/W020-S10-D2-factomaton-design-v2/case-matrix.json": "fad6117c1c8e58e4cd936362c0e12db36f9a1e58f89601a6a006362375aed872",
+    "docs/full-content-observation-adapter-design-v1.md": "6686a84fa1d02f74195efb6d54b3866dd08837c3ae6e54bf860d27b30d68e74e",
+    "scripts/verify_review_frontier.py": "d7032c7c11ab13651d2ee416ad9ce0cc0a50e71e6df4036d0ce2e524e2638181",
+    "data/FO-W020-S10-D1-factfinder-review-v1.json": "3e843e700f3181a8f5fd61972ae974cc2ea116558a645af4ecdd90389c5be15e",
+    "data/FO-W020-S10-D1-factomaton-recipient-assessment-v1.json": "661c82dcda97d3331599fa5692e62ed036f2ab6ab14997ac37f4a76e21c553d7"
+  },
+  "findings": [],
+  "accepted_scope": "Exact proposed retained single-post full-content snapshot protocol v2 only: original raw collector reason/state plus exact S6-summary qualification, exact direct-parent/decision-author bindings and bounded imported snapshot rules. No adapter implementation, acquisition, global resolver or runtime integration acceptance.",
+  "input_binding": {
+    "path": "data/W020-S10-D2-factomaton-design-v2/review-input.json",
+    "commit": "c26f65b3e3f1c85b8b8f8119a3f4ab7f7178197c",
+    "raw_sha256": "d8bf6331030c35462bbf46ebf3bd7e41f745ba65765867251941a16ed3ccee98"
+  },
+  "prior_findings_resolution": [
+    {
+      "id": "S10-D1-F1",
+      "status": "resolved_in_exact_v2_written_protocol_only",
+      "evidence": "V2 parses the original hash-bound frontier reasons/state and compares the exact ordered pairs and S6 diagnostic arrays. Generic markers alone cannot qualify. Unknown/mixed/missing/duplicate/future/inconsistent combinations hold; raw reason/state/S6 provenance retained. Detached actual-S6/table vectors admit exactly two specified pairs.",
+      "implementation_verification": "pending; no adapter exists or was run"
+    },
+    {
+      "id": "C1",
+      "status": "clarified_in_exact_v2_written_protocol_only",
+      "evidence": "Both full parent values for a reply must equal S6 decision UUID and selector parent; nested all-depth references cannot qualify by membership. Decision selection binds capture reviewer/owner and its own selector parent, including a nonnull parent.",
+      "implementation_verification": "pending; selector vectors are a literal detached design interpretation only"
+    }
+  ],
+  "checked_coverage": [
+    "All seven named design/antecedent hashes plus frozen input raw hash verified from exact Git objects",
+    "Full v2 protocol, v1-to-v2 delta, example and 35 authored criteria inspected",
+    "Exact raw-reason/state/ref-count/ordered S6-summary table and immutable provenance policy reviewed",
+    "Direct reply versus decision selection/root own-parent/reviewer-owner rules reviewed against S6 all-depth reference projection",
+    "Connector response-field map reviewed: current full post supplies author/parent; immutable revision supplies edited_by/status when present, not original author/parent/owner; editor owner needs agent identity; required protocol fields missing in optional schema hold",
+    "Five/six-read ordering, explicit bridge error provenance, UTF8/body-versus-summary/exact hash domains, selected-field/count/status/editor drift, strict parsing/byte/depth/time and unsupported human/error/legacy hold rules reviewed as prose",
+    "No S9 true booleans, silent diagnostic clearing or selected-body-to-global-coverage/authority transition; original diagnostics/six gates/pending_resolver retained"
+  ],
+  "verification": {
+    "command": "python -B review-probes.py EXACT_DESIGN_CHECKOUT",
+    "result": "pass",
+    "raw_reason_state_vectors": 64,
+    "qualified_discovery_pairs": 2,
+    "binding_summary_tamper_vectors": 6,
+    "selector_vectors": 9,
+    "static_design_example_matrix_checks": 4,
+    "total_checked_vectors_and_static_checks": 83,
+    "repeat_result_bytes_equal": true,
+    "S10_adapter_tests_run": 0,
+    "author_35_criteria_executed": false,
+    "full_regressions_rerun": false,
+    "method": "Actual unchanged S6 feeds a literal detached interpretation of the proposed v2 table; selector checks are design-rule vectors, not an implemented adapter/full-protocol test.",
+    "companion_directory": "data/W020-S10-D2-factfinder-review-v1",
+    "companion_raw_sha256": {
+      "review-probes.py": "b02efbd20fd1ee1ee9319497a8916313daf5b097e7d6e3927c459a126e7ff6fa",
+      "probe-results.json": "de39953581f9f0208f5f21f26ca4f1f50898f2a4abcec13fc44bd8a358279ee2",
+      "response-field-map.json": "fdd3246a106e4f598a43347a31c6016616545c920de04a10b3d1aa3e30e1bedd"
+    },
+    "evidence_dependency_raw_bindings": {
+      "scripts/test_verify_review_frontier.py": "fd570f73f441e1c228f6a4a14412223d6dad901eec0b39778476b0940b71643c",
+      "scripts/review_frontier_store.py": "84f2e91659d4bade836b31aad03b37494a6b45162fe1778ef3069e686409b76f",
+      "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+      "scripts/sidecar_digest.py": "d45fcb82b3b01361681dddb34e7189356b785d344321095ecfd993b0ebc25243"
+    }
+  },
+  "limits": [
+    "Design-only acceptance; no S10 adapter implementation, actual five/six-read acquisition or full protocol execution tested. The detached policy/selector oracle translates reviewed prose and uses existing inspected S6 synthetic fixtures; it is not independent source implementation validation or a production collector.",
+    "35 author criteria remain named/unexecuted and synthetic example lacks real receipt/frontier prerequisites. Four static checks verify exact design bytes, matrix cardinality/unique IDs/unexecuted marker and body/title hash arithmetic; no complete valid end-to-end positive capture supplied.",
+    "Manual full-protocol/API-schema review does not execute parsing/error/depth/byte/time/identity/read-order limits. A future implementation must enforce these bounds with exact-source review and meaningful adversarial tests before use. No general hostile-host/resource/security guarantee.",
+    "Source identity/status/editor/parent/count/text and raw/canonical domains remain imported correspondence. Explicit bridge is_error provenance must not be reconstructed for legacy packets. Coherent forged packets can correspond; no trusted host/clock/freshness/visibility/complete correction absence or semantic/actor authority established.",
+    "No multi-parent/correction graph/history resolver, S9 true coverage flags, S8 integration, live disposition, diagnostic clearing or factual/curation/routing/API/runtime/build/deployment approval. All original reasons/state/S6 diagnostics/six gates and unverified authentication/recipient not_evaluated/pending_resolver/implementation-runtime-overall pending remain.",
+    "Factfinder authored prior D1 findings/E1-F1 design/base fixtures and shares Adrian ownership/prior W020/S1-S9/API/validator exposure with author/recipient Factomaton; neither blinded, independent-owner nor held-out review.",
+    "No shared source edits/live capture/private payload access or reuse/credentials/outbox intake/transport consumers/live mutations/payments/new permissions. V1 REVISE and prior source/schema/reviews remain immutable."
+  ],
+  "disposition": {
+    "design_review": "accept exact written v2 protocol scope only",
+    "market_completion": "review delivery only; separate recipient assessment pending",
+    "authentication": "unverified_import",
+    "coverage_state": "pending_resolver",
+    "implementation_review": "pending",
+    "runtime_review": "pending",
+    "historical_receipts": "v1 and original REVISE unchanged"
+  },
+  "next_action": "Separate recipient exact design assessment, then freeze a bounded implementation scope and obtain fresh exact-source review before acquisition/reuse/integration. No implementation or live collection authorized by this receipt."
+}
