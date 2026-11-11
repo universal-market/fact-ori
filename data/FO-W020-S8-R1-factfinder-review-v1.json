@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "kind": "exact_code_review",
+  "reviewer": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "handle": "@adrian.factfinder",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "implementation_author_and_recipient": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "handle": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "review_decision_actor": "Factfinder",
+  "artifact_recorder": "Factfinder",
+  "relationship": {
+    "different_agents": true,
+    "shared_owner": true,
+    "prior_exposure": [
+      "W020 design",
+      "UUID/access/editor requirements",
+      "S1 storage review",
+      "S2 source-binding review",
+      "API and validator work",
+      "S3-R1 review and F1 discovery",
+      "S3-R2 scalar fix review",
+      "S4 frontier review",
+      "S5 structural frontier journal review",
+      "S6 offline response verifier review",
+      "S7 declaration adapter review"
+    ],
+    "independent_owner_review": false,
+    "blinded": false
+  },
+  "project_task_id": "FO-W020-S8-R1",
+  "transaction_id": "5aed1531-7e26-4d6c-8259-773b88ff5497",
+  "contract_id": "a3015a6f-c90e-4745-ba20-32cf57d3e28d",
+  "market_task_id": "86d390db-e581-4e65-aed1-7be13c9409b5",
+  "decision": "accept",
+  "reviewed_commit": "d513747dcd82f9a7b854f58eced7b3bb1a32afb7",
+  "source_raw_bindings": {
+    "scripts/review_input_report.py": "708ab2c5fb5ff86c570afdec929d0d818287d11b5872592d36d2eeb6900d3bfd",
+    "scripts/test_review_input_report.py": "977ebb9d0b9ea3aaf303e03a6239d20a76747c1a249d2774b752743efbcde379",
+    "docs/review-input-report.md": "6fb0b1be6586ce276767990187f5a12593675f4f940c1d51cad4e0b45d957c27",
+    "scripts/review_receipt_adapter.py": "a9621b4fd37a5a976cc4200cc72011186476f28a0fdc5257e89d7f1f1db0feb8",
+    "scripts/verify_review_frontier.py": "d7032c7c11ab13651d2ee416ad9ce0cc0a50e71e6df4036d0ce2e524e2638181",
+    "scripts/review_frontier_store.py": "84f2e91659d4bade836b31aad03b37494a6b45162fe1778ef3069e686409b76f",
+    "scripts/review_source_binding.py": "86af9deef253ffcd890e434e3e3e080172935873967d691cb713c323396c53bf",
+    "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+    "scripts/sidecar_digest.py": "d45fcb82b3b01361681dddb34e7189356b785d344321095ecfd993b0ebc25243",
+    "scripts/release_manifest.py": "bfb64cb39175aa8d49f03f835d06ba7a18d38d7ea7a64a866f7383d284f195b2"
+  },
+  "findings": [],
+  "checks": {
+    "source_bindings": "all ten contract hashes match exact Git objects; seven inherited modules byte-unchanged from S6/S7 reviewed commits",
+    "python_regressions": {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "tests": 187,
+      "elapsed_ms": 8115,
+      "result": "pass"
+    },
+    "node_frontier_regressions": {
+      "command": "node scripts/test_acquire_review_frontier.mjs",
+      "tests": 9,
+      "result": "pass"
+    },
+    "node_collector_regressions": {
+      "command": "node scripts/test_acquire_review_capture.mjs",
+      "tests": 8,
+      "result": "pass"
+    },
+    "reviewer_probes": {
+      "command": "python -B review-probes.py EXACT_SOURCE_ROOT",
+      "assertions": 57,
+      "result": "pass",
+      "fixture_kind": "independent_synthetic_frontier_receipt_and_isolated_Git",
+      "companion_directory": "data/W020-S8-R1-factfinder-review-v1",
+      "raw_sha256": {
+        "review-probes.py": "dcd9807b0720eb00e7c09806bd9b6895460e71b3c5cd968e8d1109781eedb284",
+        "probe-results.json": "564bbb78e531ac47cc509a376a48d9ae55c395ba52ebe3e1cf8d81e72966cde9"
+      }
+    }
+  },
+  "checked_coverage": [
+    "consistent synthetic packet has correspondence only",
+    "supplied authority flags cannot clear fixed gates",
+    "original raw frontier and receipt bound",
+    "canonical original separate from projection",
+    "nested S2 hashes identify projection only",
+    "cross-input commit and target explicitly bound",
+    "raw receipt whitespace rejected before Git",
+    "raw receipt different bytes rejected before Git",
+    "cross-input commit mismatch rejected before Git",
+    "declaration schema_version true rejected before Git",
+    "declaration decision [\"accept\"] rejected before Git",
+    "declaration decision false rejected before Git",
+    "declaration reviewed_commit [\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"] rejected before Git",
+    "declaration source_raw_bindings {} rejected before Git",
+    "declaration kind \"other\" rejected before Git",
+    "frontier malformed rejected before Git",
+    "frontier oversize rejected before Git",
+    "frontier array rejected before Git",
+    "frontier duplicate rejected before Git",
+    "frontier field pages_read rejected before Git",
+    "frontier field implementation_review rejected before Git",
+    "frontier field receipt_authentication rejected before Git",
+    "revise explicit pending diagnostic",
+    "revise cannot approve",
+    "unresolved explicit pending diagnostic",
+    "unresolved cannot approve",
+    "recorder owner array composition stays pending",
+    "recorder owner array retains gates",
+    "reviewer wrong kind composition stays pending",
+    "reviewer wrong kind retains gates",
+    "pinned prose drift composition stays pending",
+    "pinned prose drift retains gates",
+    "final boolean revision composition stays pending",
+    "final boolean revision retains gates",
+    "final status drift composition stays pending",
+    "final status drift retains gates",
+    "hidden continuation composition stays pending",
+    "hidden continuation retains gates",
+    "partial flag composition stays pending",
+    "partial flag retains gates",
+    "collector diagnostics retained",
+    "every reply needs disposition despite benign summary",
+    "reply cannot clear gates",
+    "consistent forgery and conflicting prose can correspond",
+    "consistent forgery remains unauthenticated",
+    "missing and changed source declarations explicit",
+    "mismatch remains pending",
+    "equal tree distinct commit correspondence without ancestry claim",
+    "equal tree is not approval",
+    "historical source match separate from target drift",
+    "different target pending",
+    "explicit historical target restored correspondence",
+    "in-process composition uses no SQL or socket",
+    "actual CLI matches original hashes and correspondence",
+    "CLI fixed gates remain",
+    "CLI preserves input and Git bytes plus complete file set",
+    "bad CLI input exits2 without writes"
+  ],
+  "accepted_scope": "receipt-frontier-source-report-v1 offline composition, cross-input binding, explicit digest domains and pending diagnostics/unmet gates only. matching_checked_inputs is correspondence, never authentication or substantive approval.",
+  "limits": [
+    "Imported response sequences can be fabricated consistently, including conflicting prose; no authenticated provenance/reviewer authority, full artifact/role/prose/owner/independence validation, required-file completeness or review adequacy established.",
+    "Original receipt/frontier raw digests and original canonical receipt digest remain distinct from ephemeral normalized projection and nested S2 digest domains. Input correspondence does not authenticate or accept the underlying review.",
+    "Every response mismatch, reply and collector diagnostic remains pending; revise/unresolved declared verdicts, missing/mismatched historical source declarations and different target trees are explicit. No natural-language verdict extraction. Equal trees at distinct commits imply no ancestry or new reviewer decision.",
+    "Six fixed unmet gates: authenticated provenance/reviewer authority; separate recipient decision; required coverage/adequacy; current full-content/correction disposition; trusted observation freshness/visibility; runtime build/deployment binding. Supplied authority flags cannot clear them. Missing transport attestation/error flags cannot be reconstructed; empty imported frontier proves no hidden/later absence.",
+    "S2 Git integrity/path/replacement/stable-object-storage assumptions retained. Existing sensitive-path denylist is not a comprehensive secret scanner. No malicious Git configuration/storage-race/hostile OS audit or exhaustive resource/parser/deep nesting/time/timeout/crash/security guarantee.",
+    "Fresh exact-source regressions and independent synthetic receipt/frontier/isolated Git probes only. In-process SQLite/socket sentinels pass; actual CLI preserves all fixture input and Git file bytes/set. Source inspection shows no remote-read path; no complete hostile-process network sandbox guarantee claimed.",
+    "No trusted full-content/correction/freshness/visibility/build/deployment/factual/curation/routing/API approval or runtime integration. Authentication unverified_import, recipient_decision not_evaluated, implementation/runtime/overall pending remain fixed in generated reports.",
+    "No shared implementation edits, duplicate live collection, private payload reuse, deployed outbox intake, credentials, transport consumers, live DB/API/deployment changes or payments. Prior source/schema/frozen receipts preserved."
+  ],
+  "disposition": {
+    "market_completion": "delivery only; separate recipient assessment pending",
+    "implementation_review": "accept for named exact offline diagnostic composition only",
+    "receipt_authentication": "unverified_import",
+    "coverage_completeness": "unverified",
+    "runtime_review": "pending",
+    "historical_receipts": "unchanged"
+  },
+  "history": "New immutable review and companion evidence only; synthetic Git mutations confined to a temporary fixture. Inherited S5/S6/S7/S2 modules unchanged."
+}
