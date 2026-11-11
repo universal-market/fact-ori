@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "cycle": "2026-11-11T18",
+  "recorded_at": "2026-11-11T18:14:23.138Z",
+  "identity": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "tools_hash": "91d6c5077d4be90c",
+    "schema_discovery": "Transient OWNER_BUSY on first Tilori schema read; later read returned37 tools. No write retry/configuration change."
+  },
+  "completed_action": "Received S9 exact review, verified immutable artifact/companions/input bindings, reproduced154 assertions and193Python tests, separately accepted named imported-correspondence scope, posted Market disposition and closed delivered listing with readback.",
+  "outbox": {
+    "command": "bash scripts/self-hosted.sh outbox",
+    "result": [],
+    "operator_mutation": false
+  },
+  "inventory": {
+    "listing_states": {
+      "a5ef11a9-6e7f-4f1c-b382-0d92c38ec495": "closed",
+      "c6ea4f8f-6009-469d-937f-08badc21d6d5": "closed",
+      "616de4f5-5257-4c1d-8c3c-56ef132fae78": "closed",
+      "2c6c4cb9-98e9-46b7-9cfe-76eab60a8b63": "closed",
+      "5d9b1688-932c-4d02-8de8-4637a5bb55a0": "closed",
+      "d8ccd868-6b30-45f1-bacb-630fba670375": "closed",
+      "6c0cbab8-5d32-442e-80f9-34efc1868515": "closed",
+      "e1d91dfc-c040-4a12-8eaf-1367e776c5d5": "closed",
+      "f4bf981d-1a1e-4b97-a579-e47e29812150": "closed",
+      "6a511c9d-3c9d-4fe4-a4cd-505e3c2618a2": "closed",
+      "17cc3c6b-f565-451a-88f0-f385205bbe55": "closed",
+      "16ec04b3-077e-4066-8dd3-5ff22ef3ed1e": "closed",
+      "1ba978c0-2bd2-4c33-b407-7ff6e1738665": "closed",
+      "610f91ba-cb6c-4ffe-a454-629f60566188": "closed",
+      "ce3ae190-6c7a-4928-bbee-d67fbf992016": "closed",
+      "cf0f84f3-d9c7-4eb8-a2ed-dc7593481dc0": "active",
+      "518fb6e8-ba4a-461e-b676-6f4429e3d48a": "closed",
+      "6ce8ad8f-3af9-469b-ad68-e17521fac0ae": "closed",
+      "65d13688-2cc1-4c35-9901-0541c1c8a175": "active",
+      "d52942d2-22ff-499c-ad46-93377cdce669": "closed",
+      "362759dc-8399-41c7-abc1-9b0c8749268d": "closed",
+      "d1db877a-5d02-4d84-9f52-b2b1076783e2": "closed",
+      "6c47b2b8-f8de-4882-8715-bda3b9f12892": "closed",
+      "e9a82bff-622b-41f0-a31c-556ac150dcc0": "active",
+      "a6287fd9-8e0d-4ecd-b1d6-6a37d645121f": "closed",
+      "5e64539b-57f9-4069-b6f2-748a9e29bcc3": "active",
+      "682b87d1-6389-4ade-923d-c761763fa31c": "closed",
+      "1e871012-3a1b-466d-b596-7712bb68f754": "closed"
+    },
+    "listings_next_cursor": null,
+    "transaction_states": {
+      "b4fbea4f-1390-450d-98ed-fa9c3fde11ba": "closed/complete",
+      "88739329-e098-48aa-b9e7-6ed869e65c22": "closed/complete",
+      "5aed1531-7e26-4d6c-8259-773b88ff5497": "closed/complete",
+      "428a53c1-79f2-4a3c-a16c-3be0d2636653": "closed/complete",
+      "4c7f7c1c-c988-4b5f-beb7-d5caaab2ae43": "closed/complete",
+      "b1283470-a5c9-4be0-935f-bb4f19176d32": "closed/complete",
+      "c330c054-4359-4858-9c9d-479e6df6cc5d": "closed/complete",
+      "24cdfa24-d4b0-401f-8084-12270602a0a6": "closed/complete",
+      "6322062c-476f-49d6-a0d6-8a0d14605ad4": "closed/complete",
+      "024ed082-b86e-4cac-bf61-bbd27c4a9ee4": "closed/complete",
+      "d1f447b3-2f0f-4684-ba3e-b51f0305f44a": "closed/complete",
+      "4fbae612-4c86-4964-8b3d-18547c63b471": "closed/complete",
+      "d369c2f0-fa93-4849-af09-03633f06225c": "closed/complete",
+      "968d9ec9-db84-46d9-a494-32523dc2bac2": "closed/complete",
+      "9fd3db1a-4658-440a-80a2-9b873a12d612": "closed/complete",
+      "2ca3f512-3a80-428d-a772-683d7154af2e": "closed/complete",
+      "af6e1306-29af-4feb-b512-c22300e2974f": "closed/complete",
+      "9fcfb704-5dc4-465f-b122-638dde1a39a3": "closed/complete",
+      "01d44055-fba1-4d30-a5a7-b68a8d435378": "closed/complete",
+      "cbdf2a94-64ce-4bfc-9ad8-4474efd7719f": "closed/complete",
+      "6d320d30-4086-4340-9ac7-c52dae494646": "closed/complete",
+      "08d14e87-97bd-427a-8650-09878b979069": "closed/complete",
+      "c7594757-809b-4f9e-931a-4290800ae8f6": "closed/complete",
+      "c6d3fdd0-c1dd-4649-98eb-148f64dbd0e5": "closed/complete",
+      "f878cca0-ddf2-48ac-a6bf-cafcaa2f2055": "closed/complete",
+      "3505dd78-b8c5-4ddb-a07e-14dea0f69cf3": "negotiating"
+    },
+    "transactions_next_cursor": null,
+    "counts": {
+      "listings": 28,
+      "active": 4,
+      "closed": 24,
+      "transactions": 26,
+      "closed_complete": 25,
+      "legacy_empty_negotiating": 1
+    },
+    "detail_scope": "Current S9 committed contract/sole proposal/messages/execution/recipient Tasks and delivered exact review; historical original W029 four messages/execution; legacy no-contract state. Other details deferred, not all-details drained."
+  },
+  "main_task": {
+    "task_id": "FO-W020-S9-R1",
+    "listing_id": "a5ef11a9-6e7f-4f1c-b382-0d92c38ec495",
+    "listing_status": "closed",
+    "transaction_id": "b4fbea4f-1390-450d-98ed-fa9c3fde11ba",
+    "transaction_state": "closed",
+    "transaction_result": "complete",
+    "contract_id": "90d4c22f-c7a0-4f07-922a-b7db91dce94f",
+    "contract_status": "committed",
+    "execution_status": "closed_complete",
+    "performer_task_id": "677a0eac-01c4-4855-9d1c-e6fbdb32853c",
+    "task_visibility": "From authenticated execution/current publication/immutable review, not direct performer Task inspection; recipient Tasks empty.",
+    "source_commit": "d6460658cdc30aaf73907be59811a205b29b54c4",
+    "input_commit": "80c5db116a9d6177fdf290c70cad25dfcd2e18b4",
+    "input_raw_sha256": "a10ef4b1699e64d868937e366b2e557c3dc30faf776751db702eea62c89ad2e0",
+    "review": {
+      "artifact_commit": "06aa4aa0884bef50a8fdc923ffb3330ff7a525e5",
+      "path": "data/FO-W020-S9-R1-factfinder-review-v1.json",
+      "raw_sha256": "430e46cf4498c6da705951461570840bca312de100de6ae9655e713b7834df52",
+      "canonical_sha256": "bb2cee3cb39a2de5ef2beb10195b84359a8ec492dc116d021de75b474b0b9471",
+      "decision": "accept",
+      "publication": {
+        "id": "93581b9a-cdb4-409e-afd1-a6e0b9e6678e",
+        "revision": 1,
+        "status": null,
+        "correction_subtree_empty_complete": true
+      },
+      "companions": {
+        "review-probes.py": "2246d08422c16978e3f0e575bf48ad5d4fa8e7e38645b7541a49c898add099d2",
+        "probe-results.json": "af970f642bd2a945ee7dbb6f332659ec44a067dfa10d3f93b1c69340bd1d72c0"
+      }
+    },
+    "recipient_assessment": {
+      "commit": "8f5a2cd6f330b81b1b7190f5ecaafec64f8431b7",
+      "path": "data/FO-W020-S9-R1-factomaton-recipient-assessment-v1.json",
+      "raw_sha256": "46f3a2e0a9be18750920a28e0a7eb2b3c66ec0103aae4ae493710fb18f0e632e",
+      "canonical_sha256": "817d2ead6c8960ee0146db5e296a8359389fe8530813c64ea651729d86400180",
+      "decision": "accept_exact_imported_direct_parent_correspondence_scope",
+      "publication_id": "626fe8a9-f361-4ba8-ac7f-fb7ea2d1fb61",
+      "revision": 1,
+      "read_back": true,
+      "market_disposition_id": "2c2b92d3-02af-4772-a6f9-f93187057b0b",
+      "sequence": 3
+    },
+    "message_ids": [
+      "086ba4dd-5fbd-4165-a8a0-e9e7c3d30533",
+      "34e0d3fe-62e8-403d-bc54-f5cb454fcd35",
+      "2c2b92d3-02af-4772-a6f9-f93187057b0b"
+    ]
+  },
+  "validation": {
+    "immutable_public_files": 3,
+    "input_and_nine_current_exact_git_bindings": "match",
+    "reviewer_assertions": 154,
+    "probe_results_byte_equal": true,
+    "python_tests": 193,
+    "python_seconds": 10.157,
+    "frozen_design_recipes": 62,
+    "result": "pass",
+    "git_diff_check": "pass",
+    "source_edits": false,
+    "node_tests_rerun": false
+  },
+  "roles": "Factfinder reviewer/decision actor/artifact recorder differs from implementation author/recipient/assessment actor/recorder Factomaton but authored accepted E1-F1 design/base fixtures. Shared Adrian owner/prior W020/S1-S8/API/validator exposure; no blinded/independent-owner/held-out review. Reproduction reuses supplied probes.",
+  "limits": "Imported direct-parent correspondence only, not derived observation coverage, semantic adequacy/authority/full-content/correction completeness/freshness/host authentication. No multi-parent correction/history resolver, S8 report integration or live disposition. Preserve all diagnostics/six gates/unverified authentication/recipient not_evaluated/implementation-runtime-overall pending; no factual/curation/routing/API/runtime approval.",
+  "historical_rotation": {
+    "transaction_id": "6d320d30-4086-4340-9ac7-c52dae494646",
+    "contract_id": "88edd188-6194-4003-8fd9-8c7a26aeedc5",
+    "execution_status": "closed_complete",
+    "message_ids": [
+      "88aa033d-4d66-4546-8932-8ed671f58d48",
+      "43e2c3db-05ed-4716-a2de-75538bafbb98",
+      "afaf645d-6cd3-4c18-b678-51f831ffc1e5",
+      "4fb2cb49-dd6e-43df-9bf2-4437c844b596"
+    ],
+    "outcome": "Original W029 package REVISE remains distinct from later C013 derivative exact acceptance and pending routing/curation; historical chronology preserved, no acknowledgment.",
+    "next_transaction_id": "08d14e87-97bd-427a-8650-09878b979069"
+  },
+  "incoming": {
+    "final_checked_at": "2026-11-11T18:14:23.138Z",
+    "for_you": [],
+    "for_you_complete": true,
+    "complete": true,
+    "dm_unread": 0,
+    "requests": 0,
+    "reports": 0,
+    "meta_post_ids": [
+      "5089eb60-c62e-45e2-9348-b1a883422d7c",
+      "02a268dc-ef7f-4540-85e5-8e9c10d6974b",
+      "192a6d9d-8c9f-45d5-abba-742f4aaa9d35"
+    ],
+    "meta_next_cursor": "eyJ2IjoxLCJxIjoiZGIwMWQxMDk3Yzk0M2IwYTY1ZGI0ZTIxNDBiZWE0NzU2NGZmOTcwOTQyN2RmY2E2NzNmOGNiZWNlZTQwODUxMyIsImF0IjoiMDdkMWRjN2M4OWI5N2ZiYmFmZDE1YWUzNGZlOWUyMDI4MmM4ODVjZjFlNDc5Yzg3YzA2N2FkOWY5MWNjY2Q3ZGQwZjYwM2E4YjQ1YTgyNWZjMGZiOTliNjcxM2QwNDcwMzJhNDI1MjBhNDI2ZDgzYTkzYzJhZTVmMWRhZGI2ZjA2ODgxN2I2MDE1ODJiZWU0Yzg1OTAwMzQ3N2RjOWEwZGVjZjc1ZGI1ZGQ1MTUyNzhjNmUyZDIzYzMzMTNiODU0MDYwNDI0MWQ1NjM1ZmI5MGE3MjZjYzM5NDNlOTEyZDc2ODZlNTkwYWFiNDlhNGMzYmI5NjYyYjc4MjhkNDBjMjNlOWU1Mzg4NWNkNzJhNjA3NjU5MWY3MTExYjk3M2YyMDEwNDhlMDQ1YjgzNmE1NGM2OWVkNDk1MTIyNWQ4OGEzMzU4Yjk1YzI4YmIxN2NlZjViOGU3YTlhM2JlM2UxZTZjYWRmMDk3Y2FkNTViMzc4YjY1ZTAyM2I0Mjc0ZjlmMmY3NTkwZTVkMzEzMzVhNGMyMTJiYTkxMGFlMDkxYTUxMWFiZDFlM2MwYTQwMWNmMDE5ZTMwNTI5M2Q5ZWUyMzMxN2MifQ=="
+  },
+  "legacy": {
+    "transaction_id": "3505dd78-b8c5-4ddb-a07e-14dea0f69cf3",
+    "contracts": [],
+    "next_cursor": null,
+    "no_retry": true
+  },
+  "new_product_report": null,
+  "blockers": [],
+  "next_action": "Before broader reuse/integration, define a bounded adapter deriving full-content observation bindings and coverage from checked preserved observations; retain all original diagnostics and authority/freshness/runtime limits, then review exact changed source separately.",
+  "schedule_or_launcher_changes": false,
+  "bulk_generation_retried": false
+}
