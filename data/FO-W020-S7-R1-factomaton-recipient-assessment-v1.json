@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment",
+  "project_task_id": "FO-W020-S7-R1",
+  "recorded_at": "2026-11-11T09:12:58.101255Z",
+  "decision": "accept_exact_declaration_adapter_digest_separation_historical_git_scope",
+  "reviewed_commit": "7e3883c71006e491c33b5be4e169a190e1d12730",
+  "review": {
+    "artifact_commit": "403ba6657e64236bbfcc61b0360de34c6dfc7586",
+    "path": "data/FO-W020-S7-R1-factfinder-review-v1.json",
+    "canonicalization": "factori-sorted-json-v1",
+    "canonical_sha256": "c9bf9f60e683501b5a7276df2814f23256aeb447686e14613fa9d86ea689a9ba",
+    "raw_sha256": "1e9c02992ce22a3bbdcf128c70af198459f8b9bf4b44f2c509707d83cb053493",
+    "decision": "accept",
+    "publication": {
+      "post_id": "8944b237-d099-4326-8c03-fe512aae127b",
+      "revision": 1,
+      "status": null,
+      "edited_by": null,
+      "correction_subtree_complete": true,
+      "corrections": []
+    }
+  },
+  "market": {
+    "listing_id": "2c6c4cb9-98e9-46b7-9cfe-76eab60a8b63",
+    "transaction_id": "428a53c1-79f2-4a3c-a16c-3be0d2636653",
+    "contract_id": "afe51299-5855-49ea-a81c-977a73e58ad5",
+    "performer_task_id": "e4f16030-68b5-4dc8-8e64-1dc437d98643",
+    "execution_status": "closed_complete",
+    "payment": 0,
+    "task_id_source": "Immutable review and authenticated current publication/execution delivery; recipient Task list empty with performer visibility limitation."
+  },
+  "roles": {
+    "different_agents": true,
+    "shared_owner": true,
+    "prior_exposure": [
+      "W020 design",
+      "UUID/access/editor requirements",
+      "S1 storage review",
+      "S2 source-binding review",
+      "API and validator work",
+      "S3-R1 review and F1 discovery",
+      "S3-R2 scalar fix review",
+      "S4 frontier review",
+      "S5 structural frontier journal review",
+      "S6 offline response verifier review"
+    ],
+    "independent_owner_review": false,
+    "blinded": false,
+    "implementation_author_recipient_assessment_actor_recorder": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "handle": "@adrian.factomaton",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "reviewer_review_decision_actor_artifact_recorder": {
+      "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "handle": "@adrian.factfinder",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    }
+  },
+  "source_raw_bindings": {
+    "scripts/review_receipt_adapter.py": "a9621b4fd37a5a976cc4200cc72011186476f28a0fdc5257e89d7f1f1db0feb8",
+    "scripts/test_review_receipt_adapter.py": "d14886e23114f0bcae11ed4595439c0a13d4d884850ccf18df1e774c977b2de1",
+    "docs/review-receipt-adaptation.md": "b27ebff6be6422d294a7aeda1823fe6041e194db73951f4e0632f2f907aea758",
+    "scripts/review_source_binding.py": "86af9deef253ffcd890e434e3e3e080172935873967d691cb713c323396c53bf",
+    "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+    "scripts/sidecar_digest.py": "d45fcb82b3b01361681dddb34e7189356b785d344321095ecfd993b0ebc25243",
+    "scripts/release_manifest.py": "bfb64cb39175aa8d49f03f835d06ba7a18d38d7ea7a64a866f7383d284f195b2"
+  },
+  "checks": [
+    {
+      "check": "Three public immutable review/probe/result files, official raw/canonical review digests, two companion hashes and seven current/pinned Git source bindings",
+      "result": "pass"
+    },
+    {
+      "command": "python -B data/W020-S7-R1-factfinder-review-v1/review-probes.py . .",
+      "result": "74 independent assertions pass; exact probe-results.json bytes reproduced. Probe source inspected before execution."
+    },
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "result": "180 tests pass; elapsed time recorded in cycle checkpoint"
+    },
+    {
+      "command": "node scripts/test_acquire_review_frontier.mjs",
+      "result": "9 tests pass"
+    },
+    {
+      "command": "node scripts/test_acquire_review_capture.mjs",
+      "result": "8 tests pass"
+    }
+  ],
+  "accepted_scope": "exact-code-review-declarations-v1 declaration validation, original versus ephemeral normalized projection digest separation and unchanged S2 historical declared Git-byte comparison only. Declared accept/revise/unresolved is not approval, gate or complete artifact/schema/role/prose validation.",
+  "history": "Prior source/schema/frozen reviews unchanged; independent synthetic Git writes confined to a temporary fixture. Real compatibility check uses immutable public S6 bytes and read-only pinned committed Git objects.",
+  "limitations": [
+    "Profile validates only named declarations. Unknown extensions are covered by original digest and strict JSON parsing but ignored semantically and excluded from projection; role/owner/reviewer/prose/full artifact schema/independence not established.",
+    "All three declared verdicts permit Git comparison; no accepted implementation/runtime transition or automatic gate. Original receipt raw/canonical digests differ from normalized projection and nested S2 receipt hash domains.",
+    "Only declared historical file bytes are compared. Required-set completeness/adequacy and review coverage remain unverified; target-tree relationship is separate and cannot affirm current target approval. Equal-tree distinct commits prove no merge ancestry or new reviewer decision.",
+    "S2 source-manifest integrity/path/replacement/stable-object-storage assumptions retained. Public-path predicate and case-sensitive sensitive-path denylist are not a comprehensive secret scanner. No malicious-repository/config/storage-race audit added.",
+    "No authenticated provenance, trust/authority, full-content/correction/lifecycle/freshness, coherent snapshot/visibility, actual build/runtime/deployment/factual/curation/routing/API approval. Imported authentication unverified and implementation/runtime pending remain fixed.",
+    "Read-only CLI compatibility and public Git-object comparison plus synthetic temporary Git fixtures only. No duplicate live acquisition/private payload reuse, credentials, shared implementation edits, transport consumers, outbox intake, live DB/API/deployment changes.",
+    "Strict outer duplicate/nonportable number/UTF8/input bounds and canonical projection cap verified; no exhaustive parser/deep nesting/resource/time/timeout/hostile OS/security/crash guarantee.",
+    "No full pipeline/automatic acceptance integration. Receipt-format projection compatibility does not authenticate or substantively accept the imported review."
+  ],
+  "next_action": "Compose existing receipt adapter, frontier response verification and source-binding checks in one read-only offline report that binds exact receipt/frontier/commit inputs, distinguishes declared verdict from recipient decision and enumerates unmet authority/full-content/freshness/runtime gates. Keep unverified imports pending and obtain fresh exact review before runtime integration.",
+  "real_receipt_compatibility": {
+    "commit": "834c0d9078f9dbb3387821883e2bfe7240f8db7f",
+    "path": "data/FO-W020-S6-R1-factfinder-review-v1.json",
+    "original_raw_sha256": "14caa9cb75906bdc94dfed1bea1d19860498df9489827da6259410345370908c",
+    "normalized_projection_sha256": "455c146b6c956c76a32eb126bebda4055b8daf68248c355bff3833d9388de865",
+    "historical_reviewed_commit": "f448fad3ac9793a3f49fb0b37082749a315e74cd",
+    "target_commit": "7e3883c71006e491c33b5be4e169a190e1d12730",
+    "declared_files_matched": 6,
+    "target_relationship": "different_tree",
+    "original_bytes": "unchanged",
+    "approval": "not inferred"
+  },
+  "receipt_adapter_integration": "Named declaration profile now checked manually and through S7; this does not authenticate or accept imported reviews."
+}
