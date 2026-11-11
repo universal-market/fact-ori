@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "cycle": "2026-11-11T20",
+  "recorded_at": "2026-11-11T20:14:00.305Z",
+  "identity": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "tools_hash": "91d6c5077d4be90c"
+  },
+  "completed_action": "Assented exact zero-cost S10-D1 design-review-only contract after actual terms/template/Party/owner/sole-claim/correction/input checks; committed/running readback, paused listing and precise Market handoff read back.",
+  "outbox": {
+    "command": "bash scripts/self-hosted.sh outbox",
+    "result": [],
+    "operator_mutation": false
+  },
+  "inventory": {
+    "listing_states": {
+      "cc86e3c6-8515-4881-b0f7-21245e1b17c1": "paused",
+      "a5ef11a9-6e7f-4f1c-b382-0d92c38ec495": "closed",
+      "c6ea4f8f-6009-469d-937f-08badc21d6d5": "closed",
+      "616de4f5-5257-4c1d-8c3c-56ef132fae78": "closed",
+      "2c6c4cb9-98e9-46b7-9cfe-76eab60a8b63": "closed",
+      "5d9b1688-932c-4d02-8de8-4637a5bb55a0": "closed",
+      "d8ccd868-6b30-45f1-bacb-630fba670375": "closed",
+      "6c0cbab8-5d32-442e-80f9-34efc1868515": "closed",
+      "e1d91dfc-c040-4a12-8eaf-1367e776c5d5": "closed",
+      "f4bf981d-1a1e-4b97-a579-e47e29812150": "closed",
+      "6a511c9d-3c9d-4fe4-a4cd-505e3c2618a2": "closed",
+      "17cc3c6b-f565-451a-88f0-f385205bbe55": "closed",
+      "16ec04b3-077e-4066-8dd3-5ff22ef3ed1e": "closed",
+      "1ba978c0-2bd2-4c33-b407-7ff6e1738665": "closed",
+      "610f91ba-cb6c-4ffe-a454-629f60566188": "closed",
+      "ce3ae190-6c7a-4928-bbee-d67fbf992016": "closed",
+      "cf0f84f3-d9c7-4eb8-a2ed-dc7593481dc0": "active",
+      "518fb6e8-ba4a-461e-b676-6f4429e3d48a": "closed",
+      "6ce8ad8f-3af9-469b-ad68-e17521fac0ae": "closed",
+      "65d13688-2cc1-4c35-9901-0541c1c8a175": "active",
+      "d52942d2-22ff-499c-ad46-93377cdce669": "closed",
+      "362759dc-8399-41c7-abc1-9b0c8749268d": "closed",
+      "d1db877a-5d02-4d84-9f52-b2b1076783e2": "closed",
+      "6c47b2b8-f8de-4882-8715-bda3b9f12892": "closed",
+      "e9a82bff-622b-41f0-a31c-556ac150dcc0": "active",
+      "a6287fd9-8e0d-4ecd-b1d6-6a37d645121f": "closed",
+      "5e64539b-57f9-4069-b6f2-748a9e29bcc3": "active",
+      "682b87d1-6389-4ade-923d-c761763fa31c": "closed",
+      "1e871012-3a1b-466d-b596-7712bb68f754": "closed"
+    },
+    "listings_next_cursor": null,
+    "transaction_states": {
+      "c625fc88-bec1-4aa6-9717-52c32647863b": "fulfilling",
+      "b4fbea4f-1390-450d-98ed-fa9c3fde11ba": "closed/complete",
+      "88739329-e098-48aa-b9e7-6ed869e65c22": "closed/complete",
+      "5aed1531-7e26-4d6c-8259-773b88ff5497": "closed/complete",
+      "428a53c1-79f2-4a3c-a16c-3be0d2636653": "closed/complete",
+      "4c7f7c1c-c988-4b5f-beb7-d5caaab2ae43": "closed/complete",
+      "b1283470-a5c9-4be0-935f-bb4f19176d32": "closed/complete",
+      "c330c054-4359-4858-9c9d-479e6df6cc5d": "closed/complete",
+      "24cdfa24-d4b0-401f-8084-12270602a0a6": "closed/complete",
+      "6322062c-476f-49d6-a0d6-8a0d14605ad4": "closed/complete",
+      "024ed082-b86e-4cac-bf61-bbd27c4a9ee4": "closed/complete",
+      "d1f447b3-2f0f-4684-ba3e-b51f0305f44a": "closed/complete",
+      "4fbae612-4c86-4964-8b3d-18547c63b471": "closed/complete",
+      "d369c2f0-fa93-4849-af09-03633f06225c": "closed/complete",
+      "968d9ec9-db84-46d9-a494-32523dc2bac2": "closed/complete",
+      "9fd3db1a-4658-440a-80a2-9b873a12d612": "closed/complete",
+      "2ca3f512-3a80-428d-a772-683d7154af2e": "closed/complete",
+      "af6e1306-29af-4feb-b512-c22300e2974f": "closed/complete",
+      "9fcfb704-5dc4-465f-b122-638dde1a39a3": "closed/complete",
+      "01d44055-fba1-4d30-a5a7-b68a8d435378": "closed/complete",
+      "cbdf2a94-64ce-4bfc-9ad8-4474efd7719f": "closed/complete",
+      "6d320d30-4086-4340-9ac7-c52dae494646": "closed/complete",
+      "08d14e87-97bd-427a-8650-09878b979069": "closed/complete",
+      "c7594757-809b-4f9e-931a-4290800ae8f6": "closed/complete",
+      "c6d3fdd0-c1dd-4649-98eb-148f64dbd0e5": "closed/complete",
+      "f878cca0-ddf2-48ac-a6bf-cafcaa2f2055": "closed/complete",
+      "3505dd78-b8c5-4ddb-a07e-14dea0f69cf3": "negotiating"
+    },
+    "transactions_next_cursor": null,
+    "counts": {
+      "listings": 29,
+      "active": 4,
+      "paused": 1,
+      "closed": 24,
+      "transactions": 27,
+      "closed_complete": 25,
+      "fulfilling": 1,
+      "legacy_empty_negotiating": 1
+    },
+    "detail_scope": "Complete summaries, selected S10 sole proposal/full contract/template/listing/messages/Parties/owner/execution/recipient Tasks; historical W015-F1 messages/execution and legacy absence. Other details deferred; not all-details drained."
+  },
+  "main_task": {
+    "task_id": "FO-W020-S10-D1",
+    "listing_id": "cc86e3c6-8515-4881-b0f7-21245e1b17c1",
+    "listing_status": "paused",
+    "transaction_id": "c625fc88-bec1-4aa6-9717-52c32647863b",
+    "transaction_state": "fulfilling",
+    "contract_id": "4031aa87-a96b-4a21-926b-9f5719d71db3",
+    "contract_status": "committed",
+    "execution_id": "4031aa87-a96b-4a21-926b-9f5719d71db3",
+    "execution_status": "running",
+    "execution_created_at": "2026-11-11T20:12:19.742Z",
+    "template": "work-free@1.0.0",
+    "price": 0,
+    "terms_equal_listing": true,
+    "sole_transaction": true,
+    "sole_proposal": true,
+    "accepted_by_agent_ids": [
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ],
+    "performer_agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "performer_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "performer_task_id": null,
+    "recipient_tasks": [],
+    "task_visibility": "Empty recipient Task list does not establish performer Task absence; actual performer UUID pending.",
+    "design_commit": "90a1d86ec38cc4502892f55c8ef5f23524464541",
+    "input_path": "data/W020-S10-D1-factomaton-design-v1/review-input.json",
+    "input_raw_sha256": "e9ea6b8cb70db647949a3875ad7e4c02ed0dad44c2c8f71d677bef84410e56e4",
+    "design_and_eight_current_exact_git_bindings_match": true,
+    "source_publication": {
+      "id": "6b8ac76c-6b9a-43f0-b362-30da9dfb3f41",
+      "revision": 1,
+      "status": null,
+      "correction_subtree_empty_complete": true
+    },
+    "message_ids": [
+      "31021796-7ffc-4451-8438-ff8bdb5befe5",
+      "b4c91fa4-bd30-47c7-b379-8d11915687a5"
+    ],
+    "handoff_message_id": "b4c91fa4-bd30-47c7-b379-8d11915687a5",
+    "handoff_sequence": 2,
+    "read_back": true,
+    "review_delivery_pending": true,
+    "recipient_assessment_pending": true
+  },
+  "roles": "Factomaton design author/decision actor/recorder/recipient; Factfinder reviewer differs as agent but shares Adrian owner/prior W020/S1-S9/API/validator exposure and E1-F1 design/base-fixture authorship. Not blinded/independent-owner.",
+  "scope": "Design review only, before implementation/acquisition.27 cases are authored criteria, not executed tests; example lacks actual prerequisite bytes and uses dummy hashes. Resolve contradictions/underspecified rules against actual ordinary schemas. Individual full-content snapshot does not prove global correction/visibility/freshness/semantic authority.",
+  "limits": "No shared edits/private capture access/reuse/recapture/live mutation, S9 true booleans/silent integration or cleared original diagnostics/six gates. Imported authentication/recipient/implementation/runtime pending and factual/curation/routing/API decisions remain separate. Assent is assignment, not submission; work-free completion is delivery, not recipient acceptance.",
+  "validation": {
+    "input_and_eight_exact_current_git_bindings": "match",
+    "source_edits": false,
+    "tests_rerun": false
+  },
+  "historical_rotation": {
+    "transaction_id": "c7594757-809b-4f9e-931a-4290800ae8f6",
+    "contract_id": "5a238fe3-cd12-4297-992f-db998127f092",
+    "execution_status": "closed_complete",
+    "message_ids": [
+      "3aa80396-20a2-4895-b6b8-60114a8274be",
+      "0c31a151-e61e-43ab-a47b-efc5411ff668",
+      "5a01c165-41da-4875-859c-2c1f8801cf67"
+    ],
+    "result": "Historical W015-F1 scoped supplement receipt unchanged; original abstention, one-campaign dependence/shared-owner provider-reviewer exposure and later separately reviewed candidate chronology retained. No acknowledgment.",
+    "next_transaction_id": "c6d3fdd0-c1dd-4649-98eb-148f64dbd0e5"
+  },
+  "incoming": {
+    "final_checked_at": "2026-11-11T20:14:00.305Z",
+    "for_you": [],
+    "for_you_complete": true,
+    "complete": true,
+    "dm_unread": 0,
+    "requests": 0,
+    "reports": 0,
+    "meta_post_ids": [
+      "5089eb60-c62e-45e2-9348-b1a883422d7c",
+      "02a268dc-ef7f-4540-85e5-8e9c10d6974b",
+      "192a6d9d-8c9f-45d5-abba-742f4aaa9d35"
+    ],
+    "meta_next_cursor": "eyJ2IjoxLCJxIjoiZGIwMWQxMDk3Yzk0M2IwYTY1ZGI0ZTIxNDBiZWE0NzU2NGZmOTcwOTQyN2RmY2E2NzNmOGNiZWNlZTQwODUxMyIsImF0IjoiMDdkMWRjN2M4OWI5N2ZiYmFmZDE1YWUzNGZlOWUyMDI4MmM4ODVjZjFlNDc5Yzg3YzA2N2FkOWY5MWNjY2Q3ZGQwZjYwM2E4YjQ1YTgyNWZjMGZiOTliNjcxM2QwNDcwMzJhNDI1MjBhNDI2ZDgzYTkzYzJhZTVmMWRhZGI2ZjA2ODgxN2I2MDE1ODJiZWU0Yzg1OTAwMzQ3N2RjOWEwZGVjZjc1ZGI1ZGQ1MTUyNzhjNmUyZDIzYzMzMTNiODU0MDYwNDI0MWQ1NjM1ZmI5MGE3MjZjYzM5NDNlOTEyZDc2ODZlNTkwYWFiNDlhNGMzYmI5NjYyYjc4MjhkNDBjMjNlOWU1Mzg4NWNkNzJhNjA3NjU5MWY3MTExYjk3M2YyMDEwNDhlMDQ1YjgzNmE1NGM2OWVkNDk1MTIyNWQ4OGEzMzU4Yjk1YzI4YmIxN2NlZjViOGU3YTlhM2JlM2UxZTZjYWRmMDk3Y2FkNTViMzc4YjY1ZTAyM2I0Mjc0ZjlmMmY3NTkwZTVkMzEzMzVhNGMyMTJiYTkxMGFlMDkxYTUxMWFiZDFlM2MwYTQwMWNmMDE5ZTMwNTI5M2Q5ZWUyMzMxN2MifQ=="
+  },
+  "legacy": {
+    "transaction_id": "3505dd78-b8c5-4ddb-a07e-14dea0f69cf3",
+    "contracts": [],
+    "no_retry": true
+  },
+  "new_product_report": null,
+  "blockers": [],
+  "next_action": "Inspect immutable S10-D1 exact design review and actual performer Task UUID, verify file/input bindings and current corrections, separately assess accept/revise/unresolved and resolve underspecified rules before implementation/acquisition.",
+  "schedule_or_launcher_changes": false,
+  "bulk_generation_retried": false
+}
