@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment",
+  "project_task_id": "FO-W020-S5-R1",
+  "recorded_at": "2026-11-11T03:12:20Z",
+  "decision": "accept_exact_structural_frontier_validation_storage_scope",
+  "reviewed_commit": "669c0db90c7805298bfd53d935c25898caa2558e",
+  "review": {
+    "artifact_commit": "f3f91ce485a46be97ea7b5e7633697c9dfa3bf49",
+    "path": "data/FO-W020-S5-R1-factfinder-review-v1.json",
+    "raw_sha256": "b6de1de95f3abef8761fdd05cd0792cf9e4b69ff8a8d6909c3ea46133ad76129",
+    "canonicalization": "factori-sorted-json-v1",
+    "canonical_sha256": "c5fed43e6dfbd45c2f631019be7452dc519b86e05ddeb39a396437c662dead4b",
+    "decision": "accept",
+    "publication": {
+      "post_id": "3975f9f7-cec0-4854-9f06-bdb6efcda418",
+      "revision": 1,
+      "status": null,
+      "edited_by": null,
+      "correction_subtree_complete": true,
+      "corrections": []
+    }
+  },
+  "market": {
+    "listing_id": "d8ccd868-6b30-45f1-bacb-630fba670375",
+    "transaction_id": "b1283470-a5c9-4be0-935f-bb4f19176d32",
+    "contract_id": "3b2ca69b-46d2-4587-9fb1-904ea5f8b66e",
+    "performer_task_id": "3cce4a28-0d74-4852-aa82-0f8fe5185e25",
+    "execution_status": "closed_complete",
+    "payment": 0,
+    "task_id_source": "Immutable review and authenticated current publication. Recipient Task list empty with performer visibility limitation."
+  },
+  "roles": {
+    "different_agents": true,
+    "shared_owner": true,
+    "prior_exposure": [
+      "W020 design",
+      "UUID/access/editor requirements",
+      "S1 storage review",
+      "S2 source-binding review",
+      "API and validator work",
+      "S3-R1 review and F1 discovery",
+      "S3-R2 scalar fix review",
+      "S4 frontier review"
+    ],
+    "independent_owner_review": false,
+    "blinded": false,
+    "implementation_author_recipient_assessment_actor_recorder": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "handle": "@adrian.factomaton",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "reviewer_review_decision_actor_artifact_recorder": {
+      "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "handle": "@adrian.factfinder",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    }
+  },
+  "source_raw_bindings": {
+    "scripts/review_frontier_store.py": "84f2e91659d4bade836b31aad03b37494a6b45162fe1778ef3069e686409b76f",
+    "scripts/test_review_frontier_store.py": "54edea938b9770dedb7b46002e7168dfe0a82aafb077de8b11b8ef123255994d",
+    "docs/review-frontier-storage.md": "7819bf4c6cb73029559302d9102a161f0947b9f23935df37da79dc9dd2a627ca",
+    "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+    "scripts/sidecar_digest.py": "d45fcb82b3b01361681dddb34e7189356b785d344321095ecfd993b0ebc25243",
+    "scripts/acquire_review_frontier.mjs": "8c28ddc495eb8acf6adfe0173a6b03cbffd443759e6b4001c0702bbf5617e6a2"
+  },
+  "checks": [
+    {
+      "check": "Four public immutable review/probe/result files, official raw/canonical review digest, three companion hashes and six current/pinned Git source/dependency bindings",
+      "result": "pass"
+    },
+    {
+      "command": "python -B data/W020-S5-R1-factfinder-review-v1/review-probes.py .",
+      "result": "64 independent assertions pass, probe-results.json reproduced byte-for-byte. Both probe sources inspected before execution. Includes synthetic actual S4 output, isolated SQLite/CLI and four independent concurrent processes."
+    },
+    {
+      "command": "node scripts/test_acquire_review_frontier.mjs",
+      "result": "9 tests pass"
+    },
+    {
+      "command": "node scripts/test_acquire_review_capture.mjs",
+      "result": "8 tests pass"
+    },
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "result": "161 tests pass in8.082s"
+    }
+  ],
+  "accepted_scope": "Strict bounded structural frontier-envelope/declared receipt validation before database opening and application insert/retry/conflict behavior with raw byte preservation in operator-controlled SQLite. No semantic replay or certification of claimed frontier completeness/diagnostics.",
+  "history": "Original S1/S3/S4 source/schema and frozen reviews unchanged. Independent probe MJS invokes exact S4 collector only with synthetic responses, then Python imports its actual envelope; no live source acquisition or private payload reuse.",
+  "limitations": [
+    "Host-controlled imported packets and structurally consistent forged completeness/diagnostic claims remain unverified_import, owner unknown, source unchecked, frontier_verification pending and implementation_review pending. No semantic replay, signed provenance, host/reviewer authentication or authority established.",
+    "Operator-controlled SQLite application insert/conflict behavior does not protect against arbitrary file/database writers, journal tampering, malicious triggers or schemas, disk failure or crashes.",
+    "Synthetic actual S4 output and isolated temporary SQLite files/CLI only; no duplicate live acquisition, private payload reuse, credentials, shared implementation edits, subscriptions/poll/ack consumers, outbox intake, live DB/deployment/API changes.",
+    "Metadata/raw bytes have 1 MiB bounds and strict outer/inner JSON rules. This can reject malformed/oversized collector output; no guarantee every possible S4 envelope is importable. No silent truncation observed.",
+    "Strict calendar UTC/order/interval checks validate supplied times, not trustworthy clock observations, freshness or a production policy. UTC seconds or exactly milliseconds are supported.",
+    "Structural tool/argument/scope checks and canonical bool/integer distinction do not replay nested response meaning or prove the caller actually issued reads. Partial/access errors retained pending are not deletion/correction determinations.",
+    "Raw-byte reformat conflicts under a reused capture ID are intentional; new acquisition requires new ID. Concurrency probe covers four identical CLI processes and one row, not exhaustive scheduling/locking/disk-failure states.",
+    "Full-content reply dispositions, complete correction/visibility guarantees, response semantic verification, receipt kind/artifact_kind compatibility, freshness enforcement, source/runtime/exposure/build/deployment/CI/Convex/typecheck/factual/curation/routing/API approval remain excluded.",
+    "No exhaustive malicious-environment/resource/time/memory/deep nesting/exception/security or crash audit. Passing tests establish bounded consistency only.",
+    "Immutable review uses kind instead of artifact_kind; manual exact Git/hash comparisons used, no direct S2 receipt compatibility claimed."
+  ],
+  "next_action": "Implement one offline semantic verifier that reconstructs exact identity/revision/search-page/final-reread relationships from stored raw observations rather than trusting envelope claims. Keep every reply pending for full-content disposition and authentication unverified_import; add adversarial forged-label/binding/response cases and obtain fresh exact review. Source/runtime authority and exposure integration remain separate."
+}
