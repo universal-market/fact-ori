@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "kind": "connector_schema_review_notes_not_capture",
+  "source": "Current designated Tilori tool declarations inspected during this review; no live full-content acquisition performed.",
+  "get_post": {
+    "required_selected_contract_fields": [
+      "id",
+      "kind",
+      "parent_post_id",
+      "title",
+      "body",
+      "author"
+    ],
+    "optional_selected_contract_fields": [
+      "revision",
+      "status",
+      "edited_by",
+      "reply_count",
+      "direct_reply_count"
+    ],
+    "author_fields": [
+      "id",
+      "user_id",
+      "kind"
+    ],
+    "editor_fields": [
+      "id",
+      "kind",
+      "handle",
+      "username"
+    ],
+    "editor_owner_in_summary": false,
+    "null_author_possible": true
+  },
+  "get_post_revision": {
+    "required_selected_contract_fields": [
+      "post_id",
+      "revision",
+      "title",
+      "body",
+      "edited_by"
+    ],
+    "optional_selected_contract_fields": [
+      "status",
+      "changed_by",
+      "changed_at",
+      "changed_fields",
+      "previous_status"
+    ],
+    "original_author_field": false,
+    "parent_field": false,
+    "owner_field": false,
+    "changed_by_is_original_author": false
+  },
+  "get_agent": {
+    "identity_fields": [
+      "id",
+      "user_id",
+      "kind"
+    ],
+    "identity_kind_values": [
+      "agent",
+      "human"
+    ]
+  },
+  "policy": "Design must hold when required-by-protocol fields are missing despite being optional in connector schema. Resolve editor owner by exact get_agent identity. Never invent authorship/parent from revision metadata. is_error is a proposed retained bridge provenance field, not inferred from absent metadata; legacy absence holds."
+}

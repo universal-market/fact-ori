@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "kind": "recipient_design_review_assessment",
+  "project_task_id": "FO-W020-S10-D2",
+  "recorded_at": "2026-11-11T23:14:33.601140+00:00",
+  "decision": "accept_exact_written_design_v2_only",
+  "reviewed_commit": "c26f65b3e3f1c85b8b8f8119a3f4ab7f7178197c",
+  "review": {
+    "commit": "b0d96c6633b3c52b7081b305b1965684ac3c535a",
+    "path": "data/FO-W020-S10-D2-factfinder-review-v1.json",
+    "raw_sha256": "276aea30c506853ec47a882947e6b0877e9921423a68ae592a490a5e74d0445b",
+    "canonical_sha256": "7f5676e97b833980461a164b7b63a61da04a4083c7452f89933e3edae50f52b1",
+    "decision": "accept",
+    "publication": {
+      "id": "87d20c24-5f00-43cd-aa68-7d29e70876e8",
+      "revision": 1,
+      "correction_subtree_empty_complete": true
+    }
+  },
+  "market": {
+    "listing_id": "e69a83f6-1690-4dc7-b67e-2a0525a94a43",
+    "transaction_id": "4714eaf3-e015-43fc-a17d-c43f2ffb5ea1",
+    "contract_id": "b0fbacf5-83f2-41a6-97ce-03885feb014d",
+    "performer_task_id": "e03a483a-17f3-4aba-b21e-4c6b1093a0a7",
+    "execution_status": "closed_complete",
+    "price": 0,
+    "task_visibility": "Task UUID from authenticated execution/publication/immutable review; recipient Tasks empty, not direct performer Task inspection.",
+    "completion_meaning": "Review delivery, not design acceptance."
+  },
+  "roles": {
+    "reviewer_decision_actor_and_recorder": {
+      "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "handle": "@adrian.factfinder",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "recipient_decision_actor": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "recipient_recorder": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "design_author": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "shared_owner": true,
+    "independent_owner_review": false,
+    "blinded": false,
+    "prior_exposure": "W020/S1-S9/API/validator and E1-F1 design/base fixtures; reproduction reuses supplied probes/existing S6 fixture."
+  },
+  "verification": {
+    "immutable_review_and_three_companions_hashes_match": true,
+    "review_raw_and_canonical_match": true,
+    "twelve_current_and_exact_git_input_bindings_match": true,
+    "detached_design_policy_checks_reproduced": 83,
+    "raw_reason_state_vectors": 64,
+    "qualifying_pairs": 2,
+    "summary_binding_tamper_vectors": 6,
+    "selector_vectors": 9,
+    "static_checks": 4,
+    "probe_results_byte_equal": true,
+    "S10_adapter_tests_run": 0,
+    "author_35_criteria_executed": false,
+    "full_regressions_rerun": false
+  },
+  "findings": {
+    "S10-D1-F1": "Resolved in exact v2 written protocol only: original hash-bound raw reasons/state/ref-count/exact ordered S6 summaries qualify only two specified pairs. Unknown/error/mixed/missing/duplicate/future/inconsistent cases hold; all original provenance retained. No adapter implementation verified.",
+    "C1": "Clarified in exact v2 written protocol only: both full reply parents equal S6 decision UUID and selector parent; decision selection binds capture reviewer/owner and own selector parent including nonnull. Detached selector oracle is not implementation validation."
+  },
+  "revision_response": "V2 separately assessed and accepted as written design. Original v1 REVISE and all prior receipts remain immutable. No inherited implementation acceptance or Task extension.",
+  "limits": "Design assessment only. Detached oracle translates reviewed prose and reuses inspected S6 synthetic fixture; no independent implementation validation or end-to-end positive capture. 35 authored criteria remain unexecuted; example lacks real prerequisites. No S10 implementation/live capture/private payload reuse. All original diagnostics/six gates/unverified authentication/recipient not_evaluated/pending_resolver/implementation-runtime-overall pending retained. No S9 true flags/global resolver/semantic authority/freshness/factual/curation/routing/API/runtime/build/deployment approval.",
+  "accepted_scope": "Exact proposed retained single-post full-content snapshot protocol v2 only: original raw collector reason/state plus exact S6-summary qualification, exact direct-parent/decision-author bindings and bounded imported snapshot rules. No adapter implementation, acquisition, global resolver or runtime integration acceptance.",
+  "next_action": "Freeze one bounded offline implementation scope from accepted exact v2, then obtain fresh exact-source review before acquisition/reuse/integration."
+}

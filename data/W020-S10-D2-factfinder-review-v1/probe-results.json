@@ -1,0 +1,575 @@
+{
+  "schema_version": 1,
+  "kind": "detached_design_policy_vector_results",
+  "design_commit": "c26f65b3e3f1c85b8b8f8119a3f4ab7f7178197c",
+  "raw_reason_state_vectors": [
+    {
+      "reply_count": 0,
+      "reason_case": "empty",
+      "state": "empty_frontier_observed",
+      "S6": "returned",
+      "discovery_qualifies": true,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "empty",
+      "state": "pending",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "empty",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "empty",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "expected",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "expected",
+      "state": "pending",
+      "S6": "returned",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "expected",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "expected",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "unknown",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "unknown",
+      "state": "pending",
+      "S6": "returned",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "unknown",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "unknown",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "mixed",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "mixed",
+      "state": "pending",
+      "S6": "returned",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "mixed",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "mixed",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "duplicate",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "duplicate",
+      "state": "pending",
+      "S6": "returned",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "duplicate",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "duplicate",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "future",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "future",
+      "state": "pending",
+      "S6": "returned",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "future",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "future",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "missing",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "missing",
+      "state": "pending",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "missing",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "missing",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "nonarray",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "nonarray",
+      "state": "pending",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "nonarray",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 0,
+      "reason_case": "nonarray",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "empty",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "empty",
+      "state": "pending",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "empty",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "empty",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "expected",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "expected",
+      "state": "pending",
+      "S6": "returned",
+      "discovery_qualifies": true,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "expected",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "expected",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "unknown",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "unknown",
+      "state": "pending",
+      "S6": "returned",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "unknown",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "unknown",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "mixed",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "mixed",
+      "state": "pending",
+      "S6": "returned",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "mixed",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "mixed",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "duplicate",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "duplicate",
+      "state": "pending",
+      "S6": "returned",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "duplicate",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "duplicate",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "future",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "future",
+      "state": "pending",
+      "S6": "returned",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "future",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "future",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "missing",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "missing",
+      "state": "pending",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "missing",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "missing",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "nonarray",
+      "state": "empty_frontier_observed",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "nonarray",
+      "state": "pending",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "nonarray",
+      "state": "future_state",
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    },
+    {
+      "reply_count": 1,
+      "reason_case": "nonarray",
+      "state": null,
+      "S6": "structural_hold",
+      "discovery_qualifies": false,
+      "pass": true
+    }
+  ],
+  "qualified_pairs": 2,
+  "binding_summary_tamper_vectors": 6,
+  "selector_vectors": [
+    {
+      "id": "direct reply",
+      "selected": true,
+      "pass": true
+    },
+    {
+      "id": "nested all-depth ref cannot pass by membership",
+      "selected": false,
+      "pass": true
+    },
+    {
+      "id": "current parent drift",
+      "selected": false,
+      "pass": true
+    },
+    {
+      "id": "reply owner mismatch",
+      "selected": false,
+      "pass": true
+    },
+    {
+      "id": "unlisted revision",
+      "selected": false,
+      "pass": true
+    },
+    {
+      "id": "decision keeps its own nonnull parent",
+      "selected": true,
+      "pass": true
+    },
+    {
+      "id": "decision author mismatch",
+      "selected": false,
+      "pass": true
+    },
+    {
+      "id": "decision owner mismatch",
+      "selected": false,
+      "pass": true
+    },
+    {
+      "id": "decision selector parent mismatch",
+      "selected": false,
+      "pass": true
+    }
+  ],
+  "static_design_example_matrix_checks": 4,
+  "total_checked_vectors_and_static_checks": 83,
+  "method": "Actual unchanged S6 feeds a literal detached interpretation of the proposed v2 table; selector checks are design-rule vectors, not an implemented adapter/full-protocol test.",
+  "S10_adapter_tests_run": 0,
+  "author_criteria_executed": false,
+  "full_regressions_rerun": false,
+  "live_capture_used": false
+}
