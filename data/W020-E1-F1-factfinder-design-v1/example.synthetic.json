@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "kind": "reply_full_content_disposition",
+  "profile": "reply-disposition-design-v1",
+  "bindings": {
+    "receipt_raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "frontier_raw_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "capture_id": "55555555-5555-4555-8555-555555555555",
+    "reviewed_commit": "cccccccccccccccccccccccccccccccccccccccc",
+    "target_commit": "cccccccccccccccccccccccccccccccccccccccc"
+  },
+  "implementation_author": {
+    "agent_id": "00000001-1111-4111-8111-111111111111",
+    "owner_id": "33333333-3333-4333-8333-333333333333"
+  },
+  "reviewer": {
+    "agent_id": "00000002-1111-4111-8111-111111111111",
+    "owner_id": "33333333-3333-4333-8333-333333333333"
+  },
+  "parent": {
+    "post_id": "00000010-2222-4222-8222-222222222222",
+    "revision": 1,
+    "body_sha256": "5c4d495d6a5aa9353220cf7bb56e32fafa33fbd7a26218976a7259717c126cfe",
+    "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+    "author": {
+      "agent_id": "00000002-1111-4111-8111-111111111111",
+      "owner_id": "33333333-3333-4333-8333-333333333333"
+    },
+    "edited_by": null,
+    "status": null,
+    "parent_post_id": null
+  },
+  "entries": [
+    {
+      "reply": {
+        "post_id": "00000011-2222-4222-8222-222222222222",
+        "revision": 1,
+        "body_sha256": "93e7794ffc33473a3fdfc7227dface50bafed41fca0d062c6685e1a8b3d3a51e",
+        "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+        "author": {
+          "agent_id": "00000001-1111-4111-8111-111111111111",
+          "owner_id": "33333333-3333-4333-8333-333333333333"
+        },
+        "edited_by": null,
+        "status": null,
+        "parent_post_id": "00000010-2222-4222-8222-222222222222"
+      },
+      "decision_actor": {
+        "agent_id": "00000001-1111-4111-8111-111111111111",
+        "owner_id": "33333333-3333-4333-8333-333333333333"
+      },
+      "recorder": {
+        "agent_id": "00000003-1111-4111-8111-111111111111",
+        "owner_id": "33333333-3333-4333-8333-333333333333"
+      },
+      "basis": "full_body_exact_revision",
+      "classification": "nonblocking_context",
+      "rationale": "Synthetic recipient publication adds no observed objection; this is a declared contextual decision, not independent approval.",
+      "affected_targets": [],
+      "correction_chain": []
+    }
+  ],
+  "coverage": {
+    "reply_set_sha256": "6e63beb11fefcee910146659ae339b2de426659842f0b24f993b43dfe6900190",
+    "correction_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checked": [
+      "exact_parent_and_reply_versions",
+      "full_body_and_title",
+      "authors_owners_editors_status",
+      "visible_reply_set",
+      "explicit_correction_chain",
+      "rationale_and_affected_targets"
+    ],
+    "unchecked": [
+      "authenticated_provenance_and_reviewer_authority",
+      "separate_recipient_decision",
+      "required_review_coverage_and_adequacy",
+      "current_full_content_and_correction_disposition",
+      "trusted_observation_freshness_and_visibility",
+      "runtime_build_and_deployment_binding"
+    ]
+  },
+  "authentication": "unverified_import",
+  "collector_diagnostics": [
+    "replies_require_full_review"
+  ],
+  "recipient_decision": "not_evaluated",
+  "implementation_review": "pending",
+  "runtime_review": "pending",
+  "overall_status": "pending"
+}
