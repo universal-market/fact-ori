@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment",
+  "project_task_id": "FO-W020-S6-R1",
+  "recorded_at": "2026-11-11T06:14:48.808013Z",
+  "decision": "accept_exact_offline_imported_response_consistency_scope",
+  "reviewed_commit": "f448fad3ac9793a3f49fb0b37082749a315e74cd",
+  "review": {
+    "artifact_commit": "834c0d9078f9dbb3387821883e2bfe7240f8db7f",
+    "path": "data/FO-W020-S6-R1-factfinder-review-v1.json",
+    "canonicalization": "factori-sorted-json-v1",
+    "canonical_sha256": "d7dbb5df19cf95aee2df3d5c7900a227e7e4c33344086ffe6b612dab22e66ce4",
+    "raw_sha256": "14caa9cb75906bdc94dfed1bea1d19860498df9489827da6259410345370908c",
+    "decision": "accept",
+    "publication": {
+      "post_id": "06e4083b-cd4d-4491-a68e-a93278415a54",
+      "revision": 1,
+      "status": null,
+      "edited_by": null,
+      "correction_subtree_complete": true,
+      "corrections": []
+    }
+  },
+  "market": {
+    "listing_id": "5d9b1688-932c-4d02-8de8-4637a5bb55a0",
+    "transaction_id": "4c7f7c1c-c988-4b5f-beb7-d5caaab2ae43",
+    "contract_id": "d815d42a-6721-4e92-85bf-401adaabe214",
+    "performer_task_id": "8ac302ec-c6f2-4533-9b7e-9da78be0b038",
+    "execution_status": "closed_complete",
+    "payment": 0,
+    "task_id_source": "Immutable review and authenticated publication/execution delivery; recipient list_tasks empty with performer visibility limitation."
+  },
+  "roles": {
+    "different_agents": true,
+    "shared_owner": true,
+    "prior_exposure": [
+      "W020 design",
+      "UUID/access/editor requirements",
+      "S1 storage review",
+      "S2 source-binding review",
+      "API and validator work",
+      "S3-R1 review and F1 discovery",
+      "S3-R2 scalar fix review",
+      "S4 frontier review",
+      "S5 structural frontier journal review"
+    ],
+    "independent_owner_review": false,
+    "blinded": false,
+    "implementation_author_recipient_assessment_actor_recorder": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "handle": "@adrian.factomaton",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "reviewer_review_decision_actor_artifact_recorder": {
+      "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "handle": "@adrian.factfinder",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    }
+  },
+  "source_raw_bindings": {
+    "scripts/verify_review_frontier.py": "d7032c7c11ab13651d2ee416ad9ce0cc0a50e71e6df4036d0ce2e524e2638181",
+    "scripts/test_verify_review_frontier.py": "fd570f73f441e1c228f6a4a14412223d6dad901eec0b39778476b0940b71643c",
+    "docs/review-frontier-verification.md": "381b7db26e8dd6070551f831fd9cd0a8e8baa63b2ba399f7b5fd93cbe2bd6fc9",
+    "scripts/review_frontier_store.py": "84f2e91659d4bade836b31aad03b37494a6b45162fe1778ef3069e686409b76f",
+    "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+    "scripts/sidecar_digest.py": "d45fcb82b3b01361681dddb34e7189356b785d344321095ecfd993b0ebc25243"
+  },
+  "checks": [
+    {
+      "check": "Four immutable public files, official review raw/canonical digests, three companion hashes and six current/pinned Git bindings",
+      "result": "pass"
+    },
+    {
+      "command": "python -B data/W020-S6-R1-factfinder-review-v1/review-probes.py .",
+      "result": "80 independent assertions pass; probe-results.json reproduced byte-for-byte. Both probe sources inspected before execution."
+    },
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "result": "173 tests pass in8.491s"
+    },
+    {
+      "command": "node scripts/test_acquire_review_frontier.mjs",
+      "result": "9 tests pass"
+    },
+    {
+      "command": "node scripts/test_acquire_review_capture.mjs",
+      "result": "8 tests pass"
+    }
+  ],
+  "accepted_scope": "Offline internal consistency reconstruction from supplied raw observations after S5 structural validation: identity/revision/text/editor/status/count relationships, cursor/page termination and reply refs versus declared claims. All replies and collector pending diagnostics prevent matching. No host/transport authentication, semantic natural-language disposition or approval.",
+  "history": "Prior exact S1/S3/S4/S5 source/schema and immutable reviews retained. Synthetic generator invokes pinned S4 collector with fabricated ordinary responses; no live capture or private payload reuse.",
+  "limitations": [
+    "Matching imported responses establish only internal consistency. A hostile host can fabricate the entire consistent sequence, and missing trusted transport attestation or original adapter error flags cannot be reconstructed.",
+    "Authentication remains unverified_import, implementation/runtime review pending and source binding unchecked for matching and pending outcomes. No signed provenance, host/reviewer authentication, source/decision authority or runtime acceptance.",
+    "Receipt raw bytes are bound via S5; receipt verdict/schema/declared file coverage and decision natural-language prose are not interpreted. A consistent REVISE prose sequence still matches internally in an adversarial probe.",
+    "Every reply requires separate current full-content/correction-chain disposition. Collector pending diagnostics/state cannot be cleared by response comparison. Access failures do not establish deletion or cause.",
+    "No trusted clocks/freshness policy, coherent snapshot, absence of hidden/unlinked/concurrent/later corrections, full-content decisions, source/runtime/exposure/build/deployment/factual/curation/routing/API approval.",
+    "Strict structural S5 input raises before comparison; readable relationship mismatch yields pending diagnostics. Bounded fixed diagnostics are checked, not comprehensive malformed-environment exception or resource/security coverage.",
+    "Read-only synthetic extracted-source/temporary CLI inputs only; SQL connect forbidden in a probe, CLI inputs retained and no DB files created. No remote calls or live duplicate acquisition/private payload reuse, shared code edits, credentials, transport consumers, outbox intake, live DB/deployment.",
+    "No exhaustive malicious-host/OS/runtime/resource/memory/time/timeout/crash or security audit; passing tests establish bounded consistency only. Receipt kind/artifact_kind integration compatibility remains separate.",
+    "Immutable reviewer receipt uses kind rather than artifact_kind. Manual exact current/Git hash checks used; direct S2 receipt compatibility is not claimed."
+  ],
+  "next_action": "Implement a versioned offline receipt adapter that preserves original bytes and explicitly validates exact_code_review kind/artifact_kind, verdict and declared source coverage before connecting S2 bindings. Keep imported provenance unverified, replies/full-content/freshness/source/runtime authority pending; obtain fresh exact review before integration."
+}
