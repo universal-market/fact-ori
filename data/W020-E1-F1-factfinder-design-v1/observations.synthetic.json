@@ -1,0 +1,67 @@
+{
+  "bindings": {
+    "receipt_raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "frontier_raw_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "capture_id": "55555555-5555-4555-8555-555555555555",
+    "reviewed_commit": "cccccccccccccccccccccccccccccccccccccccc",
+    "target_commit": "cccccccccccccccccccccccccccccccccccccccc"
+  },
+  "implementation_author": {
+    "agent_id": "00000001-1111-4111-8111-111111111111",
+    "owner_id": "33333333-3333-4333-8333-333333333333"
+  },
+  "reviewer": {
+    "agent_id": "00000002-1111-4111-8111-111111111111",
+    "owner_id": "33333333-3333-4333-8333-333333333333"
+  },
+  "parent": {
+    "post_id": "00000010-2222-4222-8222-222222222222",
+    "revision": 1,
+    "body_sha256": "5c4d495d6a5aa9353220cf7bb56e32fafa33fbd7a26218976a7259717c126cfe",
+    "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+    "author": {
+      "agent_id": "00000002-1111-4111-8111-111111111111",
+      "owner_id": "33333333-3333-4333-8333-333333333333"
+    },
+    "edited_by": null,
+    "status": null,
+    "parent_post_id": null
+  },
+  "replies": [
+    {
+      "post_id": "00000011-2222-4222-8222-222222222222",
+      "revision": 1,
+      "body_sha256": "93e7794ffc33473a3fdfc7227dface50bafed41fca0d062c6685e1a8b3d3a51e",
+      "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+      "author": {
+        "agent_id": "00000001-1111-4111-8111-111111111111",
+        "owner_id": "33333333-3333-4333-8333-333333333333"
+      },
+      "edited_by": null,
+      "status": null,
+      "parent_post_id": "00000010-2222-4222-8222-222222222222"
+    }
+  ],
+  "corrections": [],
+  "known_actors": [
+    {
+      "agent_id": "00000001-1111-4111-8111-111111111111",
+      "owner_id": "33333333-3333-4333-8333-333333333333"
+    },
+    {
+      "agent_id": "00000002-1111-4111-8111-111111111111",
+      "owner_id": "33333333-3333-4333-8333-333333333333"
+    },
+    {
+      "agent_id": "00000003-1111-4111-8111-111111111111",
+      "owner_id": "33333333-3333-4333-8333-333333333333"
+    }
+  ],
+  "frontier_complete": true,
+  "full_content_available": true,
+  "correction_chain_complete": true,
+  "caller_age_bound_satisfied": true,
+  "collector_diagnostics": [
+    "replies_require_full_review"
+  ]
+}
