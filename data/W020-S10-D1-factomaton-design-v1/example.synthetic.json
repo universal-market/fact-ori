@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "kind": "authored_synthetic_protocol_example_not_execution",
+  "packet": {
+    "schema_version": 1,
+    "profile": "full-post-snapshot-input-v1",
+    "capture_id": "55555555-5555-4555-8555-555555555555",
+    "recorder_agent_id": "00000001-1111-4111-8111-111111111111",
+    "receipt_raw_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "frontier_raw_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "reviewed_commit": "cccccccccccccccccccccccccccccccccccccccc",
+    "target_commit": "cccccccccccccccccccccccccccccccccccccccc",
+    "selector": {
+      "post_id": "00000011-2222-4222-8222-222222222222",
+      "revision": 1,
+      "parent_post_id": "00000010-2222-4222-8222-222222222222"
+    },
+    "observations": [
+      {
+        "tool": "get_my_profile",
+        "arguments": {},
+        "result_json": "{\"profile\":{\"id\":\"00000001-1111-4111-8111-111111111111\",\"user_id\":\"33333333-3333-4333-8333-333333333333\",\"kind\":\"agent\"}}",
+        "observed_at": "2026-01-01T00:00:00Z",
+        "is_error": false
+      },
+      {
+        "tool": "get_post",
+        "arguments": {
+          "post_id": "00000011-2222-4222-8222-222222222222"
+        },
+        "result_json": "{\"id\":\"00000011-2222-4222-8222-222222222222\",\"kind\":\"post\",\"revision\":1,\"title\":\"Synthetic title\",\"body\":\"Full synthetic body\\n\",\"author\":{\"id\":\"00000001-1111-4111-8111-111111111111\",\"user_id\":\"33333333-3333-4333-8333-333333333333\",\"kind\":\"agent\"},\"edited_by\":null,\"status\":null,\"parent_post_id\":\"00000010-2222-4222-8222-222222222222\",\"reply_count\":0,\"direct_reply_count\":0}",
+        "observed_at": "2026-01-01T00:00:00Z",
+        "is_error": false
+      },
+      {
+        "tool": "get_agent",
+        "arguments": {
+          "agent_id": "00000001-1111-4111-8111-111111111111"
+        },
+        "result_json": "{\"id\":\"00000001-1111-4111-8111-111111111111\",\"user_id\":\"33333333-3333-4333-8333-333333333333\",\"kind\":\"agent\"}",
+        "observed_at": "2026-01-01T00:00:00Z",
+        "is_error": false
+      },
+      {
+        "tool": "get_post_revision",
+        "arguments": {
+          "post_id": "00000011-2222-4222-8222-222222222222",
+          "revision": 1
+        },
+        "result_json": "{\"post_id\":\"00000011-2222-4222-8222-222222222222\",\"revision\":1,\"title\":\"Synthetic title\",\"body\":\"Full synthetic body\\n\",\"status\":null,\"edited_by\":null}",
+        "observed_at": "2026-01-01T00:00:00Z",
+        "is_error": false
+      },
+      {
+        "tool": "get_post",
+        "arguments": {
+          "post_id": "00000011-2222-4222-8222-222222222222"
+        },
+        "result_json": "{\"id\":\"00000011-2222-4222-8222-222222222222\",\"kind\":\"post\",\"revision\":1,\"title\":\"Synthetic title\",\"body\":\"Full synthetic body\\n\",\"author\":{\"id\":\"00000001-1111-4111-8111-111111111111\",\"user_id\":\"33333333-3333-4333-8333-333333333333\",\"kind\":\"agent\"},\"edited_by\":null,\"status\":null,\"parent_post_id\":\"00000010-2222-4222-8222-222222222222\",\"reply_count\":0,\"direct_reply_count\":0}",
+        "observed_at": "2026-01-01T00:00:00Z",
+        "is_error": false
+      }
+    ]
+  },
+  "expected_snapshot": {
+    "post_id": "00000011-2222-4222-8222-222222222222",
+    "revision": 1,
+    "body_sha256": "6fa2d77f2fd86f47323dc3c90b488f90884922635dc071f45ebd87bc09683845",
+    "title_sha256": "167555318c005c0a6a8c59d2f544335e8a7bdf2c75b2ae0a4b794173e57733d7",
+    "author": {
+      "agent_id": "00000001-1111-4111-8111-111111111111",
+      "owner_id": "33333333-3333-4333-8333-333333333333"
+    },
+    "edited_by": null,
+    "status": null,
+    "parent_post_id": "00000010-2222-4222-8222-222222222222"
+  },
+  "prerequisite": "Separate invented receipt/frontier bytes are not supplied; dummy hashes are not real bindings. Example illustrates selected field shape only and must not pass a real adapter without verified prerequisite inputs.",
+  "expected_coverage_state": "pending_resolver",
+  "live_disposition": false
+}

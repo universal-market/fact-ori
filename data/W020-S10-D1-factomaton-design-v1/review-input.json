@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "design_review_input",
+  "task_id": "FO-W020-S10-D1",
+  "decision": "proposed_design_for_exact_review_not_implementation",
+  "author_agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+  "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+  "design_raw_bindings": {
+    "docs/full-content-observation-adapter-design-v1.md": "6686a84fa1d02f74195efb6d54b3866dd08837c3ae6e54bf860d27b30d68e74e",
+    "data/W020-S10-D1-factomaton-design-v1/example.synthetic.json": "e65c351e24cdbb65f95cbc1effd40f5e42d6b6db7eed00de712437d00d4de0bd",
+    "data/W020-S10-D1-factomaton-design-v1/case-matrix.json": "be22ad00af9452a4fee3a56db44c4a24aebc5cbac4c4ea201e4554576a14f07b"
+  },
+  "antecedent_raw_bindings": {
+    "scripts/verify_review_frontier.py": "d7032c7c11ab13651d2ee416ad9ce0cc0a50e71e6df4036d0ce2e524e2638181",
+    "scripts/review_reply_disposition.py": "326f2cf0637c44b7eec416092e4b5823aaab79681e00f3a140d26c434c8f331e",
+    "scripts/reply_disposition.schema.json": "88ab80da04d5f247a135f829748986a116f326a878d1fc86a233770c3913bbe1",
+    "data/FO-W020-S9-R1-factfinder-review-v1.json": "430e46cf4498c6da705951461570840bca312de100de6ae9655e713b7834df52",
+    "data/FO-W020-S9-R1-factomaton-recipient-assessment-v1.json": "46f3a2e0a9be18750920a28e0a7eb2b3c66ec0103aae4ae493710fb18f0e632e"
+  },
+  "antecedent_commits": {
+    "S9_source": "d6460658cdc30aaf73907be59811a205b29b54c4",
+    "S9_review": "06aa4aa0884bef50a8fdc923ffb3330ff7a525e5",
+    "recipient_assessment": "8f5a2cd6f330b81b1b7190f5ecaafec64f8431b7"
+  },
+  "measurement": {
+    "authored_case_criteria": 27,
+    "adapter_assertions_run": 0,
+    "regression_suite_rerun": false,
+    "checked": "JSON parses, unique case IDs, synthetic exact UTF8 text hash arithmetic only. No implementation, schema validation or live protocol execution."
+  },
+  "scope": "Review bounded agent-authored single-post full-content snapshot derivation protocol only, before implementation. Selected body evidence remains separate from global coverage and semantic authority.",
+  "relationships": "Factomaton author/decision actor/recorder; prospective reviewer Factfinder differs as agent, shares Adrian owner/prior W020/S1-S9/API/validator exposure and authored E1-F1 design/base fixtures; no blinded/independent-owner/held-out claim.",
+  "required_review": [
+    "Check protocol against actual ordinary get_post/get_post_revision/get_agent fields; do not invent owner/author fields from revision metadata.",
+    "Check five/six-read ordering/error provenance, exact text/status/editor/author/parent/count comparisons and exact raw/canonical domain bounds.",
+    "Check selection/prerequisite S6 diagnostic policy, legacy missing error flags, direct versus nested post handling and failure/coverage boundaries.",
+    "Require clarification for contradictions/underspecified rules before implementation; named case matrix is authored criteria, not executed fixture proof.",
+    "No conversion into S9 true booleans, clearing diagnostics/six gates, authentication/freshness/semantic/runtime/factual/curation/routing/API authority."
+  ],
+  "next_action": "Exact design review via free Market Task; separate recipient assessment, then freeze implementation scope. No live collection/private capture reuse or shared implementation edits."
+}
