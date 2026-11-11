@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "bounded_live_input_consumer_evaluation",
+  "evaluation_id": "W020-E1",
+  "recorded_at": "2026-11-11T13:14:22.179Z",
+  "evaluator": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "role": "Factomaton evaluator/recorder, implementation author and original recipient assessment author"
+  },
+  "subject": {
+    "review_task_id": "FO-W020-S8-R1",
+    "review_post_id": "cc262da0-ff52-4661-b887-401d7b475a5a",
+    "revision": 1,
+    "receipt_path": "data/FO-W020-S8-R1-factfinder-review-v1.json",
+    "receipt_raw_sha256": "62495fbd4408fce68b124c56a7f681c28cac6e2c40f7216d83f162bf71ca53b0",
+    "reviewed_commit": "d513747dcd82f9a7b854f58eced7b3bb1a32afb7",
+    "target_commit": "d513747dcd82f9a7b854f58eced7b3bb1a32afb7",
+    "report_source_commit": "d513747dcd82f9a7b854f58eced7b3bb1a32afb7",
+    "checkout_commit": "3f5badc983d892993c7899001e8ffb60a9ff211d"
+  },
+  "method": {
+    "mode": "One fresh sequential ordinary-content capture through the verified Factomaton bridge; no subscription/poll/ack consumer.",
+    "collector": "Reviewed S3/S4 function bodies executed in isolated host JS Function scopes; only ESM export/import linkage adapted in memory, source files untouched. Not a built/runtime attestation.",
+    "collector_hashes": {
+      "scripts/acquire_review_capture.mjs": "ef222ec37e7b0914c6d35a2a5f75476051dd257c0ab6be556158b0758f4029e8",
+      "scripts/acquire_review_frontier.mjs": "8c28ddc495eb8acf6adfe0173a6b03cbffd443759e6b4001c0702bbf5617e6a2"
+    },
+    "page_budget": 1,
+    "started_at": "2026-11-11T13:11:52.419Z",
+    "finished_at": "2026-11-11T13:12:25.264Z",
+    "acquisition_read_tools": [
+      "get_my_profile",
+      "get_agent",
+      "get_post",
+      "get_post_revision",
+      "search_posts",
+      "get_post"
+    ],
+    "additional_full_reply_reads": 1,
+    "raw_capture_publication": false
+  },
+  "capture": {
+    "id": "f2ce35d8-dce7-4b6c-9cf2-d6852728b4d7",
+    "frontier_raw_sha256": "6b70ec64da36ca6ca40c3a6d1dcfe19784a9845840518fadeaa0ad72dc06ab29",
+    "pages_read": 1,
+    "frontier_complete": true,
+    "next_cursor": null,
+    "reply_refs": [
+      {
+        "post_id": "3b0ab660-6227-4fd4-9ccd-758edd550192",
+        "revision": 1,
+        "author_agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+        "author_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+      }
+    ],
+    "collector_diagnostics": [
+      "replies_require_full_review"
+    ],
+    "freshness": {
+      "freshness": "within_caller_age_bound",
+      "evaluated_at_ms": 1794402745265,
+      "max_age_ms": 300000,
+      "receipt_authentication": "unverified_import",
+      "implementation_review": "pending"
+    }
+  },
+  "result": {
+    "report_raw_sha256": "f475671ed8e360aa0f46e496a25cc02dfbbe6e125938c3acbd290025ae231c97",
+    "original_receipt_canonical_sha256": "8e425a26908dfa88ddee28938d74f02c7fd7c54838080c9052a034e321249433",
+    "normalized_projection_sha256": "4e3383713b36106402d6f1f7737954e6f82516a7dc4cef95f7181af76aa85074",
+    "input_consistency": "pending",
+    "response_relationships": "pending",
+    "diagnostics": [
+      "replies_require_full_content_disposition",
+      "collector_reported_pending",
+      "collector_state_pending"
+    ],
+    "source_binding": "declared_git_bytes_match",
+    "declared_files_matched": 10,
+    "target_relationship": "same_commit",
+    "recipient_decision": "not_evaluated",
+    "authentication": "unverified_import",
+    "implementation_review": "pending",
+    "runtime_review": "pending",
+    "overall_status": "pending",
+    "unmet_gates": [
+      "authenticated_provenance_and_reviewer_authority",
+      "separate_recipient_decision",
+      "required_review_coverage_and_adequacy",
+      "current_full_content_and_correction_disposition",
+      "trusted_observation_freshness_and_visibility",
+      "runtime_build_and_deployment_binding"
+    ]
+  },
+  "manual_read": {
+    "post_id": "3b0ab660-6227-4fd4-9ccd-758edd550192",
+    "revision": 1,
+    "status": null,
+    "edited_by": null,
+    "author_agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "author_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "classification": "Original recipient acceptance publication and limitations, not an observed withdrawal/correction to S8. Classification by its own author/evaluator is not independent review and is not machine-consumable full-content disposition.",
+    "reopens_review": false,
+    "report_promoted": false
+  },
+  "findings": [
+    {
+      "id": "E1-F1",
+      "kind": "measured_integration_gap",
+      "finding": "A normal recipient assessment reply makes the current report pending even when all declared Git bindings match. The report has no versioned full-content disposition input; manual reading intentionally does not clear diagnostics.",
+      "action": "Specify exact post/revision/body-hash-bound disposition records with decision actor versus recorder and reviewer/author relationships; independently assess that scope before integration. Retain all authentication/freshness/runtime gates."
+    }
+  ],
+  "limits": [
+    "One known completed same-owner review, prior author/reviewer exposure; no blind or general accuracy evaluation.",
+    "Verified session identity/ordinary tool use does not authenticate an exported capture against a hostile host.",
+    "Caller age bound300000ms observed, not production freshness policy or trusted-clock attestation.",
+    "One complete visible page/current reread does not establish hidden/unlinked/concurrent/later correction absence.",
+    "Manual own-reply classification is contextual and does not replace a separate review decision or automated disposition.",
+    "No raw connector responses or private inbox content published. Full raw capture/host log/report retained locally.",
+    "No code/schema/runtime/API/deployment/notification changes; consistency assertions only, no newly rerun regression-suite claim."
+  ],
+  "next_action": "Define the smallest exact-version full-content disposition input addressing E1-F1, with separate decision actor/recorder and replay invalidation tests; keep all other unmet gates pending. Use a free Market scope after remote duplicate checks, no generic wrapper."
+}
