@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "kind": "exact_code_review_input",
+  "task_id": "FO-W020-S9-R1",
+  "reviewed_commit": "d6460658cdc30aaf73907be59811a205b29b54c4",
+  "recorded_at": "2026-11-11T16:14:52.281356+00:00",
+  "source_raw_bindings": {
+    "scripts/review_reply_disposition.py": "326f2cf0637c44b7eec416092e4b5823aaab79681e00f3a140d26c434c8f331e",
+    "scripts/reply_disposition.schema.json": "88ab80da04d5f247a135f829748986a116f326a878d1fc86a233770c3913bbe1",
+    "scripts/test_review_reply_disposition.py": "7d157164a83be0141ffbc52fb290ac5df0b16a8ea8dfce7d96a576a68cf03380",
+    "docs/reply-disposition-correspondence.md": "593d0f7f3f0d88845e9f2d2d75bc158f8f625ea3482b277119dfe1e1d090893e",
+    "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+    "scripts/sidecar_digest.py": "d45fcb82b3b01361681dddb34e7189356b785d344321095ecfd993b0ebc25243",
+    "data/W020-E1-F1-factfinder-design-v1/example.synthetic.json": "589babe4f8476081b13a6edcfb88784561964e9b57be8b52ff19b1a5f2e080ab",
+    "data/W020-E1-F1-factfinder-design-v1/observations.synthetic.json": "4c76cd2d165d7c6b54993c2ce9cb34117c95f2943155182f8d9ea46f155edb77",
+    "data/W020-E1-F1-factfinder-design-v1/fixtures.json": "1187dc3011ce7af5b8a8e5e6ee110dda8ae93fac5403175d7ed26050a5618f4b"
+  },
+  "design_commit": "76bf310cd33e3e319ddba4f14dd5ef9a17dfc521",
+  "design_acceptance_commit": "a50004d0468166f67a108a3c663133f8e961ad64",
+  "author_agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+  "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+  "prospective_reviewer": "Factfinder, different agent/shared Adrian owner/prior designer and W020/S1-S8/API/validator exposure; not blinded or independent-owner.",
+  "scope": "Strict bounded offline imported direct-parent declaration correspondence only; no live capture or S8 report integration. Observation coverage/age/content flags remain explicitly unchecked imported premises.",
+  "checks": {
+    "python_tests": 193,
+    "seconds": 10.323,
+    "result": "pass",
+    "new_test_methods": 6,
+    "frozen_design_mutation_recipes": 62,
+    "git_diff_check": "pass"
+  },
+  "required_review": [
+    "Exact raw/canonical input domains; pinned schema integrity and companion-keyword validation only",
+    "Strict JSON duplicate/number/integer/size and exact observation field/flag/snapshot/actor bounds",
+    "Exact receipt/frontier/capture/commit, parent/reply revision/content/editor/status/author/owner and declared set correspondence",
+    "Conservative objection/correction/withdrawal/unresolved outcomes; no hidden benign inference or withdrawal authority",
+    "Diagnostics/six gates/authentication/recipient/implementation/runtime/overall remain pending; no SQL/network/source/input mutation",
+    "Own-author/shared-owner/actor-recorder disclosures and coherent forgery/unverified coverage premises; no broader security/conformance claim",
+    "Compatibility of all62 frozen recipes including explicit ValueError for malformed observation packets; CLI exit2/input preservation"
+  ],
+  "deferred": [
+    "derive coverage/full-content/freshness from checked observations",
+    "multi-parent/correction graph and immutable decision history resolver",
+    "actual semantic decision/authority",
+    "existing report integration or live/runtime/factual/curation/routing/API promotion"
+  ],
+  "review_result_expected": "Immutable exact_code_review receipt with accept/revise/unresolved, exact commit/hash bindings, checked/unchecked coverage, attribution and findings. Reviewer must not edit shared implementation. Task submission is delivery, separate recipient assessment follows."
+}
