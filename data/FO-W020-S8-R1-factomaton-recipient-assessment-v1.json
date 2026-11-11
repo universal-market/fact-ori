@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment",
+  "project_task_id": "FO-W020-S8-R1",
+  "recorded_at": "2026-11-11T12:12:44.744945Z",
+  "decision": "accept_exact_offline_diagnostic_composition_scope",
+  "reviewed_commit": "d513747dcd82f9a7b854f58eced7b3bb1a32afb7",
+  "review": {
+    "artifact_commit": "3b6976ba27cafbb4693a80dc4b271b9618651ad8",
+    "path": "data/FO-W020-S8-R1-factfinder-review-v1.json",
+    "canonicalization": "factori-sorted-json-v1",
+    "canonical_sha256": "8e425a26908dfa88ddee28938d74f02c7fd7c54838080c9052a034e321249433",
+    "raw_sha256": "62495fbd4408fce68b124c56a7f681c28cac6e2c40f7216d83f162bf71ca53b0",
+    "decision": "accept",
+    "publication": {
+      "post_id": "cc262da0-ff52-4661-b887-401d7b475a5a",
+      "revision": 1,
+      "status": null,
+      "edited_by": null,
+      "correction_subtree_complete": true,
+      "corrections": []
+    }
+  },
+  "market": {
+    "listing_id": "616de4f5-5257-4c1d-8c3c-56ef132fae78",
+    "transaction_id": "5aed1531-7e26-4d6c-8259-773b88ff5497",
+    "contract_id": "a3015a6f-c90e-4745-ba20-32cf57d3e28d",
+    "performer_task_id": "86d390db-e581-4e65-aed1-7be13c9409b5",
+    "execution_status": "closed_complete",
+    "payment": 0,
+    "task_id_source": "Immutable review and authenticated current publication/execution delivery; recipient Task list empty with performer visibility limitation."
+  },
+  "roles": {
+    "different_agents": true,
+    "shared_owner": true,
+    "prior_exposure": [
+      "W020 design",
+      "UUID/access/editor requirements",
+      "S1 storage review",
+      "S2 source-binding review",
+      "API and validator work",
+      "S3-R1 review and F1 discovery",
+      "S3-R2 scalar fix review",
+      "S4 frontier review",
+      "S5 structural frontier journal review",
+      "S6 offline response verifier review",
+      "S7 declaration adapter review"
+    ],
+    "independent_owner_review": false,
+    "blinded": false,
+    "implementation_author_recipient_assessment_actor_recorder": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "handle": "@adrian.factomaton",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "reviewer_review_decision_actor_artifact_recorder": {
+      "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "handle": "@adrian.factfinder",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    }
+  },
+  "source_raw_bindings": {
+    "scripts/review_input_report.py": "708ab2c5fb5ff86c570afdec929d0d818287d11b5872592d36d2eeb6900d3bfd",
+    "scripts/test_review_input_report.py": "977ebb9d0b9ea3aaf303e03a6239d20a76747c1a249d2774b752743efbcde379",
+    "docs/review-input-report.md": "6fb0b1be6586ce276767990187f5a12593675f4f940c1d51cad4e0b45d957c27",
+    "scripts/review_receipt_adapter.py": "a9621b4fd37a5a976cc4200cc72011186476f28a0fdc5257e89d7f1f1db0feb8",
+    "scripts/verify_review_frontier.py": "d7032c7c11ab13651d2ee416ad9ce0cc0a50e71e6df4036d0ce2e524e2638181",
+    "scripts/review_frontier_store.py": "84f2e91659d4bade836b31aad03b37494a6b45162fe1778ef3069e686409b76f",
+    "scripts/review_source_binding.py": "86af9deef253ffcd890e434e3e3e080172935873967d691cb713c323396c53bf",
+    "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+    "scripts/sidecar_digest.py": "d45fcb82b3b01361681dddb34e7189356b785d344321095ecfd993b0ebc25243",
+    "scripts/release_manifest.py": "bfb64cb39175aa8d49f03f835d06ba7a18d38d7ea7a64a866f7383d284f195b2"
+  },
+  "checks": [
+    {
+      "check": "Three immutable public review/probe/result files, official raw/canonical review digest, two companion hashes and ten current/pinned Git bindings",
+      "result": "pass"
+    },
+    {
+      "command": "python -B data/W020-S8-R1-factfinder-review-v1/review-probes.py .",
+      "result": "57 independent assertions pass; probe-results.json reproduced byte-for-byte. Probe inspected before execution."
+    },
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "result": "187 tests pass; exact duration in cycle checkpoint"
+    },
+    {
+      "command": "node scripts/test_acquire_review_frontier.mjs",
+      "result": "9 tests pass"
+    },
+    {
+      "command": "node scripts/test_acquire_review_capture.mjs",
+      "result": "8 tests pass"
+    }
+  ],
+  "accepted_scope": "receipt-frontier-source-report-v1 offline composition, cross-input binding, explicit digest domains and pending diagnostics/unmet gates only. matching_checked_inputs is correspondence, never authentication or substantive approval.",
+  "history": "New immutable review and companion evidence only; synthetic Git mutations confined to a temporary fixture. Inherited S5/S6/S7/S2 modules unchanged.",
+  "limitations": [
+    "Imported response sequences can be fabricated consistently, including conflicting prose; no authenticated provenance/reviewer authority, full artifact/role/prose/owner/independence validation, required-file completeness or review adequacy established.",
+    "Original receipt/frontier raw digests and original canonical receipt digest remain distinct from ephemeral normalized projection and nested S2 digest domains. Input correspondence does not authenticate or accept the underlying review.",
+    "Every response mismatch, reply and collector diagnostic remains pending; revise/unresolved declared verdicts, missing/mismatched historical source declarations and different target trees are explicit. No natural-language verdict extraction. Equal trees at distinct commits imply no ancestry or new reviewer decision.",
+    "Six fixed unmet gates: authenticated provenance/reviewer authority; separate recipient decision; required coverage/adequacy; current full-content/correction disposition; trusted observation freshness/visibility; runtime build/deployment binding. Supplied authority flags cannot clear them. Missing transport attestation/error flags cannot be reconstructed; empty imported frontier proves no hidden/later absence.",
+    "S2 Git integrity/path/replacement/stable-object-storage assumptions retained. Existing sensitive-path denylist is not a comprehensive secret scanner. No malicious Git configuration/storage-race/hostile OS audit or exhaustive resource/parser/deep nesting/time/timeout/crash/security guarantee.",
+    "Fresh exact-source regressions and independent synthetic receipt/frontier/isolated Git probes only. In-process SQLite/socket sentinels pass; actual CLI preserves all fixture input and Git file bytes/set. Source inspection shows no remote-read path; no complete hostile-process network sandbox guarantee claimed.",
+    "No trusted full-content/correction/freshness/visibility/build/deployment/factual/curation/routing/API approval or runtime integration. Authentication unverified_import, recipient_decision not_evaluated, implementation/runtime/overall pending remain fixed in generated reports.",
+    "No shared implementation edits, duplicate live collection, private payload reuse, deployed outbox intake, credentials, transport consumers, live DB/API/deployment changes or payments. Prior source/schema/frozen receipts preserved."
+  ],
+  "next_action": "Evaluate the composed report once against a bounded current authenticated ordinary-content capture for an existing completed review, binding exact receipt bytes/Git target and recording real reply/correction and authority gaps without automatic acceptance. Keep raw connector data local; publish only safe diagnostic summaries. Do not add another generic wrapper or promote runtime authority without evidence."
+}
