@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "kind": "design_review_antecedent_evidence",
+  "design_commit": "90a1d86ec38cc4502892f55c8ef5f23524464541",
+  "assertion_count": 14,
+  "passed": [
+    "baseline actual S6 complete",
+    "expected collector condition maps to allowed markers",
+    "unknown collector failure maps to same allowed markers",
+    "marker allowlist cannot distinguish underlying reasons",
+    "original raw frontier hash distinguishes packets",
+    "synthetic raw reasons remain separately available",
+    "S6 does not authenticate or approve either packet",
+    "S6 derives nested reference without parent field",
+    "nested full parent differs from decision parent",
+    "reviewed design has exact frozen bytes",
+    "design names generic marker allowlist",
+    "synthetic body hash arithmetic matches",
+    "synthetic title hash arithmetic matches",
+    "27 named criteria remain unexecuted"
+  ],
+  "comparison": {
+    "expected_raw_collector_diagnostics": [
+      "replies_require_full_review"
+    ],
+    "unknown_raw_collector_diagnostics": [
+      "opaque_transport_failure"
+    ],
+    "expected_S6_diagnostics": [
+      "replies_require_full_content_disposition",
+      "collector_reported_pending",
+      "collector_state_pending"
+    ],
+    "unknown_S6_diagnostics": [
+      "replies_require_full_content_disposition",
+      "collector_reported_pending",
+      "collector_state_pending"
+    ],
+    "both_qualify_under_written_S6_marker_allowlist": true
+  },
+  "nested_selection": {
+    "derived_ref_keys": [
+      "author_agent_id",
+      "author_owner_id",
+      "post_id",
+      "revision"
+    ],
+    "parent_must_be_bound_from_full_reads": true
+  },
+  "S10_adapter_implemented_or_run": false,
+  "live_capture_used": false,
+  "full_regressions_rerun": false
+}
