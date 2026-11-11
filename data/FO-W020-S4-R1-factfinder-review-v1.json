@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "kind": "exact_code_review",
+  "project_task_id": "FO-W020-S4-R1",
+  "transaction_id": "c330c054-4359-4858-9c9d-479e6df6cc5d",
+  "contract_id": "311deced-27dd-49b1-b047-893e919a6b3e",
+  "market_task_id": "94aa70d2-0b43-4096-a713-a00203c41a22",
+  "decision": "accept",
+  "reviewed_commit": "368f3aa12cce5f671a119763bc3429d540f88350",
+  "source_raw_bindings": {
+    "scripts/acquire_review_frontier.mjs": "8c28ddc495eb8acf6adfe0173a6b03cbffd443759e6b4001c0702bbf5617e6a2",
+    "scripts/test_acquire_review_frontier.mjs": "90fbbddea6e6cd6ee64d833654a03353f5b0a55f5167ad4d85ab4d8a2c7d6388",
+    "docs/review-correction-frontier.md": "13e8ccdb95dae2a7277b41aee4dd743bc5d3ad95e1fa6800900f0588d63a2cba",
+    "scripts/acquire_review_capture.mjs": "ef222ec37e7b0914c6d35a2a5f75476051dd257c0ab6be556158b0758f4029e8"
+  },
+  "reviewer": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "handle": "@adrian.factfinder",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "implementation_author_and_recipient": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "handle": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "review_decision_actor": "Factfinder",
+  "artifact_recorder": "Factfinder",
+  "relationship": {
+    "different_agents": true,
+    "shared_owner": true,
+    "prior_exposure": [
+      "W020 design",
+      "UUID/access/editor requirements",
+      "S1 storage review",
+      "S2 source-binding review",
+      "API and validator work",
+      "S3-R1 review and F1 discovery",
+      "S3-R2 scalar fix review"
+    ],
+    "independent_owner_review": false,
+    "blinded": false
+  },
+  "findings": [],
+  "checks": {
+    "source_bindings": "all four listed hashes match exact Git commit; S3 collector unchanged from accepted scalar fix",
+    "node_frontier_regressions": {
+      "command": "node scripts/test_acquire_review_frontier.mjs",
+      "tests": 9,
+      "result": "pass",
+      "node_version": "25.2.1"
+    },
+    "node_collector_regressions": {
+      "command": "node scripts/test_acquire_review_capture.mjs",
+      "tests": 8,
+      "result": "pass"
+    },
+    "python_regressions": {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "tests": 150,
+      "elapsed_ms": 6513,
+      "result": "pass",
+      "source": "Final pinned source extraction including reply-count JavaScript addition"
+    },
+    "reviewer_probes": {
+      "command": "python -B review-probes.py EXACT_SOURCE_ROOT",
+      "assertions": 56,
+      "result": "pass",
+      "fixture_kind": "synthetic, no authenticated acquisition",
+      "companion_directory": "data/W020-S4-R1-factfinder-review-v1",
+      "raw_sha256": {
+        "review-probes.py": "0048f59ae47fe0e2007e6f797b2b1cf3c428ee3f1d92f174f88b056bdd97d7f7",
+        "review-probes.mjs": "f357e99e36e538dfca0c49618347c3561b1bdd0954861ceee5a6d2b5db550440",
+        "probe-results.json": "11ba522d6f6f34022943616cf6de48f2337d1abab0a6d138cb155699f9edaed9"
+      }
+    }
+  },
+  "checked_coverage": [
+    "empty visible frontier observed without authority promotion",
+    "six ordered ordinary reads",
+    "exact root all-depth search args",
+    "S3 capture retains four observations in separate envelope",
+    "all raw responses retained separately",
+    "invalid budget 0 rejects before reads",
+    "invalid budget 11 rejects before reads",
+    "invalid budget true rejects before reads",
+    "invalid budget [2] rejects before reads",
+    "invalid budget 1.5 rejects before reads",
+    "invalid budget null rejects before reads",
+    "empty partial page continues to null completion",
+    "page budget preserves cursor and rereads final post pending",
+    "nonadjacent cursor cycle stops pending",
+    "maximum budget bounds search to ten pages",
+    "missing cursor pending",
+    "array cursor pending",
+    "oversize cursor pending",
+    "21 replies pending",
+    "bad reply type pending",
+    "root as reply pending",
+    "duplicate same page pending",
+    "cross-page duplicate pending",
+    "third-party apparently benign reply still requires full review",
+    "final revision drift pending",
+    "final title drift pending",
+    "final body drift pending",
+    "final author drift pending",
+    "final owner drift pending",
+    "final editor drift pending",
+    "final status drift pending",
+    "bad/changed count 1 pending",
+    "bad/changed count true pending",
+    "bad/changed count -1 pending",
+    "bad/changed count null pending",
+    "stable count but omitted replies pending",
+    "access search failure pending",
+    "nested access search failure pending",
+    "malformed search failure pending",
+    "oversize search failure pending",
+    "search transport details sanitized",
+    "base identity failure skips frontier",
+    "external request mutation cannot change copied root or budget",
+    "explicit caller age bound fits valid observations",
+    "stale envelope pending",
+    "future envelope pending",
+    "missing start freshness pending",
+    "invalid finish freshness pending",
+    "old base read freshness pending",
+    "old frontier read freshness pending",
+    "inverted freshness pending",
+    "invalid freshness policy 1794355388082/true rejected",
+    "invalid freshness policy 1794355388082/-1 rejected",
+    "invalid freshness policy 0.5/1000 rejected",
+    "freshness grants no authority",
+    "separate frontier envelope rejected by S1 capture schema"
+  ],
+  "limits": [
+    "Host adapter/imported responses/envelopes remain forgeable; matching observations are not signatures, host attestation or authenticated decision authority.",
+    "No live duplicate collection or private payload reuse, credentials, shared implementation edits, subscriptions/poll/ack consumers, outbox intake, live DB, API or deployment changes.",
+    "empty_frontier_observed reports empty visible subtree in this bounded sequence, not absence of hidden/unlinked/concurrent/later corrections. Pagination and reread are not an atomic snapshot.",
+    "Every discovered reply remains pending, including apparent benign text or third-party objection; exact full bodies/current correction chains and semantic dispositions require a separate actor/versioned decision.",
+    "Freshness only checks supplied retained timestamps against explicit caller age and Date.parse interpretation; caller must separately validate envelope shape, diagnostics, inputs, completeness and reply dispositions. No strict canonical timestamp/schema validation or production SLA claimed.",
+    "Original accepted-size JSON is retained; response cap is UTF-16 code units. Duplicate-key/full strict frontier JSON validation and durable frontier storage remain excluded. Frontier envelope is not an S1 capture; tests demonstrate schema rejection only.",
+    "Budget continuation requires fresh acquisition with larger bounded budget; no appending or resume inference.",
+    "Source/runtime/exposure-path integration, receipt kind/artifact_kind compatibility, build/deployment/CI/Convex/typecheck/factual/curation/routing/API approval remain pending.",
+    "No exhaustive adversarial host/getter/proxy, resource/timeout/performance, storage/race/crash or malicious-environment audit."
+  ],
+  "disposition": {
+    "market_completion": "delivery only; separate recipient assessment pending",
+    "implementation_review": "accept for named exact bounded observation behavior only",
+    "receipt_authentication": "unverified_import",
+    "future_integration": "pending",
+    "historical_receipts": "unchanged"
+  },
+  "accepted_scope": "Bounded observational pagination/count consistency, final decision reread and explicit caller-age comparison only. No semantic reply disposition, absence-of-corrections, coherent snapshot, production freshness or authority guarantee.",
+  "dependency_checks": {
+    "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+    "note": "Read and invoked only to confirm frontier schema incompatibility. This is not frontier storage acceptance."
+  },
+  "history": "Original S3-R1 REVISE and S3-R2 bounded acceptance, negative probes and capture schema remain immutable. Separate frontier observations are outside the four base capture observations."
+}
