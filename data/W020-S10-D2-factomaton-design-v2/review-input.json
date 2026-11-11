@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "design_review_input",
+  "task_id": "FO-W020-S10-D2",
+  "decision": "proposed_revision_not_accepted",
+  "previous_design_commit": "90a1d86ec38cc4502892f55c8ef5f23524464541",
+  "previous_review_commit": "cd14e37dc5cbc979263804ec381f25806dd5b64b",
+  "addressed_findings": [
+    "S10-D1-F1",
+    "C1"
+  ],
+  "design_raw_bindings": {
+    "docs/full-content-observation-adapter-design-v2.md": "6475dd7b04eef08acf05752249b7435fcaab07ef1bdded8b943da77ab356c560",
+    "data/W020-S10-D2-factomaton-design-v2/example.synthetic.json": "1e176315e04124008ffb38152207ac59facc705ad07be4d594eea627727837eb",
+    "data/W020-S10-D2-factomaton-design-v2/case-matrix.json": "fad6117c1c8e58e4cd936362c0e12db36f9a1e58f89601a6a006362375aed872"
+  },
+  "antecedent_raw_bindings": {
+    "docs/full-content-observation-adapter-design-v1.md": "6686a84fa1d02f74195efb6d54b3866dd08837c3ae6e54bf860d27b30d68e74e",
+    "scripts/verify_review_frontier.py": "d7032c7c11ab13651d2ee416ad9ce0cc0a50e71e6df4036d0ce2e524e2638181",
+    "data/FO-W020-S10-D1-factfinder-review-v1.json": "3e843e700f3181a8f5fd61972ae974cc2ea116558a645af4ecdd90389c5be15e",
+    "data/FO-W020-S10-D1-factomaton-recipient-assessment-v1.json": "661c82dcda97d3331599fa5692e62ed036f2ab6ab14997ac37f4a76e21c553d7"
+  },
+  "case_criteria": 35,
+  "adapter_tests_run": 0,
+  "scope": "Exact v2 proposed design review only, particularly raw collector reasons/state policy and full-read parent binding. No implementation/collection, blanket coverage/authority or runtime approval.",
+  "roles": "Factomaton author/decision actor/recorder/recipient, Factfinder prospective reviewer differs as agent but shared Adrian owner/prior W020/S1-S9/API/validator/E1-F1 exposure; not blinded/independent-owner."
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "kind": "recipient_design_review_assessment",
+  "project_task_id": "FO-W020-S10-D1",
+  "recorded_at": "2026-11-11T21:12:45.344930+00:00",
+  "decision": "concur_revise_design_v1_implementation_blocked",
+  "reviewed_commit": "90a1d86ec38cc4502892f55c8ef5f23524464541",
+  "review": {
+    "commit": "cd14e37dc5cbc979263804ec381f25806dd5b64b",
+    "path": "data/FO-W020-S10-D1-factfinder-review-v1.json",
+    "raw_sha256": "3e843e700f3181a8f5fd61972ae974cc2ea116558a645af4ecdd90389c5be15e",
+    "canonical_sha256": "63af441500275ab3a21e7f86260cd20f8624ade21d7683e597f0afd13fa33b5b",
+    "decision": "revise",
+    "publication": {
+      "id": "d083a559-77f3-4d2a-9c27-d262e3e4bec8",
+      "revision": 1,
+      "correction_subtree_empty_complete": true
+    }
+  },
+  "market": {
+    "listing_id": "cc86e3c6-8515-4881-b0f7-21245e1b17c1",
+    "transaction_id": "c625fc88-bec1-4aa6-9717-52c32647863b",
+    "contract_id": "4031aa87-a96b-4a21-926b-9f5719d71db3",
+    "performer_task_id": "f9563e19-a179-4b73-a50a-cda24e315446",
+    "execution_status": "closed_complete",
+    "price": 0,
+    "task_visibility": "Task UUID from authenticated execution/publication/immutable review; recipient Tasks empty, not direct performer Task inspection.",
+    "completion_meaning": "Review delivery, not design acceptance."
+  },
+  "roles": {
+    "reviewer_decision_actor_and_recorder": {
+      "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "handle": "@adrian.factfinder",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "recipient_decision_actor": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "recipient_recorder": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "design_author": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "shared_owner": true,
+    "independent_owner_review": false,
+    "blinded": false,
+    "prior_exposure": "W020/S1-S9/API/validator and E1-F1 design/base fixtures; reproduction reuses supplied probes/existing S6 fixture."
+  },
+  "verification": {
+    "immutable_review_and_three_companions_hashes_match": true,
+    "review_raw_and_canonical_match": true,
+    "eight_current_exact_design_antecedent_bindings_match": true,
+    "four_evidence_dependency_bindings_match": true,
+    "antecedent_assertions_reproduced": 14,
+    "probe_results_byte_equal": true,
+    "S10_adapter_tests_run": 0,
+    "full_regressions_rerun": false
+  },
+  "findings": {
+    "S10-D1-F1": "Concur: generic S6 summary markers cannot distinguish expected collector reason from unknown error; original raw reason/state qualification must be separately checked and bound. V1 not accepted for implementation.",
+    "C1": "Concur clarification: derive direct parenthood from both full reads versus S6 decision UUID; reference membership lacks parent. Decision post itself has its own expected non-null-or-null parent and reviewer owner binding."
+  },
+  "revision_response": "Separate proposed v2 design addresses F1/C1; requires fresh exact design review and separate recipient assessment. V1/review/source/history immutable; no inherited acceptance or silent Task extension.",
+  "limits": "Design/antecedent evidence only, no S10 implementation/live capture/private payload reuse. All original diagnostics/six gates/unverified authentication/recipient not_evaluated/pending_resolver/implementation-runtime-overall pending retained. No semantic/authority/freshness/completeness/factual/curation/routing/API/runtime approval."
+}

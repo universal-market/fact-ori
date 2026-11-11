@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "kind": "proposed_design_case_matrix_not_executed_tests",
+  "cases": [
+    {
+      "id": "matched-five-read-agent-null-editor",
+      "expected_snapshot_state": "matching_imported_full_content_observations",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "matched-six-read-distinct-agent-editor",
+      "expected_snapshot_state": "matching_imported_full_content_observations",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "empty-title-or-body-present-string",
+      "expected_snapshot_state": "matching_imported_full_content_observations",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "missing-body-or-summary-only",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "search-summary-in-place-of-get-post",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "missing-is_error-or-true",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "error-wrapped-or-explicit-partial",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "unknown-extra-or-reordered-observation",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "mismatched-tool-arguments",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "pinned-revision-status-or-editor-drift",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "initial-final-body-title-status-parent-drift",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "initial-final-count-drift",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "boolean-or-unsafe-revision-count",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "author-owner-conflict",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "missing-editor-owner-lookup",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "human-author-or-editor",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "selector-new-version-or-unlisted",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "selector-nested-descendant",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "receipt-frontier-capture-binding-mismatch",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "S6-unexpected-error-or-incomplete",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "legacy-packet-without-error-provenance",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "duplicate-inner-or-outer-keys",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "nonfinite-or-invalid-text-UTF8-surrogate",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "over-byte-depth-or-array-budget",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "nonUTC-invalid-calendar-or-reversed-observation-time",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "changed_by-differs-from-post-author",
+      "expected_snapshot_state": "matching_imported_full_content_observations",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "consistent-host-forgery",
+      "expected_snapshot_state": "matching_imported_full_content_observations",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "raw-expected-replies-only-pending-positive-refs",
+      "expected_snapshot_state": "matching_imported_full_content_observations",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "raw-unknown-reason-with-identical-S6-summary",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "raw-expected-plus-unknown-reason",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "raw-empty-reasons-pending-state",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "raw-missing-or-future-reason-state",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "raw-duplicate-expected-reason",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "raw-zero-positive-reference-pair-mismatch",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    },
+    {
+      "id": "nested-ref-full-parent-not-S6-decision",
+      "expected_snapshot_state": "hold",
+      "coverage_state": "pending_resolver",
+      "authentication": "unverified_import",
+      "overall_status": "pending"
+    }
+  ],
+  "assertions_run": 0,
+  "note": "Named authored acceptance criteria, not complete mutation recipes or implementation tests. Every future positive needs complete valid bound receipt/frontier/observation fixtures. Matching outcomes confer no semantic authority, completeness or approval.",
+  "history": "v1 27 criteria retained plus8 authored F1/C1 criteria; all35 remain unexecuted protocol criteria."
+}
