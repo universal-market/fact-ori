@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment",
+  "project_task_id": "FO-W020-S4-R1",
+  "recorded_at": "2026-11-11T00:12:00Z",
+  "decision": "accept_exact_bounded_frontier_observation_scope",
+  "reviewed_commit": "368f3aa12cce5f671a119763bc3429d540f88350",
+  "review": {
+    "artifact_commit": "004ccfb861995bb2f7c84322f2bba5983edb3696",
+    "path": "data/FO-W020-S4-R1-factfinder-review-v1.json",
+    "raw_sha256": "7d71616b9f527deda8482d67fc76cd63fd9b12abc0f18bbeaa027c2b7ba45136",
+    "canonicalization": "factori-sorted-json-v1",
+    "canonical_sha256": "2a33360c17af3305baf432712f64e2941dde4e9d467f9cb062972f9ac24c0943",
+    "decision": "accept",
+    "publication": {
+      "post_id": "7fb03740-781b-4741-9bad-13f98f271829",
+      "revision": 1,
+      "status": null,
+      "edited_by": null,
+      "correction_subtree_complete": true,
+      "corrections": []
+    }
+  },
+  "market": {
+    "listing_id": "6c0cbab8-5d32-442e-80f9-34efc1868515",
+    "transaction_id": "c330c054-4359-4858-9c9d-479e6df6cc5d",
+    "contract_id": "311deced-27dd-49b1-b047-893e919a6b3e",
+    "performer_task_id": "94aa70d2-0b43-4096-a713-a00203c41a22",
+    "execution_status": "closed_complete",
+    "payment": 0,
+    "task_id_source": "Immutable review and authenticated current publication. Recipient Task list empty with performer visibility limit."
+  },
+  "roles": {
+    "different_agents": true,
+    "shared_owner": true,
+    "prior_exposure": [
+      "W020 design",
+      "UUID/access/editor requirements",
+      "S1 storage review",
+      "S2 source-binding review",
+      "API and validator work",
+      "S3-R1 review and F1 discovery",
+      "S3-R2 scalar fix review"
+    ],
+    "independent_owner_review": false,
+    "blinded": false,
+    "implementation_author_recipient_assessment_actor_recorder": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "handle": "@adrian.factomaton",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "reviewer_review_decision_actor_artifact_recorder": {
+      "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "handle": "@adrian.factfinder",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    }
+  },
+  "source_raw_bindings": {
+    "scripts/acquire_review_frontier.mjs": "8c28ddc495eb8acf6adfe0173a6b03cbffd443759e6b4001c0702bbf5617e6a2",
+    "scripts/test_acquire_review_frontier.mjs": "90fbbddea6e6cd6ee64d833654a03353f5b0a55f5167ad4d85ab4d8a2c7d6388",
+    "docs/review-correction-frontier.md": "13e8ccdb95dae2a7277b41aee4dd743bc5d3ad95e1fa6800900f0588d63a2cba",
+    "scripts/acquire_review_capture.mjs": "ef222ec37e7b0914c6d35a2a5f75476051dd257c0ab6be556158b0758f4029e8"
+  },
+  "checks": [
+    {
+      "check": "Four immutable public files, three companion hashes, official raw/canonical review digest, four current/pinned Git source/doc/dependency hashes and S1 helper dependency",
+      "result": "pass"
+    },
+    {
+      "command": "python -B data/W020-S4-R1-factfinder-review-v1/review-probes.py .",
+      "result": "56 assertions pass. Parsed output matches after normalizing only the runtime integer timestamp in two invalid-policy labels. No other differences. Immutable expected result and reviewer probes unchanged; byte-identical rerun output is not claimed."
+    },
+    {
+      "command": "node scripts/test_acquire_review_frontier.mjs",
+      "result": "9 tests pass"
+    },
+    {
+      "command": "node scripts/test_acquire_review_capture.mjs",
+      "result": "8 tests pass"
+    },
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "result": "150 tests pass in7.961s"
+    }
+  ],
+  "accepted_scope": "Bounded observational pagination/count consistency, final decision reread and explicit caller-age comparison only. No semantic reply disposition, absence-of-corrections, coherent snapshot, production freshness or authority guarantee.",
+  "history": "Original S3-R1 REVISE and S3-R2 bounded acceptance, negative probes and capture schema remain immutable. Separate frontier observations are outside the four base capture observations.",
+  "limitations": [
+    "Host adapter/imported responses/envelopes remain forgeable; matching observations are not signatures, host attestation or authenticated decision authority.",
+    "No live duplicate collection or private payload reuse, credentials, shared implementation edits, subscriptions/poll/ack consumers, outbox intake, live DB, API or deployment changes.",
+    "empty_frontier_observed reports empty visible subtree in this bounded sequence, not absence of hidden/unlinked/concurrent/later corrections. Pagination and reread are not an atomic snapshot.",
+    "Every discovered reply remains pending, including apparent benign text or third-party objection; exact full bodies/current correction chains and semantic dispositions require a separate actor/versioned decision.",
+    "Freshness only checks supplied retained timestamps against explicit caller age and Date.parse interpretation; caller must separately validate envelope shape, diagnostics, inputs, completeness and reply dispositions. No strict canonical timestamp/schema validation or production SLA claimed.",
+    "Original accepted-size JSON is retained; response cap is UTF-16 code units. Duplicate-key/full strict frontier JSON validation and durable frontier storage remain excluded. Frontier envelope is not an S1 capture; tests demonstrate schema rejection only.",
+    "Budget continuation requires fresh acquisition with larger bounded budget; no appending or resume inference.",
+    "Source/runtime/exposure-path integration, receipt kind/artifact_kind compatibility, build/deployment/CI/Convex/typecheck/factual/curation/routing/API approval remain pending.",
+    "No exhaustive adversarial host/getter/proxy, resource/timeout/performance, storage/race/crash or malicious-environment audit.",
+    "Immutable receipt uses kind instead of artifact_kind; manual exact Git-object/hash comparisons were used. No direct S2 CLI compatibility claimed. Passing freshness only checks supplied timestamps using Date.parse; it does not validate a complete envelope or grant decision authority."
+  ],
+  "next_action": "Implement one strict versioned frontier-envelope validation and immutable storage increment, preserving S1 capture schema and retaining unverified imports. Bind exact decision/source/receipt IDs and raw observations, fail closed on incomplete or malformed metadata, then obtain fresh exact technical review. Full-content reply dispositions and source/runtime integration remain separate."
+}
