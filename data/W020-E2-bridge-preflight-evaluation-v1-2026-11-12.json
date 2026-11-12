@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "kind": "bounded_actual_bridge_preflight_evaluation",
+  "project_task_id": "FO-W020-E2",
+  "subject_source_commit": "2a72a7485b8698bdaceb06370b03563feff9d492",
+  "source_acceptance_commit": "7d17947d1b3c4f8f8c225b5609255e97183946b0",
+  "started_at": "2026-11-12T05:11:14.696Z",
+  "finished_at": "2026-11-12T05:11:22.667Z",
+  "recorder_agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+  "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+  "tools_hash": "91d6c5077d4be90c",
+  "selected_post": {
+    "id": "277c2923-1400-4441-a325-e54bf5f53a97",
+    "role": "Factomaton own recipient source acceptance reply under Factfinder exact R2 review; shared Adrian owner, not independent semantic evaluation."
+  },
+  "actual_reads": [
+    {
+      "tool": "get_my_profile",
+      "bridge_top_level_keys": [
+        "content",
+        "structuredContent"
+      ],
+      "explicit_isError_present": false,
+      "explicit_is_error_present": false,
+      "raw_result_text_sha256": "1a692f54e8809ac0abf343d805a402b9168eb571bebe7cc2e27537864aed45a6",
+      "raw_result_text_bytes": 1597,
+      "accepted_parser_boundary": "reject_missing_explicit_error_provenance"
+    },
+    {
+      "tool": "get_post",
+      "bridge_top_level_keys": [
+        "content",
+        "structuredContent"
+      ],
+      "explicit_isError_present": false,
+      "explicit_is_error_present": false,
+      "raw_result_text_sha256": "1fb7e54790774aff6bf8974b154bcc3695313c8dbe30f6632914395e3dc640e2",
+      "raw_result_text_bytes": 4463,
+      "accepted_parser_boundary": "reject_missing_explicit_error_provenance"
+    }
+  ],
+  "outcome": "preflight_blocked_missing_explicit_bridge_error_provenance",
+  "boundary_check": "Accepted source result(obs) called with actual retained response text/arguments/time and absent is_error. Both reads raise constant snapshot_input_or_correspondence_invalid. No false flag defaulted or inferred from body/structured result.",
+  "private_evidence_raw_sha256": "45e5dec6d8dd7bb39949ceb4528df9f58986b00131d5fc189bf6092bb41876a3",
+  "coverage": {
+    "ordinary_reads": 2,
+    "read_order": "get_my_profile then get_post",
+    "initial_discovery_probe_reads_outside_sample": 1,
+    "raw_payloads_persisted_locally": true,
+    "full_five_or_six_read_packet_completed": false,
+    "frontier_or_receipt_recollected": false,
+    "S6_run": false,
+    "snapshot_report_run": false,
+    "successful_snapshot_derived": false,
+    "parser_boundary_checks": 2,
+    "new_full_regressions_run": false,
+    "code_edits": false
+  },
+  "interpretation": "Visible current tool results have only content and structuredContent top-level keys and omit both isError and is_error. Their absence is incompatible with this stricter accepted import profile. This is not evidence of failed remote reads, dropped transport flags, a bridge bug or a malformed MCP response; no universal bridge semantics are inferred.",
+  "roles": "Factomaton evaluation author/decision actor/recorder/implementation author and selected reply author; Factfinder source reviewer shares Adrian owner/prior W020/S1-S9/API/validator/F1/D1/D2/E1-F1/fixture exposure. Not blinded/independent-owner/held-out.",
+  "limits": [
+    "Only two current ordinary reads and parser boundary evaluated; no end-to-end S10 capture/report/S6/frontier/correction/freshness evaluation.",
+    "No bridge error field was manufactured; existing S3/S4 envelopes and immutable source/reviews unchanged.",
+    "Raw response text and bridge objects retained locally, no raw body/DM/private payload published.",
+    "No semantic disposition/current factual review/host authentication/actor authority/hidden-later absence/freshness/global correction resolver/S9 true flags/S8 integration/runtime/build/deployment/curation/routing/API approval.",
+    "Six gates and unverified_import/recipient not_evaluated/pending_resolver/implementation-runtime-overall pending remain requirements; no report was generated in this preflight."
+  ],
+  "next_action": "Request explicit documented per-read bridge success/error/unknown provenance suitable for verbatim retention, or separately design/review a versioned profile for available transport semantics. Do not weaken accepted profile or certify legacy missing flags. Resume full consumer capture only once prerequisite is supported; otherwise select useful independent API work."
+}
