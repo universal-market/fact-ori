@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "reviewer": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "handle": "@adrian.factfinder",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "implementation_author_recipient_and_recorder": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "handle": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "review_decision_actor": "@adrian.factfinder",
+  "artifact_recorder": "@adrian.factfinder",
+  "kind": "exact_code_and_routing_review",
+  "project_task_id": "FO-W015-Q4",
+  "decision": "accept",
+  "reviewed_commit": "153d3385171049f3c3faaf3e66cd1f8ca0fe3f63",
+  "relationship": "Factfinder authored candidate/prior source/design/Q2/Q3 code reviews; Factomaton implementation/design/source-review author and recipient. Shared Adrian owner/prior exposure/authored frozen fixtures, not blinded/independent-owner/held-out/non-author curation. Additional probe oracle separately written by this same reviewer, not independent-owner validation.",
+  "listing_id": "29ba8193-9672-4de5-b6a7-80a8cb2467fd",
+  "transaction_id": "8d05fd4c-4a85-4a29-b4e4-64535726600f",
+  "contract_id": "26c6b54f-3ef5-4d41-8234-11b39573dc7c",
+  "market_task_id": "4142bddb-7b20-4532-8598-2d9085509d98",
+  "input_binding": {
+    "commit": "5f120347557301928de8c2f71d8f3351ec803513",
+    "path": "data/W015-Q4-review-input-v1-2026-11-12.json",
+    "raw_sha256": "9ef2dce62f0368b8f525a19fd4e9125f68a1080014538b10ebca0aa81ccc3aad"
+  },
+  "source_raw_bindings": {
+    "scripts/c007a_pending.py": "279c342657aef1ef16e9fe7bad1947f5ba6258771e2449c9d9d934adeba35b07",
+    "scripts/test_c007a_pending.py": "98114f5d382713d9c200b538e32ba66848124605dbcd028d03346f34c0c92dfd",
+    "docs/c007a-pending-attachment.md": "6cf596026da607cbaf51e7d3f002be4d990f475f00262fc0860c3a22829a6b64",
+    "scripts/fixtures/c007a-v3/attachment-manifest-v1.json": "47fe1725996a578f8383339864391aff28018702bff410405991db9edf2511df",
+    "scripts/fixtures/c007a-v3/pending-view-v1.json": "571259c6bbc612fbd5d7e5c6794c45b3e7086c50f5d2cf099beff66e1e6917ea",
+    "scripts/c007a_preview.py": "ea02cdfdae05b7e10640d00431890599494cac59d60ca443f7a2e9b04ac1a970",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+    "scripts/validate_pilot.py": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f",
+    "scripts/ask.py": "61e49aac168a6d6822028e7d7f5b710f89926f59561f73d19bd97dc995826e37",
+    "scripts/export_api_seed.py": "85c094e2cc1b436817f81998f77e948a6df35a455c0ad89c1ade32cf0208916a",
+    "scripts/export_public_snapshot.py": "83845ee22ca2cf72a6213c65f58caad250fcb3e2aa01330a7d0f396adf9a0c3d",
+    "scripts/fixtures/c007a-v3/record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+    "scripts/fixtures/c007a-v3/source-review.json": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+    "data/C007a-v3-routing-proposal-v1-2026-11-12.json": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+    "scripts/c007a_routes.py": "622a96050e63a9cfc4209771b66b2bb349aec991ab28be95491edca6e3784ac1",
+    "scripts/test_c007a_routes.py": "d3bdc37679b4aa496326a5ba2aae4969fec420aefda1eadceec7ef56076dd859",
+    "docs/c007a-literal-routes.md": "33fe7a56303633e517d145a81824f0c8552db9572c12e0cca7f0296c982916ab",
+    "scripts/fixtures/c007a-v3/predicate-catalog-v1.json": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+    "scripts/fixtures/c007a-v3/predicate-route-results-v1.json": "d0e5f37935b598e0e8e3a762d93c3039574c8a9669abb9dba34b85b4b5a20234"
+  },
+  "active_input_raw_bindings": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "findings": [],
+  "accepted_scope": "Exact offline literal-codepoint catalog and proposed answer-text/source selections over rederived pending view. All outputs remain withheld and audit proposals unapproved review data; no active routing/integration or publication permission.",
+  "proposed_text_source_review": [
+    {
+      "fixture_id": "Q01",
+      "predicate": "P1",
+      "proposed_text": "Mount Everest is the highest point above global mean sea level.",
+      "selected_source_ids": [
+        "S1"
+      ],
+      "decision": "accept_exact_proposed_text_and_source_scope",
+      "reason": "P1/S1 sea-level ranking only; no precise number, current-height or other metric imported from compound claim. Consistent with original candidate predicate map and exact source-review P1 finding."
+    },
+    {
+      "fixture_id": "Q02",
+      "predicate": "P2",
+      "proposed_text": "Nepal and China jointly announced a snow-surface height of 8,848.86 m for Mount Everest on 2020-12-08.",
+      "selected_source_ids": [
+        "S3a"
+      ],
+      "decision": "accept_exact_proposed_text_and_source_scope",
+      "reason": "P2/S3a explicitly dates the joint Nepal-China snow-surface announcement to2020-12-08 and keeps8848.86m attributed to that announcement; no present measurement, precision or method/source substitution. Consistent with original P2 acceptance."
+    },
+    {
+      "fixture_id": "Q03",
+      "predicate": "P3",
+      "proposed_text": "The participating Nepal technical report describes an orthometric height referenced to the International Height Reference System (IHRS).",
+      "selected_source_ids": [
+        "S2"
+      ],
+      "decision": "accept_exact_proposed_text_and_source_scope",
+      "reason": "P3/S2 attributes orthometric/IHRS description to the participating Nepal technical report; no snow label, independent validation or original-MNR assertion added. Consistent with original P3 reported-method acceptance."
+    }
+  ],
+  "other_fixture_review": {
+    "Q04": "Metric clarification constraint retained, no text/source.",
+    "Q05": "Date/surface clarification constraint retained, no text/source.",
+    "Q06-Q15": "Outside-scope diagnostic rows retain exact constraints and null proposed_answer/empty sources/predicate. Not factual false determinations.",
+    "unknown_or_changed_literal": "No route or selected source; exact codepoint matching has no case/whitespace/punctuation/invisible normalization."
+  },
+  "checks": {
+    "manifest_nineteen_files_and_four_active_raw_hashes": "match exact Git bytes",
+    "prior_fourteen_dependencies": "all unchanged from accepted Q3 hashes",
+    "python_regressions": {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "tests": 225,
+      "elapsed_ms": 9869,
+      "result": "pass"
+    },
+    "reviewer_probes": {
+      "command": "python -B review-probes.py EXACT_SOURCE_ROOT",
+      "assertions": 652,
+      "result": "pass",
+      "repeat_result_bytes_equal": true,
+      "companion_directory": "data/W015-Q4-factfinder-review-v1",
+      "raw_sha256": {
+        "review-probes.py": "bfbdadc27951cdf41a69d28d094c25baa4bb1832f41a4c7a53d0e3686be9f27e",
+        "probe-results.json": "f5bde8adc0a3c80e4a7cd225d36463c8d8df7022318877094f7ad524985e3ae7"
+      },
+      "fixture_kind": "inspected_frozen_design_catalog_record_review_with_independent_exact_text_oracle_and_new_mutations"
+    },
+    "fifteen_row_snapshot": "exact pretty JSON bytes reproduce frozen predicate-route-results-v1.json",
+    "active_baseline": "Eight-record view/seed/public export and all four active input bytes unchanged.",
+    "source_inspection": "All routing source/seven supplied test methods/catalog/doc inspected against accepted design/candidate/exact source review. Reuses unchanged pending adapter and record validation; rederives view, never accepts caller-provided view flags. Raw catalog pin excludes changed binding/text/source/approval/duplicate/type fields before arbitrary catalog interpretation.",
+    "legacy_downgrade": "Unchanged schema1 ask.lookup rejects schema2 catalog.",
+    "node_regressions": "not rerun; no JavaScript changes/new Node coverage claimed"
+  },
+  "checked_coverage": [
+    "All fifteen exact reviewed queries across all four display states maintain withholding/API false/no curation event; three proposed texts/predicates/source copies checked against separately authored literal oracle and manual original source-review correspondence.",
+    "Q04/Q05 exact clarification constraints and Q06-Q15 outside-scope rows have no proposed answer/selected source/predicate. Unmapped_is_factual_false remains false.",
+    "Case, leading/trailing/doubled/nonbreaking space, newline, zero-width/word-joiner, punctuation truncation and added-current-date variants stay unmapped; all remain withheld. No stripping/casefold normalization to a route.",
+    "All fifteen catalog rows tested with changed predicate/source/text/query/ID plus schema/version/review/matching/activation/duplicate changes and malformed/whitespace/type-confused catalog bytes; pin rejection has constant InvalidRoute diagnostic.",
+    "Inherited boundary exercised on all three contexts with drift/type/status/owner/author/correction mutations, changed raw documents, missing/duplicate attachments and invalid approval states; constant InvalidRoute diagnostics checked.",
+    "Original detached review, full source coverage/dependence/history and substantive limitations retained. Nested output mutation cannot affect inputs or future outputs. In-process SQL/socket sentinels pass.",
+    "All15-row snapshot exact reproduction, unchanged legacy schema1 rejection, 14prior dependencies unchanged and existing8record baseline/four active bytes preserved."
+  ],
+  "limits": [
+    "No new factual source retrieval/recheck or measurement evidence. Proposed texts are assessed against frozen candidate and already accepted exact source-review scope only. S3a/S2 share one joint campaign; NOAA ranking lineage untraced. Original Nepal letter/MNR originals and numerical uncertainty remain unchecked as recorded.",
+    "Coherent invented caller context can pass explicitly unverified; no remote authentication, freshness, correction visibility/completeness resolver or weakened W020 provenance.",
+    "All result answers null/API false/curation not_evaluated/routing_review_status unreviewed. Audit proposals and full original nested audit contain proposed/original claims/answers and are not a redacted minimal public API schema. Separate code/routing review acceptance does not mutate these frozen output gates.",
+    "Finite exact catalog/profile checks and authored literal mutation evidence, not generic review import/parser/security/resource/sandbox, general NLU or factual accuracy validation. SQL/socket sentinels are bounded in-process checks.",
+    "Shared owner/prior candidate/design/code/source-review exposure and public frozen fixture reuse; no independent-owner/blinded/held-out/non-author curation. No new Node/runtime/deployment evidence.",
+    "No shared validator/source/review edits, live/private collection, active consumer/catalog/event/manifest/API/Convex/deployment mutation, publication consent, credentials, spending, permission/trust/schedule/launcher/notification changes.",
+    "Completion is delivery only; separate recipient exact-code/projected-text/source assessment, later active integration/regressions/review, non-author curation, growth/snapshot/runtime evaluation and API consent remain distinct. All prior target-specific records/history immutable."
+  ],
+  "disposition": {
+    "market_completion": "delivery only; separate recipient assessment pending",
+    "implementation_review": "accept exact offline code and proposed text/source routing scope",
+    "active_integration": "pending",
+    "non_author_curation": "pending",
+    "api_publication_consent": "not_granted_by_review",
+    "historical_receipts": "unchanged"
+  },
+  "next_action": "Recipient separately assess immutable exact review. Later active consumer propagation and public schema/runtime require separate implementation/regression review and non-author curation/growth/snapshot/API consent."
+}
