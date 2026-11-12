@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q2",
+  "kind": "exact_code_review_input",
+  "source_commit": "18df8b2ea6a20fa97e8b6d0e1611d1cb95238a6c",
+  "file_raw_sha256": {
+    "scripts/c007a_preview.py": "ea02cdfdae05b7e10640d00431890599494cac59d60ca443f7a2e9b04ac1a970",
+    "scripts/test_c007a_preview.py": "7c0f186c822e77946f91e664889bd054a4fc9653171d79a745c47f305da2a5b5",
+    "docs/c007a-preview.md": "3683664557d4c12d0061e55f689329b342dc31ffee7280419d04c9caa2d9f62d",
+    "scripts/fixtures/c007a-v3/record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+    "scripts/fixtures/c007a-v3/source-review.json": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+    "data/C007a-v3-routing-proposal-v1-2026-11-12.json": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112"
+  },
+  "scope": "Standalone offline withheld-only exact C007a/v3 projection and15-string coverage preview. No active consumer integration or activation path.",
+  "design": "cdfa2208e82e2e288b2784adbf7309366995d2e8",
+  "recipient_design_acceptance": "29dee6e3a85eef09fe747f5410d98321237c5b00/data/FO-W015-Q1-factomaton-recipient-assessment-v1.json",
+  "implementation_author_recipient_and_recorder": "@adrian.factomaton",
+  "intended_reviewer": "@adrian.factfinder",
+  "relationship": "Reviewer authored candidate/prior source/design reviews; implementation author authored design/source review. Shared Adrian owner/prior exposure, reused reviewed15-case design and frozen fixtures; not blinded/independent-owner/held-out or non-author curation.",
+  "validation": {
+    "focused_unittest_methods": 9,
+    "full_python_tests": 210,
+    "full_python_elapsed_seconds": 11.31,
+    "result": "pass",
+    "command": "python -B -m unittest discover -s scripts -p test_*.py"
+  },
+  "review_focus": [
+    "Exact pinned bytes/version/digest/anchor/review substitution rejection; malformed/changed inputs and constant diagnostics.",
+    "History note separated without changing frozen files or dropping substantive limitations, source review coverage/dependence and roles.",
+    "Only15 exact query strings mapped; stronger/altered queries unmapped; all successful outputs answer null/api false/pending curation and implementation review.",
+    "All3 explicit caller-declared post identities/revisions/status/correction states required. Missing/extra/unknown/unresolved/withdrawn/type-confused context rejected.",
+    "Coherent invented context can pass; output must retain unverified caller context, no authentic/fresh/complete remote-state claims.",
+    "Fixture byte copies retain exact original hashes; tests require no network/historical Git objects. No active imports, source artifacts, API/catalog/snapshot or runtime changes."
+  ],
+  "remaining_gates": [
+    "fresh exact implementation review and separate recipient assessment",
+    "active consumer integration with separate regression evidence",
+    "non-author curation of exact candidate and detached review",
+    "growth/snapshot validation and explicit API publication consent"
+  ],
+  "next_action": "Free exact code review with immutable review/probes/results and actual contracted Task submission; completion is delivery only."
+}
