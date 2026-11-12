@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q6",
+  "source_commit": "71846d7ae56fcdc141df279e6fb064388abd3d56",
+  "kind": "exact_standalone_snapshot_boundary_review_input",
+  "author": "@adrian.factomaton",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "intended_reviewer": "@adrian.factfinder",
+  "relationship": "Shared Adrian owner; Factomaton implementation/design/source-review author; Factfinder prior candidate/source/design/code reviewer with prior exposure/authored fixtures. Not blinded, held-out, independent-owner or non-author curation.",
+  "raw_bindings": {
+    "service/snapshot-boundary.mjs": "7cac6c4ef040bb231b8d046c896bdaa9158d214367814832693680090c9c552d",
+    "service/snapshot-boundary.test.mjs": "b1e35973154816032ac499cf85e4dfb34aecd62164d1199abe93437f14e71932",
+    "docs/semantic-snapshot-boundary-v1.md": "ccbbe1fd3821054928bca180734b3984170088891a65cece8ddb7ffd9ac62491",
+    "package.json": "3ee2b38bbcc6eed4a8225e519af0fbaa76253f786fb94b4561e49890f6525072",
+    "service/engine.mjs": "fcaa4c48b6ecd7de41307f8ef5e85f94dc37bb90d39222e052b47e64b9ac2e1e",
+    "service/server.mjs": "cea91baae0111312d00ac27d2f36c55d69cf348616f003ea2d8e0251c5ae888a",
+    "service/models.json": "18b2f8c13ffacac7aec447ca6613c14f0d1ef06280528c200505f0a9187d11c5",
+    "scripts/fixtures/c007a-v3/pending-consumer-results-v1.json": "c5d6b00e348e16022cefa3b94d0a927a3b31ef9e53e452eada978e135a26f8df",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+    "scripts/export_public_snapshot.py": "e51acc145b8e8e7141dee73ab5ebe1e33b32d6c5b34dfa3426faf7c5ee685727",
+    "scripts/export_api_seed.py": "62ae7ec715e8443f0e5e6875d09b8977dd21a544b4909a144df8b97f2836554c",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e"
+  },
+  "unchanged_active_inputs": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "checks": {
+    "standalone_test_groups_passed": 6,
+    "semantic_regression_tests_passed": 45,
+    "command": "npm run test:semantic",
+    "sandbox_attempt": "Engine tests passed; HTTP listen EPERM. Authorized loopback-capable rerun passed all45.",
+    "python_regressions_rerun": false
+  },
+  "status": "implemented_standalone_not_wired_exact_review_pending",
+  "scope": "Strict schema1 static-public snapshot envelope and consumed row/mapping structural bindings only; actual offline seed/export rejection; no imports/I/O/indexing/mutation. No engine/server change.",
+  "limits": [
+    "No canonical content-hash recomputation or authenticity/currency/completeness/source/factual/curation proof.",
+    "Coherently invented approved envelope can pass; hash-shaped strings need not match bytes.",
+    "Explicit pending literal diagnostics and approved predicate projection selection remain separate.",
+    "Exact review receipt does not authorize active integration, curation, growth/runtime/API publication.",
+    "Prior Q1-Q5 receipts immutable; no extension/reopening of prior Tasks."
+  ],
+  "next_action": "Fresh exact free Market module review, separate recipient assessment, then separately versioned engine/startup integration before any deployment."
+}
