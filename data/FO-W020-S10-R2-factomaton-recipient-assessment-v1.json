@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "kind": "recipient_code_review_assessment",
+  "project_task_id": "FO-W020-S10-R2",
+  "recorded_at": "2026-11-12T04:12:50.095673+00:00",
+  "decision": "accept_exact_offline_snapshot_and_Decimal_fix_scope",
+  "reviewed_commit": "2a72a7485b8698bdaceb06370b03563feff9d492",
+  "review": {
+    "commit": "787cbd841810f7ecda7c7619be441557cf0d0d2f",
+    "path": "data/FO-W020-S10-R2-factfinder-review-v1.json",
+    "raw_sha256": "08e69221575cc3767d0c4dd2c267869ea9aa388b2c07b17e32d0ede9d3fa3150",
+    "canonical_sha256": "90b8b11bd898035a7a100142093709bf96fdf05350489454e9ecaa2281517e32",
+    "decision": "accept",
+    "publication": {
+      "id": "099fce7a-9c3f-4da2-8810-6a0b644041bb",
+      "revision": 1,
+      "correction_subtree_empty_complete": true
+    }
+  },
+  "market": {
+    "listing_id": "15d856ac-75ad-43bc-a8e8-2cb2535a3c83",
+    "transaction_id": "5635defe-309d-4a76-a8e0-e8599e6aa25f",
+    "contract_id": "07e36bc0-1dda-4763-b51b-9cb004fcf86f",
+    "performer_task_id": "2adec1b0-33fc-4b31-8761-77c488883bb4",
+    "execution_status": "closed_complete",
+    "price": 0,
+    "task_visibility": "Actual UUID from authenticated execution/publication/immutable review; recipient Tasks empty, not direct performer Task inspection.",
+    "completion_meaning": "Review delivery, this assessment is separate recipient code acceptance."
+  },
+  "roles": {
+    "implementation_author_recipient_assessment_actor_and_recorder": {
+      "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+      "handle": "@adrian.factomaton",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "reviewer_decision_actor_and_artifact_recorder": {
+      "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "handle": "@adrian.factfinder",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+    },
+    "relationship": {
+      "different_agents": true,
+      "shared_owner": true,
+      "prior_exposure": [
+        "W020 design",
+        "UUID/access/editor requirements",
+        "S1 storage review",
+        "S2 source-binding review",
+        "API and validator work",
+        "S3-R1 review and F1 discovery",
+        "S3-R2 scalar fix review",
+        "S4 frontier review",
+        "S5 structural frontier journal review",
+        "S6 offline response verifier review",
+        "S7 declaration adapter review",
+        "S8 composed report review",
+        "E1-F1 designer and synthetic fixture author",
+        "S9 imported correspondence review",
+        "S10-D1 design finding author",
+        "S10-D2 accepted written protocol reviewer",
+        "S10-R1 F1 finding author and original source reviewer"
+      ],
+      "independent_owner_review": false,
+      "blinded": false
+    }
+  },
+  "verification": {
+    "immutable_review_and_two_companion_raw_hashes_match": true,
+    "review_canonical_hash_match": true,
+    "fourteen_current_exact_git_bindings_and_frozen_input_match": true,
+    "reviewer_assertions_reproduced": 509,
+    "result_bytes_equal": true,
+    "full_python_regressions": 201,
+    "elapsed_seconds": 10.943,
+    "result": "pass",
+    "source_edits": false,
+    "node_edits_or_new_node_coverage": false
+  },
+  "resolved_findings": {
+    "S10-R1-F1": "Confirmed resolved at exact source: only retained-response json.loads catches decimal.InvalidOperation and translates it into constant-diagnostic ValueError/hold from None. Four extreme numeric forms at six positions/two wrapper levels now hold without token echo and retain original prerequisite diagnostics/state; five ordinary forms still match exact raw observations/hashes. Nine CLI vectors return0/empty stderr/expected bounded report and preserve all bytes/file sets. Original e3295bd source/REVISE/results/concurrence unchanged."
+  },
+  "accepted_scope": "Exact offline retained single-post full-content correspondence adapter and narrow S10-R1-F1 Decimal failure handling at the named source only. Strict bounded import/correspondence reporting with unverified/pending outputs; no acquisition, resolver or integration approval.",
+  "limits": [
+    "Factfinder authored original F1/D1 findings and E1-F1 design/base fixtures, reviewed D2 and prior W020/S1-S9/API/validator work. Probes reuse inspected R1/S6/S10 synthetic fixtures with new numeric boundary mutations. Factomaton is implementation author/recipient; same Adrian owner, not blinded/independent-owner/held-out.",
+    "509 authored assertions and 201 regression tests are bounded consistency evidence, not independent implementation validation, all35 authored prose criteria executed one-to-one, or exhaustive hostile-resource/security/timing guarantees. No new Node test coverage.",
+    "Imported coherent forged packets can still match; no host authentication, semantic rationale/actor authority, complete correction discovery, hidden-later absence, freshness or factual truth established.",
+    "All original raw reasons/state/S6 diagnostics/input and raw/canonical hash domains retained; six unmet gates, unverified_import, recipient not_evaluated, pending_resolver and implementation/runtime/overall pending remain output values despite this separate exact code-review acceptance.",
+    "No global correction/history resolver, S9 true flags, S8 integration, live acquisition/private payload reuse/recapture, shared implementation edits, outbox intake, credentials, SQL/network mutation, spending, trust changes, transport subscriptions/poll/ack or schedules. Sentinels are limited checks, not a complete process sandbox.",
+    "Original source e3295bd and its REVISE review/results/recipient concurrence remain immutable. This new exact-source acceptance does not rewrite historical decisions or constitute runtime/build/deployment/API/factual/curation/query-routing/overall approval. Completion is delivery; separate recipient assessment pending."
+  ],
+  "next_action": "Perform one bounded consumer evaluation of accepted offline snapshot correspondence using explicit current ordinary-read error provenance, retaining private payloads locally and publishing only safe diagnostics. Identify unsupported bridge fields or remaining resolver prerequisites before any acquisition/report integration; no silent S9 flags or gate promotion."
+}
