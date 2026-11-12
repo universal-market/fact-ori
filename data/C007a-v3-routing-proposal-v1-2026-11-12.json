@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "routing_design_and_authored_fixtures",
+  "task_key": "FO-W015-Q1",
+  "version": 1,
+  "created_at": "2026-11-12T06:15:00Z",
+  "author": "@adrian.factomaton",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "status": "proposed_pending_exact_design_review",
+  "scope": "Finite authored routing criteria and detached review-history projection only; no implemented router or active-library change.",
+  "candidate_binding": {
+    "claim_id": "C007a",
+    "claim_version": 3,
+    "candidate_artifact_version": 1,
+    "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+    "directory": "data/C007a-factfinder-candidate-v1",
+    "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+    "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+    "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+    "reviewed_post_revision": 1,
+    "file_hashes": {
+      "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+      "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+      "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+      "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+      "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+      "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+      "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+      "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+    },
+    "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+  },
+  "source_review_binding": {
+    "path": "data/C007a-v3-factomaton-source-review-v1.json",
+    "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+    "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+    "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+    "post_revision": 1
+  },
+  "roles": {
+    "original_prose_author": "@don.tinker / Don",
+    "candidate_author": "@adrian.factfinder / Adrian",
+    "source_reviewer_and_routing_proposal_author": "@adrian.factomaton / Adrian",
+    "requested_design_reviewer": "@adrian.factfinder / Adrian",
+    "disclosure": "Requested reviewer authored candidate; shares owner Adrian and prior source exposure with proposal author/source reviewer. Design review only, not independent factual review or non-author curation."
+  },
+  "proposed_projection": {
+    "creation_time_history": {
+      "review_status": "awaiting_review",
+      "reviews": [],
+      "review_notes": [
+        "Author proposed supported verdict only. New exact candidate has no review; previous prose review abstained on the full compound claim and later supplement accepted only scoped supplied-copy technical content. Neither decision is inherited."
+      ]
+    },
+    "current_exact_source_review": {
+      "decision": "accept",
+      "evidence_verdict": "supported",
+      "scope": "Exact C007a/v3 source-bound conjunction of sea-level ranking, dated joint 2020 snow-surface announcement, and reported orthometric/IHRS method.",
+      "attachment": "Only after exact claim/version/artifact/digest/raw-record/post-revision AND exact detached-review raw hash match. Reject mismatch, ambiguity or a later correction/withdrawal; prior-version decisions never substitute."
+    },
+    "curation": "pending",
+    "query_routing_review": "pending",
+    "api_activation": false,
+    "answer": null,
+    "historical_note_policy": "Keep frozen record bytes unchanged. Projection labels the original no-review note as creation-time history, retains all substantive source limitations as current. Do not globally drop arbitrary strings or infer acceptance from text."
+  },
+  "predicate_sources": {
+    "P1": [
+      "S1"
+    ],
+    "P2": [
+      "S3a"
+    ],
+    "P3": [
+      "S2"
+    ]
+  },
+  "source_dependence": "S3a/S2 and optional S5 relay share 2020 Nepal-China campaign; NOAA ranking lineage untraced. Snow label is not in paper final-result passages. No independent campaign count.",
+  "gates_before_any_answer": [
+    "fresh exact design/fixture review",
+    "separate non-author curation decision for exact candidate and attached review",
+    "consumer schema adapter and review-history integration with regression evidence",
+    "exact query-routing implementation review",
+    "growth/active-snapshot checks and explicit API publication consent"
+  ],
+  "fixture_semantics": "All cases currently withhold answer. eligible_after_gates denotes a proposed route only after every gate; no measured runtime results, factual recheck, general NLU guarantee or benchmark accuracy. Clarify/outside_scope are coverage dispositions, not claims that a query premise is false.",
+  "fixtures": [
+    {
+      "id": "Q01",
+      "query": "Which summit is highest above global mean sea level?",
+      "current_answer": null,
+      "proposed_after_gates": "eligible_after_gates",
+      "predicate": "P1",
+      "required_constraint": "Sea-level ranking only; no current precise height."
+    },
+    {
+      "id": "Q02",
+      "query": "What snow-surface height did Nepal and China jointly announce on 2020-12-08?",
+      "current_answer": null,
+      "proposed_after_gates": "eligible_after_gates",
+      "predicate": "P2",
+      "required_constraint": "8848.86 m as dated announcement, not present measurement."
+    },
+    {
+      "id": "Q03",
+      "query": "How does the participating Nepal report describe the height method and reference system?",
+      "current_answer": null,
+      "proposed_after_gates": "eligible_after_gates",
+      "predicate": "P3",
+      "required_constraint": "Reported orthometric height and IHRS; no independent validation."
+    },
+    {
+      "id": "Q04",
+      "query": "What is the tallest mountain?",
+      "current_answer": null,
+      "proposed_after_gates": "clarify_metric",
+      "predicate": null,
+      "required_constraint": "Ask sea level, base-to-peak or Earth-centre distance."
+    },
+    {
+      "id": "Q05",
+      "query": "How high is Everest?",
+      "current_answer": null,
+      "proposed_after_gates": "clarify_date_surface",
+      "predicate": null,
+      "required_constraint": "Clarify date and surface; do not silently answer current height from 2020."
+    },
+    {
+      "id": "Q06",
+      "query": "What is Everest’s exact height today?",
+      "current_answer": null,
+      "proposed_after_gates": "outside_scope",
+      "predicate": null,
+      "required_constraint": "No current measurement or invariant height supported."
+    },
+    {
+      "id": "Q07",
+      "query": "Is Everest taller from base to peak than Mauna Kea?",
+      "current_answer": null,
+      "proposed_after_gates": "outside_scope",
+      "predicate": null,
+      "required_constraint": "C007b metric; do not inherit C007a review."
+    },
+    {
+      "id": "Q08",
+      "query": "Is Everest the farthest summit from Earth’s centre?",
+      "current_answer": null,
+      "proposed_after_gates": "outside_scope",
+      "predicate": null,
+      "required_constraint": "C007c metric; no ranking transfer."
+    },
+    {
+      "id": "Q09",
+      "query": "Did Everest grow by the difference between the 2005 rock height and 2020 snow height?",
+      "current_answer": null,
+      "proposed_after_gates": "outside_scope",
+      "predicate": null,
+      "required_constraint": "No growth inference from different surfaces or campaigns."
+    },
+    {
+      "id": "Q10",
+      "query": "Is the 2020 height independently accurate to one centimetre?",
+      "current_answer": null,
+      "proposed_after_gates": "outside_scope",
+      "predicate": null,
+      "required_constraint": "No numerical accuracy or independent remeasurement certification."
+    },
+    {
+      "id": "Q11",
+      "query": "Does the Nepal paper itself identify its final height as snow surface?",
+      "current_answer": null,
+      "proposed_after_gates": "outside_scope",
+      "predicate": null,
+      "required_constraint": "P3 report does not supply snow label; P2 official announcement supplies it."
+    },
+    {
+      "id": "Q12",
+      "query": "Does NOAA’s rounded 8848 m prove the exact 8848.86 m announcement?",
+      "current_answer": null,
+      "proposed_after_gates": "outside_scope",
+      "predicate": null,
+      "required_constraint": "S1 ranking is not the exact-number source."
+    },
+    {
+      "id": "Q13",
+      "query": "Were the Nepal and China results independent repeated measurements?",
+      "current_answer": null,
+      "proposed_after_gates": "outside_scope",
+      "predicate": null,
+      "required_constraint": "Shared joint campaign; no independent-origin badge."
+    },
+    {
+      "id": "Q14",
+      "query": "What averaging weights produced the joint figure?",
+      "current_answer": null,
+      "proposed_after_gates": "outside_scope",
+      "predicate": null,
+      "required_constraint": "Omitted averaging statements are not inherited."
+    },
+    {
+      "id": "Q15",
+      "query": "Which original Nepal letter and original MNR report did this review validate?",
+      "current_answer": null,
+      "proposed_after_gates": "outside_scope",
+      "predicate": null,
+      "required_constraint": "Original Nepal letter and original MNR technical source unchecked."
+    }
+  ],
+  "binding_negative_criteria": [
+    "different claim version",
+    "different candidate artifact version",
+    "different record raw hash",
+    "different record digest",
+    "different anchor revision",
+    "different detached review raw hash",
+    "prior prose abstention substituted for v3 review",
+    "limited supplied-copy acceptance substituted for v3 review",
+    "later correction or withdrawal not reconciled"
+  ],
+  "validation": "Author checked local frozen bindings and fixture structure only; fixture expectations are authored, not router execution results."
+}
