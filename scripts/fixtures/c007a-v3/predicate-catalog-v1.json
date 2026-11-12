@@ -1,0 +1,189 @@
+{
+  "schema_version": 2,
+  "kind": "offline_c007a_literal_predicate_catalog",
+  "catalog_version": 1,
+  "matching": "literal_unicode_codepoints_no_normalization",
+  "review_status": "unreviewed",
+  "author": "@adrian.factomaton",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "candidate_binding": {
+    "claim_id": "C007a",
+    "claim_version": 3,
+    "candidate_artifact_version": 1,
+    "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+    "directory": "data/C007a-factfinder-candidate-v1",
+    "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+    "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+    "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+    "reviewed_post_revision": 1,
+    "file_hashes": {
+      "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+      "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+      "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+      "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+      "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+      "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+      "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+      "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+    },
+    "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+  },
+  "source_review_binding": {
+    "path": "data/C007a-v3-factomaton-source-review-v1.json",
+    "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+    "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+    "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+    "post_revision": 1
+  },
+  "routes": [
+    {
+      "fixture_id": "Q01",
+      "query": "Which summit is highest above global mean sea level?",
+      "proposed_disposition": "eligible_after_gates",
+      "predicate": "P1",
+      "required_constraint": "Sea-level ranking only; no current precise height.",
+      "proposed_answer": "Mount Everest is the highest point above global mean sea level.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "fixture_id": "Q02",
+      "query": "What snow-surface height did Nepal and China jointly announce on 2020-12-08?",
+      "proposed_disposition": "eligible_after_gates",
+      "predicate": "P2",
+      "required_constraint": "8848.86 m as dated announcement, not present measurement.",
+      "proposed_answer": "Nepal and China jointly announced a snow-surface height of 8,848.86 m for Mount Everest on 2020-12-08.",
+      "source_ids": [
+        "S3a"
+      ]
+    },
+    {
+      "fixture_id": "Q03",
+      "query": "How does the participating Nepal report describe the height method and reference system?",
+      "proposed_disposition": "eligible_after_gates",
+      "predicate": "P3",
+      "required_constraint": "Reported orthometric height and IHRS; no independent validation.",
+      "proposed_answer": "The participating Nepal technical report describes an orthometric height referenced to the International Height Reference System (IHRS).",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "fixture_id": "Q04",
+      "query": "What is the tallest mountain?",
+      "proposed_disposition": "clarify_metric",
+      "predicate": null,
+      "required_constraint": "Ask sea level, base-to-peak or Earth-centre distance.",
+      "proposed_answer": null,
+      "source_ids": []
+    },
+    {
+      "fixture_id": "Q05",
+      "query": "How high is Everest?",
+      "proposed_disposition": "clarify_date_surface",
+      "predicate": null,
+      "required_constraint": "Clarify date and surface; do not silently answer current height from 2020.",
+      "proposed_answer": null,
+      "source_ids": []
+    },
+    {
+      "fixture_id": "Q06",
+      "query": "What is Everest’s exact height today?",
+      "proposed_disposition": "outside_scope",
+      "predicate": null,
+      "required_constraint": "No current measurement or invariant height supported.",
+      "proposed_answer": null,
+      "source_ids": []
+    },
+    {
+      "fixture_id": "Q07",
+      "query": "Is Everest taller from base to peak than Mauna Kea?",
+      "proposed_disposition": "outside_scope",
+      "predicate": null,
+      "required_constraint": "C007b metric; do not inherit C007a review.",
+      "proposed_answer": null,
+      "source_ids": []
+    },
+    {
+      "fixture_id": "Q08",
+      "query": "Is Everest the farthest summit from Earth’s centre?",
+      "proposed_disposition": "outside_scope",
+      "predicate": null,
+      "required_constraint": "C007c metric; no ranking transfer.",
+      "proposed_answer": null,
+      "source_ids": []
+    },
+    {
+      "fixture_id": "Q09",
+      "query": "Did Everest grow by the difference between the 2005 rock height and 2020 snow height?",
+      "proposed_disposition": "outside_scope",
+      "predicate": null,
+      "required_constraint": "No growth inference from different surfaces or campaigns.",
+      "proposed_answer": null,
+      "source_ids": []
+    },
+    {
+      "fixture_id": "Q10",
+      "query": "Is the 2020 height independently accurate to one centimetre?",
+      "proposed_disposition": "outside_scope",
+      "predicate": null,
+      "required_constraint": "No numerical accuracy or independent remeasurement certification.",
+      "proposed_answer": null,
+      "source_ids": []
+    },
+    {
+      "fixture_id": "Q11",
+      "query": "Does the Nepal paper itself identify its final height as snow surface?",
+      "proposed_disposition": "outside_scope",
+      "predicate": null,
+      "required_constraint": "P3 report does not supply snow label; P2 official announcement supplies it.",
+      "proposed_answer": null,
+      "source_ids": []
+    },
+    {
+      "fixture_id": "Q12",
+      "query": "Does NOAA’s rounded 8848 m prove the exact 8848.86 m announcement?",
+      "proposed_disposition": "outside_scope",
+      "predicate": null,
+      "required_constraint": "S1 ranking is not the exact-number source.",
+      "proposed_answer": null,
+      "source_ids": []
+    },
+    {
+      "fixture_id": "Q13",
+      "query": "Were the Nepal and China results independent repeated measurements?",
+      "proposed_disposition": "outside_scope",
+      "predicate": null,
+      "required_constraint": "Shared joint campaign; no independent-origin badge.",
+      "proposed_answer": null,
+      "source_ids": []
+    },
+    {
+      "fixture_id": "Q14",
+      "query": "What averaging weights produced the joint figure?",
+      "proposed_disposition": "outside_scope",
+      "predicate": null,
+      "required_constraint": "Omitted averaging statements are not inherited.",
+      "proposed_answer": null,
+      "source_ids": []
+    },
+    {
+      "fixture_id": "Q15",
+      "query": "Which original Nepal letter and original MNR report did this review validate?",
+      "proposed_disposition": "outside_scope",
+      "predicate": null,
+      "required_constraint": "Original Nepal letter and original MNR technical source unchecked.",
+      "proposed_answer": null,
+      "source_ids": []
+    }
+  ],
+  "limits": [
+    "Authored proposed answer texts and source selections, not an accepted routing review or new source review.",
+    "All exposed answers remain withheld; audit proposals contain unapproved text.",
+    "Caller context is unverified; no remote correction/freshness/authenticity resolver.",
+    "S3a and S2 share one joint campaign; NOAA ranking lineage untraced.",
+    "No general NLU, latest-height, numerical accuracy or independent measurement claim."
+  ]
+}
