@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q3",
+  "kind": "exact_code_review_input",
+  "source_commit": "68cf2bce2f979fe542cadec2df1c560cc5d46fbb",
+  "file_raw_sha256": {
+    "scripts/c007a_pending.py": "279c342657aef1ef16e9fe7bad1947f5ba6258771e2449c9d9d934adeba35b07",
+    "scripts/test_c007a_pending.py": "98114f5d382713d9c200b538e32ba66848124605dbcd028d03346f34c0c92dfd",
+    "docs/c007a-pending-attachment.md": "6cf596026da607cbaf51e7d3f002be4d990f475f00262fc0860c3a22829a6b64",
+    "scripts/fixtures/c007a-v3/attachment-manifest-v1.json": "47fe1725996a578f8383339864391aff28018702bff410405991db9edf2511df",
+    "scripts/fixtures/c007a-v3/pending-view-v1.json": "571259c6bbc612fbd5d7e5c6794c45b3e7086c50f5d2cf099beff66e1e6917ea",
+    "scripts/c007a_preview.py": "ea02cdfdae05b7e10640d00431890599494cac59d60ca443f7a2e9b04ac1a970",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+    "scripts/validate_pilot.py": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f",
+    "scripts/ask.py": "61e49aac168a6d6822028e7d7f5b710f89926f59561f73d19bd97dc995826e37",
+    "scripts/export_api_seed.py": "85c094e2cc1b436817f81998f77e948a6df35a455c0ad89c1ade32cf0208916a",
+    "scripts/export_public_snapshot.py": "83845ee22ca2cf72a6213c65f58caad250fcb3e2aa01330a7d0f396adf9a0c3d",
+    "scripts/fixtures/c007a-v3/record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+    "scripts/fixtures/c007a-v3/source-review.json": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+    "data/C007a-v3-routing-proposal-v1-2026-11-12.json": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112"
+  },
+  "scope": "Exact consumer-owned detached-review attachment into offline withheld pending-view fixture only. No active loader/schema/validator/API edit.",
+  "implementation_author_recipient_recorder": "@adrian.factomaton",
+  "intended_reviewer": "@adrian.factfinder",
+  "relationship": "Reviewer authored candidate/prior source/design/Q2 code reviews; implementation author authored design/source review. Shared Adrian owner/prior exposure/reused frozen inputs, not blinded/independent-owner/held-out/non-author curation.",
+  "validation": {
+    "focused_test_methods": 8,
+    "python_regressions": 218,
+    "elapsed_seconds": 11.339,
+    "result": "pass",
+    "pending_snapshot": "exactly reproduces",
+    "existing_view_seed_public_export": "eight records unchanged"
+  },
+  "review_focus": [
+    "One versioned exact full attachment manifest; reject missing/duplicate/conflicting/extra/type-confused fields and changed raw/version/artifact/digest/anchor/review bindings.",
+    "Preserve complete original review kind/input/source checks/predicate findings/roles/raw-canonical hash domains; no fabricated legacy reviews or validator edits.",
+    "Legacy derive_view validates record only; offline schema2 wrapper reports exact accepted source review separately from historical creation note, every other limitation/source coverage/dependence remains.",
+    "pending/reopened/retired/unselected display states only; no approval or curation event, all answers withheld/API false, all three predicate queries withheld through existing lookup.",
+    "Invented caller context accepted only as explicitly unverified; reject unknown/unresolved/withdrawn/drifted context. No authentic/fresh/complete remote correction resolver.",
+    "Mutations do not affect original inputs or future outputs; active8record view/seed/export unchanged. All fixture states are offline displays, not actual decisions."
+  ],
+  "baseline_evaluation": "f4bf78e033ac0bfcb1e8e27c0d8e5bfd2f291f67/data/W015-integration-evaluation-v1/results.json",
+  "gates_remaining": [
+    "fresh exact implementation review and separate recipient assessment",
+    "active loading/integration and predicate-projection/literal-route review",
+    "non-author curation",
+    "growth/snapshot checks and API consent"
+  ],
+  "prohibited_scope": "No shared validator/review edits, source factual recheck/live/private acquisition, active manifests/events/catalog/public snapshot/API/Convex/deployment changes, credentials/subscriptions/payments/new permissions. Q2 Task not extended."
+}
