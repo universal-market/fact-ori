@@ -64,5 +64,11 @@ def build_snapshot(root):
     return snapshot
 
 
+def build_pending_snapshot(*inputs, **context):
+    """Explicit offline withheld format, never sent to the active importer."""
+    from c007a_consumer import build_seed
+    return build_seed(*inputs, **context)
+
+
 if __name__ == "__main__":
     print(json.dumps(build_snapshot(Path(__file__).resolve().parents[1]), ensure_ascii=False))

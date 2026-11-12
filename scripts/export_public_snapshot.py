@@ -61,6 +61,12 @@ def export_public(root):
     return {**subject, "snapshot_sha256": hashlib.sha256(canonical(subject)).hexdigest()}
 
 
+def export_pending(seed, *inputs, **context):
+    """Offline export diagnostic with no public records/mappings; not the CLI."""
+    from c007a_consumer import export_seed
+    return export_seed(seed, *inputs, **context)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])

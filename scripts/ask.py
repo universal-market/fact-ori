@@ -68,6 +68,12 @@ def lookup(question, view, catalog):
     return result
 
 
+def lookup_pending(question, seed, *inputs, **context):
+    """Explicit offline schema-2 path; the default lookup stays schema 1."""
+    from c007a_consumer import lookup_seed
+    return lookup_seed(question, seed, *inputs, **context)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("question")

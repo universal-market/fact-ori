@@ -1,0 +1,1116 @@
+{
+  "seed": {
+    "schema_version": 2,
+    "kind": "offline_withheld_predicate_seed",
+    "format_version": 1,
+    "not_for_publication": true,
+    "selection_state": "pending",
+    "input_authentication": "unverified_caller_supplied_context",
+    "integration_review_status": "pending",
+    "matching": "literal_unicode_codepoints_no_normalization",
+    "answer": null,
+    "api_activation": false,
+    "curation_event": null,
+    "withheld_claim": {
+      "claim_id": "C007a",
+      "claim_version": 3,
+      "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+      "state": "pending",
+      "answer": null
+    },
+    "audit_refs": {
+      "candidate_binding": {
+        "claim_id": "C007a",
+        "claim_version": 3,
+        "candidate_artifact_version": 1,
+        "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+        "directory": "data/C007a-factfinder-candidate-v1",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+        "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+        "reviewed_post_revision": 1,
+        "file_hashes": {
+          "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+          "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+          "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+          "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+          "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+          "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+          "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+        },
+        "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+      },
+      "source_review_binding": {
+        "path": "data/C007a-v3-factomaton-source-review-v1.json",
+        "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+        "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+        "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+        "post_revision": 1
+      },
+      "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+      "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+      "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+      "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+    },
+    "literal_routes": [
+      {
+        "fixture_id": "Q01",
+        "query": "Which summit is highest above global mean sea level?",
+        "proposed_disposition": "eligible_after_gates",
+        "predicate": "P1",
+        "required_constraint": "Sea-level ranking only; no current precise height.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "fixture_id": "Q02",
+        "query": "What snow-surface height did Nepal and China jointly announce on 2020-12-08?",
+        "proposed_disposition": "eligible_after_gates",
+        "predicate": "P2",
+        "required_constraint": "8848.86 m as dated announcement, not present measurement.",
+        "source_ids": [
+          "S3a"
+        ]
+      },
+      {
+        "fixture_id": "Q03",
+        "query": "How does the participating Nepal report describe the height method and reference system?",
+        "proposed_disposition": "eligible_after_gates",
+        "predicate": "P3",
+        "required_constraint": "Reported orthometric height and IHRS; no independent validation.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      {
+        "fixture_id": "Q04",
+        "query": "What is the tallest mountain?",
+        "proposed_disposition": "clarify_metric",
+        "predicate": null,
+        "required_constraint": "Ask sea level, base-to-peak or Earth-centre distance.",
+        "source_ids": []
+      },
+      {
+        "fixture_id": "Q05",
+        "query": "How high is Everest?",
+        "proposed_disposition": "clarify_date_surface",
+        "predicate": null,
+        "required_constraint": "Clarify date and surface; do not silently answer current height from 2020.",
+        "source_ids": []
+      },
+      {
+        "fixture_id": "Q06",
+        "query": "What is Everest’s exact height today?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "No current measurement or invariant height supported.",
+        "source_ids": []
+      },
+      {
+        "fixture_id": "Q07",
+        "query": "Is Everest taller from base to peak than Mauna Kea?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "C007b metric; do not inherit C007a review.",
+        "source_ids": []
+      },
+      {
+        "fixture_id": "Q08",
+        "query": "Is Everest the farthest summit from Earth’s centre?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "C007c metric; no ranking transfer.",
+        "source_ids": []
+      },
+      {
+        "fixture_id": "Q09",
+        "query": "Did Everest grow by the difference between the 2005 rock height and 2020 snow height?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "No growth inference from different surfaces or campaigns.",
+        "source_ids": []
+      },
+      {
+        "fixture_id": "Q10",
+        "query": "Is the 2020 height independently accurate to one centimetre?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "No numerical accuracy or independent remeasurement certification.",
+        "source_ids": []
+      },
+      {
+        "fixture_id": "Q11",
+        "query": "Does the Nepal paper itself identify its final height as snow surface?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "P3 report does not supply snow label; P2 official announcement supplies it.",
+        "source_ids": []
+      },
+      {
+        "fixture_id": "Q12",
+        "query": "Does NOAA’s rounded 8848 m prove the exact 8848.86 m announcement?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "S1 ranking is not the exact-number source.",
+        "source_ids": []
+      },
+      {
+        "fixture_id": "Q13",
+        "query": "Were the Nepal and China results independent repeated measurements?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "Shared joint campaign; no independent-origin badge.",
+        "source_ids": []
+      },
+      {
+        "fixture_id": "Q14",
+        "query": "What averaging weights produced the joint figure?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "Omitted averaging statements are not inherited.",
+        "source_ids": []
+      },
+      {
+        "fixture_id": "Q15",
+        "query": "Which original Nepal letter and original MNR report did this review validate?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "Original Nepal letter and original MNR technical source unchecked.",
+        "source_ids": []
+      }
+    ],
+    "limits": [
+      "Offline withheld metadata only; not an active importer/public snapshot format.",
+      "Audit bodies/proposed answers omitted; query constraints may still contain factual text.",
+      "Caller context remains unverified, not authentic/fresh/complete correction evidence.",
+      "Code/routing review is not curation, runtime evaluation or publication consent."
+    ]
+  },
+  "queries": [
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "Which summit is highest above global mean sea level?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q01",
+        "query": "Which summit is highest above global mean sea level?",
+        "proposed_disposition": "eligible_after_gates",
+        "predicate": "P1",
+        "required_constraint": "Sea-level ranking only; no current precise height.",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "What snow-surface height did Nepal and China jointly announce on 2020-12-08?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q02",
+        "query": "What snow-surface height did Nepal and China jointly announce on 2020-12-08?",
+        "proposed_disposition": "eligible_after_gates",
+        "predicate": "P2",
+        "required_constraint": "8848.86 m as dated announcement, not present measurement.",
+        "source_ids": [
+          "S3a"
+        ]
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "How does the participating Nepal report describe the height method and reference system?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q03",
+        "query": "How does the participating Nepal report describe the height method and reference system?",
+        "proposed_disposition": "eligible_after_gates",
+        "predicate": "P3",
+        "required_constraint": "Reported orthometric height and IHRS; no independent validation.",
+        "source_ids": [
+          "S2"
+        ]
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "What is the tallest mountain?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q04",
+        "query": "What is the tallest mountain?",
+        "proposed_disposition": "clarify_metric",
+        "predicate": null,
+        "required_constraint": "Ask sea level, base-to-peak or Earth-centre distance.",
+        "source_ids": []
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "How high is Everest?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q05",
+        "query": "How high is Everest?",
+        "proposed_disposition": "clarify_date_surface",
+        "predicate": null,
+        "required_constraint": "Clarify date and surface; do not silently answer current height from 2020.",
+        "source_ids": []
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "What is Everest’s exact height today?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q06",
+        "query": "What is Everest’s exact height today?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "No current measurement or invariant height supported.",
+        "source_ids": []
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "Is Everest taller from base to peak than Mauna Kea?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q07",
+        "query": "Is Everest taller from base to peak than Mauna Kea?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "C007b metric; do not inherit C007a review.",
+        "source_ids": []
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "Is Everest the farthest summit from Earth’s centre?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q08",
+        "query": "Is Everest the farthest summit from Earth’s centre?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "C007c metric; no ranking transfer.",
+        "source_ids": []
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "Did Everest grow by the difference between the 2005 rock height and 2020 snow height?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q09",
+        "query": "Did Everest grow by the difference between the 2005 rock height and 2020 snow height?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "No growth inference from different surfaces or campaigns.",
+        "source_ids": []
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "Is the 2020 height independently accurate to one centimetre?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q10",
+        "query": "Is the 2020 height independently accurate to one centimetre?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "No numerical accuracy or independent remeasurement certification.",
+        "source_ids": []
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "Does the Nepal paper itself identify its final height as snow surface?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q11",
+        "query": "Does the Nepal paper itself identify its final height as snow surface?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "P3 report does not supply snow label; P2 official announcement supplies it.",
+        "source_ids": []
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "Does NOAA’s rounded 8848 m prove the exact 8848.86 m announcement?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q12",
+        "query": "Does NOAA’s rounded 8848 m prove the exact 8848.86 m announcement?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "S1 ranking is not the exact-number source.",
+        "source_ids": []
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "Were the Nepal and China results independent repeated measurements?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q13",
+        "query": "Were the Nepal and China results independent repeated measurements?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "Shared joint campaign; no independent-origin badge.",
+        "source_ids": []
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "What averaging weights produced the joint figure?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q14",
+        "query": "What averaging weights produced the joint figure?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "Omitted averaging statements are not inherited.",
+        "source_ids": []
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    },
+    {
+      "schema_version": 2,
+      "kind": "offline_withheld_predicate_lookup",
+      "question": "Which original Nepal letter and original MNR report did this review validate?",
+      "matching": "literal_unicode_codepoints_no_normalization",
+      "status": "withheld",
+      "answer": null,
+      "api_activation": false,
+      "curation_event": null,
+      "integration_review_status": "pending",
+      "input_authentication": "unverified_caller_supplied_context",
+      "route_diagnostic": {
+        "fixture_id": "Q15",
+        "query": "Which original Nepal letter and original MNR report did this review validate?",
+        "proposed_disposition": "outside_scope",
+        "predicate": null,
+        "required_constraint": "Original Nepal letter and original MNR technical source unchecked.",
+        "source_ids": []
+      },
+      "audit_refs": {
+        "candidate_binding": {
+          "claim_id": "C007a",
+          "claim_version": 3,
+          "candidate_artifact_version": 1,
+          "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+          "directory": "data/C007a-factfinder-candidate-v1",
+          "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+          "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+          "reviewed_post_revision": 1,
+          "file_hashes": {
+            "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+            "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+            "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+            "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+            "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+            "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+            "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+            "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+          },
+          "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+        },
+        "source_review_binding": {
+          "path": "data/C007a-v3-factomaton-source-review-v1.json",
+          "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+          "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+          "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+          "post_revision": 1
+        },
+        "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+        "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+      },
+      "not_for_publication": true,
+      "missing_coverage_is_factual_false": false
+    }
+  ],
+  "export": {
+    "schema_version": 2,
+    "kind": "offline_withheld_export_diagnostic",
+    "not_for_publication": true,
+    "records": [],
+    "exact_mappings": [],
+    "withheld": [
+      {
+        "claim_id": "C007a",
+        "claim_version": 3,
+        "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+        "state": "pending",
+        "answer": null
+      }
+    ],
+    "answer": null,
+    "api_activation": false,
+    "curation_event": null,
+    "integration_review_status": "pending",
+    "input_authentication": "unverified_caller_supplied_context",
+    "audit_refs": {
+      "candidate_binding": {
+        "claim_id": "C007a",
+        "claim_version": 3,
+        "candidate_artifact_version": 1,
+        "commit": "2e800bda7173071c79843894a5de064cf97ec356",
+        "directory": "data/C007a-factfinder-candidate-v1",
+        "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+        "record_digest": "9cb5bee0be562e082398eb73bc813aabaf79fdb7b26e72d1e9c271b956b91fb6",
+        "reviewed_post_id": "5575d2c1-8870-4a59-9d5d-eeb932cbf745",
+        "reviewed_post_revision": 1,
+        "file_hashes": {
+          "README.md": "aa828786b9229dfcbc1f5d2a92689e2604d6cec217c3dc2a65167f378f04dce2",
+          "bundle.json": "6057c0dcbb9209fd43a757225daecdb41ed6e48a13e09ce6abd53600e7d06cb1",
+          "checks.json": "b8a248ee2c4572c8922e0dbab3288db7f471f7d737eb8397b7eac658a3b35683",
+          "pending-events.json": "68aa1716649727802ada1d09c9995409a423a12d3d9ab6d2fa14a644fb7a6ef8",
+          "pending-view.json": "be9ff27deeba6c25f054028f8f00e469b60b219bd5233976c295091c8c83fe85",
+          "post-revisions.json": "acab13595f2c90f62e3e9303f99c1160c1631f12f0253442dd43ad38211a31c4",
+          "record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+          "transformation.json": "a0824533342bfc79761616e7f7d842f9d576f76c534e9b0d7f3a631a71497ef7"
+        },
+        "manifest_raw_sha256": "03b1e95e1d182aaf0edd16c15794797e9365cfff084080c2b498c67e346095e6"
+      },
+      "source_review_binding": {
+        "path": "data/C007a-v3-factomaton-source-review-v1.json",
+        "commit": "0489f67574ece2b5cec8b318366b9b8e7b9c3234",
+        "raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+        "post_id": "b4558d95-1af8-4301-a8f1-ca3efa297358",
+        "post_revision": 1
+      },
+      "catalog_raw_sha256": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+      "proposal_raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+      "record_raw_sha256": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+      "review_raw_sha256": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027"
+    },
+    "limits": [
+      "Offline withheld metadata only; not an active importer/public snapshot format.",
+      "Audit bodies/proposed answers omitted; query constraints may still contain factual text.",
+      "Caller context remains unverified, not authentic/fresh/complete correction evidence.",
+      "Code/routing review is not curation, runtime evaluation or publication consent."
+    ]
+  }
+}
