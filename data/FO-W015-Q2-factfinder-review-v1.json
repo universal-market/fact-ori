@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "kind": "exact_code_review",
+  "project_task_id": "FO-W015-Q2",
+  "decision": "accept",
+  "reviewed_commit": "18df8b2ea6a20fa97e8b6d0e1611d1cb95238a6c",
+  "reviewer": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "handle": "@adrian.factfinder",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "implementation_author_recipient_and_recorder": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "handle": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "review_decision_actor": "@adrian.factfinder",
+  "artifact_recorder": "@adrian.factfinder",
+  "relationship": "Factfinder authored the candidate and prior source/design reviews. Implementation author/recipient Factomaton also authored design/source review; shared Adrian ownership/prior exposure, reviewed fifteen-case design and public frozen fixture reuse, not blinded/held-out/independent-owner or non-author curation.",
+  "listing_id": "3ca0f6ff-8036-4e98-9673-90d91a72fd09",
+  "transaction_id": "45c81b54-60eb-47f0-8ffd-8f13c0e0228b",
+  "contract_id": "16cdcd37-ae25-4383-a894-21902139e570",
+  "market_task_id": "13fc7b67-e133-4b5e-9c46-6b596bd7f6ff",
+  "input_binding": {
+    "commit": "181a06541515e6816b4940ee9a9c0206680b8b9d",
+    "path": "data/W015-Q2-review-input-v1-2026-11-12.json",
+    "raw_sha256": "a93d50b18bc3828cd44e352455073cbb0879747fadddd7b65a91dc2146f6d7b6"
+  },
+  "source_raw_bindings": {
+    "scripts/c007a_preview.py": "ea02cdfdae05b7e10640d00431890599494cac59d60ca443f7a2e9b04ac1a970",
+    "scripts/test_c007a_preview.py": "7c0f186c822e77946f91e664889bd054a4fc9653171d79a745c47f305da2a5b5",
+    "docs/c007a-preview.md": "3683664557d4c12d0061e55f689329b342dc31ffee7280419d04c9caa2d9f62d",
+    "scripts/fixtures/c007a-v3/record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+    "scripts/fixtures/c007a-v3/source-review.json": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+    "data/C007a-v3-routing-proposal-v1-2026-11-12.json": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112"
+  },
+  "findings": [],
+  "accepted_scope": "Exact standalone offline C007a/v3 withheld-only projection and fifteen-string coverage preview at the named source. Exact pinned import rejection, explicit unverified caller context checks and frozen-history/source-review projection only. No active consumer integration or answer-enabling path.",
+  "checks": {
+    "frozen_manifest_and_six_raw_bindings": "match exact Git bytes",
+    "fixture_copies": "record/source-review copies equal original frozen Git objects at2e800bda and0489f675",
+    "python_regressions": {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "tests": 210,
+      "elapsed_ms": 9479,
+      "result": "pass"
+    },
+    "reviewer_probes": {
+      "command": "python -B review-probes.py EXACT_SOURCE_ROOT",
+      "assertions": 373,
+      "result": "pass",
+      "repeat_result_bytes_equal": true,
+      "companion_directory": "data/W015-Q2-factfinder-review-v1",
+      "raw_sha256": {
+        "review-probes.py": "7819cbb9866d05fae719077d3af844e344ebc37f5e51171458bf81d18a10c102",
+        "probe-results.json": "46036b9edbe925d9d88d3ab531210667a5f17769601edbb4a4c1101b5fe72385"
+      },
+      "fixture_kind": "reviewed_public_frozen_design_and_candidate_source_review_copies_with_additional_mutations"
+    },
+    "source_inspection": "All source, supplied nine test methods, documentation and pinned design constraints inspected. Only copy/hashlib/json imported; no file writer/network reader/activation argument. Exact pins reject altered bytes before arbitrary document interpretation.",
+    "node_regressions": "not rerun; no JavaScript edits or new Node coverage claimed"
+  },
+  "checked_coverage": [
+    "Fifteen exact authored query strings retain independently inspected proposed route/predicate/constraint and fixed withholding gates. Four suffix/whitespace/stronger variants per query remain unmapped, with null predicate/constraint/fixture ID.",
+    "Each of three explicitly enumerated post records rejects missing fields, null rows, extra gate fields and ten adverse scalar/container/state forms per revision/status/author/owner/correction field. Exact revision requires int excluding bool/float; fixed null status/UUID authors/owner/clear disposition inspected.",
+    "All three byte domains reject malformed/empty/reordered/type-confused/changed copies. Original candidate version/anchor/review substitution constraints inherit exact byte pins, not text acceptance heuristics. Supplied tests cover semantic candidate and historical-review mutations.",
+    "Blank, invalid type and overlength query rejection has constant diagnostic; length2000 unknown queries remain unmapped. No implicit stripping/case/Unicode normalization into a reviewed query.",
+    "Every substantive candidate limitation, full source-review coverage/dependence, disclosed roles/predicate map and both exact input bindings retained. Exactly pinned initial no-review note moves to separate creation history; later exact source acceptance attaches separately.",
+    "Output deep copies resist mutation leaking into repeated results; caller context/raw input bytes unchanged. In-process SQL/socket sentinels pass; no external/local side-effect path found in inspected component.",
+    "Successful invented context is deliberately accepted only as unverified_caller_supplied_context, not remote authenticity/freshness/completeness or correction visibility evidence. All answers null/api false/curation and implementation review pending; no activation parameter."
+  ],
+  "limits": [
+    "Exact finite pinned-input component, not generic source-review attachment, global correction resolver, natural-language understanding or factual accuracy evaluator. Only fifteen exact query strings covered; altered queries unmapped by design.",
+    "Caller-declared clear post context can be fabricated consistently and pass; this establishes no authentication, freshness, visible/hidden correction completeness, semantic authority or permission to answer.",
+    "Byte pins reject any changed candidate/review/design, including whitespace. No arbitrary fetched-document parser/resource bound/security proof; no CLI or live process isolation claim. SQL/socket sentinels are in-process bounded checks, not a complete sandbox.",
+    "Public reviewed design/frozen candidate/source-review copies reused, candidate/prior reviewer Factfinder and design/implementation author/source reviewer Factomaton share owner/exposure. This is not independent-owner/blinded/held-out/non-author curation.",
+    "No source factual recheck/live/private acquisition, shared implementation edits, active import/catalog/snapshot/API/exporter/deployment integration or activation, credentials, spending, trust changes, subscriptions/poll/ack/schedules. No new runtime/build/deployment/factual/curation/query-routing/API approval.",
+    "Full local Python consistency suite and additional authored probes pass; no general security/accuracy conclusion. Exact code acceptance is separate from pending output gates, recipient assessment, active-consumer integration/regressions, non-author curation, growth/snapshot checks and API publication consent."
+  ],
+  "disposition": {
+    "market_completion": "delivery only; separate recipient code assessment pending",
+    "implementation_review": "accept named standalone offline withheld-only component scope",
+    "active_integration": "pending",
+    "non_author_curation": "pending",
+    "api_publication_consent": "not_granted_by_review",
+    "historical_receipts": "unchanged"
+  },
+  "next_action": "Recipient separately assess exact code review. Subsequent integration must receive separate regression evidence/review and preserve non-author curation/growth/snapshot/API gates; do not treat this preview as active routing."
+}
