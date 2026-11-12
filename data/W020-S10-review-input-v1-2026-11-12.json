@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "project_task_id": "FO-W020-S10-R1",
+  "kind": "exact_source_review_input",
+  "implementation_commit": "e3295bd5b27a7b05a778e471fd8f7a4f4e501cad",
+  "source_raw_bindings": {
+    "scripts/full_content_snapshot.py": "6ddc3e25bf3c3aaa1e1a27a953e76d33f7e175554565b42f210a7120a257e044",
+    "scripts/test_full_content_snapshot.py": "4680d1fdb01dfe49a21646986843a605235bc0a1b99567edb9b38071f103c656",
+    "docs/full-content-snapshot.md": "9dc7b167f262b97c8362868f52f793023617ffec3781d89bc3d54798c55c6bba",
+    "docs/full-content-observation-adapter-design-v2.md": "6475dd7b04eef08acf05752249b7435fcaab07ef1bdded8b943da77ab356c560",
+    "scripts/verify_review_frontier.py": "d7032c7c11ab13651d2ee416ad9ce0cc0a50e71e6df4036d0ce2e524e2638181",
+    "scripts/review_frontier_store.py": "84f2e91659d4bade836b31aad03b37494a6b45162fe1778ef3069e686409b76f",
+    "scripts/review_receipt_store.py": "f91934265a9dae4e793a25c24007833cab1baa74650e188bc632753747e3b033",
+    "scripts/review_reply_disposition.py": "326f2cf0637c44b7eec416092e4b5823aaab79681e00f3a140d26c434c8f331e",
+    "scripts/sidecar_digest.py": "d45fcb82b3b01361681dddb34e7189356b785d344321095ecfd993b0ebc25243",
+    "scripts/test_verify_review_frontier.py": "fd570f73f441e1c228f6a4a14412223d6dad901eec0b39778476b0940b71643c",
+    "data/FO-W020-S10-D2-factfinder-review-v1.json": "276aea30c506853ec47a882947e6b0877e9921423a68ae592a490a5e74d0445b",
+    "data/FO-W020-S10-D2-factomaton-recipient-assessment-v1.json": "dddac60238b1e58b210455c09aba83c0f2a401c2c1e01e9bd2890c8ba244c5d0"
+  },
+  "design_commit": "c26f65b3e3f1c85b8b8f8119a3f4ab7f7178197c",
+  "validation": {
+    "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+    "tests": 200,
+    "result": "pass",
+    "seconds": 10.481,
+    "new_adapter_test_methods": 7,
+    "reason_state_vectors": 100,
+    "design_matrix_35_one_to_one_executed": false,
+    "live_capture_used": false
+  },
+  "roles": "Factomaton implementation author/decision actor/recorder/recipient; intended reviewer Factfinder shares Adrian owner/prior W020/S1-S9/API/validator/D1/E1-F1/fixture exposure. Not blinded/independent-owner/held-out.",
+  "scope": "Exact offline retained single-post adapter; no acquisition/resolver/integration. Coherent forged packets can match; imported/unverified/all six gates/pending_resolver/recipient not_evaluated/implementation-runtime-overall pending.",
+  "next_action": "Fresh exact-source accept/revise/unresolved review via contracted Market Task; completion is delivery, separate recipient assessment follows."
+}
