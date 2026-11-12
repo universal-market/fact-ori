@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q4",
+  "kind": "exact_code_and_projected_text_routing_review_input",
+  "source_commit": "153d3385171049f3c3faaf3e66cd1f8ca0fe3f63",
+  "file_raw_sha256": {
+    "scripts/c007a_pending.py": "279c342657aef1ef16e9fe7bad1947f5ba6258771e2449c9d9d934adeba35b07",
+    "scripts/test_c007a_pending.py": "98114f5d382713d9c200b538e32ba66848124605dbcd028d03346f34c0c92dfd",
+    "docs/c007a-pending-attachment.md": "6cf596026da607cbaf51e7d3f002be4d990f475f00262fc0860c3a22829a6b64",
+    "scripts/fixtures/c007a-v3/attachment-manifest-v1.json": "47fe1725996a578f8383339864391aff28018702bff410405991db9edf2511df",
+    "scripts/fixtures/c007a-v3/pending-view-v1.json": "571259c6bbc612fbd5d7e5c6794c45b3e7086c50f5d2cf099beff66e1e6917ea",
+    "scripts/c007a_preview.py": "ea02cdfdae05b7e10640d00431890599494cac59d60ca443f7a2e9b04ac1a970",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+    "scripts/validate_pilot.py": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f",
+    "scripts/ask.py": "61e49aac168a6d6822028e7d7f5b710f89926f59561f73d19bd97dc995826e37",
+    "scripts/export_api_seed.py": "85c094e2cc1b436817f81998f77e948a6df35a455c0ad89c1ade32cf0208916a",
+    "scripts/export_public_snapshot.py": "83845ee22ca2cf72a6213c65f58caad250fcb3e2aa01330a7d0f396adf9a0c3d",
+    "scripts/fixtures/c007a-v3/record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+    "scripts/fixtures/c007a-v3/source-review.json": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+    "data/C007a-v3-routing-proposal-v1-2026-11-12.json": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+    "scripts/c007a_routes.py": "622a96050e63a9cfc4209771b66b2bb349aec991ab28be95491edca6e3784ac1",
+    "scripts/test_c007a_routes.py": "d3bdc37679b4aa496326a5ba2aae4969fec420aefda1eadceec7ef56076dd859",
+    "docs/c007a-literal-routes.md": "33fe7a56303633e517d145a81824f0c8552db9572c12e0cca7f0296c982916ab",
+    "scripts/fixtures/c007a-v3/predicate-catalog-v1.json": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+    "scripts/fixtures/c007a-v3/predicate-route-results-v1.json": "d0e5f37935b598e0e8e3a762d93c3039574c8a9669abb9dba34b85b4b5a20234"
+  },
+  "unchanged_active_inputs": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "scope": "Offline always-withheld literal predicate routing/proposed answer text/source selection only. No active consumer loading.",
+  "roles": "Author/engineering decision actor/recorder/recipient Factomaton also design/source-review author; intended reviewer Factfinder candidate/prior design/code reviewer; shared Adrian owner/prior exposure/authored fixtures, not blinded/independent-owner/held-out/non-author curation.",
+  "validation": {
+    "focused_methods": 7,
+    "fresh_python_tests": 225,
+    "elapsed_seconds": 11.564,
+    "frozen_15_row_output": "exact_byte_reproduction",
+    "prior_fourteen_dependencies": "unchanged_current_and_exact_git",
+    "new_node_coverage": false
+  },
+  "review_focus": [
+    "Exact literal Unicode matching: case/space/punctuation/invisible changes stay unmapped.",
+    "Q01 P1 S1 ranking only; Q02 P2 S3a dated joint snow announcement; Q03 P3 S2 attributed orthometric/IHRS method. Assess exact proposed texts and selected source fields against original accepted source review.",
+    "Q04/Q05 constraints retain clarification, Q06-Q15 outside scope no proposed answer/source, unknown literals unmapped not factual false.",
+    "Strict pinned schema2 catalog/input binding, duplicate/type/extra/source/text/approval changes fail. Legacy schema1 reader rejects new schema.",
+    "All4states exposed answer null/API false/no curation receipt. Proposed answer texts/full original audit are unapproved review data, not redacted public schema.",
+    "Stale/corrected context/raw/attachment mutations fail; coherent invented caller context still unverified.",
+    "Meaningful adversarial probes/output mutation isolation/fixture reproduction/unchanged8record consumer seed/export and4active bytes."
+  ],
+  "limits": [
+    "No new factual source recheck/live/private acquisition or authentic/fresh/complete remote-state resolver.",
+    "Finite authored fixtures/probes, not generic security/resource/sandbox/NLU/factual proof; no W020 relaxation.",
+    "Later active integration, non-author curation, growth/snapshot/runtime evaluation and API publication consent remain separate."
+  ],
+  "prohibited_scope": [
+    "No shared validator/source/review edits or active manifests/catalog/events/API/Convex/deployment changes.",
+    "No credentials/payments/new permissions/transport or schedule/launcher/notification changes."
+  ]
+}
