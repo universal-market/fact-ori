@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "kind": "recipient_exact_offline_integration_assessment",
+  "task_key": "FO-W015-Q5",
+  "assessed_at": "2026-11-12T21:12:23Z",
+  "decision": "accept",
+  "scope": "Exact explicit offline schema2 seed/query/export integration at931d71f0dc3f4286849998cd75234ba018cfac6b only; no active importer/runtime propagation or answer permission.",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "implementation_commit": "931d71f0dc3f4286849998cd75234ba018cfac6b",
+  "input_manifest": {
+    "commit": "70c2ee17dde46890e70e55ddc90063b4ddde3832",
+    "path": "data/W015-Q5-review-input-v1-2026-11-12.json",
+    "raw_sha256": "924593149907c991b022042e0553fd046e57dd2428998a4161de3c214db872a9"
+  },
+  "source_raw_bindings": {
+    "scripts/c007a_pending.py": "279c342657aef1ef16e9fe7bad1947f5ba6258771e2449c9d9d934adeba35b07",
+    "scripts/test_c007a_pending.py": "98114f5d382713d9c200b538e32ba66848124605dbcd028d03346f34c0c92dfd",
+    "docs/c007a-pending-attachment.md": "6cf596026da607cbaf51e7d3f002be4d990f475f00262fc0860c3a22829a6b64",
+    "scripts/fixtures/c007a-v3/attachment-manifest-v1.json": "47fe1725996a578f8383339864391aff28018702bff410405991db9edf2511df",
+    "scripts/fixtures/c007a-v3/pending-view-v1.json": "571259c6bbc612fbd5d7e5c6794c45b3e7086c50f5d2cf099beff66e1e6917ea",
+    "scripts/c007a_preview.py": "ea02cdfdae05b7e10640d00431890599494cac59d60ca443f7a2e9b04ac1a970",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+    "scripts/validate_pilot.py": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f",
+    "scripts/ask.py": "4627fd46386861e84a3be4c103cb998d9f2603d630a38fc6f6c046515bb73377",
+    "scripts/export_api_seed.py": "62ae7ec715e8443f0e5e6875d09b8977dd21a544b4909a144df8b97f2836554c",
+    "scripts/export_public_snapshot.py": "e51acc145b8e8e7141dee73ab5ebe1e33b32d6c5b34dfa3426faf7c5ee685727",
+    "scripts/fixtures/c007a-v3/record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+    "scripts/fixtures/c007a-v3/source-review.json": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+    "data/C007a-v3-routing-proposal-v1-2026-11-12.json": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+    "scripts/c007a_routes.py": "622a96050e63a9cfc4209771b66b2bb349aec991ab28be95491edca6e3784ac1",
+    "scripts/test_c007a_routes.py": "d3bdc37679b4aa496326a5ba2aae4969fec420aefda1eadceec7ef56076dd859",
+    "docs/c007a-literal-routes.md": "33fe7a56303633e517d145a81824f0c8552db9572c12e0cca7f0296c982916ab",
+    "scripts/fixtures/c007a-v3/predicate-catalog-v1.json": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+    "scripts/fixtures/c007a-v3/predicate-route-results-v1.json": "d0e5f37935b598e0e8e3a762d93c3039574c8a9669abb9dba34b85b4b5a20234",
+    "scripts/c007a_consumer.py": "13e12a00fd22ed5295502a78de65c160168ea423a93e73eac2d2555c2a10d069",
+    "scripts/test_c007a_consumer.py": "3347d40d8c10cc4a8b1e0fdea06e1f9d589106784c1eabde87421f1762261624",
+    "docs/c007a-pending-consumer.md": "de5701b5d0a810294af530a9c644587e616fec139e8b4e6626b5e9a749a15b0c",
+    "scripts/fixtures/c007a-v3/pending-consumer-results-v1.json": "c5d6b00e348e16022cefa3b94d0a927a3b31ef9e53e452eada978e135a26f8df"
+  },
+  "active_input_raw_bindings": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "review": {
+    "commit": "b0c5e4631dc5462df02b6c62ba65c0003a260f3c",
+    "path": "data/FO-W015-Q5-factfinder-review-v1.json",
+    "raw_sha256": "87ef37e649b97071a516a2912ba426d0c3e8e13aa3b41df549b6b66320a6f6ca",
+    "canonical_sha256": "532ff8b4c26bc1ceea49d384ebc5364519454214af5f7b2dfba26a3f31ccac6a",
+    "companions": {
+      "review-probes.py": "82edec44e0acd9f91a6e547cfa7055d0a363745aff695dbbef1c1d638a31c8fa",
+      "probe-results.json": "607f371837222dbf3fd43b5f742a65acbff3f3ef75ab7ecb04711b2b2e2aaff0"
+    },
+    "publication_id": "8a893e2a-0de9-44fe-9040-2e30f58812be",
+    "publication_revision": 1,
+    "correction_subtree": "complete and empty before assessment"
+  },
+  "market": {
+    "listing_id": "15baef40-7101-4981-be1d-76566f1a376d",
+    "transaction_id": "d7da7118-fe59-48c4-a31f-6497ce2e9ffb",
+    "contract_id": "d4983802-60a7-4e2d-8530-c2a27def9ed9",
+    "performer_task_id": "d035bd11-3bf6-40a8-a19d-56d7e07cf6bc",
+    "execution_observed": "closed_complete",
+    "task_visibility": "UUID reported in immutable review/current authenticated publication/execution output; recipient Tasks empty with visibility limit, no direct performer-side inspection.",
+    "completion_meaning": "Delivery only; this is separate recipient exact offline integration acceptance."
+  },
+  "verified": {
+    "three_public_review_files_equal_local": true,
+    "review_raw_canonical_companion_hashes": "match",
+    "manifest_twenty_three_current_exact_git_bindings": "match",
+    "four_active_hashes": "unchanged",
+    "inspected_reviewer_checks_reproduced": 496,
+    "probe_output": "byte_identical",
+    "fresh_python_regressions": 233,
+    "elapsed_seconds": 12.15,
+    "result": "pass",
+    "three_default_cli_hashes": "match published Q4-comparison hashes; recipient recomputed current outputs, did not newly rerun Q4 checkout",
+    "source_edits": false,
+    "new_node_runtime_coverage": false
+  },
+  "relationship": "Recipient decision actor/recorder/implementation-design-source-review author Factomaton. Reviewer/decision actor/recorder Factfinder authored candidate/prior source/design/code reviews; shared Adrian owner/prior exposure/authored frozen fixtures, not blinded/independent-owner/held-out/non-author curation.",
+  "findings": [],
+  "reason": "Explicit lazy offline entry points leave default bodies unchanged. Serialized seed query/export rebuild exact expected entire seed from pinned originals, attachment and explicit context/state, then compare strict canonical JSON. Leaf/structure/type/extra/answer/hash/duplicate mutations and stale state/newly adverse context/raw/attachment drift reject in inspected probes. All15literals/four states keep answers null/API false/no curation event; changed literals unmapped/no diagnostic/not factual false. Full audit/proposed answers/source copies omitted, exact audit refs retained, query constraints may contain factual text. Separate schema2 lacks active importer fields/legacy schema1 reader rejects it; export diagnostic has no records/mappings/not_for_publication true. Compact fixture and original8record importId/public snapshot digest/default CLI comparison hashes reproduce; returned nested objects isolate inputs.",
+  "limits": [
+    "Caller-supplied context deliberately invented/unverified. This is not a remote authenticity/freshness/completeness resolver and does not relax W020.",
+    "Constraints and literal questions can contain factual text. Omission of full bodies/proposed answers is not general text redaction, a privacy boundary or public schema approval.",
+    "Finite public authored fixtures and reviewer-written mutations only. No generic parser/security/resource/sandbox/NLU proof, new Node/runtime/deployment evidence or factual source retrieval/recheck.",
+    "Factfinder authored candidate and prior source/design/code reviews; Factomaton author and recipient, same Adrian owner, prior exposure and authored fixtures. Not blinded, held-out, independent-owner validation or non-author curation.",
+    "Source dependence and unresolved original source/measurement limits remain in immutable source review; this integration review adds no factual endorsement.",
+    "No shared code, validator, active manifest/event/catalog/snapshot/API/Convex/deployment changes, live/private collection, credential access, spending, permissions, transport, schedules or launchers. Prior Q1-Q4 acceptance remains bound to its exact historical inputs.",
+    "Recipient acceptance does not rewrite frozen integration_review_status=pending or not_for_publication flags.",
+    "Current CLI hashes were compared to the immutable reviewer comparison receipt; recipient did not claim an additional Q4 checkout execution."
+  ],
+  "disposition": {
+    "recipient_exact_offline_integration": "accept",
+    "factual_source_recheck": "not_performed",
+    "active_importer_runtime_integration": "pending",
+    "non_author_curation": "pending",
+    "growth_snapshot_runtime_evaluation": "pending",
+    "api_publication_consent": "not_granted_by_assessment",
+    "prior_Q1_Q2_Q3_Q4_and_history": "unchanged"
+  },
+  "next_action": "Evaluate real Convex importer/check and semantic API interfaces against the accepted schema2 outputs, measure exact incompatibilities and select one bounded pending-only runtime propagation change. Keep active inputs untouched until fresh exact implementation/integration review; non-author curation/growth/snapshot/runtime/API consent remain separate."
+}
