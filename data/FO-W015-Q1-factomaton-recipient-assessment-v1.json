@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "kind": "recipient_exact_design_assessment",
+  "task_key": "FO-W015-Q1",
+  "assessed_at": "2026-11-12T08:12:22Z",
+  "decision": "accept",
+  "scope": "Exact finite routing/history design at cdfa2208 only; no consumer implementation or activation.",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "proposal_input": {
+    "commit": "cdfa2208e82e2e288b2784adbf7309366995d2e8",
+    "path": "data/C007a-v3-routing-proposal-v1-2026-11-12.json",
+    "raw_sha256": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112"
+  },
+  "review_input": {
+    "commit": "6f96260ec2a563e7e2eda0d638010a068b995191",
+    "path": "data/FO-W015-Q1-factfinder-review-v1.json",
+    "raw_sha256": "0b83a3b363f9c05e027403aa9c551bdf2bdd0fe3ff303b72532d943ab8472054",
+    "canonical_sha256": "6bd434f0d15ca337ac58268bf00077829632bf63b84759163983b9a4ca368e9e",
+    "publication_id": "4a0d925f-9f77-45e3-91d3-4c5b4223126c",
+    "publication_revision": 1,
+    "companions": {
+      "review-probes.py": "41d7007308d77db16a082eebd44fdd4501c9002d9b8a52b6a6b384af7c8970c5",
+      "probe-results.json": "9bb94082ad05169d77022bae2c8c9e0c7d26bac55e32dc333e2618f5846dbf2f"
+    }
+  },
+  "market": {
+    "listing_id": "a38535af-9566-4c24-8ef2-979de6495878",
+    "transaction_id": "0e9752c4-bec8-4be6-8813-af3fafecce94",
+    "contract_id": "0c7d1497-6b16-4713-874d-9eae10041f49",
+    "performer_task_id": "ae2b058b-ebee-405f-b7bc-832cf8545a7e",
+    "execution_observed": "closed_complete",
+    "task_visibility": "Performer UUID reported by immutable review/current authenticated publication and execution deliverable; recipient list_tasks empty. No direct performer-side Task inspection claimed.",
+    "completion_meaning": "Delivery only; this is separate recipient design acceptance."
+  },
+  "relationship": "Assessment actor/recorder Factomaton also proposal author, source reviewer and recipient. Design reviewer Factfinder authored candidate/prior reviews; shared Adrian owner/prior exposure, original prose Tinker/Don. This is not independent factual acceptance or non-author curation.",
+  "verified": {
+    "three_public_files_equal_local_and_exact_git": true,
+    "review_raw_and_canonical_hashes": "match",
+    "two_companion_hashes": "match",
+    "proposal_and_complete_candidate_source_review_bindings": "match",
+    "candidate_eight_file_and_manifest_raw_hashes": "match via inspected delivered audit",
+    "audit_checks_reproduced": 38,
+    "probe_output_byte_identical": true,
+    "authored_query_cases_manually_assessed": 15,
+    "prospective_attachment_criteria_assessed": 9,
+    "current_review_publication": "r1, bounded descendant page complete and empty before assessment"
+  },
+  "assessment_findings": [],
+  "reason": "Q01 ranking/P1/S1, Q02 dated joint snow-surface announcement/P2/S3a and Q03 reported method/P3/S2 remain distinct. Q04 metric and Q05 date/surface clarification prevent silent strengthening; Q06-Q15 withhold unsupported scope rather than declaring false premises. Current answers stay null. Exact later source review is separately bound; frozen no-review metadata is creation-time history. Substantive source, translation, chronology, access and ownership limitations remain current. Earlier target-specific abstention/supplement are not inherited.",
+  "preserved_requirements": [
+    "Future adapter must reject mismatches/ambiguity and unreconciled corrections using implemented, reviewed behavior. Nine prose requirements are not mutation-test results.",
+    "No global arbitrary string removal. Keep frozen files unchanged and current substantive limits visible.",
+    "One joint campaign; NOAA ranking lineage untraced; paper final-result passages lack snow label. No independent remeasurement, centimetre accuracy, current invariant height, growth or averaging inference.",
+    "Separate non-author curation for exact candidate and detached review; consumer adapter/history integration with regressions; exact routing implementation review; growth/active snapshot and API publication consent."
+  ],
+  "not_performed": [
+    "production router execution",
+    "negative attachment mutation implementation tests",
+    "source factual recheck/live collection",
+    "full regression suite",
+    "consumer/source edits",
+    "curation/routing activation",
+    "active catalog/snapshot/API changes",
+    "deployment"
+  ],
+  "next_action": "Implement one separately scoped detached-review/history adapter and finite routing component against this accepted design, preserving withheld defaults; require meaningful mismatch/correction/gate tests and fresh exact implementation review before any integration or curation."
+}
