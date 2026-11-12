@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "harness": "convex-test in-memory database / actual current schema and functions",
+  "tests": 4,
+  "passed": 4,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "offline seed is not a valid active import and rejection leaves database empty",
+      "status": "passed"
+    },
+    {
+      "name": "forced legacy pending bridge withholds all three predicates and inspection",
+      "status": "passed"
+    },
+    {
+      "name": "current alias storage normalizes literals and cannot represent Q4 matching policy",
+      "status": "passed"
+    },
+    {
+      "name": "deliberately bypassed approval returns compound answer for every predicate and changed literal",
+      "status": "passed"
+    }
+  ],
+  "production_database": false
+}

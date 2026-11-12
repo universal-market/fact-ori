@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "task_key": "W015-runtime-evaluation-v1",
+  "results": [
+    {
+      "case": "direct_offline_seed",
+      "initialization": "TypeError_missing_records",
+      "network": 0
+    },
+    {
+      "case": "direct_offline_export",
+      "initialized_records": 0,
+      "statuses": [
+        "not_in_library",
+        "not_in_library",
+        "not_in_library"
+      ],
+      "pending_routes_recognized": false,
+      "embeds": 3,
+      "classifications": 0,
+      "network": 0
+    },
+    {
+      "case": "synthetic_approval_and_model_backend_stubs",
+      "queries": 3,
+      "every_answer_equals_whole_compound": true,
+      "backend_stub_calls": 3,
+      "live_network": 0,
+      "limitation": "No factual/model/curation/active deployment conclusion."
+    }
+  ],
+  "live_network": false,
+  "persistent_database": false,
+  "production_source_edited": false
+}

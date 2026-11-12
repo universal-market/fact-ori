@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "kind": "owner_authorized_runtime_compatibility_evaluation",
+  "task_key": "W015-runtime-evaluation-v1",
+  "baseline_source_commit": "e73aff12325d1927641917925c6fe2f6a5e5bb81",
+  "author": "@adrian.factomaton",
+  "engineering_decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "relationship": "Implementation/design/source-review author/recipient; Factfinder candidate/prior source/design/code reviewer, shared Adrian owner/prior exposure/authored fixtures, not independent-owner/blinded/held-out/non-author curation.",
+  "source_raw_bindings": {
+    "convex/schema.ts": "5b38f500d31b2129f2bad6825ae950394bb58de386200407893f93a863d3a20d",
+    "convex/library.ts": "85b79a2472a264dccf751e10f8f0cb6bf572dc7cd1663704b5444edb73fb5550",
+    "convex/checks.ts": "6237f453d7fac3b1c87e8f53651ea08a7ef74c072fc8131ea7db0eda995c92a1",
+    "convex/contract.ts": "18d5775e8623d37d7f1a2c4097cde629e86040fd50295a8015353fb092072767",
+    "service/engine.mjs": "fcaa4c48b6ecd7de41307f8ef5e85f94dc37bb90d39222e052b47e64b9ac2e1e",
+    "service/server.mjs": "cea91baae0111312d00ac27d2f36c55d69cf348616f003ea2d8e0251c5ae888a",
+    "scripts/seed-convex.mjs": "f12ba459217103adb6740248afdc70ac2959dac78828e6024325224f02eb5f53",
+    "scripts/convex-seed-stdin.mjs": "382f7238fd5cb2171505ce78da732cde593045eb92e1f0d26d91cc093780e08f",
+    "vitest.config.ts": "fb3d3b384557eb4c54390a2c64192e78aa07500221f959c1d9ca1d8495372757",
+    "package.json": "493301b5167536dc49a87d767d969827b54bc9900aff1e503e430a0f4b0e5f8b",
+    "package-lock.json": "1ed4ad41eedcf50315dd90347425b2eea0da804fd939e826e327ea719e1531ad",
+    "scripts/fixtures/c007a-v3/record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+    "scripts/fixtures/c007a-v3/source-review.json": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+    "scripts/fixtures/c007a-v3/pending-view-v1.json": "571259c6bbc612fbd5d7e5c6794c45b3e7086c50f5d2cf099beff66e1e6917ea",
+    "scripts/fixtures/c007a-v3/predicate-catalog-v1.json": "24a3bb6b19abee15bd7bd2f880b640aaf0bbb877fd7a5ac4235acd5683d2d33b",
+    "scripts/fixtures/c007a-v3/pending-consumer-results-v1.json": "c5d6b00e348e16022cefa3b94d0a927a3b31ef9e53e452eada978e135a26f8df"
+  },
+  "unchanged_active_inputs": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "probes": {
+    "convex": {
+      "path": "tests/c007a-runtime-evaluation.test.ts",
+      "raw_sha256": "0999550a410cfda36369cdb9c65e1b5304c4a2b87b1b66bdf8948375f1fd4132",
+      "command": "npx vitest run tests/c007a-runtime-evaluation.test.ts",
+      "passed": 4,
+      "failed": 0,
+      "results": "data/W015-runtime-evaluation-v1/convex-results.json"
+    },
+    "semantic": {
+      "path": "data/W015-runtime-evaluation-v1/semantic-probes.mjs",
+      "raw_sha256": "f7b17eb9277b6ac83e6837737817c81e0e129add48d21e190791ed9ff11b35a5",
+      "command": "node data/W015-runtime-evaluation-v1/semantic-probes.mjs",
+      "cases": 3,
+      "result": "pass",
+      "repeat_bytes_equal": true,
+      "results": "data/W015-runtime-evaluation-v1/semantic-results.json"
+    }
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "observation": "Direct schema2 offline seed is rejected by actual active Convex import path; in-memory database remains empty. Semantic engine initialization raises TypeError because records absent.",
+      "interpretation": "Unsupported format is not a ready runtime integration; the schema2 seed must never be coerced silently into active legacy format."
+    },
+    {
+      "id": "R2",
+      "observation": "With a deliberately forced legacy pending wrapper, three canonical aliases all return withheld and inspect withholds source reviews. Current normalize collapses uppercase and spacing.",
+      "interpretation": "Pending withholding works in the legacy bridge, but literal-route policy and pending audit inspection are not represented."
+    },
+    {
+      "id": "R3",
+      "observation": "With deliberately bypassed in-memory approval, legacy check returns unchanged whole compound answer for all3predicate queries and uppercase variants.",
+      "interpretation": "Synthetic trusted-import bypass, not real curation/source acceptance, public exploit or production leakage. Claim-level alias cannot select predicate answer/source scope."
+    },
+    {
+      "id": "R4",
+      "observation": "Offline export diagnostic accepted by semantic initialize as zero records; all3queries not_in_library, no pending route recognized, no classifier/backend calls.",
+      "interpretation": "No positive answer leak; missing explicit snapshot-kind gate permits silent coverage loss if this unsupported diagnostic is miswired."
+    },
+    {
+      "id": "R5",
+      "observation": "Synthetic semantic approved wrapper plus approving model/backend stubs returns full compound answer for all3queries.",
+      "interpretation": "Illustrates package-answer interface gap under invented approvals, not a measured model accuracy/runtime result."
+    }
+  ],
+  "next_scope": {
+    "decision": "Implement one strict semantic snapshot-format boundary and explicit pending-diagnostic recognition before vector indexing.",
+    "requirements": [
+      "Reject unsupported seed/diagnostic kinds at active snapshot initialization instead of silently indexing zero records.",
+      "Add separate explicitly offline pending metadata path keyed by exact literal and bound to catalog/record/review hashes, always withheld/no raw full bodies/no answering permission.",
+      "Do not merge pending rows into approved model records or normalize reviewed literal keys.",
+      "Preserve existing approved snapshot/index behavior and require fresh exact review before active wiring."
+    ],
+    "deferred": [
+      "Convex predicate-route storage/reader and pending audit inspection",
+      "approved predicate answer selection/non-author curation",
+      "active import/growth/snapshot/runtime evaluation/API consent"
+    ]
+  },
+  "limits": [
+    "Only actual local Convex functions in convex-test and semantic engine with memory SQLite/deterministic stubs; no production DB/network/models/deployment/source retrieval.",
+    "Synthetic approved states and backend/model outputs deliberately bypass all real review/curation gates; no factual endorsement or real permission.",
+    "No full regression suite rerun: production source unchanged; only targeted4Convex and3semantic cases executed.",
+    "Initial sandbox harness spawn was EPERM; same isolated probe rerun under authorized escalation,4pass.",
+    "Context/authentication/freshness/completeness unresolved as before; no W020 relaxation."
+  ],
+  "market_tracking": "Independent owner-authorized evaluation, not extension/submission/reopening of completed Q5 review Task."
+}
