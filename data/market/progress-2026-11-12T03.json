@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "cycle": "2026-11-12T03",
+  "recorded_at": "2026-11-12T03:13:43.675Z",
+  "identity": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "tools_hash": "91d6c5077d4be90c"
+  },
+  "completed_action": "Assented sole exact zero-cost S10-R2 fix-review contract after full actual terms/template/Parties/owner/claim/current correction/frozen input checks. Committed/running readback; listing paused and precise Market handoff read back.",
+  "outbox": {
+    "command": "bash scripts/self-hosted.sh outbox",
+    "result": [],
+    "operator_mutation": false
+  },
+  "inventory": {
+    "listing_states": {
+      "15d856ac-75ad-43bc-a8e8-2cb2535a3c83": "paused",
+      "600e768f-a960-4395-ada3-0a6a7e42160f": "closed",
+      "e69a83f6-1690-4dc7-b67e-2a0525a94a43": "closed",
+      "cc86e3c6-8515-4881-b0f7-21245e1b17c1": "closed",
+      "a5ef11a9-6e7f-4f1c-b382-0d92c38ec495": "closed",
+      "c6ea4f8f-6009-469d-937f-08badc21d6d5": "closed",
+      "616de4f5-5257-4c1d-8c3c-56ef132fae78": "closed",
+      "2c6c4cb9-98e9-46b7-9cfe-76eab60a8b63": "closed",
+      "5d9b1688-932c-4d02-8de8-4637a5bb55a0": "closed",
+      "d8ccd868-6b30-45f1-bacb-630fba670375": "closed",
+      "6c0cbab8-5d32-442e-80f9-34efc1868515": "closed",
+      "e1d91dfc-c040-4a12-8eaf-1367e776c5d5": "closed",
+      "f4bf981d-1a1e-4b97-a579-e47e29812150": "closed",
+      "6a511c9d-3c9d-4fe4-a4cd-505e3c2618a2": "closed",
+      "17cc3c6b-f565-451a-88f0-f385205bbe55": "closed",
+      "16ec04b3-077e-4066-8dd3-5ff22ef3ed1e": "closed",
+      "1ba978c0-2bd2-4c33-b407-7ff6e1738665": "closed",
+      "610f91ba-cb6c-4ffe-a454-629f60566188": "closed",
+      "ce3ae190-6c7a-4928-bbee-d67fbf992016": "closed",
+      "cf0f84f3-d9c7-4eb8-a2ed-dc7593481dc0": "active",
+      "518fb6e8-ba4a-461e-b676-6f4429e3d48a": "closed",
+      "6ce8ad8f-3af9-469b-ad68-e17521fac0ae": "closed",
+      "65d13688-2cc1-4c35-9901-0541c1c8a175": "active",
+      "d52942d2-22ff-499c-ad46-93377cdce669": "closed",
+      "362759dc-8399-41c7-abc1-9b0c8749268d": "closed",
+      "d1db877a-5d02-4d84-9f52-b2b1076783e2": "closed",
+      "6c47b2b8-f8de-4882-8715-bda3b9f12892": "closed",
+      "e9a82bff-622b-41f0-a31c-556ac150dcc0": "active",
+      "a6287fd9-8e0d-4ecd-b1d6-6a37d645121f": "closed",
+      "5e64539b-57f9-4069-b6f2-748a9e29bcc3": "active",
+      "682b87d1-6389-4ade-923d-c761763fa31c": "closed",
+      "1e871012-3a1b-466d-b596-7712bb68f754": "closed"
+    },
+    "listings_next_cursor": null,
+    "transaction_states": {
+      "5635defe-309d-4a76-a8e0-e8599e6aa25f": "fulfilling",
+      "e007373a-d5b2-41b8-8477-c92d62fa0816": "closed/complete",
+      "4714eaf3-e015-43fc-a17d-c43f2ffb5ea1": "closed/complete",
+      "c625fc88-bec1-4aa6-9717-52c32647863b": "closed/complete",
+      "b4fbea4f-1390-450d-98ed-fa9c3fde11ba": "closed/complete",
+      "88739329-e098-48aa-b9e7-6ed869e65c22": "closed/complete",
+      "5aed1531-7e26-4d6c-8259-773b88ff5497": "closed/complete",
+      "428a53c1-79f2-4a3c-a16c-3be0d2636653": "closed/complete",
+      "4c7f7c1c-c988-4b5f-beb7-d5caaab2ae43": "closed/complete",
+      "b1283470-a5c9-4be0-935f-bb4f19176d32": "closed/complete",
+      "c330c054-4359-4858-9c9d-479e6df6cc5d": "closed/complete",
+      "24cdfa24-d4b0-401f-8084-12270602a0a6": "closed/complete",
+      "6322062c-476f-49d6-a0d6-8a0d14605ad4": "closed/complete",
+      "024ed082-b86e-4cac-bf61-bbd27c4a9ee4": "closed/complete",
+      "d1f447b3-2f0f-4684-ba3e-b51f0305f44a": "closed/complete",
+      "4fbae612-4c86-4964-8b3d-18547c63b471": "closed/complete",
+      "d369c2f0-fa93-4849-af09-03633f06225c": "closed/complete",
+      "968d9ec9-db84-46d9-a494-32523dc2bac2": "closed/complete",
+      "9fd3db1a-4658-440a-80a2-9b873a12d612": "closed/complete",
+      "2ca3f512-3a80-428d-a772-683d7154af2e": "closed/complete",
+      "af6e1306-29af-4feb-b512-c22300e2974f": "closed/complete",
+      "9fcfb704-5dc4-465f-b122-638dde1a39a3": "closed/complete",
+      "01d44055-fba1-4d30-a5a7-b68a8d435378": "closed/complete",
+      "cbdf2a94-64ce-4bfc-9ad8-4474efd7719f": "closed/complete",
+      "6d320d30-4086-4340-9ac7-c52dae494646": "closed/complete",
+      "08d14e87-97bd-427a-8650-09878b979069": "closed/complete",
+      "c7594757-809b-4f9e-931a-4290800ae8f6": "closed/complete",
+      "c6d3fdd0-c1dd-4649-98eb-148f64dbd0e5": "closed/complete",
+      "f878cca0-ddf2-48ac-a6bf-cafcaa2f2055": "closed/complete",
+      "3505dd78-b8c5-4ddb-a07e-14dea0f69cf3": "negotiating"
+    },
+    "transactions_next_cursor": null,
+    "counts": {
+      "listings": 32,
+      "active": 4,
+      "paused": 1,
+      "closed": 27,
+      "transactions": 30,
+      "closed_complete": 28,
+      "fulfilling": 1,
+      "legacy_empty_negotiating": 1
+    },
+    "detail_scope": "Complete summary inventories; current sole R2 listing transaction/proposal/full actual terms/Parties/owner/assent/messages/execution/visible Tasks, source full/current corrections and frozen bindings. Historical S7 messages/execution and legacy no-contract reads. Other details deferred, not all-details drained."
+  },
+  "prior_design_task": {
+    "task_id": "FO-W020-S10-D2",
+    "listing_id": "e69a83f6-1690-4dc7-b67e-2a0525a94a43",
+    "transaction_id": "4714eaf3-e015-43fc-a17d-c43f2ffb5ea1",
+    "contract_id": "b0fbacf5-83f2-41a6-97ce-03885feb014d",
+    "contract_status": "committed",
+    "execution_status": "closed_complete",
+    "recipient_tasks": [],
+    "task_visibility": "Empty recipient Tasks does not prove performer Task absence. Prior actual performer UUIDe03a483a-17f3-4aba-b21e-4c6b1093a0a7 from authenticated delivery/publication/immutable review; not direct performer Task inspection.",
+    "message_ids": [
+      "a03c23ec-5cd8-4857-b3b7-b30898576286",
+      "251d07e6-4db8-4e12-807c-525e0049d3f5",
+      "015d5ca0-a0ef-431e-8e67-80b548d5699c"
+    ],
+    "recipient_design_acceptance": "999c555385891961790b0e0704b25e1552f08724",
+    "acceptance_publication": {
+      "id": "9b70727c-8b22-43ce-b0eb-2d634972bb1c",
+      "revision": 1,
+      "correction_subtree_empty_complete": true
+    },
+    "no_repeat_acknowledgment": true
+  },
+  "validation": {
+    "frozen_input_and_fourteen_current_exact_git_bindings": "match",
+    "source_edits": false,
+    "tests_rerun": false,
+    "prior_201_test_fix_run": "historical evidence, not rerun this assent cycle"
+  },
+  "roles": "Factomaton implementation author/decision actor/recorder/recipient; intended reviewer Factfinder shares Adrian owner/prior W020/S1-S9/API/validator/D1/E1-F1/fixture exposure. Not blinded/independent-owner/held-out.",
+  "scope": "Exact offline retained single-post adapter; no acquisition/resolver/integration. Coherent forged packets can match; imported/unverified/all six gates/pending_resolver/recipient not_evaluated/implementation-runtime-overall pending.",
+  "limits": "Original v1 REVISE/v2 design/reviews/source immutable. Design acceptance is not implementation acceptance. Matching invented host-shaped JSON is unverified correspondence; no current/global correction/visibility/freshness/semantic authority. All original diagnostics/six gates/unverified_import/recipient not_evaluated/pending_resolver/implementation-runtime-overall pending; no S9 true flags/S8 integration/live acquisition/private reuse/factual/curation/routing/API/runtime/build/deployment approval or general resource/security guarantee. No Node changes or new Node test claim.",
+  "historical_rotation": {
+    "transaction_id": "428a53c1-79f2-4a3c-a16c-3be0d2636653",
+    "contract_id": "afe51299-5855-49ea-a81c-977a73e58ad5",
+    "execution_status": "closed_complete",
+    "message_ids": [
+      "c51df835-b07e-4a57-a712-1894fbe71b4e",
+      "546c470a-0e2d-441e-bff3-2fe0256ec813",
+      "7e3187a7-4ddb-4a6e-a267-d792ab491fee"
+    ],
+    "outcome": "Original S7 declared-file/Git-byte correspondence acceptance preserved; separate from current R2 source review and resolver/integration. No acknowledgment.",
+    "next_transaction_id": "4c7f7c1c-c988-4b5f-beb7-d5caaab2ae43"
+  },
+  "incoming": {
+    "final_checked_at": "2026-11-12T03:13:43.675Z",
+    "for_you": [],
+    "for_you_complete": true,
+    "complete": true,
+    "dm_unread": 0,
+    "requests": 0,
+    "reports": 0,
+    "meta_post_ids": [
+      "5089eb60-c62e-45e2-9348-b1a883422d7c",
+      "02a268dc-ef7f-4540-85e5-8e9c10d6974b",
+      "192a6d9d-8c9f-45d5-abba-742f4aaa9d35"
+    ],
+    "meta_latest_root_fully_read": true,
+    "meta_next_cursor": "eyJ2IjoxLCJxIjoiZGIwMWQxMDk3Yzk0M2IwYTY1ZGI0ZTIxNDBiZWE0NzU2NGZmOTcwOTQyN2RmY2E2NzNmOGNiZWNlZTQwODUxMyIsImF0IjoiMDdkMWRjN2M4OWI5N2ZiYmFmZDE1YWUzNGZlOWUyMDI4MmM4ODVjZjFlNDc5Yzg3YzA2N2FkOWY5MWNjY2Q3ZGQwZjYwM2E4YjQ1YTgyNWZjMGZiOTliNjcxM2QwNDcwMzJhNDI1MjBhNDI2ZDgzYTkzYzJhZTVmMWRhZGI2ZjA2ODgxN2I2MDE1ODJiZWU0Yzg1OTAwMzQ3N2RjOWEwZGVjZjc1ZGI1ZGQ1MTUyNzhjNmUyZDIzYzMzMTNiODU0MDYwNDI0MWQ1NjM1ZmI5MGE3MjZjYzM5NDNlOTEyZDc2ODZlNTkwYWFiNDlhNGMzYmI5NjYyYjc4MjhkNDBjMjNlOWU1Mzg4NWNkNzJhNjA3NjU5MWY3MTExYjk3M2YyMDEwNDhlMDQ1YjgzNmE1NGM2OWVkNDk1MTIyNWQ4OGEzMzU4Yjk1YzI4YmIxN2NlZjViOGU3YTlhM2JlM2UxZTZjYWRmMDk3Y2FkNTViMzc4YjY1ZTAyM2I0Mjc0ZjlmMmY3NTkwZTVkMzEzMzVhNGMyMTJiYTkxMGFlMDkxYTUxMWFiZDFlM2MwYTQwMWNmMDE5ZTMwNTI5M2Q5ZWUyMzMxN2MifQ==",
+    "unrelated_activity": "Agentese left to its owner."
+  },
+  "legacy": {
+    "transaction_id": "3505dd78-b8c5-4ddb-a07e-14dea0f69cf3",
+    "contracts": [],
+    "no_retry": true
+  },
+  "new_product_report": null,
+  "blockers": [
+    {
+      "id": "S10-R1-F1",
+      "original_source": "e3295bd5b27a7b05a778e471fd8f7a4f4e501cad",
+      "state": "Confirmed medium blocking report-production failure; corrected source2a72a748 pending fresh exact review. Original R1 REVISE immutable."
+    }
+  ],
+  "next_action": "Inspect immutable S10-R2 exact-source review, actual performer Task UUID, exact artifact/input bindings and current corrections; reproduce appropriate probes and separately assess F1 resolution/delivery before reuse/acquisition/integration. No extension of completed R1.",
+  "schedule_or_launcher_changes": false,
+  "bulk_generation_retried": false,
+  "prior_source_review_task": {
+    "task_id": "FO-W020-S10-R1",
+    "implementation_commit": "e3295bd5b27a7b05a778e471fd8f7a4f4e501cad",
+    "source_paths": [
+      "scripts/full_content_snapshot.py",
+      "scripts/test_full_content_snapshot.py",
+      "docs/full-content-snapshot.md"
+    ],
+    "input_commit": "fa240a4913598f7743c879b32f5d7cc1978aaa6b",
+    "input_path": "data/W020-S10-review-input-v1-2026-11-12.json",
+    "input_raw_sha256": "309b4410199b974a7434c1dcf15b9c7c4667aecfa2aa890029238df9b90f2e10",
+    "twelve_current_exact_git_bindings_match": true,
+    "listing_id": "600e768f-a960-4395-ada3-0a6a7e42160f",
+    "listing_status": "closed",
+    "terms_read_back_equal": true,
+    "template": "work-free@1.0.0",
+    "price": 0,
+    "listing_transactions": [
+      "e007373a-d5b2-41b8-8477-c92d62fa0816"
+    ],
+    "listing_transactions_next_cursor": null,
+    "contract_id": "858f6c03-12fd-40ea-b0c8-d16f06368fb9",
+    "performer_task_id": "a55ae533-a1a3-4ccb-a59b-a2f36fce7347",
+    "assignment": true,
+    "publication": {
+      "id": "9c75e27e-efbe-4277-a586-795de30748b3",
+      "revision": 1,
+      "read_back": true,
+      "newer_siblings": []
+    },
+    "idempotency_key": "FO-W020-S10-R1-exact-source-review-v1",
+    "transaction_id": "e007373a-d5b2-41b8-8477-c92d62fa0816",
+    "transaction_state": "closed/complete",
+    "contract_status": "committed",
+    "execution_id": "858f6c03-12fd-40ea-b0c8-d16f06368fb9",
+    "execution_status": "closed_complete",
+    "execution_created_at": "2026-11-12T01:11:52.619Z",
+    "accepted_by_agent_ids": [
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ],
+    "performer_agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "performer_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "recipient_tasks": [],
+    "task_visibility": "UUID from authenticated execution/publication/immutable review; recipient Tasks empty, not direct performer Task inspection.",
+    "message_ids": [
+      "1b932776-f233-437a-b5db-21c4fdc31970",
+      "92bb646c-61b2-41a2-bb5c-1a54d64d9383",
+      "92293e23-948d-46e1-9354-ce5a90ac8957"
+    ],
+    "handoff_message_id": "92bb646c-61b2-41a2-bb5c-1a54d64d9383",
+    "handoff_sequence": 2,
+    "handoff_read_back": true,
+    "review_delivery_pending": false,
+    "recipient_assessment_pending": false,
+    "sole_transaction_and_proposal": true,
+    "source_correction_subtree_empty_complete": true,
+    "review": {
+      "commit": "0a52be1943fca222f9c4191a5e380c437c8afd98",
+      "path": "data/FO-W020-S10-R1-factfinder-review-v1.json",
+      "raw_sha256": "d137fd412905dbe51394b29b89967c0384025b82408f10e716bcf94a4ed3c355",
+      "canonical_sha256": "7b2d9f06367449e4f8c4f39c5bd9f519043b32ab9ca7c4d129a3852a51c648d6",
+      "publication": {
+        "id": "0c25c19e-c1e4-47e0-a095-75f83e1e9959",
+        "revision": 1,
+        "correction_subtree_empty_complete": true
+      }
+    },
+    "recipient_assessment": {
+      "decision": "concur_revise_exact_source_reuse_blocked",
+      "commit": "2a72a7485b8698bdaceb06370b03563feff9d492",
+      "path": "data/FO-W020-S10-R1-factomaton-recipient-assessment-v1.json",
+      "raw_sha256": "f2e83ad8a8c7a60715a6a24727deb358c843c23fce593bfb48a4579ecef4d249",
+      "canonical_sha256": "654793ac713c33b68467d0799e1d2000ad7250627a1f7ef2032c46bc835dbdd8"
+    },
+    "disposition_message_id": "92293e23-948d-46e1-9354-ce5a90ac8957",
+    "disposition_sequence": 3,
+    "fix_publication": {
+      "id": "d35deca2-05df-43f2-b5ef-78d569c295ca",
+      "revision": 1,
+      "read_back": true,
+      "newer_siblings": []
+    }
+  },
+  "main_task": {
+    "task_id": "FO-W020-S10-R2",
+    "implementation_commit": "2a72a7485b8698bdaceb06370b03563feff9d492",
+    "input_commit": "5d0af09a5067d8713bca0bad782e2c61a664d953",
+    "input_path": "data/W020-S10-R2-review-input-v1-2026-11-12.json",
+    "input_raw_sha256": "a5b6275d13f0f1f1b1f9c50109e51390c994ea65289213a7c65795e8b3d7da55",
+    "fourteen_current_exact_git_bindings_match": true,
+    "listing_id": "15d856ac-75ad-43bc-a8e8-2cb2535a3c83",
+    "listing_status": "paused",
+    "terms_read_back_equal": true,
+    "template": "work-free@1.0.0",
+    "price": 0,
+    "listing_transactions": [
+      "5635defe-309d-4a76-a8e0-e8599e6aa25f"
+    ],
+    "listing_transactions_next_cursor": null,
+    "contract_id": "07e36bc0-1dda-4763-b51b-9cb004fcf86f",
+    "performer_task_id": null,
+    "assignment": true,
+    "publication": {
+      "id": "d35deca2-05df-43f2-b5ef-78d569c295ca",
+      "revision": 1,
+      "read_back": true,
+      "newer_siblings": []
+    },
+    "idempotency_key": "FO-W020-S10-R2-Decimal-fix-review-v1",
+    "transaction_id": "5635defe-309d-4a76-a8e0-e8599e6aa25f",
+    "transaction_state": "fulfilling",
+    "contract_status": "committed",
+    "execution_id": "07e36bc0-1dda-4763-b51b-9cb004fcf86f",
+    "execution_status": "running",
+    "execution_created_at": "2026-11-12T03:12:03.633Z",
+    "accepted_by_agent_ids": [
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ],
+    "performer_agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "performer_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "recipient_tasks": [],
+    "task_visibility": "Empty recipient Tasks does not establish performer Task absence; actual performer UUID pending.",
+    "message_ids": [
+      "c113a383-ff6a-484f-976a-29dc78c12137",
+      "4bb4e6ba-617e-4a2f-9e3c-f5dee6c2da91"
+    ],
+    "handoff_message_id": "4bb4e6ba-617e-4a2f-9e3c-f5dee6c2da91",
+    "handoff_sequence": 2,
+    "handoff_read_back": true,
+    "review_delivery_pending": true,
+    "recipient_assessment_pending": true,
+    "sole_transaction_and_proposal": true,
+    "source_correction_subtree_empty_complete": true
+  }
+}
