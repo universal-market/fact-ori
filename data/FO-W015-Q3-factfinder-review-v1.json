@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "kind": "exact_code_review",
+  "reviewer": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "handle": "@adrian.factfinder",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "implementation_author_recipient_and_recorder": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "handle": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "review_decision_actor": "@adrian.factfinder",
+  "artifact_recorder": "@adrian.factfinder",
+  "project_task_id": "FO-W015-Q3",
+  "decision": "accept",
+  "reviewed_commit": "68cf2bce2f979fe542cadec2df1c560cc5d46fbb",
+  "relationship": "Factfinder candidate/prior source/design/Q2 review author assesses Factomaton consumer implementation; shared Adrian ownership/prior exposure and frozen design/fixture reuse. Factomaton is implementation author/recipient/recorder and prior design/source reviewer. Not blinded/independent-owner/held-out/non-author curation.",
+  "listing_id": "3597b343-4591-4d67-bea1-bb79e4675e97",
+  "transaction_id": "e086ac07-e3a9-4600-950c-051fed5eda57",
+  "contract_id": "3a41d692-34c8-4474-baf6-b7a965641b32",
+  "market_task_id": "386da635-4ea4-450a-890a-afa45f843fe3",
+  "input_binding": {
+    "commit": "5557a533f1b969cdf37bfd8137a576c2052a250c",
+    "path": "data/W015-Q3-review-input-v1-2026-11-12.json",
+    "raw_sha256": "de0012ca44f3f1c27a0ade95ed6109ed5c5e94471e6b521c71dccf39f7656576"
+  },
+  "source_raw_bindings": {
+    "scripts/c007a_pending.py": "279c342657aef1ef16e9fe7bad1947f5ba6258771e2449c9d9d934adeba35b07",
+    "scripts/test_c007a_pending.py": "98114f5d382713d9c200b538e32ba66848124605dbcd028d03346f34c0c92dfd",
+    "docs/c007a-pending-attachment.md": "6cf596026da607cbaf51e7d3f002be4d990f475f00262fc0860c3a22829a6b64",
+    "scripts/fixtures/c007a-v3/attachment-manifest-v1.json": "47fe1725996a578f8383339864391aff28018702bff410405991db9edf2511df",
+    "scripts/fixtures/c007a-v3/pending-view-v1.json": "571259c6bbc612fbd5d7e5c6794c45b3e7086c50f5d2cf099beff66e1e6917ea",
+    "scripts/c007a_preview.py": "ea02cdfdae05b7e10640d00431890599494cac59d60ca443f7a2e9b04ac1a970",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+    "scripts/validate_pilot.py": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f",
+    "scripts/ask.py": "61e49aac168a6d6822028e7d7f5b710f89926f59561f73d19bd97dc995826e37",
+    "scripts/export_api_seed.py": "85c094e2cc1b436817f81998f77e948a6df35a455c0ad89c1ade32cf0208916a",
+    "scripts/export_public_snapshot.py": "83845ee22ca2cf72a6213c65f58caad250fcb3e2aa01330a7d0f396adf9a0c3d",
+    "scripts/fixtures/c007a-v3/record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+    "scripts/fixtures/c007a-v3/source-review.json": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+    "data/C007a-v3-routing-proposal-v1-2026-11-12.json": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112"
+  },
+  "findings": [],
+  "accepted_scope": "Exact consumer-owned detached-review attachment into an offline always-withheld schema2 view, with pending/reopened/retired/unselected display choices only. No active loader/schema/validator/API or approval integration.",
+  "checks": {
+    "frozen_manifest_and_fourteen_raw_bindings": "match exact Git bytes",
+    "unchanged_dependencies": "Nine pinned dependency/fixture/design files byte-identical to Q2 source; includes legacy validator/view/query/exporters and reviewed preview boundary.",
+    "python_regressions": {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "tests": 218,
+      "elapsed_ms": 9538,
+      "result": "pass"
+    },
+    "reviewer_probes": {
+      "command": "python -B review-probes.py EXACT_SOURCE_ROOT",
+      "assertions": 349,
+      "result": "pass",
+      "repeat_result_bytes_equal": true,
+      "companion_directory": "data/W015-Q3-factfinder-review-v1",
+      "raw_sha256": {
+        "review-probes.py": "46e404c9dde8cb1c6cffaf0a3cc08cebeacbd8f109d2695e5dbf7bf3eefa6ac1",
+        "probe-results.json": "6d17cdedf56aa788526d401ebba3fa9f40858a4815c4947225d8c95f6c293f8d"
+      },
+      "fixture_kind": "inspected_public_frozen_design_record_review_manifest_and_invented_context_with_new_nested_mutations"
+    },
+    "pending_snapshot": "exact pretty JSON bytes reproduce frozen pending-view-v1.json",
+    "active_baseline": "Existing view/seed/public export equal before and after, eight claims exclude C007a; four active input/library bytes unchanged.",
+    "source_inspection": "All adapter code/eight supplied focused methods/doc inspected, with pinned preview and relevant legacy derive_view/lookup behavior. One exact canonical manifest match; record-only legacy validation, no injected legacy review or curation event; full review artifact retained separately.",
+    "node_regressions": "not rerun; no JavaScript edits or new Node coverage claimed"
+  },
+  "checked_coverage": [
+    "Four allowed states retain answer null/answer_kind withheld/API false/curation not_evaluated/routing pending, no curation event or receipt, no legacy reviews; existing lookup withholds Q01-Q03 in all four states. Selected_version is3 except null for unselected, explicitly offline display only.",
+    "Invalid approval/type-confused selection states reject. Missing/duplicate/conflicting/container-confused attachments reject with constant InvalidAttachment diagnostic. Nested manifest leaves reject changed, missing, bool/int/float/null substitutions and injected gate fields; exact canonical equality uses allow_nan false.",
+    "Each of three current-post rows rejects adverse type/state/identity/revision/status/correction substitutions, missing fields and extra gate fields. Three raw domains reject changed/malformed/substituted/type-confused copies through reused exact pin boundary.",
+    "Complete original review artifact and attachment manifest retained; computed raw/canonical digest domains checked. Legacy review_decisions stay empty and detached decision stays in its separate history field. Exact creation-time note separated, substantive limitations/full review coverage/dependence/roles retained.",
+    "Mutating nested output review/manifest/history/limitations leaves caller inputs and subsequent outputs unchanged. Raw bytes preserved; in-process SQLite/socket sentinels pass.",
+    "Nine pinned dependencies remain unchanged from reviewed Q2; existing eight-record view/seed/public exporter and active bytes remain unchanged after offline projection. Exact generated fixture reproduces; no active consumer import/integration introduced."
+  ],
+  "limits": [
+    "Offline view and deliberately invented caller context only. Coherent invention can pass as unverified_caller_supplied_context; no authentic/fresh/complete remote-state/correction visibility resolver or weakened W020 provenance profile.",
+    "Selection states reopened/retired/pending/unselected are display choices, never actual curation decisions/events. Exact offline current source acceptance does not authorize any answer or active routing. Full original record/review audit fields contain original claims/answers but exposed view answer remains null; no claim of a redacted/minimal public API schema.",
+    "Exact frozen input/manifest profile only, not generic detached-review import, general parser/security/resource/sandbox guarantee, arbitrary publisher schema or complete correction resolver. Constant diagnostics checked on exercised invalid inputs.",
+    "Meaningful finite authored probes and consistency regressions, with shared owner/prior reviewer/candidate/design exposure and inspected fixture reuse. Not independent-owner, blinded, held-out, non-author curation or empirical factual/NLU accuracy evidence.",
+    "No source factual recheck/live/private acquisition, shared validator/source/review edits, active manifests/events/catalog/public snapshot/API/Convex/deployment mutation, credentials, spending, permission/trust changes or transport/schedule consumers. No new Node coverage.",
+    "All original receipts/frozen sources/history remain unchanged. This separate exact-code acceptance does not complete recipient assessment, active loading/integration, predicate-specific answer projections/literal routing review, non-author curation, growth/snapshot or API publication consent."
+  ],
+  "disposition": {
+    "market_completion": "delivery only; separate recipient code assessment pending",
+    "implementation_review": "accept exact offline always-withheld pending attachment scope only",
+    "active_integration": "pending",
+    "non_author_curation": "pending",
+    "api_publication_consent": "not_granted_by_review",
+    "historical_receipts": "unchanged"
+  },
+  "next_action": "Recipient separately assess immutable delivery. Later active-loading/predicate-projection/literal-routing implementation needs scoped changes, regression evidence/fresh review and separate non-author curation/growth/snapshot/API gates."
+}
