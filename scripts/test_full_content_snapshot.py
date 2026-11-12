@@ -112,6 +112,34 @@ class SnapshotTests(unittest.TestCase):
         # All invented host-shaped JSON can correspond without authenticating it.
         p,f,r=fixture(True);result=self.run_packet(p,f,r);self.assertEqual(result['snapshot_state'],'matching_imported_full_content_observations');self.assert_pending(result)
 
+    def test_extreme_exponents_hold_in_function_and_cli(self):
+        for token, expected in [('1e999999999999999999999999','hold'),
+                                ('1e-999999999999999999999999','hold'),
+                                ('0.25','matching_imported_full_content_observations'),
+                                ('1e-25','matching_imported_full_content_observations')]:
+            p,f,r=fixture(True,True)
+            raw=p['observations'][0]['result_json']
+            p['observations'][0]['result_json']=raw[:-1]+',"ignored_numeric_metadata":'+token+'}'
+            before=encode(p);result=self.run_packet(p,f,r)
+            self.assertEqual(result['snapshot_state'],expected);self.assert_pending(result)
+            self.assertEqual(before,encode(p))
+            if expected=='hold':
+                self.assertIsNone(result['snapshot'])
+                self.assertEqual(result['diagnostics'],['snapshot_input_or_correspondence_invalid'])
+                self.assertNotIn(token,json.dumps(result))
+            else:
+                self.assertEqual(result['provenance']['observations'],p['observations'])
+            with tempfile.TemporaryDirectory() as tmp:
+                d=Path(tmp);files={'packet':encode(p),'frontier':encode(f),'receipt':r}
+                for name,content in files.items():(d/name).write_bytes(content)
+                cmd=[sys.executable,'-B',str(ROOT/'scripts/full_content_snapshot.py')]
+                for name in files:cmd.extend(['--'+name,str(d/name)])
+                run=subprocess.run(cmd,cwd=tmp,capture_output=True,timeout=30)
+                self.assertEqual(run.returncode,0);self.assertEqual(run.stderr,b'')
+                actual=json.loads(run.stdout);self.assertEqual(actual,result)
+                self.assertLessEqual(len(run.stdout),MAX_BYTES)
+                self.assertEqual({x.name:x.read_bytes() for x in d.iterdir()},files)
+
     def test_cli_no_side_effects(self):
         p,f,r=fixture(True)
         with tempfile.TemporaryDirectory() as tmp:

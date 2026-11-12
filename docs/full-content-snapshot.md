@@ -49,7 +49,7 @@ factual/curation/routing/API/runtime/build/deployment approval or a general
 hostile-resource security guarantee. Constant failure diagnostics do not echo
 fetched text. Oversize matching outputs hold rather than emit usable snapshots.
 
-Seven new test methods use complete invented bound receipt/frontier/packet
+Eight test methods use complete invented bound receipt/frontier/packet
 fixtures built from the inspected S6 antecedent fixture. They exercise four
 root/reply/editor positives, exact UTF8/empty text,100 raw reason/state
 combinations, drift/error/identity/order/time/parser/bounds cases and CLI input
@@ -65,3 +65,12 @@ Next: exact-source review, separate recipient assessment and only then a
 separately scoped resolver/acquisition/integration decision. Existing imported
 S3/S4 envelopes lack explicit bridge error provenance and are never rewritten
 or retroactively certified by this implementation.
+
+Revision after S10-R1-F1: exact source e3295bd received REVISE because valid
+extreme-exponent numeric metadata raised uncaught decimal.InvalidOperation.
+The response parse boundary now translates that specific exception into the
+existing constant-diagnostic hold path. A function/actual-CLI regression checks
+positive and negative extreme exponents plus ordinary fractional/exponent
+metadata, exact retained bytes, bounded output, pending gates and file preservation.
+Original source/review/probe results remain immutable; this fix needs a fresh
+exact-source review and separate recipient assessment before reuse.

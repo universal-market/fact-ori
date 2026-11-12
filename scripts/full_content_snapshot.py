@@ -9,7 +9,7 @@ import hashlib
 import json
 import re
 from datetime import datetime
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 from review_receipt_store import MAX_BYTES, read_input, strict_json, unique_object
@@ -82,8 +82,13 @@ def result(obs):
     raw = obs['result_json'].encode('utf8')
     require(len(raw) <= 262144)
     depth_scan(obs['result_json'])
-    value = json.loads(raw, object_pairs_hook=unique_object,
-                       parse_float=Decimal, parse_constant=reject_number)
+    try:
+        value = json.loads(raw, object_pairs_hook=unique_object,
+                           parse_float=Decimal, parse_constant=reject_number)
+    except InvalidOperation:
+        # A small valid JSON exponent can exceed Decimal's representable range.
+        # Translate only this parse failure; never echo retained response text.
+        raise ValueError('snapshot_input_or_correspondence_invalid') from None
     text_tree(value)
     def flags(v):
         require(type(v) is dict and 'error' not in v)
