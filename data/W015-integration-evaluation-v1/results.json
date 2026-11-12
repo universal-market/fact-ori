@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "kind": "local_consumer_compatibility_evaluation",
+  "scope": "Local existing Python consumer only; no live API/runtime/source factual check.",
+  "input_raw_sha256": {
+    "data/C002-v2-review.json": "8054f61c666402cbe6f1ba39eb54cc478f9eac4a84e4986dc3f7f5bf22d2ff6d",
+    "data/C002-v2.json": "2ffa1cc31a9c7e5d5c3c3f68ef73d4b944ab8a66d80af5aa5ef917226d83df3c",
+    "data/C002-v3-factfinder-review.json": "aa5a7ad937edce27ab619a3e9403f885cb006cfb7d8699ecf76706fb1aafabe4",
+    "data/C002-v3-post-snapshot.json": "da92ec26838a43d163b02a83485e3e67e063096c3e02abea01a7af28a0ecec66",
+    "data/C002-v3.json": "8f1a7eb466935664c214e403a6b3b3c47becd03476c487bd20eb7e12768d81a4",
+    "data/C004-v1-factomaton-review.json": "96828518aa97fbb1ae639877626062777a97f92a065874e6e9f9a96d582663a8",
+    "data/C004-v1.json": "82daf2b311fa40c60a00c3a6ca1ab27ab6f600c652bc4db8f5ea7d4cb2e42bf5",
+    "data/C005-v1-factomaton-review.json": "27e646595c437eb2ee9708f662bb6ff2cf01b5f2a8ef572a2f516af47238434d",
+    "data/C005-v1-post-snapshot.json": "535d14389028a8e1efcc1a09057852199cb15485bc3132989653deb65f15ad91",
+    "data/C005-v1.json": "5448ad93b409d74ef548bb1700e01a350e19cd5f31e17aea68f7f9cd7a00ee61",
+    "data/C007a-v3-routing-proposal-v1-2026-11-12.json": "f169442090e89785d4f58c3107bf73087c1fbc72cbb0089d3a4ff181e530b112",
+    "data/C009-v1.json": "97e23b3482c3e027b274c2e4e84a2817b1d39352a8cb0c54e6063ef00656607f",
+    "data/C009-v2-factomaton-review.json": "5d6e99f6cb21d6f72812368f52392ec880551530120d9d6f1c3e163698477752",
+    "data/C009-v2-post-snapshot.json": "3b6bde7603002c2e2200e2e53a407b3dbfa0e79ebc899358b9ef196d7f7a7634",
+    "data/C009-v2.json": "fa5c71c6eff7e26ba3f43a9c3816c134d6d9cb6b2172b16580be2abee46a98e7",
+    "data/C010-v1.json": "39d8ff95557ff01a2d6e1a776df55e98ea8ffd85ef81322cc7bc83efae8f816e",
+    "data/C010-v2-factomaton-review.json": "4dc8676f484c5a667380be29b3b7537afe8bc3e043df630cca51d1c6e015f8ff",
+    "data/C010-v2-post-snapshot.json": "4280a50a5743081665e1d09fcca8e07177ec7d879f877f35d2f5cfb97b3f56c3",
+    "data/C010-v2.json": "49d55d949ce3a147b2f71eaca9ad984fd48b83fadc372fa2c60da48457afb68c",
+    "data/C011-candidate-post-snapshot.json": "66e14725a69dcc4c650fbd68f36137dfabdbd7e73522f13163a1282b5749e8a3",
+    "data/C011-candidate-review-bundle.json": "de076ac4ea65e008aab5ea3fca5d45fc68cf0d9ef944c28d050063dd5b248d0a",
+    "data/C011-v1.json": "14a10fe78dc194f1021159ac01911dfd9cfee951fcf0d2f0651d714ece2d960f",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/pilot-001-v1-public-snapshot.json": "5acd835d958275d4b2d67690ea08b494cf3c2b0a1c67ebb42351d858073a203f",
+    "data/pilot-001.json": "f26159e763b315359eb084b230655a3177a1300d5d6308e7587f01e39b622a0a",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "scripts/ask.py": "61e49aac168a6d6822028e7d7f5b710f89926f59561f73d19bd97dc995826e37",
+    "scripts/c007a_preview.py": "ea02cdfdae05b7e10640d00431890599494cac59d60ca443f7a2e9b04ac1a970",
+    "scripts/export_api_seed.py": "85c094e2cc1b436817f81998f77e948a6df35a455c0ad89c1ade32cf0208916a",
+    "scripts/export_public_snapshot.py": "83845ee22ca2cf72a6213c65f58caad250fcb3e2aa01330a7d0f396adf9a0c3d",
+    "scripts/fixtures/c007a-v3/record.json": "9a4b4f38032538680266ba97464a573c6a617fe4664f6409ac41384f1426ae37",
+    "scripts/fixtures/c007a-v3/source-review.json": "6f040646ad6484d5e36b3dff3fb2f7831fc232f84bbc187cd03e50c87657a027",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+    "scripts/validate_pilot.py": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f"
+  },
+  "observations": {
+    "detached_review_direct_legacy_validation_errors": [
+      "reviews[0]: reviewed claim/version does not exist",
+      "reviews[0]: invalid post revision",
+      "reviews[0]: invalid review receipt UUID",
+      "reviews[0]: invalid reviewer decision",
+      "reviews[0]: missing reviewer_owner",
+      "reviews[0]: missing author_owner",
+      "reviews[0]: missing review_text",
+      "reviews[0]: missing evidence_verdict",
+      "reviews[0]: missing librarian_disposition",
+      "reviews[0]: missing input_fingerprint_format"
+    ],
+    "synthetic_pending_view": {
+      "answer": null,
+      "current_review_state": "awaiting_review",
+      "creation_note_still_in_current_limitations": true,
+      "creation_note_in_historical_review_notes": false
+    },
+    "synthetic_pending_Q01_Q02_Q03_status": [
+      "withheld",
+      "withheld",
+      "withheld"
+    ],
+    "synthetic_lookup_bypass_Q01_Q02_Q03_return_whole_compound_answer": true,
+    "synthetic_lookup_bypass_uppercase_query_status": "answer",
+    "outside_scope_route_kind_error": "unknown route kind",
+    "baseline": {
+      "local_view_claims": 8,
+      "local_seed_claims": 8,
+      "local_public_records": 8,
+      "local_seed_import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+      "local_public_snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "C007a_present": false
+    },
+    "all_named_input_bytes_unchanged": true
+  },
+  "limitations": [
+    "Synthetic pending event and lookup-only approved-state bypass are in-memory probes, not curation or validated approval.",
+    "Legacy failure is interface incompatibility, not invalid factual evidence or failed exact preview code review.",
+    "Whole-answer behavior is intended by the existing claim route; predicate slicing and byte-exact matching require new explicit policy.",
+    "Local seed/export checks do not identify the deployed runtime or certify remote currentness.",
+    "Input hash equality covers named code/active data files, not all filesystem state or remote state."
+  ]
+}
