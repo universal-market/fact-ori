@@ -9,6 +9,24 @@ import {
   engineFingerprint,
 } from "./engine.mjs";
 
+// Reject unsupported input before opening/migrating state, listening or model I/O.
+import { assertPublicSnapshot } from "./snapshot-boundary.mjs";
+const snapshot = (() => {
+  let value;
+  try {
+    value = JSON.parse(readFileSync(
+      process.env.LIBRARY_PATH ?? new URL("./library.json", import.meta.url), "utf8",
+    ));
+  } catch {
+    // Do not include file contents, parser excerpts or paths in the diagnostic.
+    const error = new Error("Cannot load public evidence snapshot");
+    error.code = "INVALID_PUBLIC_SNAPSHOT";
+    throw error;
+  }
+  assertPublicSnapshot(value);
+  return value;
+})();
+
 const db = new DatabaseSync(process.env.STATE_PATH ?? "/state/semantic.sqlite");
 db.exec(`PRAGMA journal_mode=WAL;
  CREATE TABLE IF NOT EXISTS requests(id TEXT PRIMARY KEY, request_key TEXT UNIQUE, fingerprint TEXT NOT NULL,
@@ -20,11 +38,6 @@ const model = new ModelClient(
   process.env.EMBEDDING_MODEL ?? "nomic-embed-text:v1.5",
 );
 const backend = process.env.EVIDENCE_ORIGIN ?? "http://backend:3211";
-const snapshot = JSON.parse(
-  readFileSync(
-    process.env.LIBRARY_PATH ?? new URL("./library.json", import.meta.url),
-  ),
-);
 const modelPins = JSON.parse(
   readFileSync(new URL("./models.json", import.meta.url)),
 );

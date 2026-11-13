@@ -53,7 +53,8 @@ function fixture(id = "C005", assessment = {}) {
     },
   };
   const engine = new FactEngine({
-    snapshot: { ...library, records: [record] },
+    snapshot: { ...library, records: [record],
+      exact_mappings: library.exact_mappings.filter((m) => m.kind === "clarify" || m.claim_id === id) },
     model,
     db: new DatabaseSync(":memory:"),
     backend: "http://unused",
@@ -315,6 +316,7 @@ test("different conditions do not hide a later matching package", async () => {
   const { engine } = fixture();
   engine.snapshot = {
     ...library,
+    exact_mappings: library.exact_mappings.filter((m) => m.kind === "clarify" || ["C010", "C005"].includes(m.claim_id)),
     records: [
       library.records.find((r) => r.claim_id === "C010"),
       library.records.find((r) => r.claim_id === "C005"),

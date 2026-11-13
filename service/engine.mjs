@@ -1,11 +1,12 @@
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
+import { assertPublicSnapshot } from "./snapshot-boundary.mjs";
 
 export const digest = (value) =>
   createHash("sha256").update(value).digest("hex");
 export const engineFingerprint = () =>
   digest(
-    ["./engine.mjs", "./server.mjs", "./models.json"]
+    ["./engine.mjs", "./server.mjs", "./models.json", "./snapshot-boundary.mjs"]
       .map((path) => readFileSync(new URL(path, import.meta.url), "utf8"))
       .join("\n"),
   );
@@ -232,6 +233,7 @@ export function cosine(a, b) {
 
 export class FactEngine {
   constructor({ snapshot, model, db, backend }) {
+    assertPublicSnapshot(snapshot);
     this.snapshot = snapshot;
     this.model = model;
     this.db = db;
@@ -241,7 +243,9 @@ export class FactEngine {
     );
   }
   async initialize() {
+    // Discard previously indexed candidates even when reinitialization rejects.
     this.records = [];
+    assertPublicSnapshot(this.snapshot);
     for (const row of this.snapshot.records) {
       const aliases = this.snapshot.exact_mappings
         .filter((a) => a.claim_id === row.claim_id)
