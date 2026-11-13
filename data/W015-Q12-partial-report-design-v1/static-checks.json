@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q12",
+  "kind": "design_static_checks_only",
+  "checks": [
+    "51 prior bindings unchanged",
+    "570+20+10=600 second maxima; frozen phase ceilings180 retained",
+    "exact2frozen case IDs match",
+    "23unique scenario IDs;2 valid case states each",
+    "non-success worker matrix never expects passed",
+    "raw result/reason absent from public projection key lists"
+  ],
+  "status": "pass_static_consistency_only",
+  "runtime_execution": false,
+  "limits": "Not implementation, fault execution, sanitizer, file-race, deadline feasibility or cleanup/resource proof."
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q12",
+  "kind": "proposed_offline_partial_result_failure_report_design",
+  "status": "design_only_not_implemented",
+  "author_decision_actor_recorder": "@adrian.factomaton",
+  "intended_reviewer": "@adrian.factfinder",
+  "basis": {
+    "worker_commit": "36406d7e3913ed00dc7d28aa5bc6f9faebaa13c9",
+    "worker_manifest_raw_sha256": "734b70a0e38b8e8d98abaaff54f517c3892891f3b4b3b2c4afc9f3a74b0083dc",
+    "worker_recipient_assessment_commit": "407ba827873e12aafe73b74d5bb6d8e500a60974",
+    "supervisor_path": "scripts/diagnostic_supervisor.py",
+    "supervisor_raw_sha256": "ff1def60279575f7929e65089d70a7e5ac906374ccfcdf23231c7ee8e708da44",
+    "frozen_protocol_path": "data/W015-Q8-real-model-protocol-v1/protocol.json",
+    "case_ids": [
+      "capital-paraphrase",
+      "unknown-no-consent"
+    ]
+  },
+  "scope": "New offline trusted-fixture wrapper/worker variant design. Accepted supervisor/worker-v2 bytes remain immutable. No live model/general sanitizer/Docker/resource/public API acceptance.",
+  "overall_budget_seconds": 600,
+  "budget_partition_seconds": {
+    "supervised_worker_including_own_cleanup": 570,
+    "supervised_reconciliation_including_own_cleanup": 20,
+    "parent_report_and_directory_cleanup_reserve": 10
+  },
+  "worker_phases_seconds": {
+    "startup": 180,
+    "capital-paraphrase": 180,
+    "unknown-no-consent": 180
+  },
+  "file_limits": {
+    "per_case_bytes": 262144,
+    "case_file_count": 2,
+    "public_report_bytes": 65536,
+    "case_prefix_only": true,
+    "duplicate_json_keys": "reject",
+    "utf8": "strict",
+    "envelope_keys": "exact",
+    "result_keys": "finite v2 validator coverage only; omitted from public report"
+  },
+  "checkpoint_envelope_keys": [
+    "schema_version",
+    "run_id",
+    "case_id",
+    "ordinal",
+    "input_sha256",
+    "implementation_commit",
+    "worker_raw_sha256",
+    "import_id",
+    "result"
+  ],
+  "case_states": [
+    "validated",
+    "unavailable",
+    "rejected",
+    "not_reconciled"
+  ],
+  "public_report_keys": [
+    "schema_version",
+    "task_key",
+    "mode",
+    "run_outcome",
+    "failure_codes",
+    "supervisor",
+    "reconciliation",
+    "cases",
+    "publication_scope",
+    "limits"
+  ],
+  "public_case_keys": [
+    "case_id",
+    "state",
+    "reason_code",
+    "checkpoint_digest",
+    "validated_projection"
+  ],
+  "projection_keys": [
+    "status",
+    "answer",
+    "verdict",
+    "inspection",
+    "evidence_package_canonical_sha256",
+    "import_id",
+    "public_review",
+    "live_source_refresh",
+    "projection_source"
+  ],
+  "run_outcomes": [
+    "passed",
+    "failed",
+    "not_reconciled"
+  ],
+  "failure_code_vocabulary": [
+    "worker_supervision_failed",
+    "checkpoint_missing",
+    "checkpoint_invalid",
+    "checkpoint_order_invalid",
+    "reconciliation_failed",
+    "reconciliation_deadline",
+    "report_unavailable",
+    "directory_cleanup_failed"
+  ],
+  "success_rule": "Supervisor status success AND all three ordered phases AND leader_reaped true/within_total_deadline true AND both checkpoints exact-bound/validated in prefix order AND reconciliation child success/leaderreaped/within its cap AND report encoded within limit AND own directory cleanup success. Otherwise never passed; validated partial cases remain inspectable only in allowlisted projection.",
+  "limits": [
+    "Design only; no implementation/probes/model/cleanup/resource proof.",
+    "Same exposed public two cases/deterministic callbacks; no held-out/independent-owner factual corroboration.",
+    "No raw result/reason/candidate/model_assessment/prompt/log/exception/path/run_id or arbitrary child metadata in public report.",
+    "Observed byte hashes of rejected oversized files are marked prefix, never claimed full-file hashes.",
+    "Best effort monotonic budget, not OS hard real-time or general descendant cleanup guarantee.",
+    "Raw full checkpoint artifacts are ephemeral trusted public-fixture local files only, deleted before final report; retaining them would need a separately reviewed scope."
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q12",
+  "status": "required_not_executed",
+  "cases": [
+    {
+      "id": "complete",
+      "worker_status": "success",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "expected": "passed"
+    },
+    {
+      "id": "case2_nonzero",
+      "worker_status": "child_failed",
+      "case_states": [
+        "validated",
+        "unavailable"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "case2_timeout",
+      "worker_status": "phase_timeout",
+      "case_states": [
+        "validated",
+        "unavailable"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "startup_timeout",
+      "worker_status": "phase_timeout",
+      "case_states": [
+        "unavailable",
+        "unavailable"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "write_before_event_then_exit",
+      "worker_status": "child_failed",
+      "case_states": [
+        "validated",
+        "unavailable"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "event_without_file",
+      "worker_status": "success",
+      "case_states": [
+        "unavailable",
+        "unavailable"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "second_without_first",
+      "worker_status": "success",
+      "case_states": [
+        "unavailable",
+        "rejected"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "invalid_first_valid_second",
+      "worker_status": "success",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "wrong_run_binding",
+      "worker_status": "success",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "wrong_input_or_pin",
+      "worker_status": "success",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "duplicate_keys_or_non_utf8",
+      "worker_status": "success",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "oversized_or_symlink_file",
+      "worker_status": "success",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "truncated_temp_only",
+      "worker_status": "child_failed",
+      "case_states": [
+        "unavailable",
+        "unavailable"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "two_valid_then_nonzero",
+      "worker_status": "child_failed",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "two_valid_then_exit_timeout",
+      "worker_status": "exit_timeout",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "verifier_timeout",
+      "worker_status": "success",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "expected": "not_reconciled"
+    },
+    {
+      "id": "leader_not_reaped",
+      "worker_status": "cleanup_failed",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "expected": "not_reconciled"
+    },
+    {
+      "id": "directory_cleanup_failed",
+      "worker_status": "success",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "expected": "failed"
+    },
+    {
+      "id": "report_write_failed",
+      "worker_status": "success",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "expected": "no_report_fixed_error"
+    },
+    {
+      "id": "raw_reason_extension_sentinel",
+      "worker_status": "success",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "expected": "passed_without_sentinel"
+    },
+    {
+      "id": "rejected_result_sentinel",
+      "worker_status": "success",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "expected": "failed_without_sentinel"
+    },
+    {
+      "id": "existing_output",
+      "worker_status": "not_started",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "expected": "no_report_fixed_error"
+    },
+    {
+      "id": "insufficient_reconciliation_reserve",
+      "worker_status": "success",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "expected": "not_reconciled"
+    }
+  ],
+  "additional_obligations": [
+    "full schema and exact fixed projection validation; unexpected/freeform keys rejected",
+    "stable-descriptor size/swap/no-follow/single-link checks",
+    "no repeated phase events/no retry/no window reset; shared supervisor unchanged",
+    "all counters/digests bounded typed values; no raw sentinel in any public field",
+    "changed implementation and read inputs require fresh review"
+  ]
+}
