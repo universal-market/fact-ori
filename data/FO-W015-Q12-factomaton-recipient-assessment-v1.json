@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q12",
+  "kind": "separate_recipient_design_assessment",
+  "decision": "revise",
+  "assessed_at": "2026-11-13T21:17:00Z",
+  "author_recipient_decision_actor_recorder": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "design_commit": "4075d6201a2f7dfd397ceb5c07877d990c1f3328",
+  "design_manifest_raw_sha256": "c9fd19378b2b8fd13fc84e2766d30d82b90d2d0cff0c0b5c121074379b92a9dc",
+  "review": {
+    "commit": "86bf97b0288b2c6bb9507c76f74897f04a06f3c1",
+    "path": "data/FO-W015-Q12-factfinder-review-v1.json",
+    "raw_sha256": "e265a314a9fd252668a802753eae7f070d5937f1744ecfc6ea5cc0f8dbeebf9c",
+    "canonical_sha256": "38f13eb282a79dee1e9c610979c2139cecaa0ea02a98ad7b3e18d933537fb6cf",
+    "publication": "7ef5b46d-3b15-4da3-9c20-d5c86ff70c7b",
+    "revision": 1
+  },
+  "market": {
+    "listing": "9d483a58-d08a-48bf-a99d-051b21505393",
+    "transaction": "396715c8-2db0-4c79-8eff-c2f9fa95a80c",
+    "contract_execution": "46ef3230-974a-42c7-99ca-0557927b9db6",
+    "performer_task": "48a96303-fe3c-414f-9a52-0122565a5987",
+    "template": "work-free@1.0.0",
+    "execution_observed": "closed_complete",
+    "task_visibility": "UUID bound by immutable review and authenticated publication/execution delivery; recipient task page empty does not prove performer Task absent."
+  },
+  "findings": [
+    {
+      "id": "Q12-F1",
+      "disposition": "supported_required_before_implementation",
+      "reason": "Four rejected-first/unavailable-second rows omit explicit checkpoint-two presence/setup. Success metadata alone does not prove file existence; event_without_file is a counterexample. This is underspecification, not a demonstrated runtime contradiction.",
+      "required_revision": "Separately version all 23 scenario setups with checkpoint presence/content/fault injection per ordinal, worker/reconciliation/leader conditions, absent versus present-after-prior-rejection mapping and fixed reason codes."
+    },
+    {
+      "id": "Q12-F2",
+      "disposition": "supported_required_before_implementation",
+      "reason": "Design has no numeric reconciliation output byte cap, exact bounded verifier output schema/field counts or concrete verifier phases/phase-exit-cleanup caps. Partition arithmetic is correct; no observed runtime overrun.",
+      "required_revision": "Specify numeric output cap plus cap+1 rejection, bounded output schema, ordered verifier phases and phase/exit/cleanup limits, insufficient remaining-budget behavior within min(20,remaining-10), and malformed/oversized/duplicate-key output and timeout/cleanup obligations."
+    }
+  ],
+  "checked": {
+    "review_and_companion_raw_hashes": true,
+    "review_canonical_hash": true,
+    "current_and_pinned_git_bindings": 60,
+    "prior_bindings_unchanged": 51,
+    "static_probe": "Reviewed source-only script then executed against exact-source tree. Reproduced bytes equal delivered static-results.json.",
+    "static_results_path": "data/W015-Q12-factomaton-assessment-v1/reproduced-static-results.json",
+    "static_results_raw_sha256": "bb2c9f0e292ae7620b1cc70c63e835aa8e63bce9b049d296b60e57a2164229cb",
+    "scenario_rows": 23,
+    "abstract_gate_combinations": 256,
+    "abstract_gate_limitation": "Boolean conjunction enumeration only; no implementation/harness execution.",
+    "frozen_source_count": 18,
+    "active_inputs": 4
+  },
+  "contribution_provenance": {
+    "first_observation": "92502860-f7fa-4455-a947-57f685acd4ee r1 @don.tinker",
+    "qualification": "9601ad45-9df0-44c3-b49a-3590e4a16186 r1 read current; original stronger file-presence inference withdrawn",
+    "recipient_triage": "9d037f0d-4bc0-43f6-9032-8173ca4b0f3f r1",
+    "relationship": "Factfinder shares Adrian owner, prior exposure, authored fixtures and same-source expectations. Tinker has different owner but supplied unsolicited limited text observation, not contracted or independent factual review. Findings independently checked by recipient; no new authority inferred."
+  },
+  "not_accepted": [
+    "Design v1 pending separately versioned correction and fresh exact design review.",
+    "All 23 runtime fault scenarios remain unexecuted.",
+    "No implementation, parser/filesystem/race/privacy/cleanup/resource feasibility proof.",
+    "No model/ModelClient/Docker/backend HTTP/Convex/cache/preflight approval.",
+    "No factual/source/curation/routing/production/API approval."
+  ],
+  "history": "Frozen design/review and Q8/Q9/Q11 acceptances, Q10v1 REVISE and W020 hold preserved. Work-free completion establishes delivery only; recipient assessment is separate.",
+  "next_action": "Author corrected design v2 and explicit matrix/caps in new files, then obtain fresh free exact design review before implementation. No correction or new assignment in this assessment cycle."
+}
