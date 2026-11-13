@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "task_key": "W015-Q7-candidate-v1",
+  "kind": "isolated_candidate_container_packaging_evaluation",
+  "source_commit": "9e87c693d25df86b9e5300a9b71dcdaa5a6b372e",
+  "base_image": "node@sha256:5ec23b7c622b00547753bc6ffd78085dd868a68aeb41c8e0a1418f033e13d96d",
+  "candidate_tag": "factori-q7-candidate:9e87c693d25d",
+  "candidate_image_id": "sha256:39838c0cf50ea2a4f717ff863bf954f2c16699e70398f3b4d7be1b4f51b0004b",
+  "image_built_this_run": false,
+  "build_network": "none",
+  "exact_git_archive_paths": [
+    ".dockerignore",
+    "deploy/self-hosted/semantic.Dockerfile",
+    "service",
+    "public/library.json",
+    "public/openapi.json",
+    "scripts/semantic-report.mjs",
+    "scripts/evaluation-contracts"
+  ],
+  "archive_raw_sha256": "69af7b40cbdb443dde6ac3aa3dad1387ad80de75965048fae943e207021facbd",
+  "dockerignore_raw_sha256": "b34f29cd627300f847d178a60f813743f688f7e18dcdaa7ac5c4fce85fde4115",
+  "dockerfile_raw_sha256": "e6b80acb6a983535439e842746f72e566058763329b32b488fec1b3e6657d695",
+  "expected_file_hashes": {
+    "engine.mjs": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+    "server.mjs": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+    "models.json": "18b2f8c13ffacac7aec447ca6613c14f0d1ef06280528c200505f0a9187d11c5",
+    "snapshot-boundary.mjs": "7cac6c4ef040bb231b8d046c896bdaa9158d214367814832693680090c9c552d",
+    "library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "expected_fingerprint": "d89e3de91ff22e70d8ff2aec3f8e61cb7dcd399e8aa83218444fbbc11a95654e",
+  "packaged": {
+    "files": {
+      "engine.mjs": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+      "server.mjs": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+      "models.json": "18b2f8c13ffacac7aec447ca6613c14f0d1ef06280528c200505f0a9187d11c5",
+      "snapshot-boundary.mjs": "7cac6c4ef040bb231b8d046c896bdaa9158d214367814832693680090c9c552d",
+      "library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "fingerprint": "d89e3de91ff22e70d8ff2aec3f8e61cb7dcd399e8aa83218444fbbc11a95654e",
+    "import_error": null
+  },
+  "default_startup": {
+    "exit_code": 1,
+    "stdout": "Fact-ori semantic API listening\n",
+    "interpretation": "Valid snapshot reaches model identification but network-disabled candidate cannot reach inference; not a readiness/HTTP/model verdict.",
+    "error_category": "model_identification_fetch_failed_with_network_none",
+    "cause_code": "EAI_AGAIN",
+    "raw_stderr_published": false
+  },
+  "invalid_snapshot_startup": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "file:///app/snapshot-boundary.mjs:13\n  const error = new Error(\"Unsupported or malformed public evidence snapshot\");\n                ^\n\nError: Unsupported or malformed public evidence snapshot\n    at fail (file:///app/snapshot-boundary.mjs:13:17)\n    at assertPublicSnapshot (file:///app/snapshot-boundary.mjs:34:37)\n    at file:///app/server.mjs:26:3\n    at file:///app/server.mjs:28:3\n    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {\n  code: 'INVALID_PUBLIC_SNAPSHOT'\n}\n\nNode.js v22.23.4\n"
+  },
+  "container_limits": {
+    "network": "none",
+    "read_only_root": true,
+    "capabilities": "ALL dropped",
+    "no_new_privileges": true,
+    "memory": "256m",
+    "pids_limit": 64,
+    "state": "ephemeral tmpfs, no production mount"
+  },
+  "findings": [],
+  "limits": [
+    "Independent owner-authorized engineering evaluation, not extension/reopening/submission of completed Q7 Task.",
+    "No production service, port, network, volume, model, credential, notification or schedule changes.",
+    "No valid HTTP/model/factual/runtime approval; stop at first packaging/startup failure.",
+    "Docker image local content ID is observed, not a signed/reproducible-build attestation."
+  ],
+  "initial_probe_revision_note": "First unpublished probe assumed missing guard and asserted before saving results. Actual image contained guard. Reconciled existing exact-labeled image; corrected probe records observed results and adds actual container invalid-snapshot case. No source or Dockerignore fix required by measurement."
+}
