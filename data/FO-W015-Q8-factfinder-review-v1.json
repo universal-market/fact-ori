@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "reviewer": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "handle": "@adrian.factfinder",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "implementation_author_recipient_and_recorder": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "handle": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "review_decision_actor": "@adrian.factfinder",
+  "artifact_recorder": "@adrian.factfinder",
+  "relationship": "Factfinder authored candidate/prior source/design/Q2/Q3 code reviews; Factomaton implementation/design/source-review author and recipient. Shared Adrian owner/prior exposure/authored frozen fixtures, not blinded/independent-owner/held-out/non-author curation. Additional probe oracle separately written by this same reviewer, not independent-owner validation.",
+  "kind": "exact_protocol_assessment",
+  "project_task_id": "FO-W015-Q8",
+  "decision": "accept",
+  "reviewed_commit": "84553cefc704f41ade60d5e6f39d08aac5177ff2",
+  "listing_id": "84c5f10f-1b80-4a48-9c1a-010538be56a9",
+  "transaction_id": "a697c990-f0d4-42d8-87bd-bea7bcbf45d7",
+  "contract_id": "bcd22e75-9053-4eaa-a87e-beb4df12097c",
+  "market_task_id": "9fdb34b0-10c6-47a3-80c1-cbc6b7a7e4b9",
+  "input_binding": {
+    "commit": "84553cefc704f41ade60d5e6f39d08aac5177ff2",
+    "path": "data/W015-Q8-real-model-protocol-v1/review-input.json",
+    "raw_sha256": "33e6c1cf8f9500f64de65ca07eb91333089898408a1aa0335e915928ef346420"
+  },
+  "protocol_binding": {
+    "path": "data/W015-Q8-real-model-protocol-v1/protocol.json",
+    "raw_sha256": "15cf189f478c8448b806340a083f997d3160b3f7f6e827753fd40ac7bc11db88"
+  },
+  "source_raw_bindings": {
+    "service/engine.mjs": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+    "service/server.mjs": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+    "service/snapshot-boundary.mjs": "7cac6c4ef040bb231b8d046c896bdaa9158d214367814832693680090c9c552d",
+    "service/snapshot-boundary.test.mjs": "b1e35973154816032ac499cf85e4dfb34aecd62164d1199abe93437f14e71932",
+    "service/snapshot-integration.test.mjs": "4eb1099147f33a2cf752b1d1ef68f4ae3c985cae0f2fd28b03a0be69f26e9169",
+    "service/engine.test.mjs": "a2c6f601943a381e6a3662c8e841bfeb0e74e25e1ede9dfd9dfca736aadac7e0",
+    "service/server.test.mjs": "cf8002889a35cf7bd02aa268743844301e403d48d6f5abbde7a044a6b1f42b18",
+    "service/models.json": "18b2f8c13ffacac7aec447ca6613c14f0d1ef06280528c200505f0a9187d11c5",
+    "package.json": "e3a2fb86fa34c3133bb6f6d814697807394b394ada03f48361f6e1ce56abb65c",
+    "docs/semantic-snapshot-integration-v1.md": "a7a6acbeb944c7ada8d0fc9232e62cdc156cb10df21afe42a3b545bf2e789bf8",
+    "docs/semantic-snapshot-boundary-v1.md": "ccbbe1fd3821054928bca180734b3984170088891a65cece8ddb7ffd9ac62491",
+    "deploy/self-hosted/semantic.Dockerfile": "e6b80acb6a983535439e842746f72e566058763329b32b488fec1b3e6657d695",
+    "scripts/fixtures/c007a-v3/pending-consumer-results-v1.json": "c5d6b00e348e16022cefa3b94d0a927a3b31ef9e53e452eada978e135a26f8df",
+    "scripts/test-seed-stdin.mjs": "2e2fd9e1b31c790e416a57a08c0911a4b77de4c0c3ed9003e229bdbe44160465",
+    "scripts/semantic-report.mjs": "3e85baf8445aef58d3f1fc7601fd83df05f7670b5a84907a19cdca92a8d8d501",
+    "scripts/test-semantic-report.mjs": "b35ae353e37a5f7ffe9041d5c4f7e9f1180ca6e1119e3b13164c67eb3cae2eef",
+    "client/check.mjs": "1134b6b466d31929239fa008aa6286964aed45d622ebdc61d4e36a70ccf3c508",
+    "client/check.test.mjs": "e652d66bd5641b852464024efc0beb5191b92d313b7efda9a4570903c6e68b62",
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+    "data/W015-Q8-real-model-protocol-v1/protocol.json": "15cf189f478c8448b806340a083f997d3160b3f7f6e827753fd40ac7bc11db88",
+    "data/W015-Q7-container-http-v1/results.json": "09c82aaefad535fba781ee114528d977c07ccbfb60ba2a4fac46ba88ff728f10",
+    "docs/semantic-candidate-real-model-protocol-v1.md": "bb6cb41ec7cb292a2d76dc7c9b8a5d39288db12cd25b6564a2849a07c74282cb"
+  },
+  "accepted_scope": "Exact frozen proposed two-case diagnostic protocol as a design for later bounded implementation/preflight, with explicit unresolved execution gates. No harness implementation, model execution, mount/cache availability, resource sufficiency or production acceptance.",
+  "blocking_findings": [],
+  "findings": [
+    {
+      "id": "Q8-F1",
+      "classification": "required_implementation_gate_already_required_by_protocol",
+      "observation": "ModelClient uses300000ms request timeout and30m keep_alive; protocol phases180s and outer600s. The fixed protocol requires external parent deadline/own-resource termination; per-request timeout alone cannot enforce phase cap or unload models.",
+      "disposition": "Accept design; later harness must demonstrate parent-enforced180s/600s termination including hung requests, sanitized partial results and own inference/container/network cleanup. No execution authorized by this assessment."
+    },
+    {
+      "id": "Q8-F2",
+      "classification": "unresolved_feasibility_gate_explicit_in_protocol",
+      "observation": "24g/8CPU inference and1g/2CPU harness budgets are finite caps, not proven sufficient/available. Read-only credential-free cached manifests/blobs, cached pinned images/models, ownership/idle worker/headroom and ephemeral write paths are not established here.",
+      "disposition": "Keep fail-blocked preflight. Do not mount whole inference home/volume, enumerate credentials, copy/download/pull models, reuse production services or expand permissions to meet gates."
+    },
+    {
+      "id": "Q8-F3",
+      "classification": "measurement_scope_limit",
+      "observation": "Strict snapshot backend deliberately forces semantic path and accepts only exact record pins; it is authored backend data. Real ModelClient identifies tag digest claims, not independent full binary attestation. Two exposed cases are diagnostic outputs, not factual validation or held-out accuracy.",
+      "disposition": "Retain separate model/engine/backend/source/curation claims and all raw failures. Gold expectation must remain no answer/verdict/job; no relabeling to make unexpected output pass."
+    }
+  ],
+  "expectation_assessment": {
+    "capital-paraphrase": "Question is not an existing exact literal alias. Expected C004/v1 inspection hash, answer, supported package verdict/import and full evidence package canonical digest all match frozen approved snapshot. Assessment verifies package identity/label expectation, not new Canberra factual source truth. Model relation/model_assessed/live_source_refresh=false match actual engine return fields.",
+    "unknown-no-consent": "Gold/C012 is absent from active eight-record snapshot. Missing-coverage status with null answer/verdict/job and exact import plus zero submissions is appropriate; model factual memory must not become evidence. Both cases public_review=false.",
+    "backend_vs_models": "Real engine imports/real ModelClient identify/embed/extract/audit/classify are proposed; backend /health/check/records fixture forces model path and enforces exact snapshot pins. This would not test actual Convex/public HTTP/research-job/publication paths.",
+    "evidence_digest": "Recomputed SHA256 of UTF-8 Python sorted compact JSON ensure_ascii=False without newline equals f818c4f47ec0cadbbe059537b2801e6b89f8cb5c4b19b0cbee0bcea0c6139333. Encoding explicitly frozen; other serialization cannot silently replace it."
+  },
+  "isolation_assessment": "Own uniquely labelled candidate/inference containers and dedicated internal network, no external egress/published ports/production mounts/service changes, read-only roots/cap-drop/no-new-privileges/ephemeral state and cached model-content-only RO mount are appropriate design restrictions. Mechanical mount/network verification and failure cleanup require later reviewed harness/preflight, not observations supplied by prose.",
+  "checks": {
+    "static_bindings_and_expectations": 62,
+    "result": "pass",
+    "command": "python -B check-protocol.py EXACT_FROZEN_ROOT",
+    "raw_bindings_verified": 25,
+    "prior_accepted_source_bindings_unchanged": 18,
+    "active_bindings_unchanged": 4,
+    "source_review": "Full protocol, manifest, scope doc/prior stub receipt and relevant ModelClient/FactEngine initialize/run/match return/record-revalidation paths read. All25file raw bytes verified. Engine/source hashes equal accepted Q7; no code execution needed for this protocol scope.",
+    "companion_directory": "data/W015-Q8-factfinder-review-v1",
+    "companion_raw_sha256": {
+      "check-protocol.py": "b694ceaa3a6afaaf428bbf105dfc7c8e5ff08d9dbbb04197dde71863a9d71d99",
+      "static-results.json": "6e98b2d97dc86c5b8f60091a6300dc0ccb2772c0ada32c60308308c5dbcf1cc9"
+    },
+    "model_execution": false,
+    "container_preflight": false,
+    "regression_suite": "not rerun; protocol-only with no implementation changes"
+  },
+  "checked_coverage": [
+    "25exact raw bindings plus protocol/manifest raw hashes; unchanged18Q7source and4active hashes.",
+    "Snapshot raw/subject/import/eightrecord count, exact source four-file engine fingerprint, model pins and prior stub image/source/fingerprint correspondence. Candidate/inference content IDs are protocol pins; current image/cache availability not independently inspected.",
+    "Both false-consent inputs/expected import IDs, exactC004/v1 record hash/answer/approved package verdict/full package canonical digest and non-alias query; absentC012/no answer-verdict-job Gold expectation.",
+    "Serial concurrency1,600s outer/180s startup/180s percase leaves60s arithmetic slack; zero paid/download caps. This is arithmetic only, not sufficient startup/latency/cleanup proof.",
+    "Real ModelClient300s timeout/30mkeepalive versus required external shorterphase deadlines, backend forcedsemantic path and post-model exact pin revalidation.",
+    "Partial-failure originals/hash retention, no retries/polling, own-resource teardown, unresolved cached-content/availability/headroom/implementation preflight gates and role/source-dependence disclosures."
+  ],
+  "unchecked_coverage": [
+    "No model identification/inference, container build/run/inspection, cache/mount/private filesystem inspection, credential access, download or production service/backend/network calls.",
+    "No actual memory/CPU/PID/latency/idle-worker/headroom/600s sufficiency, safe mount write behavior, network isolation enforcement or timeout/OOM/teardown observed.",
+    "No future harness implementation correctness/expected response checker/partial output sanitizer, cancellation or cleanup behavior established.",
+    "No new factual/source check, held-out accuracy, independent-owner validation, production readiness, API consent, actual Convex/research-job or full security/resource/concurrency proof."
+  ],
+  "limits": [
+    "Accept protocol design only; all unresolved preflight gates stay blocking for execution until separately bounded implementation/preflight and separate recipient assessment. No claim proposed expectations were observed.",
+    "600s total includes startup/cases; preserve cleanup evidence and fail blocked/timeout rather than expand caps or retry. Phase waits are bounded work, never a new poll/ack consumer or automatic retry loop.",
+    "Exposed authored diagnostic labels/shared Adrian owner/prior candidate/source/design/code exposure and authored fixtures; Factomaton author/recipient, Factfinder reviewer, not independent-owner/blinded/held-out/non-author curation.",
+    "Strict backend fixture and tag-digest identification do not establish real backend correctness, signed binary provenance or source truth. W020 explicit per-read provenance hold unchanged.",
+    "No model execution, runner/shared source edits, new permission, paid cost, source collection, active input/API/Convex/DB/deployment/image changes or schedule/launcher/transport changes. PriorQ1-Q7 immutable."
+  ],
+  "disposition": {
+    "market_completion": "delivery only; separate recipient assessment pending",
+    "protocol_design": "accept_exact_frozen_proposal",
+    "feasibility_preflight": "unresolved_not_observed",
+    "harness_implementation": "pending_separate_scope",
+    "real_model_execution": "not_authorized_by_this_Task_or_acceptance",
+    "factual_curation_runtime_api_acceptance": "not_granted"
+  },
+  "next_action": "Recipient separately assess exact protocol. Later separately bounded harness implementation and fail-blocked preflight must prove mount/cache/headroom/deadline/cleanup mechanics before any real-model diagnostic. Do not execute or duplicate prior evaluations under Q8."
+}
