@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q8",
+  "kind": "proposed_real_model_candidate_diagnostic_protocol",
+  "status": "proposed_not_executed",
+  "revision": 1,
+  "author": "@adrian.factomaton",
+  "engineering_decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "intended_reviewer": "@adrian.factfinder",
+  "relationship": "Shared Adrian owner/prior source-design-code exposure/authored fixtures. Not independent-owner/blinded/held-out/non-author curation.",
+  "source_commit": "9e87c693d25df86b9e5300a9b71dcdaa5a6b372e",
+  "candidate_image_id": "sha256:39838c0cf50ea2a4f717ff863bf954f2c16699e70398f3b4d7be1b4f51b0004b",
+  "engine_fingerprint": "d89e3de91ff22e70d8ff2aec3f8e61cb7dcd399e8aa83218444fbbc11a95654e",
+  "inference_image": "ollama/ollama@sha256:d4188c1dfa870386a14e299976aed96daeb83876b69e1a852c9d09ea76463b9f",
+  "model_pins": {
+    "nomic-embed-text:v1.5": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+    "qwen2.5:14b-instruct": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6"
+  },
+  "snapshot": {
+    "path": "public/library.json",
+    "raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+    "library_import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "records": 8,
+    "subject_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23"
+  },
+  "cases": [
+    {
+      "id": "capital-paraphrase",
+      "input": {
+        "text": "Which city serves as the national capital of Australia?",
+        "public_review": false
+      },
+      "expected": {
+        "status": "answer",
+        "inspection": {
+          "claim_id": "C004",
+          "version": 1,
+          "sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a"
+        },
+        "answer": "Australia's national capital is Canberra.",
+        "query_relationship_review": "model_assessed",
+        "live_source_refresh": false,
+        "evidence_package_canonical_sha256": "f818c4f47ec0cadbbe059537b2801e6b89f8cb5c4b19b0cbee0bcea0c6139333",
+        "evidence_package_digest_encoding": "UTF-8 Python json sort_keys=True,separators=(comma,colon),ensure_ascii=False; no trailing newline",
+        "verdict": "supported",
+        "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53"
+      }
+    },
+    {
+      "id": "unknown-no-consent",
+      "input": {
+        "text": "What is the chemical symbol of gold?",
+        "public_review": false
+      },
+      "expected": {
+        "status": "not_in_library",
+        "answer": null,
+        "verdict": null,
+        "job": null,
+        "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53"
+      }
+    }
+  ],
+  "execution": {
+    "entry_point": "Future single-process harness imports actual /app/engine.mjs, uses real ModelClient and memory SQLite; await identify, initialize, then both run calls sequentially. No server module import, public HTTP request, background queue or analysis polling.",
+    "model_calls": "Only cached exact pinned real models; no model/backend stubs for embeddings, extraction audits or classifications.",
+    "evidence_backend": "Explicit loopback fixture only. /health returns exact snapshot import. /v1/check always not_in_library for false consent, forcing semantic path. /v1/records resolves only exact claim/version/hash present in frozen snapshot; otherwise fixed failure. Every public_review:true or unknown route is a hard harness failure. Not a real Convex/backend/publication test.",
+    "resource_caps": {
+      "inference_memory": "24g",
+      "inference_cpus": 8,
+      "inference_pids": 256,
+      "harness_memory": "1g",
+      "harness_cpus": 2,
+      "harness_pids": 64,
+      "total_wall_seconds": 600,
+      "startup_wall_seconds": 180,
+      "per_case_wall_seconds": 180,
+      "concurrency": 1,
+      "new_model_download_bytes": 0,
+      "paid_cost": 0
+    },
+    "isolation": "Fresh uniquely named/labelled own candidate and inference containers, dedicated internal network with no published ports or external egress; read-only roots, capabilities dropped, no-new-privileges, ephemeral writable state. Never attach to or change production containers/networks. No production restart, model unload, cache write or shared service calls.",
+    "cached_model_mount": "Only verified model manifests/blobs from cached models content, read-only, never whole inference home/volume or credentials/private keys/config. Exact mount implementation, model-content path availability, digest verification, idle worker and resource headroom must be established in a later preflight; fail blocked if unavailable. No pulling/copying/downloading or permissions changes.",
+    "deadline_and_teardown": "External parent deadline includes startup and both cases. On timeout/error/OOM/mismatch preserve sanitized partial output and reason; terminate only containers/network created for this unique run, inspect absence, then return. No retries, wait loop, unbounded readiness polling or model left running.",
+    "start_condition": "Fresh exact protocol review and separate recipient assessment, then independently bounded implementation/preflight; protocol acceptance does not imply harness implementation, successful run or permission expansion."
+  },
+  "measurements": [
+    "Real model tags/digests before first embedding; candidate/source/fingerprint/snapshot/import pins.",
+    "Exact case inputs/results, embedding document/query counts, classification/audit calls, timings, timeout/OOM/exit/error and observed container limits.",
+    "Full per-case evidence/inspection pins and package equality, no answer/verdict/job on unknown; zero public submissions.",
+    "Raw files and partial attempts separately hashed; preserve errors and original labels, no silent expected-label update or retry.",
+    "Observed cleanup and before/after18source/4active hashes."
+  ],
+  "acceptance": "Both cases satisfy their frozen expected fields and full C004 evidence package equals snapshot package; all returned pins match;8document embeddings initialized, actual query inference used, zero backend fixture public submissions, no unexpected route, no runtime failures, limits honored and own resources removed. Anything unchecked is explicitly unresolved, not pass.",
+  "non_goals": [
+    "No C007a pending literal/approved predicate projection or active library growth; unsupported offline export stays rejected.",
+    "No historical17case/growth/public HTTPS regression acceptance transfer; only two exposed authored diagnostics.",
+    "No new factual/source verdict, curation, review independence, source refresh, security/concurrency/restart/resource sufficiency proof, production readiness or API publication approval.",
+    "No real backend/research-job path; consenttrue research is outside scope.",
+    "No change to completed Q7 Task, prior immutable receipts or W020 provenance hold."
+  ],
+  "review_deliverable": "Immutable exact protocol assessment accept/revise/unresolved, exact bound file hashes, expectation adequacy, role/dependence limits, resource/consent/isolation/deadline feasibility and unimplemented gates; no model execution or shared source edits. Submit via new zero-cost Market Task only after mutual assent."
+}
