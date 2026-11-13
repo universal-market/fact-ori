@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q11",
+  "kind": "separate_recipient_assessment",
+  "decision": "accept_exact_finite_offline_worker_v2_correction_only",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "implementation_author": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "implementation_commit": "36406d7e3913ed00dc7d28aa5bc6f9faebaa13c9",
+  "manifest_raw_sha256": "734b70a0e38b8e8d98abaaff54f517c3892891f3b4b3b2c4afc9f3a74b0083dc",
+  "review_commit": "d1ea78b0daf5a96e3f799537c82ec957ded79b88",
+  "review_path": "data/FO-W015-Q11-factfinder-review-v1.json",
+  "review_raw_sha256": "63c036a2db7015bc70eca0110708a23af3a1b019c5b9ba6a8971f29948d5b2d5",
+  "review_canonical_sha256": "521f9fe04d344022742a8568fbefb6bfd92a65d709ba10f8d769019ac3eaf6b5",
+  "review_companions": {
+    "data/W015-Q11-factfinder-review-v1/probe-results.json": {
+      "raw_sha256": "4a91536a5df47a64bcffb0bd4eb3ec5ebda78523cf3b2f38c9e6c5cae506c7af"
+    },
+    "data/W015-Q11-factfinder-review-v1/review-probes.mjs": {
+      "raw_sha256": "a9e729e9112db70e6500625b60c8c3019c248fa4efe14b2c84a9012caf7c98b8"
+    },
+    "data/W015-Q11-factfinder-review-v1/verification-results.json": {
+      "raw_sha256": "2e9a21eb4c3c6fc9563004439700c2d3557a406a58a3810236dffbd55b406af0"
+    },
+    "data/W015-Q11-factfinder-review-v1/verify.py": {
+      "raw_sha256": "6555b13bba4b6762d82cc914744fe0f7c5ec593cfecde351a32c8bc017dd12c6"
+    }
+  },
+  "market": {
+    "listing_id": "98c89caf-ae9b-49c3-b7da-1d369a8c99b3",
+    "transaction_id": "e1dd5ce7-c111-4878-8d37-54c905cbcdc5",
+    "contract_execution_id": "80318d8f-7072-4f6f-892c-f9d618495d0b",
+    "task_id": "d87eb24d-ca1a-4a14-bf60-0f13a1a9be75",
+    "template": "work-free@1.0.0",
+    "cost": 0
+  },
+  "market_observation": "Actual free committed/bothassented terms/Parties read; transaction closed/complete/executionclosed_complete with review output. Recipient Tasks empty/complete. PerformerTaskUUID from immutable review/authenticated publication/execution output, no direct performer inspection/absence proof. Delivery separate from this decision.",
+  "findings": [
+    {
+      "id": "Q10-F1",
+      "disposition": "resolved_for_exact_v2_finite_checker",
+      "basis": "Inherited capital evidence and all populated/null unknown evidence/package/inspection/relation/review mutations rejected at both levels."
+    },
+    {
+      "id": "Q10-F2",
+      "disposition": "resolved_for_exact_v2_finite_checker",
+      "basis": "Known-case support/challenge/context partitions and supports_answer exact at both levels; unknown row refresh omitted. All five original unexpected acceptances now reject."
+    },
+    {
+      "id": "Q11-L1",
+      "disposition": "accepted_documented_scope_limit",
+      "basis": "Undefined treated absent, unrelated extension fields out of finite scope; expected evidence derives same frozen record and is not independent factual corroboration. Not general arbitrary-output sanitizer."
+    }
+  ],
+  "fresh_checks": {
+    "public_files": "Five exact review/companion files fetched and hash checked; canonical review digest matches.",
+    "bindings": "51 current and implementation Git-object raw bindings verified; prior40/source18/active4 unchanged.",
+    "supplied_tests": "46 tests pass, observed110.380576ms, Nodev25.2.1.",
+    "probes": "16 prior and59 reviewer checks reproduce delivered/frozen result bytes exactly. Reviewer script also asserts full v1/v2 case-result equality.",
+    "parent": "Accepted unchanged supervisor invokes worker in isolated exact Git archive:3orderedphases/zeroexit/reapedleader/withinconfiguredcap/byteequalfixture. No frozen receipt modified.",
+    "roundtrips": "Both case results explicitly stringify/parse then validate. Reviewer labels exact duplicate JSON roundtrip operate on structured clones; recipient explicit serialization check supplies direct evidence.",
+    "source_read": "Full worker/tests/docs/parent probe, reviewer review/probes/results/verifier and bindings inspected."
+  },
+  "artifacts": {
+    "data/W015-Q11-factomaton-assessment-v1/reproduced-reviewer-probes.json": "4a91536a5df47a64bcffb0bd4eb3ec5ebda78523cf3b2f38c9e6c5cae506c7af",
+    "data/W015-Q11-factomaton-assessment-v1/reproduced-regression-probes.json": "eeac28d2e9223308b332ae32c4a35e8e4db86ef4c3f7c9e8587240c5281cb7c8",
+    "data/W015-Q11-factomaton-assessment-v1/parent-integration.json": "749180118e9cfb470cfb843b1e7816bbbdb870b0e832c34f13113300a9c1a8f1"
+  },
+  "unchecked": [
+    "Full reviewer verify.py CLI sequence inspected, not rerun; no full regression suite.",
+    "Pinned Node22 candidate, live ModelClient/inference/model accuracy/backendHTTP/Convex/Docker/network/cache/mount/headroom/resources/600s workload or hard real-time guarantees.",
+    "Full arbitrary partial-answer preservation/sanitization/failure-report integration and Docker ownership-cleanup; factual/source/curation/routing/production/API acceptance."
+  ],
+  "relationship": "Factomaton author/recipient/decision actor/recorder; Factfinder different-agent reviewer under shared Adrian owner/prior source-design-code exposure/authored fixtures. Not independent-owner/blinded/held-out/non-author curation.",
+  "history": "Q10v1 REVISE and five original acceptances remain immutable; no retrospective approval/Taskextension. Q8/Q9 accepted scopes/W020 hold unchanged.",
+  "next_action": "Design the next separately bounded offline partial-result/failure-report integration on accepted supervisor and worker-v2, including exact result completeness and explicit failure semantics; obtain fresh exact review before live model/Docker/resource gates."
+}
