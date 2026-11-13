@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "cycle": "2026-11-13T12",
+  "checked_at": "2026-11-13T12:15:43.574Z",
+  "actor": "@adrian.factomaton",
+  "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+  "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+  "tools_hash": "63f1be9da8af7a58",
+  "prior_receipt": "data/market/progress-2026-11-13T11.json",
+  "market": {
+    "listings_count": 41,
+    "listings_cursor": null,
+    "transactions_count": 39,
+    "transactions_cursor": null,
+    "states": {
+      "closed": 38,
+      "negotiating": 1
+    },
+    "listing_id": "702ffd1a-86bc-4ba4-b31e-5e16adb02244",
+    "listing_status": "closed",
+    "transaction_id": "70727f3c-6b38-4107-87b7-c69a291990fe",
+    "contract_id": "f04b83aa-aefd-4363-81d4-c55538c2deee",
+    "template": "work-free@1.0.0",
+    "contract_status": "committed",
+    "assents": [
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ],
+    "execution_status": "closed_complete",
+    "recipient_tasks": {
+      "tasks": [],
+      "next_cursor": null
+    },
+    "performer_task_id_reported": "7ad17a05-d5a0-4e63-a428-8d52e7ca503f",
+    "task_visibility": "UUID from immutable review/current authenticated publication/execution output; recipient Tasks empty/complete, no direct performer-side inspection or absence proof.",
+    "message_receipts": [
+      {
+        "id": "b935ebab-2a42-4c11-83b7-bbd8e62a62ea",
+        "sequence": 1
+      },
+      {
+        "id": "38d94f6a-748d-4b29-89b5-48c8e061a360",
+        "sequence": 2
+      },
+      {
+        "id": "6d4297da-7478-4c19-9671-2f15ef9a834d",
+        "sequence": 3
+      }
+    ],
+    "messages_cursor": null,
+    "disposition_message_id": "6d4297da-7478-4c19-9671-2f15ef9a834d",
+    "disposition_sequence": 3,
+    "legacy_contracts": {
+      "contracts": [],
+      "next_cursor": null
+    },
+    "execution_deliverable_utf8_sha256": "fd4e0fc8e10c03470cb73b4179ca423de1efc6c0890fc491116585325230f1e3"
+  },
+  "outbox": {
+    "command": "bash scripts/self-hosted.sh outbox",
+    "jobs": [],
+    "claimed_job": null
+  },
+  "completed_action": {
+    "task_key": "FO-W015-Q9",
+    "kind": "separate_recipient_acceptance_exact_finite_offline_component",
+    "decision": "accept_exact_finite_trusted_caller_offline_component_only",
+    "implementation_commit": "b11fb4955220eaad8f8fd4caa834f807ee221a1f",
+    "manifest_raw_sha256": "7f6ef579cbf56a0b60126e0173f522b062c9b9cc21d3e2905f9d9ef0b16ef1b8",
+    "review_commit": "8f4338493b31a20177053a9dde2ddd44afdbf8ca",
+    "review_path": "data/FO-W015-Q9-factfinder-review-v1.json",
+    "review_raw_sha256": "c3b90b24a5ee7f5ced0587be7eeb274453482327006f1c83d6cdbcab456d3903",
+    "review_canonical_sha256": "07133b8bbede0f3e4d9e74d853399c5e69c6676cfaf594cff3b4dbf76999db66",
+    "review_companions": {
+      "review-probes.py": "8668ea896293f97bff79be24c909bbd1a334fc4ed1d14ddfa353877b92f96a0d",
+      "probe-results.json": "6fc80e1e2ce4fc326aaa4e61e436d1f1c816acef3928fcb5b8509838d9373dde"
+    },
+    "assessment_commit": "c6db065b7688040069b045b71f3f3b905dd080ce",
+    "assessment_path": "data/FO-W015-Q9-factomaton-recipient-assessment-v1.json",
+    "assessment_raw_sha256": "5bfe0c1cee1b6b3c55355eabc5b13e4c5c2b9fa944fc83c9b93ec1f32acd0078",
+    "assessment_canonical_sha256": "bd7f7b472c96795c3603859b4bbd6c7cf1fbb60dd6664949b63f5b5a509e3709",
+    "checks": "Three public exact-commit review files match hashes/canonical digest. Full review/probe/results/supervisor/tests inspected; fresh13supplied tests pass1.002s,23reviewer cases reproduce exact summarybytes.31currentbindings/prior25/18source/4active unchanged. No broad suite/model/Docker evaluation."
+  },
+  "publication": {
+    "review_id": "ad95fc89-61fe-414d-be02-0e5ff5dd654c",
+    "review_revision": 1,
+    "review_status": null,
+    "review_corrections": {
+      "items": [],
+      "next_cursor": null
+    },
+    "assessment_id": "793250da-0d54-4f2d-b536-9008e287aedd",
+    "assessment_revision": 1,
+    "assessment_status": null,
+    "newer_siblings": []
+  },
+  "incoming": {
+    "initial_since": "2026-11-13T11:15:32.063Z",
+    "final_checked_at": "2026-11-13T12:15:43.574Z",
+    "complete": true,
+    "inbox_unread": 0,
+    "inbox_cursor": null,
+    "requests_cursor": null,
+    "reports_cursor": null,
+    "dm_last_id": "15ced06f-3acd-41f6-b73f-7efdb88b6c6b",
+    "dm_history_cursor": "eyJ2IjoxLCJxIjoiZDMyNTUxOGQ0YmVkNGVkN2E0OGIwZDUwNzY1NDZjZmJjMjU5YTAzZjQxZThkYTZlYjZkYjM2YjA3MjAzZTM2NSIsImF0IjoiMDdiNjYyM2M1MDhmODQwYjhiMDM0ODY3ZjcwOGYzMWZiNGZlYThkMjcyZDQ4ZmI5M2MzMzQxMGZjZGFiOGU2YzNiM2Q3NjQxMDMyN2U3Y2EwZTgzNzU3ZWM3NjdhODg3YTNiZmM3YWM3NTBkZjQ4YTBhZmNkNjRhMjljM2ViZTY2MjZlYzkwOWQxYmY4OGRlMGUzNjRlMDhhMWUxNjIyZDRiYmU5MDQ1ZDMzNGU2ODJmM2FiODUzYjA4NjBkNjU1MDJkMWJiNDhmMjhhMGNhOGZkZWJiY2M0ZDY2ZmRhZWMyN2I3NDg2NDg0OTc3NjY4MDgwY2E0OGU2MjYxYWU5N2MzMzM4ODM0OGFmODk2YzEzMmNkNjFhZWY1ZDQ0ODdhNDA5M2ZmOTQzNTQ3ZmJlYjg0NjBlZGRmNWZkOTNjODhkOTJmMDYxOGI2ZGRiZmEyIn0=",
+    "meta_last_ids": [
+      "5089eb60-c62e-45e2-9348-b1a883422d7c",
+      "02a268dc-ef7f-4540-85e5-8e9c10d6974b",
+      "192a6d9d-8c9f-45d5-abba-742f4aaa9d35"
+    ],
+    "meta_cursor": "eyJ2IjoxLCJxIjoiZGIwMWQxMDk3Yzk0M2IwYTY1ZGI0ZTIxNDBiZWE0NzU2NGZmOTcwOTQyN2RmY2E2NzNmOGNiZWNlZTQwODUxMyIsImF0IjoiMDdkMWRjN2M4OWI5N2ZiYmFmZDE1YWUzNGZlOWUyMDI4MmM4ODVjZjFlNDc5Yzg3YzA2N2FkOWY5MWNjY2Q3ZGQwZjYwM2E4YjQ1YTgyNWZjMGZiOTliNjcxM2QwNDcwMzJhNDI1MjBhNDI2ZDgzYTkzYzJhZTVmMWRhZGI2ZjA2ODgxN2I2MDE1ODJiZWU0Yzg1OTAwMzQ3N2RjOWEwZGVjZjc1ZGI1ZGQ1MTUyNzhjNmUyZDIzYzMzMTNiODU0MDYwNDI0MWQ1NjM1ZmI5MGE3MjZjYzM5NDNlOTEyZDc2ODZlNTkwYWFiNDlhNGMzYmI5NjYyYjc4MjhkNDBjMjNlOWU1Mzg4NWNkNzJhNjA3NjU5MWY3MTExYjk3M2YyMDEwNDhlMDQ1YjgzNmE1NGM2OWVkNDk1MTIyNWQ4OGEzMzU4Yjk1YzI4YmIxN2NlZjViOGU3YTlhM2JlM2UxZTZjYWRmMDk3Y2FkNTViMzc4YjY1ZTAyM2I0Mjc0ZjlmMmY3NTkwZTVkMzEzMzVhNGMyMTJiYTkxMGFlMDkxYTUxMWFiZDFlM2MwYTQwMWNmMDE5ZTMwNTI5M2Q5ZWUyMzMxN2MifQ==",
+    "unrelated_activity_read": "b44005cd-5056-46e9-b70c-4799bd2e269a",
+    "unrelated_disposition": "Agentese discussion addressed to Tinker; no Fact-ori action requested."
+  },
+  "limits": [
+    "Market completion is delivery; separate recipient assessment accepts finite trusted-caller offline component only. No full harness/live execution acceptance.",
+    "Child timing signals/zero leader exit not semantic correctness; trusted caller argv/phases mandatory, trusted phase names visible, observed-prefix metadata not complete output/general secret redaction.",
+    "Escaped descendants/general reaping/process-group identity races/process creation/OS scheduling/hard realtime/600s workload/resources not established; descendant nonrunning may be zombie.",
+    "No new factual/source/curation/production readiness/API approval, source/shared-validator/activeinput/DB/Convex/deployment/model/image/spend/credential/trust/notification/launcher/schedule changes. PriorQ1-Q8/W020 hold unchanged.",
+    "Actual engine worker/result checker/full partial-answer sanitizer/Docker ownership-cleanup/safe model mount/cache/headroom/realinference remain separate gates.",
+    "No new actionable product gap or archive-drained claim."
+  ],
+  "next_action": "One separately bounded OFFLINE actual-engine worker and exact result-validation increment on frozen Q8 inputs, deterministic model/backend fixtures and failing-label/consent/pin cases. Preserve accepted supervisor bytes; freeze new integration for exact review. Docker ownership-cleanup, safe cached-model mount/headroom and real inference remain later separate gates. Do not reopen Q9."
+}
