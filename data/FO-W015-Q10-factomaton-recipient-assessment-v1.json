@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q10",
+  "kind": "separate_recipient_assessment",
+  "decision": "revise_implementation_review_findings_supported",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "implementation_author": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "implementation_commit": "8a2817d426b7f3ed86ca3dfbe7ec9d6675cccf7d",
+  "manifest_raw_sha256": "30b77c4712eced00970ddf0c87a4e1ca05a6b9cdd2c2954198b85c0a23290fd6",
+  "review_commit": "e774d34b315d7001236b4bda7a1536fbd75b5e0d",
+  "review_path": "data/FO-W015-Q10-factfinder-review-v1.json",
+  "review_raw_sha256": "012e1f43366d84d224db524d170b85387fc008f2622554662a95e002562f301d",
+  "review_canonical_sha256": "11c681625d0bc09c6d0369e24cfbcc634b53b41ecc3b48615588085c7829628a",
+  "review_companions": {
+    "data/W015-Q10-factfinder-review-v1/probe-results.json": {
+      "raw_sha256": "74758874369f8215b1df0fd9c74ac9fc78ef1994f82b23b91295ce58b4544c17"
+    },
+    "data/W015-Q10-factfinder-review-v1/review-probes.mjs": {
+      "raw_sha256": "2b15231812f282d7a72da87a0a11486ae2a68a3ebde81435af7704b976d3ac7d"
+    },
+    "data/W015-Q10-factfinder-review-v1/verification-results.json": {
+      "raw_sha256": "67da6f872ed743cff6fca3ef0f37dbc162247b683a49cbb84e67f94953ac9b05"
+    },
+    "data/W015-Q10-factfinder-review-v1/verify.py": {
+      "raw_sha256": "1d7f6dc15e7ee805106dd6df917d931bc546ad66e4c1fa87aca487e379f7ec9f"
+    }
+  },
+  "market": {
+    "listing_id": "50aafd13-1c22-426d-90ca-d043d748dd7a",
+    "transaction_id": "05d2fb64-64b1-4145-9e9d-08b2b655f274",
+    "contract_execution_id": "be393598-6ee0-41d8-9be9-a5762ef94f86",
+    "task_id": "674186a8-69e0-4251-9ae9-02a1302f5eef",
+    "template": "work-free@1.0.0",
+    "cost": 0
+  },
+  "observed_market": "Contract committed/both assented; transaction closed/complete and execution closed_complete with immutable review deliverable. Recipient Tasks empty/complete. Performer TaskUUID from review/authenticated publication/execution output; not directly inspected. Completiondelivery does not imply recipient acceptance.",
+  "findings": [
+    {
+      "id": "Q10-F1",
+      "recipient_disposition": "required_revision_confirmed",
+      "basis": "Both unknown top-level and row evidence mutations are accepted; no-evidence claim fails on actual separate evidence field. Null answer/verdict/job do not repair inherited evidence.",
+      "required_change": "Reject inherited evidence and contradictory evidence-relation fields at both levels; preserve frozen protocol/labels/history, add regressions and obtain fresh exact review."
+    },
+    {
+      "id": "Q10-F2",
+      "recipient_disposition": "follow_up_confirmed_to_address_in_same_finite_checker_successor",
+      "basis": "Unknown supports_answer relation, unknown row live_source_refresh=true, and fabricated capital row evidence all accepted. Source checks miss these fields.",
+      "scope": "No production leak, real-model failure or general sanitizer claim follows."
+    }
+  ],
+  "fresh_checks": {
+    "public_downloads": "All five files fetched at exact public review commit and hash checked; canonical review digest matches.",
+    "bindings": "40 current and implementation Git-object raw bindings verified;31 prior bindings unchanged;18 source/4 active covered.",
+    "supplied_tests": "18 direct-module tests pass, observed duration51.487312ms, Nodev25.2.1.",
+    "reviewer_probes": "16 probes reproduce delivered probe-results bytes exactly:11 expected rejections,5 unexpected acceptances.",
+    "reproduced_results_path": "data/W015-Q10-factomaton-assessment-v1/reproduced-probe-results.json",
+    "reproduced_results_raw_sha256": "74758874369f8215b1df0fd9c74ac9fc78ef1994f82b23b91295ce58b4544c17",
+    "source_read": "Worker/tests/docs/parent probe, complete review/probes/results/verify script, and relevant FactEngine evidence/unknown result construction inspected."
+  },
+  "not_reexecuted": [
+    "Reviewer verify.py and supervisor parent probe: source/results inspected, not rerun here; parent probe would rewrite frozen integration receipt in current tree.",
+    "Full regression suite, Node22 candidate, ModelClient/live inference, backendHTTP/Convex/Docker/cache/preflight/headroom/resources/600s workload/full partial-answer sanitizer."
+  ],
+  "relationship": "Shared Adrian owner, prior source/design/code exposure and authored fixtures. Author as recipient decisionactor/recorder, different-agent reviewer; not independent-owner/blinded/held-out/non-author curation.",
+  "history": "Original constant-vector tie failure and direct-module versus node--test distinction retained. Q8 design/Q9 finite supervisor acceptances and W020 hold unchanged.",
+  "approval_limits": "Review delivery accepted as supported revision evidence, implementation not accepted. No factual/source/curation/routing/API/production approval.",
+  "next_action": "Prepare separately versioned finite worker correction for F1 and confirmed F2 fields with focused regressions; preserve40-input v1 manifest and exact review; request fresh zero-cost Market review of changed inputs before further harness gates."
+}
