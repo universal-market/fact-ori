@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q12",
+  "kind": "source_only_design_static_review",
+  "runtime_faults_executed": false,
+  "manifest_raw_sha256": "c9fd19378b2b8fd13fc84e2766d30d82b90d2d0cff0c0b5c121074379b92a9dc",
+  "bindings_verified": 60,
+  "prior_bindings_unchanged": 51,
+  "budget_arithmetic": {
+    "partition_sum": 600,
+    "worker_phases_plus_default_cleanup": 542,
+    "worker_cap": 570,
+    "verifier_total_cap": 20,
+    "final_reserve": 10
+  },
+  "scenario_rows_checked": 23,
+  "matrix_observations": {
+    "ambiguous_rows": [
+      {
+        "id": "wrong_run_binding",
+        "worker_status": "success",
+        "case_states": [
+          "rejected",
+          "unavailable"
+        ],
+        "expected": "failed"
+      },
+      {
+        "id": "wrong_input_or_pin",
+        "worker_status": "success",
+        "case_states": [
+          "rejected",
+          "unavailable"
+        ],
+        "expected": "failed"
+      },
+      {
+        "id": "duplicate_keys_or_non_utf8",
+        "worker_status": "success",
+        "case_states": [
+          "rejected",
+          "unavailable"
+        ],
+        "expected": "failed"
+      },
+      {
+        "id": "oversized_or_symlink_file",
+        "worker_status": "success",
+        "case_states": [
+          "rejected",
+          "unavailable"
+        ],
+        "expected": "failed"
+      }
+    ],
+    "explicit_present_second_reference": {
+      "id": "invalid_first_valid_second",
+      "worker_status": "success",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "expected": "failed"
+    },
+    "metadata_not_presence_counterexample": {
+      "id": "event_without_file",
+      "worker_status": "success",
+      "case_states": [
+        "unavailable",
+        "unavailable"
+      ],
+      "expected": "failed"
+    },
+    "abstract_presence_alternatives": [
+      {
+        "first": "present_invalid",
+        "second_file": "absent",
+        "permitted_state_interpretation": [
+          "rejected",
+          "unavailable"
+        ]
+      },
+      {
+        "first": "present_invalid",
+        "second_file": "present",
+        "permitted_state_interpretation": [
+          "rejected",
+          "rejected_or_explicit_withheld_state"
+        ]
+      }
+    ]
+  },
+  "numeric_caps_observation": {
+    "reconciliation_output_file_bytes": null,
+    "explicit_verifier_phase_seconds": null,
+    "note": "Prose requires bounded file and phase fitting remaining budget, but design provides no numeric file cap or verifier phase/cleanup values."
+  },
+  "abstract_success_gate_analysis": {
+    "gates": [
+      "worker_success_and_phases",
+      "worker_reaped",
+      "worker_within_deadline",
+      "both_checkpoint_prefix_valid",
+      "verifier_success_reaped_within_cap",
+      "report_within_limit",
+      "owned_cleanup_success",
+      "fresh_report_write_success"
+    ],
+    "combinations": 256,
+    "passing_combinations": 1,
+    "note": "Reviewer truth-table reasoning only; no executable reconciler, supervisor or fault run."
+  },
+  "projection_key_check": "Frozen finite fields only; raw extensions excluded by design, not runtime tested.",
+  "limits": [
+    "No design edits, implementation or child/model/Docker/network execution.",
+    "Static checks support design reasoning, not parser/filesystem/privacy/resource/lifecycle feasibility proof."
+  ]
+}
