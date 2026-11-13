@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "kind": "offline_parent_supervisor_fault_probes",
+  "task_key": "FO-W015-Q9",
+  "tests_run": 13,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "tests": [
+    "test_diagnostic_supervisor.SupervisorTests.test_case_hang_retains_partial",
+    "test_diagnostic_supervisor.SupervisorTests.test_child_cannot_restart_phase",
+    "test_diagnostic_supervisor.SupervisorTests.test_child_text_is_not_published",
+    "test_diagnostic_supervisor.SupervisorTests.test_completed_but_hung_exit",
+    "test_diagnostic_supervisor.SupervisorTests.test_descendant_in_owned_group_stopped",
+    "test_diagnostic_supervisor.SupervisorTests.test_extra_payload_rejected",
+    "test_diagnostic_supervisor.SupervisorTests.test_incomplete_not_success",
+    "test_diagnostic_supervisor.SupervisorTests.test_invalid_limits_no_child",
+    "test_diagnostic_supervisor.SupervisorTests.test_nonzero_not_success",
+    "test_diagnostic_supervisor.SupervisorTests.test_outer_cap_overrides_phase",
+    "test_diagnostic_supervisor.SupervisorTests.test_output_flood_bounded",
+    "test_diagnostic_supervisor.SupervisorTests.test_startup_hang",
+    "test_diagnostic_supervisor.SupervisorTests.test_success"
+  ],
+  "raw_bindings": {
+    "scripts/diagnostic_supervisor.py": "ff1def60279575f7929e65089d70a7e5ac906374ccfcdf23231c7ee8e708da44",
+    "scripts/test_diagnostic_supervisor.py": "1aec79d502e4fb01d10f0b0d7e51de102e72dc76e632a24f92d568577c88264c"
+  },
+  "limits": [
+    "Actual local child/process-group faults with scaled subsecond deadlines; no600s workload/resource-sufficiency proof.",
+    "No Docker/network/model/backend/cached-filesystem/credential/preflight/real harness execution.",
+    "Leader reaping and Linux descendant non-running state checked; no general all-descendants reaping proof or Docker cleanup.",
+    "Fixed metadata events only, no model result checker; raw child bytes not published, only observed-prefix hashes/counts."
+  ]
+}
