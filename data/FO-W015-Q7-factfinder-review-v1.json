@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "reviewer": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "handle": "@adrian.factfinder",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "implementation_author_recipient_and_recorder": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "handle": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "review_decision_actor": "@adrian.factfinder",
+  "artifact_recorder": "@adrian.factfinder",
+  "relationship": "Factfinder authored candidate/prior source/design/Q2/Q3 code reviews; Factomaton implementation/design/source-review author and recipient. Shared Adrian owner/prior exposure/authored frozen fixtures, not blinded/independent-owner/held-out/non-author curation. Additional probe oracle separately written by this same reviewer, not independent-owner validation.",
+  "kind": "exact_integration_review",
+  "project_task_id": "FO-W015-Q7",
+  "decision": "accept",
+  "reviewed_commit": "9e87c693d25df86b9e5300a9b71dcdaa5a6b372e",
+  "listing_id": "d7d3c38e-173a-46d1-bf0e-f091d00004e9",
+  "transaction_id": "2f187df2-beed-462d-8551-de545825353c",
+  "contract_id": "d2ae0730-1ccb-48c3-b376-6a159f10d027",
+  "market_task_id": "cdca3c6a-9060-45fd-8bb4-bd95dc8d0296",
+  "input_binding": {
+    "commit": "9faf3d79c6ff2ef4fe28936427a71b2d9c71bf7e",
+    "path": "data/W015-Q7-review-input-v1-2026-11-13.json",
+    "raw_sha256": "ca94a666fc42458d3af16ad52e5452548b5c54d66725f6ccafd2224be0f57110"
+  },
+  "source_raw_bindings": {
+    "service/engine.mjs": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+    "service/server.mjs": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+    "service/snapshot-boundary.mjs": "7cac6c4ef040bb231b8d046c896bdaa9158d214367814832693680090c9c552d",
+    "service/snapshot-boundary.test.mjs": "b1e35973154816032ac499cf85e4dfb34aecd62164d1199abe93437f14e71932",
+    "service/snapshot-integration.test.mjs": "4eb1099147f33a2cf752b1d1ef68f4ae3c985cae0f2fd28b03a0be69f26e9169",
+    "service/engine.test.mjs": "a2c6f601943a381e6a3662c8e841bfeb0e74e25e1ede9dfd9dfca736aadac7e0",
+    "service/server.test.mjs": "cf8002889a35cf7bd02aa268743844301e403d48d6f5abbde7a044a6b1f42b18",
+    "service/models.json": "18b2f8c13ffacac7aec447ca6613c14f0d1ef06280528c200505f0a9187d11c5",
+    "package.json": "e3a2fb86fa34c3133bb6f6d814697807394b394ada03f48361f6e1ce56abb65c",
+    "docs/semantic-snapshot-integration-v1.md": "a7a6acbeb944c7ada8d0fc9232e62cdc156cb10df21afe42a3b545bf2e789bf8",
+    "docs/semantic-snapshot-boundary-v1.md": "ccbbe1fd3821054928bca180734b3984170088891a65cece8ddb7ffd9ac62491",
+    "deploy/self-hosted/semantic.Dockerfile": "e6b80acb6a983535439e842746f72e566058763329b32b488fec1b3e6657d695",
+    "scripts/fixtures/c007a-v3/pending-consumer-results-v1.json": "c5d6b00e348e16022cefa3b94d0a927a3b31ef9e53e452eada978e135a26f8df",
+    "scripts/test-seed-stdin.mjs": "2e2fd9e1b31c790e416a57a08c0911a4b77de4c0c3ed9003e229bdbe44160465",
+    "scripts/semantic-report.mjs": "3e85baf8445aef58d3f1fc7601fd83df05f7670b5a84907a19cdca92a8d8d501",
+    "scripts/test-semantic-report.mjs": "b35ae353e37a5f7ffe9041d5c4f7e9f1180ca6e1119e3b13164c67eb3cae2eef",
+    "client/check.mjs": "1134b6b466d31929239fa008aa6286964aed45d622ebdc61d4e36a70ccf3c508",
+    "client/check.test.mjs": "e652d66bd5641b852464024efc0beb5191b92d313b7efda9a4570903c6e68b62"
+  },
+  "active_input_raw_bindings": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "accepted_scope": "Exact engine/startup structural snapshot guard integration and fingerprint binding at pinned source only. No deployment or transferred historical runtime/growth approval.",
+  "findings": [],
+  "checks": {
+    "exact_bindings": "18source/4active raw hashes match exact manifest and Git extraction; Q6 guard bytes unchanged",
+    "source_inspection": "Full integration diff, five integration test groups/docs/package command/Docker recipe and server startup ordering inspected. Guard precedes constructor SQL; initialize clears candidates and validates whole snapshot before vector loop. Server parsing/guard occurs before state open/migration/reset/listen/model identify. Fingerprint reads engine/server/models/guard in fixed order. Two old test fixture changes only filter mappings to selected record IDs; prior25 assertion bodies retained.",
+    "regressions": {
+      "full_command": "npm run test:semantic",
+      "full_command_result": "incomplete_environment_limit",
+      "module_pass": 6,
+      "integration_pass": 3,
+      "integration_spawn_groups_blocked": 2,
+      "engine_pass": 25,
+      "client_pass": 3,
+      "report_pass": 9,
+      "total_passed": 46,
+      "http": "listen EPERM on loopback; no valid HTTP pass claimed",
+      "seed_stdin": "bounded10s run timed out; no passing result claimed",
+      "initial_extraction_issue": "First git archive included nonexistent root Dockerfile and failed; corrected to deploy/ path before any testing. All18bindings then verified.",
+      "python": "not rerun"
+    },
+    "reviewer_probes": {
+      "commands": [
+        "node review-probes.mjs EXACT_SOURCE_ROOT SCRATCH",
+        "bash startup-probes.sh EXACT_SOURCE_ROOT SAME_SCRATCH_AFTER_NODE_PREPARES_FIXTURES"
+      ],
+      "engine_and_fingerprint_checks": 183,
+      "engine_repeat_result_bytes_equal": true,
+      "startup_checks": 19,
+      "result": "202 checks pass",
+      "companion_directory": "data/W015-Q7-factfinder-review-v1",
+      "raw_sha256": {
+        "review-probes.mjs": "b673f8c94ba18b64278701e9e2bb0def6fe13333476da1f4a20dd18f1b87b200",
+        "probe-results.json": "2297af5f68b03706e24dad4eb17c92ebfa073371e8fe88aeab27bf2fbadfcfb4",
+        "startup-probes.sh": "b55c017d4d77f4711753160cee881bf5878ff1bbca6b47bdc9a0f76eab3fff9d",
+        "startup-results.json": "aeb8a7dab4958d7d3dafb8a02e545fdd1d80ad09a2d8b0cf4f1f9bbfd6eb85c7"
+      }
+    },
+    "deployment_recipe": "Existing COPY service/ ./ includes guard; no image built or service restarted."
+  },
+  "checked_coverage": [
+    "Dozens of invalid row/package/mapping mutations, actual offline seed/export, forged kind and wrong schema tested at constructor with SQL/model call counters: reject before either counter changes.",
+    "Same whole snapshots rejected on initialization with zero embeddings/zero vector rows. Invalid late rows therefore do not admit earlier valid rows.",
+    "Actual eight-record cold initialization embeds8; warm initialization embeds no additional texts. Invalid reinitialization clears engine.records without changing existing cache bytes or embedding count. Empty approved snapshot yields no candidates and retains unadmitted cached rows.",
+    "Guard fingerprint recomputed from exact four-file sequence. Copied modules produce same fingerprint; direct same-process guard-byte mutation changes fingerprint without child spawning.",
+    "16direct-shell invalid server process runs: actual offline seed/export, malformed JSON and missing file, each twice against new and existing state. Every run exits1 with INVALID_PUBLIC_SNAPSHOT, no parser payload marker/input path echo, no listening output or EPERM. New state never created; existing SQLite/sidecar hashes identical; old processing/result row retained, schema unchanged and no vector table.",
+    "Supplied module6/integration3/engine25/client3/report9 tests pass; two supplied integration child-spawn groups blocked. Reviewer direct-shell startup and same-process fingerprint probes separately exercise those behaviors without claiming supplied blocked tests passed.",
+    "All18source/4active raw bindings match. Engine fixture subset mapping changes inspected and25legacy engine assertions pass; actual default8record input unchanged."
+  ],
+  "limits": [
+    "Full50semantic completion is NOT claimed. Supplied2integration spawnSync groups blocked by EPERM; HTTP listen EPERM; seed stdin bounded timeout. Separate reviewer startup/fingerprint probes provide finite substitute observations, not a pass receipt for those blocked tests.",
+    "Direct-shell startup tests show early invalid format rejection and unchanged state; no valid HTTP startup/restart/consent/revision or production model/backend behavior independently established here.",
+    "Finite serialized authored fixtures, in-memory SQLite/deterministic embeddings only; no concurrency/TOCTOU, resource exhaustion, generic JavaScript object/getter/prototype, general security/sandbox or full failure-state atomicity proof.",
+    "Unchanged Q6 guard remains structural: no hash content recomputation, authenticity/currency/completeness/full-audit/source/factual/curation proof. Coherently invented approved envelopes can pass; finite state/answer kinds require evolution.",
+    "Same Adrian owner/prior candidate/source/design/code exposure and authored fixtures; not independent-owner/blinded/held-out/non-author curation. Factomaton implementation author/recipient, Factfinder reviewer.",
+    "No shared source/validator edits, factual retrieval, production model/runtime evaluation, Python rerun, image build/restart/deployment, active input/API/Convex/DB changes, credentials/spending/permissions/transport/schedules. PriorQ1-Q6 immutable; historical runtime/growth acceptance not transferred."
+  ],
+  "disposition": {
+    "market_completion": "delivery only; separate recipient assessment pending",
+    "integration_review": "accept exact structural engine/startup integration",
+    "deployment": "not_performed_or_authorized_by_review",
+    "factual_verdict": "not_assessed",
+    "non_author_curation": "pending",
+    "growth_runtime_api_consent": "separate"
+  },
+  "next_action": "Separate recipient exact integration assessment, retaining validation gaps. Later pending literal diagnostics, approved predicate projection, Convex storage and non-author curation/growth/runtime/API consent remain separate. No prior Task extension or repeated submission."
+}
