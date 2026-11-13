@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q7",
+  "kind": "exact_engine_startup_snapshot_integration_review_input",
+  "source_commit": "9e87c693d25df86b9e5300a9b71dcdaa5a6b372e",
+  "author": "@adrian.factomaton",
+  "engineering_decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "intended_reviewer": "@adrian.factfinder",
+  "relationship": "Shared Adrian owner/prior candidate/source/design/code exposure/authored public fixtures; no independent-owner/blinded/held-out/non-author curation.",
+  "raw_bindings": {
+    "service/engine.mjs": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+    "service/server.mjs": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+    "service/snapshot-boundary.mjs": "7cac6c4ef040bb231b8d046c896bdaa9158d214367814832693680090c9c552d",
+    "service/snapshot-boundary.test.mjs": "b1e35973154816032ac499cf85e4dfb34aecd62164d1199abe93437f14e71932",
+    "service/snapshot-integration.test.mjs": "4eb1099147f33a2cf752b1d1ef68f4ae3c985cae0f2fd28b03a0be69f26e9169",
+    "service/engine.test.mjs": "a2c6f601943a381e6a3662c8e841bfeb0e74e25e1ede9dfd9dfca736aadac7e0",
+    "service/server.test.mjs": "cf8002889a35cf7bd02aa268743844301e403d48d6f5abbde7a044a6b1f42b18",
+    "service/models.json": "18b2f8c13ffacac7aec447ca6613c14f0d1ef06280528c200505f0a9187d11c5",
+    "package.json": "e3a2fb86fa34c3133bb6f6d814697807394b394ada03f48361f6e1ce56abb65c",
+    "docs/semantic-snapshot-integration-v1.md": "a7a6acbeb944c7ada8d0fc9232e62cdc156cb10df21afe42a3b545bf2e789bf8",
+    "docs/semantic-snapshot-boundary-v1.md": "ccbbe1fd3821054928bca180734b3984170088891a65cece8ddb7ffd9ac62491",
+    "deploy/self-hosted/semantic.Dockerfile": "e6b80acb6a983535439e842746f72e566058763329b32b488fec1b3e6657d695",
+    "scripts/fixtures/c007a-v3/pending-consumer-results-v1.json": "c5d6b00e348e16022cefa3b94d0a927a3b31ef9e53e452eada978e135a26f8df",
+    "scripts/test-seed-stdin.mjs": "2e2fd9e1b31c790e416a57a08c0911a4b77de4c0c3ed9003e229bdbe44160465",
+    "scripts/semantic-report.mjs": "3e85baf8445aef58d3f1fc7601fd83df05f7670b5a84907a19cdca92a8d8d501",
+    "scripts/test-semantic-report.mjs": "b35ae353e37a5f7ffe9041d5c4f7e9f1180ca6e1119e3b13164c67eb3cae2eef",
+    "client/check.mjs": "1134b6b466d31929239fa008aa6286964aed45d622ebdc61d4e36a70ccf3c508",
+    "client/check.test.mjs": "e652d66bd5641b852464024efc0beb5191b92d313b7efda9a4570903c6e68b62"
+  },
+  "unchanged_active_inputs": {
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "prior_standalone_acceptance": {
+    "source_commit": "71846d7ae56fcdc141df279e6fb064388abd3d56",
+    "review_commit": "378ca91fc885d27433a96c2443238f6b08b654c7",
+    "assessment_commit": "a41a0e17c678717a5908806bd6c8d061204d5874",
+    "guard_bytes_unchanged": true,
+    "scope_not_extended": true
+  },
+  "checks": {
+    "command": "npm run test:semantic",
+    "tests_passed": 50,
+    "new_integration_groups": 5,
+    "test_counts": {
+      "module": 6,
+      "integration": 5,
+      "engine": 25,
+      "http": 1,
+      "client": 3,
+      "seed_stdin": 1,
+      "report": 9
+    },
+    "result": "pass",
+    "initial_sandbox_attempt": "Three targeted integration groups pass; two child-process groups blocked by spawn EPERM. Full authorized local-child/loopback-capable rerun passesall50.",
+    "python_suite_rerun": false
+  },
+  "scope": "Engine construction validation before first SQL; full validation at initialization before vectors; invalid reinit clears in-memory candidates, retains old cache rows. Server load/parse/validate before state DB creation/migration/reset/listen/model identify; fixed non-echoing errors. Fingerprint includes accepted guard bytes. Existing valid/restart/consent/revision regressions pass.",
+  "fixture_change": "Two existing engine builders now filter exact mappings to selected record subset to remain structurally consistent; existing assertions retained.",
+  "deployment": "Not built/restarted/deployed. Docker recipe already copies full service directory. Four active inputs unchanged. Runtime source/fingerprint changed, historical exact reports not transferred.",
+  "limits": [
+    "Structural format consistency, not canonical content-hash authentication/currency/completeness/full-audit/factual/curation/security/resource/generic-JS-object proof. Coherent approved invention can pass.",
+    "Finite approved answer kinds; pending literal diagnostics and approved predicate projection remain separate.",
+    "Historical Q1-Q6 receipts immutable; Q6 standalone review does not accept integration.",
+    "Local child process/memory SQLite/loopback model-backend stubs only; no source acquisition, Python rerun or production model/runtime validation.",
+    "Fresh exact review and separate recipient assessment required before deployment; non-author curation/growth/runtime/API consent separate."
+  ],
+  "next_action": "Contract fresh exact Q7 integration review through free Market scope; verify actual performer Task and immutable probes/results after mutual assent."
+}
