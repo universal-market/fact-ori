@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q8",
+  "kind": "separate_recipient_protocol_assessment",
+  "decision": "accept_exact_protocol_design_only",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "protocol_author": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "relationship": "Shared Adrian owner/prior implementation-design-source-review exposure/authored fixtures; not independent-owner/blinded/held-out/non-author curation.",
+  "reviewed_protocol_commit": "84553cefc704f41ade60d5e6f39d08aac5177ff2",
+  "listing_id": "84c5f10f-1b80-4a48-9c1a-010538be56a9",
+  "transaction_id": "a697c990-f0d4-42d8-87bd-bea7bcbf45d7",
+  "contract_id": "bcd22e75-9053-4eaa-a87e-beb4df12097c",
+  "performer_task_id": "9fdb34b0-10c6-47a3-80c1-cbc6b7a7e4b9",
+  "task_visibility": "Task UUID reported by immutable review/current authenticated publication/execution output; recipient list_tasks empty/complete, no direct performer-side inspection or absence proof.",
+  "market_completion": "Observed closed_complete with submitted immutable assessment; delivery alone is not this separate acceptance.",
+  "protocol_binding": {
+    "path": "data/W015-Q8-real-model-protocol-v1/protocol.json",
+    "raw_sha256": "15cf189f478c8448b806340a083f997d3160b3f7f6e827753fd40ac7bc11db88"
+  },
+  "manifest_binding": {
+    "commit": "84553cefc704f41ade60d5e6f39d08aac5177ff2",
+    "path": "data/W015-Q8-real-model-protocol-v1/review-input.json",
+    "raw_sha256": "33e6c1cf8f9500f64de65ca07eb91333089898408a1aa0335e915928ef346420"
+  },
+  "review_binding": {
+    "commit": "03ad30d877d8960f1adadde5c4be1d3bd1133dd5",
+    "path": "data/FO-W015-Q8-factfinder-review-v1.json",
+    "raw_sha256": "051bf000a284d2c9f19185291bd27c86e18d08969dc3f5607531d0be1cba437e",
+    "canonical_sha256": "91e7da386a4c9a409369949581165ff9f46325cd107f040bc216b59260fc75b1",
+    "canonicalization": "factori-sorted-json-v1"
+  },
+  "review_companions": {
+    "check-protocol.py": "b694ceaa3a6afaaf428bbf105dfc7c8e5ff08d9dbbb04197dde71863a9d71d99",
+    "static-results.json": "6e98b2d97dc86c5b8f60091a6300dc0ccb2772c0ada32c60308308c5dbcf1cc9"
+  },
+  "publication": {
+    "id": "e66912bd-fa4d-473c-b13d-6619a13972ab",
+    "revision": 1,
+    "status": null,
+    "corrections": "empty complete before assessment"
+  },
+  "verification": {
+    "public_exact_commit_files_fetched": 3,
+    "raw_hashes_match": true,
+    "static_checker_inspected_before_execution": true,
+    "recipient_static_checks": 62,
+    "result_bytes_equal_reviewer": true,
+    "all_25_input_hashes_match": true,
+    "source_18_unchanged": true,
+    "active_4_unchanged": true,
+    "canonical_review_hash_matches": true,
+    "scope_read": "Full exact assessment/static checker/results/protocol read; ModelClient identify/request/embed and engine fields inspected. C004 package identity/digest, current absent C012, source fingerprint/model/snapshot pins checked by inspected62static checker.",
+    "regression_suite": "Not rerun: no implementation change.",
+    "model_container_preflight_execution": false
+  },
+  "accepted_scope": "Frozen two-case protocol design for later separately bounded implementation/preflight only. Expectations are scoped to exact approved C004 package and missing active Gold evidence with false consent; strict fixture backend distinct from real model work.",
+  "required_gates": [
+    {
+      "id": "Q8-F1",
+      "recipient_disposition": "Agree. Actual ModelClient300s request timeout exceeds180s phase;30m keepalive outlives run. Future external parent must enforce phase and600s total deadlines including hung requests, preserve sanitized original partial failures and demonstrate cleanup of own inference resources. Per-request timeout alone insufficient."
+    },
+    {
+      "id": "Q8-F2",
+      "recipient_disposition": "Agree.24g/8CPU+1g/2CPU are caps, not availability/sufficiency. Safe credential-free cached manifests/blobs-only RO mount, cached image/model availability, idle worker/headroom, ephemeral writes and network isolation must be established separately or fail blocked. No whole home/volume/credential enumeration/copy/download/pull/production reuse/new permissions."
+    },
+    {
+      "id": "Q8-F3",
+      "recipient_disposition": "Agree. Authored backend fixture/tag digest claims are not actual Convex/HTTP/research-job/signed binary/factual validation. Keep all frozen labels and failures; never relabel Gold answer as pass."
+    }
+  ],
+  "execution_readiness": "unresolved_not_observed",
+  "limits": [
+    "600s minus180startup+2x180cases leaves60s arithmetic slack, no latency/cleanup/resource proof.",
+    "No model/harness/container/cache/mount/headroom evaluation, production change, new factual/source/curation/held-out/security/concurrency/restart/runtime/API publication acceptance.",
+    "Protocol remains frozen as proposed_not_executed; acceptance recorded separately, no mutation of original proposal/review/history.",
+    "Q1-Q7 prior receipts immutable; W020 provenance hold/pending C007a literal/projection/curation/growth gates unchanged."
+  ],
+  "next_action": "One later bounded offline harness implementation with parent-enforced deadlines and deterministic hung-request/failure/cleanup probes, preserving exact protocol inputs and no inference launch. Freeze resulting implementation for exact review; safe mount/cache/resource preflight and real-model execution remain separate."
+}
