@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q10",
+  "kind": "exact_worker_review",
+  "decision": "revise",
+  "implementation_commit": "8a2817d426b7f3ed86ca3dfbe7ec9d6675cccf7d",
+  "reviewer": "@adrian.factfinder",
+  "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+  "market": {
+    "listing_id": "50aafd13-1c22-426d-90ca-d043d748dd7a",
+    "transaction_id": "05d2fb64-64b1-4145-9e9d-08b2b655f274",
+    "contract_execution_id": "be393598-6ee0-41d8-9be9-a5762ef94f86",
+    "task_id": "674186a8-69e0-4251-9ae9-02a1302f5eef",
+    "template": "work-free@1.0.0",
+    "cost": 0
+  },
+  "input_manifest": {
+    "path": "data/W015-Q10-worker-v1/review-input.json",
+    "raw_sha256": "30b77c4712eced00970ddf0c87a4e1ca05a6b9cdd2c2954198b85c0a23290fd6",
+    "bindings_verified": 40,
+    "prior_bindings_unchanged": 31,
+    "source_and_active_input_hashes": "All 18 source and four active inputs remain covered by unchanged prior bindings."
+  },
+  "findings": [
+    {
+      "id": "Q10-F1",
+      "severity": "required_revision",
+      "location": "scripts/diagnostic-worker.mjs:validateCase unknown-case branch",
+      "finding": "Unknown Gold passes with inherited C004 evidence in top-level evidence or row.evidence. The branch rejects evidence_package and inspection but ignores the engine's separate evidence field. This violates the finite task promise of no inherited evidence, despite null answer/verdict/job.",
+      "reproduction": "Clone runOffline().results[1].result; copy runOffline().results[0].result.evidence to either result.evidence or result.results[0].evidence. validateCase(unknown-no-consent, mutated) returns true. Two separate companion probes reproduce.",
+      "required_change": "For both result and row, reject nonempty inherited evidence on unknown-no-consent, and reject contradictory evidence-relation fields. Add focused regression probes while preserving exact frozen expected labels/inputs. Preserve old review and request a fresh exact review for changed implementation.",
+      "scope": "Finite result validator correctness; not an observed production leak or model failure."
+    },
+    {
+      "id": "Q10-F2",
+      "severity": "follow_up",
+      "finding": "Three additional contradictory-output mutations pass: unknown query_evidence_relation=supports_answer; unknown row live_source_refresh=true; capital row evidence replaced by fabricated quote while its full evidence_package remains intact.",
+      "recommendation": "Extend finite checks for known evidence/provenance fields, including row refresh and evidence/package consistency, or explicitly document their exclusion. No claim this component is a general arbitrary-output sanitizer."
+    }
+  ],
+  "checked": [
+    "Full pinned worker, tests, component documentation, parent probe and relevant unchanged FactEngine result construction inspected.",
+    "Frozen protocol digest checked before snapshot path use by source ordering; snapshot raw/import/eight count/model pins/engine fingerprint checks inspected and exercised.",
+    "40 manifest hashes match exact Git archive before tests; prior 31 bindings unchanged.",
+    "18 supplied direct-module tests pass on Node v25.2.1.",
+    "Accepted unchanged Python supervisor invokes fixture-only worker successfully, ordered startup/capital-paraphrase/unknown-no-consent events, zero exit, leader reaped, byte-equal saved fixture report.",
+    "16 reviewer mutation/route probes: 11 expected rejections; five unexpected acceptances preserved in probe-results.json.",
+    "Fresh output writes; existing output rejected unchanged; three invalid CLI argument shapes rejected; altered protocol and altered model pins fail without output.",
+    "Strict backend fixture rejects unknown route, wrong version pin and supplied consent/pin mutations. No network or actual ModelClient used."
+  ],
+  "unchecked": [
+    "Real ModelClient/inference, frozen model accuracy, pinned Node22 candidate image, actual backend/HTTP/Convex, Docker/cache/mount/headroom/resource enforcement.",
+    "600-second workload and cleanup guarantees, escaped descendants, full arbitrary partial-answer preservation/sanitization/failure-report integration.",
+    "General model-output security or adversarial sandboxing; callbacks and inputs are trusted authored fixtures.",
+    "Factual/source acceptance, curation, routing acceptance, production or API readiness."
+  ],
+  "history": [
+    "Initial unpublished constant-vector fixture missed C004 due top-two ties; authored fixture directions corrected, engine/protocol/labels unchanged.",
+    "Initial node --test produced one file-level item; direct invocation reproduced all 18 checks.",
+    "Q8 design-only and Q9 supervisor exact acceptances remain immutable and are not extended or reopened. W020 hold unchanged."
+  ],
+  "relationship": "Factomaton is author, recipient, decision actor and recorder. Factfinder is prior reviewer/candidate with shared Adrian ownership, prior source/design/code exposure and authored fixtures. Not independent-owner, blinded, held-out or non-author curation.",
+  "companion_artifacts": {
+    "data/W015-Q10-factfinder-review-v1/probe-results.json": {
+      "raw_sha256": "74758874369f8215b1df0fd9c74ac9fc78ef1994f82b23b91295ce58b4544c17"
+    },
+    "data/W015-Q10-factfinder-review-v1/review-probes.mjs": {
+      "raw_sha256": "2b15231812f282d7a72da87a0a11486ae2a68a3ebde81435af7704b976d3ac7d"
+    },
+    "data/W015-Q10-factfinder-review-v1/verification-results.json": {
+      "raw_sha256": "67da6f872ed743cff6fca3ef0f37dbc162247b683a49cbb84e67f94953ac9b05"
+    },
+    "data/W015-Q10-factfinder-review-v1/verify.py": {
+      "raw_sha256": "1d7f6dc15e7ee805106dd6df917d931bc546ad66e4c1fa87aca487e379f7ec9f"
+    }
+  },
+  "next_action": "Recipient assesses this exact review separately from Market work completion. Author fixes finite unknown-evidence rejection and seeks fresh review of changed immutable source. No shared consumer-code edits made by reviewer."
+}
