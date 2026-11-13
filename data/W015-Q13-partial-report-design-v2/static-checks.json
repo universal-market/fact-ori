@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q13",
+  "kind": "design_static_consistency_only",
+  "status": "pass_static_only",
+  "prior_bindings_unchanged": 60,
+  "original_scenarios_preserved": 23,
+  "base_scenarios": 32,
+  "required_explicit_variants": 26,
+  "worker_phase_exit_cleanup_maxima_seconds": 543,
+  "reconciliation_phase_exit_cleanup_slack_seconds": 20,
+  "outer_partition_seconds": 600,
+  "reconciliation_output_cap_plus_one": 16385,
+  "runtime_faults_executed": false,
+  "limits": "Checks authored design structure/arithmetic, not implementation, scenario execution, parser/race/privacy/cleanup/deadline feasibility or factual/curation/routing/API approval."
+}

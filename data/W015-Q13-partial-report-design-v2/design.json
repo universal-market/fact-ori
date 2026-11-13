@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q13",
+  "kind": "proposed_offline_partial_result_failure_report_design",
+  "status": "design_only_not_implemented",
+  "author_decision_actor_recorder": "@adrian.factomaton",
+  "intended_reviewer": "@adrian.factfinder",
+  "basis": {
+    "worker_commit": "36406d7e3913ed00dc7d28aa5bc6f9faebaa13c9",
+    "worker_manifest_raw_sha256": "734b70a0e38b8e8d98abaaff54f517c3892891f3b4b3b2c4afc9f3a74b0083dc",
+    "worker_recipient_assessment_commit": "407ba827873e12aafe73b74d5bb6d8e500a60974",
+    "supervisor_path": "scripts/diagnostic_supervisor.py",
+    "supervisor_raw_sha256": "ff1def60279575f7929e65089d70a7e5ac906374ccfcdf23231c7ee8e708da44",
+    "frozen_protocol_path": "data/W015-Q8-real-model-protocol-v1/protocol.json",
+    "case_ids": [
+      "capital-paraphrase",
+      "unknown-no-consent"
+    ]
+  },
+  "scope": "New offline trusted-fixture wrapper/worker variant design. Accepted supervisor/worker-v2 bytes remain immutable. No live model/general sanitizer/Docker/resource/public API acceptance.",
+  "overall_budget_seconds": 600,
+  "budget_partition_seconds": {
+    "supervised_worker_including_own_cleanup": 570,
+    "supervised_reconciliation_including_own_cleanup": 20,
+    "parent_report_and_directory_cleanup_reserve": 10
+  },
+  "worker_phases_seconds": {
+    "startup": 180,
+    "capital-paraphrase": 180,
+    "unknown-no-consent": 180
+  },
+  "file_limits": {
+    "per_case_bytes": 262144,
+    "case_file_count": 2,
+    "public_report_bytes": 65536,
+    "case_prefix_only": true,
+    "duplicate_json_keys": "reject",
+    "utf8": "strict",
+    "envelope_keys": "exact",
+    "result_keys": "finite v2 validator coverage only; omitted from public report",
+    "reconciliation_output_bytes": 16384,
+    "reconciliation_parent_read_bytes": 16385,
+    "reconciliation_output_file_count": 1
+  },
+  "checkpoint_envelope_keys": [
+    "schema_version",
+    "run_id",
+    "case_id",
+    "ordinal",
+    "input_sha256",
+    "implementation_commit",
+    "worker_raw_sha256",
+    "import_id",
+    "result"
+  ],
+  "case_states": [
+    "validated",
+    "unavailable",
+    "rejected",
+    "not_reconciled"
+  ],
+  "public_report_keys": [
+    "schema_version",
+    "task_key",
+    "mode",
+    "run_outcome",
+    "failure_codes",
+    "supervisor",
+    "reconciliation",
+    "cases",
+    "publication_scope",
+    "limits"
+  ],
+  "public_case_keys": [
+    "case_id",
+    "state",
+    "reason_code",
+    "checkpoint_digest",
+    "validated_projection"
+  ],
+  "projection_keys": [
+    "status",
+    "answer",
+    "verdict",
+    "inspection",
+    "evidence_package_canonical_sha256",
+    "import_id",
+    "public_review",
+    "live_source_refresh",
+    "projection_source"
+  ],
+  "run_outcomes": [
+    "passed",
+    "failed",
+    "not_reconciled"
+  ],
+  "failure_code_vocabulary": [
+    "worker_supervision_failed",
+    "checkpoint_missing",
+    "checkpoint_invalid",
+    "checkpoint_order_invalid",
+    "reconciliation_failed",
+    "reconciliation_deadline",
+    "report_unavailable",
+    "directory_cleanup_failed",
+    "reconciliation_budget_unavailable",
+    "reconciliation_output_invalid"
+  ],
+  "success_rule": "Supervisor status success AND all three ordered phases AND leader_reaped true/within_total_deadline true AND both checkpoints exact-bound/validated in prefix order AND reconciliation child success/leaderreaped/within its cap AND report encoded within limit AND own directory cleanup success. Otherwise never passed; validated partial cases remain inspectable only in allowlisted projection.",
+  "limits": [
+    "Design only; no implementation/probes/model/cleanup/resource proof.",
+    "Same exposed public two cases/deterministic callbacks; no held-out/independent-owner factual corroboration.",
+    "No raw result/reason/candidate/model_assessment/prompt/log/exception/path/run_id or arbitrary child metadata in public report.",
+    "Observed byte hashes of rejected oversized files are marked prefix, never claimed full-file hashes.",
+    "Best effort monotonic budget, not OS hard real-time or general descendant cleanup guarantee.",
+    "Raw full checkpoint artifacts are ephemeral trusted public-fixture local files only, deleted before final report; retaining them would need a separately reviewed scope."
+  ],
+  "design_version": 2,
+  "supersedes": {
+    "design_commit": "4075d6201a2f7dfd397ceb5c07877d990c1f3328",
+    "manifest_raw_sha256": "c9fd19378b2b8fd13fc84e2766d30d82b90d2d0cff0c0b5c121074379b92a9dc",
+    "review_commit": "86bf97b0288b2c6bb9507c76f74897f04a06f3c1",
+    "review_raw_sha256": "e265a314a9fd252668a802753eae7f070d5937f1744ecfc6ea5cc0f8dbeebf9c",
+    "recipient_assessment_commit": "16f46826409b86ee2d8d1f5c96181edeef3364e3",
+    "finding_ids": [
+      "Q12-F1",
+      "Q12-F2"
+    ],
+    "history": "v1 and its REVISE decision remain immutable; this proposed correction needs fresh exact review."
+  },
+  "reconciliation_schedule": {
+    "maximum_total_seconds": 20,
+    "minimum_launch_allocation_seconds": 20,
+    "phases_seconds": {
+      "startup": 3,
+      "checkpoint_1": 6,
+      "checkpoint_2": 6,
+      "output_committed": 1
+    },
+    "exit_seconds": 1,
+    "cleanup_seconds": 2,
+    "slack_seconds": 1,
+    "allocation_rule": "At launch derive B=min(20, outer_deadline-now-10). Launch only if B>=20; otherwise skip and mark both not_reconciled/reconciliation_budget_unavailable. No scaled phases or fresh window. Recheck time immediately before launch and subtract setup time; insufficient allocation skips.",
+    "supervisor": "Use unchanged accepted supervisor with exactly these four ordered phases, total_seconds=B, cleanup_seconds=2, exit_seconds=1, output_limit=4096. Events are timing metadata only, no result content. 16 phase +1 exit +2 cleanup =19 <=20.",
+    "deadline_rule": "Absolute outer deadline established before setup. Worker uses min(570, remaining-30); verifier total and every phase are clipped by its work_end=launch+B-2. Parent reserve10 covers bounded output validation/report/owned-directory teardown, not a reset. Any observed overrun prohibits passed. OS stalls remain outside hard-real-time guarantee."
+  },
+  "case_reason_codes": [
+    "validated_match",
+    "checkpoint_missing",
+    "checkpoint_invalid",
+    "checkpoint_order_invalid",
+    "reconciliation_unavailable"
+  ],
+  "reconciliation_output_schema": {
+    "basename": "reconciled.json",
+    "file_requirements": "Exclusive fresh file in owned directory, one trusted writer, mode0600, same nofollow/regular/owner/single-link/stable-descriptor checks as checkpoints. Atomic rename after complete close. No preexisting destination/overwrite/retry.",
+    "exact_root_keys": [
+      "schema_version",
+      "run_id",
+      "input_manifest_raw_sha256",
+      "cases"
+    ],
+    "schema_version": 2,
+    "run_id": "Exactly32 lowercase hex characters from trusted parent; exact equality. Not a credential.",
+    "input_manifest_raw_sha256": "Exactly64 lowercase hex matching pinned review-input raw digest passed by trusted parent.",
+    "cases": "Exactly2 entries in frozen protocol order; each exactly public_case_keys (5 keys), no additional keys at any depth.",
+    "case_id": "Exact frozen ID for ordinal, maximum32 ASCII characters.",
+    "state": "One of case_states; successful committed reconciliation output permits validated/unavailable/rejected only. Parent synthesizes not_reconciled after whole-verifier failure.",
+    "reason_code": "One of case_reason_codes; mapping: validated->validated_match, unavailable->checkpoint_missing, rejected->checkpoint_invalid or checkpoint_order_invalid, not_reconciled->reconciliation_unavailable.",
+    "checkpoint_digest": {
+      "type": "null or exact3-key object",
+      "keys": [
+        "kind",
+        "sha256",
+        "observed_bytes"
+      ],
+      "kind": [
+        "full",
+        "observed_prefix"
+      ],
+      "sha256": "64 lowercase hex",
+      "observed_bytes": "integer 0..262145, never boolean",
+      "rules": "Full only for complete bounded regular-file bytes actually read; prefix only for cap+1 oversized read; null for absent/order-skipped/unopened unsafe files. No path/error/free text. Prefix explicitly not full-file hash."
+    },
+    "validated_projection": "null unless validated; then exactly9 projection_keys, deep-equal frozen per-case expected values after actual-result finite validation. String/status/answer/inspection/import lengths are fixed by exact frozen equality, with independent UTF8 projection serialization cap4096 bytes per case. No raw result/extensions copied. Unknown fields have exact frozen null values.",
+    "parser": "Parent read cap+1=16385 and reject >16384 before decoding; strictUTF8, duplicate-key rejection at every depth, max nesting16, finite integer/boolean/null types only where specified, exact keys/count/order and binding/equality checks. Reject malformed/extra fields/digests/state combinations. Read failure or verifier failure invalidates entire output; never retain partial parsed verifier cases.",
+    "all_or_nothing": "Only successful verifier exit plus reaped leader/within cap and exact complete schema can commit both case states; otherwise parent creates2 not_reconciled/null projections.",
+    "public_projection_cap_bytes": 4096,
+    "maximum_depth": 16
+  },
+  "state_mapping": {
+    "leader_not_reaped": "No checkpoint reads; both not_reconciled/reconciliation_unavailable/null.",
+    "verifier_failed_unreaped_late_or_output_invalid": "Discard all verifier bytes; both not_reconciled/reconciliation_unavailable/null.",
+    "first_absent": "first unavailable/checkpoint_missing/null; inspect second presence only with safe metadata; second absent->unavailable/checkpoint_missing/null, second present->rejected/checkpoint_order_invalid/null without semantic parse.",
+    "first_rejected": "first rejected/checkpoint_invalid/null; second absent->unavailable/checkpoint_missing/null, second present->rejected/checkpoint_order_invalid/null without semantic parse.",
+    "first_validated": "second absent->unavailable/checkpoint_missing/null; second present invalid->rejected/checkpoint_invalid/null; second present exact-valid->validated/validated_match/frozen projection.",
+    "presence": "Absent only ENOENT for fixed path; any other safe-open/metadata error is present_invalid/checkpoint_invalid if prior prefix valid, otherwise checkpoint_order_invalid. Never infer file presence from worker_status or events."
+  },
+  "parent_output_validation": {
+    "report_max_bytes": 65536,
+    "write": "Outside owned ephemeral directory to trusted fresh path; exclusive create, no overwrite/retry. Remove owned directory before publishing report. If preexisting path abort before worker; write/encode/oversize/cleanup failure cannot pass.",
+    "metadata": "Only frozen vocabularies, booleans, bounded counts/hashes and phases; no raw supervisor receipt copy. Max2 case entries, max10 failure codes selected from design vocabulary in stable vocabulary order without duplicates; exactly4 verifier phases and3 worker phases at most. Counts <=2^53-1; elapsed finite0..600 or fixed deadline_exceeded flag (no arbitrary text).",
+    "failure_precedence": "Existing output->abort/no report; unreaped worker->no reads/not_reconciled; budget skip or whole verifier/output rejection->not_reconciled; valid verifier cases retained but any worker/report/directory failure->failed. Report writing failure produces no claimed report/fixed error. Cleanup failure invalidates passed but cannot turn a validated projection into factual approval."
+  },
+  "correction_provenance": {
+    "first_observer": "@don.tinker/Don, unsolicited limited text observation92502860 r1; qualified in9601ad45 r1. Success does not imply checkpoint presence.",
+    "reviewer": "@adrian.factfinder, shared Adrian owner/prior exposure/authoredfixtures/source-dependent; formal Q12 requiredfindings independently checked by recipient.",
+    "scope": "Only proposes correction; no acceptance of design/implementation/runtime/factual/curation/routing/API."
+  }
+}

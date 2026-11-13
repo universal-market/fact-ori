@@ -1,0 +1,1899 @@
+{
+  "schema_version": 2,
+  "task_key": "FO-W015-Q13",
+  "status": "required_not_executed",
+  "original_scenario_count": 23,
+  "whole_verifier_additional_scenarios": 9,
+  "fixture_definitions": {
+    "valid": "Exact frozen case result and all envelope bindings; serialized strictUTF8 unique-key JSON in fixed final basename. Trusted offline mutation fixtures only.",
+    "absent": "Final basename missing (ENOENT); temporary files never imply final presence.",
+    "mutation_rule": "Change only named field/encoding/file condition, preserving all other valid bytes/bindings; named variants run separately, not as mixed faults. Wrong_* use a different fixed same-shape value; symlink points only inside fresh ownedfixture dir. No live process/filesystem failure has been executed.",
+    "conditions": "All condition keys explicit per base row; required_variants inherit parent conditions and override only stated checkpoint/state/reason inputs.",
+    "reason_precedence": "Order rejection of present02 after absent/rejected01 precedes any02 semantic validation. Absent02 remains unavailable even after invalid01. Whole-verifier failure overrides all checkpoint state projections.",
+    "timing_qualification": "worker_status success is adversarial timing metadata in several fixtures; presence defined only by explicit fixture columns."
+  },
+  "cases": [
+    {
+      "id": "complete",
+      "worker_status": "success",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "expected": "passed",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "validated_match",
+        "validated_match"
+      ],
+      "projection_presence": [
+        true,
+        true
+      ],
+      "fault_injection": "none",
+      "required_variants": []
+    },
+    {
+      "id": "case2_nonzero",
+      "worker_status": "child_failed",
+      "case_states": [
+        "validated",
+        "unavailable"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "absent"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "absent"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "startup and case1"
+      },
+      "reason_codes": [
+        "validated_match",
+        "checkpoint_missing"
+      ],
+      "projection_presence": [
+        true,
+        false
+      ],
+      "fault_injection": "Exit nonzero during case2 before rename",
+      "required_variants": []
+    },
+    {
+      "id": "case2_timeout",
+      "worker_status": "phase_timeout",
+      "case_states": [
+        "validated",
+        "unavailable"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "absent"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "absent"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "startup and case1"
+      },
+      "reason_codes": [
+        "validated_match",
+        "checkpoint_missing"
+      ],
+      "projection_presence": [
+        true,
+        false
+      ],
+      "fault_injection": "Stall case2 until phase cap before rename",
+      "required_variants": []
+    },
+    {
+      "id": "startup_timeout",
+      "worker_status": "phase_timeout",
+      "case_states": [
+        "unavailable",
+        "unavailable"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "absent",
+        "absent"
+      ],
+      "presence_by_ordinal": [
+        "absent",
+        "absent"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "none"
+      },
+      "reason_codes": [
+        "checkpoint_missing",
+        "checkpoint_missing"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Stall startup before any checkpoint",
+      "required_variants": []
+    },
+    {
+      "id": "write_before_event_then_exit",
+      "worker_status": "child_failed",
+      "case_states": [
+        "validated",
+        "unavailable"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "absent"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "absent"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "startup only; first rename committed before missing case1 event"
+      },
+      "reason_codes": [
+        "validated_match",
+        "checkpoint_missing"
+      ],
+      "projection_presence": [
+        true,
+        false
+      ],
+      "fault_injection": "Exit nonzero after first rename but before first case event",
+      "required_variants": []
+    },
+    {
+      "id": "event_without_file",
+      "worker_status": "success",
+      "case_states": [
+        "unavailable",
+        "unavailable"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "absent",
+        "absent"
+      ],
+      "presence_by_ordinal": [
+        "absent",
+        "absent"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "checkpoint_missing",
+        "checkpoint_missing"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Emit all3 timing events and exit0 without either fixed file",
+      "required_variants": []
+    },
+    {
+      "id": "second_without_first",
+      "worker_status": "success",
+      "case_states": [
+        "unavailable",
+        "rejected"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "absent",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "absent",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "checkpoint_missing",
+        "checkpoint_order_invalid"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Create only exact-valid02 file",
+      "required_variants": []
+    },
+    {
+      "id": "invalid_first_valid_second",
+      "worker_status": "success",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "wrong_run",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Wrong32hex run_id in01; exact-valid02 exists",
+      "required_variants": []
+    },
+    {
+      "id": "wrong_run_binding",
+      "worker_status": "success",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "wrong_run",
+        "absent"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "absent"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Only01 has a mismatched32hex run_id;02 explicitly absent",
+      "required_variants": [
+        {
+          "id": "wrong_run__second_absent",
+          "checkpoint_contents_by_ordinal": [
+            "wrong_run",
+            "absent"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "absent"
+          ],
+          "case_states": [
+            "rejected",
+            "unavailable"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_missing"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "wrong_run__second_valid",
+          "checkpoint_contents_by_ordinal": [
+            "wrong_run",
+            "valid"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "present"
+          ],
+          "case_states": [
+            "rejected",
+            "rejected"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_order_invalid"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        }
+      ]
+    },
+    {
+      "id": "wrong_input_or_pin",
+      "worker_status": "success",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "wrong_input",
+        "absent"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "absent"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Only01 wrong input_sha256, other bindings valid;02 absent",
+      "required_variants": [
+        {
+          "id": "wrong_input__second_absent",
+          "checkpoint_contents_by_ordinal": [
+            "wrong_input",
+            "absent"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "absent"
+          ],
+          "case_states": [
+            "rejected",
+            "unavailable"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_missing"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "wrong_input__second_valid",
+          "checkpoint_contents_by_ordinal": [
+            "wrong_input",
+            "valid"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "present"
+          ],
+          "case_states": [
+            "rejected",
+            "rejected"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_order_invalid"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "wrong_implementation_pin__second_absent",
+          "checkpoint_contents_by_ordinal": [
+            "wrong_implementation_pin",
+            "absent"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "absent"
+          ],
+          "case_states": [
+            "rejected",
+            "unavailable"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_missing"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "wrong_implementation_pin__second_valid",
+          "checkpoint_contents_by_ordinal": [
+            "wrong_implementation_pin",
+            "valid"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "present"
+          ],
+          "case_states": [
+            "rejected",
+            "rejected"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_order_invalid"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "wrong_worker_digest__second_absent",
+          "checkpoint_contents_by_ordinal": [
+            "wrong_worker_digest",
+            "absent"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "absent"
+          ],
+          "case_states": [
+            "rejected",
+            "unavailable"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_missing"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "wrong_worker_digest__second_valid",
+          "checkpoint_contents_by_ordinal": [
+            "wrong_worker_digest",
+            "valid"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "present"
+          ],
+          "case_states": [
+            "rejected",
+            "rejected"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_order_invalid"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "wrong_import_id__second_absent",
+          "checkpoint_contents_by_ordinal": [
+            "wrong_import_id",
+            "absent"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "absent"
+          ],
+          "case_states": [
+            "rejected",
+            "unavailable"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_missing"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "wrong_import_id__second_valid",
+          "checkpoint_contents_by_ordinal": [
+            "wrong_import_id",
+            "valid"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "present"
+          ],
+          "case_states": [
+            "rejected",
+            "rejected"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_order_invalid"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "wrong_ordinal__second_absent",
+          "checkpoint_contents_by_ordinal": [
+            "wrong_ordinal",
+            "absent"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "absent"
+          ],
+          "case_states": [
+            "rejected",
+            "unavailable"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_missing"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "wrong_ordinal__second_valid",
+          "checkpoint_contents_by_ordinal": [
+            "wrong_ordinal",
+            "valid"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "present"
+          ],
+          "case_states": [
+            "rejected",
+            "rejected"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_order_invalid"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        }
+      ]
+    },
+    {
+      "id": "duplicate_keys_or_non_utf8",
+      "worker_status": "success",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "duplicate_keys",
+        "absent"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "absent"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Only01 repeats run_id JSON key;02 absent",
+      "required_variants": [
+        {
+          "id": "duplicate_keys__second_absent",
+          "checkpoint_contents_by_ordinal": [
+            "duplicate_keys",
+            "absent"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "absent"
+          ],
+          "case_states": [
+            "rejected",
+            "unavailable"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_missing"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "duplicate_keys__second_valid",
+          "checkpoint_contents_by_ordinal": [
+            "duplicate_keys",
+            "valid"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "present"
+          ],
+          "case_states": [
+            "rejected",
+            "rejected"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_order_invalid"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "non_utf8__second_absent",
+          "checkpoint_contents_by_ordinal": [
+            "non_utf8",
+            "absent"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "absent"
+          ],
+          "case_states": [
+            "rejected",
+            "unavailable"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_missing"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "non_utf8__second_valid",
+          "checkpoint_contents_by_ordinal": [
+            "non_utf8",
+            "valid"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "present"
+          ],
+          "case_states": [
+            "rejected",
+            "rejected"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_order_invalid"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "malformed_json__second_absent",
+          "checkpoint_contents_by_ordinal": [
+            "malformed_json",
+            "absent"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "absent"
+          ],
+          "case_states": [
+            "rejected",
+            "unavailable"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_missing"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "malformed_json__second_valid",
+          "checkpoint_contents_by_ordinal": [
+            "malformed_json",
+            "valid"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "present"
+          ],
+          "case_states": [
+            "rejected",
+            "rejected"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_order_invalid"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        }
+      ]
+    },
+    {
+      "id": "oversized_or_symlink_file",
+      "worker_status": "success",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "oversized",
+        "absent"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "absent"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Only01 regular cap+1=262145 bytes;02 absent",
+      "required_variants": [
+        {
+          "id": "oversized__second_absent",
+          "checkpoint_contents_by_ordinal": [
+            "oversized",
+            "absent"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "absent"
+          ],
+          "case_states": [
+            "rejected",
+            "unavailable"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_missing"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "oversized__second_valid",
+          "checkpoint_contents_by_ordinal": [
+            "oversized",
+            "valid"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "present"
+          ],
+          "case_states": [
+            "rejected",
+            "rejected"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_order_invalid"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "symlink__second_absent",
+          "checkpoint_contents_by_ordinal": [
+            "symlink",
+            "absent"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "absent"
+          ],
+          "case_states": [
+            "rejected",
+            "unavailable"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_missing"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "symlink__second_valid",
+          "checkpoint_contents_by_ordinal": [
+            "symlink",
+            "valid"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "present"
+          ],
+          "case_states": [
+            "rejected",
+            "rejected"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_order_invalid"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "multiple_links__second_absent",
+          "checkpoint_contents_by_ordinal": [
+            "multiple_links",
+            "absent"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "absent"
+          ],
+          "case_states": [
+            "rejected",
+            "unavailable"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_missing"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "multiple_links__second_valid",
+          "checkpoint_contents_by_ordinal": [
+            "multiple_links",
+            "valid"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "present"
+          ],
+          "case_states": [
+            "rejected",
+            "rejected"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_order_invalid"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "changed_descriptor_metadata__second_absent",
+          "checkpoint_contents_by_ordinal": [
+            "changed_descriptor_metadata",
+            "absent"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "absent"
+          ],
+          "case_states": [
+            "rejected",
+            "unavailable"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_missing"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        },
+        {
+          "id": "changed_descriptor_metadata__second_valid",
+          "checkpoint_contents_by_ordinal": [
+            "changed_descriptor_metadata",
+            "valid"
+          ],
+          "presence_by_ordinal": [
+            "present",
+            "present"
+          ],
+          "case_states": [
+            "rejected",
+            "rejected"
+          ],
+          "reason_codes": [
+            "checkpoint_invalid",
+            "checkpoint_order_invalid"
+          ],
+          "projection_presence": [
+            false,
+            false
+          ],
+          "fault_injection": "Apply only named01 mutation to otherwise exact-valid envelope; second as specified. Conditions inherited from parent; file existence never inferred from events."
+        }
+      ]
+    },
+    {
+      "id": "truncated_temp_only",
+      "worker_status": "child_failed",
+      "case_states": [
+        "unavailable",
+        "unavailable"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "absent",
+        "absent"
+      ],
+      "presence_by_ordinal": [
+        "absent",
+        "absent"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "checkpoint_missing",
+        "checkpoint_missing"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Truncate temporary01 file; neither final basename exists",
+      "required_variants": []
+    },
+    {
+      "id": "two_valid_then_nonzero",
+      "worker_status": "child_failed",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "validated_match",
+        "validated_match"
+      ],
+      "projection_presence": [
+        true,
+        true
+      ],
+      "fault_injection": "Both files committed then exit nonzero",
+      "required_variants": []
+    },
+    {
+      "id": "two_valid_then_exit_timeout",
+      "worker_status": "exit_timeout",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "validated_match",
+        "validated_match"
+      ],
+      "projection_presence": [
+        true,
+        true
+      ],
+      "fault_injection": "Bothfiles/events committed then stall exit",
+      "required_variants": []
+    },
+    {
+      "id": "verifier_timeout",
+      "worker_status": "success",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "expected": "not_reconciled",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "phase_timeout",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "absent",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Stall checkpoint_1 verifier phase beyond6s; no trusted verifier output",
+      "required_variants": []
+    },
+    {
+      "id": "leader_not_reaped",
+      "worker_status": "cleanup_failed",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "expected": "not_reconciled",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": false,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "skipped",
+        "reconciliation_leader_reaped": false,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "absent",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Supervisor returns leader_reaped=false; forbid checkpoint reads regardless file presence",
+      "required_variants": []
+    },
+    {
+      "id": "directory_cleanup_failed",
+      "worker_status": "success",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "expected": "failed",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": false,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "validated_match",
+        "validated_match"
+      ],
+      "projection_presence": [
+        true,
+        true
+      ],
+      "fault_injection": "Both validated; owned directory removal fails",
+      "required_variants": []
+    },
+    {
+      "id": "report_write_failed",
+      "worker_status": "success",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "expected": "no_report_fixed_error",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh_write_fails",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "validated_match",
+        "validated_match"
+      ],
+      "projection_presence": [
+        true,
+        true
+      ],
+      "fault_injection": "Both validated; exclusive fresh final report write fails",
+      "required_variants": []
+    },
+    {
+      "id": "raw_reason_extension_sentinel",
+      "worker_status": "success",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "expected": "passed_without_sentinel",
+      "checkpoint_contents_by_ordinal": [
+        "valid_with_ignored_extension",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "validated_match",
+        "validated_match"
+      ],
+      "projection_presence": [
+        true,
+        true
+      ],
+      "fault_injection": "Add raw reason and unrelated extension sentinel to v2-valid01 result; do not copy rawstrings",
+      "required_variants": []
+    },
+    {
+      "id": "rejected_result_sentinel",
+      "worker_status": "success",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "expected": "failed_without_sentinel",
+      "checkpoint_contents_by_ordinal": [
+        "invalid_result_sentinel",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "exact_valid",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Invalid result answer/sentinel in01; valid02 present but orderrejected",
+      "required_variants": []
+    },
+    {
+      "id": "existing_output",
+      "worker_status": "not_started",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "expected": "no_report_fixed_error",
+      "checkpoint_contents_by_ordinal": [
+        "absent",
+        "absent"
+      ],
+      "presence_by_ordinal": [
+        "absent",
+        "absent"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "skipped",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "absent",
+        "directory_cleanup_success": true,
+        "report_path": "preexisting",
+        "events": "worker not launched"
+      },
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Preexisting final output aborts before worker/setup writes",
+      "required_variants": []
+    },
+    {
+      "id": "insufficient_reconciliation_reserve",
+      "worker_status": "success",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "expected": "not_reconciled",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 19,
+        "reconciliation_status": "skipped",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "absent",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "fault_injection": "Worker success, remaining outer29s =>B19; skip reconciliation without newtime window",
+      "required_variants": []
+    },
+    {
+      "id": "verifier_output_oversized",
+      "worker_status": "success",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "16385-byte reconciled.json",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "fault_injection": "16385-byte reconciled.json",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "expected": "not_reconciled",
+      "required_variants": []
+    },
+    {
+      "id": "verifier_output_malformed",
+      "worker_status": "success",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "Truncated JSON",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "fault_injection": "Truncated JSON",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "expected": "not_reconciled",
+      "required_variants": []
+    },
+    {
+      "id": "verifier_output_duplicate_key",
+      "worker_status": "success",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "Duplicate run_id root key",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "fault_injection": "Duplicate run_id root key",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "expected": "not_reconciled",
+      "required_variants": []
+    },
+    {
+      "id": "verifier_output_non_utf8",
+      "worker_status": "success",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "Invalid UTF8 output",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "fault_injection": "Invalid UTF8 output",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "expected": "not_reconciled",
+      "required_variants": []
+    },
+    {
+      "id": "verifier_output_schema",
+      "worker_status": "success",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "Unexpected root field or wrong percase projection/binding",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "fault_injection": "Unexpected root field or wrong percase projection/binding",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "expected": "not_reconciled",
+      "required_variants": []
+    },
+    {
+      "id": "verifier_output_missing",
+      "worker_status": "success",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "success",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "Success metadata but no reconciled.json",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "fault_injection": "Success metadata but no reconciled.json",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "expected": "not_reconciled",
+      "required_variants": []
+    },
+    {
+      "id": "verifier_exit_timeout",
+      "worker_status": "success",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "failure",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "Commit output/events then stall exit >1s",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "fault_injection": "Commit output/events then stall exit >1s",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "expected": "not_reconciled",
+      "required_variants": []
+    },
+    {
+      "id": "verifier_cleanup_failed",
+      "worker_status": "success",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "failure",
+        "reconciliation_leader_reaped": false,
+        "reconciliation_within_deadline": true,
+        "reconciliation_output": "Return cleanup failure or leader not reaped",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "fault_injection": "Return cleanup failure or leader not reaped",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "expected": "not_reconciled",
+      "required_variants": []
+    },
+    {
+      "id": "verifier_deadline_exceeded",
+      "worker_status": "success",
+      "checkpoint_contents_by_ordinal": [
+        "valid",
+        "valid"
+      ],
+      "presence_by_ordinal": [
+        "present",
+        "present"
+      ],
+      "conditions": {
+        "worker_leader_reaped": true,
+        "worker_within_deadline": true,
+        "reconciliation_allocation_seconds": 20,
+        "reconciliation_status": "failure",
+        "reconciliation_leader_reaped": true,
+        "reconciliation_within_deadline": false,
+        "reconciliation_output": "Return within_total_deadline=false",
+        "directory_cleanup_success": true,
+        "report_path": "fresh",
+        "events": "all3 ordered"
+      },
+      "fault_injection": "Return within_total_deadline=false",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "projection_presence": [
+        false,
+        false
+      ],
+      "expected": "not_reconciled",
+      "required_variants": []
+    }
+  ],
+  "additional_obligations": [
+    "Run separate parent report oversize/encoding/error fixture; never claim report exists after failed exclusive write.",
+    "Probe safe-open ownership/link/size/swap checks and duplicates at nested depths.",
+    "Test both19.999s/20s allocation boundary, setup elapsed recheck and no window reset.",
+    "All sentinel strings absent from every public field; source-only obligations not runtime proof."
+  ]
+}
