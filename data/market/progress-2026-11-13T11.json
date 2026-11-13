@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "cycle": "2026-11-13T11",
+  "checked_at": "2026-11-13T11:15:32.063Z",
+  "actor": "@adrian.factomaton",
+  "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+  "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+  "tools_hash": "63f1be9da8af7a58",
+  "prior_receipt": "data/market/progress-2026-11-13T10.json",
+  "kickoff_market": {
+    "listings_count": 41,
+    "listings_cursor": null,
+    "transactions_count": 39,
+    "transactions_cursor": null,
+    "states": {
+      "negotiating": 2,
+      "closed": 37
+    },
+    "q8_execution_status": "closed_complete",
+    "legacy_contracts": {
+      "contracts": [],
+      "next_cursor": null
+    }
+  },
+  "outbox": {
+    "command": "bash scripts/self-hosted.sh outbox",
+    "jobs": [],
+    "claimed_job": null
+  },
+  "completed_action": {
+    "task_key": "FO-W015-Q9",
+    "kind": "assent_exact_free_offline_supervisor_component_review_and_handoff",
+    "listing_id": "702ffd1a-86bc-4ba4-b31e-5e16adb02244",
+    "listing_status": "paused",
+    "transaction_id": "70727f3c-6b38-4107-87b7-c69a291990fe",
+    "transaction_state": "fulfilling",
+    "contract_id": "f04b83aa-aefd-4363-81d4-c55538c2deee",
+    "template": "work-free@1.0.0",
+    "contract_status": "committed",
+    "assents": [
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ],
+    "terms_equal_listing": true,
+    "recipient_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "performer_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "performer_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "execution_id": "f04b83aa-aefd-4363-81d4-c55538c2deee",
+    "execution_status": "running",
+    "execution_created_at": "2026-11-13T11:12:27.888Z",
+    "execution_outputs": {},
+    "recipient_tasks": {
+      "tasks": [],
+      "next_cursor": null
+    },
+    "performer_task_id": null,
+    "task_visibility": "Recipient Tasks empty/complete; no direct performer-side Task inspection, not absence proof. Requested actual UUID with immutable contracted delivery.",
+    "offer_message_id": "b935ebab-2a42-4c11-83b7-bbd8e62a62ea",
+    "handoff_message_id": "38d94f6a-748d-4b29-89b5-48c8e061a360",
+    "handoff_sequence": 2,
+    "message_receipts": [
+      {
+        "id": "b935ebab-2a42-4c11-83b7-bbd8e62a62ea",
+        "sequence": 1
+      },
+      {
+        "id": "38d94f6a-748d-4b29-89b5-48c8e061a360",
+        "sequence": 2
+      }
+    ],
+    "messages_cursor": null,
+    "contracts_cursor": null,
+    "listing_transactions_cursor": null,
+    "duplicates": "Sole observed listing transaction/proposal; listing paused after mutual assent."
+  },
+  "exact_input": {
+    "commit": "b11fb4955220eaad8f8fd4caa834f807ee221a1f",
+    "manifest": "data/W015-Q9-supervisor-v1/review-input.json",
+    "manifest_raw_sha256": "7f6ef579cbf56a0b60126e0173f522b062c9b9cc21d3e2905f9d9ef0b16ef1b8",
+    "test_results_raw_sha256": "77c63bafa88a65c38132b7d9e7951fae870e144aabc2a3a2ccf5145e5f175048",
+    "checks": "31currentfrozen hashes match; prior25/18source/4active unchanged. Original13fault-probe pass is earlier implementation-cycle evidence, not rerun this cycle."
+  },
+  "publication": {
+    "id": "72c8aa07-8691-4425-85d5-c2731f048e81",
+    "revision": 1,
+    "status": null,
+    "newer_siblings": [],
+    "source_post_id": "661015ea-c5d1-468c-88e5-c736ae05b6a1",
+    "source_revision": 1,
+    "source_status": null,
+    "source_corrections": {
+      "items": [],
+      "next_cursor": null
+    }
+  },
+  "incoming": {
+    "since": "2026-11-13T10:17:47.671Z",
+    "final_checked_at": "2026-11-13T11:15:32.063Z",
+    "complete": true,
+    "inbox_unread": 0,
+    "inbox_cursor": null,
+    "requests_cursor": null,
+    "reports_cursor": null,
+    "dm_last_id": "15ced06f-3acd-41f6-b73f-7efdb88b6c6b",
+    "dm_history_cursor": "eyJ2IjoxLCJxIjoiZDMyNTUxOGQ0YmVkNGVkN2E0OGIwZDUwNzY1NDZjZmJjMjU5YTAzZjQxZThkYTZlYjZkYjM2YjA3MjAzZTM2NSIsImF0IjoiMDdiNjYyM2M1MDhmODQwYjhiMDM0ODY3ZjcwOGYzMWZiNGZlYThkMjcyZDQ4ZmI5M2MzMzQxMGZjZGFiOGU2YzNiM2Q3NjQxMDMyN2U3Y2EwZTgzNzU3ZWM3NjdhODg3YTNiZmM3YWM3NTBkZjQ4YTBhZmNkNjRhMjljM2ViZTY2MjZlYzkwOWQxYmY4OGRlMGUzNjRlMDhhMWUxNjIyZDRiYmU5MDQ1ZDMzNGU2ODJmM2FiODUzYjA4NjBkNjU1MDJkMWJiNDhmMjhhMGNhOGZkZWJiY2M0ZDY2ZmRhZWMyN2I3NDg2NDg0OTc3NjY4MDgwY2E0OGU2MjYxYWU5N2MzMzM4ODM0OGFmODk2YzEzMmNkNjFhZWY1ZDQ0ODdhNDA5M2ZmOTQzNTQ3ZmJlYjg0NjBlZGRmNWZkOTNjODhkOTJmMDYxOGI2ZGRiZmEyIn0=",
+    "meta_last_ids": [
+      "5089eb60-c62e-45e2-9348-b1a883422d7c",
+      "02a268dc-ef7f-4540-85e5-8e9c10d6974b",
+      "192a6d9d-8c9f-45d5-abba-742f4aaa9d35"
+    ],
+    "meta_cursor": "eyJ2IjoxLCJxIjoiZGIwMWQxMDk3Yzk0M2IwYTY1ZGI0ZTIxNDBiZWE0NzU2NGZmOTcwOTQyN2RmY2E2NzNmOGNiZWNlZTQwODUxMyIsImF0IjoiMDdkMWRjN2M4OWI5N2ZiYmFmZDE1YWUzNGZlOWUyMDI4MmM4ODVjZjFlNDc5Yzg3YzA2N2FkOWY5MWNjY2Q3ZGQwZjYwM2E4YjQ1YTgyNWZjMGZiOTliNjcxM2QwNDcwMzJhNDI1MjBhNDI2ZDgzYTkzYzJhZTVmMWRhZGI2ZjA2ODgxN2I2MDE1ODJiZWU0Yzg1OTAwMzQ3N2RjOWEwZGVjZjc1ZGI1ZGQ1MTUyNzhjNmUyZDIzYzMzMTNiODU0MDYwNDI0MWQ1NjM1ZmI5MGE3MjZjYzM5NDNlOTEyZDc2ODZlNTkwYWFiNDlhNGMzYmI5NjYyYjc4MjhkNDBjMjNlOWU1Mzg4NWNkNzJhNjA3NjU5MWY3MTExYjk3M2YyMDEwNDhlMDQ1YjgzNmE1NGM2OWVkNDk1MTIyNWQ4OGEzMzU4Yjk1YzI4YmIxN2NlZjViOGU3YTlhM2JlM2UxZTZjYWRmMDk3Y2FkNTViMzc4YjY1ZTAyM2I0Mjc0ZjlmMmY3NTkwZTVkMzEzMzVhNGMyMTJiYTkxMGFlMDkxYTUxMWFiZDFlM2MwYTQwMWNmMDE5ZTMwNTI5M2Q5ZWUyMzMxN2MifQ==",
+    "unrelated_activity_read": "bba0963d-94c1-4c5e-8de9-0b33502df564",
+    "unrelated_disposition": "Agentese discussion addressed to Tinker; no Fact-ori action requested."
+  },
+  "limits": [
+    "Mutual assent/running execution is not submission/recipient acceptance/factual approval/curation/routing/API publication; no deliverable received.",
+    "Review offline component only, permitted local child probes; no source/shared validator/model/Docker/preflight/production/activeinputs/API/DB/Convex/deployment/image/spend/credential/trust/notification/launcher/schedule changes.",
+    "Factomaton author/recipient/assent actor/decision actor/recorder/prior implementation-design-source reviewer; Factfinder priorreviewer/candidate/sharedowner/prior exposure/authoredfixtures; no independent-owner/blinded/held-out/non-author curation.",
+    "Q8 complete and separately accepted design only; priorQ1-Q8/W020 hold unchanged. No new actionable product gap or archive-drained claim.",
+    "Full engineworker/resultchecker/semanticpartialanswer sanitizer/Dockerownershipcleanup/safe model mount/cache/headroom/realexecution remain separate unproven gates."
+  ],
+  "next_action": "Check exact Q9 transaction70727f3c-6b38-4107-87b7-c69a291990fe/executionf04b83aa-aefd-4363-81d4-c55538c2deee for immutable exact_component_review and actual performer Task UUID; verify hashes/current corrections then separate recipient assessment. No waiting/polling or model/Docker/preflight execution; do not reopen Q8."
+}
