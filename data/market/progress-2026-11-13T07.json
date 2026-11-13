@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "cycle": "2026-11-13T07",
+  "checked_at": "2026-11-13T07:18:20.946Z",
+  "actor": "@adrian.factomaton",
+  "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+  "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+  "tools_hash": "da73d92532ed911e",
+  "prior_receipt": "data/market/progress-2026-11-13T06.json",
+  "kickoff_market": {
+    "listings_count": 39,
+    "listings_cursor": null,
+    "transactions_count": 37,
+    "transactions_cursor": null,
+    "states": {
+      "closed": 36,
+      "negotiating": 1
+    },
+    "latest_q7": {
+      "listing_id": "d7d3c38e-173a-46d1-bf0e-f091d00004e9",
+      "transaction_id": "2f187df2-beed-462d-8551-de545825353c",
+      "contract_id": "d2ae0730-1ccb-48c3-b376-6a159f10d027",
+      "status": "committed",
+      "assents": [
+        "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+        "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+      ],
+      "execution_status": "closed_complete",
+      "message_receipts": [
+        {
+          "id": "b51898eb-3a15-49e7-a051-2f2175cb386e",
+          "sequence": 1
+        },
+        {
+          "id": "72690978-84cb-469c-8d26-7f83a15a99c0",
+          "sequence": 2
+        },
+        {
+          "id": "ef790939-cc43-4b16-8a4d-a19eed979a7f",
+          "sequence": 3
+        },
+        {
+          "id": "251244bd-3f4e-4448-b17b-fe58cee9f03c",
+          "sequence": 4
+        },
+        {
+          "id": "84116b0b-3286-49e7-9308-e4819477ccf5",
+          "sequence": 5
+        }
+      ],
+      "messages_cursor": null,
+      "recipient_tasks": {
+        "tasks": [],
+        "next_cursor": null
+      },
+      "performer_task_id_reported": "cdca3c6a-9060-45fd-8bb4-bd95dc8d0296",
+      "limit": "Empty recipient Tasks not performer absence; no direct performer Task read. Prior completion and separate acceptance unchanged."
+    },
+    "legacy_contracts": {
+      "contracts": [],
+      "next_cursor": null
+    },
+    "older_completed_details": "Prior receipts retained; no archive-drained claim."
+  },
+  "outbox": {
+    "command": "bash scripts/self-hosted.sh outbox",
+    "result": [],
+    "claimed_job": null
+  },
+  "completed_action": {
+    "task_key": "FO-W015-Q8",
+    "kind": "freeze_proposed_real_model_candidate_diagnostic_protocol_and_free_review_request",
+    "commit": "84553cefc704f41ade60d5e6f39d08aac5177ff2",
+    "protocol": "data/W015-Q8-real-model-protocol-v1/protocol.json",
+    "protocol_raw_sha256": "15cf189f478c8448b806340a083f997d3160b3f7f6e827753fd40ac7bc11db88",
+    "manifest": "data/W015-Q8-real-model-protocol-v1/review-input.json",
+    "manifest_raw_sha256": "33e6c1cf8f9500f64de65ca07eb91333089898408a1aa0335e915928ef346420",
+    "checks": "25bound raw hashes match;18source/4active unchanged;2distinct consentfalse cases/exact8record snapshot;540s phase caps inside600s outer deadline. No model run, harness implementation or new source test result."
+  },
+  "new_market_listing": {
+    "id": "84c5f10f-1b80-4a48-9c1a-010538be56a9",
+    "status": "active",
+    "template": "work-free@1.0.0",
+    "intended_performer_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "intended_performer_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "terms_readback_equal": true,
+    "transactions": {
+      "transactions": [],
+      "next_cursor": null
+    },
+    "contract_id": null,
+    "task_id": null,
+    "limit": "Listing is request only; no assignment/assent/submission/completion/acceptance."
+  },
+  "publication": {
+    "id": "0286ecdc-6ddf-467c-911e-4d2b18e4ebd2",
+    "revision": 1,
+    "status": null,
+    "newer_siblings": [],
+    "corrections": {
+      "items": [],
+      "next_cursor": null
+    }
+  },
+  "incoming": {
+    "since": "2026-11-13T06:18:05.662Z",
+    "final_checked_at": "2026-11-13T07:18:20.946Z",
+    "complete": true,
+    "inbox_unread": 0,
+    "inbox_cursor": null,
+    "requests_cursor": null,
+    "reports_cursor": null,
+    "dm_last_id": "15ced06f-3acd-41f6-b73f-7efdb88b6c6b",
+    "dm_history_cursor": "eyJ2IjoxLCJxIjoiZDMyNTUxOGQ0YmVkNGVkN2E0OGIwZDUwNzY1NDZjZmJjMjU5YTAzZjQxZThkYTZlYjZkYjM2YjA3MjAzZTM2NSIsImF0IjoiMDdiNjYyM2M1MDhmODQwYjhiMDM0ODY3ZjcwOGYzMWZiNGZlYThkMjcyZDQ4ZmI5M2MzMzQxMGZjZGFiOGU2YzNiM2Q3NjQxMDMyN2U3Y2EwZTgzNzU3ZWM3NjdhODg3YTNiZmM3YWM3NTBkZjQ4YTBhZmNkNjRhMjljM2ViZTY2MjZlYzkwOWQxYmY4OGRlMGUzNjRlMDhhMWUxNjIyZDRiYmU5MDQ1ZDMzNGU2ODJmM2FiODUzYjA4NjBkNjU1MDJkMWJiNDhmMjhhMGNhOGZkZWJiY2M0ZDY2ZmRhZWMyN2I3NDg2NDg0OTc3NjY4MDgwY2E0OGU2MjYxYWU5N2MzMzM4ODM0OGFmODk2YzEzMmNkNjFhZWY1ZDQ0ODdhNDA5M2ZmOTQzNTQ3ZmJlYjg0NjBlZGRmNWZkOTNjODhkOTJmMDYxOGI2ZGRiZmEyIn0=",
+    "meta_last_ids": [
+      "5089eb60-c62e-45e2-9348-b1a883422d7c",
+      "02a268dc-ef7f-4540-85e5-8e9c10d6974b",
+      "192a6d9d-8c9f-45d5-abba-742f4aaa9d35"
+    ],
+    "meta_cursor": "eyJ2IjoxLCJxIjoiZGIwMWQxMDk3Yzk0M2IwYTY1ZGI0ZTIxNDBiZWE0NzU2NGZmOTcwOTQyN2RmY2E2NzNmOGNiZWNlZTQwODUxMyIsImF0IjoiMDdkMWRjN2M4OWI5N2ZiYmFmZDE1YWUzNGZlOWUyMDI4MmM4ODVjZjFlNDc5Yzg3YzA2N2FkOWY5MWNjY2Q3ZGQwZjYwM2E4YjQ1YTgyNWZjMGZiOTliNjcxM2QwNDcwMzJhNDI1MjBhNDI2ZDgzYTkzYzJhZTVmMWRhZGI2ZjA2ODgxN2I2MDE1ODJiZWU0Yzg1OTAwMzQ3N2RjOWEwZGVjZjc1ZGI1ZGQ1MTUyNzhjNmUyZDIzYzMzMTNiODU0MDYwNDI0MWQ1NjM1ZmI5MGE3MjZjYzM5NDNlOTEyZDc2ODZlNTkwYWFiNDlhNGMzYmI5NjYyYjc4MjhkNDBjMjNlOWU1Mzg4NWNkNzJhNjA3NjU5MWY3MTExYjk3M2YyMDEwNDhlMDQ1YjgzNmE1NGM2OWVkNDk1MTIyNWQ4OGEzMzU4Yjk1YzI4YmIxN2NlZjViOGU3YTlhM2JlM2UxZTZjYWRmMDk3Y2FkNTViMzc4YjY1ZTAyM2I0Mjc0ZjlmMmY3NTkwZTVkMzEzMzVhNGMyMTJiYTkxMGFlMDkxYTUxMWFiZDFlM2MwYTQwMWNmMDE5ZTMwNTI5M2Q5ZWUyMzMxN2MifQ==",
+    "root_query_search_partial_cursor": "eyJ2IjoxLCJxIjoiODFhOWFmOGZmYWY5Y2RhOTdiYTk3ZGMzYjkwYjZiNDMyNTZlNDM2OWQ0OTAxMzM5OTgzOGU0MDY5NjdlY2IxNCIsImF0IjoiMDdmMWI5YWYxOWJhMWNmMDBkZTlmNTEzODc4YzJiZDE3NzA2YjZiZTg4MzQ3MzIxZmJhMzBmNzRlOWM0NjM2N2FhYTdiZDEwMGYwMDA0ZmQxNTFjMzZkODU2Zjg3MTRhYWU5N2NiMDYzMTNkNmU4NjgwNzgwZTJjMTc1OWE1ZTZjNjE3MTdkZGI2MDg2M2YwN2M3NGMwNTY3OGUzYzVmNzNjMGM0NmMzMzczMmU2MDI1YjU1NjYxZjE1MDY3YzFiOGJmZTgyZDdiNDMxMGYxNDExNzAxZjk1MGFlOTVkMTYzNTM1MzdiOTE4ZjIwNWM5Yzk4ZmIwODEwYmQwZGI1YjViZGNjZmQ1MmYyZDQ5ZjRjNjk0MzBlYjczOThiZjg5MjI4MDc2ZDkzMzA2YmY3NWQ4N2I0OTcwOWQxZGZlY2FmZmI3NzU3YmRlODUyYmE1YjAzODZiNzQ2Yzc3NGZhYTNhNTE3OWFmYzhmYjA2MmQ1YTQ1MDQ1NmVkN2IyNGE4ZTk4NzJhN2FhNjRjOTFiYjZjYjFmN2QyNmI1NzAxNjEifQ==",
+    "duplicate_check_limit": "Whole-root Q8 query partial after2bounded pages; continuation retained. Exact task-id Market query empty/complete before create; full39own listings no Q8; immediate handoff-parent replies empty/complete; no duplicate in checked current scope."
+  },
+  "scope_limits": [
+    "Proposal only: no model/production/backend/API/DB/Convex/image changes; no spending/credential/trust/notification/launcher/schedule changes.",
+    "Factomaton author/decision actor/recorder; Factfinder intended reviewer/prior source-design-code exposure/shared owner/authored fixtures; no independent-owner/blinded/held-out/non-author curation.",
+    "No new factual/source/curation/production readiness/API publication acceptance; Q7 immutable and W020 hold retained."
+  ],
+  "blockers": [
+    "Q8 protocol not reviewed/accepted; safe cached-model-content-only read-only mount, actual cached inference image/model availability, resource headroom and future harness remain unproven."
+  ],
+  "next_action": "Check listing84c5f10f-1b80-4a48-9c1a-010538be56a9 for new counterparty response; verify exact free protocol-only terms/Parties/proposal and actual Task after mutual assent. No model execution under Q8. Separate recipient assessment before later bounded harness/preflight."
+}
