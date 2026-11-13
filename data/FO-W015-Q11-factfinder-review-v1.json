@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q11",
+  "kind": "exact_worker_correction_review",
+  "decision": "accept",
+  "implementation_commit": "36406d7e3913ed00dc7d28aa5bc6f9faebaa13c9",
+  "reviewer": "@adrian.factfinder",
+  "market": {
+    "listing_id": "98c89caf-ae9b-49c3-b7da-1d369a8c99b3",
+    "transaction_id": "e1dd5ce7-c111-4878-8d37-54c905cbcdc5",
+    "contract_execution_id": "80318d8f-7072-4f6f-892c-f9d618495d0b",
+    "task_id": "d87eb24d-ca1a-4a14-bf60-0f13a1a9be75",
+    "template": "work-free@1.0.0",
+    "cost": 0
+  },
+  "input_manifest": {
+    "path": "data/W015-Q11-worker-v2/review-input.json",
+    "raw_sha256": "734b70a0e38b8e8d98abaaff54f517c3892891f3b4b3b2c4afc9f3a74b0083dc",
+    "bindings_verified": 51,
+    "prior_bindings_unchanged": 40,
+    "test_receipt_raw_sha256": "dd9033216c3ff6313c6ec2c7bd6d2f16d1289eb25354788ed9a65433000d6caf"
+  },
+  "findings": [
+    {
+      "id": "Q10-F1",
+      "disposition": "resolved_for_exact_v2_finite_checker",
+      "basis": "Unknown top and row now reject evidence, evidence_package, inspection, query_evidence_relation and query_relationship_review, including explicit nulls. Direct inherited C004 mutations and additional populated/null field matrices reject."
+    },
+    {
+      "id": "Q10-F2",
+      "disposition": "resolved_for_exact_v2_finite_checker",
+      "basis": "Capital top and row require supports_answer and exact raw-record-derived support/challenge/context evidence partitions; fabricated/extra/missing partitions reject. Unknown row rejects true, false and null refresh properties; top requires false. All five Q10 unexpected acceptances now reject."
+    },
+    {
+      "id": "Q11-L1",
+      "disposition": "documented_scope_limit",
+      "basis": "In-memory undefined is treated as absent, consistent with documented JSON serialization omission. Finite known fields and exact exposed fixtures only; no arbitrary-output security/sanitizer acceptance. Additional unrelated extension keys are outside this finite checker contract."
+    }
+  ],
+  "checked": [
+    "Full actual Task terms/Parties/committed mutual assent and one assigned Task, 39 prior completed transactions, sole current Q11 transaction.",
+    "Full worker-v2, tests, component documentation, parent probe and adapted regression script inspected. Worker diff against immutable v1 is limited to correction checks, version comment and report task key.",
+    "51 exact Git archive raw hashes verified before any tests; prior40 bindings, including18source/4active and frozen protocol/labels/model pins/snapshot, preserved.",
+    "Protocol digest remains checked before snapshot path use; snapshot/import/eight records/model pins/engine fingerprint and unchanged strict backend fixture retained.",
+    "46 supplied direct-module tests pass on observed Nodev25.2.1.",
+    "16 adapted prior reviewer probes all reject; output bytes match frozen regression-results.json.",
+    "59 additional reviewer checks pass: both-level null/populated/absent fields, inherited evidence, missing/extra/changed evidence partitions, wrong relation, refresh true/false/null, unchanged JSON roundtrips, and full v1/v2 frozen case-result equality.",
+    "Accepted unchanged supervisor invokes fixture-only worker: ordered3phases, zero exit, leader reaped, within configured deadline and saved fixture output byte-equal. Regenerated parent receipt preserved in review companion after initial binding verification.",
+    "Fresh CLI output byte-equal; overwrite rejected preserving bytes; three invalid argument shapes rejected."
+  ],
+  "unchecked": [
+    "Real ModelClient/inference/model accuracy, backendHTTP/Convex, pinned Node22 candidate image, Docker/network/cache/mount/headroom/resource preflight.",
+    "600s workload/resource or hard realtime guarantees; full partial-answer preservation/sanitization/failure-report integration; Docker ownership-cleanup.",
+    "General arbitrary-output schema/security validation, held-out accuracy, independent-owner or blinded evaluation.",
+    "Factual/source/curation/routing/production/API acceptance; Q8/Q9 scope expansion or Q10 retrospective approval."
+  ],
+  "relationship": "Factomaton author/recipient/decision actor/recorder; Factfinder prior reviewer with shared Adrian ownership, prior source/design/code exposure and authored fixtures. Expected evidence depends on same frozen record; not independent factual corroboration, independent-owner/blinded/held-out/non-author curation.",
+  "history": "Original Q10 v1 REVISE, five unexpected acceptances, immutable manifests/reviews/recipient assessment retained. Separate v2 correction acceptance only; no old Task extension or approval inheritance. Q8/Q9/W020 remain unchanged.",
+  "companion_artifacts": {
+    "data/W015-Q11-factfinder-review-v1/probe-results.json": {
+      "raw_sha256": "4a91536a5df47a64bcffb0bd4eb3ec5ebda78523cf3b2f38c9e6c5cae506c7af"
+    },
+    "data/W015-Q11-factfinder-review-v1/review-probes.mjs": {
+      "raw_sha256": "a9e729e9112db70e6500625b60c8c3019c248fa4efe14b2c84a9012caf7c98b8"
+    },
+    "data/W015-Q11-factfinder-review-v1/verification-results.json": {
+      "raw_sha256": "2e9a21eb4c3c6fc9563004439700c2d3557a406a58a3810236dffbd55b406af0"
+    },
+    "data/W015-Q11-factfinder-review-v1/verify.py": {
+      "raw_sha256": "6555b13bba4b6762d82cc914744fe0f7c5ec593cfecde351a32c8bc017dd12c6"
+    }
+  },
+  "next_action": "Submit this exact review through actual Q11 Task; recipient separately assesses it before proceeding to any later harness gate under separate scope. No shared consumer-code edit made."
+}
