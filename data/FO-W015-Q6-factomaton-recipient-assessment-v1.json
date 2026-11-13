@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "kind": "recipient_exact_code_review_assessment",
+  "project_task_id": "FO-W015-Q6",
+  "decision": "accept",
+  "decision_actor": "@adrian.factomaton",
+  "artifact_recorder": "@adrian.factomaton",
+  "implementation_author": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "relationship": "Shared Adrian owner/prior candidate/source/design/code exposure/authored public fixtures. Factomaton implementation author/recipient, Factfinder reviewer. Not independent-owner/blinded/held-out/non-author curation.",
+  "reviewed_source_commit": "71846d7ae56fcdc141df279e6fb064388abd3d56",
+  "input_manifest": {
+    "commit": "4d2186e959503311c06d90c4dae9d36b259d57a4",
+    "path": "data/W015-Q6-review-input-v1-2026-11-12.json",
+    "raw_sha256": "9721d17868442ba74e15b221c0fa2e74b71e128ede79afe6fb43a1dbafd5d84b"
+  },
+  "review": {
+    "commit": "378ca91fc885d27433a96c2443238f6b08b654c7",
+    "path": "data/FO-W015-Q6-factfinder-review-v1.json",
+    "raw_sha256": "a9f766ad9d39b0bb05c8d915c25850f58558a1d9aaa3054004ca14abe5167f02",
+    "canonical_sha256": "30f93426abce9a62443e7ba1f201e0b4839a7e9ecdbefba9ea6169f5427cf318",
+    "canonicalization": "factori-sorted-json-v1",
+    "decision": "accept",
+    "publication_id": "6ede753f-4b70-476e-b1e4-66c8d4bf1cbb",
+    "publication_revision": 1,
+    "publication_status": null,
+    "current_corrections": "empty complete before assessment"
+  },
+  "companion_hashes": {
+    "data/W015-Q6-factfinder-review-v1/review-probes.mjs": "e957f67ea9c5f9d63609af29f7d6cd9e4b07591cee387c569dc3f98a0a67c685",
+    "data/W015-Q6-factfinder-review-v1/probe-results.json": "6e039b8cdea756f5c60aeddaf4032b75ce003685b5b522641bddbff44838a299"
+  },
+  "market": {
+    "listing_id": "1a20f85f-d064-4061-8067-1d58566d9ddf",
+    "transaction_id": "51ddb394-cd32-4389-9e36-c9c7a6193a12",
+    "contract_execution_id": "262aa84c-7b4e-4878-9e59-aab865d74695",
+    "performer_task_id": "556854d5-4f3b-4aad-8a68-fdc76a565d99",
+    "delivery_status": "closed_complete",
+    "task_visibility": "UUID reported by immutable review/current authenticated publication/execution output. Recipient Tasks empty complete; no direct performer Task inspection or absence proof."
+  },
+  "verification": {
+    "three_public_files_match_local_raw_bytes": true,
+    "review_canonical_hash_matches": true,
+    "source_bindings_current_and_exact_git": 12,
+    "active_bindings_unchanged_current_and_exact_git": 4,
+    "manifest_and_reviewer_bindings_equal": true,
+    "reviewer_probe_code_inspected": true,
+    "reviewer_checks_reproduced": 522,
+    "reviewer_results_repeat_submitted_bytes": true,
+    "fresh_recipient_command": "npm run test:semantic",
+    "fresh_recipient_result": "pass",
+    "fresh_recipient_tests": 45,
+    "test_counts": {
+      "module": 6,
+      "engine": 25,
+      "http": 1,
+      "client": 3,
+      "seed_stdin": 1,
+      "semantic_report": 9
+    },
+    "reviewer_regression_limits_preserved": "Reviewer individually passed43; HTTP listen EPERM and seed stdin timeout retained in immutable review. Recipient fresh authorized loopback-capable run passedall45, including those2; does not rewrite reviewer evidence.",
+    "python_suite_rerun": false,
+    "production_source_edits": false
+  },
+  "assessment": [
+    "No blocking finding in exact standalone module/docs/test-command structural scope. Actual eight-record export passes; actual offline seed/export and forged-kind/version envelopes reject.",
+    "Consumed row/package identity/version/state/answer, exact mapping target pins, duplicates/approved-withheld collisions and fixed error behavior covered by inspected finite probes.",
+    "Empty approved snapshots/withheld metadata remain representable; case/space/invisible query keys distinct. Accepted/rejected inputs remain unchanged.",
+    "Module has no imports/I/O/indexing, engine/server not wired. Source/active bytes unchanged.",
+    "Coherently invented approvals/hash-shaped content and nested audit extras can pass as documented. This is structure/internal consistency, not canonical content-hash recomputation, authenticity/currency/completeness/full-audit/factual/security/resource/generic-JS-object proof.",
+    "Finite supported states/answer kinds; later contradicted support and format evolution remain separate. Null/nonblank curation_as_of is structural only."
+  ],
+  "disposition": {
+    "recipient_exact_standalone_acceptance": "accept",
+    "market_completion": "delivery only; this separate recipient assessment supplies exact standalone acceptance",
+    "factual_verdict": "not_assessed",
+    "curation": "not_granted",
+    "engine_startup_integration": "separate implementation/integration review required",
+    "api_publication_consent": "not_granted"
+  },
+  "unchanged_gates": [
+    "PriorQ1-Q5 frozen records/reviews/receipts immutable",
+    "No new factual source check/live/private acquisition or production model evaluation",
+    "No active inputs/API/Convex/production DB/deployment/payment/permission/credential/transport/schedule changes",
+    "W020 explicit per-read provenance hold unchanged"
+  ],
+  "next_action": "Implement separately versioned bounded engine/startup integration of accepted guard before indexing, with invalid-format/no-index/restart/error fixtures and fresh exact integration review before deployment. Offline pending literal diagnostics, approved predicate projection, Convex storage and non-author curation/growth/runtime/API consent remain separate."
+}
