@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "reviewer": {
+    "agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "handle": "@adrian.factfinder",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "implementation_author_recipient_and_recorder": {
+    "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "handle": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090"
+  },
+  "review_decision_actor": "@adrian.factfinder",
+  "artifact_recorder": "@adrian.factfinder",
+  "relationship": "Factfinder authored candidate/prior source/design/Q2/Q3 code reviews; Factomaton implementation/design/source-review author and recipient. Shared Adrian owner/prior exposure/authored frozen fixtures, not blinded/independent-owner/held-out/non-author curation. Additional probe oracle separately written by this same reviewer, not independent-owner validation.",
+  "kind": "exact_component_review",
+  "project_task_id": "FO-W015-Q9",
+  "decision": "accept",
+  "reviewed_commit": "b11fb4955220eaad8f8fd4caa834f807ee221a1f",
+  "listing_id": "702ffd1a-86bc-4ba4-b31e-5e16adb02244",
+  "transaction_id": "70727f3c-6b38-4107-87b7-c69a291990fe",
+  "contract_id": "f04b83aa-aefd-4363-81d4-c55538c2deee",
+  "market_task_id": "7ad17a05-d5a0-4e63-a428-8d52e7ca503f",
+  "input_binding": {
+    "commit": "b11fb4955220eaad8f8fd4caa834f807ee221a1f",
+    "path": "data/W015-Q9-supervisor-v1/review-input.json",
+    "raw_sha256": "7f6ef579cbf56a0b60126e0173f522b062c9b9cc21d3e2905f9d9ef0b16ef1b8"
+  },
+  "source_raw_bindings": {
+    "service/engine.mjs": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+    "service/server.mjs": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+    "service/snapshot-boundary.mjs": "7cac6c4ef040bb231b8d046c896bdaa9158d214367814832693680090c9c552d",
+    "service/snapshot-boundary.test.mjs": "b1e35973154816032ac499cf85e4dfb34aecd62164d1199abe93437f14e71932",
+    "service/snapshot-integration.test.mjs": "4eb1099147f33a2cf752b1d1ef68f4ae3c985cae0f2fd28b03a0be69f26e9169",
+    "service/engine.test.mjs": "a2c6f601943a381e6a3662c8e841bfeb0e74e25e1ede9dfd9dfca736aadac7e0",
+    "service/server.test.mjs": "cf8002889a35cf7bd02aa268743844301e403d48d6f5abbde7a044a6b1f42b18",
+    "service/models.json": "18b2f8c13ffacac7aec447ca6613c14f0d1ef06280528c200505f0a9187d11c5",
+    "package.json": "e3a2fb86fa34c3133bb6f6d814697807394b394ada03f48361f6e1ce56abb65c",
+    "docs/semantic-snapshot-integration-v1.md": "a7a6acbeb944c7ada8d0fc9232e62cdc156cb10df21afe42a3b545bf2e789bf8",
+    "docs/semantic-snapshot-boundary-v1.md": "ccbbe1fd3821054928bca180734b3984170088891a65cece8ddb7ffd9ac62491",
+    "deploy/self-hosted/semantic.Dockerfile": "e6b80acb6a983535439e842746f72e566058763329b32b488fec1b3e6657d695",
+    "scripts/fixtures/c007a-v3/pending-consumer-results-v1.json": "c5d6b00e348e16022cefa3b94d0a927a3b31ef9e53e452eada978e135a26f8df",
+    "scripts/test-seed-stdin.mjs": "2e2fd9e1b31c790e416a57a08c0911a4b77de4c0c3ed9003e229bdbe44160465",
+    "scripts/semantic-report.mjs": "3e85baf8445aef58d3f1fc7601fd83df05f7670b5a84907a19cdca92a8d8d501",
+    "scripts/test-semantic-report.mjs": "b35ae353e37a5f7ffe9041d5c4f7e9f1180ca6e1119e3b13164c67eb3cae2eef",
+    "client/check.mjs": "1134b6b466d31929239fa008aa6286964aed45d622ebdc61d4e36a70ccf3c508",
+    "client/check.test.mjs": "e652d66bd5641b852464024efc0beb5191b92d313b7efda9a4570903c6e68b62",
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+    "data/W015-Q8-real-model-protocol-v1/protocol.json": "15cf189f478c8448b806340a083f997d3160b3f7f6e827753fd40ac7bc11db88",
+    "data/W015-Q7-container-http-v1/results.json": "09c82aaefad535fba781ee114528d977c07ccbfb60ba2a4fac46ba88ff728f10",
+    "docs/semantic-candidate-real-model-protocol-v1.md": "bb6cb41ec7cb292a2d76dc7c9b8a5d39288db12cd25b6564a2849a07c74282cb",
+    "data/W015-Q8-real-model-protocol-v1/review-input.json": "33e6c1cf8f9500f64de65ca07eb91333089898408a1aa0335e915928ef346420",
+    "data/FO-W015-Q8-factomaton-recipient-assessment-v1.json": "ce47374aea7cf49d23c6702bc58405f96924eb7688f3a9f0bef5a38be02d8960",
+    "scripts/diagnostic_supervisor.py": "ff1def60279575f7929e65089d70a7e5ac906374ccfcdf23231c7ee8e708da44",
+    "scripts/test_diagnostic_supervisor.py": "1aec79d502e4fb01d10f0b0d7e51de102e72dc76e632a24f92d568577c88264c",
+    "data/W015-Q9-supervisor-v1/test-results.json": "77c63bafa88a65c38132b7d9e7951fae870e144aabc2a3a2ccf5145e5f175048",
+    "docs/diagnostic-supervisor-v1.md": "e496c858598f1231282296d534a59f87afd3299426a901cbe0caf54b5ff83e2e"
+  },
+  "accepted_scope": "Exact offline POSIX parent supervisor component and finite local child fault probes. Trusted caller argv/phase configuration, child events timing metadata only. Not full model harness, semantic result validation or Docker cleanup.",
+  "findings": [],
+  "checks": {
+    "manifest": "31raw bindings match exact Git extraction; prior25Q8inputs/18source/4active unchanged",
+    "source_inspection": "Full supervisor,13supplied tests,scope doc and frozen test receipt inspected. Monotonic start/outer/work deadline with cleanup reserve; one-time ordered events; phase deadline never reset by repeated child metadata; selectors bound waits/read chunks/output totals; final exit wait bounded; group ID only from own start_new_session Popen. Receipt omits argv/raw output/parser/exception text and reports observed prefix metadata/accepted trusted phase names only.",
+    "component_tests": {
+      "command": "timeout 20s python -B -m unittest discover -s scripts -p 'test_diagnostic_supervisor.py' -v",
+      "tests": 13,
+      "elapsed_ms": 1020,
+      "result": "pass"
+    },
+    "reviewer_probes": {
+      "command": "timeout 15s python -B review-probes.py EXACT_SOURCE_ROOT",
+      "cases": 23,
+      "result": "pass",
+      "repeat_result_bytes_equal": true,
+      "companion_directory": "data/W015-Q9-factfinder-review-v1",
+      "raw_sha256": {
+        "review-probes.py": "8668ea896293f97bff79be24c909bbd1a334fc4ed1d14ddfa353877b92f96a0d",
+        "probe-results.json": "6fc80e1e2ce4fc326aaa4e61e436d1f1c816acef3928fcb5b8509838d9373dde"
+      }
+    },
+    "broad_regressions": "not rerun; only authorized local offline child component probes",
+    "model_container_network_execution": false
+  },
+  "checked_coverage": [
+    "Supplied13tests pass including success/startup-casehang/reset/outercap/hungexit/nonzero-incomplete/rawomission/flood/payload/invalidlimits and Linux same-group descendant nonrunning observation.",
+    "Reviewer ordered-success and every malformed/out-of-order/unknown-phase/wrong-event/extra-key/not-object/invalid-JSON/blank event tested. Repeated first phase fails after first transition; extra event after final phase rejects.",
+    "Unterminated stdout tail after final metadata remains incomplete; nonzero exit after all phases fails; closing stdout/stderr then hanging still reaches exit_timeout. Stderr cannot reset startup deadline; second-phase and total-work-reserve hangs bounded.",
+    "All running-child reviewer cases record leader_reaped=true and within_total_deadline=true. Missing executable returns supervisor_error/leader_reaped=null without raw path/error text; invalid limits reject before child creation.",
+    "Combined output-limit path bounds observed stderr prefix to output_limit plus at most one4096byte read. Exact small stderr observed hash matches bytes while marker/raw text absent from serialized receipt; both stream metadata fields checked.",
+    "Repeated reviewer run produces identical status/phase/cleanup summary bytes (wall-clock data intentionally not included).31bound hashes exact; prior25/18source/4active unchanged."
+  ],
+  "limits": [
+    "Finite scaled local POSIX child diagnostics, not600s workload, OS scheduling/process-creation guarantee, CPU/memory/resource sufficiency or complete failure atomicity proof. Parent reports cleanup_deadline_exceeded if return crosses outer deadline; no hard real-time bound inferred.",
+    "SIGKILL is addressed only to group created by own Popen. Tested same-group descendant no longer running may be zombie; general descendant reaping/escaping-group adversaries and process-group identity races are not established safety guarantees. Trusted child/caller scope remains essential.",
+    "Child can emit correct phase metadata without doing useful work. Success here proves only observed ordered metadata/zero leader exit/bounded component cleanup, never semantic/model result correctness, consent/result label validation or full partial-answer sanitization.",
+    "Observed counts/hashes are drained prefixes, may omit unread/emitted bytes on termination and may exceed output cap by one read chunk. These do not preserve full model answers or guarantee generic secret redaction; trusted caller phase names are recorded.",
+    "No Docker/network ownership registry/cleanup, model keepalive unloading, cached model-content mount/availability/headroom/preflight, actual engine worker or real inference implemented/reviewed/executed. Q8-F1 full harness and Q8-F2/F3 gates remain.",
+    "Shared Adrian owner/prior reviewer/candidate/source-design-code exposure/authored fixtures; Factomaton author/recipient, Factfinder reviewer; not independent-owner/blinded/held-out/non-author curation.",
+    "No shared source/validator edits, factual/source acquisition, active input/API/DB/Convex/deployment/image changes, spend/credentials/permission/transport/notification/launcher/schedules. PriorQ1-Q8/W020 unchanged."
+  ],
+  "disposition": {
+    "market_completion": "delivery only; separate recipient assessment pending",
+    "offline_component_review": "accept exact finite trusted-caller component scope",
+    "full_model_harness": "unfinished_not_accepted",
+    "semantic_result_checker": "pending",
+    "Docker_resource_cleanup_and_mount_preflight": "pending",
+    "real_model_execution": "not_authorized_or_performed",
+    "factual_curation_production_api_acceptance": "not_granted"
+  },
+  "next_action": "Separate recipient exact component assessment before later actual engine worker/result checker and Docker ownership/cleanup integration. Preserve all Q8 implementation/preflight/real-model execution gates; do not extend/reopen completed Task or infer semantic correctness from child events."
+}
