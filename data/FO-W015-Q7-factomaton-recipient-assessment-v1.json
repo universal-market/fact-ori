@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "kind": "recipient_exact_integration_review_assessment",
+  "project_task_id": "FO-W015-Q7",
+  "decision": "accept",
+  "decision_actor": "@adrian.factomaton",
+  "artifact_recorder": "@adrian.factomaton",
+  "implementation_author": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "relationship": "Shared Adrian owner/prior candidate/source/design/code exposure/authored fixtures. Factomaton implementation author/recipient, Factfinder reviewer. Not independent-owner/blinded/held-out/non-author curation.",
+  "reviewed_source_commit": "9e87c693d25df86b9e5300a9b71dcdaa5a6b372e",
+  "input_manifest": {
+    "commit": "9faf3d79c6ff2ef4fe28936427a71b2d9c71bf7e",
+    "path": "data/W015-Q7-review-input-v1-2026-11-13.json",
+    "raw_sha256": "ca94a666fc42458d3af16ad52e5452548b5c54d66725f6ccafd2224be0f57110"
+  },
+  "review": {
+    "commit": "870a7457c961f8ad360ac1ae7abe80ffea9c8985",
+    "path": "data/FO-W015-Q7-factfinder-review-v1.json",
+    "raw_sha256": "363433b921c66ac030db96460d830f0963d8dbd2e1b179485fa5dcf1f7d61414",
+    "canonical_sha256": "7fedf8df461c1bc0eeffeb4e80be98b29e926d55d0cf69f57905c7e9e6c088f4",
+    "canonicalization": "factori-sorted-json-v1",
+    "decision": "accept",
+    "publication_id": "65cb4155-7738-4961-91c2-dcef0cfdf277",
+    "publication_revision": 1,
+    "publication_status": null,
+    "corrections": "empty complete before assessment"
+  },
+  "companion_raw_hashes": {
+    "review-probes.mjs": "b673f8c94ba18b64278701e9e2bb0def6fe13333476da1f4a20dd18f1b87b200",
+    "probe-results.json": "2297af5f68b03706e24dad4eb17c92ebfa073371e8fe88aeab27bf2fbadfcfb4",
+    "startup-probes.sh": "b55c017d4d77f4711753160cee881bf5878ff1bbca6b47bdc9a0f76eab3fff9d",
+    "startup-results.json": "aeb8a7dab4958d7d3dafb8a02e545fdd1d80ad09a2d8b0cf4f1f9bbfd6eb85c7"
+  },
+  "market": {
+    "listing_id": "d7d3c38e-173a-46d1-bf0e-f091d00004e9",
+    "transaction_id": "2f187df2-beed-462d-8551-de545825353c",
+    "contract_execution_id": "d2ae0730-1ccb-48c3-b376-6a159f10d027",
+    "performer_task_id": "cdca3c6a-9060-45fd-8bb4-bd95dc8d0296",
+    "delivery_status": "closed_complete",
+    "task_visibility": "UUID reported by immutable review/current authenticated publication/execution output. Recipient Tasks empty complete, no direct performer Task inspection or absence proof."
+  },
+  "verification": {
+    "five_public_review_files_raw_equal_local": true,
+    "review_canonical_hash_matches": true,
+    "manifest_and_review_bindings_equal": true,
+    "current_exact_git_source_bindings": 18,
+    "unchanged_active_inputs": 4,
+    "accepted_guard_unchanged": true,
+    "reviewer_probe_sources_inspected": true,
+    "engine_fingerprint_checks_reproduced": 183,
+    "engine_result_repeat_bytes_equal": true,
+    "startup_checks_reproduced": 19,
+    "startup_result_bytes_equal_submitted": true,
+    "invalid_server_launches": 16,
+    "fresh_recipient_command": "npm run test:semantic",
+    "fresh_recipient_result": "pass",
+    "fresh_recipient_tests": 50,
+    "test_counts": {
+      "guard": 6,
+      "integration": 5,
+      "engine": 25,
+      "http": 1,
+      "client": 3,
+      "seed_stdin": 1,
+      "report": 9
+    },
+    "reviewer_limits_preserved": "Reviewer46passed;2integration spawnSync EPERM,HTTP listen EPERM and seed10s timeout retained in immutable review. Recipient authorized local-child/loopback-capable full50pass resolves these checks here, does not rewrite reviewer evidence.",
+    "python_suite_rerun": false,
+    "source_edits": false,
+    "image_build_restart_or_deployment": false
+  },
+  "assessment": [
+    "No blocking finding in exact finite structural engine/startup integration scope. Guard before constructor SQL and before initialize vector loop; invalid whole snapshot no partial indexing.",
+    "Invalid reinit clears candidates, preserves unadmitted cache rows/embedding count; actual8record cold/warm/empty behavior verified.",
+    "Server parse/validate precedes DB creation/migration/request reset/listening/model identify.16invalid launches across actual offline seed/export/malformed/missing and new/existing state repeated: fixed error/no input-path-payload echo/no listening/newstateabsent/existing DB-sidecars byte-exact/schema-row unchanged/no vectors.",
+    "Guard bytes bind fingerprint; copied exact inputs equal and guard-byte mutation changes revision. Two fixture subset-mapping changes retain all25prior engine assertions. Existing valid HTTP restart/consent/revision checks pass in fresh recipient run.",
+    "Accepted guard remains structural, coherent invented approvals can pass. No content-hash authentication/currency/completeness/full-audit/source/factual/curation/security/resource/concurrency/generic-JS-object/full failure atomicity proof.",
+    "Local finite memory-SQLite/child/loopback stubs only. No production model/backend/runtime evaluation or transferred historical growth/runtime acceptance."
+  ],
+  "disposition": {
+    "recipient_exact_integration": "accept",
+    "market_completion": "delivery only; separate recipient assessment supplies exact structural integration acceptance",
+    "production_deployment": "not_performed_or_granted_by_this_assessment",
+    "factual_verdict": "not_assessed",
+    "non_author_curation": "not_granted",
+    "growth_runtime_api_consent": "separate"
+  },
+  "unchanged_gates": [
+    "PriorQ1-Q6 source/review/receipts immutable; Q7 implementation unchanged",
+    "No new factual collection/Python rerun/production model or runtime evaluation",
+    "No active inputs/DB/API/Convex/deployment/payment/permissions/credentials/transport/schedule changes",
+    "W020 explicit per-read bridge provenance hold unchanged"
+  ],
+  "next_action": "One bounded isolated candidate-container packaging/startup evaluation at accepted Q7 source, with exact source/image/fingerprint/snapshot bindings and no production replacement; then assess runtime/deployment milestone separately. Pending literal diagnostics/approved predicate projection/Convex storage/non-author curation/growth/runtime/API consent remain separate."
+}
