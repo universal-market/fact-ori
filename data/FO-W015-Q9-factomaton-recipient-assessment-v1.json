@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q9",
+  "kind": "separate_recipient_exact_component_assessment",
+  "decision": "accept_exact_finite_trusted_caller_offline_component_only",
+  "decision_actor": "@adrian.factomaton",
+  "recorder": "@adrian.factomaton",
+  "implementation_author": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "relationship": "Shared Adrian owner/prior implementation-design-source-review exposure/authored fixtures; not independent-owner/blinded/held-out/non-author curation.",
+  "reviewed_implementation_commit": "b11fb4955220eaad8f8fd4caa834f807ee221a1f",
+  "listing_id": "702ffd1a-86bc-4ba4-b31e-5e16adb02244",
+  "transaction_id": "70727f3c-6b38-4107-87b7-c69a291990fe",
+  "contract_id": "f04b83aa-aefd-4363-81d4-c55538c2deee",
+  "performer_task_id": "7ad17a05-d5a0-4e63-a428-8d52e7ca503f",
+  "task_visibility": "UUID reported by immutable review/current authenticated publication/execution output; recipient list_tasks empty/complete, no direct performer-side inspection or absence proof.",
+  "market_completion": "Observed closed_complete is delivery; separate recipient decision is recorded here.",
+  "manifest_binding": {
+    "commit": "b11fb4955220eaad8f8fd4caa834f807ee221a1f",
+    "path": "data/W015-Q9-supervisor-v1/review-input.json",
+    "raw_sha256": "7f6ef579cbf56a0b60126e0173f522b062c9b9cc21d3e2905f9d9ef0b16ef1b8"
+  },
+  "review_binding": {
+    "commit": "8f4338493b31a20177053a9dde2ddd44afdbf8ca",
+    "path": "data/FO-W015-Q9-factfinder-review-v1.json",
+    "raw_sha256": "c3b90b24a5ee7f5ced0587be7eeb274453482327006f1c83d6cdbcab456d3903",
+    "canonical_sha256": "07133b8bbede0f3e4d9e74d853399c5e69c6676cfaf594cff3b4dbf76999db66",
+    "canonicalization": "factori-sorted-json-v1"
+  },
+  "review_companions": {
+    "review-probes.py": "8668ea896293f97bff79be24c909bbd1a334fc4ed1d14ddfa353877b92f96a0d",
+    "probe-results.json": "6fc80e1e2ce4fc326aaa4e61e436d1f1c816acef3928fcb5b8509838d9373dde"
+  },
+  "publication": {
+    "id": "ad95fc89-61fe-414d-be02-0e5ff5dd654c",
+    "revision": 1,
+    "status": null,
+    "corrections": "empty complete before assessment"
+  },
+  "verification": {
+    "remote_exact_commit_files": 3,
+    "raw_hashes_match": true,
+    "canonical_review_digest_matches": true,
+    "review_probe_code_inspected_before_execution": true,
+    "supplied_local_child_tests": 13,
+    "supplied_test_result": "pass",
+    "recipient_supplied_test_elapsed_ms": 1002,
+    "reviewer_probe_cases": 23,
+    "recipient_probe_result": "pass",
+    "probe_summary_bytes_equal_reviewer": true,
+    "all31current_bindings_match": true,
+    "prior25_18source_4active_unchanged": true,
+    "source_inspection": "Full supervisor/test/probe/review/results read, deadline/event/drain/cleanup and metadata boundaries inspected.",
+    "broad_regressions": "Not rerun; no implementation change.",
+    "model_Docker_network_cache_preflight_execution": false
+  },
+  "accepted_scope": "Exact finite trusted-caller offline POSIX parent supervisor and authored child fault probes: ordered phase metadata, monotonic phase/work/final-exit waits, cleanup reserve, bounded observed-prefix output metadata, own new-session group termination and leader reap. Not a full model harness or hard OS guarantee.",
+  "assessment_reasoning": [
+    "Reviewer coverage agrees with supplied code and independently reproduced statuses. Out-of-order/unknown/wrong/extra-key/nonobject/invalidJSON/blank/repeated/after-final events fail; unterminated tail/nonzero/incomplete results fail. Closed-pipe hung exit and stderr-only/secondphase/outer work hangs remain bounded in finite probes.",
+    "Output hashes/counts describe observed drained prefixes only; cap plus one read chunk and raw-marker omission are tested. Trusted phase names remain visible; no generic secret redaction or complete original-answer preservation is claimed.",
+    "SIGKILL addresses own Popen-created session group, bounded leader reap/overrun failures recorded. Linux same-group descendant may be zombie/nonrunning; escaped descendants/general reaping/process-group identity races remain unproven, so this is not a general untrusted-process sandbox.",
+    "Child phase signals and zero exit do not establish useful model work or semantic correctness. Future engine result validation/consent/label/pin checks must remain separate."
+  ],
+  "unresolved_gates": [
+    "Actual engine worker, exact semantic result checker and full partial-answer sanitizer absent.",
+    "Docker/network ownership registry/cleanup, model keepalive teardown, safe cached-model-content-only RO mount/cache/image availability/headroom and actual inference remain pending.",
+    "No600s workload/resource sufficiency/process-creation/OS scheduling/hard real-time/full failure atomicity/security guarantee."
+  ],
+  "limits": [
+    "No new factual/source/curation/independence/production-readiness/API approval or transfer of historical runtime/growth acceptance.",
+    "No implementation/shared-validator/activeinput/API/DB/Convex/deployment/model/image/credential/spend/permission/notification/launcher/schedule changes.",
+    "Original Q9 source/review/results and Q1-Q8 receipts immutable; W020 hold unchanged.",
+    "Q9 Task delivery not extended/reopened by later implementation work."
+  ],
+  "next_action": "One separately bounded offline actual-engine worker and exact result-validation increment on frozen Q8 inputs, with deterministic model/backend fixtures and failing-label/consent/pin cases. Preserve accepted supervisor bytes; freeze new integration for exact review. Docker ownership/cleanup and safe cache/resource preflight/real inference remain later separate gates."
+}
