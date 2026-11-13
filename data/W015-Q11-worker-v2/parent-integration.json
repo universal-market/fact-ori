@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q11",
+  "kind": "accepted_supervisor_offline_worker_integration",
+  "receipt": {
+    "schema_version": 1,
+    "status": "success",
+    "completed_phases": [
+      "startup",
+      "capital-paraphrase",
+      "unknown-no-consent"
+    ],
+    "raw_output_published": false,
+    "cleanup_scope": "own child process group only",
+    "kill_signal_sent": false,
+    "leader_reaped": true,
+    "output": {
+      "stdout": {
+        "observed_bytes": 157,
+        "observed_sha256": "b07adc7fe816286044a01d10364cdf93e62d9f12be79272acf29c60498b10a56"
+      },
+      "stderr": {
+        "observed_bytes": 166,
+        "observed_sha256": "d28c02d8536265c114a3c0e23251bbbe246bc8a94d6d0729880a8b8d792b756f"
+      }
+    },
+    "within_total_deadline": true
+  },
+  "worker_result_raw_sha256": "3693f132946271e970050fa5e2a6fab430af82b7b21ffbb626ae694d240a2712",
+  "observed_worker_node": "v25.2.1",
+  "limits": [
+    "Actual local supervised fixture-only worker, no real model/backend/Docker/cache/preflight.",
+    "600s configured cap with fast authored workload, not600s workload/resource/production proof.",
+    "Uses accepted supervisor unchanged; child result checks and metadata completion remain distinct."
+  ]
+}

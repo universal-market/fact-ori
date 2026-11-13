@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q11",
+  "kind": "offline_worker_v2_correction_test_receipt",
+  "node": "v25.2.1",
+  "direct_tests": {
+    "command": "node scripts/diagnostic-worker-v2.test.mjs",
+    "tests": 46,
+    "passed": 46,
+    "failed": 0,
+    "observed_duration_ms": 109.847372
+  },
+  "reviewer_derived_probes": {
+    "path": "data/W015-Q11-worker-v2/regression-results.json",
+    "observations": 16,
+    "expected_rejections": 16,
+    "unexpected_acceptances": 0
+  },
+  "parent_integration": "data/W015-Q11-worker-v2/parent-integration.json",
+  "preservation": "40 v1 raw bindings unchanged; frozen two-case result objects equal; source18/active4 unchanged. Original five unexpected acceptances preserved in Q10 evidence.",
+  "scope": "Finite authored fixture evidence/relation/refresh correction only. Strict unknown absent fields include null rejection. No live ModelClient/inference/Docker/backendHTTP/cache/preflight/resources/600s workload/general sanitizer or production/factual/API approval.",
+  "history": "Q10v1 REVISE and F1/F2 preserved; v2 separate worker/tests/docs/artifacts. No test failure or relabeling during this correction."
+}
