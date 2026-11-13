@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "task": "FO-W015-Q9",
+  "passed": 23,
+  "failed": 0,
+  "cases": [
+    {
+      "id": "ordered-success",
+      "status": "success",
+      "completed_phases": [
+        "first",
+        "second"
+      ],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "out-of-order",
+      "status": "invalid_event",
+      "completed_phases": [],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "unknown-phase",
+      "status": "invalid_event",
+      "completed_phases": [],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "wrong-event",
+      "status": "invalid_event",
+      "completed_phases": [],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "extra-key",
+      "status": "invalid_event",
+      "completed_phases": [],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "not-object",
+      "status": "invalid_event",
+      "completed_phases": [],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "invalid-json",
+      "status": "invalid_event",
+      "completed_phases": [],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "blank-line",
+      "status": "invalid_event",
+      "completed_phases": [],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "repeat-after-transition",
+      "status": "invalid_event",
+      "completed_phases": [
+        "first"
+      ],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "extra-after-final",
+      "status": "invalid_event",
+      "completed_phases": [
+        "first",
+        "second"
+      ],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "unterminated-tail",
+      "status": "incomplete",
+      "completed_phases": [
+        "first",
+        "second"
+      ],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "nonzero-after-final",
+      "status": "child_failed",
+      "completed_phases": [
+        "first",
+        "second"
+      ],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "closed-pipes-hang-after-final",
+      "status": "exit_timeout",
+      "completed_phases": [
+        "first",
+        "second"
+      ],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "stderr-does-not-reset-phase",
+      "status": "phase_timeout",
+      "completed_phases": [],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "second-phase-hang",
+      "status": "phase_timeout",
+      "completed_phases": [
+        "first"
+      ],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "work-deadline-reserve",
+      "status": "total_timeout",
+      "completed_phases": [],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "bounded-stderr-prefix",
+      "status": "output_limit",
+      "completed_phases": [],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "stderr-hash-and-no-raw",
+      "status": "success",
+      "completed_phases": [
+        "first",
+        "second"
+      ],
+      "leader_reaped": true,
+      "within_total_deadline": true
+    },
+    {
+      "id": "missing-executable-metadata-only",
+      "status": "supervisor_error"
+    },
+    {
+      "id": "invalid-limit-0",
+      "status": "rejected"
+    },
+    {
+      "id": "invalid-limit-1",
+      "status": "rejected"
+    },
+    {
+      "id": "invalid-limit-2",
+      "status": "rejected"
+    },
+    {
+      "id": "invalid-limit-3",
+      "status": "rejected"
+    }
+  ],
+  "limits": "Finite scaled POSIX child probes only; no model semantic proof, Docker cleanup, escaped descendant/general reap, process-creation/OS scheduling or600s workload guarantee."
+}
