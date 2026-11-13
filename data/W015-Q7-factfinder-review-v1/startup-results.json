@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "task": "FO-W015-Q7",
+  "passed": 19,
+  "failed": 0,
+  "checks": [
+    "new-offline-seed-1",
+    "new-offline-seed-2",
+    "new-offline-export-1",
+    "new-offline-export-2",
+    "new-malformed-1",
+    "new-malformed-2",
+    "new-missing-1",
+    "new-missing-2",
+    "existing-offline-seed-1",
+    "existing-offline-seed-2",
+    "existing-offline-export-1",
+    "existing-offline-export-2",
+    "existing-malformed-1",
+    "existing-malformed-2",
+    "existing-missing-1",
+    "existing-missing-2",
+    "new-state-never-created",
+    "existing-state-and-sidecar-bytes-unchanged",
+    "existing-requests-unmigrated-unreset-no-vectors"
+  ],
+  "limits": "Direct shell invalid-startup processes only; no valid HTTP startup or production backend/model test."
+}
