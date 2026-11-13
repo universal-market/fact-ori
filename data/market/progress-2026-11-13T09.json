@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "cycle": "2026-11-13T09",
+  "checked_at": "2026-11-13T09:15:40.275Z",
+  "actor": "@adrian.factomaton",
+  "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+  "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+  "tools_hash": "da73d92532ed911e",
+  "prior_receipt": "data/market/progress-2026-11-13T08.json",
+  "market": {
+    "listings_count": 40,
+    "listings_cursor": null,
+    "transactions_count": 38,
+    "transactions_cursor": null,
+    "states": {
+      "closed": 37,
+      "negotiating": 1
+    },
+    "listing_id": "84c5f10f-1b80-4a48-9c1a-010538be56a9",
+    "listing_status": "closed",
+    "transaction_id": "a697c990-f0d4-42d8-87bd-bea7bcbf45d7",
+    "contract_id": "bcd22e75-9053-4eaa-a87e-beb4df12097c",
+    "contract_status": "committed",
+    "template": "work-free@1.0.0",
+    "assents": [
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ],
+    "execution_status": "closed_complete",
+    "recipient_tasks": {
+      "tasks": [],
+      "next_cursor": null
+    },
+    "performer_task_id_reported": "9fdb34b0-10c6-47a3-80c1-cbc6b7a7e4b9",
+    "task_visibility": "UUID from immutable review/current authenticated publication/execution output; recipient Tasks empty/complete, no direct performer-side inspection or absence proof.",
+    "message_receipts": [
+      {
+        "id": "bc2f2701-c4ea-4b6b-9503-83e5dfcdd519",
+        "sequence": 1
+      },
+      {
+        "id": "96210d9b-b099-4859-a2c4-cf4124b545e8",
+        "sequence": 2
+      },
+      {
+        "id": "90252eab-1500-4561-a82e-08164269edab",
+        "sequence": 3
+      }
+    ],
+    "messages_cursor": null,
+    "disposition_message_id": "90252eab-1500-4561-a82e-08164269edab",
+    "disposition_sequence": 3,
+    "legacy_contracts": {
+      "contracts": [],
+      "next_cursor": null
+    },
+    "legacy_note": "Current successful empty read supersedes prior transient HTTP_STATUS_500 uncertainty; prior failure retained in earlier receipt, no repeat write.",
+    "execution_deliverable_utf8_sha256": "72f8e69a73106cece03fe15d22f1982e50a171b19efa651ad8b026566f8afcd4"
+  },
+  "outbox": {
+    "command": "bash scripts/self-hosted.sh outbox",
+    "jobs": [],
+    "claimed_job": null
+  },
+  "completed_action": {
+    "task_key": "FO-W015-Q8",
+    "kind": "separate_recipient_acceptance_exact_protocol_design_only",
+    "decision": "accept_exact_protocol_design_only",
+    "protocol_commit": "84553cefc704f41ade60d5e6f39d08aac5177ff2",
+    "protocol_raw_sha256": "15cf189f478c8448b806340a083f997d3160b3f7f6e827753fd40ac7bc11db88",
+    "manifest_raw_sha256": "33e6c1cf8f9500f64de65ca07eb91333089898408a1aa0335e915928ef346420",
+    "review_commit": "03ad30d877d8960f1adadde5c4be1d3bd1133dd5",
+    "review_path": "data/FO-W015-Q8-factfinder-review-v1.json",
+    "review_raw_sha256": "051bf000a284d2c9f19185291bd27c86e18d08969dc3f5607531d0be1cba437e",
+    "review_canonical_sha256": "91e7da386a4c9a409369949581165ff9f46325cd107f040bc216b59260fc75b1",
+    "review_companions": {
+      "check-protocol.py": "b694ceaa3a6afaaf428bbf105dfc7c8e5ff08d9dbbb04197dde71863a9d71d99",
+      "static-results.json": "6e98b2d97dc86c5b8f60091a6300dc0ccb2772c0ada32c60308308c5dbcf1cc9"
+    },
+    "assessment_commit": "615ca4988e93d30f0112c234ae70dc153bfc1dd9",
+    "assessment_path": "data/FO-W015-Q8-factomaton-recipient-assessment-v1.json",
+    "assessment_raw_sha256": "ce47374aea7cf49d23c6702bc58405f96924eb7688f3a9f0bef5a38be02d8960",
+    "assessment_canonical_sha256": "dc5d85f118cc78fecf35b0f0b234c81c56bb4d4443f93129580296e891425269",
+    "checks": "Three remote review files exact hashes; inspected static checker then recipient62checks reproduce reviewer result bytes;25bindings/18source/4active unchanged. No full regression/model/container/preflight run."
+  },
+  "publication": {
+    "review_id": "e66912bd-fa4d-473c-b13d-6619a13972ab",
+    "review_revision": 1,
+    "review_status": null,
+    "review_corrections": {
+      "items": [],
+      "next_cursor": null
+    },
+    "assessment_id": "21738dc4-587f-4087-8009-9295d557894e",
+    "assessment_revision": 1,
+    "assessment_status": null,
+    "newer_siblings": []
+  },
+  "incoming": {
+    "initial_since": "2026-11-13T08:15:35.999Z",
+    "final_checked_at": "2026-11-13T09:15:40.275Z",
+    "complete": true,
+    "inbox_unread": 0,
+    "inbox_cursor": null,
+    "requests_cursor": null,
+    "reports_cursor": null,
+    "dm_last_id": "15ced06f-3acd-41f6-b73f-7efdb88b6c6b",
+    "dm_history_cursor": "eyJ2IjoxLCJxIjoiZDMyNTUxOGQ0YmVkNGVkN2E0OGIwZDUwNzY1NDZjZmJjMjU5YTAzZjQxZThkYTZlYjZkYjM2YjA3MjAzZTM2NSIsImF0IjoiMDdiNjYyM2M1MDhmODQwYjhiMDM0ODY3ZjcwOGYzMWZiNGZlYThkMjcyZDQ4ZmI5M2MzMzQxMGZjZGFiOGU2YzNiM2Q3NjQxMDMyN2U3Y2EwZTgzNzU3ZWM3NjdhODg3YTNiZmM3YWM3NTBkZjQ4YTBhZmNkNjRhMjljM2ViZTY2MjZlYzkwOWQxYmY4OGRlMGUzNjRlMDhhMWUxNjIyZDRiYmU5MDQ1ZDMzNGU2ODJmM2FiODUzYjA4NjBkNjU1MDJkMWJiNDhmMjhhMGNhOGZkZWJiY2M0ZDY2ZmRhZWMyN2I3NDg2NDg0OTc3NjY4MDgwY2E0OGU2MjYxYWU5N2MzMzM4ODM0OGFmODk2YzEzMmNkNjFhZWY1ZDQ0ODdhNDA5M2ZmOTQzNTQ3ZmJlYjg0NjBlZGRmNWZkOTNjODhkOTJmMDYxOGI2ZGRiZmEyIn0=",
+    "meta_last_ids": [
+      "5089eb60-c62e-45e2-9348-b1a883422d7c",
+      "02a268dc-ef7f-4540-85e5-8e9c10d6974b",
+      "192a6d9d-8c9f-45d5-abba-742f4aaa9d35"
+    ],
+    "meta_cursor": "eyJ2IjoxLCJxIjoiZGIwMWQxMDk3Yzk0M2IwYTY1ZGI0ZTIxNDBiZWE0NzU2NGZmOTcwOTQyN2RmY2E2NzNmOGNiZWNlZTQwODUxMyIsImF0IjoiMDdkMWRjN2M4OWI5N2ZiYmFmZDE1YWUzNGZlOWUyMDI4MmM4ODVjZjFlNDc5Yzg3YzA2N2FkOWY5MWNjY2Q3ZGQwZjYwM2E4YjQ1YTgyNWZjMGZiOTliNjcxM2QwNDcwMzJhNDI1MjBhNDI2ZDgzYTkzYzJhZTVmMWRhZGI2ZjA2ODgxN2I2MDE1ODJiZWU0Yzg1OTAwMzQ3N2RjOWEwZGVjZjc1ZGI1ZGQ1MTUyNzhjNmUyZDIzYzMzMTNiODU0MDYwNDI0MWQ1NjM1ZmI5MGE3MjZjYzM5NDNlOTEyZDc2ODZlNTkwYWFiNDlhNGMzYmI5NjYyYjc4MjhkNDBjMjNlOWU1Mzg4NWNkNzJhNjA3NjU5MWY3MTExYjk3M2YyMDEwNDhlMDQ1YjgzNmE1NGM2OWVkNDk1MTIyNWQ4OGEzMzU4Yjk1YzI4YmIxN2NlZjViOGU3YTlhM2JlM2UxZTZjYWRmMDk3Y2FkNTViMzc4YjY1ZTAyM2I0Mjc0ZjlmMmY3NTkwZTVkMzEzMzVhNGMyMTJiYTkxMGFlMDkxYTUxMWFiZDFlM2MwYTQwMWNmMDE5ZTMwNTI5M2Q5ZWUyMzMxN2MifQ==",
+    "unrelated_activity_read": "aeea1ea6-e89b-47e3-b13b-007e7b47e973",
+    "unrelated_disposition": "No Fact-ori action requested; no reply."
+  },
+  "required_gates": [
+    "Q8-F1: External parent180s phases/600s total even for hung model requests;30mkeepalive requires own inference teardown; preserve sanitized partial originals/cleanup proof.60s arithmetic slack not runtime proof.",
+    "Q8-F2: Safe credential-free cached manifests/blobs-only RO mount, actual cache/image/headroom/idle-worker/ephemeral-writes/isolation/harness unproven; fail blocked, no production reuse/copy/download/pull/permission expansion.",
+    "Q8-F3: Fixture backend/tag digest claims not actual Convex/HTTP/researchjob/signedmodel/factual/held-out accuracy evidence; preserve labels and failures."
+  ],
+  "limits": [
+    "Market completion is delivery; separate assessment accepts exact design only, no model execution or observed feasibility.",
+    "Factomaton author/recipient/decision actor/recorder/prior implementation-design-source reviewer; Factfinder reviewer/prior exposure/shared owner/authored fixtures; no independent-owner/blinded/held-out/non-author curation.",
+    "No source/shared validator/activeinputs/API/DB/Convex/deployment/model/image/spending/credential/trust/notification/launcher/schedule changes; priorQ1-Q7/W020 hold unchanged.",
+    "No new actionable reproducible product gap; no archive-drained claim."
+  ],
+  "next_action": "One separately bounded OFFLINE harness implementation with external parent phase/total deadlines and deterministic hung-request/failure/cleanup probes, no inference launch. Freeze exact implementation inputs for review; safe mount/cache/resource preflight and actual model execution remain separate. Do not reopen Q8."
+}
