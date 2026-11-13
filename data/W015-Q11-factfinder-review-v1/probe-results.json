@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q11",
+  "node": "v25.2.1",
+  "same_frozen_case_results_as_v1": true,
+  "checks": 59,
+  "passed": 59,
+  "observations": [
+    {
+      "name": "unknown top evidence null",
+      "accepted": false
+    },
+    {
+      "name": "unknown top evidence {}",
+      "accepted": false
+    },
+    {
+      "name": "unknown top evidence \"supports_answer\"",
+      "accepted": false
+    },
+    {
+      "name": "unknown top evidence_package null",
+      "accepted": false
+    },
+    {
+      "name": "unknown top evidence_package {}",
+      "accepted": false
+    },
+    {
+      "name": "unknown top evidence_package \"supports_answer\"",
+      "accepted": false
+    },
+    {
+      "name": "unknown top inspection null",
+      "accepted": false
+    },
+    {
+      "name": "unknown top inspection {}",
+      "accepted": false
+    },
+    {
+      "name": "unknown top inspection \"supports_answer\"",
+      "accepted": false
+    },
+    {
+      "name": "unknown top query_evidence_relation null",
+      "accepted": false
+    },
+    {
+      "name": "unknown top query_evidence_relation {}",
+      "accepted": false
+    },
+    {
+      "name": "unknown top query_evidence_relation \"supports_answer\"",
+      "accepted": false
+    },
+    {
+      "name": "unknown top query_relationship_review null",
+      "accepted": false
+    },
+    {
+      "name": "unknown top query_relationship_review {}",
+      "accepted": false
+    },
+    {
+      "name": "unknown top query_relationship_review \"supports_answer\"",
+      "accepted": false
+    },
+    {
+      "name": "unknown top inherited full capital evidence",
+      "accepted": false
+    },
+    {
+      "name": "unknown top absent serialized undefined fields",
+      "accepted": true
+    },
+    {
+      "name": "capital top extra record_supporting",
+      "accepted": false
+    },
+    {
+      "name": "capital top missing record_supporting",
+      "accepted": false
+    },
+    {
+      "name": "capital top extra record_challenging",
+      "accepted": false
+    },
+    {
+      "name": "capital top missing record_challenging",
+      "accepted": false
+    },
+    {
+      "name": "capital top extra context",
+      "accepted": false
+    },
+    {
+      "name": "capital top missing context",
+      "accepted": false
+    },
+    {
+      "name": "capital top extra evidence partition field",
+      "accepted": false
+    },
+    {
+      "name": "capital top changed evidence relation",
+      "accepted": false
+    },
+    {
+      "name": "capital top exact duplicate JSON roundtrip",
+      "accepted": true
+    },
+    {
+      "name": "case 0 top refresh true",
+      "accepted": false
+    },
+    {
+      "name": "case 1 top refresh true",
+      "accepted": false
+    },
+    {
+      "name": "unknown row evidence null",
+      "accepted": false
+    },
+    {
+      "name": "unknown row evidence {}",
+      "accepted": false
+    },
+    {
+      "name": "unknown row evidence \"supports_answer\"",
+      "accepted": false
+    },
+    {
+      "name": "unknown row evidence_package null",
+      "accepted": false
+    },
+    {
+      "name": "unknown row evidence_package {}",
+      "accepted": false
+    },
+    {
+      "name": "unknown row evidence_package \"supports_answer\"",
+      "accepted": false
+    },
+    {
+      "name": "unknown row inspection null",
+      "accepted": false
+    },
+    {
+      "name": "unknown row inspection {}",
+      "accepted": false
+    },
+    {
+      "name": "unknown row inspection \"supports_answer\"",
+      "accepted": false
+    },
+    {
+      "name": "unknown row query_evidence_relation null",
+      "accepted": false
+    },
+    {
+      "name": "unknown row query_evidence_relation {}",
+      "accepted": false
+    },
+    {
+      "name": "unknown row query_evidence_relation \"supports_answer\"",
+      "accepted": false
+    },
+    {
+      "name": "unknown row query_relationship_review null",
+      "accepted": false
+    },
+    {
+      "name": "unknown row query_relationship_review {}",
+      "accepted": false
+    },
+    {
+      "name": "unknown row query_relationship_review \"supports_answer\"",
+      "accepted": false
+    },
+    {
+      "name": "unknown row inherited full capital evidence",
+      "accepted": false
+    },
+    {
+      "name": "unknown row absent serialized undefined fields",
+      "accepted": true
+    },
+    {
+      "name": "capital row extra record_supporting",
+      "accepted": false
+    },
+    {
+      "name": "capital row missing record_supporting",
+      "accepted": false
+    },
+    {
+      "name": "capital row extra record_challenging",
+      "accepted": false
+    },
+    {
+      "name": "capital row missing record_challenging",
+      "accepted": false
+    },
+    {
+      "name": "capital row extra context",
+      "accepted": false
+    },
+    {
+      "name": "capital row missing context",
+      "accepted": false
+    },
+    {
+      "name": "capital row extra evidence partition field",
+      "accepted": false
+    },
+    {
+      "name": "capital row changed evidence relation",
+      "accepted": false
+    },
+    {
+      "name": "capital row exact duplicate JSON roundtrip",
+      "accepted": true
+    },
+    {
+      "name": "case 0 row refresh true",
+      "accepted": false
+    },
+    {
+      "name": "case 1 row refresh true",
+      "accepted": false
+    },
+    {
+      "name": "unknown row refresh false is not omitted",
+      "accepted": false
+    },
+    {
+      "name": "unknown row refresh null is not omitted",
+      "accepted": false
+    },
+    {
+      "name": "capital swaps support/context partitions",
+      "accepted": false
+    }
+  ]
+}
