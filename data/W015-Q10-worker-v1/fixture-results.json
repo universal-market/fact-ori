@@ -1,0 +1,463 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q10",
+  "kind": "actual_engine_offline_fixture_diagnostic",
+  "node": "v25.2.1",
+  "engine_fingerprint": "d89e3de91ff22e70d8ff2aec3f8e61cb7dcd399e8aa83218444fbbc11a95654e",
+  "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+  "counts": {
+    "document_embeddings": 8,
+    "query_embeddings": 2,
+    "audits": 2,
+    "classifications": 3,
+    "backend_checks": 2,
+    "record_revalidations": 1,
+    "forbidden_submissions": 0
+  },
+  "results": [
+    {
+      "case_id": "capital-paraphrase",
+      "input": {
+        "text": "Which city serves as the national capital of Australia?",
+        "public_review": false
+      },
+      "result": {
+        "text": "Which city serves as the national capital of Australia?",
+        "results": [
+          {
+            "source_quote": "Which city serves as the national capital of Australia?",
+            "claim": "Which city serves as the national capital of Australia?",
+            "start": 0,
+            "end": 55,
+            "kind": "question",
+            "input_context": "Which city serves as the national capital of Australia?",
+            "source_fidelity": "verbatim_token_coverage_checked",
+            "extraction_review": "model_assessed",
+            "extraction_audit": {
+              "coverage": "atomic_text_preserved",
+              "reason": "Authored offline fixture"
+            },
+            "answer": "Australia's national capital is Canberra.",
+            "verdict": "supported",
+            "job": null,
+            "candidates": [
+              {
+                "claim_id": "C004",
+                "version": 1,
+                "sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+                "claim": "Canberra is the national capital city of Australia.",
+                "scope": "Present-day national capital identity as documented in the retrieved Australian government citizenship material; distinct from a state or territory capital. No claim about population ranking, historical dates, reasons for selection or legal boundaries.",
+                "similarity": 1,
+                "scope_match_established": false
+              },
+              {
+                "claim_id": "C001",
+                "version": 1,
+                "sha256": "3a1a2baae2679b33270ae72d9db8ae0ac4456497ef15fcd5ea3581614437d4b1",
+                "claim": "Joseph R. Biden Jr. won the certified 2020 United States presidential election, receiving 306 electoral votes to Donald J. Trump's 232.",
+                "scope": "Certified Electoral College outcome; not a determination about every ballot or every allegation.",
+                "similarity": 0,
+                "scope_match_established": false
+              }
+            ],
+            "matching": "semantic_vector_and_scope_model",
+            "minimum_candidate_similarity": 0.7,
+            "model_assessment": {
+              "relationship": "answers_same_question",
+              "reason": "Authored offline fixture",
+              "decision": "answered"
+            },
+            "scope_guards": [],
+            "model": "qwen2.5:14b-instruct",
+            "embedding_model": "nomic-embed-text:v1.5",
+            "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+            "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+            "status": "answer",
+            "reason": "Authored offline fixture",
+            "evidence_package": {
+              "claim_id": "C004",
+              "state": "approved",
+              "selected_version": 1,
+              "answer_kind": "supported_assertion",
+              "answer": "Australia's national capital is Canberra.",
+              "history": [
+                {
+                  "version": 1,
+                  "post_id": "ae6d2840-19ec-4f23-bab6-a96095ef3819",
+                  "record_sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+                  "review_decisions": [
+                    "accept"
+                  ]
+                }
+              ],
+              "evidence_verdict": "supported",
+              "scope": "Present-day national capital identity as documented in the retrieved Australian government citizenship material; distinct from a state or territory capital. No claim about population ranking, historical dates, reasons for selection or legal boundaries.",
+              "claim_under_review": "Canberra is the national capital city of Australia.",
+              "author": "@adrian.factfinder",
+              "current_review_state": "accepted",
+              "limitations": [
+                "One directly checked government source, not independent cross-source corroboration. Paragraph and bullet are parts of the same document and count as one origin.",
+                "The source is official citizenship education, not a legal instrument establishing the capital.",
+                "No assertion about Sydney's population ranking, historical capital selection or Canberra's legal boundaries is included.",
+                "Author @adrian.factfinder and proposed reviewer @adrian.factomaton share Adrian as owner; internal review is not independent community validation."
+              ],
+              "historical_draft_metadata": {
+                "review_status": "awaiting_review",
+                "review_notes": [
+                  "This is an authored researcher draft awaiting a different agent's review; no publication approval or curation event is implied."
+                ]
+              },
+              "curation_event": {
+                "seq": 8,
+                "claim_id": "C004",
+                "version": 1,
+                "record_sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+                "post_revision": 1,
+                "state": "approved",
+                "review_post_ids": [
+                  "f7e30075-bcd5-40bd-b849-f87e682322f9"
+                ],
+                "actor": "@adrian.factomaton",
+                "at": "2026-11-06T07:09:12.838804+00:00",
+                "reason": "Publish only the checked present-day national-capital identity. Preserve the one-origin government educational source, source edition/retrieval and targeted-search limitations; no historical/legal/population conclusion.",
+                "recorded_by": "@adrian.factomaton",
+                "decision_post_id": "de11269f-4fd4-47ed-99c3-efd12e287a4b",
+                "decision_post_revision": 1,
+                "decision_at": "2026-11-06T07:08:33.006Z",
+                "relationship": "internal_shared_owner",
+                "publication_kind": "supported_assertion"
+              },
+              "reviews": [
+                {
+                  "post_id": "f7e30075-bcd5-40bd-b849-f87e682322f9",
+                  "reviewer": "@adrian.factomaton",
+                  "decision": "accept",
+                  "relationship": "internal_shared_owner",
+                  "reviewed_post_revision": 1
+                }
+              ],
+              "source_dependence_groups": [
+                "home-affairs-citizenship-episode-2"
+              ],
+              "sources": [
+                {
+                  "url": "https://immi.homeaffairs.gov.au/citizenship/test-and-interview/listen-to-podcast/transcript-episode-2",
+                  "publisher": "Australian Government Department of Home Affairs",
+                  "document": "Transcript of Episode 2 – Australia and its people",
+                  "edition": "Live English HTML transcript retrieved 2026-11-06; publication/update date not displayed in the fetched content",
+                  "retrieved_at": "2026-11-06",
+                  "locator": "Section “Australia’s states and territories”: paragraph immediately after the federation description; first bullet identifies Sydney as New South Wales's capital",
+                  "relation": "supports",
+                  "observation": "The paragraph identifies Canberra as Australia's capital city; the following list identifies Sydney as the capital of New South Wales.",
+                  "short_excerpt": "Canberra is Australia’s capital city",
+                  "dependence_group": "home-affairs-citizenship-episode-2"
+                }
+              ]
+            },
+            "query_evidence_relation": "supports_answer",
+            "evidence": {
+              "record_supporting": [
+                {
+                  "dependence_group": "home-affairs-citizenship-episode-2",
+                  "document": "Transcript of Episode 2 – Australia and its people",
+                  "edition": "Live English HTML transcript retrieved 2026-11-06; publication/update date not displayed in the fetched content",
+                  "locator": "Section “Australia’s states and territories”: paragraph immediately after the federation description; first bullet identifies Sydney as New South Wales's capital",
+                  "observation": "The paragraph identifies Canberra as Australia's capital city; the following list identifies Sydney as the capital of New South Wales.",
+                  "publisher": "Australian Government Department of Home Affairs",
+                  "relation": "supports",
+                  "retrieved_at": "2026-11-06",
+                  "short_excerpt": "Canberra is Australia’s capital city",
+                  "url": "https://immi.homeaffairs.gov.au/citizenship/test-and-interview/listen-to-podcast/transcript-episode-2"
+                }
+              ],
+              "record_challenging": [],
+              "context": []
+            },
+            "inspection": {
+              "claim_id": "C004",
+              "version": 1,
+              "sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a"
+            },
+            "query_relationship_review": "model_assessed",
+            "live_source_refresh": false
+          }
+        ],
+        "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+        "implementation_review": "pending",
+        "live_source_refresh": false,
+        "source_quote": "Which city serves as the national capital of Australia?",
+        "claim": "Which city serves as the national capital of Australia?",
+        "start": 0,
+        "end": 55,
+        "kind": "question",
+        "input_context": "Which city serves as the national capital of Australia?",
+        "source_fidelity": "verbatim_token_coverage_checked",
+        "extraction_review": "model_assessed",
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "Authored offline fixture"
+        },
+        "answer": "Australia's national capital is Canberra.",
+        "verdict": "supported",
+        "job": null,
+        "candidates": [
+          {
+            "claim_id": "C004",
+            "version": 1,
+            "sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+            "claim": "Canberra is the national capital city of Australia.",
+            "scope": "Present-day national capital identity as documented in the retrieved Australian government citizenship material; distinct from a state or territory capital. No claim about population ranking, historical dates, reasons for selection or legal boundaries.",
+            "similarity": 1,
+            "scope_match_established": false
+          },
+          {
+            "claim_id": "C001",
+            "version": 1,
+            "sha256": "3a1a2baae2679b33270ae72d9db8ae0ac4456497ef15fcd5ea3581614437d4b1",
+            "claim": "Joseph R. Biden Jr. won the certified 2020 United States presidential election, receiving 306 electoral votes to Donald J. Trump's 232.",
+            "scope": "Certified Electoral College outcome; not a determination about every ballot or every allegation.",
+            "similarity": 0,
+            "scope_match_established": false
+          }
+        ],
+        "matching": "semantic_vector_and_scope_model",
+        "minimum_candidate_similarity": 0.7,
+        "model_assessment": {
+          "relationship": "answers_same_question",
+          "reason": "Authored offline fixture",
+          "decision": "answered"
+        },
+        "scope_guards": [],
+        "model": "qwen2.5:14b-instruct",
+        "embedding_model": "nomic-embed-text:v1.5",
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "status": "answer",
+        "reason": "Authored offline fixture",
+        "evidence_package": {
+          "claim_id": "C004",
+          "state": "approved",
+          "selected_version": 1,
+          "answer_kind": "supported_assertion",
+          "answer": "Australia's national capital is Canberra.",
+          "history": [
+            {
+              "version": 1,
+              "post_id": "ae6d2840-19ec-4f23-bab6-a96095ef3819",
+              "record_sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+              "review_decisions": [
+                "accept"
+              ]
+            }
+          ],
+          "evidence_verdict": "supported",
+          "scope": "Present-day national capital identity as documented in the retrieved Australian government citizenship material; distinct from a state or territory capital. No claim about population ranking, historical dates, reasons for selection or legal boundaries.",
+          "claim_under_review": "Canberra is the national capital city of Australia.",
+          "author": "@adrian.factfinder",
+          "current_review_state": "accepted",
+          "limitations": [
+            "One directly checked government source, not independent cross-source corroboration. Paragraph and bullet are parts of the same document and count as one origin.",
+            "The source is official citizenship education, not a legal instrument establishing the capital.",
+            "No assertion about Sydney's population ranking, historical capital selection or Canberra's legal boundaries is included.",
+            "Author @adrian.factfinder and proposed reviewer @adrian.factomaton share Adrian as owner; internal review is not independent community validation."
+          ],
+          "historical_draft_metadata": {
+            "review_status": "awaiting_review",
+            "review_notes": [
+              "This is an authored researcher draft awaiting a different agent's review; no publication approval or curation event is implied."
+            ]
+          },
+          "curation_event": {
+            "seq": 8,
+            "claim_id": "C004",
+            "version": 1,
+            "record_sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+            "post_revision": 1,
+            "state": "approved",
+            "review_post_ids": [
+              "f7e30075-bcd5-40bd-b849-f87e682322f9"
+            ],
+            "actor": "@adrian.factomaton",
+            "at": "2026-11-06T07:09:12.838804+00:00",
+            "reason": "Publish only the checked present-day national-capital identity. Preserve the one-origin government educational source, source edition/retrieval and targeted-search limitations; no historical/legal/population conclusion.",
+            "recorded_by": "@adrian.factomaton",
+            "decision_post_id": "de11269f-4fd4-47ed-99c3-efd12e287a4b",
+            "decision_post_revision": 1,
+            "decision_at": "2026-11-06T07:08:33.006Z",
+            "relationship": "internal_shared_owner",
+            "publication_kind": "supported_assertion"
+          },
+          "reviews": [
+            {
+              "post_id": "f7e30075-bcd5-40bd-b849-f87e682322f9",
+              "reviewer": "@adrian.factomaton",
+              "decision": "accept",
+              "relationship": "internal_shared_owner",
+              "reviewed_post_revision": 1
+            }
+          ],
+          "source_dependence_groups": [
+            "home-affairs-citizenship-episode-2"
+          ],
+          "sources": [
+            {
+              "url": "https://immi.homeaffairs.gov.au/citizenship/test-and-interview/listen-to-podcast/transcript-episode-2",
+              "publisher": "Australian Government Department of Home Affairs",
+              "document": "Transcript of Episode 2 – Australia and its people",
+              "edition": "Live English HTML transcript retrieved 2026-11-06; publication/update date not displayed in the fetched content",
+              "retrieved_at": "2026-11-06",
+              "locator": "Section “Australia’s states and territories”: paragraph immediately after the federation description; first bullet identifies Sydney as New South Wales's capital",
+              "relation": "supports",
+              "observation": "The paragraph identifies Canberra as Australia's capital city; the following list identifies Sydney as the capital of New South Wales.",
+              "short_excerpt": "Canberra is Australia’s capital city",
+              "dependence_group": "home-affairs-citizenship-episode-2"
+            }
+          ]
+        },
+        "query_evidence_relation": "supports_answer",
+        "evidence": {
+          "record_supporting": [
+            {
+              "dependence_group": "home-affairs-citizenship-episode-2",
+              "document": "Transcript of Episode 2 – Australia and its people",
+              "edition": "Live English HTML transcript retrieved 2026-11-06; publication/update date not displayed in the fetched content",
+              "locator": "Section “Australia’s states and territories”: paragraph immediately after the federation description; first bullet identifies Sydney as New South Wales's capital",
+              "observation": "The paragraph identifies Canberra as Australia's capital city; the following list identifies Sydney as the capital of New South Wales.",
+              "publisher": "Australian Government Department of Home Affairs",
+              "relation": "supports",
+              "retrieved_at": "2026-11-06",
+              "short_excerpt": "Canberra is Australia’s capital city",
+              "url": "https://immi.homeaffairs.gov.au/citizenship/test-and-interview/listen-to-podcast/transcript-episode-2"
+            }
+          ],
+          "record_challenging": [],
+          "context": []
+        },
+        "inspection": {
+          "claim_id": "C004",
+          "version": 1,
+          "sha256": "5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a"
+        },
+        "query_relationship_review": "model_assessed"
+      }
+    },
+    {
+      "case_id": "unknown-no-consent",
+      "input": {
+        "text": "What is the chemical symbol of gold?",
+        "public_review": false
+      },
+      "result": {
+        "text": "What is the chemical symbol of gold?",
+        "results": [
+          {
+            "source_quote": "What is the chemical symbol of gold?",
+            "claim": "What is the chemical symbol of gold?",
+            "start": 0,
+            "end": 36,
+            "kind": "question",
+            "input_context": "What is the chemical symbol of gold?",
+            "source_fidelity": "verbatim_token_coverage_checked",
+            "extraction_review": "model_assessed",
+            "extraction_audit": {
+              "coverage": "atomic_text_preserved",
+              "reason": "Authored offline fixture"
+            },
+            "answer": null,
+            "verdict": null,
+            "job": null,
+            "candidates": [
+              {
+                "claim_id": "C001",
+                "version": 1,
+                "sha256": "3a1a2baae2679b33270ae72d9db8ae0ac4456497ef15fcd5ea3581614437d4b1",
+                "claim": "Joseph R. Biden Jr. won the certified 2020 United States presidential election, receiving 306 electoral votes to Donald J. Trump's 232.",
+                "scope": "Certified Electoral College outcome; not a determination about every ballot or every allegation.",
+                "similarity": 1,
+                "scope_match_established": false
+              },
+              {
+                "claim_id": "C002",
+                "version": 3,
+                "sha256": "c9c2061fdeb249719016c09cf155148271da8a0d8378c0111e49f81d0a73aeb9",
+                "claim": "Formal objections to Arizona and Pennsylvania electoral votes were raised during Congress's January 6–7, 2021 count; neither objection was sustained by either chamber.",
+                "scope": "Existence and disposition of these two formal objections, not the truth of every allegation in debate.",
+                "similarity": 1,
+                "scope_match_established": false
+              }
+            ],
+            "matching": "semantic_vector_and_scope_model",
+            "minimum_candidate_similarity": 0.7,
+            "model_assessment": {
+              "relationship": "different_subject_or_predicate",
+              "reason": "Authored offline fixture",
+              "decision": "unrelated"
+            },
+            "scope_guards": [],
+            "model": "qwen2.5:14b-instruct",
+            "embedding_model": "nomic-embed-text:v1.5",
+            "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+            "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+            "status": "not_in_library"
+          }
+        ],
+        "import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+        "implementation_review": "pending",
+        "live_source_refresh": false,
+        "source_quote": "What is the chemical symbol of gold?",
+        "claim": "What is the chemical symbol of gold?",
+        "start": 0,
+        "end": 36,
+        "kind": "question",
+        "input_context": "What is the chemical symbol of gold?",
+        "source_fidelity": "verbatim_token_coverage_checked",
+        "extraction_review": "model_assessed",
+        "extraction_audit": {
+          "coverage": "atomic_text_preserved",
+          "reason": "Authored offline fixture"
+        },
+        "answer": null,
+        "verdict": null,
+        "job": null,
+        "candidates": [
+          {
+            "claim_id": "C001",
+            "version": 1,
+            "sha256": "3a1a2baae2679b33270ae72d9db8ae0ac4456497ef15fcd5ea3581614437d4b1",
+            "claim": "Joseph R. Biden Jr. won the certified 2020 United States presidential election, receiving 306 electoral votes to Donald J. Trump's 232.",
+            "scope": "Certified Electoral College outcome; not a determination about every ballot or every allegation.",
+            "similarity": 1,
+            "scope_match_established": false
+          },
+          {
+            "claim_id": "C002",
+            "version": 3,
+            "sha256": "c9c2061fdeb249719016c09cf155148271da8a0d8378c0111e49f81d0a73aeb9",
+            "claim": "Formal objections to Arizona and Pennsylvania electoral votes were raised during Congress's January 6–7, 2021 count; neither objection was sustained by either chamber.",
+            "scope": "Existence and disposition of these two formal objections, not the truth of every allegation in debate.",
+            "similarity": 1,
+            "scope_match_established": false
+          }
+        ],
+        "matching": "semantic_vector_and_scope_model",
+        "minimum_candidate_similarity": 0.7,
+        "model_assessment": {
+          "relationship": "different_subject_or_predicate",
+          "reason": "Authored offline fixture",
+          "decision": "unrelated"
+        },
+        "scope_guards": [],
+        "model": "qwen2.5:14b-instruct",
+        "embedding_model": "nomic-embed-text:v1.5",
+        "model_revision": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+        "embedding_revision": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "status": "not_in_library"
+      }
+    }
+  ],
+  "limits": [
+    "Deterministic model callbacks and strict snapshot backend fixture; no actual ModelClient/inference/Convex/HTTP/publication proof.",
+    "No Docker/network/cache/mount/resource preflight; supervisor not wired here. No600s deadline/cleanup integration proof.",
+    "Frozen exposed authored cases, shared owner/prior exposure; not factual validation or held-out accuracy."
+  ]
+}

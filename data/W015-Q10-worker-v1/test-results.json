@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q10",
+  "kind": "offline_actual_engine_worker_and_result_checker_tests",
+  "direct_node_tests": 18,
+  "result": "pass",
+  "parent_integration": "success",
+  "runtime": "Node v25.2.1, not pinned Node22 candidate",
+  "initial_attempt": "Identical fixture vectors tied top-two candidates and excluded C004; initial validator failed. Corrected authored fixture directions only, frozen labels/production inputs unchanged.",
+  "raw_bindings": {
+    "scripts/diagnostic-worker.mjs": "12ab77201268d62225c806a84c751f55151c2f416e52444c3bad580ae777d919",
+    "scripts/diagnostic-worker.test.mjs": "01616c2d2e8828af494137b939a2e6be1cf195c01ef6d7cbb4dc3d673021338b",
+    "data/W015-Q10-worker-v1/parent-probe.py": "45f1c775f0e81458783339436cd9ee5727d40fbfd61f9a943a207118f6cf6319",
+    "data/W015-Q10-worker-v1/fixture-results.json": "785354a700546216104368d6ba01fbe713157004a6651889e7ac1f45f6e35a75",
+    "data/W015-Q10-worker-v1/parent-integration.json": "863cb3abe1ea5a2e5890d4abc1fd0aa9fb309ac75ae3af5b18a4f1dcb41e0ee0",
+    "docs/diagnostic-worker-v1.md": "0de1d92614ac6a06b59d7bed6577bf5ede24365322f52bb95e2d312427ef7e10"
+  },
+  "limits": [
+    "Deterministic callbacks/backend fixtures, no real model/ModelClient/Convex/HTTP/Docker/cache/preflight.",
+    "No general sanitizer or complete partial-answer/failure-report integration; public fixture reports only.",
+    "Parent600s configured cap with fast workload, not600s workload/resource/production proof."
+  ]
+}
