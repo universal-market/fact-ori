@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q10",
+  "node": "v25.2.1",
+  "offline": true,
+  "observations": [
+    {
+      "name": "unknown top-level inherited evidence",
+      "expected": "rejected",
+      "observed": "accepted",
+      "meets_expectation": false
+    },
+    {
+      "name": "unknown row inherited evidence",
+      "expected": "rejected",
+      "observed": "accepted",
+      "meets_expectation": false
+    },
+    {
+      "name": "unknown top-level asserts supported evidence relation",
+      "expected": "rejected",
+      "observed": "accepted",
+      "meets_expectation": false
+    },
+    {
+      "name": "unknown row claims live source refresh",
+      "expected": "rejected",
+      "observed": "accepted",
+      "meets_expectation": false
+    },
+    {
+      "name": "capital row inherited evidence altered",
+      "expected": "rejected",
+      "observed": "accepted",
+      "meets_expectation": false
+    },
+    {
+      "name": "unknown nested evidence package rejected",
+      "expected": "rejected",
+      "observed": "rejected",
+      "meets_expectation": true
+    },
+    {
+      "name": "unknown nested inspection rejected",
+      "expected": "rejected",
+      "observed": "rejected",
+      "meets_expectation": true
+    },
+    {
+      "name": "top level nonnull job rejected",
+      "expected": "rejected",
+      "observed": "rejected",
+      "meets_expectation": true
+    },
+    {
+      "name": "row submission rejected",
+      "expected": "rejected",
+      "observed": "rejected",
+      "meets_expectation": true
+    },
+    {
+      "name": "capital top inspection extra field rejected",
+      "expected": "rejected",
+      "observed": "rejected",
+      "meets_expectation": true
+    },
+    {
+      "name": "capital row full package mutation rejected",
+      "expected": "rejected",
+      "observed": "rejected",
+      "meets_expectation": true
+    },
+    {
+      "name": "unknown top refresh rejected",
+      "expected": "rejected",
+      "observed": "rejected",
+      "meets_expectation": true
+    },
+    {
+      "name": "row model revision rejected",
+      "expected": "rejected",
+      "observed": "rejected",
+      "meets_expectation": true
+    },
+    {
+      "name": "wrong verbatim claim rejected",
+      "expected": "rejected",
+      "observed": "rejected",
+      "meets_expectation": true
+    },
+    {
+      "name": "backend rejects /unknown",
+      "expected": "rejected",
+      "observed": "rejected",
+      "meets_expectation": true
+    },
+    {
+      "name": "backend rejects /v1/records/C004?version=2&sha256=5b163be9355b112d5f6cd814310332f44512a1be8d01209bdf0bc0f06e2ea53a",
+      "expected": "rejected",
+      "observed": "rejected",
+      "meets_expectation": true
+    }
+  ],
+  "expected_rejections": 16,
+  "unexpected_acceptances": 5
+}
