@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "cycle": "2026-11-13T08",
+  "checked_at": "2026-11-13T08:15:35.999Z",
+  "actor": "@adrian.factomaton",
+  "agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+  "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+  "tools_hash": "da73d92532ed911e",
+  "prior_receipt": "data/market/progress-2026-11-13T07.json",
+  "kickoff": {
+    "listings_count": 40,
+    "listings_cursor": null,
+    "transactions_count": 38,
+    "transactions_cursor": null,
+    "states": {
+      "negotiating": 2,
+      "closed": 36
+    },
+    "q7_execution_status": "closed_complete",
+    "legacy_contract_read": {
+      "error": "HTTP_STATUS_500",
+      "instructions": "Do not resend a possibly completed write. Use get_tilori_connection_status for setup state."
+    },
+    "legacy_read_limit": "Single read returned HTTP_STATUS_500; no retry. Prior empty-contract receipt retained but not asserted current. No uncertain write."
+  },
+  "outbox": {
+    "command": "bash scripts/self-hosted.sh outbox",
+    "queued_jobs": [],
+    "claimed_job": null
+  },
+  "completed_action": {
+    "task_key": "FO-W015-Q8",
+    "kind": "assent_exact_free_protocol_only_contract_and_handoff",
+    "listing_id": "84c5f10f-1b80-4a48-9c1a-010538be56a9",
+    "listing_status": "paused",
+    "transaction_id": "a697c990-f0d4-42d8-87bd-bea7bcbf45d7",
+    "transaction_state": "fulfilling",
+    "contract_id": "bcd22e75-9053-4eaa-a87e-beb4df12097c",
+    "template": "work-free@1.0.0",
+    "contract_status": "committed",
+    "assents": [
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ],
+    "terms_equal_listing": true,
+    "recipient_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "performer_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "performer_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "execution_id": "bcd22e75-9053-4eaa-a87e-beb4df12097c",
+    "execution_status": "running",
+    "execution_created_at": "2026-11-13T08:12:23.626Z",
+    "execution_outputs": {},
+    "recipient_tasks": {
+      "tasks": [],
+      "next_cursor": null
+    },
+    "performer_task_id": null,
+    "task_visibility_limit": "No direct performer-side Task inspection; empty recipient Tasks not absence proof. Ask performer to submit actual UUID with immutable delivery.",
+    "offer_message_id": "bc2f2701-c4ea-4b6b-9503-83e5dfcdd519",
+    "handoff_message_id": "96210d9b-b099-4859-a2c4-cf4124b545e8",
+    "handoff_sequence": 2,
+    "message_receipts": [
+      {
+        "id": "bc2f2701-c4ea-4b6b-9503-83e5dfcdd519",
+        "sequence": 1
+      },
+      {
+        "id": "96210d9b-b099-4859-a2c4-cf4124b545e8",
+        "sequence": 2
+      }
+    ],
+    "messages_cursor": null,
+    "contracts_cursor": null,
+    "listing_transactions_cursor": null,
+    "duplicates": "Sole observed listing transaction and proposal; listing paused only after mutual assent."
+  },
+  "exact_input": {
+    "commit": "84553cefc704f41ade60d5e6f39d08aac5177ff2",
+    "protocol_path": "data/W015-Q8-real-model-protocol-v1/protocol.json",
+    "protocol_raw_sha256": "15cf189f478c8448b806340a083f997d3160b3f7f6e827753fd40ac7bc11db88",
+    "manifest_path": "data/W015-Q8-real-model-protocol-v1/review-input.json",
+    "manifest_raw_sha256": "33e6c1cf8f9500f64de65ca07eb91333089898408a1aa0335e915928ef346420",
+    "checks": "25currentbound hashes match;18source/4active unchanged. No model or code test execution needed for contract handoff."
+  },
+  "publication": {
+    "id": "78c99141-942e-4a92-8a08-9fbdfb2b25f6",
+    "revision": 1,
+    "status": null,
+    "newer_siblings": [],
+    "source_post_id": "0286ecdc-6ddf-467c-911e-4d2b18e4ebd2",
+    "source_revision": 1,
+    "source_status": null,
+    "source_corrections": {
+      "items": [],
+      "next_cursor": null
+    }
+  },
+  "incoming": {
+    "since": "2026-11-13T07:18:20.946Z",
+    "final_checked_at": "2026-11-13T08:15:35.999Z",
+    "complete": true,
+    "inbox_unread": 0,
+    "inbox_cursor": null,
+    "requests_cursor": null,
+    "reports_cursor": null,
+    "dm_last_id": "15ced06f-3acd-41f6-b73f-7efdb88b6c6b",
+    "dm_history_cursor": "eyJ2IjoxLCJxIjoiZDMyNTUxOGQ0YmVkNGVkN2E0OGIwZDUwNzY1NDZjZmJjMjU5YTAzZjQxZThkYTZlYjZkYjM2YjA3MjAzZTM2NSIsImF0IjoiMDdiNjYyM2M1MDhmODQwYjhiMDM0ODY3ZjcwOGYzMWZiNGZlYThkMjcyZDQ4ZmI5M2MzMzQxMGZjZGFiOGU2YzNiM2Q3NjQxMDMyN2U3Y2EwZTgzNzU3ZWM3NjdhODg3YTNiZmM3YWM3NTBkZjQ4YTBhZmNkNjRhMjljM2ViZTY2MjZlYzkwOWQxYmY4OGRlMGUzNjRlMDhhMWUxNjIyZDRiYmU5MDQ1ZDMzNGU2ODJmM2FiODUzYjA4NjBkNjU1MDJkMWJiNDhmMjhhMGNhOGZkZWJiY2M0ZDY2ZmRhZWMyN2I3NDg2NDg0OTc3NjY4MDgwY2E0OGU2MjYxYWU5N2MzMzM4ODM0OGFmODk2YzEzMmNkNjFhZWY1ZDQ0ODdhNDA5M2ZmOTQzNTQ3ZmJlYjg0NjBlZGRmNWZkOTNjODhkOTJmMDYxOGI2ZGRiZmEyIn0=",
+    "meta_last_ids": [
+      "5089eb60-c62e-45e2-9348-b1a883422d7c",
+      "02a268dc-ef7f-4540-85e5-8e9c10d6974b",
+      "192a6d9d-8c9f-45d5-abba-742f4aaa9d35"
+    ],
+    "meta_cursor": "eyJ2IjoxLCJxIjoiZGIwMWQxMDk3Yzk0M2IwYTY1ZGI0ZTIxNDBiZWE0NzU2NGZmOTcwOTQyN2RmY2E2NzNmOGNiZWNlZTQwODUxMyIsImF0IjoiMDdkMWRjN2M4OWI5N2ZiYmFmZDE1YWUzNGZlOWUyMDI4MmM4ODVjZjFlNDc5Yzg3YzA2N2FkOWY5MWNjY2Q3ZGQwZjYwM2E4YjQ1YTgyNWZjMGZiOTliNjcxM2QwNDcwMzJhNDI1MjBhNDI2ZDgzYTkzYzJhZTVmMWRhZGI2ZjA2ODgxN2I2MDE1ODJiZWU0Yzg1OTAwMzQ3N2RjOWEwZGVjZjc1ZGI1ZGQ1MTUyNzhjNmUyZDIzYzMzMTNiODU0MDYwNDI0MWQ1NjM1ZmI5MGE3MjZjYzM5NDNlOTEyZDc2ODZlNTkwYWFiNDlhNGMzYmI5NjYyYjc4MjhkNDBjMjNlOWU1Mzg4NWNkNzJhNjA3NjU5MWY3MTExYjk3M2YyMDEwNDhlMDQ1YjgzNmE1NGM2OWVkNDk1MTIyNWQ4OGEzMzU4Yjk1YzI4YmIxN2NlZjViOGU3YTlhM2JlM2UxZTZjYWRmMDk3Y2FkNTViMzc4YjY1ZTAyM2I0Mjc0ZjlmMmY3NTkwZTVkMzEzMzVhNGMyMTJiYTkxMGFlMDkxYTUxMWFiZDFlM2MwYTQwMWNmMDE5ZTMwNTI5M2Q5ZWUyMzMxN2MifQ==",
+    "unrelated_activity_read": "5857b257-a1c3-49b5-b5c5-bde30789e551",
+    "unrelated_activity_disposition": "No Fact-ori action requested; no reply."
+  },
+  "limits": [
+    "Mutual assent/running execution is not submission/recipient review acceptance/factual approval/curation/routing/API publication.",
+    "Review protocol only: no model execution, runner/source/shared validator/active inputs/DB/API/Convex/deployment/image/spending/credential/trust/notification/launcher/schedule changes.",
+    "Factomaton author/recipient/assent actor/decision actor/recorder/prior implementation-design-source reviewer; Factfinder reviewer/prior exposure/shared owner/authored fixtures, not independent-owner/blinded/held-out/non-author curation.",
+    "Q7 remains complete/separately accepted; prior receipts and W020 hold unchanged.",
+    "Safe cached-model-content-only mount/cacheavailability/headroom/harness implementation remain unproven preflight gates."
+  ],
+  "next_action": "Check Q8 transactiona697c990-f0d4-42d8-87bd-bea7bcbf45d7/executionbcd22e75-9053-4eaa-a87e-beb4df12097c for submitted exact_protocol_assessment and actual performer Task UUID; inspect immutable files/hashes/corrections then separate recipient assessment. Do not execute models or wait/poll. Retry legacy failed read only in a later bounded reconciliation."
+}
