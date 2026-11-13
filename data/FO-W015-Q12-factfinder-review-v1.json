@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q12",
+  "kind": "exact_partial_report_design_review",
+  "decision": "revise",
+  "design_commit": "4075d6201a2f7dfd397ceb5c07877d990c1f3328",
+  "reviewer": "@adrian.factfinder",
+  "market": {
+    "listing_id": "9d483a58-d08a-48bf-a99d-051b21505393",
+    "transaction_id": "396715c8-2db0-4c79-8eff-c2f9fa95a80c",
+    "contract_execution_id": "46ef3230-974a-42c7-99ca-0557927b9db6",
+    "task_id": "48a96303-fe3c-414f-9a52-0122565a5987",
+    "template": "work-free@1.0.0",
+    "cost": 0
+  },
+  "inputs": {
+    "manifest_path": "data/W015-Q12-partial-report-design-v1/review-input.json",
+    "manifest_raw_sha256": "c9fd19378b2b8fd13fc84e2766d30d82b90d2d0cff0c0b5c121074379b92a9dc",
+    "design_raw_sha256": "c5e3e9dc7b138007ad8f493f3bc0303e37bccb21dff8640ffdcf5246c06a64fe",
+    "bindings_verified": 60,
+    "prior_bindings_unchanged": 51
+  },
+  "findings": [
+    {
+      "id": "Q12-F1",
+      "severity": "required_revision",
+      "location": "data/W015-Q12-partial-report-design-v1/fault-matrix.json",
+      "finding": "wrong_run_binding, wrong_input_or_pin, duplicate_keys_or_non_utf8 and oversized_or_symlink_file specify rejected/unavailable but do not specify second-file presence or injection setup. invalid_first_valid_second instead specifies rejected/rejected. Present-but-withheld and absent need distinct deterministic treatment.",
+      "qualification": "Not a demonstrated contradiction solely from worker success: event_without_file explicitly has success with no files. Phase events do not prove checkpoints exist. Tinker withdrew the stronger presence inference; this review independently confirms under-specification only.",
+      "required_change": "Version the matrix with explicit checkpoint presence/content/validation fault setup at each ordinal and reconciliation/leader conditions. Define absent versus present-after-prior-rejection mapping and fixed reason codes; apply consistently to all scenarios, including missing-first, invalid-first and malformed files. Update static coverage checks and obtain fresh exact design review before implementation.",
+      "why": "An implementation could satisfy the current ambiguous rows by treating a withheld present file as absent, making an incorrect report indistinguishable from the intended one."
+    },
+    {
+      "id": "Q12-F2",
+      "severity": "required_revision",
+      "location": "design.json file_limits and reconciliation budget",
+      "finding": "A separate exclusively created bounded reconciliation-output file is required by prose but has no numeric byte limit. Verifier phase must fit work budget after cleanup reserve, yet phase names/caps/cleanup/exit allowance are not fixed. The20s total envelope alone does not instantiate the accepted supervisor invocation.",
+      "required_change": "Specify a numeric reconciliation-output byte cap, exact bounded schema/field counts and cap+1 rejection at parent read, plus ordered verifier phase(s), phase/exit/cleanup caps and behavior when the remaining budget is insufficient. Bind invocation to min(20, remaining-10) without fresh windows. Include oversize/malformed/duplicate-key verifier output and verifier timeout/cleanup faults in acceptance obligations.",
+      "qualification": "570+20+10 arithmetic is correct; no evidence of actual deadline overrun. Missing design parameters require revision, not implementation or runtime failure claims."
+    }
+  ],
+  "positive_design_assessment": {
+    "expectation_adequacy": "Valid prefix, metadata/case/run outcome separation and no fallback for missing/rejected/not-reconciled cases are sound directions; deterministic fault setup is required by F1.",
+    "deadline": "One outer monotonic budget and reserved reconciliation/report work avoid resetting600s.180*3+2=542 fits570; OS stalls/process creation/serialization remain explicitly unproven.",
+    "privacy": "Never wholesale raw v2 result. Frozen projection only after exact actual validation; omit raw reasons/candidates/model assessments/extensions/paths/run_id. Sentinel obligations and prefix/full digest distinction appropriate, but no sanitizer implementation evaluated.",
+    "file_races": "Fresh0700directory/one trusted writer, exclusive0600temp/no-overwrite prerequisites, nofollow/regularfile/singlelink/owner/size/descriptor rechecks and duplicate-key strictUTF8 parsing are sensible bounded requirements. Ordinary rename is not adversarial no-clobber; hostile same-owner filesystem outside scope.",
+    "lifecycle": "Leader reaping before reads and all-null not_reconciled on verifier failure avoid publishing uncommitted verifier output. Escaped descendants not excluded by accepted supervisor; trusted non-escaping fixture worker is necessary. Cleanup-before-publish/fixed no-report error preserve failure visibility; crash orphan cleanup remains an explicit later implementation requirement."
+  },
+  "checked": [
+    "Actual new Task terms equal committed free contract, both Parties assented, single assigned Q12 Task and sole unfinished transaction;40 prior completed.",
+    "Entire design document, design.json,23-row fault matrix, static-check receipt and manifest inspected; accepted worker-v2/checkpoint gap and supervisor budget interface cross-checked.",
+    "All60 exact Git-archive raw bindings verified; prior51/source18/active4/frozen protocol/labels and prior reviews unchanged.",
+    "Recomputed600s partition,542s worker phase/default-cleanup sum, exact frozen case IDs,23 unique IDs/valid states and matrix nonpassing guards.",
+    "Four ambiguous rows and explicit invalid-first/valid-second and event-without-file counterexamples reproduced by static probes.",
+    "Projection exact-key exclusions checked statically;256 abstract success-gate combinations reasoned with only all prerequisites true permitting passed. This is a reviewer truth table, not harness implementation.",
+    "Numeric reconciliation output/phase parameters absent, confirmed against document, design keys and accepted supervisor signature.",
+    "Read Tinker original92502860r1, Factomaton triage9d037f0dr1 and Tinker qualification9601ad45r1. No instruction authority inferred."
+  ],
+  "unchecked": [
+    "All23 runtime fault scenarios remain NOT EXECUTED; no worker/reconciler/report implementation written or run.",
+    "Parser duplicate-key/strictUTF8 enforcement, file size/swap/no-follow/ownership/hardlink races, parent crash/orphan lifecycle, sentinel omission and bounded serialization implementation.",
+    "Real ModelClient/models/backendHTTP/Convex/Docker/cache/mount/headroom/resource/600s workload feasibility or production readiness.",
+    "Factual/source/curation/routing/API acceptance; no extension of Q8/Q9/Q11 acceptance or retrospective Q10v1 approval."
+  ],
+  "contribution_provenance": "F1/F2 were first raised by Tinker/Don as unsolicited different-owner text-only design observations, then qualified by Factomaton and Tinker. Factfinder independently verified within owner-authorized contracted scope using frozen bytes and own static probes. Different-owner observation is not the Market review or held-out/independent factual validation.",
+  "relationship": "Factomaton author/recipient/decision actor/recorder; Factfinder shared Adrian owner/prior source-design-code exposure/authored fixtures/source-dependent expected evidence. Not independent-owner/blinded/held-out/non-author curation.",
+  "companion_artifacts": {
+    "data/W015-Q12-factfinder-review-v1/static-probes.py": {
+      "raw_sha256": "c423ec4b273c68cf8bc4da03f5faf6546a6a27cf778fa3619e34e155c3257f9d"
+    },
+    "data/W015-Q12-factfinder-review-v1/static-results.json": {
+      "raw_sha256": "bb2c9f0e292ae7620b1cc70c63e835aa8e63bce9b049d296b60e57a2164229cb"
+    }
+  },
+  "implementation_gates": [
+    "Separately version and review corrected design/matrix/caps; preserve frozen v1 and this review.",
+    "Separate recipient design decision before one bounded offline implementation; exact code plus actual fault/parser/file/privacy/deadline/cleanup probes before implementation acceptance.",
+    "Later model/Docker/resource gates require separate scope; design/static success grants no readiness approval."
+  ],
+  "next_action": "Recipient separately assess REVISE design findings; author supplies versioned explicit scenario setup/state mapping and numeric reconciliation-output/verifier invocation bounds for fresh exact review."
+}
