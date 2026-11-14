@@ -1,0 +1,770 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q13",
+  "kind": "source_only_design_correction_review",
+  "bindings_verified": 69,
+  "prior_bindings_unchanged": 60,
+  "original_scenarios_preserved": 23,
+  "base_scenarios": 32,
+  "variants": 26,
+  "static_mapping_checks": [
+    {
+      "id": "complete",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "reason_codes": [
+        "validated_match",
+        "validated_match"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "case2_nonzero",
+      "case_states": [
+        "validated",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "validated_match",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "case2_timeout",
+      "case_states": [
+        "validated",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "validated_match",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "startup_timeout",
+      "case_states": [
+        "unavailable",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_missing",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "write_before_event_then_exit",
+      "case_states": [
+        "validated",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "validated_match",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "event_without_file",
+      "case_states": [
+        "unavailable",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_missing",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "second_without_first",
+      "case_states": [
+        "unavailable",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_missing",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "invalid_first_valid_second",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_run_binding",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_run__second_absent",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_run__second_valid",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_input_or_pin",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_input__second_absent",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_input__second_valid",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_implementation_pin__second_absent",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_implementation_pin__second_valid",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_worker_digest__second_absent",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_worker_digest__second_valid",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_import_id__second_absent",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_import_id__second_valid",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_ordinal__second_absent",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "wrong_ordinal__second_valid",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "duplicate_keys_or_non_utf8",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "duplicate_keys__second_absent",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "duplicate_keys__second_valid",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "non_utf8__second_absent",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "non_utf8__second_valid",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "malformed_json__second_absent",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "malformed_json__second_valid",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "oversized_or_symlink_file",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "oversized__second_absent",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "oversized__second_valid",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "symlink__second_absent",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "symlink__second_valid",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "multiple_links__second_absent",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "multiple_links__second_valid",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "changed_descriptor_metadata__second_absent",
+      "case_states": [
+        "rejected",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "changed_descriptor_metadata__second_valid",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "truncated_temp_only",
+      "case_states": [
+        "unavailable",
+        "unavailable"
+      ],
+      "reason_codes": [
+        "checkpoint_missing",
+        "checkpoint_missing"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "two_valid_then_nonzero",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "reason_codes": [
+        "validated_match",
+        "validated_match"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "two_valid_then_exit_timeout",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "reason_codes": [
+        "validated_match",
+        "validated_match"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "verifier_timeout",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "leader_not_reaped",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "directory_cleanup_failed",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "reason_codes": [
+        "validated_match",
+        "validated_match"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "report_write_failed",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "reason_codes": [
+        "validated_match",
+        "validated_match"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "raw_reason_extension_sentinel",
+      "case_states": [
+        "validated",
+        "validated"
+      ],
+      "reason_codes": [
+        "validated_match",
+        "validated_match"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "rejected_result_sentinel",
+      "case_states": [
+        "rejected",
+        "rejected"
+      ],
+      "reason_codes": [
+        "checkpoint_invalid",
+        "checkpoint_order_invalid"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "existing_output",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "insufficient_reconciliation_reserve",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "verifier_output_oversized",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "verifier_output_malformed",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "verifier_output_duplicate_key",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "verifier_output_non_utf8",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "verifier_output_schema",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "verifier_output_missing",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "verifier_exit_timeout",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "verifier_cleanup_failed",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "static_mapping_match": true
+    },
+    {
+      "id": "verifier_deadline_exceeded",
+      "case_states": [
+        "not_reconciled",
+        "not_reconciled"
+      ],
+      "reason_codes": [
+        "reconciliation_unavailable",
+        "reconciliation_unavailable"
+      ],
+      "static_mapping_match": true
+    }
+  ],
+  "budget": {
+    "outer": 600,
+    "worker_phase_exit_cleanup_maxima": 543,
+    "verifier_phase_exit_cleanup_slack_total": 20,
+    "launch_boundary_examples": [
+      {
+        "remaining_seconds": "0",
+        "B": "-10",
+        "launch_per_design": false
+      },
+      {
+        "remaining_seconds": "10",
+        "B": "0",
+        "launch_per_design": false
+      },
+      {
+        "remaining_seconds": "29",
+        "B": "19",
+        "launch_per_design": false
+      },
+      {
+        "remaining_seconds": "29.999",
+        "B": "19.999",
+        "launch_per_design": false
+      },
+      {
+        "remaining_seconds": "30",
+        "B": "20",
+        "launch_per_design": true
+      },
+      {
+        "remaining_seconds": "30.001",
+        "B": "20",
+        "launch_per_design": true
+      },
+      {
+        "remaining_seconds": "600",
+        "B": "20",
+        "launch_per_design": true
+      }
+    ]
+  },
+  "schema": {
+    "root_keys": 4,
+    "case_keys": 5,
+    "projection_keys": 9,
+    "projection_serialized_bytes": [
+      507,
+      304
+    ],
+    "example_output_serialized_bytes": 1470,
+    "output_cap": 16384,
+    "read_cap": 16385,
+    "note": "Frozen expected-data serialization example only, not verifier or runtime schema proof."
+  },
+  "authored_static_probe": {
+    "returncode": 0,
+    "stdout": "{\"schema_version\": 1, \"task_key\": \"FO-W015-Q13\", \"kind\": \"design_static_consistency_only\", \"status\": \"pass_static_only\", \"prior_bindings_unchanged\": 60, \"original_scenarios_preserved\": 23, \"base_scenarios\": 32, \"required_explicit_variants\": 26, \"worker_phase_exit_cleanup_maxima_seconds\": 543, \"reconciliation_phase_exit_cleanup_slack_seconds\": 20, \"outer_partition_seconds\": 600, \"reconciliation_output_cap_plus_one\": 16385, \"runtime_faults_executed\": false, \"limits\": \"Checks authored design structure/arithmetic, not implementation, scenario execution, parser/race/privacy/cleanup/deadline feasibility or factual/curation/routing/API approval.\"}\n",
+    "receipt_byte_equal": true
+  },
+  "runtime_faults_executed": false,
+  "limits": "Abstract matrix mapping/arithmetic and fixed expected-data serialization only. No implemented worker/verifier/parser/file/privacy/cleanup/deadline behavior or real-model/resource feasibility established."
+}
