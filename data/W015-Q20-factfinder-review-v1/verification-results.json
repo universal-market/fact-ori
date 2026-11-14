@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "raw_bindings_verified": 114,
+  "prior_bindings_unchanged": 109,
+  "pins_rechecked_after_tests": true,
+  "authored_groups_reproduced": 12,
+  "authored_results_byte_equal": true,
+  "authored_fault_cells": 9,
+  "reviewer_groups_passed": 23,
+  "reviewer_fault_cells": 18,
+  "broad_python_suite_repeated": false,
+  "cleanup": "Reviewer owned temporary checkpoint directory removed in finally; readFileSync identity restored and baseline recovered."
+}
