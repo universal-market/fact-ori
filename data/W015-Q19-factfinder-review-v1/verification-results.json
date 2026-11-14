@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "raw_bindings_verified": 109,
+  "prior_bindings_unchanged": 102,
+  "pins_rechecked_after_tests": true,
+  "authored_groups_passed": 20,
+  "authored_skipped": 0,
+  "authored_controlled_fault_cells": 54,
+  "reviewer_groups_passed": 44,
+  "broad_python_suite_repeated": false,
+  "fault_injection": "Controlled builtin ESM exports restored in finally; no actual exhaustion/device/OS close failure."
+}
