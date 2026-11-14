@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q15",
+  "kind": "authored_reader_parser_increment_test_receipt",
+  "runtime": "Node v25.2.1/Linux observed",
+  "commands": [
+    {
+      "command": "python -B data/W015-Q15-checkpoint-reader-v1/run-tests.py",
+      "node_test_groups": 18,
+      "passed": 18,
+      "skipped": 0,
+      "duration_ms": 75.916675
+    },
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "tests": 246,
+      "passed": 246,
+      "duration_seconds": 14.085
+    }
+  ],
+  "harness_history": "Initial Node execFileSync(mkfifo) denied EPERM by host. Replaced own harness with Python os.mkfifo in owned private temp directory; final18groups pass with no skips. No reader implementation defect inferred from that setup failure.",
+  "scope": "Strict generic syntax/file reader only, not semantic checkpoint validation.18thgroup uses actual accepted offline producer; test explicitly calls validator after parsed_unvalidated return.",
+  "pending": "Semantic binding/prefix/reconciliation/projection/supervisor/output/report/teardown; fullQ13 32base/26variant integration matrix, deterministic descriptor/swap/size-race/failure injection, model/resource/factual/curation/routing/API acceptance."
+}
