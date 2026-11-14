@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "raw_bindings_verified": 102,
+  "prior_bindings_unchanged": 94,
+  "pins_rechecked_after_tests": true,
+  "authored_groups_passed": 16,
+  "authored_skipped": 0,
+  "reviewer_groups_passed": 17,
+  "broad_python_suite_repeated": false,
+  "fault_injection": "Controlled builtin ESM exports and Buffer.alloc override; original functions restored in finally. No actual resource exhaustion/device errors."
+}
