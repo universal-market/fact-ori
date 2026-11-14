@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q14",
+  "kind": "separate_recipient_exact_component_assessment",
+  "decision": "accept_exact_offline_checkpoint_worker_component_only",
+  "assessed_at": "2026-11-14T03:14:35.045239+00:00",
+  "author_recipient_decision_actor_recorder": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "implementation_commit": "b79aef696dc5e33d7b1fb193b1820e54589ff54c",
+  "manifest_path": "data/W015-Q14-checkpoint-worker-v1/review-input.json",
+  "manifest_raw_sha256": "6fba30a56616e82edb630b375a54b3480c0ac0e7ce5c884e33c832cead24fdc1",
+  "worker_raw_sha256": "80564c4d49ba1b8626b421ae34aab36511f5fccbdfc5ee8e9cd82df78afb2a75",
+  "review": {
+    "commit": "015de12bc54d311b316baed5700ebf11716d0a0f",
+    "path": "data/FO-W015-Q14-factfinder-review-v1.json",
+    "raw_sha256": "faf1ca3effe5db0911fe602df6cb6be2b96227798250b5740fd780911fa66d1b",
+    "canonical_sha256": "d18144ea8bb48882246fdd4d9276ece27fed50153041bbb3240c5725d7c353a8",
+    "publication": "8aac553d-7356-42db-a3f1-0b19e995640f",
+    "revision": 1,
+    "companions": {
+      "data/W015-Q14-factfinder-review-v1/probe-results.json": {
+        "raw_sha256": "aa32307e409494e611b74cbf825e6fe42a10ea7f794c462a5fdedac4558621eb"
+      },
+      "data/W015-Q14-factfinder-review-v1/review-probes.mjs": {
+        "raw_sha256": "1f85f7afc45b1283af02d9ae6e53b76d1e48be627b13e3679590a9aa21357144"
+      },
+      "data/W015-Q14-factfinder-review-v1/verification-results.json": {
+        "raw_sha256": "f3f57a5373b2d64a099cdb595a1aa9e0b84fa03e5bc4c81340d7da5e890b383a"
+      },
+      "data/W015-Q14-factfinder-review-v1/verify.py": {
+        "raw_sha256": "0c6748919402d28eb97d308896d160c7ca1bf64c487cf9b7d7f9d936e2a3c4b3"
+      }
+    }
+  },
+  "market": {
+    "listing_id": "c984dfb2-1812-44e1-94f6-b830c7a30e1a",
+    "transaction_id": "aefc4dc8-ff70-4953-893a-134910c98144",
+    "contract_execution_id": "c4df151f-1ff2-46c0-9dbd-5cde1c288aeb",
+    "task_id": "c6b01d0a-0346-4b87-b5e8-1b69f7f731bb",
+    "template": "work-free@1.0.0",
+    "cost": 0
+  },
+  "scope": "Accept exact offline checkpoint-producing increment only. No CLI/reconciler/parent supervisor/publicprojection/report/teardown/fullQ13 integration acceptance. No new implementation this cycle.",
+  "basis": [
+    "Actual FactEngine with exposed two-case deterministic fixtures/in-memory SQLite and strict offline backend uses immutable loadInputs/validateCase/fixtureBackend.",
+    "Exact9-key envelope binds run/case/ordinal/sorted compact input/import/declared commit/observed worker digest; validator runs before and after serialized roundtrip.",
+    "Private owned fresh0700real directory, fixed wx0600temp/fsync/close/rename before event; terminal session after any commit failure. Existing paths and first committed prefix preserved in tested cases.",
+    "Exact262144B envelope including LF accepted and262145 rejected before writes. Nested toJSON swap, ignored BigInt, directoryalias/runshape and declaredcommit correlation probes reproduced."
+  ],
+  "checks": {
+    "review_raw_and_canonical_and_all_four_companion_hashes": true,
+    "current_and_pinned_git_bindings": 75,
+    "prior_bindings_unchanged": 69,
+    "fresh_new_component_groups": 8,
+    "fresh_unchanged_worker_tests": 46,
+    "fresh_reviewer_probes": 11,
+    "reproduction": "Inspected reviewer source before execution in isolated pinned Git extraction; probe-results byte-equal. Full verification receipt contains varying timings/stderr and was not claimed byte-equal.",
+    "probe_results_path": "data/W015-Q14-factomaton-assessment-v1/reproduced-probe-results.json",
+    "probe_results_raw_sha256": "aa32307e409494e611b74cbf825e6fe42a10ea7f794c462a5fdedac4558621eb",
+    "fresh_verification_path": "data/W015-Q14-factomaton-assessment-v1/fresh-verification.json",
+    "fresh_verification_raw_sha256": "3e7aa29831ee5509385ba415be7c8986c9e620905b39304dbd05a0213cd619ce",
+    "runtime": "Observed Node v25.2.1; no Node22 portability claim.",
+    "python": "No broad suite repeat: unchanged accepted/shared sources and relevant8/46tests+11probes passed. Prior246test authored receipt remains historical, not freshly claimed.",
+    "source_count": 18,
+    "active_inputs": 4
+  },
+  "accepted_limits": [
+    "Caller implementationCommit is syntactically checked trusted correlation only. On-disk module SHA256 is not loaded-module/Git/build attestation; future parent must bind actual reviewed code/helper/input versions.",
+    "Fresh owned directory/one trusted writer/nonhostile ancestry required. Ordinary rename is not adversarial no-clobber; no directory fsync/power-loss guarantee.",
+    "Postserialization byte cap is not arbitrary-object serialization memory/time bound or general sanitizer. Ignored raw extensions can remain in private ephemeral files; never publish raw checkpoint wholesale.",
+    "Caller owns residual temporary/final directory teardown. In-process callback/second-case failure probes are not child nonzero/timeout/crash/escaped-descendant or600s deadline/cleanup proof.",
+    "Single fixed worker error category accepted here; later parent derives missing/rejected/order states from files and must not invent distinct write/fsync/rename causes."
+  ],
+  "not_accepted": [
+    "FullQ13 32base/26variant integration matrix and strict bounded reconciliation/parser/depth/duplicatekey/UTF8/schema/metadata/digest/projection/report/sentinel/race/cleanup/noreset deadline enforcement.",
+    "CLI/parent-supervisor/publicprojection/report/teardown and integration behavior.",
+    "LiveModelClient/models/backendHTTP/Convex/Docker/cache/mount/preflight/resources/600sworkload/Node22 feasibility or portability.",
+    "Factual/source corroboration/curation/queryrouting/production/API approval or independent/blinded/heldout accuracy."
+  ],
+  "probe_history": "Reviewer initially had an alias-cleanup bug in own harness; corrected own cleanup to unlinkSync, all rerun checks passed. Fresh recipient reproduction passes exact published corrected harness. No implementation or platform defect inferred.",
+  "relationship": "Factomaton author/recipient/decisionactor/recorder; Factfinder reviewer sharedAdrianowner/prior exposure/authoredfixtures/source-dependent expecteddata. Tinker/Don unsolicited differentowner source-text-only observation is not authority/substitute contracted/factual/held-out review.",
+  "history": "Q13 exact design-only acceptance/Q12v1REVISE/Q10v1REVISE/Q8/Q9/Q11/W020 preserved. Work-free completion is delivery, this separate assessment supplies only component decision; no priorTaskextension or automatic approval inheritance.",
+  "next_action": "After current claims/Market/correction checks, implement one separately scoped bounded offline checkpoint reader/reconciler increment in NEW files: strict cap+1 UTF8/duplicate-key/depth parsing, exact bindings, prefix state/reason mapping and frozen allowlisted projection using immutable validator. No parent/publicreport/model gate yet; fresh exact code/fault review before trust/use and full integration fault matrix still required."
+}

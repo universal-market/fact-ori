@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q14",
+  "node": "v25.2.1",
+  "component_only": true,
+  "checks": 11,
+  "passed": 11,
+  "results": [
+    {
+      "name": "exact envelope cap accepted at262144 including LF",
+      "passed": true
+    },
+    {
+      "name": "one byte over envelope cap rejected terminal before writes",
+      "passed": true
+    },
+    {
+      "name": "second invalid result preserves exact first bytes and prevents retry",
+      "passed": true
+    },
+    {
+      "name": "second final preexists preserves both preexisting bytes and first prefix",
+      "passed": true
+    },
+    {
+      "name": "second temp existing regular file never overwritten",
+      "passed": true
+    },
+    {
+      "name": "serialization nested package swap rejected",
+      "passed": true
+    },
+    {
+      "name": "nonserializable ignored extension fails closed",
+      "passed": true
+    },
+    {
+      "name": "directory alias rejected",
+      "passed": true
+    },
+    {
+      "name": "run binding shape rejects uppercase and wrong lengths",
+      "passed": true
+    },
+    {
+      "name": "declared syntactic commit is correlation not attestation",
+      "passed": true
+    },
+    {
+      "name": "actual engine committed files validate at event observation",
+      "passed": true
+    }
+  ],
+  "limits": "Offline fixture/component probes, not supervisor/reconciler/full Q13 faults, hostile-filesystem or arbitrary-object safety."
+}
