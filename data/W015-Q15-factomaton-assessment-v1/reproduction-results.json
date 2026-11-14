@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q15",
+  "kind": "recipient_reproduction",
+  "reviewer_probe_checks": 40,
+  "reviewer_probe_byte_equal": true,
+  "reviewer_probe_raw_sha256": "d7d817b160012bfcb462851825f495df22e0d8c8b8f1817dddd0c05a3f12e9df",
+  "authored_FIFO_harness": {
+    "returncode": 0,
+    "stdout": "\u2714 valid scalars/containers/escapes follow ordinary JSON values (1.887513ms)\n\u2714 duplicate root keys rejected after escape decoding (0.577367ms)\n\u2714 nested duplicate keys rejected in objects and arrays (0.214651ms)\n\u2714 prototype-like keys are own data without prototype mutation (0.198518ms)\n\u2714 strict UTF8 rejects invalid byte sequences and BOM (0.373393ms)\n\u2714 depth16 accepted/depth17 rejected (0.299827ms)\n\u2714 exact byte cap accepted, cap+1 rejected before parsing (5.403518ms)\n\u2714 malformed delimiters/trailing data/trailing commas rejected (0.457185ms)\n\u2714 malformed numbers/overflow rejected; finite exponents accepted (0.363222ms)\n\u2714 invalid string controls/escapes/termination rejected (0.400076ms)\n\u2714 deterministic small valid document corpus roundtrips (2.28034ms)\n\u2714 fixed checkpoint reader labels parsed values unvalidated and preserves files (1.665953ms)\n\u2714 absence only for missing fixed path (0.497158ms)\n\u2714 reader rejects oversized, malformed and duplicate-key files (1.396055ms)\n\u2714 reader rejects symlink/hardlink/directory final paths (0.874946ms)\n\u2714 FIFO rejected without blocking on an unopened writer (0.246366ms)\n\u2714 reader rejects directory alias/bad mode/bad ordinal/relative path (0.565321ms)\n\u2714 accepted worker envelopes parse and remain explicitly unvalidated (45.81536ms)\n\u2139 tests 18\n\u2139 suites 0\n\u2139 pass 18\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 72.383856\n(node:12) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+    "stderr": ""
+  },
+  "limits": "Relevant offline component checks only; no semantic/full integration or broad Python rerun."
+}

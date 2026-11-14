@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q15",
+  "node": "v25.2.1",
+  "checks": 40,
+  "passed": 40,
+  "observations": [
+    {
+      "name": "deterministic500documents differential against JSON.parse",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 0",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 1",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 2",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 3",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 4",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 5",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 6",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 7",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 8",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 9",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 10",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 11",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 12",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 13",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 14",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 15",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 16",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 17",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 18",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 19",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 20",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 21",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 22",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 23",
+      "passed": true
+    },
+    {
+      "name": "invalid grammar 24",
+      "passed": true
+    },
+    {
+      "name": "escape-equivalent duplicate ",
+      "passed": true
+    },
+    {
+      "name": "escape-equivalent duplicate {\"outer\":",
+      "passed": true
+    },
+    {
+      "name": "escape-equivalent duplicate [",
+      "passed": true
+    },
+    {
+      "name": "escaped unpaired surrogate and unsafe finite integer remain syntax data",
+      "passed": true
+    },
+    {
+      "name": "mixed container exact depth16 versus17",
+      "passed": true
+    },
+    {
+      "name": "UTF8 byte cap differs from JS character count",
+      "passed": true
+    },
+    {
+      "name": "invalid UTF8 scalar encodings reject",
+      "passed": true
+    },
+    {
+      "name": "0644file inside0700directory intentionally parses unvalidated",
+      "passed": true
+    },
+    {
+      "name": "generic wrong schema parses but never semanticvalidates",
+      "passed": true
+    },
+    {
+      "name": "controlled read_error fixedfailure and close",
+      "passed": true
+    },
+    {
+      "name": "controlled second_stat_error fixedfailure and close",
+      "passed": true
+    },
+    {
+      "name": "controlled changed_descriptor_size fixedfailure and close",
+      "passed": true
+    },
+    {
+      "name": "controlled close_error fixedfailure and close",
+      "passed": true
+    },
+    {
+      "name": "actual file growth during read rejected",
+      "passed": true
+    }
+  ],
+  "limits": "Grammar fixtures and controlled local builtin I/O injection only; not hostile-filesystem race/general lifecycle proof, semantic binding or full Q13 integration."
+}

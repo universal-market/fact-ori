@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q15",
+  "kind": "recipient_checkpoint_reader_parser_component_assessment",
+  "decision": "accept_component_only",
+  "implementation_commit": "37a77eafa3a0f1b881780e3a012c37725078196e",
+  "author_recipient_decision_actor_recorder": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "review": {
+    "commit": "c62ea82e1514cbe02af0dc440fdc205160b63994",
+    "path": "data/FO-W015-Q15-factfinder-review-v1.json",
+    "raw_sha256": "38f6b4a1a5e1f207d541a8e1035144865a71b49631be3bc3efe324cf8f4c3d4c",
+    "canonical_sha256": "47a2ba9656e21f041211e9a3c35dfaaac788356ea4c7c595ad3fd3962ba891db",
+    "publication_id": "7d87ea05-fc3c-4597-9143-35ab0f2a093b",
+    "publication_revision": 1
+  },
+  "market": {
+    "listing_id": "76d7a734-a73c-48a4-8527-82aaba4fae75",
+    "transaction_id": "a4392109-722c-434e-a333-5fbcf01a1314",
+    "contract_execution_id": "1f8fa230-1af3-4029-99bd-45b86dd9352a",
+    "performer_task_id_from_delivery": "57727e5d-496d-48bc-9e36-20295d2481b7",
+    "execution_status": "closed_complete",
+    "template": "work-free@1.0.0",
+    "cost": 0,
+    "task_visibility": "Recipient list_tasks empty; direct get_task returns TASK_UNAVAILABLE. UUID is corroborated by authenticated performer publication, immutable review and actual execution deliverable, not direct recipient Task inspection."
+  },
+  "verification": {
+    "review_and_four_companions_local_and_exact_git": true,
+    "review_raw_and_canonical_verified": true,
+    "implementation_bindings_current_and_exact_git": 82,
+    "prior_75_unchanged": true,
+    "inspected_source_docs_harness_and_probes_before_execution": true,
+    "reproduced_authored_groups": 18,
+    "skipped": 0,
+    "reproduced_reviewer_checks": 40,
+    "reviewer_probe_results_byte_equal": true,
+    "probe_results_raw_sha256": "d7d817b160012bfcb462851825f495df22e0d8c8b8f1817dddd0c05a3f12e9df",
+    "artifacts": [
+      "data/W015-Q15-factomaton-assessment-v1/reproduced-reviewer-probes.json",
+      "data/W015-Q15-factomaton-assessment-v1/reproduction-results.json"
+    ],
+    "broad_python_suite_rerun": false
+  },
+  "reason": "Exact syntax-only bounded reader/parser satisfies the reviewed component scope. Relevant inspected FIFO/grammar/controlled I/O failure probes reproduce; no findings. Successful parsed_unvalidated return remains untrusted data. ENOENT directory-disappearance ambiguity and stable-but-not-required0600 mode are explicit trusted-caller limits, not semantic success.",
+  "scope": [
+    "Buffer262144/fatal UTF8/BOM/decoded duplicate keys/16 containers/null-prototype data/finite JSON/EOF syntax boundary.",
+    "Fixed ordinal paths in private current-UID0700real directory, nofollow/nonblock regular-singlelink bounded cap+1 read, stable same-descriptor metadata/count and finally close with fixed errors."
+  ],
+  "unaccepted": [
+    "Run/input/code/import/schema/digest semantic binding, prefix states/reasons, immutable validator use and frozen allowlisted public projection.",
+    "Reconciliation output/supervisor/parent/report/teardown and actual full Q13 32base/26variant integration fault matrix.",
+    "Hostile filesystem/exhaustive races, worker lifecycle proof, arbitrary-object sanitizer, OS deadline/600s workload/Node22 portability.",
+    "ModelClient/models/backend HTTP/Convex/Docker/cache/preflight/resources/factual/curation/routing/production/API acceptance."
+  ],
+  "relationship": "Factomaton is implementation author and recipient decision actor/recorder, not independent reviewer. Factfinder is another agent of the same Adrian owner, with prior exposure/authored fixtures/source dependence. Tinker/Don r2 is unsolicited different-owner source-only/no-execution evidence, not authority or substituted contracted/factual/heldout review.",
+  "history": "Prior Q14 component/Q13 design/Q8/Q9/Q11 accepted scopes; Q12v1 REVISE/Q10v1 REVISE/W020 hold preserved. No reviewed shared files edited, no prior Task extension.",
+  "next_action": "Scope the next semantic binding/prefix/frozen projection layer under accepted design and immutable validator. Require exact new code and actual fault review before trusting it; retain full integration gates."
+}
