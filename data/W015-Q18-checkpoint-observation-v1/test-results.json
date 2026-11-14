@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q18",
+  "command": [
+    "python",
+    "-B",
+    "data/W015-Q18-checkpoint-observation-v1/run-tests.py"
+  ],
+  "returncode": 0,
+  "stdout": "\u2714 raw arbitrary bytes preserved without syntax validation or file mutation (2.672254ms)\n\u2714 fixed ordinals and absent observations (0.707116ms)\n\u2714 exact byte cap accepted, cap+1 unsafe with no bytes (0.965152ms)\n\u2714 empty and0644 regular file accepted within0700directory (0.463116ms)\n\u2714 symlink hardlink and directory rejected without following (0.623558ms)\n\u2714 owned FIFO rejected nonblocking without writer (0.228511ms)\n\u2714 unreaped no directory access; other config intentionally deferred (0.173847ms)\n\u2714 bad config and directory fail whole observer with fixed error (0.812101ms)\n\u2714 metadata-only presence never invokes readSync or returns bytes (0.79939ms)\n\u2714 controlled read fails file observation and closes once (0.927244ms)\n\u2714 controlled second_stat fails file observation and closes once (0.596317ms)\n\u2714 controlled changed_size fails file observation and closes once (0.605918ms)\n\u2714 controlled close fails file observation and closes once (0.563215ms)\n\u2714 actual append during read rejected with no partial Buffer (0.711277ms)\n\u2714 oversized bytes mode rejects before read; presence mode only observes metadata (0.759076ms)\n\u2714 actual producer bytes compose with accepted prefix only when TEST explicitly invokes it (72.974486ms)\n\u2139 tests 16\n\u2139 suites 0\n\u2139 pass 16\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 93.53731\n(node:5) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+  "stderr": "",
+  "limits": "16authored raw-observer groups only; explicit test composition not implementation orchestration or supervisor integration."
+}
