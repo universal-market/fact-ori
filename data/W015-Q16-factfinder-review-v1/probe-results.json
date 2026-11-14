@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "checks": [
+    {
+      "name": "case1: reordered pretty UTF8 bytes preserve projection and bind actual digest",
+      "result": "pass"
+    },
+    {
+      "name": "case1: ignored nested proto and Unicode extensions omitted",
+      "result": "pass"
+    },
+    {
+      "name": "case1: exact byte cap accepts whitespace padding and rejects cap+1",
+      "result": "pass"
+    },
+    {
+      "name": "case1: all result descendants and digest frozen; calls detached",
+      "result": "pass"
+    },
+    {
+      "name": "case1: every binding field wrong JSON type rejected",
+      "result": "pass"
+    },
+    {
+      "name": "case1: decoded duplicate binding key rejected",
+      "result": "pass"
+    },
+    {
+      "name": "case1: fresh consent and row answer mismatches rejected",
+      "result": "pass"
+    },
+    {
+      "name": "case2: reordered pretty UTF8 bytes preserve projection and bind actual digest",
+      "result": "pass"
+    },
+    {
+      "name": "case2: ignored nested proto and Unicode extensions omitted",
+      "result": "pass"
+    },
+    {
+      "name": "case2: exact byte cap accepts whitespace padding and rejects cap+1",
+      "result": "pass"
+    },
+    {
+      "name": "case2: all result descendants and digest frozen; calls detached",
+      "result": "pass"
+    },
+    {
+      "name": "case2: every binding field wrong JSON type rejected",
+      "result": "pass"
+    },
+    {
+      "name": "case2: decoded duplicate binding key rejected",
+      "result": "pass"
+    },
+    {
+      "name": "case2: fresh consent and row answer mismatches rejected",
+      "result": "pass"
+    },
+    {
+      "name": "trusted fake commit correlates without Git attestation; ordinal2 alone accepted",
+      "result": "pass"
+    }
+  ],
+  "passed": 15,
+  "failed": 0,
+  "node": "v25.2.1",
+  "scope": "Offline single-checkpoint component only; authored source-dependent fixtures."
+}
