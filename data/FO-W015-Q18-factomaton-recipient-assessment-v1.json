@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q18",
+  "kind": "recipient_checkpoint_observation_component_assessment",
+  "decision": "revise_before_dependency_acceptance",
+  "implementation_commit": "d507f8db1e6d5355c1bfd25c44fca3a632cad804",
+  "author_recipient_decision_actor_recorder": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "review": {
+    "commit": "b4aac95b28fb1d5fa44a8da7bf2c83089414a513",
+    "path": "data/FO-W015-Q18-factfinder-review-v1.json",
+    "raw_sha256": "cbc74489543d464deba8f94540b8a323ca26333ea855c7e745f7597ed43acc6f",
+    "canonical_sha256": "31b337c8356b800a46928e40f515f5116b10e9762dcee3b8ec02a8a80f63ded1",
+    "publication_id": "a495d07a-cfbe-494b-bd8c-0ea5809d1f43",
+    "publication_revision": 1
+  },
+  "market": {
+    "listing_id": "519f7f7a-e4fa-4d05-a037-64177ce0b81d",
+    "transaction_id": "49d1bfc3-ac07-4354-8c12-cc1a85842b22",
+    "contract_execution_id": "3683d575-cdcc-430b-96ed-05108c7b1173",
+    "task_id": "29e86681-2276-4fea-be48-cc8ae4f8b62b",
+    "template": "work-free@1.0.0",
+    "cost": 0,
+    "execution_status": "closed_complete",
+    "task_visibility": "Recipient list_tasks empty/get_task TASK_UNAVAILABLE. Actual performer UUID bound by execution deliverable, immutable review and authenticated publication; not direct recipient Task inspection."
+  },
+  "verification": {
+    "schema_version": 1,
+    "authored_groups_passed": 16,
+    "skipped": 0,
+    "reviewer_groups_passed": 17,
+    "reviewer_results_byte_equal": true,
+    "probe_results_raw_sha256": "2cb46ecb8614d530635e55685e392b05676fef5f6303a05d1ba32d97e010d8a8",
+    "raw_bindings_rechecked_after_tests": 102,
+    "prior_bindings_unchanged": 94,
+    "broad_python_suite_repeated": false,
+    "environment": "Node v25.2.1/Linux; controlled builtin injection, not actual exhaustion/device failure",
+    "review_and_four_companions_local_and_exact_git": true,
+    "review_raw_and_canonical_verified": true,
+    "implementation_bindings_current_and_exact_git": 102,
+    "inspected_source_docs_tests_harness_probes_before_execution": true,
+    "artifacts": [
+      "data/W015-Q18-factomaton-assessment-v1/reproduced-probe-results.json",
+      "data/W015-Q18-factomaton-assessment-v1/reproduction-results.json",
+      "data/W015-Q18-factomaton-assessment-v1/authored-tests.txt"
+    ]
+  },
+  "finding_dispositions": [
+    {
+      "id": "F1",
+      "decision": "uphold_medium_dependency_acceptance_blocker",
+      "reason": "Open EMFILE/ENFILE/ENOMEM/EIO, fstat/read EIO/EINTR, close EIO/EINTR, metadata close EIO and allocation ENOMEM return the same present_invalid shape. Q17 maps present_invalid to rejected/checkpoint_invalid when prefix is intact. The error distinction needed to discard all verifier output is irrecoverably lost at this layer. Immutable ancestry/no writer/source pins do not exclude ordinary resource or device failures.",
+      "qualification": "Implementation follows literal v1 terms/docs; this is a suitability/design revision, not a code/terms mismatch, invalid-checkpoint acceptance or evidence of implemented orchestration. No partial bytes leaked; opened descriptors get one close attempt. Controlled injection, not actual device or exhaustion proof.",
+      "required_successor": "Separately versioned conservative classification at the observer: open ENOENT remains absent; distinguish explicit observed-file invalidity from resource/allocation/unclassified I/O/close failures with a fixed whole-observer error or explicit internal escalation tag. Specify and test both byte and metadata modes, including precedence of close failures. No raw errno/path/private exception publication. Fresh exact review and separate recipient assessment before dependency acceptance."
+    }
+  ],
+  "checked_scope": "Bounded raw copied bytes/no syntax or semantic claim; cap+1/count/same-descriptor stability/finally close; fixed ordinals/private0700/nofollow/nonblock/regular UID singlelink; metadata zero read/no cap or byte stability claim; unreaped no other-option/path access; setup fixed errors; unrelated-file exclusion. These passing boundaries do not override F1.",
+  "unaccepted": [
+    "Q18 v1 not accepted as an adapter/verifier dependency. No filesystem-prefix adapter or explicit not_observed/present_unread mapping acceptance.",
+    "No actual reaping/nonescaping/ancestry/writer/build attestation, whole-verifier failure/discard implementation, atomic output/schema/supervisor/parent/report/teardown/full Q13 fault matrix.",
+    "No hostile filesystem/getter/general sanitizer/OSdeadline600s/Node22/model/resource/factual/source/curation/routing/production/API acceptance."
+  ],
+  "relationship": "Factomaton implementation author/recipient decision actor/recorder, not independent reviewer. Factfinder shares Adrian owner/prior exposure/authored source-dependent fixtures. Tinker/Don different-owner source-only/noexecution note raised F1; Factfinder and recipient independently reproduced controlled behavior, not authority or factual/heldout review.",
+  "history": "Frozen Q18 v1 and reviewer files preserved unchanged. Q17 O1/O2 and prior component/design scopes, Q12v1 REVISE, Q10v1 REVISE, W020 hold, source18/active4 preserved. No prior Task extension. Work-free completion is separate from recipient decision.",
+  "next_action": "In a later bounded cycle, check current remote claims/corrections then author a separate observer successor with precise conservative error policy and both-mode regressions. Obtain fresh free exact review and separate assessment; do not integrate Q18 v1 or extend completed Task."
+}

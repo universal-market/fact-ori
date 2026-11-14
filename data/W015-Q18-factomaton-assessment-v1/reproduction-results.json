@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "authored_groups_passed": 16,
+  "skipped": 0,
+  "reviewer_groups_passed": 17,
+  "reviewer_results_byte_equal": true,
+  "probe_results_raw_sha256": "2cb46ecb8614d530635e55685e392b05676fef5f6303a05d1ba32d97e010d8a8",
+  "raw_bindings_rechecked_after_tests": 102,
+  "prior_bindings_unchanged": 94,
+  "broad_python_suite_repeated": false,
+  "environment": "Node v25.2.1/Linux; controlled builtin injection, not actual exhaustion/device failure"
+}
