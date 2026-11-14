@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "passed": 23,
+  "failed": 0,
+  "node": "v25.2.1",
+  "checks": [
+    {
+      "name": "actual producer/observer baseline validates both cases",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure EIO position1",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure EIO position2",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure EIO position3",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure EMFILE position1",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure EMFILE position2",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure EMFILE position3",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure ENOMEM position1",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure ENOMEM position2",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure ENOMEM position3",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure ENOENT position1",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure ENOENT position2",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure ENOENT position3",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure EINTR position1",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure EINTR position2",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure EINTR position3",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure untyped position1",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure untyped position2",
+      "result": "pass"
+    },
+    {
+      "name": "phase-attributed failure untyped position3",
+      "result": "pass"
+    },
+    {
+      "name": "direct malformed content and dependency failure same fixed error",
+      "result": "pass"
+    },
+    {
+      "name": "baseline target call trace proves read order without injecting failure",
+      "result": "pass"
+    },
+    {
+      "name": "restoration identity and actual checkpoint bytes unchanged",
+      "result": "pass"
+    },
+    {
+      "name": "owned fixture removed after completion",
+      "result": "pass"
+    }
+  ],
+  "scope": "Controlled dependency-read injection plus in-memory ordinal getter and stack boolean for phase attribution; raw traces/paths/checkpoints/errors not published. Narrow target, not exhaustive failure taxonomy."
+}
