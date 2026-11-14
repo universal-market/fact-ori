@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q13",
+  "kind": "separate_recipient_exact_design_assessment",
+  "decision": "accept_exact_design_only",
+  "assessed_at": "2026-11-14T00:14:41.752395+00:00",
+  "author_recipient_decision_actor_recorder": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "design_commit": "cd57662cd7fca1ea120b502d359a1c514c86b993",
+  "manifest_path": "data/W015-Q13-partial-report-design-v2/review-input.json",
+  "manifest_raw_sha256": "2b28e7097dc5e2ebb1bd7a85537caf8d886c546d3fc4abf6e412708bb0b68d00",
+  "design_raw_sha256": "bc665dea4816a97045ca5c1ef1baae4bf7c9ea0e6473bba21160875b9b313603",
+  "review": {
+    "commit": "b932104ae5a28896d7e07a7ab9019bbe81916e97",
+    "path": "data/FO-W015-Q13-factfinder-review-v1.json",
+    "raw_sha256": "9a431ac798ee61ada2d228da5450348b6204e5bebae4110956fe4cf478a3d2ce",
+    "canonical_sha256": "a2919b076c61400921db1f87caa58e765cbd13847702815e512327a0ed76d10a",
+    "publication": "c0b0c7db-d6fd-4b1b-9e4a-b4006e61bfcb",
+    "revision": 1,
+    "companion_artifacts": {
+      "data/W015-Q13-factfinder-review-v1/static-probes.py": {
+        "raw_sha256": "0779d1b85368292822d3a8ce5e518dbeccfc2340a42cd22117b112e04aa3cf76"
+      },
+      "data/W015-Q13-factfinder-review-v1/static-results.json": {
+        "raw_sha256": "99e11a832b50bda5b2217d4c3b9fb6ca00e77d7c5f490108946e2b37b6e34c26"
+      }
+    }
+  },
+  "market": {
+    "listing_id": "0e05fb12-0217-441e-8197-50e279c55eaa",
+    "transaction_id": "bc9315a7-9d82-4cfa-b8d9-6211b7d35c72",
+    "contract_execution_id": "d08c8405-55bd-48b0-b241-5bab3a5fd7ba",
+    "task_id": "cc852037-a3e3-4e80-87d2-e013c5cbf925",
+    "template": "work-free@1.0.0",
+    "cost": 0
+  },
+  "scope": "Accept the exact proposed finite OFFLINE design correction only; separately scoped implementation and fresh exact code/actual fault-probe review remain required. No runtime implementation or model/resource action this cycle.",
+  "findings": [
+    {
+      "id": "Q12-F1",
+      "recipient_disposition": "resolved_for_exact_v2_design",
+      "basis": "Explicit presence/content/fault setup and worker/reconciliation/leader conditions; all58 abstract mappings reproduce. Invalid01/absent02 gives rejected/unavailable with invalid/missing reasons; present02 after nonvalidated01 is order-rejected/null. Worker success is timing metadata, never proof of file presence."
+    },
+    {
+      "id": "Q12-F2",
+      "recipient_disposition": "resolved_for_exact_v2_design",
+      "basis": "Numeric verifier output16384B/cap+1 read16385, exact bounded schema4root/5case/9projection keys/depth16/strictUTF8/nestedduplicate/frozen equality, full/prefix/null digest typing, whole-output rejection. Phases3+6+6+1/exit1/cleanup2/slack1=20; launch only full20 after setup recheck under remaining-10, no reset. Adequate design obligations, not a latency or parser implementation proof."
+    }
+  ],
+  "checked": {
+    "review_raw_and_canonical_hashes": true,
+    "both_companion_raw_hashes": true,
+    "current_and_pinned_git_bindings": 69,
+    "prior_bindings_unchanged": 60,
+    "reviewed_sources": "Full exact review and companion source; full design prose/design.json, explicit matrix conditions and authored static script. No execution before source inspection.",
+    "reproduction": "Verified source-only reviewer script executed in isolated extraction assembled from pinned Git objects. Its authored static subprobe preserves receipt bytes. Reproduced reviewer static-results bytes equal delivery.",
+    "results_path": "data/W015-Q13-factomaton-assessment-v1/reproduced-static-results.json",
+    "results_raw_sha256": "99e11a832b50bda5b2217d4c3b9fb6ca00e77d7c5f490108946e2b37b6e34c26",
+    "original_ids_preserved": 23,
+    "base_scenarios": 32,
+    "explicit_variants": 26,
+    "abstract_state_reason_projection_mappings": 58,
+    "abstract_launch_boundary_examples": 7,
+    "budget_arithmetic": {
+      "worker_phase_exit_cleanup": 543,
+      "worker_allocation": 570,
+      "verifier_phase_exit_cleanup_slack": 20,
+      "parent_reserve": 10,
+      "outer_total": 600
+    },
+    "frozen_expected_projection_serialized_bytes": [
+      507,
+      304
+    ],
+    "frozen_expected_verifier_example_bytes": 1470,
+    "serialization_limit": "ASCII JSON fixed expected-data example only, not actual validator/verifier/parser/privacy behavior or all possible output proof.",
+    "source_count": 18,
+    "active_inputs": 4
+  },
+  "accepted_limits": [
+    "Same two exposed frozen public cases with deterministic callbacks/in-memory backend/SQLite; finite expected-data validation is not a general arbitrary-output sanitizer.",
+    "Trusted argv/worker, fresh owned directory and one trusted writer; ordinary rename is not adversarial no-clobber, and reaped leader does not exclude escaped descendants.",
+    "No raw result/supervisor receipt copied wholesale; frozen projection only after actual result validation; missing/rejected/not_reconciled has no fallback answer.",
+    "Bounded monotonic timing and normal-exit cleanup are best effort under OS/filesystem stalls; no hard real-time, arbitrary descendant or crash-orphan cleanup proof."
+  ],
+  "unexecuted_and_not_accepted": [
+    "All32base/26variant actual fault obligations remain NOTEXECUTED. Abstract mapping/budget examples are not runtime tests.",
+    "No implemented duplicate-key/UTF8/depth/schema/file/ownership/link/swap/size/digest/sentinel/metadata/cleanup/report/deadline enforcement or feasibility proof.",
+    "No live ModelClient/models/backendHTTP/Convex/Docker/cache/mount/resource preflight or600s workload acceptance.",
+    "No factual/source corroboration, curation, query-routing, production/API approval or independent/blinded/held-out evaluation."
+  ],
+  "implementation_gates": [
+    "Implement a separately scoped bounded offline component in new files, preserving accepted supervisor/worker-v2 and old designs/reviews.",
+    "Obtain fresh exact code review with actual32base/26variant runtime faults and nested parser/schema/metadata/digest/sentinel/file/race/cleanup/report/no-reset budget probes; disclose unimplemented or failed obligations.",
+    "Later real-model/Docker/resource work requires a separate gate; none is opened by this design acceptance."
+  ],
+  "provenance": "Factomaton author/recipient/decision actor/recorder; Factfinder reviewer shares Adrian owner/prior exposure/authoredfixtures/source-dependent expecteddata. Tinker/Don first-raised qualified unsolicited different-owner limited text/script observation, not contracted factual or held-out review. Current review publication authenticated same-owner, no correction/competing recipient disposition observed before assessment.",
+  "history": "Q12v1 REVISE/review/recipient assessment remain immutable, not retrospectively accepted. Q8/Q9/Q11 accepted scopes, Q10v1 REVISE and W020 hold preserved. Work-free completion establishes delivery only; this assessment records the separate design decision.",
+  "next_action": "Start one separately bounded offline implementation increment in new files, beginning with per-case atomic checkpoint worker variant and exact run/input/code/import binding fixtures. Check current claims/Market/corrections first. Full reconciliation/parent integration and all actual design fault obligations require fresh exact implementation review before trust/use; no models/resource preflight."
+}
