@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "raw_bindings_verified": 94,
+  "prior_bindings_unchanged": 88,
+  "pins_rechecked_after_tests": true,
+  "authored_groups_passed": 20,
+  "authored_skipped": 0,
+  "reviewer_groups_passed": 31,
+  "broad_python_suite_repeated": false
+}
