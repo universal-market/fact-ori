@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "authored_groups_passed": 20,
+  "skipped": 0,
+  "reviewer_groups_passed": 44,
+  "reviewer_results_byte_equal": true,
+  "probe_results_raw_sha256": "1eb1e1536a73c5bb4c9f4f1b05929e7036129e3e26fd9d4866232dbea9507d33",
+  "raw_bindings_rechecked_after_tests": 109,
+  "prior_bindings_unchanged": 102,
+  "broad_python_suite_repeated": false,
+  "environment": "Node v25.2.1/Linux; controlled builtin injection and bounded owned files, not actual exhaustion/device/OSclose/fatalOOM proof"
+}

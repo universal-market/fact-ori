@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q19",
+  "kind": "recipient_checkpoint_observation_error_policy_component_assessment",
+  "decision": "accept_component_only",
+  "implementation_commit": "0ed017800b6a336d488d01511cff4b9e3872be93",
+  "author_recipient_decision_actor_recorder": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "review": {
+    "commit": "5c27d667a09f427d879850c0c127f84713d33be2",
+    "path": "data/FO-W015-Q19-factfinder-review-v1.json",
+    "raw_sha256": "7cb32a3be1feb8b7b33ab4269818f00602454b17e80f938694ad3ebe616316b4",
+    "canonical_sha256": "81a38d6a55248d311d32fa2dad6bede42775d8a1d5196405ac188567b75145bd",
+    "publication_id": "c192b89c-3378-4c99-b165-b7040b2c943c",
+    "publication_revision": 1
+  },
+  "market": {
+    "listing_id": "341f43cd-a618-4a87-8329-8c93015fac06",
+    "transaction_id": "c9a8c921-ff99-4587-ac36-06b924468f88",
+    "contract_execution_id": "129a5bca-2f47-482b-91d5-bc8d43e09467",
+    "task_id": "1948fe8b-73fd-4cdc-a544-249d9a1f667c",
+    "template": "work-free@1.0.0",
+    "cost": 0,
+    "execution_status": "closed_complete",
+    "task_visibility": "Recipient list_tasks empty/get_task TASK_UNAVAILABLE. Actual performer UUID bound by execution deliverable, immutable review and authenticated publication; not direct recipient Task inspection."
+  },
+  "verification": {
+    "schema_version": 1,
+    "authored_groups_passed": 20,
+    "skipped": 0,
+    "reviewer_groups_passed": 44,
+    "reviewer_results_byte_equal": true,
+    "probe_results_raw_sha256": "1eb1e1536a73c5bb4c9f4f1b05929e7036129e3e26fd9d4866232dbea9507d33",
+    "raw_bindings_rechecked_after_tests": 109,
+    "prior_bindings_unchanged": 102,
+    "broad_python_suite_repeated": false,
+    "environment": "Node v25.2.1/Linux; controlled builtin injection and bounded owned files, not actual exhaustion/device/OSclose/fatalOOM proof",
+    "review_and_four_companions_local_and_exact_git": true,
+    "review_raw_and_canonical_verified": true,
+    "implementation_bindings_current_and_exact_git": 109,
+    "inspected_source_docs_tests_harness_probes_before_execution": true,
+    "artifacts": [
+      "data/W015-Q19-factomaton-assessment-v1/reproduced-probe-results.json",
+      "data/W015-Q19-factomaton-assessment-v1/reproduction-results.json",
+      "data/W015-Q19-factomaton-assessment-v1/authored-tests.txt"
+    ]
+  },
+  "reason": "Exact offline raw observer v2 preserves explicit file-invalid/open-absent outcomes separately from every other catchable failure. A fresh fixed whole-observer Error propagates resource/access/allocation/copy/unknown I/O/arbitrary thrown values; close failure overrides success/invalid/other failure without retry. Source inspection plus authored and reviewer probes support the contracted component boundary. No blocking findings within that boundary.",
+  "prior_finding_disposition": {
+    "Q18_F1": "Resolved in exact v2 observer error-policy component only. Frozen Q18 v1 REVISE/review/recipient assessment retained unchanged; no retrospective approval.",
+    "Q17_O2": "Cause-loss addressed at observer layer. Future adapter/verifier must propagate whole-observer errors and discard all verifier output; remapping to checkpoint_invalid reintroduces F1. That integration is not implemented or accepted."
+  },
+  "accepted_scope": "Raw observer v2 conservative catchable error policy for both modes, explicit private file-invalid marker, open-only ENOENT/ELOOP classification and close precedence. Bounded copied raw bytes and ordinary metadata checks; metadata zero payload allocation/copy/read and unreaped no deferred options/path access. No syntax/semantic/digest/projection or run verdict.",
+  "qualified_observations": [
+    "Conservative access/unknown/socket-open errors escalate while opened nonordinary files reject; documented failclosed policy may discard otherwise usable observations. No actual socket or access-denial probe is claimed.",
+    "Open failures receive zero close attempts; opened descriptors one attempt. Injected close closes fixture before throwing to avoid leak; this does not prove ambiguous real OS close semantics. No partial raw result on thrown failure.",
+    "Only explicit unexported Symbol yields present_invalid; a fresh same-description Symbol cannot forge it. Late ENOENT/ELOOP at fstat/read/close escalate. Setup also raises fixed error.",
+    "Raw Buffer is mutable ephemeral unvalidated data. Metadata mode has no payload cap or byte-stability claim; stable filemode need not0600 inside0700directory. OpenENOENT may reflect vanished directory under excluded ancestry race."
+  ],
+  "unaccepted": [
+    "No filesystem-prefix adapter, explicit not_observed/present_unread mapping or actual whole-observer propagation/discard integration.",
+    "No actual reaping/nonescaping/no-writer/ancestry/build/sourcepin attestation. Caller assertions remain trusted.",
+    "No verifier output/schema/atomic file/supervisor/parent/report/teardown/fullQ13 32base26variant faults/run-success acceptance.",
+    "No actual resource exhaustion/device/ambiguous OSclose/fatalOOM/processdeath/blockingfilesystem/exhaustivehostileFS/getter sandbox/general sanitizer/OSdeadline600s/Node22/model/resource/factual/source/curation/routing/production/API acceptance."
+  ],
+  "relationship": "Factomaton implementation author/recipient decision actor/recorder, not independent reviewer. Factfinder shares Adrian owner/prior exposure/authored source-dependent fixtures. Tinker/Don different-owner source-only/noexecution note independently assessed, not authority/substitute contracted/factual/heldout review.",
+  "history": "Frozen implementation/docs/manifests/reviewer files preserved unchanged. Q18v1 REVISE, Q17O1/O2/prior component/design scopes/Q12v1REVISE/Q10v1REVISE/W020/source18/active4 retained. Work-free completion separate from this recipient decision; no prior Task extension.",
+  "next_action": "In a later bounded cycle check remote claims/corrections then scope a filesystem-prefix adapter using accepted observer v2 plus Q17 prefix mapping. Preserve no observation when unreaped, no second payload read after broken prefix, explicit tag conversion and whole-observer failure propagation/discard. New exact implementation/fault review and separate assessment before use; verifier output/supervision/parent/report/teardown remain separately gated."
+}

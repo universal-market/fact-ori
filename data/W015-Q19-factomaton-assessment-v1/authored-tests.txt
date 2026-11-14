@@ -1,0 +1,30 @@
+✔ raw arbitrary bytes preserved without syntax validation or file mutation (2.566802ms)
+✔ fixed ordinals and absent observations (0.892923ms)
+✔ exact byte cap accepted, cap+1 unsafe with no bytes (1.29955ms)
+✔ empty and0644 regular file accepted within0700directory (0.725109ms)
+✔ symlink hardlink and directory rejected without following (0.873181ms)
+✔ owned FIFO rejected nonblocking without writer (0.346342ms)
+✔ unreaped no directory access; other config intentionally deferred (0.258982ms)
+✔ bad config and directory fail whole observer with fixed error (1.244952ms)
+✔ metadata-only presence never invokes readSync or returns bytes (1.145092ms)
+✔ controlled read fails file observation and closes once (1.391391ms)
+✔ controlled second_stat fails file observation and closes once (0.723297ms)
+✔ controlled changed_size fails file observation and closes once (0.628379ms)
+✔ controlled close fails file observation and closes once (0.584501ms)
+✔ actual append during read rejected with no partial Buffer (0.69584ms)
+✔ oversized bytes mode rejects before read; presence mode only observes metadata (0.763196ms)
+✔ actual producer bytes compose with accepted prefix only when TEST explicitly invokes it (69.641289ms)
+✔ resource and unclassified failures escalate in both modes with fixed errors and single close (11.428038ms)
+✔ close failure overrides explicit invalid file and successful metadata, without retry (0.841114ms)
+✔ both buffer allocation stages escalate and close once (0.926065ms)
+✔ both modes distinguish absent, symlink and observed metadata invalidity (0.696586ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 112.481192
+(node:5) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
