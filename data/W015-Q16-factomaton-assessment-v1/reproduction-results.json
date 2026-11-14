@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q16",
+  "review_files_exact_git_and_local": 5,
+  "implementation_bindings_exact_git_and_local": 88,
+  "authored_groups_passed": 8,
+  "authored_skipped": 0,
+  "authored_stdout": "\u2714 actual accepted producer cases validate with exact five-key case and nine-key projection (37.965749ms)\n\u2714 all exact envelope binding fields and types reject mutations (163.06673ms)\n\u2714 trusted configuration shape and observed worker digest are checked (6.923296ms)\n\u2714 actual result finite validator rejects semantic and consent changes (56.526128ms)\n\u2714 ignored result extensions are never copied into frozen public projection (7.834806ms)\n\u2714 strict parser runs before semantic use and maps errors to fixed category (48.972493ms)\n\u2714 ordinal2 validation alone makes no prefix or whole-run claim (21.805724ms)\n\u2714 returned projections are deeply frozen and detached between calls (15.414608ms)\n\u2139 tests 8\n\u2139 suites 0\n\u2139 pass 8\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 365.870828\n",
+  "authored_stderr": "(node:97) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+  "reviewer_groups_passed": 15,
+  "reviewer_probe_results_byte_equal": true,
+  "reviewer_probe_results_raw_sha256": "1479f09e02cc0c493497655a209ee85020f7a8579a9b7857731fae51f5927cec",
+  "reviewer_stdout": "{\"passed\":15,\"failed\":0}\n",
+  "reviewer_stderr": "(node:104) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+  "broad_python_suite_repeated": false,
+  "limits": "Only exact offline single-checkpoint component reproduction; no prefix/run/filesystem/supervised reconciliation/integration acceptance."
+}

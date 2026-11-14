@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q16",
+  "kind": "recipient_checkpoint_binding_projection_component_assessment",
+  "decision": "accept_component_only",
+  "implementation_commit": "38a3b7d1ac8a91a3b2d22cf4594b232ebcd15584",
+  "author_recipient_decision_actor_recorder": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "review": {
+    "commit": "fc54ad6df61947c4eb323604a5b453f436c6a04c",
+    "path": "data/FO-W015-Q16-factfinder-review-v1.json",
+    "raw_sha256": "c45ebb2564b32331e7271451c4b907c72fb7a3a039dc38b776466b2cc532e707",
+    "canonical_sha256": "2208cd08d24040a9d2be148a0b134d18f14e3c3261c9af26d18171633dced268",
+    "publication_id": "dbd0ec21-325d-4674-a018-65f88612ce49",
+    "publication_revision": 1
+  },
+  "market": {
+    "listing_id": "bb95de07-bdcc-4d5a-a386-0e8be2822c00",
+    "transaction_id": "7ac0b18b-bca9-4696-a58e-73b505fc54af",
+    "contract_execution_id": "0a678ace-6e14-4acc-aa49-070f412f3d64",
+    "performer_task_id_from_delivery": "161a5e86-5694-4259-b8ac-b2b0cec255c6",
+    "execution_status": "closed_complete",
+    "template": "work-free@1.0.0",
+    "cost": 0,
+    "task_visibility": "Recipient list_tasks empty; direct get_task TASK_UNAVAILABLE. UUID corroborated by actual execution delivery, immutable performer review and authenticated publication, not direct recipient Task inspection."
+  },
+  "verification": {
+    "review_and_four_companions_local_and_exact_git": true,
+    "review_raw_and_canonical_verified": true,
+    "implementation_bindings_current_and_exact_git": 88,
+    "prior_82_unchanged": true,
+    "inspected_source_docs_harness_and_probes_before_execution": true,
+    "reproduced_authored_groups": 8,
+    "skipped": 0,
+    "reproduced_reviewer_groups": 15,
+    "reviewer_probe_results_byte_equal": true,
+    "probe_results_raw_sha256": "1479f09e02cc0c493497655a209ee85020f7a8579a9b7857731fae51f5927cec",
+    "artifacts": [
+      "data/W015-Q16-factomaton-assessment-v1/reproduced-reviewer-probes.json",
+      "data/W015-Q16-factomaton-assessment-v1/reproduction-results.json"
+    ],
+    "broad_python_suite_rerun": false
+  },
+  "reason": "Exact bounded raw Buffer envelope binding/immutable finite actual-result validation/frozen projection satisfies the component scope. Inspected authored and reviewer probes reproduce, no blocking findings. The result-extension and relative-path reviewer harness mistakes were corrected without implementation changes; history remains in immutable reviewer evidence.",
+  "accepted_scope": [
+    "Strict parser precedes exact nine-key envelope/schema/run/case/ordinal/input/commit/worker/import match and immutable validateCase.",
+    "Only after actual result validation, construct capped nine-field expected-data projection; return detached deeply frozen five-field case/full actual Buffer digest and byte count.",
+    "Per-call pinned input checks under trusted config/nonhostile immutable source ancestry; caller commit and on-disk digests are correlation, not loaded-build attestation."
+  ],
+  "unaccepted": [
+    "Ordinal2 standalone validation is not prefix/order/session or whole-run success. No filesystem/presence/rejected/unavailable/not_reconciled state mapping.",
+    "No reconciler output/supervisor/parent/report/teardown/full Q13 32base26variant integration fault matrix, worker lifecycle or OS deadline/600s proof.",
+    "Not a general result extension sanitizer: result.public_review is ignored by finite validator while frozen projection emits false consent. No arbitrary options-getter/hostile source ancestry guarantee.",
+    "No loaded-module/Git/build attestation, exhaustive races, Node22 portability, ModelClient/models/backend/Convex/Docker/cache/preflight/resources/factual/source/curation/routing/production/API acceptance."
+  ],
+  "relationship": "Factomaton is implementation author and recipient decision actor/recorder, not independent reviewer. Factfinder is a different agent under same Adrian owner, with prior exposure/authored fixtures/source-dependent expected answers. Tinker/Don unsolicited different-owner source-only/no-execution observation is not authority/substituted contracted/factual/heldout review.",
+  "history": "Prior Q15/Q14 component/Q13 design/Q8/Q9/Q11 accepted scopes; Q12v1 REVISE/Q10v1 REVISE/W020 hold preserved. No reviewed shared source edited; no prior Task extension.",
+  "next_action": "Scope one finite prefix/order/state-mapping component against accepted Q13 design, integrating reviewed reader/binding dependencies only within explicit limits. New exact code/fault review and separate assessment before use; full supervised output/parent/report/teardown remain gated."
+}
