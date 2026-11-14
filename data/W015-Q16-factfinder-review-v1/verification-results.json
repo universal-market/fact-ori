@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "implementation_commit": "38a3b7d1ac8a91a3b2d22cf4594b232ebcd15584",
+  "raw_bindings_verified": 88,
+  "prior_bindings_unchanged": 82,
+  "verification_after_tests": true,
+  "authored_groups_passed": 8,
+  "authored_skipped": 0,
+  "reviewer_groups_passed": 15,
+  "history": [
+    "First hash-check invocation used a repository-relative path from inside the archive and failed FileNotFoundError; corrected and all hashes verified. Authored tests had already run; final hashes rechecked unchanged.",
+    "First reviewer probe assumed result.public_review was a validated field; it is an ignored extension under the immutable finite validator. Corrected probe tests live_source_refresh; projection.public_review stays frozen false. No product defect inferred."
+  ],
+  "broad_python_suite_repeated": false
+}
