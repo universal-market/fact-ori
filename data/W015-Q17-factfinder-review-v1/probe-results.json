@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "passed": 31,
+  "failed": 0,
+  "node": "v25.2.1",
+  "checks": [
+    {
+      "name": "state matrix first0 second0",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first0 second1",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first0 second2",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first0 second3",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first0 second4",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first1 second0",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first1 second1",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first1 second2",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first1 second3",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first1 second4",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first2 second0",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first2 second1",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first2 second2",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first2 second3",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first2 second4",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first3 second0",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first3 second1",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first3 second2",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first3 second3",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first3 second4",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first4 second0",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first4 second1",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first4 second2",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first4 second3",
+      "result": "pass"
+    },
+    {
+      "name": "state matrix first4 second4",
+      "result": "pass"
+    },
+    {
+      "name": "blocked bytes wrong types ignored; prefix-valid wrong types abort",
+      "result": "pass"
+    },
+    {
+      "name": "blocked bytes getter never accessed; descriptor extra keys still abort",
+      "result": "pass"
+    },
+    {
+      "name": "unreaped observations completely ignored but options still checked",
+      "result": "pass"
+    },
+    {
+      "name": "bounded invalid byte digest including exact cap; oversized null",
+      "result": "pass"
+    },
+    {
+      "name": "crossordinal and semantic failures never reconstruct answers",
+      "result": "pass"
+    },
+    {
+      "name": "all output descendants frozen, detached, no Buffer aliases or run verdict",
+      "result": "pass"
+    }
+  ],
+  "scope": "Finite trusted in-memory observations, authored offline producer; not filesystem/supervisor integration."
+}
