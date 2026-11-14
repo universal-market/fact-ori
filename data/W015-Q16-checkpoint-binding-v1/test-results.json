@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q16",
+  "command": [
+    "node",
+    "scripts/diagnostic-checkpoint-binding-v1.test.mjs"
+  ],
+  "returncode": 0,
+  "stdout": "\u2714 actual accepted producer cases validate with exact five-key case and nine-key projection (37.388928ms)\n\u2714 all exact envelope binding fields and types reject mutations (158.894557ms)\n\u2714 trusted configuration shape and observed worker digest are checked (6.321851ms)\n\u2714 actual result finite validator rejects semantic and consent changes (53.901023ms)\n\u2714 ignored result extensions are never copied into frozen public projection (7.60896ms)\n\u2714 strict parser runs before semantic use and maps errors to fixed category (46.520225ms)\n\u2714 ordinal2 validation alone makes no prefix or whole-run claim (19.081923ms)\n\u2714 returned projections are deeply frozen and detached between calls (15.712619ms)\n\u2139 tests 8\n\u2139 suites 0\n\u2139 pass 8\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 352.223003\n",
+  "stderr": "(node:4) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+  "limits": "Authored offline component probes, not prefix/filesystem/supervised reconciliation or full Q13 integration."
+}
