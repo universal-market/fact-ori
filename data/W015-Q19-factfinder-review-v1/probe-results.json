@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "passed": 44,
+  "failed": 0,
+  "node": "v25.2.1",
+  "checks": [
+    {
+      "name": "false:openSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "false:openSync:arbitrary thrown symbol",
+      "result": "pass"
+    },
+    {
+      "name": "false:openSync:arbitrary thrown string",
+      "result": "pass"
+    },
+    {
+      "name": "false:openSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "false:fstatSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "false:fstatSync:arbitrary thrown symbol",
+      "result": "pass"
+    },
+    {
+      "name": "false:fstatSync:arbitrary thrown string",
+      "result": "pass"
+    },
+    {
+      "name": "false:fstatSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "false:closeSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "false:closeSync:arbitrary thrown symbol",
+      "result": "pass"
+    },
+    {
+      "name": "false:closeSync:arbitrary thrown string",
+      "result": "pass"
+    },
+    {
+      "name": "false:closeSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "true:openSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "true:openSync:arbitrary thrown symbol",
+      "result": "pass"
+    },
+    {
+      "name": "true:openSync:arbitrary thrown string",
+      "result": "pass"
+    },
+    {
+      "name": "true:openSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "true:fstatSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "true:fstatSync:arbitrary thrown symbol",
+      "result": "pass"
+    },
+    {
+      "name": "true:fstatSync:arbitrary thrown string",
+      "result": "pass"
+    },
+    {
+      "name": "true:fstatSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "true:closeSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "true:closeSync:arbitrary thrown symbol",
+      "result": "pass"
+    },
+    {
+      "name": "true:closeSync:arbitrary thrown string",
+      "result": "pass"
+    },
+    {
+      "name": "true:closeSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "true:readSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "true:readSync:arbitrary thrown symbol",
+      "result": "pass"
+    },
+    {
+      "name": "true:readSync:arbitrary thrown string",
+      "result": "pass"
+    },
+    {
+      "name": "true:readSync:arbitrary thrown object",
+      "result": "pass"
+    },
+    {
+      "name": "false:fstatSync:ENOENT escalates outside open",
+      "result": "pass"
+    },
+    {
+      "name": "false:fstatSync:ELOOP escalates outside open",
+      "result": "pass"
+    },
+    {
+      "name": "false:closeSync:ENOENT escalates outside open",
+      "result": "pass"
+    },
+    {
+      "name": "false:closeSync:ELOOP escalates outside open",
+      "result": "pass"
+    },
+    {
+      "name": "true:fstatSync:ENOENT escalates outside open",
+      "result": "pass"
+    },
+    {
+      "name": "true:fstatSync:ELOOP escalates outside open",
+      "result": "pass"
+    },
+    {
+      "name": "true:closeSync:ENOENT escalates outside open",
+      "result": "pass"
+    },
+    {
+      "name": "true:closeSync:ELOOP escalates outside open",
+      "result": "pass"
+    },
+    {
+      "name": "true:readSync:ENOENT escalates outside open",
+      "result": "pass"
+    },
+    {
+      "name": "true:readSync:ELOOP escalates outside open",
+      "result": "pass"
+    },
+    {
+      "name": "open status classification in both modes",
+      "result": "pass"
+    },
+    {
+      "name": "close failure dominates invalid ordinary metadata in both modes",
+      "result": "pass"
+    },
+    {
+      "name": "partial read then failure returns no result and fixed error",
+      "result": "pass"
+    },
+    {
+      "name": "metadata path avoids both payload allocation and read",
+      "result": "pass"
+    },
+    {
+      "name": "unreaped ignores every deferred option",
+      "result": "pass"
+    },
+    {
+      "name": "actual bounded raw buffers remain detached and unvalidated",
+      "result": "pass"
+    }
+  ],
+  "scope": "Controlled builtin injection; actual source inspection and bounded local files. No actual exhaustion/device/OSclose or whole-verifier orchestration proof."
+}
