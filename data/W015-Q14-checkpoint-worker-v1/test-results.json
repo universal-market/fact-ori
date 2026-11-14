@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q14",
+  "kind": "authored_offline_increment_test_receipt",
+  "runtime": "Node v25.2.1 on observed Linux; no Node22 portability claim",
+  "commands": [
+    {
+      "command": "node scripts/diagnostic-checkpoint-worker-v1.test.mjs",
+      "tests": 8,
+      "passed": 8,
+      "duration_ms": 187.543682,
+      "scope": "Actual offline writes/engine callback boundary, binding/mode/order/errors/oversize/terminal session/preexisting paths; no subprocess supervisor."
+    },
+    {
+      "command": "node scripts/diagnostic-worker-v2.test.mjs",
+      "tests": 46,
+      "passed": 46,
+      "duration_ms": 112.721141
+    },
+    {
+      "command": "python -B -m unittest discover -s scripts -p 'test_*.py'",
+      "tests": 246,
+      "passed": 246,
+      "duration_seconds": 14.164
+    }
+  ],
+  "prior_bindings_unchanged": 69,
+  "runtime_fault_matrix_complete": false,
+  "limits": "Authored component tests only; NOT full32base/26variant Q13 matrix, reconciler/supervisor/parser/publicprojection/report/deadline/file-race/cleanup/general sanitizer/model/Docker/resource/factual/curation/routing/API proof. Callback throw simulates an in-process later failure, not a child nonzero/timeout. Temporary owned test directories removed; no raw checkpoints published."
+}
