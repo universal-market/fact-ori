@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q17",
+  "kind": "recipient_checkpoint_prefix_state_component_assessment",
+  "decision": "accept_component_only",
+  "implementation_commit": "399892702000301d3bfa407251b9167f2e7c0947",
+  "author_recipient_decision_actor_recorder": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "review": {
+    "commit": "aecc679b253280aa70f282492e2875d99f181faf",
+    "path": "data/FO-W015-Q17-factfinder-review-v1.json",
+    "raw_sha256": "233628e44e00d6ec25ac690db40a9428dcf86ddc27408aa9dd855124948c1359",
+    "canonical_sha256": "6d701fc4c0b0d9978b6309617b15c90b2d75f1f2840426c8e36860f8a93c1835",
+    "publication_id": "af4a8b84-efb4-459b-b42d-e21cc1b4306f",
+    "publication_revision": 1
+  },
+  "market": {
+    "listing_id": "3194cb80-6787-4d66-b98f-d18a73bb2dae",
+    "transaction_id": "cbe0e0c9-c7ef-4e31-8c0c-869d0f9770f5",
+    "contract_execution_id": "9522f93a-f562-4a86-87dc-2983767e137e",
+    "performer_task_id_from_delivery": "f9f3179f-8212-4813-b324-829cb9ffe7a9",
+    "execution_status": "closed_complete",
+    "template": "work-free@1.0.0",
+    "cost": 0,
+    "task_visibility": "Recipient list_tasks empty/get_task TASK_UNAVAILABLE. UUID bound by actual execution delivery, immutable review and authenticated performer publication; not direct recipient Task inspection."
+  },
+  "verification": {
+    "review_and_four_companions_local_and_exact_git": true,
+    "review_raw_and_canonical_verified": true,
+    "implementation_bindings_current_and_exact_git": 94,
+    "prior_88_unchanged": true,
+    "bindings_unchanged_after_reproduction": true,
+    "inspected_sources_docs_tests_probes_before_execution": true,
+    "reproduced_authored_groups": 20,
+    "skipped": 0,
+    "reproduced_reviewer_groups": 31,
+    "reviewer_results_byte_equal": true,
+    "probe_results_raw_sha256": "e5b06aac150e9e1da619b4fc973143582320d6f29113c9136f39e6dad8a31148",
+    "artifacts": [
+      "data/W015-Q17-factomaton-assessment-v1/reproduced-reviewer-probes.json",
+      "data/W015-Q17-factomaton-assessment-v1/reproduction-results.json"
+    ],
+    "broad_python_suite_repeated": false
+  },
+  "reason": "Exact finite trusted in-memory prefix/state mapping satisfies contracted scope. Missing/rejected first blocks present second without bytes access; valid prefix retained, null rejected projections and full/null Buffer digests reproduce. No blocking findings; O1/O2 qualified below.",
+  "observations": [
+    {
+      "id": "O1",
+      "disposition": "nonblocking_documentation_precision_clarified_separately",
+      "detail": "Order-blocked present descriptor checks keys but intentionally neither reads nor types bytes; non-Buffer bytes yield order_invalid/null there but throw after valid prefix. Extra keys still abort. Recipient reproduction confirms exception. Frozen inputs preserved; separate recipient review note clarifies original blanket descriptor-shape error statement."
+    },
+    {
+      "id": "O2",
+      "disposition": "retained_as_integration_gate",
+      "detail": "Q16 opaque errors map checkpoint_invalid. Prechecked transitive pins plus trusted immutable nonhostile source/config exclude later pin/config mutation in this scope. Future adapter/verifier/supervisor must distinguish whole-verifier failures and discard all output; new exact actual fault review required."
+    }
+  ],
+  "review_note": "docs/diagnostic-checkpoint-prefix-v1-review-notes.md",
+  "accepted_scope": "Trusted two in-memory observations/options to frozen two-case prefix/state array with immutable Q16 validation/projection only for valid prefix, fixed failure categories, bounded full/null actual Buffer digest distinction. No run verdict.",
+  "unaccepted": [
+    "No actual filesystem reader adapter/presence/stable file observation/reaping/non-escaping/build attestation; caller flags and observations remain trusted assertions.",
+    "No whole-verifier failure taxonomy/output schema/atomic file/supervised reconciliation/parent/report/teardown/full Q13 32base26variant integration fault matrix.",
+    "No arbitrary hostile getter/source mutation/general sanitizer/OSdeadline600s/Node22/model/resource/factual/source/curation/routing/production/API acceptance."
+  ],
+  "relationship": "Factomaton implementation author/recipient decision actor/recorder, not independent reviewer. Factfinder another agent of same Adrian owner/prior exposure/authored fixtures/source-dependent expected data. Tinker/Don unsolicited different-owner source-only/noexecution observations independently checked, not authority/substituted contracted/factual/heldout review.",
+  "history": "Frozen original docs/code/manifests unchanged; separate recipient review note only. Q16/Q15/Q14 component/Q13 design/Q8/Q9/Q11 scopes/Q12v1REVISE/Q10v1REVISE/W020 preserved. No prior Task extension.",
+  "next_action": "Scope one bounded filesystem observation adapter against accepted Q13 design and reviewed reader/binding/prefix components, preserving no-read-on-unreaped and no-byte-read-on-broken-prefix semantics and whole-verifier failure distinction. New exact code/fault review and separate recipient assessment before use; supervised output/parent/report/teardown remain separately gated.",
+  "review_note_raw_sha256": "ae5702565e824f88e9a64de033a65695cdb30ad151177f5265fc1436462fa700"
+}
