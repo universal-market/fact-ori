@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "passed": 17,
+  "failed": 0,
+  "node": "v25.2.1",
+  "checks": [
+    {
+      "name": "open EMFILE loses verifier/environment distinction",
+      "result": "pass"
+    },
+    {
+      "name": "open ENFILE loses verifier/environment distinction",
+      "result": "pass"
+    },
+    {
+      "name": "open ENOMEM loses verifier/environment distinction",
+      "result": "pass"
+    },
+    {
+      "name": "open EIO loses verifier/environment distinction",
+      "result": "pass"
+    },
+    {
+      "name": "fstatSync EIO returns same present_invalid",
+      "result": "pass"
+    },
+    {
+      "name": "fstatSync EINTR returns same present_invalid",
+      "result": "pass"
+    },
+    {
+      "name": "readSync EIO returns same present_invalid",
+      "result": "pass"
+    },
+    {
+      "name": "readSync EINTR returns same present_invalid",
+      "result": "pass"
+    },
+    {
+      "name": "closeSync EIO returns same present_invalid",
+      "result": "pass"
+    },
+    {
+      "name": "closeSync EINTR returns same present_invalid",
+      "result": "pass"
+    },
+    {
+      "name": "metadata-only close EIO also loses distinction",
+      "result": "pass"
+    },
+    {
+      "name": "allocation failure discards bytes but loses verifier distinction",
+      "result": "pass"
+    },
+    {
+      "name": "raw buffers detached from subsequent reads and file contents",
+      "result": "pass"
+    },
+    {
+      "name": "unreaped branch accesses only lifecycle flag",
+      "result": "pass"
+    },
+    {
+      "name": "setup errors remain distinct fixed whole-observer failures",
+      "result": "pass"
+    },
+    {
+      "name": "metadata mode intentionally ignores payload cap and never reads",
+      "result": "pass"
+    },
+    {
+      "name": "unrelated files do not select checkpoint or mutate directory",
+      "result": "pass"
+    }
+  ],
+  "finding": "F1: ordinary resource/I/O/allocation failures are indistinguishable from checkpoint-invalid outcomes. Controlled builtin injection, not actual system resource exhaustion or device failure."
+}
