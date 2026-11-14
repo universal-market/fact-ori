@@ -1,0 +1,28 @@
+✔ two validated cases retain frozen projection, exact five keys and raw digests (27.566839ms)
+✔ absent first / absent second obey prefix states (5.123229ms)
+✔ absent first / valid second obey prefix states (5.1603ms)
+✔ absent first / invalid second obey prefix states (4.679318ms)
+✔ absent first / unsafe second obey prefix states (4.692124ms)
+✔ invalid first / absent second obey prefix states (10.850404ms)
+✔ invalid first / valid second obey prefix states (11.708442ms)
+✔ invalid first / invalid second obey prefix states (9.187033ms)
+✔ invalid first / unsafe second obey prefix states (9.259083ms)
+✔ unsafe first / absent second obey prefix states (4.212339ms)
+✔ unsafe first / valid second obey prefix states (4.110111ms)
+✔ unsafe first / invalid second obey prefix states (4.101336ms)
+✔ unsafe first / unsafe second obey prefix states (4.056578ms)
+✔ valid first prefix retained with second absent, malformed or unsafe (44.889933ms)
+✔ blocked second never accesses bytes and cannot leak arbitrary content (3.907956ms)
+✔ unreaped flag returns not_reconciled without inspecting observations (3.982515ms)
+✔ bounded rejected Buffer has full byte hash; oversized or unsafe has null digest (21.592682ms)
+✔ binding failures reject and cannot reconstruct expected answer (12.530178ms)
+✔ trusted observation/config mistakes fail fixed; no partially returned output (34.034542ms)
+✔ returned array/cases/projections/digests deeply frozen and calls detached (40.926164ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 274.859089
