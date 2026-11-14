@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q20",
+  "kind": "offline_adapter_dependency_failure_investigation",
+  "node": "v25.2.1",
+  "passed": 12,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "actual offline producer + observer + prefix baseline",
+      "result": "pass",
+      "rows": [
+        {
+          "case_id": "capital-paraphrase",
+          "state": "validated",
+          "reason_code": "validated_match",
+          "projection_present": true
+        },
+        {
+          "case_id": "unknown-no-consent",
+          "state": "validated",
+          "reason_code": "validated_match",
+          "projection_present": true
+        }
+      ]
+    },
+    {
+      "name": "controlled dependency EIO target read 1",
+      "result": "pass",
+      "target_reads": 1,
+      "thrown_fixed_error": "CHECKPOINT_PREFIX_INVALID",
+      "rows": null,
+      "whole_result_returned": false
+    },
+    {
+      "name": "controlled dependency EIO target read 2",
+      "result": "pass",
+      "target_reads": 2,
+      "thrown_fixed_error": null,
+      "rows": [
+        {
+          "case_id": "capital-paraphrase",
+          "state": "rejected",
+          "reason_code": "checkpoint_invalid",
+          "projection_present": false
+        },
+        {
+          "case_id": "unknown-no-consent",
+          "state": "rejected",
+          "reason_code": "checkpoint_order_invalid",
+          "projection_present": false
+        }
+      ],
+      "whole_result_returned": true
+    },
+    {
+      "name": "controlled dependency EIO target read 3",
+      "result": "pass",
+      "target_reads": 3,
+      "thrown_fixed_error": null,
+      "rows": [
+        {
+          "case_id": "capital-paraphrase",
+          "state": "validated",
+          "reason_code": "validated_match",
+          "projection_present": true
+        },
+        {
+          "case_id": "unknown-no-consent",
+          "state": "rejected",
+          "reason_code": "checkpoint_invalid",
+          "projection_present": false
+        }
+      ],
+      "whole_result_returned": true
+    },
+    {
+      "name": "controlled dependency EMFILE target read 1",
+      "result": "pass",
+      "target_reads": 1,
+      "thrown_fixed_error": "CHECKPOINT_PREFIX_INVALID",
+      "rows": null,
+      "whole_result_returned": false
+    },
+    {
+      "name": "controlled dependency EMFILE target read 2",
+      "result": "pass",
+      "target_reads": 2,
+      "thrown_fixed_error": null,
+      "rows": [
+        {
+          "case_id": "capital-paraphrase",
+          "state": "rejected",
+          "reason_code": "checkpoint_invalid",
+          "projection_present": false
+        },
+        {
+          "case_id": "unknown-no-consent",
+          "state": "rejected",
+          "reason_code": "checkpoint_order_invalid",
+          "projection_present": false
+        }
+      ],
+      "whole_result_returned": true
+    },
+    {
+      "name": "controlled dependency EMFILE target read 3",
+      "result": "pass",
+      "target_reads": 3,
+      "thrown_fixed_error": null,
+      "rows": [
+        {
+          "case_id": "capital-paraphrase",
+          "state": "validated",
+          "reason_code": "validated_match",
+          "projection_present": true
+        },
+        {
+          "case_id": "unknown-no-consent",
+          "state": "rejected",
+          "reason_code": "checkpoint_invalid",
+          "projection_present": false
+        }
+      ],
+      "whole_result_returned": true
+    },
+    {
+      "name": "controlled dependency ENOMEM target read 1",
+      "result": "pass",
+      "target_reads": 1,
+      "thrown_fixed_error": "CHECKPOINT_PREFIX_INVALID",
+      "rows": null,
+      "whole_result_returned": false
+    },
+    {
+      "name": "controlled dependency ENOMEM target read 2",
+      "result": "pass",
+      "target_reads": 2,
+      "thrown_fixed_error": null,
+      "rows": [
+        {
+          "case_id": "capital-paraphrase",
+          "state": "rejected",
+          "reason_code": "checkpoint_invalid",
+          "projection_present": false
+        },
+        {
+          "case_id": "unknown-no-consent",
+          "state": "rejected",
+          "reason_code": "checkpoint_order_invalid",
+          "projection_present": false
+        }
+      ],
+      "whole_result_returned": true
+    },
+    {
+      "name": "controlled dependency ENOMEM target read 3",
+      "result": "pass",
+      "target_reads": 3,
+      "thrown_fixed_error": null,
+      "rows": [
+        {
+          "case_id": "capital-paraphrase",
+          "state": "validated",
+          "reason_code": "validated_match",
+          "projection_present": true
+        },
+        {
+          "case_id": "unknown-no-consent",
+          "state": "rejected",
+          "reason_code": "checkpoint_invalid",
+          "projection_present": false
+        }
+      ],
+      "whole_result_returned": true
+    },
+    {
+      "name": "direct binding content/dependency errors indistinguishable",
+      "result": "pass",
+      "content_error": "CHECKPOINT_BINDING_INVALID",
+      "dependency_error": "CHECKPOINT_BINDING_INVALID"
+    },
+    {
+      "name": "restored functions + unchanged checkpoints recover baseline",
+      "result": "pass",
+      "rows": [
+        {
+          "case_id": "capital-paraphrase",
+          "state": "validated",
+          "reason_code": "validated_match",
+          "projection_present": true
+        },
+        {
+          "case_id": "unknown-no-consent",
+          "state": "validated",
+          "reason_code": "validated_match",
+          "projection_present": true
+        }
+      ]
+    }
+  ],
+  "conclusion": "Q17 precheck failure escalates, but later ordinary dependency read failures inside Q16 become checkpoint_invalid and can retain earlier validated output. Q16 direct error hides dependency/content distinction. Adapter integration requires a separately versioned validation/failure boundary; Q19 observer correction alone does not resolve this downstream gate.",
+  "limits": [
+    "Controlled readFileSync injection after imports and actual offline fixture checkpoint production; no actual device/resource exhaustion/source mutation.",
+    "No production adapter/verifier/public report/whole-output discard implemented or accepted. Fixed summary only; no raw checkpoint payload/private paths/errors published.",
+    "Shared-owner/prior exposure/authored source-dependent fixtures; no factual/heldout/model/resource/curation/routing/API acceptance."
+  ]
+}
