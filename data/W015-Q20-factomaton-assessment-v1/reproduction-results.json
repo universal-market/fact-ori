@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "authored_groups_passed": 12,
+  "authored_fault_cells": 9,
+  "reviewer_groups_passed": 23,
+  "reviewer_fault_cells": 18,
+  "authored_results_byte_equal": true,
+  "reviewer_results_byte_equal": true,
+  "authored_result_raw_sha256": "e7da93b9c3af2cba5c9a1edfa6ebae6ad3b6e213b42862f452d64e8ffdcf9677",
+  "reviewer_result_raw_sha256": "fbfe983e650a16284ed47af0e50b582a447f36e82a6a0bff886f0a9e28b31224",
+  "raw_bindings_rechecked_after_tests": 114,
+  "prior_bindings_unchanged": 109,
+  "broad_python_suite_repeated": false,
+  "environment": "Node v25.2.1/Linux; controlled dependency builtin injection and phase witnesses, not actual device/exhaustion/OS proof"
+}
