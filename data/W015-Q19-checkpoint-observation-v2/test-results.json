@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q19",
+  "authored_groups": 20,
+  "skipped": 0,
+  "fault_cells": 54,
+  "node": "v25.2.1",
+  "node_duration_ms": 105.612107,
+  "python_tests": 246,
+  "python_seconds": 14.329,
+  "scope": "Offline raw observation v2 conservative file-invalid vs whole-observer error taxonomy; controlled builtin injection, not actual exhaustion/device failures; pending exact review."
+}
