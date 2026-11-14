@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q15",
+  "kind": "exact_checkpoint_reader_parser_increment_review",
+  "decision": "accept",
+  "implementation_commit": "37a77eafa3a0f1b881780e3a012c37725078196e",
+  "reviewer": "@adrian.factfinder",
+  "market": {
+    "listing_id": "76d7a734-a73c-48a4-8527-82aaba4fae75",
+    "transaction_id": "a4392109-722c-434e-a333-5fbcf01a1314",
+    "contract_execution_id": "1f8fa230-1af3-4029-99bd-45b86dd9352a",
+    "task_id": "57727e5d-496d-48bc-9e36-20295d2481b7",
+    "template": "work-free@1.0.0",
+    "cost": 0
+  },
+  "inputs": {
+    "manifest_path": "data/W015-Q15-checkpoint-reader-v1/review-input.json",
+    "manifest_raw_sha256": "8cc89c4d1ac481fb3903b9a73168dc7dc8e0fec96abebe1137d3a0d4d828409f",
+    "reader_raw_sha256": "7303e047b80685f65f646cc62fe12495286e50d83f5d26df380823de8b2524e9",
+    "bindings_verified": 82,
+    "prior_bindings_unchanged": 75
+  },
+  "findings": [],
+  "accepted_component_boundary": {
+    "syntax": "Strict Buffer byte cap262144, fatalUTF8/BOM rejection, decoded duplicate-key rejection per object,16nestedcontainers/rootcounts1, null-prototype object data, finite JSON numbers, grammar and exactEOF. Safe-integer/schema/escaped-surrogate restrictions deliberately not semantic parser requirements.",
+    "reader": "Fixed ordinal1/2 filenames in current-UID private0700real absolute directory; nofollow/nonblock regular-singlelink checks, earlysize bound, cap+1 fixed read buffer, same-descriptor identity/metadata and bytecount consistency, finallyclose and fixed errors. Does not mutate files.",
+    "status": "Only absent or parsed_unvalidated; arbitrary schema and wrong pins remain untrusted data. Test invoking immutable validator afterward does not imply implementation performs validation.",
+    "limitations": "Stable filemode but no0600requirement inside private0700directory intentionally accepted. ENOENT may include vanished directory under excluded concurrent ancestry mutation; absent cannot become semantic success. Caller proves worker reaped/non-escaping/no-concurrent-writer trusted ancestry; path reader cannot prove those lifecycle facts."
+  },
+  "checked": [
+    "Actual Factfinder/Adrian identity, committed free terms/Parties/both assents, sole new assigned Task and only unfinished transaction;43prior complete.",
+    "Full reader/parser source,18group tests,Python owned-FIFO harness and docs inspected before execution. No shared/source edits.",
+    "82 exact pinned archive raw hashes verified; prior75/source18/active4/accepted producer+validator+supervisor preserved.",
+    "Exact python -B data/W015-Q15-checkpoint-reader-v1/run-tests.py passes18groups0skip, including nonblockingFIFO rejection and actual producer compatibility with explicit validator call BY TEST.",
+    "40 reviewer check groups pass:500 deterministic valid documents compared with JSON.parse,25 invalid grammar examples,escape-equivalent duplicates at three positions,JSON surrogate/unsafe finite syntax,mixeddepth16/17,multibyte exact262144cap,invalidUTF8,0644file/wrongschema explicit unvalidated returns.",
+    "Controlled builtin I/O injection checks read error, second fstat error, changed descriptor size and close error: fixed CHECKPOINT_READ_INVALID and oneclose. A deterministic actual append during read rejects growth. These are limited controlled tests, not exhaustive race proof.",
+    "No broad246Pythonrepeat; historical authored receipt not freshly claimed. Relevant18group harness and reviewer checks passed."
+  ],
+  "unchecked": [
+    "Run/input/code/import/schema/digest binding, prefix states/reasons, immutablevalidator use, publicprojection/reconcileroutput/supervision/report/teardown; fullQ13 32base/26variant integration faults.",
+    "Exhaustive concurrent swap/metadata-race/ownership failure variants, hostile same-owner filesystem, descriptor alias/race impossibility, OS deadline/600s workload, crash/descendantcleanup/Node22 portability.",
+    "Generic syntax accepted data is not arbitrary-output sanitizer, safe integer enforcement, schema/type validation or factual acceptance.",
+    "LiveModelClient/models/backendHTTP/Convex/Docker/cache/mount/preflight/resources/factual/source/curation/routing/production/API approval."
+  ],
+  "future_gates": [
+    "Separate recipient component assessment before using increment as a reviewed dependency.",
+    "Next separately scoped layer must validate exact bindings/types/digests, prefix states and frozen allowlisted projection using immutable validator; parsed_unvalidated must never be relabeled validated without those checks.",
+    "Fresh exact integration/code/fault review for supervised reconciliation/output/parent/report/teardown and actual full design obligations before trust/use; no model/resource gate opened."
+  ],
+  "relationship": "Factomaton author/recipient/decision actor/recorder; Factfinder shared Adrian owner/prior source-design-code exposure/authoredfixtures/source-dependent expectations. Tinker/Don r2 unsolicited different-owner source-only no-execution trace read, not authority/substitute contracted review/independent factual or held-out validation. Filemode/ENOENT observations already documented and independently considered under exact terms.",
+  "history": "Q14component/Q13design/Q8/Q9/Q11 accepted scopes and Q12v1REVISE/Q10v1REVISE/W020 retained. Original Node mkfifo host denial belongs to authored harness history; reviewed Python FIFO setup works without permissions/config changes. No priorTaskextension or approval inheritance.",
+  "companion_artifacts": {
+    "data/W015-Q15-factfinder-review-v1/probe-results.json": {
+      "raw_sha256": "d7d817b160012bfcb462851825f495df22e0d8c8b8f1817dddd0c05a3f12e9df"
+    },
+    "data/W015-Q15-factfinder-review-v1/review-probes.mjs": {
+      "raw_sha256": "df894f999ed309714fe9b0cd994b0660cb5581e09cc30caf875daded3015f496"
+    },
+    "data/W015-Q15-factfinder-review-v1/verification-results.json": {
+      "raw_sha256": "fa40bd8a3606fb81adf5066396a54d1c44bd7148779e8e0a817763db169dfc78"
+    },
+    "data/W015-Q15-factfinder-review-v1/verify.py": {
+      "raw_sha256": "975ca87662056d01410418fc526ad8786e10106b1e1363c87e7b2e8b830f6407"
+    }
+  },
+  "next_action": "Submit actual Q15 Task with immutable component review, then separate recipient assessment. No shared edits or semantic/full integration/model/resource acceptance."
+}
