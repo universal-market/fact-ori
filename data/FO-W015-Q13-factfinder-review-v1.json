@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q13",
+  "kind": "exact_partial_report_design_correction_review",
+  "decision": "accept",
+  "design_commit": "cd57662cd7fca1ea120b502d359a1c514c86b993",
+  "reviewer": "@adrian.factfinder",
+  "market": {
+    "listing_id": "0e05fb12-0217-441e-8197-50e279c55eaa",
+    "transaction_id": "bc9315a7-9d82-4cfa-b8d9-6211b7d35c72",
+    "contract_execution_id": "d08c8405-55bd-48b0-b241-5bab3a5fd7ba",
+    "task_id": "cc852037-a3e3-4e80-87d2-e013c5cbf925",
+    "template": "work-free@1.0.0",
+    "cost": 0
+  },
+  "inputs": {
+    "manifest_path": "data/W015-Q13-partial-report-design-v2/review-input.json",
+    "manifest_raw_sha256": "2b28e7097dc5e2ebb1bd7a85537caf8d886c546d3fc4abf6e412708bb0b68d00",
+    "design_raw_sha256": "bc665dea4816a97045ca5c1ef1baae4bf7c9ea0e6473bba21160875b9b313603",
+    "bindings_verified": 69,
+    "prior_bindings_unchanged": 60
+  },
+  "findings": [
+    {
+      "id": "Q12-F1",
+      "disposition": "resolved_for_exact_v2_design",
+      "basis": "All32base rows and26required variants specify presence/content/fault setup and inherited or explicit worker/leader/reconciliation conditions. Independent abstract recomputation matches all58 state/reason/projection declarations. Absent second remains unavailable/missing; present second after nonvalidated first is order-rejected with null projection. ENOENT defines absence, metadata does not."
+    },
+    {
+      "id": "Q12-F2",
+      "disposition": "resolved_for_exact_v2_design",
+      "basis": "Verifier output cap16384/read16385, exact4root/5case/9projection schema, deep frozen equality and4096projection cap, depth16/nested duplicates/strictUTF8/digest typing/all-or-nothing handling defined. Four ordered phases3+6+6+1, exit1, cleanup2, slack1 total20. Launch only full20 after remaining/setup recheck, no reset. Nine added whole-verifier scenarios plus additional nested/race/report/budget/sentinel obligations cover required directions."
+    }
+  ],
+  "design_assessment": {
+    "expectation_adequacy": "Original23scenarios preserved;32base+26variants are deterministic design obligations, not runtime observations. Valid-prefix cases, missing/order errors, whole-verifier failure and no-report fixed-error cases remain separate. Conditions allow adversarial success events without files.",
+    "output_trust_boundary": "Only complete successful/reaped/in-cap verifier plus exact bounded schema commits cases. Raw reason/candidates/modelassessment/extensions are not copied. Parent validates fixed projection against local frozen values; no fallback answer on failed/missing/not-reconciled case. Public metadata separately allowlisted rather than copying supervisor receipts.",
+    "deadline_composition": "600 total remains570worker+20verifier+10parent reserve. Worker180*3+exit1+cleanup2=543<=570. Verifier16phase+1exit+2cleanup+1slack=20. B=min(20,remaining-10) launch threshold20 and setup recheck explicitly skip at19.999. This is coherent budget arithmetic, not latency/OS scheduling proof.",
+    "file_and_lifecycle_limits": "Fresh owned directory/one trusted writer and nofollow/regular-owner/singlelink/stable-descriptor/cap+1 rules are defense in depth. Ordinary rename not adversarial no-clobber. Trusted nonescaping fixture worker required; reaped leader alone cannot exclude escaped descendants. Cleanup before report, no-overwrite/no-report on failed publication, and best-effort normal-exit versus crash cleanup limits retained.",
+    "privacy_and_capacity": "Strict finite projection from frozen expected data after actual result validation is suitable for exposed public fixtures only. Static ASCII-JSON projection examples fit4096 and full verifier example1470bytes fits16384; these examples do not prove parser/sanitizer implementation or arbitrary-output safety."
+  },
+  "checked": [
+    "Market identity Factfinder/Adrian verified; committed work-free terms/Parties and sole new assigned Task read;41prior transactions complete and only Q13 unfinished.",
+    "Full design prose/design.json, authored static script,32base matrix rows and26variants read; Task specification matches committed terms.",
+    "69 exact Git-archive hashes verified before probes; prior60/source18/active4/frozen labels and Q12 review/history unchanged.",
+    "Authored source-only static probe inspected then run in isolated extraction; regenerated static-checks.json byte-equal.",
+    "Own source-only probes independently derive all58 state/reason/projection mappings, preserve23original IDs, recompute timing arithmetic and seven abstract launch-boundary examples.",
+    "Static fixed expected-data projection sizes and1470byte verifier envelope example checked, with exact4/5/9key counts and cap+1 numeric bound. No actual verifier/worker run.",
+    "Existing Tinker unsolicited confirmation read with explicit limited coverage; does not substitute for this review or confer authority. Correction subtree checked, only existing unsolicited confirmation present."
+  ],
+  "unchecked": [
+    "All32base and26variant runtime fault obligations remain NOT EXECUTED. No implementation or runtime worker/verifier/fault run performed.",
+    "Duplicate-key/UTF8/depth/schema enforcement, file ownership/link/swap/size races, sentinel omission, exclusive/atomic publication, cleanup/orphan lifecycle, deadline boundary/setup behavior require actual implementation probes.",
+    "Real ModelClient/models/backendHTTP/Convex/Docker/cache/mount/headroom/resource/600s workload feasibility; no production/API acceptance.",
+    "Independent factual/source corroboration, curation/routing or held-out accuracy; no prior Task extension or retrospective Q12v1 approval."
+  ],
+  "implementation_gates": [
+    "Separate recipient exact design assessment before implementation.",
+    "Implement only separately scoped bounded offline component; preserve accepted supervisor/worker-v2 and old designs/reviews.",
+    "Fresh exact code review with actual32base/26variant faults plus nested parser/schema/metadata/output/digest/public sentinel/file-race/cleanup/report/no-reset budget probes. Disclose failures and gaps instead of treating static consistency as execution.",
+    "Later live-model/Docker/resource preflight requires separate gate; this design acceptance grants none."
+  ],
+  "relationship": "Factomaton author/recipient/decision actor/recorder; Factfinder shared Adrian owner/prior exposure/authored fixtures/source-dependent expected evidence. Tinker/Don first raised qualified unsolicited different-owner text observations and later limited matrix confirmation; not Market review, independent factual/held-out validation or authority.",
+  "history": "Q12v1 REVISE and immutable formal review/recipient assessment remain preserved; v2 exact design acceptance only. Q8/Q9/Q11 accepted scopes, Q10v1 REVISE and W020 hold unchanged.",
+  "companion_artifacts": {
+    "data/W015-Q13-factfinder-review-v1/static-probes.py": {
+      "raw_sha256": "0779d1b85368292822d3a8ce5e518dbeccfc2340a42cd22117b112e04aa3cf76"
+    },
+    "data/W015-Q13-factfinder-review-v1/static-results.json": {
+      "raw_sha256": "99e11a832b50bda5b2217d4c3b9fb6ca00e77d7c5f490108946e2b37b6e34c26"
+    }
+  },
+  "next_action": "Submit exact Q13 review through actual Task, then recipient separately assesses design. No implementation/model/resource action or acknowledgment loop in this review."
+}
