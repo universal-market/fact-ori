@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q17",
+  "command": [
+    "node",
+    "scripts/diagnostic-checkpoint-prefix-v1.test.mjs"
+  ],
+  "returncode": 0,
+  "stdout": "\u2714 two validated cases retain frozen projection, exact five keys and raw digests (26.242436ms)\n\u2714 absent first / absent second obey prefix states (5.092228ms)\n\u2714 absent first / valid second obey prefix states (4.954438ms)\n\u2714 absent first / invalid second obey prefix states (4.60707ms)\n\u2714 absent first / unsafe second obey prefix states (4.52227ms)\n\u2714 invalid first / absent second obey prefix states (10.570371ms)\n\u2714 invalid first / valid second obey prefix states (11.924288ms)\n\u2714 invalid first / invalid second obey prefix states (8.839948ms)\n\u2714 invalid first / unsafe second obey prefix states (9.038653ms)\n\u2714 unsafe first / absent second obey prefix states (4.119838ms)\n\u2714 unsafe first / valid second obey prefix states (4.009749ms)\n\u2714 unsafe first / invalid second obey prefix states (3.984387ms)\n\u2714 unsafe first / unsafe second obey prefix states (3.970202ms)\n\u2714 valid first prefix retained with second absent, malformed or unsafe (42.983214ms)\n\u2714 blocked second never accesses bytes and cannot leak arbitrary content (3.785328ms)\n\u2714 unreaped flag returns not_reconciled without inspecting observations (3.868869ms)\n\u2714 bounded rejected Buffer has full byte hash; oversized or unsafe has null digest (20.761279ms)\n\u2714 binding failures reject and cannot reconstruct expected answer (12.194921ms)\n\u2714 trusted observation/config mistakes fail fixed; no partially returned output (33.030128ms)\n\u2714 returned array/cases/projections/digests deeply frozen and calls detached (42.189431ms)\n\u2139 tests 20\n\u2139 suites 0\n\u2139 pass 20\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 268.64781\n",
+  "stderr": "(node:4) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+  "limits": "20 authored in-memory prefix mapping groups only; not actual reader adapter/lifecycle/supervised output/parent/fullQ13 integration faults."
+}
