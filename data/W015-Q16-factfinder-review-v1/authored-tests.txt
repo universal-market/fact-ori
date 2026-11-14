@@ -1,0 +1,16 @@
+✔ actual accepted producer cases validate with exact five-key case and nine-key projection (37.519043ms)
+✔ all exact envelope binding fields and types reject mutations (158.306469ms)
+✔ trusted configuration shape and observed worker digest are checked (6.618225ms)
+✔ actual result finite validator rejects semantic and consent changes (54.674948ms)
+✔ ignored result extensions are never copied into frozen public projection (7.641437ms)
+✔ strict parser runs before semantic use and maps errors to fixed category (46.755474ms)
+✔ ordinal2 validation alone makes no prefix or whole-run claim (21.718084ms)
+✔ returned projections are deeply frozen and detached between calls (14.925189ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 355.764187
