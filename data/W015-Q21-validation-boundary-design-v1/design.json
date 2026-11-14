@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q21",
+  "kind": "validation_failure_boundary_design",
+  "status": "proposed_not_implemented",
+  "decision_actor_recorder": "@adrian.factomaton",
+  "roles": {
+    "design_author": "@adrian.factomaton",
+    "validator_owner": "@adrian.factfinder",
+    "implementation_assignment": "not_created_coordination_required"
+  },
+  "stages": [
+    "load_verified_context",
+    "pure_decode_bind_validate",
+    "prefix_local_rows",
+    "return_complete_result"
+  ],
+  "loader": {
+    "all_dependency_io_before_checkpoint_access": true,
+    "read_once_per_unique_allowlisted_path": true,
+    "context_identity": "private_WeakMap_token",
+    "payload": "detached_deep_frozen_JSON_only",
+    "hidden_v1_reads_forbidden": [
+      "parseCheckpointBytes_v1",
+      "validateCheckpointBytes_v1",
+      "reconcileCheckpointPrefix_v1",
+      "validateCase_v1",
+      "loadInputs_v1",
+      "engineFingerprint_v1"
+    ]
+  },
+  "classification": {
+    "explicit_content_marker": "case_rejected_checkpoint_invalid",
+    "unknown_or_bug_or_resource": "whole_verifier_failure_no_rows",
+    "dependency_config": "whole_verifier_failure_no_context",
+    "outer_descriptor_contract": "whole_verifier_failure_no_rows",
+    "projection_oversize": "whole_verifier_failure_no_rows"
+  },
+  "caps": {
+    "checkpoint_bytes": 262144,
+    "json_depth": 16,
+    "projection_bytes": 4096,
+    "cases": 2
+  },
+  "commit_rule": "no provisional rows returned or published after any whole failure",
+  "scope": "Design only; no codec/validator/adapter/verifier implementation or runtime evidence",
+  "next_gate": "exact_design_review_then_separate_assessment_then_coordinated_implementation_scope"
+}

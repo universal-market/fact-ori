@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q21",
+  "runtime_status": "REQUIRED_NOT_EXECUTED",
+  "rows": [
+    {
+      "id": "D01",
+      "stage": "loader",
+      "fault": "dependency_EIO_EMFILE_ENOMEM_any_read",
+      "expected": "whole_no_context",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D02",
+      "stage": "loader",
+      "fault": "missing_conflicting_unknown_pin_or_hash_mismatch",
+      "expected": "whole_no_context",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D03",
+      "stage": "loader",
+      "fault": "trusted_dependency_JSON_schema_or_import_model_fingerprint_mismatch",
+      "expected": "whole_no_context",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D04",
+      "stage": "loader",
+      "fault": "allocation_serialization_freeze_failure",
+      "expected": "whole_no_context",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D05",
+      "stage": "pure",
+      "fault": "all_filesystem_reads_disabled_after_context",
+      "expected": "two_validated_zero_reads",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D06",
+      "stage": "pure",
+      "fault": "forged_or_wrong_module_context",
+      "expected": "whole_no_rows",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D07",
+      "stage": "pure",
+      "fault": "malformed_UTF8_BOM_duplicate_decoded_keys_JSON_depth_nonfinite",
+      "expected": "case_rejected",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D08",
+      "stage": "pure",
+      "fault": "bad_envelope_run_case_ordinal_input_worker_import_actualresult",
+      "expected": "case_rejected",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D09",
+      "stage": "pure",
+      "fault": "arbitrary_null_string_error_same_description_Symbol",
+      "expected": "whole_no_rows",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D10",
+      "stage": "pure",
+      "fault": "unexpected_decode_conversion_SyntaxError_TypeError",
+      "expected": "whole_no_rows",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D11",
+      "stage": "pure",
+      "fault": "hash_copy_allocation_or_finitevalidator_bug",
+      "expected": "whole_no_rows",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D12",
+      "stage": "prefix",
+      "fault": "deliberate_second_content_rejection_after_valid_first",
+      "expected": "first_valid_second_rejected",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D13",
+      "stage": "prefix",
+      "fault": "unknown_second_failure_after_valid_first",
+      "expected": "whole_no_rows",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D14",
+      "stage": "prefix",
+      "fault": "broken_prefix_present_second_payload_getter_throws",
+      "expected": "order_invalid_zero_payload_access",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D15",
+      "stage": "prefix",
+      "fault": "broken_prefix_absent_second",
+      "expected": "second_unavailable",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D16",
+      "stage": "prefix",
+      "fault": "extra_outer_descriptor_key_or_unknown_shape",
+      "expected": "whole_no_rows",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D17",
+      "stage": "commit",
+      "fault": "projection_overcap_stringify_copy_freeze_failure_after_valid_first",
+      "expected": "whole_no_rows",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D18",
+      "stage": "commit",
+      "fault": "exception_payload_or_partial_rows_or_raw_error_leak",
+      "expected": "forbidden_no_output",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D19",
+      "stage": "positive",
+      "fault": "actual_Q14_producer_buffers_unchanged_pins",
+      "expected": "two_validated",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D20",
+      "stage": "history",
+      "fault": "frozen_v1_sources_receipts_bytes",
+      "expected": "unchanged",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D21",
+      "stage": "loader",
+      "fault": "repeated_shared_dependency_path",
+      "expected": "one_read_per_path",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D22",
+      "stage": "pure",
+      "fault": "caller_mutates_original_context_source_objects",
+      "expected": "private_context_unchanged",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D23",
+      "stage": "content",
+      "fault": "invalid_second_no_expectedanswer_reconstruction",
+      "expected": "second_null_projection",
+      "status": "REQUIRED_NOT_EXECUTED"
+    },
+    {
+      "id": "D24",
+      "stage": "lifecycle",
+      "fault": "unreaped_or_missing_uncommitted_future_verifier",
+      "expected": "future_parent_not_reconciled_not_implemented_here",
+      "status": "REQUIRED_NOT_EXECUTED"
+    }
+  ]
+}
