@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q14",
+  "kind": "offline_checkpoint_worker_increment",
+  "counts": {
+    "document_embeddings": 8,
+    "query_embeddings": 2,
+    "audits": 2,
+    "classifications": 3,
+    "backend_checks": 2,
+    "record_revalidations": 1,
+    "forbidden_submissions": 0
+  },
+  "saved": [
+    {
+      "case_id": "capital-paraphrase",
+      "ordinal": 1,
+      "bytes": 13720,
+      "sha256": "7baec7f34b1605788a2e1c4834cdd38fc063d64c6baca05f62d30b73c3a24e52"
+    },
+    {
+      "case_id": "unknown-no-consent",
+      "ordinal": 2,
+      "bytes": 4199,
+      "sha256": "2e01601295ce9ddfd61d6ac13d892b869351cfc6332078e44b22f30ccb7bb161"
+    }
+  ],
+  "limits": [
+    "Raw checkpoints ephemeral fixture data only; caller owns cleanup. No public projection/report or reconciler.",
+    "No supervisor/deadline/crash/escaped-descendant/hostile-filesystem proof. No live model/backend/Docker/resource action.",
+    "Caller-declared commit plus observed module digest, not runtime Git/build attestation. New code requires exact review."
+  ]
+}
