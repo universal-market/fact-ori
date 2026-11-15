@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "raw_bindings_verified": 122,
+  "prior_bindings_unchanged": 114,
+  "pins_rechecked_after_reference_checks": true,
+  "authored_static_results_byte_equal": true,
+  "reference_checks_passed": 7,
+  "proposed_runtime_scenarios": 24,
+  "proposed_runtime_scenarios_executed": 0,
+  "broad_python_suite_repeated": false,
+  "production_implementation_written": false
+}
