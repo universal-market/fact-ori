@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "node": "v25.2.1",
+  "authorship": "Factfinder implementation author self-checks; not independent/heldout",
+  "passed": 97,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "valid \"null\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"true\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"false\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"0\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"-0\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"1e-400\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"-1e-400\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"9007199254740993\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"1.5e+3\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"\\\"\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"\\\"\\\\ud800\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"\\\"\\\\udfff\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"\\\"\\\\ud83d\\\\ude00\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"\\\"é😀\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"\\\"\\\\\\\"\\\\\\\\\\\\/\\\\b\\\\f\\\\n\\\\r\\\\t\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \" [] \"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"\\t\\r\\n{}\"",
+      "result": "pass"
+    },
+    {
+      "name": "valid \"{\\\"a\\\":[null,true,false,1,\\\"x\\\"]}\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \" \"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"01\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"+1\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \".1\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"1.\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"1e\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"1e+\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"NaN\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"Infinity\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"1e400\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"-1e400\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"[1,]\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"{\\\"a\\\":1,}\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"{\\\"a\\\" 1}\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"{\\\"a\\\":}\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"[\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"{\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"true false\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"nullx\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"\\\"x\\n\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"\\\"\\\\q\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"\\\"\\\\u123\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"\\\"\\\\uZZZZ\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"\\\"unterminated\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"\\\"end\\\\\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"﻿null\"",
+      "result": "pass"
+    },
+    {
+      "name": "invalid \"[﻿1]\"",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 128",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 192,128",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 193,191",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 194",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 194,127",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 224,159,191",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 225,128",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 237,160,128",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 240,143,191,191",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 244,144,128,128",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 245,128,128,128",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 255",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 226,40,161",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 reject 241,128,128",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 valid boundary \"\\\"\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 valid boundary \"\\\"\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 valid boundary \"\\\"߿\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 valid boundary \"\\\"ࠀ\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 valid boundary \"\\\"퟿\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 valid boundary \"\\\"\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 valid boundary \"\\\"￿\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 valid boundary \"\\\"𐀀\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "UTF8 valid boundary \"\\\"􏿿\\\"\"",
+      "result": "pass"
+    },
+    {
+      "name": "depth array 15",
+      "result": "pass"
+    },
+    {
+      "name": "depth array 16",
+      "result": "pass"
+    },
+    {
+      "name": "depth array 17",
+      "result": "pass"
+    },
+    {
+      "name": "depth object 15",
+      "result": "pass"
+    },
+    {
+      "name": "depth object 16",
+      "result": "pass"
+    },
+    {
+      "name": "depth object 17",
+      "result": "pass"
+    },
+    {
+      "name": "depth mixed 15",
+      "result": "pass"
+    },
+    {
+      "name": "depth mixed 16",
+      "result": "pass"
+    },
+    {
+      "name": "depth mixed 17",
+      "result": "pass"
+    },
+    {
+      "name": "cap exact and one past",
+      "result": "pass"
+    },
+    {
+      "name": "own data {\"__proto__\":1}",
+      "result": "pass"
+    },
+    {
+      "name": "own data {\"constructor\":2}",
+      "result": "pass"
+    },
+    {
+      "name": "own data {\"toString\":3}",
+      "result": "pass"
+    },
+    {
+      "name": "own data {\"__proto__\":1,\"constructor\":2,\"toString\":3}",
+      "result": "pass"
+    },
+    {
+      "name": "own data {\"nested\":{\"__proto__\":{\"constructor\":3}},\"toString\":null}",
+      "result": "pass"
+    },
+    {
+      "name": "own data {\"a\":{\"x\":1},\"b\":{\"x\":2}}",
+      "result": "pass"
+    },
+    {
+      "name": "own data {\"é\":1,\"é\":2}",
+      "result": "pass"
+    },
+    {
+      "name": "decoded duplicates {\"x\":1,\"\\u0078\":2}",
+      "result": "pass"
+    },
+    {
+      "name": "decoded duplicates {\"__proto__\":1,\"__pro\\u0074o__\":2}",
+      "result": "pass"
+    },
+    {
+      "name": "decoded duplicates {\"a\":{\"constructor\":1,\"constructor\":2}}",
+      "result": "pass"
+    },
+    {
+      "name": "decoded duplicates [{\"toString\":1,\"toString\":2}]",
+      "result": "pass"
+    },
+    {
+      "name": "decoded duplicates {\"\\ud800\":1,\"\\ud800\":2}",
+      "result": "pass"
+    },
+    {
+      "name": "recursive freeze and raw-buffer detachment",
+      "result": "pass"
+    },
+    {
+      "name": "caps fixed",
+      "result": "pass"
+    },
+    {
+      "name": "whole caller failures and marker lookalikes",
+      "result": "pass"
+    },
+    {
+      "name": "actual offline Q14 producer 01-capital.json",
+      "result": "pass"
+    },
+    {
+      "name": "actual offline Q14 producer 02-unknown.json",
+      "result": "pass"
+    },
+    {
+      "name": "500 deterministic JSON differential cases",
+      "result": "pass"
+    }
+  ],
+  "differential_generated_cases": 500,
+  "scope": "Codec grammar/representation only; Q15 differential checks are reused authored reference, not fault-classification oracle."
+}
