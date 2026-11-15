@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "bindings_verified": 137,
+  "source_commit_bindings": 132,
+  "external_review_commit_bindings": 5,
+  "prior_bindings_unchanged": 131,
+  "all_bytes_checked_against_exact_git_objects": true,
+  "post_checks_pins_unchanged": true,
+  "static_results_byte_identical": true,
+  "reference_checks_passed": 10,
+  "proposed_runtime_scenarios_required": 35,
+  "proposed_runtime_scenarios_executed": 0
+}
