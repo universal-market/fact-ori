@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q23",
+  "input_pins_verified_before_and_after": 150,
+  "prior_explicit_commits": 148,
+  "scope_files": 2,
+  "grammar_checks": 97,
+  "generated_differential_cases": 500,
+  "fault_cells": 72,
+  "fault_groups": 2,
+  "purity_checks": 3,
+  "positive_io_calls": 0,
+  "negative_io_calls": 3,
+  "restored_api_descriptors": 124,
+  "syntax_checks": "pass",
+  "runtime": "v25.2.1",
+  "full_Q22_runtime_scenarios_claimed_executed": 0,
+  "authorship": "Factfinder implementation author tests, not independent/non-author review",
+  "initial_harness_failures_preserved": [
+    "Fault restoration attempted through patched Object.defineProperty; corrected to pre-captured restoration intrinsic.",
+    "Filesystem ESM module-loader acquisition intercepted by armed hooks; exact audited source now acquired before arming and first evaluated from memory data URL."
+  ],
+  "limits": "Finite authored codec tests only; not loader/finitevalidator/binder/prefix/context/adapter/fullQ13/Q22pipeline or factual approval."
+}
