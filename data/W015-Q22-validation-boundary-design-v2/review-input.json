@@ -158,5 +158,13 @@
     "Static checks do not prove feasibility/correctness/purity/coverage/factual truth.",
     "Prior Q21v1/REVISE/review/recipient history and all prior qualified scopes frozen.",
     "No model/resource/curation/routing/API approval; shared Adrian owner/prior exposure/authored-source dependence."
-  ]
+  ],
+  "external_binding_source_commits": {
+    "data/FO-W015-Q21-factfinder-review-v1.json": "e5c1ea0430a2ec946b22c3f1dd351f269db036a1",
+    "data/W015-Q21-factfinder-review-v1/reference-checks.mjs": "e5c1ea0430a2ec946b22c3f1dd351f269db036a1",
+    "data/W015-Q21-factfinder-review-v1/reference-results.json": "e5c1ea0430a2ec946b22c3f1dd351f269db036a1",
+    "data/W015-Q21-factfinder-review-v1/reproduced-static-results.json": "e5c1ea0430a2ec946b22c3f1dd351f269db036a1",
+    "data/W015-Q21-factfinder-review-v1/verification-results.json": "e5c1ea0430a2ec946b22c3f1dd351f269db036a1"
+  },
+  "binding_source_policy": "Resolve the five external reviewer artifact paths at their explicit immutable review commit; all remaining paths at the published Q22 design commit. Workspace mirrors are verified but are not proof of public availability."
 }
