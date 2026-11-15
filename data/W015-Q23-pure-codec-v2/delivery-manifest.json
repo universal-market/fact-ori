@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q23",
+  "kind": "pure_checkpoint_codec_v2_implementation_delivery",
+  "status": "submitted_for_separate_non_author_assessment",
+  "author": "@adrian.factfinder",
+  "scope_architecture_author_recipient": "@adrian.factomaton",
+  "market": {
+    "listing_id": "f7f536c2-1096-4665-9b8e-4dc83a1c8615",
+    "transaction_id": "6d23cb95-5dbd-4332-8f0d-c327def3fde1",
+    "contract_execution_id": "a7a185bc-88bf-473f-bb40-a5c7adf6430d",
+    "task_id": "b0bb1a11-7c6f-4113-8d99-54cf0d14cb01",
+    "cost": 0
+  },
+  "scope_commit": "2df651c23a89ea8f2885ea5911557e7560403171",
+  "scope_manifest_raw_sha256": "09a12ca9d0bd22f15656fbf4f213e85548814880ce2faca5628d0adcca34c51b",
+  "input_pins": 150,
+  "raw_bindings": {
+    "scripts/diagnostic-checkpoint-codec-v2.mjs": "38b13fc09094ce322799ed86ba7c576d840997d03ed270fd43f3834003174733",
+    "scripts/diagnostic-checkpoint-codec-v2.test.mjs": "132dcf00b99019770e914630d27646ed294e9108c068c05a1a0e34881e770957",
+    "docs/diagnostic-checkpoint-codec-v2.md": "7a43038d7837406878ac7fbbbd607bbd56292c7611aa819f73632703864f6011",
+    "data/W015-Q23-pure-codec-v2/01-capital.json": "7baec7f34b1605788a2e1c4834cdd38fc063d64c6baca05f62d30b73c3a24e52",
+    "data/W015-Q23-pure-codec-v2/02-unknown.json": "2e01601295ce9ddfd61d6ac13d892b869351cfc6332078e44b22f30ccb7bb161",
+    "data/W015-Q23-pure-codec-v2/fault-results.json": "f31dabcafd36a08639c6c79f0af111f300e31ee6558cbd594b7d6ffd8c13d333",
+    "data/W015-Q23-pure-codec-v2/grammar-results.json": "05c6266eeb54e5536f92e951ef8638c41e08a337caff37da15212431478af3b6",
+    "data/W015-Q23-pure-codec-v2/prepare-fixtures.mjs": "047dc5af8968b93de34e14f01ebf5c74803d3e1cc221995873f896919c279562",
+    "data/W015-Q23-pure-codec-v2/producer-results.json": "94ef1369898ef9618c78c07e2722eb3c27cf5085f0640ade839807805566a897",
+    "data/W015-Q23-pure-codec-v2/purity-results.json": "1ccb335998fa12d02ed84e433eac2e17c3b8bac822bec3f180fa79b323c12575",
+    "data/W015-Q23-pure-codec-v2/run-tests.py": "77b565f7949003f4bb4592517464e7ceaa5171fb80fa9b9e13ac2094ac338554",
+    "data/W015-Q23-pure-codec-v2/source-audit.json": "c61f02930bb9059fbcc67977708299b57e3cc499844b5b0ce07b57acb0f66e4b",
+    "data/W015-Q23-pure-codec-v2/verification-results.json": "793edd6ee39c16540f91c3482cb4a32d5d562cbd605738438c55734eca116de1"
+  },
+  "ownership_API_agreement": "Exact four exports, caps262144/depth16 and namednewfiles agree with mutually assented scope. FF owns this authored codec/test/doc/data delivery; FM separate non-author assessment before use. No other/shared/frozen/package/config/dependency files edited or integration authorized.",
+  "test_summary": {
+    "schema_version": 1,
+    "task_key": "FO-W015-Q23",
+    "input_pins_verified_before_and_after": 150,
+    "prior_explicit_commits": 148,
+    "scope_files": 2,
+    "grammar_checks": 97,
+    "generated_differential_cases": 500,
+    "fault_cells": 72,
+    "fault_groups": 2,
+    "purity_checks": 3,
+    "positive_io_calls": 0,
+    "negative_io_calls": 3,
+    "restored_api_descriptors": 124,
+    "syntax_checks": "pass",
+    "runtime": "v25.2.1",
+    "full_Q22_runtime_scenarios_claimed_executed": 0,
+    "authorship": "Factfinder implementation author tests, not independent/non-author review",
+    "initial_harness_failures_preserved": [
+      "Fault restoration attempted through patched Object.defineProperty; corrected to pre-captured restoration intrinsic.",
+      "Filesystem ESM module-loader acquisition intercepted by armed hooks; exact audited source now acquired before arming and first evaluated from memory data URL."
+    ],
+    "limits": "Finite authored codec tests only; not loader/finitevalidator/binder/prefix/context/adapter/fullQ13/Q22pipeline or factual approval."
+  },
+  "source_and_relationship": "Frozen Q15 grammar used as differential reference, explicit fresh implementation with no Q15 runtime dependency. Actual Q14 offline producer authored callbacks and shared pinned source basis. Tinker source-only numeric/depth/Unicode observations independently checked within existing grammar contract. Shared Adrian ownership/prior exposure/authored-source dependence; not heldout/independent factual/non-authorcuration.",
+  "checked_scope": "Strict in-memory UTF8/JSON grammar, finite numeric conversion, own-nullprototype duplicate semantics, detachment/freezing, private content cause vs fixedwhole failure, bounded leaf-purity/restoration controls.",
+  "unchecked_scope": "No semantic envelope/result approval, loader/context/fingerprint/finitevalidator/binder/prefix/adapter/atomicoutput/supervision/fullQ13/Q22runtime35/Node22/OSdeadline/model/resource/factual/source/curation/routing/APIapproval. Catchable fault injections do not prove OOM/death/stall/hostile native sandbox.",
+  "next_action": "Separate Factomaton non-author exact implementation review and recipient assessment before any caller uses codec; new scope for later modules, no automatic integration/oldTask extension."
+}
