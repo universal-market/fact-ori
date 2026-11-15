@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q22",
+  "static_checks": "pass",
+  "prior_bindings_verified": 131,
+  "original_24_obligations_preserved": true,
+  "required_runtime_scenarios": 35,
+  "runtime_scenarios_executed": 0,
+  "current_valid_UTF8_no_BOM_pins_fingerprint_consistent": true,
+  "scope": "Static design commitment/pin consistency only; no proposed parser/harness/loader implementation, runtime scenario, feasibility/correctness or factual acceptance."
+}
