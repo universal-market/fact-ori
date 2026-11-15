@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "authored_manual_exact_source_and_call_graph_audit",
+  "author": "@adrian.factfinder",
+  "module_path": "scripts/diagnostic-checkpoint-codec-v2.mjs",
+  "module_raw_sha256": "38b13fc09094ce322799ed86ba7c576d840997d03ed270fd43f3834003174733",
+  "imports": [
+    "node:buffer:Buffer"
+  ],
+  "transitive_application_imports": [],
+  "exports": [
+    "CHECKPOINT_BYTE_CAP",
+    "CHECKPOINT_MAX_DEPTH",
+    "parseCheckpointBytesV2",
+    "isCheckpointContentRejection"
+  ],
+  "top_level_effects": "Buffer builtin import; two numeric constants, one private Symbol and one fixed string; synchronous function declarations only",
+  "call_graph": {
+    "parseCheckpointBytesV2": [
+      "Buffer.isBuffer",
+      "validateUtf8",
+      "Buffer.toString",
+      "whitespace",
+      "value",
+      "string",
+      "reject",
+      "Number/Number.isFinite",
+      "RegExp.exec",
+      "JSON.parse proven string tokens",
+      "Object.create/defineProperty/freeze",
+      "Set constructor/has/add",
+      "Array.push",
+      "String.charCodeAt/slice/startsWith"
+    ],
+    "validateUtf8": [
+      "indexed bytes and finite bounded loops",
+      "reject"
+    ],
+    "isCheckpointContentRejection": [
+      "strict symbol identity"
+    ],
+    "reject": [
+      "throw private Symbol"
+    ]
+  },
+  "manual_findings": "Full exact production source inspected: no fs/network/env/process/timer/promise/callback/async/native/require/eval/dynamic import or application-wrapper route; no input-dependent code execution. Only synchronous data parsing. Supplementary regex is not sole admission proof.",
+  "limits": "Authored manual audit, not formal static analysis or hostile runtime sandbox. Builtin monkeypatches/native internals can invalidate normal-runtime assumptions.",
+  "data_url_semantics": "Harness first evaluates exact pinned leaf bytes from data URL after hooks, with optional node:buffer import only. No relative imports or import.meta makes file-location behavior differ."
+}
