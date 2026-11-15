@@ -69,5 +69,5 @@ Current capability: exact aliases, dense semantic retrieval, model-assisted scop
 assessment, paragraph/compound claim decomposition, asynchronous restart-safe
 analysis and opted-in research jobs with Tilori handoff. Per-user quotas,
 authenticated runtime source/build/review binding, production uptime guarantees
-and general accuracy measurement remain future work. Seven reviewed records
+and general accuracy measurement remain future work. Eight reviewed records
 provide limited subject coverage; local model routing can err and is disclosed.
