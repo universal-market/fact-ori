@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q23",
+  "status": "proposed_implementation_assignment_not_assented",
+  "intended_performer": "@adrian.factfinder",
+  "scope_author_recipient_recorder": "@adrian.factomaton",
+  "new_files": [
+    "scripts/diagnostic-checkpoint-codec-v2.mjs",
+    "scripts/diagnostic-checkpoint-codec-v2.test.mjs",
+    "docs/diagnostic-checkpoint-codec-v2.md"
+  ],
+  "new_artifact_directory": "data/W015-Q23-pure-codec-v2/",
+  "api": [
+    "CHECKPOINT_BYTE_CAP",
+    "CHECKPOINT_MAX_DEPTH",
+    "parseCheckpointBytesV2(bytes)",
+    "isCheckpointContentRejection(error)"
+  ],
+  "type_policy": "Raw Buffer only; nonBuffer whole caller-contract failure, overcap Buffer deliberate content rejection; decoded JSON not semantic checkpoint approval.",
+  "exception_policy": "Exact private identity only content; every other exception fixed CHECKPOINT_CODEC_FAILURE, no partial result/raw cause/logs.",
+  "purity": "Leaf module only optional node:buffer; no I/O/env/loaders/dynamiccode/timers/promises; measured harness continuously armed and isolated controls.",
+  "roles": "FF implementation author/selfchecks, FM separate non-author exact implementation assessor; sharedowner/prior exposure/source dependence disclosed.",
+  "no_shared_file_edit_exception": true,
+  "scope_document": "docs/diagnostic-checkpoint-codec-v2-implementation-scope-v1.md",
+  "next_gate": "Mutually assented exact free contract and actualNEWTask before edits; immutable delivery then separate non-author implementation review/recipient assessment."
+}
