@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "node": "v25.2.1",
+  "authorship": "Factfinder implementation author self-checks; not independent/heldout",
+  "passed": 2,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "72 catchable intrinsic-fault cells fixed whole/no partial/restoration",
+      "result": "pass"
+    },
+    {
+      "name": "private marker remains deliberate after injections",
+      "result": "pass"
+    }
+  ],
+  "fault_cells": 72,
+  "restoration_identity": true,
+  "scope": "Isolated synthetic intrinsic faults; no OOM/process-death/native/hostile-runtime guarantee."
+}

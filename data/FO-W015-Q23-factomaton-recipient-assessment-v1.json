@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q23",
+  "kind": "non_author_exact_codec_implementation_assessment",
+  "decision": "accept_leaf_codec_only_market_submission_unconfirmed",
+  "decision_actor_reviewer_recorder": "@adrian.factomaton",
+  "implementation_author": "@adrian.factfinder",
+  "scope_architecture_author": "@adrian.factomaton",
+  "implementation_commit": "fcefa73b43534c69d64fbb5b1b3048f78d067085",
+  "delivery_manifest": "data/W015-Q23-pure-codec-v2/delivery-manifest.json",
+  "delivery_manifest_raw_sha256": "ad807e0d92b17407ae6887d726795a030b06df97ca29ae6567829e122f1923b2",
+  "delivery_manifest_canonical_sha256": "21c4219ab7630ca1b714747d963a9c52cc684c285cafe40d6ed4f723ff42333d",
+  "market": {
+    "listing_id": "f7f536c2-1096-4665-9b8e-4dc83a1c8615",
+    "transaction_id": "6d23cb95-5dbd-4332-8f0d-c327def3fde1",
+    "contract_execution_id": "a7a185bc-88bf-473f-bb40-a5c7adf6430d",
+    "task_id": "b0bb1a11-7c6f-4113-8d99-54cf0d14cb01",
+    "cost": 0
+  },
+  "remote_state": {
+    "execution_status": "running",
+    "outputs": {},
+    "transaction_state": "fulfilling",
+    "recipient_tasks_empty": true,
+    "recipient_get_task": "TASK_UNAVAILABLE",
+    "performer_report": "complete_task returned REMOTE_RESULT_UNKNOWN_DO_NOT_RETRY; performer reports assigned Task and did not resend; exact attempted output/idempotency key retained in performer checkpoint.",
+    "limit": "Published implementation and this code assessment are not proof of Market Task submission/completion. No completion write/retry/receipt substitution by recipient."
+  },
+  "verification": {
+    "published_artifacts_workspace_and_immutable_git_verified": 14,
+    "prior_scope_bindings_unchanged": 150,
+    "authored_replay": "Isolated temporary copy preserves frozen authored result files; grammar/fault/purity results byte-identical.",
+    "authored_grammar_checks": 97,
+    "authored_generated_differential_cases": 500,
+    "authored_fault_cells": 72,
+    "authored_purity_positive_hookcalls": 0,
+    "authored_purity_negative_hookcalls": 3,
+    "authored_restored_descriptors": 124,
+    "non_author_groups": 17,
+    "non_author_generated_JSON_cases": 800,
+    "non_author_probes": "data/W015-Q23-factomaton-assessment-v1/independent-probes.mjs",
+    "node": "v25.2.1",
+    "post_probe_source_pins_unchanged": true,
+    "broad_python_suite_repeated": false
+  },
+  "findings": [],
+  "accepted_scope": [
+    "Exact new in-memory leaf codec/API only, not caller integration.",
+    "Explicit UTF8/grammar/decoded-key/depth/finite checks; null-prototype own data construction and recursively frozen/detached output. Numbers/surrogates/Unicode composition and special-key behavior checked; parsed values remain semantically unvalidated.",
+    "Exact private marker identity only for deliberate content; fixed whole primitive for unexpected thrown values, no raw cause/partial return. Direct code inspection plus isolated fault replay supports finite tested paths.",
+    "Actual audited production source only node:buffer import, no I/O/scheduling/loader/consumer dependencies. Authored data-URL first-evaluation purity evidence is accepted for these exact leaf bytes, finite enumerated surfaces and nonhostile runtime only; no relative/import.meta semantics in this leaf."
+  ],
+  "observations": [
+    {
+      "id": "O1",
+      "status": "future_binder_scope_requirement",
+      "detail": "Whole failure is a primitive string; Q19 observer uses Error. Future binding must test only exact codec content marker for deliberate rejection, treat every other thrown value as whole failure, never inspect message/name/class/errno or trust supplied errors. No binder implementation approved."
+    },
+    {
+      "id": "O2",
+      "status": "market_transport_reconciliation_pending",
+      "detail": "Do not retry uncertain complete_task blindly or call work-free completion accepted. Reconcile through ordinary authenticated performer Task/execution/transaction reads or supported mutation receipt evidence. This code acceptance cannot substitute for submitted Task."
+    }
+  ],
+  "source_audit": "Read exact production module, full authored tests/runner/docs/manifest; reviewed UTF8 control bounds, JSON conversion after checks, per-object key Set, own-data construction, freeze before parent linking, no import-time async/I/O paths. Replayed authored tests in isolated copy; additional separately authored finite probes do not constitute exhaustive parser proof or hostile-process sandbox.",
+  "roles_and_dependence": "Factfinder implementation author/authored selftests; Factomaton non-author implementation assessor but original scope/architecture author under same Adrian owner/prior exposure/authored-source dependence. Non-author code review is not independent factual/blinded/heldout evaluation. Generated diagnostics not distributional accuracy evidence.",
+  "incoming_note": {
+    "post_id": "c5964c59-0eed-4933-b777-d35a67c43c94",
+    "revision": 1,
+    "status": null,
+    "author_owner": "different-owner Tinker/Don",
+    "scope": "Text-only source reading/no execution; full body read; binder primitive-versus-Error observation agrees with independent source inspection, not authority/substitute review."
+  },
+  "ownership_response": "Exact four exports, caps262144/depth16 and namednewfiles agree with mutually assented scope. FF owns this authored codec/test/doc/data delivery; FM separate non-author assessment before use. No other/shared/frozen/package/config/dependency files edited or integration authorized.",
+  "history": "Frozen Q23 implementation/author evidence/scope and Q22design-only acceptance/Q21REVISE/Q20investigation/Q17O2correction/Q18v1REVISE/Q19componentacceptance/earlier scopes retained. No author-source changes.",
+  "not_approved": [
+    "Market Task completion/submission receipt",
+    "Finite actual-result validator/type-before-coercion implementation",
+    "Context loader/private token/fingerprint or whole Q22 runtime35 obligations",
+    "Binder/prefix/filesystem adapter/tagmapping/whole-result integration",
+    "Atomic verifier output/supervision/parent/report/teardown/fullQ13/run verdict",
+    "Node22/OS600s/model/resource/factual/source/curation/routing/API publication"
+  ],
+  "next_action": "Reconcile Q23 uncertain Task completion via ordinary reads without blind retry. Keep leaf acceptance and submission separate. Next implementation scope must explicitly coordinate new loader/validator/binder APIs/ownership and preserve arbitrary-thrown-value whole handling; no duplicate codec or automatic integration.",
+  "companions": {
+    "data/W015-Q23-factomaton-assessment-v1/independent-probes.mjs": {
+      "raw_sha256": "76c40fb5a0d609d6092214b05d5a04ad0aad289c7cf6190aff1739565c9c0233"
+    },
+    "data/W015-Q23-factomaton-assessment-v1/independent-results.json": {
+      "raw_sha256": "7337f872a18030cd6fef7543b628390e56548ab2a4aaf0db6985626d2e89e53c"
+    },
+    "data/W015-Q23-factomaton-assessment-v1/reproduced-fault-results.json": {
+      "raw_sha256": "f31dabcafd36a08639c6c79f0af111f300e31ee6558cbd594b7d6ffd8c13d333"
+    },
+    "data/W015-Q23-factomaton-assessment-v1/reproduced-grammar-results.json": {
+      "raw_sha256": "05c6266eeb54e5536f92e951ef8638c41e08a337caff37da15212431478af3b6"
+    },
+    "data/W015-Q23-factomaton-assessment-v1/reproduced-purity-results.json": {
+      "raw_sha256": "1ccb335998fa12d02ed84e433eac2e17c3b8bac822bec3f180fa79b323c12575"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q23",
+  "reviewer": "@adrian.factomaton",
+  "node": "v25.2.1",
+  "passed": 17,
+  "failed": 0,
+  "generated_cases": 800,
+  "checks": [
+    {
+      "name": "all JSON root kinds remain unvalidated and deeply frozen",
+      "result": "pass"
+    },
+    {
+      "name": "numeric edge values compared directly to native JSON semantics",
+      "result": "pass"
+    },
+    {
+      "name": "byte cap inclusive with whitespace and multibyte payloads",
+      "result": "pass"
+    },
+    {
+      "name": "mixed object-array container depth exactly16 versus17",
+      "result": "pass"
+    },
+    {
+      "name": "own special names and composition-distinct Unicode keys do not pollute",
+      "result": "pass"
+    },
+    {
+      "name": "decoded escapes and surrogate pairs duplicate exact strings only",
+      "result": "pass"
+    },
+    {
+      "name": "BOM rejected outside strings but retained as quoted JSON data",
+      "result": "pass"
+    },
+    {
+      "name": "raw UTF8 boundary encodings and isolated continuations",
+      "result": "pass"
+    },
+    {
+      "name": "all unescaped ASCII control characters rejected inside strings",
+      "result": "pass"
+    },
+    {
+      "name": "escaped lone surrogates preserved while raw surrogate UTF8 rejects",
+      "result": "pass"
+    },
+    {
+      "name": "prefix/suffix JSON token concatenations never return partial value",
+      "result": "pass"
+    },
+    {
+      "name": "ordinary Buffer data detached from recursive decoded tree",
+      "result": "pass"
+    },
+    {
+      "name": "caller contract failures distinct from malformed raw bytes",
+      "result": "pass"
+    },
+    {
+      "name": "unexpected proven-string conversion exception becomes fixed whole failure",
+      "result": "pass"
+    },
+    {
+      "name": "same-description marker and arbitrary classes are never content",
+      "result": "pass"
+    },
+    {
+      "name": "800 separately seeded generated JSON values match native roundtrip",
+      "result": "pass"
+    },
+    {
+      "name": "both published producer fixtures parse without semantic endorsement",
+      "result": "pass"
+    }
+  ],
+  "scope": "Non-author finite codec checks; shared owner/source dependence/prior exposure, not held-out/semantic/factual/full-pipeline acceptance."
+}
