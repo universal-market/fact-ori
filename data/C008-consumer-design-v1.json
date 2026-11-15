@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "consumer_answer_kind_and_boundary_design",
+  "task_key": "FO-W017-D1",
+  "version": 1,
+  "created_at": "2026-11-15T13:16:00Z",
+  "author": "@adrian.factomaton",
+  "decision_actor": "@adrian.factomaton design proposal only",
+  "recorder": "@adrian.factomaton",
+  "status": "proposed_pending_exact_design_review",
+  "scope": "Offline consumer answer-kind and finite Moon/LEO/polarity design only. No consumer code, validator, frozen candidate/review, active catalog, curation, deployment or API behavior change.",
+  "candidate": {
+    "claim_id": "C008",
+    "version": 1,
+    "record_digest": "656ccb1f9b5453d3380fa8a9eac8565ee403f7ad2a06bf0d1e4c6acd0596caa8",
+    "record_raw_sha256": "e2788ed8ef3490f71b9412b1e7db1b79e6b755de23fd3fe18b4317f01348c321",
+    "anchor_post_id": "7ffd6076-8879-40b7-ac96-25b94aa4f999",
+    "anchor_revision": 1,
+    "factual_verdict": "contradicted",
+    "answer": "No. NASA states that the Great Wall isn't visible from the Moon."
+  },
+  "exact_source_review": {
+    "path": "data/C008-v1-factomaton-source-review-v1.json",
+    "commit": "0e8507ba22b8755ffdc20fd77621cc5bfdbc055e",
+    "raw_sha256": "29ffc3502787e36d43e1d191b38ae573ea98b083d32d0e874092cbb79809360f",
+    "post_id": "3e777b0a-c161-4c38-966e-b40953fa5588",
+    "revision": 1,
+    "decision": "accept attributed NASA Moon-only rebuttal; current source refresh not repeated"
+  },
+  "current_failure": {
+    "input_verdict": "contradicted",
+    "projection": "scripts/library_view.py rejects verdict outside supported/insufficient_evidence",
+    "mapping_risk": "Removing the verdict guard alone would route every non-supported approved record into reviewed_abstention through existing binary fallback.",
+    "classification": "Compatibility/design gap, not evidence against the underlying factual claim."
+  },
+  "proposed_answer_kind_map": {
+    "supported": "supported_assertion",
+    "insufficient_evidence": "reviewed_abstention",
+    "contradicted": "reviewed_contradiction"
+  },
+  "publication_policy": [
+    "Use an explicit exhaustive verdict-to-answer-kind mapping; unknown/missing verdict rejects rather than falling through to abstention. Recognized verdict is not itself approval.",
+    "Before approved selection all kinds have answer_kind withheld and answer null. Current C008 remains unavailable until implementation and every gate pass.",
+    "After exact non-author source acceptance, separately authorized curation and routing/implementation review, contradicted record keeps its original positive claim, negative attributed answer and contradicted evidence verdict; proposed answer_kind reviewed_contradiction, ordinary answer status only when consumer contract supports it.",
+    "A reviewed contradiction is a bounded evidence rebuttal, distinct from insufficient evidence. A reviewed abstention does not affirm or contradict its underlying raw claim. Never negate C008 into a supported successor merely to satisfy the current schema.",
+    "Any future implementation must coordinate Python projection/validation/export, TypeScript/backend/semantic/client response types and public schema/documentation. Enumerating these surfaces is not assigning edits or asserting compatibility.",
+    "Preserve historical author-awaiting-review metadata in frozen bytes. Detached exact review is current review state; label only exact bound creation-time review notes historical, retain NASA attribution, contextual unaided interpretation, one-family dependence and all substantive inquiry limits.",
+    "Query eligibility requires Moon plus naked-eye scope or explicitly resolved context. Missing vantage/instrument/referents clarify. Never infer LEO or all-space invisibility from C008; no automatic transfer of review/curation between C008 and C009.",
+    "Negated, tag and negative-interrogative questions require explicit proposition/polarity handling and declarative attributed response, no bare Yes/No inversion. Uncertain polarity clarifies; finite cases are not a general language classifier.",
+    "No new answer for unsupported instruments, distances, optical experiments, historical observations or compound scope. Preserve existing approved C009 policy and exact mappings; an example marked C009_policy_only is no new alias or factual verdict."
+  ],
+  "C009_boundary": {
+    "claim_id": "C009",
+    "version": 2,
+    "record_digest": "eaeddadcf6f5812ed6672fa7633c9db4bf3f474a451a59bffbc21992e0be7e17",
+    "answer_kind": "reviewed_abstention",
+    "policy": "Existing separately approved low Earth orbit scope stays unchanged; C008 cannot supply it a contradiction or factual affirmation."
+  },
+  "gates": [
+    "Fresh exact non-author design/fixture review",
+    "Separate implementation scope with named new/changed files, ownership agreement for validator/review artifacts, appropriate migration/compatibility and failure tests, then exact implementation review",
+    "Detached exact source review attachment plus a separate curation decision by an actor distinct from the candidate author, bound to exact C008 version/review, with decision actor and recorder explicit",
+    "Routing review, active snapshot/growth and public runtime checks before inclusion; new objections may reopen"
+  ],
+  "binding_rejections": [
+    "record/version/digest/raw hash mismatch",
+    "anchor revision mismatch",
+    "detached review hash/version mismatch",
+    "unresolved correction or withdrawal",
+    "missing curation/routing/implementation approval",
+    "unknown verdict silently converted to abstention",
+    "C009 review/answer substituted for C008",
+    "source distance/context treated as visibility proof"
+  ],
+  "fixtures": [
+    {
+      "id": "M01",
+      "query": "Can the Great Wall be seen from the Moon with the naked eye?",
+      "current_answer": null,
+      "proposed_classification": "eligible_C008",
+      "proposed_response_after_all_gates": "No. NASA states that the Great Wall isn't visible from the Moon."
+    },
+    {
+      "id": "M02",
+      "query": "The Great Wall is visible from the Moon with the naked eye. True?",
+      "current_answer": null,
+      "proposed_classification": "eligible_C008",
+      "proposed_response_after_all_gates": "NASA's caption rejects Moon visibility; this reviewed record contradicts the Moon-only naked-eye claim."
+    },
+    {
+      "id": "M03",
+      "query": "Is it false that the Great Wall is visible from the Moon with the naked eye?",
+      "current_answer": null,
+      "proposed_classification": "eligible_C008",
+      "proposed_response_after_all_gates": "NASA's caption rejects Moon visibility; this reviewed record contradicts the Moon-only naked-eye claim."
+    },
+    {
+      "id": "M04",
+      "query": "Can't you see the Great Wall from the Moon with the naked eye?",
+      "current_answer": null,
+      "proposed_classification": "eligible_C008",
+      "proposed_response_after_all_gates": "NASA states that the Great Wall isn't visible from the Moon."
+    },
+    {
+      "id": "M05",
+      "query": "The Great Wall is visible from the Moon with the naked eye, right?",
+      "current_answer": null,
+      "proposed_classification": "eligible_C008",
+      "proposed_response_after_all_gates": "NASA's caption rejects Moon visibility; this reviewed record contradicts the Moon-only naked-eye claim."
+    },
+    {
+      "id": "L01",
+      "query": "Is the Great Wall visible from low Earth orbit with the naked eye?",
+      "current_answer": null,
+      "proposed_classification": "existing_C009_policy_only",
+      "proposed_response_after_all_gates": null
+    },
+    {
+      "id": "L02",
+      "query": "The Moon record proves the Great Wall cannot be seen from low Earth orbit.",
+      "current_answer": null,
+      "proposed_classification": "outside_C008",
+      "proposed_response_after_all_gates": null
+    },
+    {
+      "id": "A01",
+      "query": "Can you see the Great Wall from space?",
+      "current_answer": null,
+      "proposed_classification": "clarify_vantage_and_instrument",
+      "proposed_response_after_all_gates": null
+    },
+    {
+      "id": "A02",
+      "query": "Can astronauts see it?",
+      "current_answer": null,
+      "proposed_classification": "clarify_referents_vantage_and_instrument",
+      "proposed_response_after_all_gates": null
+    },
+    {
+      "id": "X01",
+      "query": "Can a camera on the ISS photograph the Great Wall?",
+      "current_answer": null,
+      "proposed_classification": "outside_C008",
+      "proposed_response_after_all_gates": null
+    },
+    {
+      "id": "X02",
+      "query": "Can binoculars on the Moon reveal the Great Wall?",
+      "current_answer": null,
+      "proposed_classification": "outside_C008",
+      "proposed_response_after_all_gates": null
+    },
+    {
+      "id": "X03",
+      "query": "Is the Great Wall the only human-made object visible from space?",
+      "current_answer": null,
+      "proposed_classification": "outside_C008",
+      "proposed_response_after_all_gates": null
+    },
+    {
+      "id": "X04",
+      "query": "What exact angular size proves the Wall invisible?",
+      "current_answer": null,
+      "proposed_classification": "outside_C008",
+      "proposed_response_after_all_gates": null
+    },
+    {
+      "id": "X05",
+      "query": "Does the lunar distance alone prove unaided invisibility?",
+      "current_answer": null,
+      "proposed_classification": "outside_C008",
+      "proposed_response_after_all_gates": null
+    },
+    {
+      "id": "X06",
+      "query": "Which Apollo astronaut verified the claim?",
+      "current_answer": null,
+      "proposed_classification": "outside_C008",
+      "proposed_response_after_all_gates": null
+    },
+    {
+      "id": "X07",
+      "query": "Can I see the Wall from Mars?",
+      "current_answer": null,
+      "proposed_classification": "outside_C008",
+      "proposed_response_after_all_gates": null
+    },
+    {
+      "id": "C01",
+      "query": "Can you see the Wall from the Moon and low Earth orbit with the naked eye?",
+      "current_answer": null,
+      "proposed_classification": "compound_not_covered_by_C008_alone",
+      "proposed_response_after_all_gates": null
+    },
+    {
+      "id": "T01",
+      "query": "Does this camera recording from yesterday show the Wall?",
+      "current_answer": null,
+      "proposed_classification": "outside_C008",
+      "proposed_response_after_all_gates": null
+    }
+  ],
+  "roles": {
+    "original_prose_author": "@don.tinker / Don",
+    "candidate_author_adapter": "@adrian.factfinder / Adrian",
+    "exact_source_reviewer_and_consumer_design_author": "@adrian.factomaton / Adrian",
+    "intended_design_reviewer": "@adrian.factfinder / Adrian",
+    "disclosure": "Design reviewer differs from design author but authored C008 and shares Adrian owner/prior source exposure. Design review is not independent factual review, author self-curation, implementation acceptance or API approval."
+  },
+  "source_dependence": "NASA caption and NASA Science distance page share one institutional origin; distance context is not independent optical/observational evidence. Existing source-review inquiry limits unchanged.",
+  "frozen_inputs": [
+    {
+      "path": "data/C008-factfinder-candidate-v1/bundle.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "9e873f94a4bb056db3131d86c2baa995b2a309159e03ad7ccc5c65f7815e7732"
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/checks.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "d1b911284ca660995175e46c0572b3b149525540f0f0d99f83aed0ed9b647d26"
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/file-hashes.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "9ff8bdb2370941fdb33dbf2d12347e754f4b3276c60ec1c4ddad62ca07192516"
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/pending-events.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "f38d712227f8b604f52d8b9d4b3ef638dfc8a8b5db6ebab0cbab09f256c07feb"
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/post-revisions.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "78a399f3346641605167f93ae79433a6cdf7dde62dd8e455bc3dbd9d16cf64f3"
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/record.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "e2788ed8ef3490f71b9412b1e7db1b79e6b755de23fd3fe18b4317f01348c321"
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/transformation.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "840b7db51ceea3dc47f5010a3e2846d46ad74bafd93c93bb28c8639e73eb73a7"
+    },
+    {
+      "path": "data/C008-v1-factomaton-source-review-v1.json",
+      "commit": "0e8507ba22b8755ffdc20fd77621cc5bfdbc055e",
+      "raw_sha256": "29ffc3502787e36d43e1d191b38ae573ea98b083d32d0e874092cbb79809360f"
+    },
+    {
+      "path": "data/curation-events.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f"
+    },
+    {
+      "path": "data/library-inputs.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae"
+    },
+    {
+      "path": "data/query-catalog.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07"
+    },
+    {
+      "path": "public/library.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    {
+      "path": "scripts/export_public_snapshot.py",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "e51acc145b8e8e7141dee73ab5ebe1e33b32d6c5b34dfa3426faf7c5ee685727"
+    },
+    {
+      "path": "scripts/library_view.py",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e"
+    },
+    {
+      "path": "scripts/validate_pilot.py",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f"
+    }
+  ],
+  "validation": "18 authored cases and exact-input/structural checks only; no executable router or implemented reviewed_contradiction projection, no new source review, held-out accuracy estimate or runtime attestation."
+}
