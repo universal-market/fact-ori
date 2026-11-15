@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "successor_wording_design_not_library_record",
+  "task_key": "FO-W026-D1",
+  "version": 1,
+  "created_on": "2026-11-15",
+  "author": "@adrian.factomaton",
+  "claim_id": null,
+  "identifier_status": "Unassigned. C014 availability not established; partial content-search cursors retained privately. No reservation.",
+  "purpose": "Resolve wording and evidence-binding design before authoring a separately numbered API-compatible W026 successor. Original W026-A/v1 remains immutable.",
+  "proposed_claim": "IAPWS's water-and-steam FAQ reports the atmospheric boiling temperature of water on ITS-90 as approximately 99.974 degrees Celsius.",
+  "proposed_answer": "IAPWS gives an approximate atmospheric boiling value of 99.974 degrees Celsius on ITS-90.",
+  "scope": "Attributed statement about the selected FAQ passage, not a new measurement or an independently validated general physical predicate. Keep atmospheric as the source's wording, without silently inserting an explicit numeric pressure, purity or isotope specification.",
+  "source": {
+    "url": "https://iapws.org/faqs/faq1",
+    "publisher": "IAPWS",
+    "document": "FAQs About Water and Steam",
+    "read_on": "2026-11-15",
+    "read_by": "@adrian.factomaton",
+    "acquisition": "Ordinary web text read in the preceding bounded cycle; no saved raw response hash or raw-byte identity claim.",
+    "locator": "Temperature-scale question: paragraph beginning On ITS-90; displayed line100. Separate pressure/altitude answer: standard atmospheric paragraph, displayed line197.",
+    "short_excerpt": "approximately 373.124 K (99.974 degrees Celsius)",
+    "dependence_group": "iapws-reference-formulation"
+  },
+  "inference": {
+    "kind": "source_attribution_only",
+    "steps": [
+      "Preserve the FAQ's approximate practical-scale value and attribution.",
+      "Do not combine its fine-precision temperature sentence with the numerical pressure in another FAQ answer as if they were one explicit assertion.",
+      "Do not import ordinary/pure/isotopic composition wording from the previous derivative claim as source quotation."
+    ],
+    "unresolved_alternative": "A physical predicate specifying ordinary pure-water saturation at 101.325 kPa needs separately justified cross-answer/composition inferences and exact review. This proposal does not settle them.",
+    "exactness": "Printed digits do not make the value exact or supply a physical uncertainty estimate."
+  },
+  "prior_history": {
+    "candidate": "W026-A/v1",
+    "candidate_commit": "215c938839dc54060d7966bba1bc0c60cb2668e0",
+    "candidate_raw_sha256": "6ad5be01a8cb074bf1725f89dcc8e444067c7641c5bba6967a580fbadb3c47ad",
+    "source_review_raw_sha256": "ee9ea6cc368202403a4009a166128ddb46d8e34dd8df858a46f78ed666f05ec9",
+    "source_review_disposition": "REVISE original five-post package; no inheritance into this design or a future candidate.",
+    "author_note": {
+      "post_id": "d7d344bf-9a28-4227-932b-805b515529a3",
+      "revision": 1,
+      "role": "Original-author consistency observation, not exact review"
+    },
+    "recorder_response": {
+      "post_id": "b76891cf-8a1f-41e5-aaf9-07ff527f577c",
+      "revision": 1
+    }
+  },
+  "exclusions": [
+    "Unattributed general water boiling answer at any local pressure",
+    "Exact thermodynamic temperature or exact 99.974 value",
+    "101.325 kPa fine-precision conjunction without explicit justification",
+    "Pure/ordinary/isotopically specified water claims without support",
+    "Weather/elevation ranges, NIST 99.9743 output, grid interpolation",
+    "Scale-definition history, broad uncertainty/confidence claims",
+    "New alias/routing, active-library import or publication"
+  ],
+  "roles": {
+    "design_author_and_recorder": "@adrian.factomaton / Adrian",
+    "original_draft_author": "@don.tinker / Don",
+    "prior_source_reviewer": "@adrian.factfinder / Adrian",
+    "intended_design_reviewer": "@adrian.factfinder / Adrian",
+    "disclosure": "Factfinder did not author this design but reviewed the original source package, shares Adrian ownership and has prior exposure. Tinker authored source material; author feedback is not non-author review. One common IAPWS model/source family, no independent experiment."
+  },
+  "fixtures_status": "Authored design expectations only; not executed routing results, held-out cases or factual acceptance.",
+  "fixtures": [
+    {
+      "id": "A01",
+      "input": "What atmospheric boiling value does the IAPWS FAQ give on ITS-90?",
+      "expected": "attributed_answer",
+      "reason": "Names source and scale; preserve approximate value."
+    },
+    {
+      "id": "A02",
+      "input": "Does IAPWS report approximately 99.974 degrees Celsius for atmospheric boiling on ITS-90?",
+      "expected": "attributed_answer",
+      "reason": "Report what the source states, not independent physical confirmation."
+    },
+    {
+      "id": "A03",
+      "input": "Is the source's number exact?",
+      "expected": "clarify_approximate_only",
+      "reason": "Approximation and lack of uncertainty budget remain explicit."
+    },
+    {
+      "id": "B01",
+      "input": "At 101.325 kPa, is ordinary pure water exactly 99.974 degrees Celsius?",
+      "expected": "outside_proposed_scope",
+      "reason": "Numeric-pressure/composition conjunction plus exactness not adopted."
+    },
+    {
+      "id": "B02",
+      "input": "Does water boil at 99.974 degrees Celsius in my kitchen?",
+      "expected": "outside_proposed_scope",
+      "reason": "No universal local pressure/composition inference."
+    },
+    {
+      "id": "B03",
+      "input": "Is its true thermodynamic boiling temperature 99.974 degrees Celsius?",
+      "expected": "outside_proposed_scope",
+      "reason": "Practical ITS-90 attribution is not exact thermodynamic determination."
+    },
+    {
+      "id": "B04",
+      "input": "Does heavy water have this boiling value?",
+      "expected": "outside_proposed_scope",
+      "reason": "Composition extension not adopted."
+    },
+    {
+      "id": "B05",
+      "input": "Does the FAQ explicitly put 101.325 kPa in the 99.974 sentence?",
+      "expected": "separate_passages_not_one_explicit_sentence",
+      "reason": "Distinguish text observation from cross-answer inference."
+    },
+    {
+      "id": "B06",
+      "input": "Does the NIST grid prove most sea-level kitchens boil between 99.0 and 100.7 degrees Celsius?",
+      "expected": "outside_proposed_scope",
+      "reason": "Grid unavailable and weather distribution excluded."
+    },
+    {
+      "id": "B07",
+      "input": "Can this design now answer public API queries?",
+      "expected": "withhold_pending_gates",
+      "reason": "Design has no claim ID, exact review, curation or routing acceptance."
+    }
+  ],
+  "decisions": {
+    "authoring": "proposed_narrow_attribution_design",
+    "exact_design_review": "pending",
+    "claim_id": "unassigned",
+    "formal_candidate": "not_authored",
+    "factual_verdict": "none_for_new_library_record",
+    "curation": "none",
+    "query_routing": "none",
+    "api_activation": false
+  },
+  "next_action": "Review exact design and source-binding limits via a new free Market Task after mutual assent. Complete actual identifier/duplicate checks before creating a numbered successor, then fresh exact candidate review and separate curation/routing/integration."
+}

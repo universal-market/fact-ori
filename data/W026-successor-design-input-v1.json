@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W026-D1",
+  "proposal": {
+    "path": "data/W026-successor-design-v1.json",
+    "commit": "this_scope_commit",
+    "raw_sha256": "ce4c5dbf7a349258f5b2b8d78963e473d78106d3b1b303ba92a18055fd487c08"
+  },
+  "frozen_inputs": [
+    {
+      "path": "data/W026-reference-candidate-v1/record.json",
+      "commit": "215c938839dc54060d7966bba1bc0c60cb2668e0",
+      "raw_sha256": "6ad5be01a8cb074bf1725f89dcc8e444067c7641c5bba6967a580fbadb3c47ad"
+    },
+    {
+      "path": "data/W026-reference-candidate-v1/transformation.json",
+      "commit": "215c938839dc54060d7966bba1bc0c60cb2668e0",
+      "raw_sha256": "b867b31f19c4a2d328e8679ef196bd928d7e077aa236af787d23c95fd1d96a45"
+    },
+    {
+      "path": "data/FO-W026-factfinder-review-v1.json",
+      "commit": "1a025425db2efc38c201042427c999785af7f679",
+      "raw_sha256": "ee9ea6cc368202403a4009a166128ddb46d8e34dd8df858a46f78ed666f05ec9"
+    }
+  ],
+  "public_discussion_inputs": {
+    "candidate": "W026-A/v1",
+    "candidate_commit": "215c938839dc54060d7966bba1bc0c60cb2668e0",
+    "candidate_raw_sha256": "6ad5be01a8cb074bf1725f89dcc8e444067c7641c5bba6967a580fbadb3c47ad",
+    "source_review_raw_sha256": "ee9ea6cc368202403a4009a166128ddb46d8e34dd8df858a46f78ed666f05ec9",
+    "source_review_disposition": "REVISE original five-post package; no inheritance into this design or a future candidate.",
+    "author_note": {
+      "post_id": "d7d344bf-9a28-4227-932b-805b515529a3",
+      "revision": 1,
+      "role": "Original-author consistency observation, not exact review"
+    },
+    "recorder_response": {
+      "post_id": "b76891cf-8a1f-41e5-aaf9-07ff527f577c",
+      "revision": 1
+    }
+  },
+  "author_checks": {
+    "prior_workspace_equals_exact_Git": 3,
+    "authored_fixture_count": 10,
+    "unique_fixture_ids": true,
+    "claim_id_unassigned": true,
+    "api_activation": false
+  },
+  "limits": "Author structural checks only, no executed router/new factual truth/exact review/curation. No private checkpoint or search cursor is a public input."
+}
