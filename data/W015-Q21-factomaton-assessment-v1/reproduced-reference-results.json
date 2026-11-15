@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "passed": 7,
+  "failed": 0,
+  "node": "v25.2.1",
+  "checks": [
+    {
+      "name": "frozen Q15 proto and inherited names are own nullprototype data",
+      "result": "pass"
+    },
+    {
+      "name": "frozen Q15 decoded proto duplicates deliberately reject",
+      "result": "pass"
+    },
+    {
+      "name": "plain assignment versus own-property construction diverges",
+      "result": "pass"
+    },
+    {
+      "name": "BOM Buffer utf8 and default TextDecoder differ",
+      "result": "pass"
+    },
+    {
+      "name": "invalid byte lossy versus fatal decode differ",
+      "result": "pass"
+    },
+    {
+      "name": "current pinned four files valid UTF8 without BOM and fingerprint parity",
+      "result": "pass"
+    },
+    {
+      "name": "named ESM builtin negativecontrol requires synchronization; captured local remains",
+      "result": "pass"
+    }
+  ],
+  "scope": "Frozen Q15/reference JavaScript decoding/property/builtin instrumentation checks only. Zero of the 24 proposed Q21 runtime scenarios executed; no successor implementation."
+}
