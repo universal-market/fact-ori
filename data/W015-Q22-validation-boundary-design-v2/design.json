@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W015-Q22",
+  "kind": "validation_failure_boundary_design",
+  "status": "proposed_not_implemented",
+  "decision_actor_recorder": "@adrian.factomaton",
+  "roles": {
+    "design_author": "@adrian.factomaton",
+    "validator_owner": "@adrian.factfinder",
+    "implementation_assignment": "not_created_coordination_required"
+  },
+  "stages": [
+    "load_verified_context",
+    "pure_decode_bind_validate",
+    "prefix_local_rows",
+    "return_complete_result"
+  ],
+  "loader": {
+    "all_dependency_io_before_checkpoint_access": true,
+    "read_once_per_unique_allowlisted_path": true,
+    "context_identity": "private_WeakMap_token",
+    "payload": "detached_deep_frozen_JSON_only",
+    "hidden_v1_reads_forbidden": [
+      "parseCheckpointBytes_v1",
+      "validateCheckpointBytes_v1",
+      "reconcileCheckpointPrefix_v1",
+      "validateCase_v1",
+      "loadInputs_v1",
+      "engineFingerprint_v1"
+    ],
+    "fingerprint_decode": "cached Buffer.toString(utf8), join U+000A, Node UTF8 string hash, pinned equality; no decoder substitution"
+  },
+  "classification": {
+    "explicit_content_marker": "case_rejected_checkpoint_invalid",
+    "unknown_or_bug_or_resource": "whole_verifier_failure_no_rows",
+    "dependency_config": "whole_verifier_failure_no_context",
+    "outer_descriptor_contract": "whole_verifier_failure_no_rows",
+    "projection_oversize": "whole_verifier_failure_no_rows"
+  },
+  "caps": {
+    "checkpoint_bytes": 262144,
+    "json_depth": 16,
+    "projection_bytes": 4096,
+    "cases": 2
+  },
+  "commit_rule": "no provisional rows returned or published after any whole failure",
+  "scope": "Design only; no codec/validator/adapter/verifier implementation or runtime evidence",
+  "next_gate": "exact_design_review_then_separate_assessment_then_coordinated_implementation_scope",
+  "design_version": 2,
+  "predecessor_task": "FO-W015-Q21",
+  "codec_own_keys": {
+    "objects": "Object.create(null)",
+    "construction": "Object.defineProperty own enumerable writable configurable data property",
+    "duplicates": "per-object Set of decoded keys; Object.hasOwn where needed",
+    "exceptions": "unexpected construction/allocation whole failure"
+  },
+  "io_evidence": {
+    "status": "proposed_not_executed",
+    "phases": [
+      "audit_clean_bootstrap",
+      "deny_sync_then_first_pure_import_and_capture",
+      "restore_for_trusted_loader_only",
+      "rearm_sync_then_pure_positive_and_impure_controls",
+      "restore_identity_and_pins"
+    ],
+    "admission": "exact transitive graph and enumerated runtime surface table; preloaded original captures refused",
+    "limits": "audited non-hostile closure, not general process sandbox; module loading before context outside measured phase"
+  }
+}
