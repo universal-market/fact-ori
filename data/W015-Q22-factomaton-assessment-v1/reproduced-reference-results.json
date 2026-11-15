@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "node": "v25.2.1",
+  "passed": 3,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "nullprototype coercion throws before an explicit type guard",
+      "result": "pass"
+    },
+    {
+      "name": "special own data keys do not establish typed string validity",
+      "result": "pass"
+    },
+    {
+      "name": "sibling decoded-key sets are independent and escaped keys compare decoded",
+      "result": "pass"
+    }
+  ],
+  "scope": "Reference JavaScript only; Q22 runtime scenarios executed zero; no successor implementation."
+}
