@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "routing_design_and_authored_fixtures",
+  "task_key": "FO-W029-R2",
+  "version": 2,
+  "author": "@adrian.factomaton",
+  "decision_actor": "@adrian.factomaton proposal only",
+  "recorder": "@adrian.factomaton",
+  "status": "proposed_pending_exact_design_and_adapter_review",
+  "created_at": "2026-11-15T09:15:00Z",
+  "candidate": {
+    "id": "C013",
+    "version": 1,
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1,
+    "record_digest": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+  },
+  "frozen_inputs": [
+    {
+      "path": "data/C013-library-candidate-v1/record.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/bundle.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "832a39e42ae62f91e030c3ea3c6aaf6cf25cb0578ee83f4931dcc2c8f879064d"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/post-revisions.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "9e20b2de9b16d80a63c185ad03cb762c640e2d9064f41f33c38d695e20b96720"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/pending-events.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "b1366f3b97c5ed77ee15fa7315e3abeaf270eb643440a64b15749cad28e278b5"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/pending-view.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "ecc257e3c5ebd755c9ae32077ba1b132253234361107518ba9897517e047d78d"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/transformation.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "39128fe3bcce95ef64640d66489fd2e3a4f142a2c48287156ca9bbc7cb48c150"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/checks.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "6753d5f0187ce94cb3275f93665a1ef51a8d0d664911f3eed7effbada3dc0aef"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/file-hashes.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "f76f5b4dbf683dd8c9c9f9dd4721e578010a08b8f51eb266d328a67e560f1e3e"
+    },
+    {
+      "path": "data/C013-v1-factfinder-exact-review-v1.json",
+      "commit": "346328bfdfd6ef5bddfeae53c0f128a8c5813ff7",
+      "raw_sha256": "59edbe4e87f6056d462b358a359d989efe530a6de4cd8a86dc9f4409f076bbf2"
+    },
+    {
+      "path": "data/C013-exact-review-attached-bundle-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "1a2be890941cadea384d3601c71bbe4082586587fedca662dace3d8c581e9972"
+    },
+    {
+      "path": "data/C013-exact-review-adoption-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "2a5e52dd77110c4f2b4f7aa0a193a0833571ca662e0a6c53ea271010accb45b6"
+    },
+    {
+      "path": "data/C013-reviewed-pending-view-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "a05a21601e291bb982288c8fc5b8a41da9b09ec0aa101dae9fe0d046b15df733"
+    },
+    {
+      "path": "data/C013-reviewed-pending-events-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "7d9464f5fb353852d599453b990863752a9650c724c8865924e511d3b752169f"
+    }
+  ],
+  "scope": "Offline response/polarity/eligibility specification and existing detached review adapter assessment only. No implemented router, new source review, non-author curation decision or API activation.",
+  "semantics": [
+    "Only ordinary object/location recurrence across separate events is eligible; direction neutral, count free and no microscopic identity, odds, rate or independent-measurement claim.",
+    "Recognize the complete proposition and question polarity before selecting a response. Do not infer meaning from keyword overlap or strip negation. Finite examples do not define a general natural-language classifier.",
+    "Eligible positive possibility and literal universal never-twice rebuttal use full declarative responses. Bare Yes/No is prohibited for every negative or nested-polarity case. Do not copy the frozen positive answer into a negative-premise response.",
+    "The frozen factual verdict stays supported for the positive record. A future route can label the literal negative query as contradicted_by_record only as a reviewed query relationship; it is not a new factual review, frozen contradicted record or permission to bypass unsupported-verdict schemas.",
+    "Nested/uncertain polarity or missing referents require clarification. Unsupported conjuncts, historical event requests, personal safety questions and excluded precision/rate claims receive no C013 answer; no confident partial compound response is specified.",
+    "Every future eligible response must carry exact candidate/review bindings, scope, source dependence and inference disclosure. All current fixture answers remain null until every gate passes."
+  ],
+  "review_history_projection": {
+    "frozen_record": "Unchanged, including awaiting_review and historical zero-attached-review limitation.",
+    "creation_time_metadata": "Only this exact bound record creation-time no-review assertion may be labeled historical. Do not delete arbitrary limitations or overwrite frozen bytes.",
+    "current_review": "Detached exact Factfinder ACCEPT at346328bf/raw59edbe4e87f6056d462b358a359d989efe530a6de4cd8a86dc9f4409f076bbf2 is current source-review state, subject to correction/withdrawal checks.",
+    "current_substantive_limits": "Educational passage, one NOAA family, no dataset/replication or certified measurement lineage; update date unresolved.",
+    "curation": "pending separate non-author decision",
+    "answer": null,
+    "api_activation": false
+  },
+  "gates": [
+    "Fresh exact non-author design/fixture and existing detached adapter review",
+    "Separate non-author curation decision bound to exact candidate and review; proposal author cannot self-curate",
+    "Separately scoped consumer implementation with polarity handling and binding rejection tests, then exact implementation review",
+    "Active-snapshot/growth and deployed runtime verification before API inclusion"
+  ],
+  "binding_rejection_cases": [
+    "claim/version mismatch",
+    "raw record or canonical digest mismatch",
+    "anchor revision mismatch",
+    "review receipt bytes mismatch",
+    "review for original package substituted",
+    "correction/withdrawal unresolved",
+    "missing curation or routing gate",
+    "duplicate/ambiguous exact review attachment"
+  ],
+  "fixtures": [
+    {
+      "id": "P01",
+      "query": "Can lightning strike the same place twice?",
+      "current_answer": null,
+      "proposed_classification": "eligible_positive",
+      "proposed_after_all_gates_response": "Yes. Lightning can strike the same object or location more than once."
+    },
+    {
+      "id": "P02",
+      "query": "Can lightning strike the same object more than once?",
+      "current_answer": null,
+      "proposed_classification": "eligible_positive",
+      "proposed_after_all_gates_response": "Yes. Lightning can strike the same object or location more than once."
+    },
+    {
+      "id": "N01",
+      "query": "Lightning never strikes the same place twice. True?",
+      "current_answer": null,
+      "proposed_classification": "eligible_negative_premise",
+      "proposed_after_all_gates_response": "That literal claim is false: lightning can strike the same object or location more than once."
+    },
+    {
+      "id": "N02",
+      "query": "Is it true that lightning cannot strike the same place twice?",
+      "current_answer": null,
+      "proposed_classification": "eligible_negative_premise",
+      "proposed_after_all_gates_response": "That literal claim is false: lightning can strike the same object or location more than once."
+    },
+    {
+      "id": "N03",
+      "query": "Is the claim that lightning never strikes twice false?",
+      "current_answer": null,
+      "proposed_classification": "eligible_rebuttal",
+      "proposed_after_all_gates_response": "The literal never-twice claim is false: lightning can strike the same object or location more than once."
+    },
+    {
+      "id": "X01",
+      "query": "Are tall objects more likely to be struck?",
+      "current_answer": null,
+      "proposed_classification": "outside_scope",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "X02",
+      "query": "How many times each year is the Empire State Building struck?",
+      "current_answer": null,
+      "proposed_classification": "outside_scope",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "X03",
+      "query": "What is the chance lightning will strike this spot again?",
+      "current_answer": null,
+      "proposed_classification": "outside_scope",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "X04",
+      "query": "Does lightning hit precisely the same microscopic ground coordinates twice?",
+      "current_answer": null,
+      "proposed_classification": "outside_scope",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "X05",
+      "query": "How many downward flashes strike the same location?",
+      "current_answer": null,
+      "proposed_classification": "outside_scope",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "X06",
+      "query": "Can the same person be struck by lightning twice?",
+      "current_answer": null,
+      "proposed_classification": "outside_scope",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "X07",
+      "query": "Do two return strokes count as two independent lightning events?",
+      "current_answer": null,
+      "proposed_classification": "outside_scope",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "X08",
+      "query": "Does lightning always strike the same place twice?",
+      "current_answer": null,
+      "proposed_classification": "outside_scope",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "X09",
+      "query": "Does lightning strike the same place exactly twice?",
+      "current_answer": null,
+      "proposed_classification": "outside_scope",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "X10",
+      "query": "Does misfortune never happen to someone twice?",
+      "current_answer": null,
+      "proposed_classification": "outside_scope",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "A01",
+      "query": "Does it strike twice?",
+      "current_answer": null,
+      "proposed_classification": "clarify_referent",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "A02",
+      "query": "Is it not untrue that lightning cannot never strike twice?",
+      "current_answer": null,
+      "proposed_classification": "clarify_polarity",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "M01",
+      "query": "Can lightning strike twice, and does that make standing there safe?",
+      "current_answer": null,
+      "proposed_classification": "compound_outside_scope",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "T01",
+      "query": "Did lightning hit this tower twice yesterday?",
+      "current_answer": null,
+      "proposed_classification": "outside_scope",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "S01",
+      "query": "Do these sources prove independently replicated recurrence probabilities?",
+      "current_answer": null,
+      "proposed_classification": "outside_scope",
+      "proposed_after_all_gates_response": null
+    },
+    {
+      "id": "P03",
+      "query": "Can't lightning strike the same place twice?",
+      "current_answer": null,
+      "proposed_classification": "eligible_positive",
+      "proposed_after_all_gates_response": "Lightning can strike the same object or location more than once.",
+      "rationale": "Explicit capability declaration answers the recurrence proposition without an ambiguous leading Yes/No; no general negation stripping or classifier implementation is specified."
+    },
+    {
+      "id": "N04",
+      "query": "Lightning never strikes the same place twice, right?",
+      "current_answer": null,
+      "proposed_classification": "eligible_negative_premise",
+      "proposed_after_all_gates_response": "That literal claim is false: lightning can strike the same object or location more than once.",
+      "rationale": "Tag question presents the literal never-twice proposition; rebut the premise declaratively without copying the positive answer."
+    }
+  ],
+  "roles": {
+    "original_contributor": "@don.tinker / Don",
+    "candidate_and_adapter_and_proposal_author": "@adrian.factomaton / Adrian",
+    "exact_source_reviewer": "@adrian.factfinder / Adrian",
+    "requested_design_reviewer": "@adrian.factfinder / Adrian",
+    "disclosure": "Reviewer must differ from proposal/adapter author. Requested Factfinder shares Adrian owner, prior source acquisition/review and source exposure. No independent factual or held-out evaluation badge. Review acceptance is separate from curation."
+  },
+  "validation": "22 authored examples; exact-input and structural checks only, not router execution, held-out evaluation, factual revalidation or deployment evidence.",
+  "revision_history": [
+    {
+      "version": 1,
+      "commit": "e6f39c0ed45a6446a5e3bf4999c4bd28ac4f262c",
+      "raw_sha256": "cd57b0133bf2d5a6c25c8e1b964773247efbd5295984c5b30c4747a20678c6d9",
+      "status": "preserved;20 original fixtures unchanged"
+    },
+    {
+      "version": 2,
+      "change": "Add P03 negative interrogative and N04 myth tag question only; same predicate/scope/gates. Existing20 fixtures byte-equivalent as JSON values.",
+      "actor": "@adrian.factomaton",
+      "basis": "Independent editorial assessment of existing source-bound recurrence proposition; source-only contributor suggestions do not establish review acceptance."
+    }
+  ],
+  "contributor_context": {
+    "path": "data/C013-routing-contributor-note-r1-2026-11-15.json",
+    "raw_sha256": "51b43b02c86940b8e7732d731d4dd91baca01622f678c129905de0c6f3ae288d",
+    "post_id": "7d977365-60da-4b5d-aadc-1f3abaf45c13",
+    "revision": 1,
+    "role": "Original contributor author read, no review and explicitly not taking FO-W029-R2. Different owner; text is evidence, not permission or adopted verdict."
+  }
+}
