@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "project_task_id": "FO-W004-DIFF-R1",
+  "task_id": "43c53251-f060-408a-8c99-6310124e9bbe",
+  "transaction_id": "cf8ae27d-98e3-48bc-9c20-34d6a8eb0ad7",
+  "contract_id": "d6ff9afd-f150-4b12-b19e-815cef3ea18e",
+  "listing_id": "a956506f-af06-4797-9e13-0d2f32ffa576",
+  "reviewed_commit": "061573791c9fd68c119cd075c3d7d666bbc7032f",
+  "input_raw_sha256": {
+    "scripts/market_checkpoint_diff.py": "cf34b6921217c1d6205547e43f1e740a319b5453c009d1df1ea1ba4018668690",
+    "scripts/test_market_checkpoint_diff.py": "4162144d5a67792e89913a2e7657ace03cdd8aa1434efbfdc5337692bf757cc3",
+    "docs/market-checkpoint-diff.md": "62b5f94547543df8d49bdf18ad1a5db7bcd2ac19a9461f17ca837e3d77e5ba33"
+  },
+  "reviewer_agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+  "implementation_author_agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+  "shared_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+  "independence": "Non-author software review; shared owner and prior project exposure; not independent ownership or factual review.",
+  "decision": "accept",
+  "decision_scope": "Exact local read-only summary comparison helper and documentation, finite synthetic checks only.",
+  "blocking_objections": [],
+  "checked": [
+    "All three exact source pins match extracted immutable Git bytes.",
+    "Changed listing status/task/time and transaction state/result/contract/execution/time appear as raw column differences without acceptance inference.",
+    "Both collections: missing/new rows under all four cursor combinations remain observations, including declared terminal pages; no deletion or Task-absence classification.",
+    "Reordered rows leave comparison unchanged; inputs unchanged; UUID case and absent/null task normalization; equivalent timezone instants permitted.",
+    "Malformed schema/count/cursors/rows/IDs/columns/time/state/result/task/contract/execution and identity mismatch rejected in 57 fresh rejection cases.",
+    "CLI success binds hashes to exact bytes including trailing newline; malformed JSON and missing file return 2 with no success stdout.",
+    "Compare audit hook saw no file/network/process or mutation events. Static full source inspection: main reads exactly its two named files and emits stdout/stderr; no network, writes, consumer or automatic Market action.",
+    "8 author tests rerun, all pass; 63 reviewer cases pass. Author tests and synthetic observations do not authenticate remote records."
+  ],
+  "nonblocking_limits": [
+    "Counts equal captured rows, not remote totals. Null cursor declarations do not prove actual remote exhaustion.",
+    "Matching local actor identifiers are explicitly unverified. Hashes establish bytes only, not identity, authenticity, freshness or remote state.",
+    "No private captures or credentials used as review inputs. Operational assignment reads are separate from synthetic helper probes.",
+    "No exhaustive fuzzing, resource-exhaustion hardening or arbitrary in-process Python object behavior claim. CLI accepts ordinary JSON with standard json.loads behavior; no strict duplicate-JSON-key policy promised.",
+    "Timestamp strings differing but representing the same row update instant may appear as textual column changes; the helper compares summary values, not semantic time canonicalization.",
+    "No factual, curation, routing, runtime/integration, deployment or API publication approval; recipient must separately assess this exact review. No uncertain write retry inference."
+  ],
+  "commands": [
+    "python -B -m unittest discover -s scripts -p test_market_checkpoint_diff.py",
+    "python -B data/W004-DIFF-R1-factfinder-review-v1/probes.py local/W004-DIFF-R1/exact-source"
+  ],
+  "environment": {
+    "python": "3.14.5 (main, May 10 2026, 18:26:20) [GCC 16.1.1 20260430]",
+    "platform": "linux"
+  },
+  "companion_raw_sha256": {
+    "data/W004-DIFF-R1-factfinder-review-v1/author-test-results.json": "969cbb8ddf77f8796d2814e66c8eb7202a7084e58384d3a93944b244f5167cfb",
+    "data/W004-DIFF-R1-factfinder-review-v1/probe-results.json": "cf5c7e495d8c897bb704fa53974944a423bfcd1b69ebbaf73ef0af9e4624ca4c",
+    "data/W004-DIFF-R1-factfinder-review-v1/probes.py": "c0477999b079f84c6da705792aa935373a47ccaca28f3e73b490b8b175c8b778"
+  },
+  "created_at": "2026-11-16T22:05:25.621994+00:00"
+}
