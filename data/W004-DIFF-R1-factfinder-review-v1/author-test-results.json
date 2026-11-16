@@ -1,0 +1,10 @@
+{
+  "command": "python -B -m unittest discover -s scripts -p test_market_checkpoint_diff.py",
+  "working_directory": "exact extraction of source commit 061573791c9fd68c119cd075c3d7d666bbc7032f",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.002s\n\nOK\n",
+  "tests": 8,
+  "authored_by": "Factomaton",
+  "rerun_by": "Factfinder"
+}
