@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "synthetic_inputs_only": true,
+  "cases": [
+    {
+      "name": "all_summary_columns_and_completion_without_acceptance",
+      "passed": true
+    },
+    {
+      "name": "eight_missing_new_partial_or_declared_terminal_page_pairs",
+      "passed": true
+    },
+    {
+      "name": "row_permutation_and_inputs_unchanged",
+      "passed": true
+    },
+    {
+      "name": "uuid_case_optional_task_null_equal_timezone_instants",
+      "passed": true
+    },
+    {
+      "name": "boolean_schema",
+      "passed": true
+    },
+    {
+      "name": "unsupported_schema",
+      "passed": true
+    },
+    {
+      "name": "missing_actor",
+      "passed": true
+    },
+    {
+      "name": "reverse_time",
+      "passed": true
+    },
+    {
+      "name": "naive_time",
+      "passed": true
+    },
+    {
+      "name": "nonstring_time",
+      "passed": true
+    },
+    {
+      "name": "mismatched_agent_id",
+      "passed": true
+    },
+    {
+      "name": "mismatched_owner_id",
+      "passed": true
+    },
+    {
+      "name": "listings_missing_cursor",
+      "passed": true
+    },
+    {
+      "name": "listings_extra_collection_field",
+      "passed": true
+    },
+    {
+      "name": "listings_count_True",
+      "passed": true
+    },
+    {
+      "name": "listings_count_-1",
+      "passed": true
+    },
+    {
+      "name": "listings_count_2",
+      "passed": true
+    },
+    {
+      "name": "listings_count_'1'",
+      "passed": true
+    },
+    {
+      "name": "listings_count_None",
+      "passed": true
+    },
+    {
+      "name": "listings_cursor_''",
+      "passed": true
+    },
+    {
+      "name": "listings_cursor_False",
+      "passed": true
+    },
+    {
+      "name": "listings_cursor_[]",
+      "passed": true
+    },
+    {
+      "name": "listings_cursor_{}",
+      "passed": true
+    },
+    {
+      "name": "listings_nonarray_rows",
+      "passed": true
+    },
+    {
+      "name": "listings_nonobject_row",
+      "passed": true
+    },
+    {
+      "name": "listings_missing_id",
+      "passed": true
+    },
+    {
+      "name": "listings_missing_updated_at",
+      "passed": true
+    },
+    {
+      "name": "listings_unknown_column",
+      "passed": true
+    },
+    {
+      "name": "listings_invalid_uuid",
+      "passed": true
+    },
+    {
+      "name": "listings_naive_row_time",
+      "passed": true
+    },
+    {
+      "name": "listings_case_normalized_duplicate",
+      "passed": true
+    },
+    {
+      "name": "transactions_missing_cursor",
+      "passed": true
+    },
+    {
+      "name": "transactions_extra_collection_field",
+      "passed": true
+    },
+    {
+      "name": "transactions_count_True",
+      "passed": true
+    },
+    {
+      "name": "transactions_count_-1",
+      "passed": true
+    },
+    {
+      "name": "transactions_count_2",
+      "passed": true
+    },
+    {
+      "name": "transactions_count_'1'",
+      "passed": true
+    },
+    {
+      "name": "transactions_count_None",
+      "passed": true
+    },
+    {
+      "name": "transactions_cursor_''",
+      "passed": true
+    },
+    {
+      "name": "transactions_cursor_False",
+      "passed": true
+    },
+    {
+      "name": "transactions_cursor_[]",
+      "passed": true
+    },
+    {
+      "name": "transactions_cursor_{}",
+      "passed": true
+    },
+    {
+      "name": "transactions_nonarray_rows",
+      "passed": true
+    },
+    {
+      "name": "transactions_nonobject_row",
+      "passed": true
+    },
+    {
+      "name": "transactions_missing_id",
+      "passed": true
+    },
+    {
+      "name": "transactions_missing_updated_at",
+      "passed": true
+    },
+    {
+      "name": "transactions_unknown_column",
+      "passed": true
+    },
+    {
+      "name": "transactions_invalid_uuid",
+      "passed": true
+    },
+    {
+      "name": "transactions_naive_row_time",
+      "passed": true
+    },
+    {
+      "name": "transactions_case_normalized_duplicate",
+      "passed": true
+    },
+    {
+      "name": "unknown_status",
+      "passed": true
+    },
+    {
+      "name": "invalid_task_''",
+      "passed": true
+    },
+    {
+      "name": "invalid_task_'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'",
+      "passed": true
+    },
+    {
+      "name": "invalid_task_[]",
+      "passed": true
+    },
+    {
+      "name": "invalid_task_True",
+      "passed": true
+    },
+    {
+      "name": "unknown_state",
+      "passed": true
+    },
+    {
+      "name": "unknown_result",
+      "passed": true
+    },
+    {
+      "name": "invalid_contract_id",
+      "passed": true
+    },
+    {
+      "name": "missing_contract_id",
+      "passed": true
+    },
+    {
+      "name": "invalid_execution_id",
+      "passed": true
+    },
+    {
+      "name": "missing_execution_id",
+      "passed": true
+    },
+    {
+      "name": "cli_exact_raw_hashes_invalid_json_missing_file_no_output_files",
+      "passed": true
+    },
+    {
+      "name": "compare_no_file_network_process_or_mutation_audit_events",
+      "passed": true
+    }
+  ],
+  "passed": 63,
+  "failed": 0
+}
