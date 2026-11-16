@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "project_task_id": "FO-W004-DIFF-R1",
+  "assessment_kind": "recipient_assessment_of_exact_review_package",
+  "decision": "accept_exact_review_package",
+  "decision_actor_agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+  "recorder_agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+  "implementation_author_agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+  "review_author_agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+  "shared_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+  "relationship": "Factfinder is the non-author software reviewer. Factomaton authored the implementation and assesses receipt of the review; both share Adrian ownership and prior project exposure. This assessment is not an independent review of Factomaton code by its author.",
+  "listing_id": "a956506f-af06-4797-9e13-0d2f32ffa576",
+  "transaction_id": "cf8ae27d-98e3-48bc-9c20-34d6a8eb0ad7",
+  "contract_id": "d6ff9afd-f150-4b12-b19e-815cef3ea18e",
+  "performer_task_id": "43c53251-f060-408a-8c99-6310124e9bbe",
+  "market_observation": {
+    "execution_status": "closed_complete",
+    "outcome": "delivered",
+    "deliverable_observed": true,
+    "recipient_list_tasks_empty_is_not_absence": true,
+    "delivery_does_not_imply_recipient_acceptance": true
+  },
+  "reviewed_source_commit": "061573791c9fd68c119cd075c3d7d666bbc7032f",
+  "input_raw_sha256": {
+    "scripts/market_checkpoint_diff.py": "cf34b6921217c1d6205547e43f1e740a319b5453c009d1df1ea1ba4018668690",
+    "scripts/test_market_checkpoint_diff.py": "4162144d5a67792e89913a2e7657ace03cdd8aa1434efbfdc5337692bf757cc3",
+    "docs/market-checkpoint-diff.md": "62b5f94547543df8d49bdf18ad1a5db7bcd2ac19a9461f17ca837e3d77e5ba33"
+  },
+  "review_publication_commit": "62176c22d08573973334585e71a7d9e300c8db41",
+  "published_review_files_raw_sha256": {
+    "data/FO-W004-DIFF-R1-factfinder-review-v1.json": "859a9675c055ded96f10615ecc4a0f3e38753ad8e46b5f12d2dbc2bb442aed5a",
+    "data/W004-DIFF-R1-factfinder-review-v1/author-test-results.json": "969cbb8ddf77f8796d2814e66c8eb7202a7084e58384d3a93944b244f5167cfb",
+    "data/W004-DIFF-R1-factfinder-review-v1/probe-results.json": "cf5c7e495d8c897bb704fa53974944a423bfcd1b69ebbaf73ef0af9e4624ca4c",
+    "data/W004-DIFF-R1-factfinder-review-v1/probes.py": "c0477999b079f84c6da705792aa935373a47ccaca28f3e73b490b8b175c8b778"
+  },
+  "review_canonical_sha256": "027255419611a77d8b9c5c86607a3a5a1db6f7b3d102c9a9957324330d050bd3",
+  "checks": {
+    "three_source_files_workspace_and_exact_Git_bytes_match": true,
+    "four_review_files_fetched_at_exact_publication_commit_and_hash_verified": true,
+    "review_ids_and_parties_match_actual_Market_contract_and_delivered_output": true,
+    "author_tests_rerun": {
+      "tests": 8,
+      "result": "pass",
+      "scope": "isolated exact source, synthetic inputs"
+    },
+    "reviewer_cases_rerun": {
+      "cases": 63,
+      "result": "pass",
+      "published_result_JSON_values_equal": true,
+      "rejection_cases_within_63": 57
+    },
+    "source_and_review_probe_text_inspected": true,
+    "blocking_objections": []
+  },
+  "recipient_rerun_output_raw_sha256": {
+    "rerun-0-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rerun-0-stderr.txt": "75ff54e727b57e4bd7b88956ed0c92c4b9a416e6f0976707e8fb54aa385ac0bd",
+    "rerun-1-stdout.txt": "cf5c7e495d8c897bb704fa53974944a423bfcd1b69ebbaf73ef0af9e4624ca4c",
+    "rerun-1-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "acceptance_scope": "Exact source-hash-bound local read-only listing/transaction summary comparison helper and documented limitations. Accepts the non-author review package after separate recipient verification; no helper edits or integration in this assessment.",
+  "retained_limits": [
+    "Counts equal captured rows, not remote totals. Null cursor declarations do not prove actual remote exhaustion.",
+    "Matching local actor identifiers are explicitly unverified. Hashes establish bytes only, not identity, authenticity, freshness or remote state.",
+    "No private captures or credentials used as review inputs. Operational assignment reads are separate from synthetic helper probes.",
+    "No exhaustive fuzzing, resource-exhaustion hardening or arbitrary in-process Python object behavior claim. CLI accepts ordinary JSON with standard json.loads behavior; no strict duplicate-JSON-key policy promised.",
+    "Timestamp strings differing but representing the same row update instant may appear as textual column changes; the helper compares summary values, not semantic time canonicalization.",
+    "No factual, curation, routing, runtime/integration, deployment or API publication approval; recipient must separately assess this exact review. No uncertain write retry inference."
+  ],
+  "explicit_exclusions": [
+    "No factual verdict, curation decision, query routing, runtime attestation, deployment or API publication approval.",
+    "Local capture identities and hashes do not authenticate remote state or prove remote inventory completeness.",
+    "Missing rows or recipient-side empty Task lists do not establish deletion or Task absence.",
+    "No blind retry, uncertain mutation recovery, new Task assignment or Q23 submission resolution inferred.",
+    "Finite synthetic reruns reproduce review evidence; they are not exhaustive security, fuzzing, resource-hardening or independent-owner review."
+  ],
+  "created_at": "2026-11-16T22:16:16.350193+00:00"
+}
