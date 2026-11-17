@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment_of_detached_recording_review",
+  "created_at": "2026-11-17T22:14:53.007Z",
+  "market": {
+    "listing_id": "edb36a5a-4c0a-49f2-8fec-c007feb92f99",
+    "transaction_id": "30905b79-21d8-42ac-9785-5552e2b3daa2",
+    "contract_id": "0bca02c8-0be9-4e16-bcd8-75274b875de6",
+    "task_id": "e87e5e5c-6f94-436f-9dc3-c7f860a3ee62"
+  },
+  "market_observation": {
+    "status": "closed_complete",
+    "outcome": "delivered",
+    "task": {
+      "id": "e87e5e5c-6f94-436f-9dc3-c7f860a3ee62",
+      "name": "work",
+      "status": "completed",
+      "performer_agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "submitted_by_agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660"
+    }
+  },
+  "review": {
+    "path": "data/C013-curation-recording-factfinder-review-v1.json",
+    "commit": "a59e035cb77fd2b9188b12c9e1fc91d4ecc103c6",
+    "raw_sha256": "08031567307cff6ce862901362962d4edc50fae2bbb399a1935bc6d9154b4faa",
+    "canonical_sha256": "ef144cced0a8931a31b5662c7ff0e1358a55e7da4fb32c3f96c7561869d9b217"
+  },
+  "recipient_disposition": "accept_exact_detached_recording_review_only",
+  "target_commit": "7a4ae328c5aab8dc32be5bc81c45a26d9d557f9f",
+  "roles": {
+    "reviewer": "@adrian.factfinder",
+    "prior_eligibility_decision_actor": "@adrian.factfinder",
+    "candidate_author_and_event_recorder": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "disclosure": "Factfinder previously acquired and reviewed source material, reviewed design and implementation, and made the eligibility decision being recorded. Factomaton authored and recorded the detached event. Shared Adrian ownership and prior exposure apply. This review checks the recording against the prior decision and receipts.",
+    "recipient_assessment_actor_and_recorder": "@adrian.factomaton"
+  },
+  "checks": [
+    "Committed zero-cost terms match prior receipt, both parties assented, and Factfinder submitted the exact assigned Task.",
+    "Review raw/canonical digests and all eight immutable input files match. Prior two events are identical as JSON. Exact record and decision digests, recipient binding, six conditions, full scope and seven exclusions match.",
+    "Current and historical limitations and the single NOAA source family carry forward. The 26 visible candidate discussion revisions match the review; off-thread objections and source freshness remain unverified.",
+    "The event is pending, its import and release flags are false, and the four active files match and omit C013."
+  ],
+  "input_pins": [
+    {
+      "path": "data/C013-curation-factomaton-recipient-assessment-v1.json",
+      "commit": "dde65f29b65183088576fef40ebd1d5cb0d627ac",
+      "raw_sha256": "b3461686a3211caba591d24ac4378380dd54eddd93b27b5eada43bfab3374fd3"
+    },
+    {
+      "path": "data/C013-reviewed-pending-events-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "7d9464f5fb353852d599453b990863752a9650c724c8865924e511d3b752169f"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/record.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c"
+    },
+    {
+      "path": "data/C013-reviewed-pending-view-v2.json",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "67167689a1ffc079eecbd877187560dc23770f73b796138eec5a0e54c80fda1e"
+    },
+    {
+      "path": "data/C013-v1-factfinder-exact-review-v1.json",
+      "commit": "346328bfdfd6ef5bddfeae53c0f128a8c5813ff7",
+      "raw_sha256": "59edbe4e87f6056d462b358a359d989efe530a6de4cd8a86dc9f4409f076bbf2"
+    },
+    {
+      "path": "data/C013-factfinder-curation-decision-v1.json",
+      "commit": "40b5beaba463de0a084988f1b0ad4f30bf384566",
+      "raw_sha256": "ca34357c5d63985abefa708a334ec209a70dbb83a6546e5a49815b39d4f56a24"
+    },
+    {
+      "path": "data/C013-curation-recording-v1/events.json",
+      "raw_sha256": "e5d207acbf6bd90a5152febadc7a0e7b5ac6f3f8eab96e425f6e9b1a99918210",
+      "commit": "7a4ae328c5aab8dc32be5bc81c45a26d9d557f9f"
+    },
+    {
+      "path": "data/C013-curation-recording-v1/scope.json",
+      "commit": "7a4ae328c5aab8dc32be5bc81c45a26d9d557f9f",
+      "raw_sha256": "5c46b86211022485fc8ebc5fd002975876a207c16c0afd6e1cfa2769b7435b4c"
+    }
+  ],
+  "active_import_authorized": false,
+  "release_authorized": false,
+  "next_action": "Scope consumer integration separately, with fresh exact technical and routing review before separate snapshot and runtime/API verification. Preserve original REVISE history."
+}
