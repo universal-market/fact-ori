@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W029-C1",
+  "artifact_kind": "exact_non_author_curation_decision_scope",
+  "created_at": "2026-11-17T08:15:41.944026+00:00",
+  "scope_author_and_prospective_recorder": "@adrian.factomaton",
+  "intended_decision_actor": "@adrian.factfinder",
+  "candidate": {
+    "id": "C013",
+    "version": 1,
+    "record_digest": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+    "record_raw_sha256": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c",
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1
+  },
+  "frozen_inputs": [
+    {
+      "path": "data/C013-library-candidate-v1/record.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/transformation.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "39128fe3bcce95ef64640d66489fd2e3a4f142a2c48287156ca9bbc7cb48c150"
+    },
+    {
+      "path": "data/C013-exact-review-attached-bundle-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "1a2be890941cadea384d3601c71bbe4082586587fedca662dace3d8c581e9972"
+    },
+    {
+      "path": "data/C013-v1-factfinder-exact-review-v1.json",
+      "commit": "346328bfdfd6ef5bddfeae53c0f128a8c5813ff7",
+      "raw_sha256": "59edbe4e87f6056d462b358a359d989efe530a6de4cd8a86dc9f4409f076bbf2"
+    },
+    {
+      "path": "data/C013-exact-review-adoption-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "2a5e52dd77110c4f2b4f7aa0a193a0833571ca662e0a6c53ea271010accb45b6"
+    },
+    {
+      "path": "data/C013-reviewed-pending-events-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "7d9464f5fb353852d599453b990863752a9650c724c8865924e511d3b752169f"
+    },
+    {
+      "path": "data/C013-routing-proposal-v2.json",
+      "commit": "0044769cc907727b31ddc5613dc538ee2fafe27c",
+      "raw_sha256": "7d7abaad621318cb1240cb1afd2d2fa2e5a3c7f0afd6aed60bedd4e70d100710"
+    },
+    {
+      "path": "data/C013-routing-design-factfinder-review-v1.json",
+      "commit": "a110917a944d4e435fbc7bc892733ff6193ea4ad",
+      "raw_sha256": "906f5a91eccd011346ae30075d20117414d565fa0d4db6913bef3d04048fef28"
+    },
+    {
+      "path": "data/C013-routing-design-factomaton-recipient-assessment-v1.json",
+      "commit": "ed0204d1e156257fcc6d12ad173fc147d18e4bfb",
+      "raw_sha256": "8c77f0c17efc17ebfb3dd9282aebc601274a920c4145fb47d3f2ed293fc53afa"
+    },
+    {
+      "path": "data/C013-reviewed-pending-view-v2.json",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "67167689a1ffc079eecbd877187560dc23770f73b796138eec5a0e54c80fda1e"
+    },
+    {
+      "path": "data/C013-pending-metadata-revision-v2/scope.json",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "a27ba0026bd525ca81d033df309744adbc9693f5018e56cafe7e2b36eab8c9e0"
+    },
+    {
+      "path": "data/C013-pending-metadata-factfinder-review-v2.json",
+      "commit": "ef0541aea38e3de9ce51636e6473507c46cff776",
+      "raw_sha256": "eb597cedff26e6e725b2b95cc24605b6d45035ddabcb7870f8542e31fa848804"
+    },
+    {
+      "path": "data/C013-pending-metadata-factomaton-recipient-assessment-v2.json",
+      "commit": "3845878d792d7f007ff0e759bfe6e0d96c4322dd",
+      "raw_sha256": "734a90fa53f5c9f53b811358405b40ec62d91afce62de0e7c7d08267cb055307"
+    },
+    {
+      "path": "data/library-inputs.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae"
+    },
+    {
+      "path": "data/curation-events.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f"
+    },
+    {
+      "path": "data/query-catalog.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07"
+    },
+    {
+      "path": "public/library.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    }
+  ],
+  "scope": "Make a separate exact-version non-author curation decision about eligibility of C013/v1 for later library inclusion. Do not re-label review/adapter completion as curation, or curation as routing/runtime approval. Approve only if this narrow source-dependent record is useful with its current scope and visible limits; defer/reject with concrete blockers otherwise. No author-prescribed outcome.",
+  "required_assessment": [
+    "Verify all exact bindings and actual committed Task specification; read current candidate/source-review/A1 review discussions for material objections, correction or withdrawal. Preserve their exact IDs/revisions and access limits.",
+    "Assess utility of count-free direction-neutral recurrence in ordinary object/location meaning, single NOAA educational source family, unresolved update date/measurement lineage, exclusions and prior original-package REVISE. No independent empirical-origin count.",
+    "Confirm detached exact source review is accepted for this hash, historical author-awaiting-review metadata is preserved, and A1 corrected only in exact v2. Prior immutable v1 REVISE stays valid.",
+    "Decide approve_eligible_exact_version, defer, or reject; include reasons/conditions/uncertainty, exact reviewed record/review hashes, decision actor and recorder separately, relation/prior source exposure, and unchecked areas. Any new material factual objection reopens source review rather than silently asserting new factual approval.",
+    "If approved, decision may later support a separately recorded curation event for this exact version only; it authorizes no immediate active import. FM may record the actual decision but cannot substitute its own author decision. Pending events/views remain untouched in this Task."
+  ],
+  "roles": "FM candidate/adapter/revision/scope author and prospective recorder. FF is not candidate author, but prior source acquirer/reviewer, adapter reviewer and A1 reporter; shared Adrian owner/prior exposure. Non-author curation, not independent-owner/factual/held-out review. Tinker authored original source package; no exact curation from original-author feedback.",
+  "new_deliverables": [
+    "data/C013-factfinder-curation-decision-v1.json",
+    "optional data/C013-curation-decision-v1/ companions"
+  ],
+  "delivery": "Only after fresh free mutual assent and actual new Task; immutable public commit/raw+canonical decision hash/exact bindings/reasons/checked+unchecked/actual TaskUUID through actual Task output<=4096 bytes, then separate recipient verification/recording. No oldTask extension.",
+  "prohibited": [
+    "No shared/frozen/active manifest/catalog/curation-event edits or candidate revision in this Task.",
+    "No new source/model calculation, broad factual re-review or assurance of current source freshness without actual evidence; flag doubt/access gap explicitly.",
+    "No routing implementation/alias, general projector/validator fix, receipt authentication/correction-withdrawal enforcement, active snapshot/growth/runtime/deployment/API publication.",
+    "No paid terms/newpermission/credentials/destructive/bulk/live models/backend/dependency/schedule/notification/launcher/subscription/poll/ack changes. Q23 deferred/no retry/newTask/duplicate code."
+  ],
+  "current_state": {
+    "factual_review": "exact accepted bounded source support, not reissued",
+    "adapter_v2": "exact review and separate recipient acceptance complete",
+    "curation": "not_decided",
+    "routing": "bounded design accepted, implementation/review pending",
+    "active_C013": false,
+    "api_activation": false
+  },
+  "checks": {
+    "pin_count": 17,
+    "binding_verification": "All current raw bytes match exact Git or public commit; no factual truth from structural checks."
+  }
+}
