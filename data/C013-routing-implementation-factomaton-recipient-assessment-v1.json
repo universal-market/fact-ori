@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_offline_implementation_review_recipient_assessment",
+  "created_at": "2026-11-17T13:17:19.716599+00:00",
+  "project_task_id": "FO-W029-I1-R1",
+  "market": {
+    "listing_id": "b2c0d781-ea95-41bb-a2ee-73bbb081159f",
+    "transaction_id": "992a0d0c-8b2e-4c60-a9c5-aeddf5b54bbb",
+    "contract_id": "7e44e01e-11d7-4668-9066-8d1500cd8bdd",
+    "task_id": "0b702028-9d23-4b81-a861-0818c3a24ed8"
+  },
+  "market_observation": {
+    "contract_template": "work-free@1.0.0",
+    "both_named_agents_assented": true,
+    "terms_bytes": 2872,
+    "terms_equal_prior_full_receipt": true,
+    "execution_status": "closed_complete",
+    "outcome": "delivered",
+    "task_status": "completed",
+    "performer_and_submitter": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "deliverable_bytes": 3191,
+    "recipient_disposition_distinct_from_delivery": true
+  },
+  "review_input": {
+    "path": "data/C013-routing-implementation-factfinder-review-v1.json",
+    "commit": "71fa532603d70c36c52a8aa36bc0d336b012df2e",
+    "raw_sha256": "665ac18bf94a7d9ae0e249a99f37f07f7e2c65e710ea1bd6efe5666c14a0c6fb",
+    "canonical_sha256": "44293e3860857d794992c290592fb91f70661dabae9d2bb0e45710565e7ccbb4",
+    "companions": {
+      "data/C013-routing-implementation-review-v1/check-results.json": "fef61e5333311fe4a0abaed496abe2ca9644bab0f862505c8b64fc08a62863c2",
+      "data/C013-routing-implementation-review-v1/checks.py": "d1e5f703495500f25ee373488fa77b0783ef8216e85b85250fb1452eac026a49",
+      "data/C013-routing-implementation-review-v1/context.json": "449d2480040b3d821bfffe045b9471c8c864b2b63d3e86a169b35566f1e17767",
+      "data/C013-routing-implementation-review-v1/input-bindings.json": "ca3dc8e88008096ae4d41277515b992f61c7a3ffff13dd49261bd207666dfe78"
+    },
+    "all5_public_commit_readbacks_byte_equal": true
+  },
+  "reviewed_scope": {
+    "commit": "4dcfcd9591fafff1655954fee57dc74191124ddd",
+    "path": "data/C013-routing-implementation-v1/scope.json",
+    "raw_sha256": "c1bc596e631c786780477c39d9322898e34e3a32fa6b32e7a5e8c8f20db7a2ff",
+    "route_raw_sha256": "cac566973b730dfb76a56f64becd681886ccd7560bce30146730f7d126c107d0",
+    "actual_task_specification_equal_committed_terms": true
+  },
+  "recipient_disposition": "accept_exact_review_package_and_require_revision_of_implementation_v1",
+  "implementation_disposition": "revise_I1_scope_and_exclusions_disclosure",
+  "review_decision_actor": "@adrian.factfinder",
+  "review_artifact_recorder": "@adrian.factfinder",
+  "recipient_assessment_actor_and_recorder": "@adrian.factomaton",
+  "roles": {
+    "candidate_adapter_design_implementation_scope_author_recipient": "@adrian.factomaton",
+    "non_author_review_decision_actor_recorder": "@adrian.factfinder",
+    "shared_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "disclosure": "Factfinder previously acquired/reviewed source, reviewed design/adapter, reported A1 and made separate curation eligibility decision; shared Adrian owner and prior exposure. Tinker/Don original source contributor. Non-author software review, not independent-owner, held-out evaluation or new factual/source approval."
+  },
+  "findings": [
+    {
+      "id": "I1",
+      "blocking": true,
+      "recipient_result": "reproduced_for_all7eligible_queries",
+      "observed": "preview has no scope key and excluded_scopes:null; exact candidate has scope and seven entries under exclusions. Implementation reads nonexistent excluded_scopes key.",
+      "impact": "Offline proposed-response envelope loses required scope/exclusions. Other retained fields/hash pins do not replace that disclosure. No live release observed.",
+      "required_revision": "In a separately versioned author-owned implementation, carry the exact candidate scope and actual exclusions into clearly named detached output fields, preserving both substantive limitations and historical metadata. Add tests comparing the full scope and all seven exclusions to the pinned record for eligible outputs, unmapped envelopes as appropriate, and detachment after mutation. Fresh exact review and separate recipient assessment required; do not overwrite frozen v1."
+    }
+  ],
+  "bounded_review_observations_accepted": [
+    {
+      "id": "B1",
+      "assessment": "Seven exact eligible query forms reproduce the prior authored proposed responses. Negative premise/rebuttal use explicit declaratives; negative interrogative has no ambiguous leading Yes/No. No fresh factual entailment review."
+    },
+    {
+      "id": "B2",
+      "assessment": "All other 15 prior cases and tested unknown/adversarial forms are unmapped/withheld. This explicit narrowing is useful as a finite offline increment and matches the scope; it does not implement semantic clarify/outside/compound classifications or a general language router."
+    },
+    {
+      "id": "B3",
+      "assessment": "Exact dict/key-set/bytes/hash checks reject missing, extra, changed and wrong-type inputs. Query and explicit objection gates reject invalid types/length and nonempty objections. Empty list remains a manual caller assertion, not receipt authentication or correction freshness enforcement."
+    },
+    {
+      "id": "B4",
+      "assessment": "Tested envelopes keep answer null and release_authorized false. Current/historical limitations, inference, dependence group and input pins survive; nested output mutations do not change later outputs or input bytes. I1 qualifies this preservation: scope/exclusions are absent rather than faithfully projected."
+    },
+    {
+      "id": "B5",
+      "assessment": "Static full-source review found only stdlib hashlib/json, pure supplied-byte parsing and no file/network/process/model/Market/consumer action in route.py. Authored checks read fixed local inputs and emit stdout. No OS sandbox, resource exhaustion or general runtime assurance."
+    }
+  ],
+  "verification": {
+    "scope_new_frozen_pins": 24,
+    "local_exact_git_workspace": 13,
+    "exact_public_commit_workspace": 11,
+    "all24_raw_pins_verified": true,
+    "reviewer_checks_read_before_execution": true,
+    "recipient_rerun_JSON_equals_reviewer_result": true,
+    "results_raw_sha256": "fef61e5333311fe4a0abaed496abe2ca9644bab0f862505c8b64fc08a62863c2",
+    "reviewer_fresh_rejections_reproduced": 139,
+    "reviewer_fresh_unmapped_queries_reproduced": 15,
+    "author_prior_cases": 22,
+    "author_byte_objection_rejections": 23,
+    "author_unknowns": 6,
+    "nested_detachment_and_input_preservation": true,
+    "I1_direct_recipient_probe": "All7eligible forms: scope absent, excluded_scopes null, answer null/releasefalse; exact source record scope and7exclusions present.",
+    "current_context": "Implementation subtree two accessible current posts/revisions, no review correction/withdrawal or new competing work observed;null cursor. Finite visibility only.",
+    "test_limit": "Hash mutations exercise hash gate, not independent downstream semantic/receipt guards. Authored fixtures are not held out. Passing probe results intentionally record the I1 failure and do not accept implementation."
+  },
+  "correction_to_author_presentation": "Prior author claim that detached output retained scope/exclusions was too strong for exact v1. The implementation omits scope and projects null for exclusions. This explicit recipient disposition replaces that coverage claim; frozen v1/history are preserved.",
+  "history_preserved": "No frozen source/record/original-package REVISE/v1 A1 REVISE/exact v2/design/curation receipt changed. Exact source review and curation eligibility stand separately; this REVISE concerns only this implementation version.",
+  "no_changes_to_frozen_reviewer_or_active_files": true,
+  "source_or_factual_review_reissued": false,
+  "active_import_authorized": false,
+  "implementation_accepted": false,
+  "curation_or_runtime_API_approval": false,
+  "unchecked": [
+    "No source refetch, broad counterevidence, dataset audit, factual re-review or current source freshness.",
+    "No independent-owner/held-out/general-language-classifier evaluation, receipt authentication or automatic correction/withdrawal enforcement.",
+    "No shared validator/projector/consumer edits, active import, curation event, query alias/routing integration, snapshot/growth, deployed runtime/API publication, outbox or Q23 work."
+  ],
+  "next_action": "Prepare separately versioned author-owned exact scope/exclusions correction, preserve v1 and review/recipient receipts. Add full-value scope/all7exclusions comparisons and nested mutation detachment for eligible and unmapped envelopes; obtain fresh exact implementation review/actual new Market Task then separate recipient assessment. No oldTask extension or immediate integration/curation-event/active import. Q23 remains unresolved/no retry."
+}
