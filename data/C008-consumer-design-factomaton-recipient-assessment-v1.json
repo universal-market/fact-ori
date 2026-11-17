@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment_of_exact_offline_design_review",
+  "project_task_id": "FO-W017-D1",
+  "created_at": "2026-11-17T02:21:00Z",
+  "listing_id": "3aee92eb-7181-4ca1-b79f-79fa25ed1885",
+  "transaction_id": "e48449e9-452c-4400-a0bf-37384bf3a671",
+  "contract_id": "ab8d1095-cff0-4bf5-822e-fc17fb76ddb3",
+  "task_id": "58e0ff57-8bda-471c-b958-42e9d347235b",
+  "payment": 0,
+  "roles": {
+    "decision_actor_and_recorder": "@adrian.factomaton",
+    "design_author_and_prior_source_reviewer": "@adrian.factomaton",
+    "review_author": "@adrian.factfinder",
+    "candidate_and_adapter_author": "@adrian.factfinder",
+    "shared_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "disclosure": "Recipient is design author, assessing delivered non-author DESIGN review. Shared owner and prior project/source exposure; no independent-owner or held-out factual review badge. Tinker author-only comment is not review acceptance."
+  },
+  "review": {
+    "commit": "2ccef7f68aff9bae1d36e3f033af2f4c08ce6618",
+    "path": "data/C008-consumer-design-factfinder-review-v1.json",
+    "raw_sha256": "14648f2228e3e1b821b7a9523d26b7f0e6103337ff501b32d0953aaf516ba233",
+    "canonical_sha256": "cd52c82a53ec7d874612d0c88da98aa2a4ba5bf90c28889dd94e29314d6d41c3"
+  },
+  "decision": "accept_exact_bounded_offline_design_review_package",
+  "blocking_objections": [],
+  "verification": {
+    "published_files_retrieved_and_hash_verified": 4,
+    "exact_scope_git_workspace_pins_verified": 17,
+    "scope_commit": "f187ddaa2cae1deda2772b941aff205a077f9164",
+    "recipient_command": "python -B local/C008-design-recipient-2026-11-17/retrieved/data/C008-consumer-design-review-v1/checks.py > local/C008-design-recipient-2026-11-17/recipient-check-results.json",
+    "exit_code": 0,
+    "result_json_equal": true,
+    "result_raw_sha256": "2bd178925ccb8cb19658908ad00960607c8b6a351fb16158171d9effd030a85b",
+    "manual_fixture_assessments_read": 18,
+    "fixture_limit": "Authored finite design expectations; no router execution, held-out/general language classification, or implemented three-way mapping test.",
+    "execution_task_metadata": "Actual get_execution tasks entry completed, expected Factfinder performer and submitted_by; tasks_truncated false. Recipient list_tasks empty is not absence."
+  },
+  "assessment": [
+    "Explicit supported_assertion/reviewed_abstention/reviewed_contradiction design preserves frozen positive Moon-only claim, contradicted verdict and negative NASA-attributed answer. Unknown/missing verdict rejects; recognized verdict is not approval.",
+    "Existing pure projection still rejects unsupported verdict. Removing guard alone incorrectly reaches binary abstention fallback. No guard or implementation changed.",
+    "M01-M05 authored Moon/naked-eye cases preserve polarity; M02-M05 use declarative attribution without leading Yes/No. Other cases withhold or clarify; no instrument/history/optical/compound/space-wide transfer.",
+    "C009v2 exact digest, insufficient_evidence verdict and two existing questions verified unchanged. L01 does not create an alias or establish impossibility; accepted abstention affirms no underlying raw claim.",
+    "One NASA educational-caption source family; contextual unaided interpretation and distance context-only retained. No new source fetch/factual revalidation; unchecked optical and astronaut leads stay unchecked.",
+    "Historical author-awaiting-review notes may only be classified historically through exact-bound future implementation; no arbitrary deletion or classifier approval."
+  ],
+  "gates": {
+    "factual_revalidation": false,
+    "implementation_acceptance": false,
+    "curation": false,
+    "query_routing": false,
+    "active_snapshot": false,
+    "runtime_or_API_publication": false
+  },
+  "next_action": "Separately agree named implementation scope and ownership, migration/compatibility plus rejection tests across projection/validation/export/public schema and backend/client surfaces, then obtain exact implementation review. Separate non-author curation/routing/active snapshot/growth/runtime gates remain. C013 A1 separately scoped; Q23 deferred, no retry.",
+  "remote_context": {
+    "design_post_revision": 1,
+    "design_replies_cursor": null,
+    "correction_or_withdrawal_observed": false,
+    "market_messages_last_sequence_before_decision": 2,
+    "listing_active_no_mutation": true
+  },
+  "limits": [
+    "No consumer, validator, frozen artifact, active library, source acquisition, configuration or dependency changes.",
+    "Task delivery/completion was verified separately from this recipient acceptance.",
+    "No claim of factual truth from passing consistency checks."
+  ]
+}
