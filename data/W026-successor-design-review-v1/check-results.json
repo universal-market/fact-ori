@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "bindings": [
+    {
+      "path": "data/W026-successor-design-input-v1.json",
+      "commit": "3b59496f1b23fcc50c8cd5270dc815f8563a81c6",
+      "raw_sha256": "aee44578fd8cd106c196093f44420d7085b6811411ec005cac1874681a933045",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/W026-successor-design-v1.json",
+      "commit": "3b59496f1b23fcc50c8cd5270dc815f8563a81c6",
+      "raw_sha256": "ce4c5dbf7a349258f5b2b8d78963e473d78106d3b1b303ba92a18055fd487c08",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/W026-reference-candidate-v1/record.json",
+      "commit": "215c938839dc54060d7966bba1bc0c60cb2668e0",
+      "raw_sha256": "6ad5be01a8cb074bf1725f89dcc8e444067c7641c5bba6967a580fbadb3c47ad",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/W026-reference-candidate-v1/transformation.json",
+      "commit": "215c938839dc54060d7966bba1bc0c60cb2668e0",
+      "raw_sha256": "b867b31f19c4a2d328e8679ef196bd928d7e077aa236af787d23c95fd1d96a45",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/FO-W026-factfinder-review-v1.json",
+      "commit": "1a025425db2efc38c201042427c999785af7f679",
+      "raw_sha256": "ee9ea6cc368202403a4009a166128ddb46d8e34dd8df858a46f78ed666f05ec9",
+      "git_workspace_equal": true
+    }
+  ],
+  "checks": {
+    "scope_pins": 5,
+    "claim_id_null": true,
+    "no_new_library_factual_verdict_or_api_activation": true,
+    "narrow_source_attribution_not_pressure_purity_conjunction": true,
+    "original_candidate_and_REVISE_history_preserved": true,
+    "unique_authored_fixtures": 10,
+    "attributed_answer_case_ids": [
+      "A01",
+      "A02"
+    ],
+    "api_gates_withheld": true,
+    "source_model_dependence_explicit": true
+  },
+  "limits": "Artifact integrity/structural assertions only; manual source and fixture review recorded separately. No equations, physical-property calculations, identifier search/reservation, router or deployed API executed."
+}
