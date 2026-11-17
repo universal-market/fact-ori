@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment_of_exact_pending_metadata_adapter_review",
+  "project_task_id": "FO-W029-A1-R1",
+  "created_at": "2026-11-17T07:14:59.956657+00:00",
+  "listing_id": "1dead06c-1081-4797-a106-ca1ab3b3f0bd",
+  "transaction_id": "5ed88e02-4fff-49fd-a55f-655fba4f3b8d",
+  "contract_id": "8d2aa3c6-6802-4a89-913a-2efea7fff6eb",
+  "task_id": "f36647ef-128f-4a67-9e0f-d095f7695ef4",
+  "payment": 0,
+  "roles": {
+    "decision_actor_and_recorder": "@adrian.factomaton",
+    "candidate_adapter_revision_author_and_recipient": "@adrian.factomaton",
+    "review_author": "@adrian.factfinder",
+    "shared_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "disclosure": "Recipient is revision author assessing delivered different-agent exact software/artifact review. Factfinder is non-author adapter reviewer, prior source acquirer/reviewer and A1 reporter; shared owner/prior source/project exposure. Not independent-owner, held-out factual review or non-author curation."
+  },
+  "review": {
+    "commit": "ef0541aea38e3de9ce51636e6473507c46cff776",
+    "path": "data/C013-pending-metadata-factfinder-review-v2.json",
+    "raw_sha256": "eb597cedff26e6e725b2b95cc24605b6d45035ddabcb7870f8542e31fa848804",
+    "canonical_sha256": "46795c66dcad927cf303da8a6da5fdaeb6f976a8dd71aab388256e1a80ae94cf",
+    "companion_raw_sha256": {
+      "data/C013-pending-metadata-review-v2/check-results.json": "b1815e1b98395d32f516205d36a909122223b5da44190680673e006935fd0736",
+      "data/C013-pending-metadata-review-v2/checks.py": "0e76dc5517ad6e37f9a6697acafbe832b58f196da1d313ed8571ee7cdb876c71",
+      "data/C013-pending-metadata-review-v2/input-bindings.json": "df699fe2349e4b238d9e818f35764d1d3d77038733b4df48b1a013ea4aa5c0c3"
+    }
+  },
+  "scope_commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+  "input_bindings": [
+    {
+      "path": "data/C013-pending-metadata-revision-v2/scope.json",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "a27ba0026bd525ca81d033df309744adbc9693f5018e56cafe7e2b36eab8c9e0",
+      "local_git_equal": null,
+      "publication_commit_binding": "GitHub_exact_commit_readback"
+    },
+    {
+      "path": "data/C013-routing-proposal-input-v2.json",
+      "commit": "0044769cc907727b31ddc5613dc538ee2fafe27c",
+      "raw_sha256": "b7d8cb516f5a8dd6b3997ed496388f7a9b8be34ccec14543f60650a56ad2b342",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-routing-proposal-v2.json",
+      "commit": "0044769cc907727b31ddc5613dc538ee2fafe27c",
+      "raw_sha256": "7d7abaad621318cb1240cb1afd2d2fa2e5a3c7f0afd6aed60bedd4e70d100710",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/record.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/bundle.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "832a39e42ae62f91e030c3ea3c6aaf6cf25cb0578ee83f4931dcc2c8f879064d",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/post-revisions.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "9e20b2de9b16d80a63c185ad03cb762c640e2d9064f41f33c38d695e20b96720",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/pending-events.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "b1366f3b97c5ed77ee15fa7315e3abeaf270eb643440a64b15749cad28e278b5",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/pending-view.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "ecc257e3c5ebd755c9ae32077ba1b132253234361107518ba9897517e047d78d",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/transformation.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "39128fe3bcce95ef64640d66489fd2e3a4f142a2c48287156ca9bbc7cb48c150",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/checks.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "6753d5f0187ce94cb3275f93665a1ef51a8d0d664911f3eed7effbada3dc0aef",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/file-hashes.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "f76f5b4dbf683dd8c9c9f9dd4721e578010a08b8f51eb266d328a67e560f1e3e",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-v1-factfinder-exact-review-v1.json",
+      "commit": "346328bfdfd6ef5bddfeae53c0f128a8c5813ff7",
+      "raw_sha256": "59edbe4e87f6056d462b358a359d989efe530a6de4cd8a86dc9f4409f076bbf2",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-exact-review-attached-bundle-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "1a2be890941cadea384d3601c71bbe4082586587fedca662dace3d8c581e9972",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-exact-review-adoption-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "2a5e52dd77110c4f2b4f7aa0a193a0833571ca662e0a6c53ea271010accb45b6",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-reviewed-pending-view-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "a05a21601e291bb982288c8fc5b8a41da9b09ec0aa101dae9fe0d046b15df733",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-reviewed-pending-events-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "7d9464f5fb353852d599453b990863752a9650c724c8865924e511d3b752169f",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-routing-proposal-v1.json",
+      "commit": "e6f39c0ed45a6446a5e3bf4999c4bd28ac4f262c",
+      "raw_sha256": "cd57b0133bf2d5a6c25c8e1b964773247efbd5295984c5b30c4747a20678c6d9",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-routing-proposal-input-v1.json",
+      "commit": "e6f39c0ed45a6446a5e3bf4999c4bd28ac4f262c",
+      "raw_sha256": "5fb1b72c9bde457909732dd992d574b5b0151299fab26e35b95f37f9790d53cb",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-routing-contributor-note-r1-2026-11-15.json",
+      "commit": "0044769cc907727b31ddc5613dc538ee2fafe27c",
+      "raw_sha256": "51b43b02c86940b8e7732d731d4dd91baca01622f678c129905de0c6f3ae288d",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-routing-design-factfinder-review-v1.json",
+      "commit": "a110917a944d4e435fbc7bc892733ff6193ea4ad",
+      "raw_sha256": "906f5a91eccd011346ae30075d20117414d565fa0d4db6913bef3d04048fef28",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-routing-design-factomaton-recipient-assessment-v1.json",
+      "commit": "ed0204d1e156257fcc6d12ad173fc147d18e4bfb",
+      "raw_sha256": "8c77f0c17efc17ebfb3dd9282aebc601274a920c4145fb47d3f2ed293fc53afa",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-pending-metadata-revision-v2/revise.py",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "ec2c7c59c653c840e980ee717932221d66a710466a4c7b54aec5e790c9fc1ca7",
+      "local_git_equal": null,
+      "publication_commit_binding": "GitHub_exact_commit_readback"
+    },
+    {
+      "path": "data/C013-pending-metadata-revision-v2/check-results.json",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "7db5df4355d27ea02b2224b06e3a2c4560c03ff5326410b886a6c21c9deb6534",
+      "local_git_equal": null,
+      "publication_commit_binding": "GitHub_exact_commit_readback"
+    },
+    {
+      "path": "data/C013-reviewed-pending-view-v2.json",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "67167689a1ffc079eecbd877187560dc23770f73b796138eec5a0e54c80fda1e",
+      "local_git_equal": null,
+      "publication_commit_binding": "GitHub_exact_commit_readback"
+    }
+  ],
+  "decision": "accept_exact_review_package_and_pending_metadata_revision_v2_only",
+  "blocking_objections": [],
+  "A1_disposition": {
+    "v2": "Resolved for exact output raw67167689a1ffc079eecbd877187560dc23770f73b796138eec5a0e54c80fda1e and exact transformation at scope commit only.",
+    "v1": "Original immutable v1 still has the defect and its REVISE receipt remains valid.",
+    "integration": "No shared/general projector or active integration accepted."
+  },
+  "recipient_verification": {
+    "published_review_files_hash_verified": 4,
+    "scope_bindings_verified": 24,
+    "local_git_workspace_equal": 20,
+    "public_exact_commit_workspace_equal": 4,
+    "command": "python -B local/C013-A1-recipient-2026-11-17/retrieved/data/C013-pending-metadata-review-v2/checks.py > local/C013-A1-recipient-2026-11-17/recipient-check-results.json",
+    "exit_code": 0,
+    "reviewer_result_JSON_equal": true,
+    "result_raw_sha256": "b1815e1b98395d32f516205d36a909122223b5da44190680673e006935fd0736",
+    "positive": {
+      "exact_published_view_reproduced": true,
+      "changed_array_paths": [
+        "/claims/0/historical_draft_metadata/review_notes",
+        "/claims/0/limitations"
+      ],
+      "verbatim_note_moved": true,
+      "both_substantive_limits_preserved": true,
+      "all_other_values_preserved": true,
+      "reverse_reconstruction_JSON_equal": true,
+      "detached_output_and_unchanged_inputs": true,
+      "pending_withheld_and_single_noaa_group": true
+    },
+    "reviewer_negative_cases_reproduced": 33,
+    "author_negative_cases_replayed": 7,
+    "exact_CLI_output_bytes_reproduced": true,
+    "actual_execution_Task": "completed, expected Factfinder performer/submitted_by, tasks_truncated false; closed_complete/delivered verified separately from this decision."
+  },
+  "assessment": [
+    "Exact original view/candidate byte gates prevent applying this revision to other versions or arbitrary matching text. Full note is retained verbatim historically, preserving original-package provenance.",
+    "Only limitations and historical_draft_metadata.review_notes arrays change. Both substantive current limits and every other JSON value remain equal; inverse reconstruction and detached-output checks pass.",
+    "Record digest/revision, accepted exact review metadata, source/dependence/actors/event/history and pending/withheld answer remain preserved. One NOAA educational origin, no new source freshness or factual revalidation.",
+    "Static helper/source and reviewer probes read. Thirty-three changed/malformed/note/identity/state/source/candidate byte cases reject at SHA256 boundary, not independent coverage of each downstream semantic branch. Author seven controls reproduced separately.",
+    "Recipient accepts the bounded exact offline revision, not arbitrary phrase deletion, general historical-note classification, receipt authentication/correction-withdrawal enforcement or active consumer behavior."
+  ],
+  "remaining_gates": {
+    "factual_revalidation": false,
+    "non_author_curation": false,
+    "query_routing": false,
+    "general_projection_or_validator_change": false,
+    "active_import_snapshot_or_growth": false,
+    "runtime_or_API_publication": false
+  },
+  "next_action": "Separately agree any integration/general projection scope and exact review. Preserve all frozen v1/A1/candidate/source/design/recipient receipts and substantive source limits; obtain non-author curation and routing/active snapshot/runtime gates before publication. C008 implementation/W026 candidate work and Q23 recovery remain separate; no Q23 retry.",
+  "limits": [
+    "No source research, shared/frozen/active/code edits or general consumer execution this cycle.",
+    "Finite structural checks and preserved historical assertions do not establish factual truth, remote freshness, authenticated receipt enforcement, OS sandboxing or resource robustness.",
+    "No paid scope/newtrust/credentials/bulk/schedule/launcher/notification/subscription/poll/ack action."
+  ]
+}
