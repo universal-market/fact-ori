@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "method": "Manual assessment of10 finite authored expectations, not router execution or held-out tests.",
+  "cases": [
+    {
+      "id": "A01",
+      "input": "What atmospheric boiling value does the IAPWS FAQ give on ITS-90?",
+      "expected": "attributed_answer",
+      "decision": "accept_as_bounded_design_case",
+      "reason": "Named source/scale permits a bounded attribution, keeping approximation.",
+      "router_executed": false
+    },
+    {
+      "id": "A02",
+      "input": "Does IAPWS report approximately 99.974 degrees Celsius for atmospheric boiling on ITS-90?",
+      "expected": "attributed_answer",
+      "decision": "accept_as_bounded_design_case",
+      "reason": "Question asks what the source reports, not independent physical confirmation.",
+      "router_executed": false
+    },
+    {
+      "id": "A03",
+      "input": "Is the source's number exact?",
+      "expected": "clarify_approximate_only",
+      "decision": "accept_as_bounded_design_case",
+      "reason": "Approximation and unresolved uncertainty remain explicit; source referent requires resolved context.",
+      "router_executed": false
+    },
+    {
+      "id": "B01",
+      "input": "At 101.325 kPa, is ordinary pure water exactly 99.974 degrees Celsius?",
+      "expected": "outside_proposed_scope",
+      "decision": "accept_as_bounded_design_case",
+      "reason": "Excluded conjunction of numeric pressure, composition and exactness.",
+      "router_executed": false
+    },
+    {
+      "id": "B02",
+      "input": "Does water boil at 99.974 degrees Celsius in my kitchen?",
+      "expected": "outside_proposed_scope",
+      "decision": "accept_as_bounded_design_case",
+      "reason": "Local kitchen conditions not determined by the attributed statement.",
+      "router_executed": false
+    },
+    {
+      "id": "B03",
+      "input": "Is its true thermodynamic boiling temperature 99.974 degrees Celsius?",
+      "expected": "outside_proposed_scope",
+      "decision": "accept_as_bounded_design_case",
+      "reason": "Practical-scale report cannot become exact thermodynamic determination.",
+      "router_executed": false
+    },
+    {
+      "id": "B04",
+      "input": "Does heavy water have this boiling value?",
+      "expected": "outside_proposed_scope",
+      "decision": "accept_as_bounded_design_case",
+      "reason": "No heavy-water extension; resolve pronoun context before any future response.",
+      "router_executed": false
+    },
+    {
+      "id": "B05",
+      "input": "Does the FAQ explicitly put 101.325 kPa in the 99.974 sentence?",
+      "expected": "separate_passages_not_one_explicit_sentence",
+      "decision": "accept_as_bounded_design_case",
+      "reason": "Textual separation preserved; no source/model calculation or conjunction inferred.",
+      "router_executed": false
+    },
+    {
+      "id": "B06",
+      "input": "Does the NIST grid prove most sea-level kitchens boil between 99.0 and 100.7 degrees Celsius?",
+      "expected": "outside_proposed_scope",
+      "decision": "accept_as_bounded_design_case",
+      "reason": "Unavailable original grid and distribution inference remain excluded.",
+      "router_executed": false
+    },
+    {
+      "id": "B07",
+      "input": "Can this design now answer public API queries?",
+      "expected": "withhold_pending_gates",
+      "decision": "accept_as_bounded_design_case",
+      "reason": "Design-only acceptance does not create an ID, library record, routing or publication permission.",
+      "router_executed": false
+    }
+  ]
+}
