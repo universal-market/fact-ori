@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "scope": "Manual finite authored-design assessment against frozen accepted scope; no new factual verdict, router execution or held-out inference.",
+  "cases": [
+    {
+      "id": "M01",
+      "query": "Can the Great Wall be seen from the Moon with the naked eye?",
+      "classification": "eligible_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Positive Moon/naked-eye question gets frozen negative NASA-attributed answer.",
+      "router_executed": false
+    },
+    {
+      "id": "M02",
+      "query": "The Great Wall is visible from the Moon with the naked eye. True?",
+      "classification": "eligible_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Positive myth premise explicitly contradicted; no misleading affirmative short answer.",
+      "router_executed": false
+    },
+    {
+      "id": "M03",
+      "query": "Is it false that the Great Wall is visible from the Moon with the naked eye?",
+      "classification": "eligible_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Nested is-it-false question gets declarative attributed rebuttal rather than inverted Yes/No.",
+      "router_executed": false
+    },
+    {
+      "id": "M04",
+      "query": "Can't you see the Great Wall from the Moon with the naked eye?",
+      "classification": "eligible_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Negative interrogative gets NASA-attributed declaration without leading Yes/No.",
+      "router_executed": false
+    },
+    {
+      "id": "M05",
+      "query": "The Great Wall is visible from the Moon with the naked eye, right?",
+      "classification": "eligible_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Tag question gets explicit attributed contradiction.",
+      "router_executed": false
+    },
+    {
+      "id": "L01",
+      "query": "Is the Great Wall visible from low Earth orbit with the naked eye?",
+      "classification": "existing_C009_policy_only",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Existing C009 policy only; preserves abstention and creates no new alias or C008 answer.",
+      "router_executed": false
+    },
+    {
+      "id": "L02",
+      "query": "The Moon record proves the Great Wall cannot be seen from low Earth orbit.",
+      "classification": "outside_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Moon rebuttal does not entail LEO invisibility; no transfer.",
+      "router_executed": false
+    },
+    {
+      "id": "A01",
+      "query": "Can you see the Great Wall from space?",
+      "classification": "clarify_vantage_and_instrument",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Unqualified space lacks vantage and instrument; clarify.",
+      "router_executed": false
+    },
+    {
+      "id": "A02",
+      "query": "Can astronauts see it?",
+      "classification": "clarify_referents_vantage_and_instrument",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Pronoun referent, vantage and instrument unresolved; clarify.",
+      "router_executed": false
+    },
+    {
+      "id": "X01",
+      "query": "Can a camera on the ISS photograph the Great Wall?",
+      "classification": "outside_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "ISS camera photography is outside Moon unaided scope.",
+      "router_executed": false
+    },
+    {
+      "id": "X02",
+      "query": "Can binoculars on the Moon reveal the Great Wall?",
+      "classification": "outside_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Binocular-assisted Moon observation is outside naked-eye scope.",
+      "router_executed": false
+    },
+    {
+      "id": "X03",
+      "query": "Is the Great Wall the only human-made object visible from space?",
+      "classification": "outside_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Only-human-made-object and space-wide claim are outside scope.",
+      "router_executed": false
+    },
+    {
+      "id": "X04",
+      "query": "What exact angular size proves the Wall invisible?",
+      "classification": "outside_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Exact optical angular-resolution proof is not established by an attributed caption.",
+      "router_executed": false
+    },
+    {
+      "id": "X05",
+      "query": "Does the lunar distance alone prove unaided invisibility?",
+      "classification": "outside_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Lunar distance is contextual, not a visibility proof.",
+      "router_executed": false
+    },
+    {
+      "id": "X06",
+      "query": "Which Apollo astronaut verified the claim?",
+      "classification": "outside_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "No original Apollo observation checked; historical presupposition is unsupported.",
+      "router_executed": false
+    },
+    {
+      "id": "X07",
+      "query": "Can I see the Wall from Mars?",
+      "classification": "outside_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Mars vantage is outside Moon-only scope.",
+      "router_executed": false
+    },
+    {
+      "id": "C01",
+      "query": "Can you see the Wall from the Moon and low Earth orbit with the naked eye?",
+      "classification": "compound_not_covered_by_C008_alone",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Moon/LEO compound is not answered by C008 alone; no confident partial response.",
+      "router_executed": false
+    },
+    {
+      "id": "T01",
+      "query": "Does this camera recording from yesterday show the Wall?",
+      "classification": "outside_C008",
+      "decision": "accept_as_authored_design_case",
+      "reason": "Specific camera recording requires separate evidence; generic caption does not identify it.",
+      "router_executed": false
+    }
+  ]
+}
