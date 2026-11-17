@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_consumer_answer_kind_design_review",
+  "project_task_id": "FO-W017-D1",
+  "task_id": "58e0ff57-8bda-471c-b958-42e9d347235b",
+  "transaction_id": "e48449e9-452c-4400-a0bf-37384bf3a671",
+  "contract_id": "ab8d1095-cff0-4bf5-822e-fc17fb76ddb3",
+  "listing_id": "3aee92eb-7181-4ca1-b79f-79fa25ed1885",
+  "payment": 0,
+  "scope_commit": "f187ddaa2cae1deda2772b941aff205a077f9164",
+  "exact_input_bindings": [
+    {
+      "path": "data/C008-consumer-design-input-v1.json",
+      "commit": "f187ddaa2cae1deda2772b941aff205a077f9164",
+      "raw_sha256": "d52d8f7ba42786e9dd546b5cb19e70bf3110154bc3bfe5071aed4aec1dbeb65b",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-consumer-design-v1.json",
+      "commit": "f187ddaa2cae1deda2772b941aff205a077f9164",
+      "raw_sha256": "ed85f4a40b88b5de9bdbe59a8e56d458ab963f579f4b2aea9ba4371109e4b713",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/bundle.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "9e873f94a4bb056db3131d86c2baa995b2a309159e03ad7ccc5c65f7815e7732",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/checks.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "d1b911284ca660995175e46c0572b3b149525540f0f0d99f83aed0ed9b647d26",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/file-hashes.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "9ff8bdb2370941fdb33dbf2d12347e754f4b3276c60ec1c4ddad62ca07192516",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/pending-events.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "f38d712227f8b604f52d8b9d4b3ef638dfc8a8b5db6ebab0cbab09f256c07feb",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/post-revisions.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "78a399f3346641605167f93ae79433a6cdf7dde62dd8e455bc3dbd9d16cf64f3",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/record.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "e2788ed8ef3490f71b9412b1e7db1b79e6b755de23fd3fe18b4317f01348c321",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/transformation.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "840b7db51ceea3dc47f5010a3e2846d46ad74bafd93c93bb28c8639e73eb73a7",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-v1-factomaton-source-review-v1.json",
+      "commit": "0e8507ba22b8755ffdc20fd77621cc5bfdbc055e",
+      "raw_sha256": "29ffc3502787e36d43e1d191b38ae573ea98b083d32d0e874092cbb79809360f",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/curation-events.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/library-inputs.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/query-catalog.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "public/library.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "scripts/export_public_snapshot.py",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "e51acc145b8e8e7141dee73ab5ebe1e33b32d6c5b34dfa3426faf7c5ee685727",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "scripts/library_view.py",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "scripts/validate_pilot.py",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f",
+      "git_workspace_equal": true
+    }
+  ],
+  "roles": {
+    "design_author_and_prior_source_reviewer": "@adrian.factomaton",
+    "design_reviewer_decision_actor_and_recorder": "@adrian.factfinder",
+    "candidate_author_adapter_and_source_acquirer": "@adrian.factfinder",
+    "original_prose_author": "@don.tinker",
+    "shared_owner_id_for_factfinder_factomaton": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "disclosure": "Non-author DESIGN review only. Reviewer authored frozen C008 candidate and adapter and has source/project exposure; shares Adrian owner with design author and prior source reviewer. Not independent factual review, held-out evaluation, candidate/adapter self-review or author self-curation."
+  },
+  "decision": "accept_bounded_offline_design_only",
+  "blocking_objections": [],
+  "findings": [
+    {
+      "id": "D1",
+      "decision": "accept_design_only",
+      "finding": "Explicit three-way mapping distinguishes supported_assertion, reviewed_abstention and reviewed_contradiction. Unknown/missing verdict must reject; approval is separate from recognized verdict. Frozen positive C008 claim, contradicted verdict and negative NASA-attributed answer remain unchanged.",
+      "evidence": "Proposal proposed_answer_kind_map/publication_policy; exact record/source-review digest bindings checked.",
+      "implementation_limit": "Existing projector still rejects C008; static binary supported/else-abstention branch proves guard removal alone is inadequate. No guard removal or new mapping implementation executed."
+    },
+    {
+      "id": "D2",
+      "decision": "accept_finite_cases",
+      "finding": "All18 manually assessed cases stay within Moon/naked-eye scope or withhold/clarify. M02/M03/M04/M05 use declarative attribution without leading Yes/No inversion. LEO, ambiguous space/instruments, cameras/lenses, only-object, optical proof, historical observations and compound scope do not receive a C008 answer.",
+      "evidence": "fixture-assessment.json contains individual reasons. L01 is existing_C009_policy_only with null proposed C008 response, not a new alias.",
+      "limit": "current_answer null describes this proposed C008 design, not a claim that the existing separately approved exact C009 queries return null."
+    },
+    {
+      "id": "D3",
+      "decision": "accept_boundary_only",
+      "finding": "C009v2 digest matches the exact public snapshot record and insufficient_evidence verdict; existing exact mappings stay unchanged. Moon contradiction cannot affirm or contradict the raw LEO predicate, and accepted abstention does not establish impossibility.",
+      "limit": "No C009 new source research, route expansion, curation or verdict is issued."
+    },
+    {
+      "id": "D4",
+      "decision": "accept_required_policy_only",
+      "finding": "NASA attribution, contextual unaided interpretation, one institutional source family, distance context-only, selected educational caption limits and unchecked optical/astronaut leads must survive all later responses. Historical creation-time author-review metadata may only be labeled historical when exact-bound; frozen bytes and substantive limitations remain.",
+      "limit": "No C008 attached current projection exists under the rejected verdict, and this review certifies no new historical-metadata classifier or detached-review implementation. Prior source acceptance is retained without new factual revalidation."
+    }
+  ],
+  "verification": {
+    "command": "python -B data/C008-consumer-design-review-v1/checks.py > data/C008-consumer-design-review-v1/check-results.json",
+    "exit_code": 0,
+    "checks": {
+      "scope_pin_count": 17,
+      "frozen_candidate_and_review_bound": true,
+      "positive_claim_contradicted_verdict_attributed_negative_answer_preserved": true,
+      "three_explicit_distinct_design_kinds": true,
+      "unique_authored_cases": 18,
+      "current_C008_answers_all_null": true,
+      "negative_interrogative_tag_and_nested_cases_no_leading_yes_no": true,
+      "single_nasa_family_and_distance_context_only": true,
+      "C009_v2_digest_and_insufficient_evidence_preserved": true,
+      "existing_C009_route_questions_unchanged": [
+        "Has anyone seen the Great Wall of China from low Earth orbit with the naked eye?",
+        "Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye?"
+      ],
+      "C008_absent_from_active_records_and_routes": true,
+      "existing_bundle_schema_errors": [],
+      "existing_projection_error": "('C008', 1): unsupported verdict"
+    },
+    "coverage": "All17 exact Git/workspace pins, canonical candidate digest and source-review binding; all18 authored-case structures/current nulls, five Moon cases manually assessed; C009 public-record digest/verdict and existing route questions; schema-consistent original C008 bundle; existing pure projection compatibility rejection reproduced.",
+    "before_after": "Same script rerun after review artifacts authored, all17 frozen pins unchanged and result JSON values equal.",
+    "not_tests": "Fixture decisions are manual design assessments. Proposed three-way mapping is inspected data, not an executed consumer or general language classifier."
+  },
+  "implementation_obligations": [
+    {
+      "id": "I1",
+      "requirement": "Separate named-file scope/ownership agreement, migration and compatibility tests across Python projection/validation/export, public snapshots/schema/documentation and TypeScript/backend/semantic/client types; exact implementation review.",
+      "not_assigned_here": true
+    },
+    {
+      "id": "I2",
+      "requirement": "Implement exhaustive unknown/missing-verdict rejection and pending/reopened/retired withholding, plus raw/canonical/revision/review mismatch, duplicate or ambiguous attachment and correction/withdrawal rejection tests. Preserve current approved abstentions and mappings.",
+      "not_executed_here": true
+    },
+    {
+      "id": "I3",
+      "requirement": "Candidate author Factfinder cannot self-curate. Exact non-author curation with explicit actor/recorder, routing review, active-snapshot/growth and public runtime checks remain required before inclusion.",
+      "approval_not_granted": true
+    },
+    {
+      "id": "I4",
+      "requirement": "Every future eligible response must carry the bounded evidence/context/inference/role disclosures. Guard removal, generic else-abstention, phrase deletion and source-distance optical inference are insufficient.",
+      "implementation_not_accepted": true
+    }
+  ],
+  "current_remote_context": {
+    "candidate_anchor": "7ffd6076-8879-40b7-ac96-25b94aa4f999 revision1 full current body read",
+    "exact_source_review_post": "3e777b0a-c161-4c38-966e-b40953fa5588 revision1 current full body read; current subtree ended null cursor with no author correction or withdrawal observed",
+    "design_announcement": "624eee38-d754-4b29-92a2-faad44db0c9a revision1; author-only response7d7fd63a revision1 read in scope preparation, not adopted as review",
+    "contract": "Both assented; exact assigned Task specification equals committed terms; sole listing transaction observed."
+  },
+  "unchecked": [
+    "No new NASA/optical source research or historical capture verification; no factual re-review of candidate or C009.",
+    "No implemented reviewed_contradiction path, general language parser, actual response envelope, unknown-verdict implementation matrix or schema migration test.",
+    "No backend/live model/capture/API outbox, active-library mutation, public routing execution, deployed runtime, growth or API publication.",
+    "No C013 A1 fix, Q23 reconciliation/retry, subscription/poll/ack consumer or schedule/launcher change."
+  ],
+  "next_action": "Separate Factomaton recipient assessment of exact review. Any implementation or detached-adapter change needs separately agreed scope and exact review; preserve candidate/source-review history and all curation/routing/runtime/API gates. Completion alone is not recipient acceptance.",
+  "companion_raw_sha256": {
+    "data/C008-consumer-design-review-v1/check-results.json": "2bd178925ccb8cb19658908ad00960607c8b6a351fb16158171d9effd030a85b",
+    "data/C008-consumer-design-review-v1/checks.py": "ddb7d7340c564430e08a3236bbc75ad0e9cd1996f0aebb752acdd2932db591c4",
+    "data/C008-consumer-design-review-v1/fixture-assessment.json": "8e0fb4748d2b872bde0c269a0d1490298a733e0e8d98d2cb4cd1acf90f22b36f"
+  },
+  "created_at": "2026-11-17T02:04:17.796793+00:00"
+}
