@@ -1,0 +1,846 @@
+{
+  "status": "probes_pass_findings_require_revision",
+  "scope_pins_unchanged_before_after": 24,
+  "author_results_reproduced": {
+    "status": "pass",
+    "prior_design_cases": 22,
+    "eligible_exact_queries": 7,
+    "noneligible_withheld": 15,
+    "byte_and_objection_rejections": 23,
+    "unmapped_adversarial_queries": 6,
+    "detached_return": true,
+    "limits": "Authored exact-query offline checks only; no general language classification, factual proof, receipt authentication, live routing or release."
+  },
+  "fresh_rejection_count": 139,
+  "fresh_rejections": [
+    {
+      "case": "missing:data/C013-curation-decision-scope-v1.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-curation-decision-scope-v1.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-curation-decision-scope-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-curation-decision-scope-v1.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-curation-decision-scope-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-curation-decision-scope-v1.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-curation-decision-scope-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-curation-decision-scope-v1.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-curation-decision-scope-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-curation-decision-scope-v1.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-curation-decision-scope-v1.json"
+    },
+    {
+      "case": "missing:data/C013-library-candidate-v1/record.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-library-candidate-v1/record.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-library-candidate-v1/record.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-library-candidate-v1/record.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-library-candidate-v1/record.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-library-candidate-v1/record.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-library-candidate-v1/record.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-library-candidate-v1/record.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-library-candidate-v1/record.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-library-candidate-v1/record.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-library-candidate-v1/record.json"
+    },
+    {
+      "case": "missing:data/C013-library-candidate-v1/transformation.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-library-candidate-v1/transformation.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-library-candidate-v1/transformation.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-library-candidate-v1/transformation.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-library-candidate-v1/transformation.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-library-candidate-v1/transformation.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-library-candidate-v1/transformation.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-library-candidate-v1/transformation.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-library-candidate-v1/transformation.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-library-candidate-v1/transformation.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-library-candidate-v1/transformation.json"
+    },
+    {
+      "case": "missing:data/C013-exact-review-attached-bundle-v1.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-exact-review-attached-bundle-v1.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-exact-review-attached-bundle-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-exact-review-attached-bundle-v1.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-exact-review-attached-bundle-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-exact-review-attached-bundle-v1.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-exact-review-attached-bundle-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-exact-review-attached-bundle-v1.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-exact-review-attached-bundle-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-exact-review-attached-bundle-v1.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-exact-review-attached-bundle-v1.json"
+    },
+    {
+      "case": "missing:data/C013-v1-factfinder-exact-review-v1.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-v1-factfinder-exact-review-v1.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-v1-factfinder-exact-review-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-v1-factfinder-exact-review-v1.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-v1-factfinder-exact-review-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-v1-factfinder-exact-review-v1.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-v1-factfinder-exact-review-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-v1-factfinder-exact-review-v1.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-v1-factfinder-exact-review-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-v1-factfinder-exact-review-v1.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-v1-factfinder-exact-review-v1.json"
+    },
+    {
+      "case": "missing:data/C013-exact-review-adoption-v1.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-exact-review-adoption-v1.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-exact-review-adoption-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-exact-review-adoption-v1.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-exact-review-adoption-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-exact-review-adoption-v1.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-exact-review-adoption-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-exact-review-adoption-v1.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-exact-review-adoption-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-exact-review-adoption-v1.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-exact-review-adoption-v1.json"
+    },
+    {
+      "case": "missing:data/C013-reviewed-pending-events-v1.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-reviewed-pending-events-v1.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-reviewed-pending-events-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-reviewed-pending-events-v1.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-reviewed-pending-events-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-reviewed-pending-events-v1.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-reviewed-pending-events-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-reviewed-pending-events-v1.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-reviewed-pending-events-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-reviewed-pending-events-v1.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-reviewed-pending-events-v1.json"
+    },
+    {
+      "case": "missing:data/C013-routing-proposal-v2.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-routing-proposal-v2.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-proposal-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-routing-proposal-v2.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-proposal-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-routing-proposal-v2.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-proposal-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-routing-proposal-v2.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-proposal-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-routing-proposal-v2.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-proposal-v2.json"
+    },
+    {
+      "case": "missing:data/C013-routing-design-factfinder-review-v1.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-routing-design-factfinder-review-v1.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-design-factfinder-review-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-routing-design-factfinder-review-v1.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-design-factfinder-review-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-routing-design-factfinder-review-v1.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-design-factfinder-review-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-routing-design-factfinder-review-v1.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-design-factfinder-review-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-routing-design-factfinder-review-v1.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-design-factfinder-review-v1.json"
+    },
+    {
+      "case": "missing:data/C013-routing-design-factomaton-recipient-assessment-v1.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-routing-design-factomaton-recipient-assessment-v1.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-design-factomaton-recipient-assessment-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-routing-design-factomaton-recipient-assessment-v1.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-design-factomaton-recipient-assessment-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-routing-design-factomaton-recipient-assessment-v1.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-design-factomaton-recipient-assessment-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-routing-design-factomaton-recipient-assessment-v1.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-design-factomaton-recipient-assessment-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-routing-design-factomaton-recipient-assessment-v1.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-routing-design-factomaton-recipient-assessment-v1.json"
+    },
+    {
+      "case": "missing:data/C013-reviewed-pending-view-v2.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-reviewed-pending-view-v2.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-reviewed-pending-view-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-reviewed-pending-view-v2.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-reviewed-pending-view-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-reviewed-pending-view-v2.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-reviewed-pending-view-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-reviewed-pending-view-v2.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-reviewed-pending-view-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-reviewed-pending-view-v2.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-reviewed-pending-view-v2.json"
+    },
+    {
+      "case": "missing:data/C013-pending-metadata-revision-v2/scope.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-pending-metadata-revision-v2/scope.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-revision-v2/scope.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-pending-metadata-revision-v2/scope.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-revision-v2/scope.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-pending-metadata-revision-v2/scope.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-revision-v2/scope.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-pending-metadata-revision-v2/scope.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-revision-v2/scope.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-pending-metadata-revision-v2/scope.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-revision-v2/scope.json"
+    },
+    {
+      "case": "missing:data/C013-pending-metadata-factfinder-review-v2.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-pending-metadata-factfinder-review-v2.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-factfinder-review-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-pending-metadata-factfinder-review-v2.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-factfinder-review-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-pending-metadata-factfinder-review-v2.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-factfinder-review-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-pending-metadata-factfinder-review-v2.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-factfinder-review-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-pending-metadata-factfinder-review-v2.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-factfinder-review-v2.json"
+    },
+    {
+      "case": "missing:data/C013-pending-metadata-factomaton-recipient-assessment-v2.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-pending-metadata-factomaton-recipient-assessment-v2.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-factomaton-recipient-assessment-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-pending-metadata-factomaton-recipient-assessment-v2.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-factomaton-recipient-assessment-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-pending-metadata-factomaton-recipient-assessment-v2.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-factomaton-recipient-assessment-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-pending-metadata-factomaton-recipient-assessment-v2.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-factomaton-recipient-assessment-v2.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-pending-metadata-factomaton-recipient-assessment-v2.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-pending-metadata-factomaton-recipient-assessment-v2.json"
+    },
+    {
+      "case": "missing:data/library-inputs.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/library-inputs.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/library-inputs.json"
+    },
+    {
+      "case": "wrong-value-type:data/library-inputs.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/library-inputs.json"
+    },
+    {
+      "case": "wrong-value-type:data/library-inputs.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/library-inputs.json"
+    },
+    {
+      "case": "wrong-value-type:data/library-inputs.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/library-inputs.json"
+    },
+    {
+      "case": "wrong-value-type:data/library-inputs.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/library-inputs.json"
+    },
+    {
+      "case": "missing:data/curation-events.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/curation-events.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/curation-events.json"
+    },
+    {
+      "case": "wrong-value-type:data/curation-events.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/curation-events.json"
+    },
+    {
+      "case": "wrong-value-type:data/curation-events.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/curation-events.json"
+    },
+    {
+      "case": "wrong-value-type:data/curation-events.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/curation-events.json"
+    },
+    {
+      "case": "wrong-value-type:data/curation-events.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/curation-events.json"
+    },
+    {
+      "case": "missing:data/query-catalog.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/query-catalog.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/query-catalog.json"
+    },
+    {
+      "case": "wrong-value-type:data/query-catalog.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/query-catalog.json"
+    },
+    {
+      "case": "wrong-value-type:data/query-catalog.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/query-catalog.json"
+    },
+    {
+      "case": "wrong-value-type:data/query-catalog.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/query-catalog.json"
+    },
+    {
+      "case": "wrong-value-type:data/query-catalog.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/query-catalog.json"
+    },
+    {
+      "case": "missing:public/library.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:public/library.json",
+      "result": "rejected",
+      "error": "input binding mismatch: public/library.json"
+    },
+    {
+      "case": "wrong-value-type:public/library.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: public/library.json"
+    },
+    {
+      "case": "wrong-value-type:public/library.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: public/library.json"
+    },
+    {
+      "case": "wrong-value-type:public/library.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: public/library.json"
+    },
+    {
+      "case": "wrong-value-type:public/library.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: public/library.json"
+    },
+    {
+      "case": "missing:data/C013-factfinder-curation-decision-v1.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-factfinder-curation-decision-v1.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-factfinder-curation-decision-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-factfinder-curation-decision-v1.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-factfinder-curation-decision-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-factfinder-curation-decision-v1.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-factfinder-curation-decision-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-factfinder-curation-decision-v1.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-factfinder-curation-decision-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-factfinder-curation-decision-v1.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-factfinder-curation-decision-v1.json"
+    },
+    {
+      "case": "missing:data/C013-curation-factomaton-recipient-assessment-v1.json",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "changed-bytes:data/C013-curation-factomaton-recipient-assessment-v1.json",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-curation-factomaton-recipient-assessment-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-curation-factomaton-recipient-assessment-v1.json:str",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-curation-factomaton-recipient-assessment-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-curation-factomaton-recipient-assessment-v1.json:bytearray",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-curation-factomaton-recipient-assessment-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-curation-factomaton-recipient-assessment-v1.json:memoryview",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-curation-factomaton-recipient-assessment-v1.json"
+    },
+    {
+      "case": "wrong-value-type:data/C013-curation-factomaton-recipient-assessment-v1.json:null",
+      "result": "rejected",
+      "error": "input binding mismatch: data/C013-curation-factomaton-recipient-assessment-v1.json"
+    },
+    {
+      "case": "extra-input-key",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "invalid-query:NoneType",
+      "result": "rejected",
+      "error": "query must be a bounded string"
+    },
+    {
+      "case": "invalid-query:bool",
+      "result": "rejected",
+      "error": "query must be a bounded string"
+    },
+    {
+      "case": "invalid-query:int",
+      "result": "rejected",
+      "error": "query must be a bounded string"
+    },
+    {
+      "case": "invalid-query:list",
+      "result": "rejected",
+      "error": "query must be a bounded string"
+    },
+    {
+      "case": "invalid-query:dict",
+      "result": "rejected",
+      "error": "query must be a bounded string"
+    },
+    {
+      "case": "invalid-query:bytes",
+      "result": "rejected",
+      "error": "query must be a bounded string"
+    },
+    {
+      "case": "invalid-query:str",
+      "result": "rejected",
+      "error": "query must be a bounded string"
+    },
+    {
+      "case": "invalid-or-nonempty-objections:True",
+      "result": "rejected",
+      "error": "current unresolved objections block preview"
+    },
+    {
+      "case": "invalid-or-nonempty-objections:False",
+      "result": "rejected",
+      "error": "current unresolved objections block preview"
+    },
+    {
+      "case": "invalid-or-nonempty-objections:{}",
+      "result": "rejected",
+      "error": "current unresolved objections block preview"
+    },
+    {
+      "case": "invalid-or-nonempty-objections:()",
+      "result": "rejected",
+      "error": "current unresolved objections block preview"
+    },
+    {
+      "case": "invalid-or-nonempty-objections:''",
+      "result": "rejected",
+      "error": "current unresolved objections block preview"
+    },
+    {
+      "case": "invalid-or-nonempty-objections:['objection']",
+      "result": "rejected",
+      "error": "current unresolved objections block preview"
+    },
+    {
+      "case": "invalid-or-nonempty-objections:[False]",
+      "result": "rejected",
+      "error": "current unresolved objections block preview"
+    },
+    {
+      "case": "null-objection-argument",
+      "result": "rejected"
+    },
+    {
+      "case": "invalid-input-container:list",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "invalid-input-container:tuple",
+      "result": "rejected",
+      "error": "exact input set required"
+    },
+    {
+      "case": "invalid-input-container:bool",
+      "result": "rejected",
+      "error": "exact input set required"
+    }
+  ],
+  "prior_22_cases": [
+    {
+      "id": "P01",
+      "classification": "eligible_positive",
+      "proposed_response": "Yes. Lightning can strike the same object or location more than once."
+    },
+    {
+      "id": "P02",
+      "classification": "eligible_positive",
+      "proposed_response": "Yes. Lightning can strike the same object or location more than once."
+    },
+    {
+      "id": "N01",
+      "classification": "eligible_negative_premise",
+      "proposed_response": "That literal claim is false: lightning can strike the same object or location more than once."
+    },
+    {
+      "id": "N02",
+      "classification": "eligible_negative_premise",
+      "proposed_response": "That literal claim is false: lightning can strike the same object or location more than once."
+    },
+    {
+      "id": "N03",
+      "classification": "eligible_rebuttal",
+      "proposed_response": "The literal never-twice claim is false: lightning can strike the same object or location more than once."
+    },
+    {
+      "id": "X01",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "X02",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "X03",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "X04",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "X05",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "X06",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "X07",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "X08",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "X09",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "X10",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "A01",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "A02",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "M01",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "T01",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "S01",
+      "classification": "unmapped",
+      "proposed_response": null
+    },
+    {
+      "id": "P03",
+      "classification": "eligible_positive",
+      "proposed_response": "Lightning can strike the same object or location more than once."
+    },
+    {
+      "id": "N04",
+      "classification": "eligible_negative_premise",
+      "proposed_response": "That literal claim is false: lightning can strike the same object or location more than once."
+    }
+  ],
+  "fresh_unmapped_adversarial_count": 15,
+  "nested_detachment_and_input_preservation": true,
+  "findings": [
+    {
+      "id": "I1",
+      "result": "reproduced",
+      "required_scope": "Ordinary object/location meaning across separate lightning events. Initiation direction is unrestricted. No identity of microscopic ground coordinates or recurrence probability is asserted.",
+      "scope_key_present": false,
+      "record_exclusions_key": "exclusions",
+      "record_exclusions": [
+        "annual building or tower counts",
+        "random-location recurrence probability",
+        "personal lightning strikes",
+        "idiomatic misfortune claims",
+        "downward-only empirical rates",
+        "counting return strokes as separate flashes",
+        "peer-review certification"
+      ],
+      "actual_excluded_scopes": null,
+      "reason": "Envelope omits scope entirely and reads nonexistent record.excluded_scopes, yielding null instead of the seven record.exclusions. Frozen input hashes do not make these absent output disclosures visible."
+    }
+  ],
+  "limits": "Hash mutations test the hash gate, not independent downstream semantics. Pure exact-query offline checks only; no source truth, current freshness, general classifier, receipt authentication or deployed/release assurance."
+}
