@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "positive": {
+    "exact_published_view_reproduced": true,
+    "changed_array_paths": [
+      "/claims/0/historical_draft_metadata/review_notes",
+      "/claims/0/limitations"
+    ],
+    "verbatim_note_moved": true,
+    "both_substantive_limits_preserved": true,
+    "all_other_values_preserved": true,
+    "reverse_reconstruction_JSON_equal": true,
+    "detached_output_and_unchanged_inputs": true,
+    "pending_withheld_and_single_noaa_group": true
+  },
+  "fresh_negative_count": 33,
+  "fresh_negative_cases": [
+    {
+      "case": "view_LF",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "record_LF",
+      "rejected": true,
+      "message": "exact frozen candidate bytes required"
+    },
+    {
+      "case": "view_BOM",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "empty_view",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "malformed_record",
+      "rejected": true,
+      "message": "exact frozen candidate bytes required"
+    },
+    {
+      "case": "swapped_inputs",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "already_revised",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "substantive_limit",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "second_limit",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "note_wording",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "note_reorder",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "note_duplicate",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "missing_metadata",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "historical_notes_nonempty",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "claim_id",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "version",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "state",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "answer",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "answer_kind",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "digest",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "revision",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "reviewer",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "receipt_missing",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "review_not_accepted",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "source_group",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "source_text",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "curation_event",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "second_claim",
+      "rejected": true,
+      "message": "exact pending-view bytes required"
+    },
+    {
+      "case": "candidate_claim",
+      "rejected": true,
+      "message": "exact frozen candidate bytes required"
+    },
+    {
+      "case": "candidate_verdict",
+      "rejected": true,
+      "message": "exact frozen candidate bytes required"
+    },
+    {
+      "case": "candidate_version",
+      "rejected": true,
+      "message": "exact frozen candidate bytes required"
+    },
+    {
+      "case": "candidate_scope",
+      "rejected": true,
+      "message": "exact frozen candidate bytes required"
+    },
+    {
+      "case": "candidate_tilori_post_revision",
+      "rejected": true,
+      "message": "exact frozen candidate bytes required"
+    }
+  ],
+  "author_replay": {
+    "checks_command": "python -B data/C013-pending-metadata-revision-v2/revise.py --check",
+    "seven_author_cases_JSON_equal": true,
+    "view_command": "python -B data/C013-pending-metadata-revision-v2/revise.py",
+    "published_view_stdout_bytes_equal": true
+  },
+  "limits": [
+    "All altered inputs reject at exact SHA256 boundary; this does not independently exercise every downstream semantic guard or prove general review/receipt authentication.",
+    "Only exact pinned offline artifact revision accepted for assessment; no live consumer or general historical-note classifier."
+  ]
+}
