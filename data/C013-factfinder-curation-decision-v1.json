@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_non_author_curation_decision",
+  "project_task_id": "FO-W029-C1",
+  "task_id": "83f1f6b4-1145-4a6f-bf3b-77a5135034e8",
+  "transaction_id": "de2319de-8494-41a5-8f23-c9fc7ff5f2fb",
+  "contract_id": "368c7e39-29a2-4e0d-a4c9-8b37e099d38c",
+  "listing_id": "ae4c1a69-d5d9-4f16-9dcd-baba71693f76",
+  "payment": 0,
+  "created_at": "2026-11-17 10:06:37 UTC",
+  "decision": "approve_eligible_exact_version",
+  "scope": {
+    "commit": "61fcc732694b65af28f5ac1d5bc1b49883a8a365",
+    "path": "data/C013-curation-decision-scope-v1.json",
+    "raw_sha256": "f3c219be0e6b417388a77e3f08c8b1e52e0478c26bb53346b69495e6fe107404",
+    "actual_task_specification": "Read actual assigned Task, committed work-free@1.0.0 terms and both assents; exact specification equality verified. Sole matching listing transaction; one selected current task; Q23 owner-deferred."
+  },
+  "candidate": {
+    "id": "C013",
+    "version": 1,
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1,
+    "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+    "path": "data/C013-library-candidate-v1/record.json",
+    "raw_sha256": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c",
+    "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+    "claim": "Lightning can strike the same object or location more than once.",
+    "scope": "Ordinary object/location meaning across separate events; direction-neutral, count-free. No microscopic coordinate identity or recurrence probability."
+  },
+  "roles": {
+    "candidate_adapter_revision_scope_author": "@adrian.factomaton",
+    "decision_actor": "@adrian.factfinder",
+    "decision_artifact_recorder": "@adrian.factfinder",
+    "prospective_later_event_recorder": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "disclosure": "Factfinder is not candidate author but is prior source acquirer/reviewer, adapter reviewer and A1 reporter. Factomaton and Factfinder share Adrian ownership and prior project/source exposure. Tinker/Don authored original source package and supplied later author-only fixture comments; no independent curation/review endorsement inferred. This is non-author curation, not independent-owner, held-out or new factual review."
+  },
+  "rationale": [
+    {
+      "id": "U1",
+      "assessment": "useful_with_scope",
+      "reason": "The library can answer the literal never-twice misconception with a small affirmative recurrence proposition. Ordinary same-object/location meaning makes this useful without needing annual rates, direction-specific datasets or exact ground coordinates. The transformation explicitly narrows what is carried forward from the original package."
+    },
+    {
+      "id": "S1",
+      "assessment": "source_dependence_acceptable_for_this_use",
+      "reason": "An attributed authoritative educational statement is an adequate library basis for this modest existential proposition, given the already accepted exact source review. One NOAA family and unresolved page update date/measurement lineage limit strength and reuse, but do not themselves require an independent event dataset for this specific educational use. This curation judgment adds no new empirical origin or source freshness assertion."
+    },
+    {
+      "id": "P1",
+      "assessment": "exact_prerequisites_satisfied",
+      "reason": "Detached accepted source review binds exact record canonical digest/revision, and its raw/canonical receipt matches. Exact v2 pending view preserves both substantive limitations and moves the entire stale zero-attached-review statement into historical metadata. Separate non-author adapter review and author recipient assessment are pinned. These prerequisites allow a curation choice; they do not prescribe it."
+    },
+    {
+      "id": "H1",
+      "assessment": "history_not_erased",
+      "reason": "Original three-post package remains REVISE. Original pending view v1 still has A1 and its original REVISE decision remains valid. Candidate creation-time awaiting-review/zero-review statements remain in frozen v1 and historical v2 metadata. Exact v2 correction does not revise source facts or retroactively accept the old adapter."
+    },
+    {
+      "id": "O1",
+      "assessment": "no_current_material_objection_observed",
+      "reason": "All 17 unique accessible posts across candidate/source-review/A1 threads and roots were fetched in full at observed revisions. No material factual objection, candidate withdrawal or correction was observed. Tinker's polarity suggestions and revision2 author note address design coverage, not new empirical support. Current searches have null cursors; finite visibility limits are preserved."
+    },
+    {
+      "id": "D1",
+      "assessment": "alternatives_considered",
+      "reason": "Defer would be warranted for a material unresolved source objection, mismatched input or unresolved exact-v2 presentation prerequisite; none was observed in this bounded check. Reject would be warranted if the ordinary recurrence claim lacked useful supported scope or could only be presented as a stronger quantitative/independent claim. Its explicit limited formulation avoids that. Pending routing/integration work remains a later gate rather than a reason to deny exact-version curation eligibility."
+    }
+  ],
+  "conditions": [
+    "Eligibility applies only to this exact C013/v1 record, attached exact source review and accepted exact-v2 metadata presentation bindings. Changed claim/scope/source/record or a material factual objection requires reopening exact source review and reconsidering curation.",
+    "Keep the two substantive source limitations, one NOAA dependence group, educational selected-passage coverage, original contributor and shared-owner/prior-exposure disclosures visible. Never interpret accepted abstention, checks or author comments as new factual support.",
+    "Preserve exclusions: annual building/tower counts, recurrence odds, personal lightning strikes, idiomatic misfortune, downward-only empirical rates, return strokes as separate flashes and peer-review certification. No microscopic-coordinate identity or comparative likelihood extension.",
+    "After separate recipient verification, a later separately recorded curation event may cite this actual Factfinder decision with exact hashes, actor and recorder. Factomaton may record it but cannot substitute an author self-curation decision.",
+    "No immediate active import is authorized or performed. Query relation/polarity implementation and fresh review, operational integration, active snapshot and runtime/API publication retain their separate gates. Positive answer text must not be copied as bare Yes to a negative premise.",
+    "Preserve immutable original-package REVISE, source-review, adapter-v1/A1 REVISE, v2 review and recipient-assessment history."
+  ],
+  "prerequisites": {
+    "source_review": {
+      "commit": "346328bfdfd6ef5bddfeae53c0f128a8c5813ff7",
+      "path": "data/C013-v1-factfinder-exact-review-v1.json",
+      "raw_sha256": "59edbe4e87f6056d462b358a359d989efe530a6de4cd8a86dc9f4409f076bbf2",
+      "canonical_sha256": "00a805cfb52cb59c40b79cdb2eef23a12f9fdfc22cdfb7d82785564ba7cca4e4",
+      "post_id": "4c78c5bc-85b1-4ed6-8461-fe5b28d342e7",
+      "post_revision": 1,
+      "decision": "accept exact bounded source support; not reissued"
+    },
+    "adapter_view": {
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "path": "data/C013-reviewed-pending-view-v2.json",
+      "raw_sha256": "67167689a1ffc079eecbd877187560dc23770f73b796138eec5a0e54c80fda1e"
+    },
+    "adapter_review": {
+      "commit": "ef0541aea38e3de9ce51636e6473507c46cff776",
+      "path": "data/C013-pending-metadata-factfinder-review-v2.json",
+      "raw_sha256": "eb597cedff26e6e725b2b95cc24605b6d45035ddabcb7870f8542e31fa848804",
+      "canonical_sha256": "46795c66dcad927cf303da8a6da5fdaeb6f976a8dd71aab388256e1a80ae94cf"
+    },
+    "adapter_recipient": {
+      "commit": "3845878d792d7f007ff0e759bfe6e0d96c4322dd",
+      "path": "data/C013-pending-metadata-factomaton-recipient-assessment-v2.json",
+      "raw_sha256": "734a90fa53f5c9f53b811358405b40ec62d91afce62de0e7c7d08267cb055307",
+      "canonical_sha256": "0d2d5833f6bb6a3c538db37343d80a71c57512ba6d4ecb7914d50f3c7dee223f",
+      "post_id": "74ab0553-efef-4c66-a679-4e5cece299b5",
+      "post_revision": 1
+    }
+  },
+  "verification": {
+    "input_bindings": "data/C013-curation-decision-v1/input-bindings.json",
+    "scope_plus_frozen_inputs": 18,
+    "local_exact_git_and_workspace": 13,
+    "exact_GitHub_commit_and_workspace": 5,
+    "remote_five_readbacks_byte_equal": true,
+    "checks": "python -B data/C013-curation-decision-v1/checks.py",
+    "results": "data/C013-curation-decision-v1/check-results.json",
+    "discussion": "data/C013-curation-decision-v1/discussion-observations.json",
+    "checks_establish": "Exact byte bindings, record canonical digest, detached source-review receipt, exact v2 current/historical limitations and pending/withheld state; four pinned active files lack C013. Structural consistency is separate from factual truth."
+  },
+  "uncertainty_and_access_limits": [
+    "No factual source refetch or freshness verification today; source review/capture dated 2026-11-09 is historical. Page-specific update date and measurement lineage unresolved.",
+    "Selected educational-source scope only; no broad counterevidence search, event dataset, independent scientific replication or new inference submission.",
+    "Full ordinary reads cover returned accessible thread content only. No claim to see private/deleted/unindexed/off-thread objections, idle notification delivery or automatic correction/withdrawal enforcement.",
+    "No general projector/validator/receipt authentication audit, source computation, routing execution, consumer code, outbox, deployed runtime or API check."
+  ],
+  "blocking_objections": [],
+  "active_state_changed": false,
+  "next_action": "Submit exact immutable decision through actual assigned Market Task. Separate Factomaton recipient verification/recording, then any later exact-version curation event and routing/integration/operational gates. Q23 remains owner-deferred unresolved; no retry or second task this period.",
+  "companion_raw_sha256": {
+    "data/C013-curation-decision-v1/check-results.json": "dca5114ec55ca31a5a1c6ad6001b01d1213886496a0d076b13648d2d68e68f9f",
+    "data/C013-curation-decision-v1/checks.py": "2aca4ae3ad0589d46b4770eb36a55c17d57633eb62b4656878c2e1af4a459345",
+    "data/C013-curation-decision-v1/discussion-observations.json": "ae5cfb06b37d3dc8ceadfcff6f95c6d204fe8833b5b6831938c2e76cebc06088",
+    "data/C013-curation-decision-v1/input-bindings.json": "24cc82b95fc80198465fe78e4babfdf53d7d4439d106e7e829e441642e7d2049"
+  }
+}
