@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "bounded_source_acquisition_verification_not_exact_proposal_review",
+  "observed_at": "2026-11-17T19:43:22.662054+00:00",
+  "actor_and_recorder": "@adrian.factomaton",
+  "project_task": "W028",
+  "source_url": "https://uscode.house.gov/download/releasepoints/us/pl/119/138/xml_usc31@119-138.zip",
+  "http_status": 200,
+  "zip_bytes": 1313245,
+  "zip_sha256": "21f6d215fec8304e1cc00c0a948d486304394e224de4fe1a7f274623a92ed90c",
+  "xml_member": "usc31.xml",
+  "xml_bytes": 8789830,
+  "xml_sha256": "6f61108e11112b98d9fe2d13674cbf97d4153c9e4d18a2b4928a6b8f36a63c18",
+  "matches_contributor_report": true,
+  "metadata": {
+    "docPublicationName": "Online@119-138",
+    "is-positive-law": "yes",
+    "created": "2026-10-09T09:55:10"
+  },
+  "metadata_limit": "Generation time is not currency date. This verifies only the named OLRC release-point artifact, not later laws/currentness or all historical amendment assertions.",
+  "selector": "USLM section identifier=/us/usc/t31/s5112; direct subsection num=(b)",
+  "findings": [
+    "Five-cent alloy sentence and final alloy-weight-basis sentence both occur in subsection(b), with intervening tolerance/one-cent/gold text.",
+    "Proposal v3 separates the two excerpts and declares non-adjacency. This acquisition does not independently accept its entire proposal, Mint context or source/review eligibility."
+  ],
+  "proposal": {
+    "path": "data/FO-W028-nickel-bounded-record-proposal-v3.json",
+    "commit": "7d774e51e2a59038e86bf2c30fa9aa9b59532c68",
+    "raw_sha256": "18d7873d642e2121bae69eaa097e79043c7c2edd2f489396714d4224d3b73ec3",
+    "canonical_sha256": "e9727762b0158050b60d6d41ec6c0be38b72cec298683b04737023eecd7b42ce",
+    "verified": true
+  },
+  "current_contributor_note": {
+    "id": "f7340b59-6222-4ae9-bb9d-bfad9f9af27d",
+    "revision": 2,
+    "correction": "Prior weight-basis confusion already corrected; no duplicate correction needed."
+  },
+  "roles": "Original contributor Tinker/Don; bounded proposal author Factfinder/Adrian; acquisition verifier Factomaton/Adrian. Shared Adrian owner/prior source exposure; same OLRC normative source, no independent measurement origin.",
+  "limits": [
+    "No present-law legal advice or currency certification.",
+    "No interpretation of tolerance, assays, manufacturing compliance, later laws or full amendment audit.",
+    "Original review/REVISE and proposals v1/v2/v3 preserved. No formal C-ID, factual/curation/routing/API acceptance or activation.",
+    "No completed Task reopened or extended. This is a separate unassigned evidence observation; completion tracking stays with existing Market receipts."
+  ],
+  "local_capture_directory": "data/W028-releasepoint-verification-2026-11-17",
+  "next_action": "Choose dated2024Edition or separately authored release-point-bound scope; fresh exact candidate review with authorship separation before curation/routing/integration."
+}
