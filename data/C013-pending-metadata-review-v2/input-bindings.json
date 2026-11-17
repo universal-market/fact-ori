@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "scope_commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+  "binding_count": 24,
+  "local_git_bindings": 20,
+  "GitHub_publication_commit_bindings": 4,
+  "bindings": [
+    {
+      "path": "data/C013-pending-metadata-revision-v2/scope.json",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "a27ba0026bd525ca81d033df309744adbc9693f5018e56cafe7e2b36eab8c9e0",
+      "local_git_equal": null,
+      "publication_commit_binding": "GitHub_exact_commit_readback"
+    },
+    {
+      "path": "data/C013-routing-proposal-input-v2.json",
+      "commit": "0044769cc907727b31ddc5613dc538ee2fafe27c",
+      "raw_sha256": "b7d8cb516f5a8dd6b3997ed496388f7a9b8be34ccec14543f60650a56ad2b342",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-routing-proposal-v2.json",
+      "commit": "0044769cc907727b31ddc5613dc538ee2fafe27c",
+      "raw_sha256": "7d7abaad621318cb1240cb1afd2d2fa2e5a3c7f0afd6aed60bedd4e70d100710",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/record.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/bundle.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "832a39e42ae62f91e030c3ea3c6aaf6cf25cb0578ee83f4931dcc2c8f879064d",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/post-revisions.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "9e20b2de9b16d80a63c185ad03cb762c640e2d9064f41f33c38d695e20b96720",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/pending-events.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "b1366f3b97c5ed77ee15fa7315e3abeaf270eb643440a64b15749cad28e278b5",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/pending-view.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "ecc257e3c5ebd755c9ae32077ba1b132253234361107518ba9897517e047d78d",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/transformation.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "39128fe3bcce95ef64640d66489fd2e3a4f142a2c48287156ca9bbc7cb48c150",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/checks.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "6753d5f0187ce94cb3275f93665a1ef51a8d0d664911f3eed7effbada3dc0aef",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/file-hashes.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "f76f5b4dbf683dd8c9c9f9dd4721e578010a08b8f51eb266d328a67e560f1e3e",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-v1-factfinder-exact-review-v1.json",
+      "commit": "346328bfdfd6ef5bddfeae53c0f128a8c5813ff7",
+      "raw_sha256": "59edbe4e87f6056d462b358a359d989efe530a6de4cd8a86dc9f4409f076bbf2",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-exact-review-attached-bundle-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "1a2be890941cadea384d3601c71bbe4082586587fedca662dace3d8c581e9972",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-exact-review-adoption-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "2a5e52dd77110c4f2b4f7aa0a193a0833571ca662e0a6c53ea271010accb45b6",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-reviewed-pending-view-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "a05a21601e291bb982288c8fc5b8a41da9b09ec0aa101dae9fe0d046b15df733",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-reviewed-pending-events-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "7d9464f5fb353852d599453b990863752a9650c724c8865924e511d3b752169f",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-routing-proposal-v1.json",
+      "commit": "e6f39c0ed45a6446a5e3bf4999c4bd28ac4f262c",
+      "raw_sha256": "cd57b0133bf2d5a6c25c8e1b964773247efbd5295984c5b30c4747a20678c6d9",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-routing-proposal-input-v1.json",
+      "commit": "e6f39c0ed45a6446a5e3bf4999c4bd28ac4f262c",
+      "raw_sha256": "5fb1b72c9bde457909732dd992d574b5b0151299fab26e35b95f37f9790d53cb",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-routing-contributor-note-r1-2026-11-15.json",
+      "commit": "0044769cc907727b31ddc5613dc538ee2fafe27c",
+      "raw_sha256": "51b43b02c86940b8e7732d731d4dd91baca01622f678c129905de0c6f3ae288d",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-routing-design-factfinder-review-v1.json",
+      "commit": "a110917a944d4e435fbc7bc892733ff6193ea4ad",
+      "raw_sha256": "906f5a91eccd011346ae30075d20117414d565fa0d4db6913bef3d04048fef28",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-routing-design-factomaton-recipient-assessment-v1.json",
+      "commit": "ed0204d1e156257fcc6d12ad173fc147d18e4bfb",
+      "raw_sha256": "8c77f0c17efc17ebfb3dd9282aebc601274a920c4145fb47d3f2ed293fc53afa",
+      "local_git_equal": true,
+      "publication_commit_binding": "local_git_object_bytes"
+    },
+    {
+      "path": "data/C013-pending-metadata-revision-v2/revise.py",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "ec2c7c59c653c840e980ee717932221d66a710466a4c7b54aec5e790c9fc1ca7",
+      "local_git_equal": null,
+      "publication_commit_binding": "GitHub_exact_commit_readback"
+    },
+    {
+      "path": "data/C013-pending-metadata-revision-v2/check-results.json",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "7db5df4355d27ea02b2224b06e3a2c4560c03ff5326410b886a6c21c9deb6534",
+      "local_git_equal": null,
+      "publication_commit_binding": "GitHub_exact_commit_readback"
+    },
+    {
+      "path": "data/C013-reviewed-pending-view-v2.json",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "67167689a1ffc079eecbd877187560dc23770f73b796138eec5a0e54c80fda1e",
+      "local_git_equal": null,
+      "publication_commit_binding": "GitHub_exact_commit_readback"
+    }
+  ]
+}
