@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "scope": "offline exact design and boundary checks only",
+  "bindings": [
+    {
+      "path": "data/C008-consumer-design-input-v1.json",
+      "commit": "f187ddaa2cae1deda2772b941aff205a077f9164",
+      "raw_sha256": "d52d8f7ba42786e9dd546b5cb19e70bf3110154bc3bfe5071aed4aec1dbeb65b",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-consumer-design-v1.json",
+      "commit": "f187ddaa2cae1deda2772b941aff205a077f9164",
+      "raw_sha256": "ed85f4a40b88b5de9bdbe59a8e56d458ab963f579f4b2aea9ba4371109e4b713",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/bundle.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "9e873f94a4bb056db3131d86c2baa995b2a309159e03ad7ccc5c65f7815e7732",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/checks.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "d1b911284ca660995175e46c0572b3b149525540f0f0d99f83aed0ed9b647d26",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/file-hashes.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "9ff8bdb2370941fdb33dbf2d12347e754f4b3276c60ec1c4ddad62ca07192516",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/pending-events.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "f38d712227f8b604f52d8b9d4b3ef638dfc8a8b5db6ebab0cbab09f256c07feb",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/post-revisions.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "78a399f3346641605167f93ae79433a6cdf7dde62dd8e455bc3dbd9d16cf64f3",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/record.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "e2788ed8ef3490f71b9412b1e7db1b79e6b755de23fd3fe18b4317f01348c321",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-factfinder-candidate-v1/transformation.json",
+      "commit": "9b11d5a911754d957d3824312da79cdf7620f592",
+      "raw_sha256": "840b7db51ceea3dc47f5010a3e2846d46ad74bafd93c93bb28c8639e73eb73a7",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C008-v1-factomaton-source-review-v1.json",
+      "commit": "0e8507ba22b8755ffdc20fd77621cc5bfdbc055e",
+      "raw_sha256": "29ffc3502787e36d43e1d191b38ae573ea98b083d32d0e874092cbb79809360f",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/curation-events.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/library-inputs.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/query-catalog.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "public/library.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "scripts/export_public_snapshot.py",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "e51acc145b8e8e7141dee73ab5ebe1e33b32d6c5b34dfa3426faf7c5ee685727",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "scripts/library_view.py",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "scripts/validate_pilot.py",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f",
+      "git_workspace_equal": true
+    }
+  ],
+  "checks": {
+    "scope_pin_count": 17,
+    "frozen_candidate_and_review_bound": true,
+    "positive_claim_contradicted_verdict_attributed_negative_answer_preserved": true,
+    "three_explicit_distinct_design_kinds": true,
+    "unique_authored_cases": 18,
+    "current_C008_answers_all_null": true,
+    "negative_interrogative_tag_and_nested_cases_no_leading_yes_no": true,
+    "single_nasa_family_and_distance_context_only": true,
+    "C009_v2_digest_and_insufficient_evidence_preserved": true,
+    "existing_C009_route_questions_unchanged": [
+      "Has anyone seen the Great Wall of China from low Earth orbit with the naked eye?",
+      "Do the reviewed sources establish that an astronaut has seen the Great Wall of China from low Earth orbit with the unaided eye?"
+    ],
+    "C008_absent_from_active_records_and_routes": true,
+    "existing_bundle_schema_errors": [],
+    "existing_projection_error": "('C008', 1): unsupported verdict"
+  },
+  "limits": [
+    "Proposed map is data inspected for semantic completeness, not executed consumer implementation.",
+    "Unknown-verdict rejection, migration/exports/schema compatibility and gate enforcement remain future implementation obligations.",
+    "No NASA refetch, optical experiment, router/alias/model/backend/deployment or factual revalidation."
+  ]
+}
