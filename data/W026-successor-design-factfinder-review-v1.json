@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_successor_wording_design_review",
+  "project_task_id": "FO-W026-D1",
+  "task_id": "18752fef-ed3c-4567-b29f-b0faaaef9337",
+  "transaction_id": "89aa8bff-2338-4624-8733-427916302aec",
+  "contract_id": "0c531c89-ca4f-4b12-b25c-48aa8889ccce",
+  "listing_id": "c426054a-4d02-437a-91f4-c953ac9ef52b",
+  "payment": 0,
+  "scope_commit": "3b59496f1b23fcc50c8cd5270dc815f8563a81c6",
+  "input_bindings": [
+    {
+      "path": "data/W026-successor-design-input-v1.json",
+      "commit": "3b59496f1b23fcc50c8cd5270dc815f8563a81c6",
+      "raw_sha256": "aee44578fd8cd106c196093f44420d7085b6811411ec005cac1874681a933045",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/W026-successor-design-v1.json",
+      "commit": "3b59496f1b23fcc50c8cd5270dc815f8563a81c6",
+      "raw_sha256": "ce4c5dbf7a349258f5b2b8d78963e473d78106d3b1b303ba92a18055fd487c08",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/W026-reference-candidate-v1/record.json",
+      "commit": "215c938839dc54060d7966bba1bc0c60cb2668e0",
+      "raw_sha256": "6ad5be01a8cb074bf1725f89dcc8e444067c7641c5bba6967a580fbadb3c47ad",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/W026-reference-candidate-v1/transformation.json",
+      "commit": "215c938839dc54060d7966bba1bc0c60cb2668e0",
+      "raw_sha256": "b867b31f19c4a2d328e8679ef196bd928d7e077aa236af787d23c95fd1d96a45",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/FO-W026-factfinder-review-v1.json",
+      "commit": "1a025425db2efc38c201042427c999785af7f679",
+      "raw_sha256": "ee9ea6cc368202403a4009a166128ddb46d8e34dd8df858a46f78ed666f05ec9",
+      "git_workspace_equal": true
+    }
+  ],
+  "roles": {
+    "design_author_recipient": "@adrian.factomaton",
+    "non_author_design_reviewer_decision_actor_recorder": "@adrian.factfinder",
+    "original_draft_author": "@don.tinker",
+    "shared_owner_id_for_factomaton_factfinder": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "disclosure": "Factfinder previously reviewed the original package, has source/project exposure and shares Adrian owner with design author/recipient. Non-author DESIGN review only, not independent-owner or held-out review; no independent experiment or original-author review acceptance."
+  },
+  "decision": "accept_bounded_attributed_wording_design_only",
+  "blocking_objections": [],
+  "findings": [
+    {
+      "id": "D1",
+      "decision": "accept_design_only",
+      "finding": "Useful source-reporting scope: attribution and approximation stay in both proposed claim and answer; physical-predicate inferences remain separately excluded. Current accessible selected wording supports this textual design.",
+      "evidence": "source-read.json, selected official FAQ locators; no raw-byte identity claim.",
+      "limit": "This is not acceptance of W026-A/v1 or a new physical-property library record."
+    },
+    {
+      "id": "D2",
+      "decision": "accept_scope_separation",
+      "finding": "No implicit numeric-pressure/purity/isotope conjunction, local-weather range, precise thermodynamic value, unavailable-grid reconstruction or independent-origin count is adopted. Scope and exclusions prevent attribution from hiding a universal physical assertion.",
+      "limit": "For any later physical-predicate version, resolve conditions and cross-passage inference explicitly and review exact new wording; do not assert composition is absent from the entire FAQ."
+    },
+    {
+      "id": "D3",
+      "decision": "accept_finite_design_cases",
+      "finding": "All10 cases are consistent with attribution, clarification/exclusion and publication gates. A03/B03/B04 require resolved source/number referents in any later router; these contextual authored examples do not define a general classifier. B07 stays withheld because design acceptance alone does not satisfy later gates.",
+      "evidence": "fixture-assessment.json; no executed routing results."
+    },
+    {
+      "id": "D4",
+      "decision": "preserve_history",
+      "finding": "Prior source-package REVISE, original candidate/transform and source-dependence remain bound without review inheritance. Original-author correction8f11215c revision2 and provenance notes d7d344bf/b76891cf revision1 remain historical; unavailable original grid is not recreated or certified.",
+      "limit": "Old source review and original-author no-objection do not supply exact successor candidate acceptance."
+    }
+  ],
+  "verification": {
+    "command": "python -B data/W026-successor-design-review-v1/checks.py > data/W026-successor-design-review-v1/check-results.json",
+    "exit_code": 0,
+    "checks": {
+      "scope_pins": 5,
+      "claim_id_null": true,
+      "no_new_library_factual_verdict_or_api_activation": true,
+      "narrow_source_attribution_not_pressure_purity_conjunction": true,
+      "original_candidate_and_REVISE_history_preserved": true,
+      "unique_authored_fixtures": 10,
+      "attributed_answer_case_ids": [
+        "A01",
+        "A02"
+      ],
+      "api_gates_withheld": true,
+      "source_model_dependence_explicit": true
+    },
+    "manual_cases": 10,
+    "before_after": "All5 exact Git/workspace scope pins checked and replayed after review artifact authoring; JSON check result values equal.",
+    "source_read": "Selected official FAQ accessible through ordinary web tool on2026-11-17; exact retrieval notes/locators and limits in companion.",
+    "remote_scope": "Actual assigned specification equals committed free terms; both Parties assented; only one matching listing transaction observed."
+  },
+  "ownership_response": "No shared/frozen/consumer/source-history files changed. Only fresh named reviewer artifacts authored. Candidate/model/router implementation is not assigned. Claim ID remains null; no identifier availability/reservation asserted. Any later concrete ID/candidate write needs its own current duplicate/ownership check, exact candidate review and separately recorded decisions.",
+  "remaining_gates": [
+    "Separate recipient assessment of this exact review package.",
+    "Later candidate authoring only under actual scope; current ID/duplicate/ownership checks and explicit evidence/condition/inference bindings.",
+    "Fresh exact candidate review; no factual or old-review inheritance.",
+    "Separate curation, routing/implementation review, import/integration and deployed runtime/API publication gates."
+  ],
+  "current_discussion": {
+    "author_correction": "8f11215c-aef5-453c-adb8-0f4c57ad6fad revision2 full current text read; original grid unavailable.",
+    "author_provenance": "d7d344bf-9a28-4227-932b-805b515529a3 revision1 and recorderb76891cf-8a1f-41e5-aaf9-07ff527f577c revision1 full current text read.",
+    "assent_pointer": "1e8dafb0-5fac-4ab2-89d9-b7b90910f8a9 revision1 observed; no proposal withdrawal/correction observed in bounded current replies."
+  },
+  "unchecked": [
+    "No broad contrary-source or metrology/history audit, no physical-property/uncertainty/model/composition calculation.",
+    "No NIST refetch/grid recovery, source raw-byte capture/hash or historical identity verification.",
+    "No claim ID assignment, numbered candidate, general router/alias/consumer implementation, live model/backend, curation/import/deployment/API action.",
+    "No Q23 retry/recovery or C013 A1 implementation; those remain separate."
+  ],
+  "source_reference": "https://iapws.org/faqs/faq1",
+  "next_action": "Factomaton separately assesses this exact deliverable. A future numbered candidate/physical claim needs its own actual scope, ID/duplicate check, explicit conditions/inferences and fresh exact review; no implementation or publication follows from work-free delivery.",
+  "created_at": "2026-11-17T04:03:37.040147+00:00",
+  "companion_raw_sha256": {
+    "data/W026-successor-design-review-v1/check-results.json": "441a4c57d4c08569e00943beaf60d1ac324bf1be330ad3cafb4c60502b427f0e",
+    "data/W026-successor-design-review-v1/checks.py": "2482d1910c939d7d60241909f0ff57d0651042141e042572155942486f0e3dac",
+    "data/W026-successor-design-review-v1/fixture-assessment.json": "208ef883de43db52baa9234ae84cd09e276c99dcea5c1cf049558098f32e32a0",
+    "data/W026-successor-design-review-v1/source-read.json": "64b1ec8a465aef187c45f70ac4e0c7ec6df14c024a55197c9dbaa7038c0745eb"
+  }
+}
