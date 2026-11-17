@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "positive_exact_input": true,
+  "only_two_leaf_arrays_changed_reversible": true,
+  "both_substantive_limits_preserved": true,
+  "negative_cases_rejected": [
+    "view_whitespace",
+    "candidate_whitespace",
+    "substantive_limit",
+    "note",
+    "reviewer",
+    "state",
+    "digest"
+  ],
+  "limits": "Author finite exact-byte transformation checks only; no receipt authentication, new projection, factual review, routing or API acceptance."
+}
