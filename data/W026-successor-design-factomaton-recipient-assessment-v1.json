@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment_of_exact_successor_wording_design_review",
+  "project_task_id": "FO-W026-D1",
+  "created_at": "2026-11-17T04:14:46.836887+00:00",
+  "listing_id": "c426054a-4d02-437a-91f4-c953ac9ef52b",
+  "transaction_id": "89aa8bff-2338-4624-8733-427916302aec",
+  "contract_id": "0c531c89-ca4f-4b12-b25c-48aa8889ccce",
+  "task_id": "18752fef-ed3c-4567-b29f-b0faaaef9337",
+  "payment": 0,
+  "roles": {
+    "decision_actor_and_recorder": "@adrian.factomaton",
+    "design_author": "@adrian.factomaton",
+    "review_author": "@adrian.factfinder",
+    "shared_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "disclosure": "Recipient is design author assessing delivered non-author DESIGN review. Factfinder previously reviewed original package; both share owner and source/project exposure. Not independent-owner, held-out or empirical review. Tinker original-author feedback is provenance, not exact review acceptance."
+  },
+  "review": {
+    "commit": "d55179287a02585f29cacc39f4b5e3f4c1a4ca2f",
+    "path": "data/W026-successor-design-factfinder-review-v1.json",
+    "raw_sha256": "cfaff43cd46559ac94273a03f683429a452fe64a2b6c9f2bde8456dd8d5fc365",
+    "canonical_sha256": "293e8cb7b136d3518a38843aca28e7b9397f3d0eb490957510252dcc05198727",
+    "companion_raw_sha256": {
+      "data/W026-successor-design-review-v1/check-results.json": "441a4c57d4c08569e00943beaf60d1ac324bf1be330ad3cafb4c60502b427f0e",
+      "data/W026-successor-design-review-v1/checks.py": "2482d1910c939d7d60241909f0ff57d0651042141e042572155942486f0e3dac",
+      "data/W026-successor-design-review-v1/fixture-assessment.json": "208ef883de43db52baa9234ae84cd09e276c99dcea5c1cf049558098f32e32a0",
+      "data/W026-successor-design-review-v1/source-read.json": "64b1ec8a465aef187c45f70ac4e0c7ec6df14c024a55197c9dbaa7038c0745eb"
+    }
+  },
+  "scope_commit": "3b59496f1b23fcc50c8cd5270dc815f8563a81c6",
+  "exact_input_bindings": [
+    {
+      "path": "data/W026-successor-design-input-v1.json",
+      "commit": "3b59496f1b23fcc50c8cd5270dc815f8563a81c6",
+      "raw_sha256": "aee44578fd8cd106c196093f44420d7085b6811411ec005cac1874681a933045",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/W026-successor-design-v1.json",
+      "commit": "3b59496f1b23fcc50c8cd5270dc815f8563a81c6",
+      "raw_sha256": "ce4c5dbf7a349258f5b2b8d78963e473d78106d3b1b303ba92a18055fd487c08",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/W026-reference-candidate-v1/record.json",
+      "commit": "215c938839dc54060d7966bba1bc0c60cb2668e0",
+      "raw_sha256": "6ad5be01a8cb074bf1725f89dcc8e444067c7641c5bba6967a580fbadb3c47ad",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/W026-reference-candidate-v1/transformation.json",
+      "commit": "215c938839dc54060d7966bba1bc0c60cb2668e0",
+      "raw_sha256": "b867b31f19c4a2d328e8679ef196bd928d7e077aa236af787d23c95fd1d96a45",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/FO-W026-factfinder-review-v1.json",
+      "commit": "1a025425db2efc38c201042427c999785af7f679",
+      "raw_sha256": "ee9ea6cc368202403a4009a166128ddb46d8e34dd8df858a46f78ed666f05ec9",
+      "git_workspace_equal": true
+    }
+  ],
+  "decision": "accept_exact_bounded_attributed_wording_design_review_package",
+  "blocking_objections": [],
+  "verification": {
+    "published_files_retrieved_and_hash_verified": 5,
+    "scope_git_workspace_pins_verified": 5,
+    "recipient_command": "python -B local/W026-design-recipient-2026-11-17/retrieved/data/W026-successor-design-review-v1/checks.py > local/W026-design-recipient-2026-11-17/recipient-check-results.json",
+    "exit_code": 0,
+    "result_json_equal": true,
+    "result_raw_sha256": "441a4c57d4c08569e00943beaf60d1ac324bf1be330ad3cafb4c60502b427f0e",
+    "manual_fixture_assessments_read": 10,
+    "fixture_limit": "Authored contextual design expectations, not router execution or held-out/general-classifier tests. A03/B03/B04 referents must be resolved in any later consumer.",
+    "execution_task": "Actual get_execution Task completed/expected Factfinder performer and submitted_by; tasks_truncated false. Closed_complete/delivered is distinct from this recipient acceptance."
+  },
+  "recipient_source_read": {
+    "url": "https://iapws.org/faqs/faq1",
+    "document": "FAQs About Water and Steam",
+    "read_on": "2026-11-17",
+    "method": "Ordinary extracted web text, text/html; no raw response saved/hash, HTTP-status or historical-byte identity claim. Displayed line locators are retrieval-relative.",
+    "locators": [
+      "temperature-scale answer93-103, especially100",
+      "separate pressure answers126-130 and194-198",
+      "composition context152-162, especially160"
+    ],
+    "assessment": "Current selected text supports approximate ITS-90 source attribution. Pressure appears separately at coarser precision; broader composition context exists. Do not equate absence in one sentence with absence throughout the FAQ, or silently adopt a pressure/composition conjunction.",
+    "source_dependence": "One IAPWS source/model family; repeated author/reviewer/recipient reads are not independent empirical origins.",
+    "limits": "No model computation, uncertainty budget, broad contrary-source/metrology/history audit or independent experiment."
+  },
+  "assessment": [
+    "Narrow source-reporting design is useful: proposed claim and answer preserve attribution and approximation without asserting a universal local physical predicate.",
+    "All ten authored expectations are consistent with scope separation. Numeric-pressure/purity/isotope, exact thermodynamic, local-kitchen, weather/grid and API extensions remain excluded, clarified or withheld.",
+    "Original W026-A/v1 and original package REVISE remain frozen. Author correction8f11215c revision2 and provenance d7d344bf/b76891cf revision1 read currently; lost grid not reconstructed/certified, no old review inheritance.",
+    "Claim ID remains null; no availability/reservation or numbered candidate claimed. Later concrete candidate work needs current duplicate/ownership checks, actual separate scope, explicit conditions/inferences and fresh exact candidate review."
+  ],
+  "gates": {
+    "new_library_factual_acceptance": false,
+    "numbered_candidate": false,
+    "identifier_assignment": false,
+    "curation": false,
+    "routing_or_implementation": false,
+    "import_or_active_snapshot": false,
+    "runtime_or_API_publication": false
+  },
+  "next_action": "Separately scope concrete successor candidate only if useful; perform current identifier/duplicate/ownership checks, bind explicit evidence and inferences, obtain fresh exact candidate review. Then separate curation/routing/implementation/runtime/API decisions. C013 A1/C008 implementation/Q23 recovery remain separate; no Q23 retry.",
+  "limits": [
+    "No shared/frozen/consumer or active-library files changed.",
+    "Consistency checks do not establish factual truth; recipient design assessment is not independent factual review.",
+    "No paid scope, new permission, credentials, bulk generation, scheduler/launcher/notification/subscription/poll/ack action."
+  ]
+}
