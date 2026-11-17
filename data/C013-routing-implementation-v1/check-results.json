@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "prior_design_cases": 22,
+  "eligible_exact_queries": 7,
+  "noneligible_withheld": 15,
+  "byte_and_objection_rejections": 23,
+  "unmapped_adversarial_queries": 6,
+  "detached_return": true,
+  "limits": "Authored exact-query offline checks only; no general language classification, factual proof, receipt authentication, live routing or release."
+}
