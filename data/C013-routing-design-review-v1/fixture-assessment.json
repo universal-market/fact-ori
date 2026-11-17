@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "fixture_id": "P01",
+      "query": "Can lightning strike the same place twice?",
+      "classification": "eligible_positive",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Ordinary recurrence possibility; affirmative declaration includes full supported proposition.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "P02",
+      "query": "Can lightning strike the same object more than once?",
+      "classification": "eligible_positive",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Same-object formulation stays within ordinary location/object scope.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "N01",
+      "query": "Lightning never strikes the same place twice. True?",
+      "classification": "eligible_negative_premise",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Rejects literal universal never-twice premise; does not copy positive Yes.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "N02",
+      "query": "Is it true that lightning cannot strike the same place twice?",
+      "classification": "eligible_negative_premise",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Explicit false-premise declaration rebuts cannot-recur modal.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "N03",
+      "query": "Is the claim that lightning never strikes twice false?",
+      "classification": "eligible_rebuttal",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Answers whether never-twice is false declaratively; no inverted short answer.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "X01",
+      "query": "Are tall objects more likely to be struck?",
+      "classification": "outside_scope",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Comparative likelihood is outside existential recurrence.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "X02",
+      "query": "How many times each year is the Empire State Building struck?",
+      "classification": "outside_scope",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Annual counts are excluded.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "X03",
+      "query": "What is the chance lightning will strike this spot again?",
+      "classification": "outside_scope",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Probability at this spot is excluded.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "X04",
+      "query": "Does lightning hit precisely the same microscopic ground coordinates twice?",
+      "classification": "outside_scope",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Microscopic coordinate identity is excluded.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "X05",
+      "query": "How many downward flashes strike the same location?",
+      "classification": "outside_scope",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Direction-specific counts are excluded.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "X06",
+      "query": "Can the same person be struck by lightning twice?",
+      "classification": "outside_scope",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Personal-strike referent is excluded.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "X07",
+      "query": "Do two return strokes count as two independent lightning events?",
+      "classification": "outside_scope",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Event/return-stroke counting definition is excluded.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "X08",
+      "query": "Does lightning always strike the same place twice?",
+      "classification": "outside_scope",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Always is stronger than can; universal recurrence is unsupported.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "X09",
+      "query": "Does lightning strike the same place exactly twice?",
+      "classification": "outside_scope",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Exactly-twice cardinality is unsupported.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "X10",
+      "query": "Does misfortune never happen to someone twice?",
+      "classification": "outside_scope",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Misfortune idiom has a different predicate and referent.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "A01",
+      "query": "Does it strike twice?",
+      "classification": "clarify_referent",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Pronoun referent unresolved; clarify.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "A02",
+      "query": "Is it not untrue that lightning cannot never strike twice?",
+      "classification": "clarify_polarity",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Nested polarity ambiguous; clarify rather than strip negation.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "M01",
+      "query": "Can lightning strike twice, and does that make standing there safe?",
+      "classification": "compound_outside_scope",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Compound safety entailment unsupported; entire C013 answer withheld.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "T01",
+      "query": "Did lightning hit this tower twice yesterday?",
+      "classification": "outside_scope",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Specific historical event not established by generic possibility.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "S01",
+      "query": "Do these sources prove independently replicated recurrence probabilities?",
+      "classification": "outside_scope",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "One educational origin does not establish independently replicated probabilities.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "P03",
+      "query": "Can't lightning strike the same place twice?",
+      "classification": "eligible_positive",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Negative interrogative answered by capability declaration without Yes/No ambiguity.",
+      "router_executed": false
+    },
+    {
+      "fixture_id": "N04",
+      "query": "Lightning never strikes the same place twice, right?",
+      "classification": "eligible_negative_premise",
+      "decision": "accept_as_finite_authored_design_case",
+      "reason": "Myth tag question receives explicit false-premise rebuttal.",
+      "router_executed": false
+    }
+  ],
+  "scope": "Manual semantic assessment against frozen accepted predicate and explicit exclusions, not new factual revalidation or general classifier validation.",
+  "fixture_count": 22,
+  "held_out": false
+}
