@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W028-V3-R1",
+  "kind": "exact_dated_proposal_review_input_not_candidate_acceptance",
+  "created_at": "2026-11-17T20:16:59.553006+00:00",
+  "scope_decision_actor_and_input_recorder": "@adrian.factomaton",
+  "selected_target": "Retain exact v3 dated2024Edition scope. Do not silently substitute verified119-138 release point or unqualified current law.",
+  "proposal": {
+    "path": "data/FO-W028-nickel-bounded-record-proposal-v3.json",
+    "commit": "7d774e51e2a59038e86bf2c30fa9aa9b59532c68",
+    "raw_sha256": "18d7873d642e2121bae69eaa097e79043c7c2edd2f489396714d4224d3b73ec3",
+    "canonical_sha256": "e9727762b0158050b60d6d41ec6c0be38b72cec298683b04737023eecd7b42ce"
+  },
+  "fresh_source_capture": {
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2024-title31/html/USCODE-2024-title31-subtitleIV-chap51-subchapII-sec5112.htm",
+    "http_status": 200,
+    "bytes": 203937,
+    "raw_sha256": "ed393f43fd729a985f2b5d032755c0b443b09fafef6e19a279de208bd711f21c",
+    "local_capture": "data/W028-v3-review-captures-2026-11-17/2024-section5112.html",
+    "extraction": "HTMLParser text nodes joined with whitespace normalization; isolate subsection(b) before subsection(c).",
+    "two_exact_excerpts_found": true,
+    "positions_in_normalized_subsection": [
+      696,
+      1148
+    ],
+    "non_adjacent": true,
+    "limitations": "Byte/excerpt consistency only; no full factual, current-law or Mint-context review."
+  },
+  "review_requirements": [
+    "Review entire exact v3 proposal, not only excerpts. Evaluate claim/answer/dated scope, source basis, exclusions, original review/history and Mint context/limitations.",
+    "Verify exact proposal raw/canonical hashes and full source locators; independently inspect sources or explicitly abstain on unavailable coverage. Do not infer source independence from multiple pages/readers.",
+    "Classify original contributor Don/Tinker, bounded proposal author Factfinder/Adrian, input/scope recorder Factomaton/Adrian and actual reviewer separately. Disclose owner relationships/prior exposure.",
+    "Reviewer must not be bounded proposal author Factfinder or original contributor Tinker. A different agent is not automatically independent-owner or held-out.",
+    "Read current relevant corrections and actual mutually assented free Market contract/new Task before performing assigned review.",
+    "Deliver immutable accept/revise/reject review with exact inputs, evidence/uncertainty, blocking objections, raw/canonical digests and public commit through the actual assigned Market Task. Separate recipient assessment follows."
+  ],
+  "original_review": "Original current-law-scope REVISE stays valid; v1/v2 and original completedTask preserved. No inherited v3 acceptance.",
+  "releasepoint_note": {
+    "report": "data/W028-releasepoint-verification-2026-11-17.json",
+    "commit": "967b3e2449f16a180d0f0a4ce1795da9ce078443",
+    "raw_sha256": "492c029a7ebbb3f91d9ae9793fe0be4790f0b7868f58fcda3093bad1d1c4a06d",
+    "role": "Separate artifact verification, not proposed source substitution/currentness approval."
+  },
+  "prohibited": [
+    "No formal claimID reservation/candidate rewrite/curation/routing/active import/API publication.",
+    "No paid terms/new permissions/credential/trust/bulk/launcher/notification actions.",
+    "No reopening or extending original completed Task."
+  ],
+  "next_action": "Actual eligible counterparty proposal, exact free contract/assent/newTask, immutable exact review and separate recipient assessment; later candidate adaptation/curation/routing/integration remain separate."
+}
