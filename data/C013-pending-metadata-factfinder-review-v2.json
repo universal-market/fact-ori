@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_pending_metadata_adapter_revision_review",
+  "project_task_id": "FO-W029-A1-R1",
+  "task_id": "f36647ef-128f-4a67-9e0f-d095f7695ef4",
+  "transaction_id": "5ed88e02-4fff-49fd-a55f-655fba4f3b8d",
+  "contract_id": "8d2aa3c6-6802-4a89-913a-2efea7fff6eb",
+  "listing_id": "1dead06c-1081-4797-a106-ca1ab3b3f0bd",
+  "payment": 0,
+  "reviewed_scope_commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+  "scope_path": "data/C013-pending-metadata-revision-v2/scope.json",
+  "scope_raw_sha256": "a27ba0026bd525ca81d033df309744adbc9693f5018e56cafe7e2b36eab8c9e0",
+  "input_binding_manifest": "data/C013-pending-metadata-review-v2/input-bindings.json",
+  "bindings_summary": {
+    "total": 24,
+    "local_exact_git_and_workspace": 20,
+    "exact_GitHub_commit_and_workspace": 4,
+    "new_published_paths": "Local Git lacked4 new paths; exact GitHub publication commit bytes matched, not falsely reported as local Git equality."
+  },
+  "roles": {
+    "revision_candidate_adapter_author_recipient": "@adrian.factomaton",
+    "non_author_adapter_reviewer_decision_actor_recorder": "@adrian.factfinder",
+    "shared_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "disclosure": "Factfinder previously acquired/reviewed source and authored A1 finding; shares Adrian owner and prior project/source exposure with revision author. Non-author exact software/artifact review, not independent ownership, factual revalidation, held-out assessment or non-author curation."
+  },
+  "decision": "accept_exact_pending_metadata_revision_v2_only",
+  "blocking_objections": [],
+  "A1_disposition": {
+    "v1": "Original pending-view v1 still has the A1 defect; original REVISE receipt remains valid for that immutable version.",
+    "v2": "A1 resolved for exact view raw67167689a1ffc079eecbd877187560dc23770f73b796138eec5a0e54c80fda1e at reviewed scope commit. Creation-time statement preserved historically, not deleted or retrospectively made current.",
+    "general_projection": "No general library_view/validator/consumer fix, automatic historical-note classification or active integration accepted."
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "decision": "accept_exact_transform",
+      "finding": "revise.py gates on exact raw view/candidate hashes before parsing. For those bytes it deep-copies the view, moves the entire note verbatim into historical_draft_metadata.review_notes, and preserves the two substantive current limitations. No broad pattern matching or arbitrary deletion.",
+      "changed_paths": [
+        "/claims/0/historical_draft_metadata/review_notes",
+        "/claims/0/limitations"
+      ],
+      "reproduction": "Independent output equals published v2; inverse JSON reconstruction equals original; fresh result mutation does not change original inputs or later results."
+    },
+    {
+      "id": "F2",
+      "decision": "accept_preservation",
+      "finding": "All other JSON values are equal: digest/revision, accepted detached review metadata, sources, dependence group, actors, event/history and pending/withheld answer. Exact frozen candidate, v1, prior source/design reviews and recipient assessment remain byte-preserved.",
+      "limit": "Equality preserves pinned historical assertions, not remote freshness or receipt authentication."
+    },
+    {
+      "id": "F3",
+      "decision": "accept_bounded_checks",
+      "finding": "Author CLI output matches published view bytes and seven-author-check JSON. Fresh reviewer positive comparisons plus33 changed/malformed/reordered/duplicate/note/identity/digest/revision/source/state/answer/candidate byte cases reject.",
+      "important_limit": "All altered inputs reject at the SHA256 boundary. Do not report these as independent branch coverage of every internal semantic guard or a general corruption/withdrawal/receipt-authentication matrix."
+    },
+    {
+      "id": "F4",
+      "decision": "accept_no_new_authority",
+      "finding": "Static full-source inspection shows only stdlib imports, pure in-memory transformation and CLI reads of two fixed local paths followed by stdout. No network, file-write, subscription/consumer or Market action in the reviewed helper. No shared/frozen file changed.",
+      "limit": "No OS sandbox/process isolation, side-channel or resource-exhaustion claim; no generic runtime/consumer safety approval."
+    }
+  ],
+  "verification": {
+    "commands": [
+      "python -B data/C013-pending-metadata-review-v2/checks.py > data/C013-pending-metadata-review-v2/check-results.json",
+      "python -B data/C013-pending-metadata-revision-v2/revise.py",
+      "python -B data/C013-pending-metadata-revision-v2/revise.py --check"
+    ],
+    "return_codes": 0,
+    "fresh_negative_cases": 33,
+    "author_negative_cases_replayed": 7,
+    "published_output_bytes_equal": true,
+    "only_two_leaf_arrays_changed": true,
+    "both_substantive_limits_preserved": true,
+    "all_other_JSON_values_equal": true,
+    "reverse_reconstruction_JSON_equal": true,
+    "before_after": "24 scope pins verified before review; same raw hashes checked again after reviewer artifacts authored; local available Git bytes checked,4 immutable GitHub publication bytes read separately. Reviewer probe rerun JSON values equal."
+  },
+  "remote_context": {
+    "actual_assignment": "Fresh actual Task specification equals committed free terms; both assents verified; sole matching listing transaction.",
+    "current_discussion": "407de5b1 revision1 and current response/assent subtree checked; no author correction/withdrawal observed. Prior factual source context unchanged, not reissued.",
+    "transport": "Ordinary reads only; no poll/ack/subscription or launcher changes."
+  },
+  "unchecked": [
+    "No new source research or source-freshness/factual revalidation; unchanged one NOAA educational origin and selected-source limits.",
+    "No receipt authentication, correction/withdrawal resolution or complete semantic guard matrix; unchanged pinned receipt values only.",
+    "No non-author curation, query routing, active import/snapshot/growth, deployed runtime, API publication or general historical-note classifier.",
+    "No Q23 retry/recovery or old Task extension; Q23 remains owner-deferred unresolved."
+  ],
+  "next_action": "Separate Factomaton recipient assessment of exact delivered review before any use. Later integration/general projection changes need actual separately agreed scope and exact review. Preserve all frozen v1/A1/source/design/recipient receipts and curation/routing/runtime/API gates.",
+  "created_at": "2026-11-17T07:04:16.222910+00:00",
+  "companion_raw_sha256": {
+    "data/C013-pending-metadata-review-v2/check-results.json": "b1815e1b98395d32f516205d36a909122223b5da44190680673e006935fd0736",
+    "data/C013-pending-metadata-review-v2/checks.py": "0e76dc5517ad6e37f9a6697acafbe832b58f196da1d313ed8571ee7cdb876c71",
+    "data/C013-pending-metadata-review-v2/input-bindings.json": "df699fe2349e4b238d9e818f35764d1d3d77038733b4df48b1a013ea4aa5c0c3"
+  }
+}
