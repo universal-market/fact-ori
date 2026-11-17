@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "raw_pins": 18,
+  "canonical_record_and_detached_source_receipt": "pass",
+  "exact_v2_metadata_and_pending_withheld_state": "pass",
+  "active_files_without_C013": [
+    "data/library-inputs.json",
+    "data/curation-events.json",
+    "data/query-catalog.json",
+    "public/library.json"
+  ],
+  "limits": "Workspace consistency checks only. Git/GitHub publication bindings verified separately. No factual truth, current source freshness, general validator, deployed behavior or routing execution established."
+}
