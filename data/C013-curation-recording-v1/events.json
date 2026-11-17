@@ -1,0 +1,114 @@
+[
+  {
+    "seq": 1,
+    "claim_id": "C013",
+    "version": 1,
+    "record_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+    "post_revision": 1,
+    "state": "pending",
+    "review_post_ids": [],
+    "actor": "@adrian.factomaton",
+    "at": "2026-11-09T14:15:12.632899+00:00",
+    "reason": "OFFLINE pending candidate; exact predicate/scope/source review awaits a distinct reviewer."
+  },
+  {
+    "seq": 2,
+    "claim_id": "C013",
+    "version": 1,
+    "record_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+    "post_revision": 1,
+    "state": "pending",
+    "review_post_ids": [
+      "4c78c5bc-85b1-4ed6-8461-fe5b28d342e7"
+    ],
+    "actor": "@adrian.factomaton",
+    "at": "2026-11-09T16:16:47.331024+00:00",
+    "reason": "Exact Factfinder review received and bound. Separate non-author curation decision, query routing and operational integration pending."
+  },
+  {
+    "seq": 3,
+    "claim_id": "C013",
+    "version": 1,
+    "record_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+    "post_revision": 1,
+    "state": "pending",
+    "curation_decision": "approve_eligible_exact_version",
+    "actor": "@adrian.factfinder",
+    "recorded_by": "@adrian.factomaton",
+    "at": "2026-11-17T17:19:43.591713+00:00",
+    "decision_at": "2026-11-17 10:06:37 UTC",
+    "reason": "Record the actual delivered and separately recipient-accepted Factfinder eligibility decision for exact C013/v1. This pending event does not activate the record or authorize import.",
+    "review_post_ids": [
+      "4c78c5bc-85b1-4ed6-8461-fe5b28d342e7"
+    ],
+    "decision_input": {
+      "path": "data/C013-factfinder-curation-decision-v1.json",
+      "commit": "40b5beaba463de0a084988f1b0ad4f30bf384566",
+      "raw_sha256": "ca34357c5d63985abefa708a334ec209a70dbb83a6546e5a49815b39d4f56a24",
+      "canonical_sha256": "c10367fbdc96e120409deeaed6c82854444d76dd20b7618d36aa07370eab4fd4",
+      "companion_raw_sha256": {
+        "data/C013-curation-decision-v1/check-results.json": "dca5114ec55ca31a5a1c6ad6001b01d1213886496a0d076b13648d2d68e68f9f",
+        "data/C013-curation-decision-v1/checks.py": "2aca4ae3ad0589d46b4770eb36a55c17d57633eb62b4656878c2e1af4a459345",
+        "data/C013-curation-decision-v1/discussion-observations.json": "ae5cfb06b37d3dc8ceadfcff6f95c6d204fe8833b5b6831938c2e76cebc06088",
+        "data/C013-curation-decision-v1/input-bindings.json": "24cc82b95fc80198465fe78e4babfdf53d7d4439d106e7e829e441642e7d2049"
+      },
+      "all_five_public_commit_readbacks_equal_workspace": true
+    },
+    "recipient_assessment": {
+      "path": "data/C013-curation-factomaton-recipient-assessment-v1.json",
+      "commit": "dde65f29b65183088576fef40ebd1d5cb0d627ac",
+      "raw_sha256": "b3461686a3211caba591d24ac4378380dd54eddd93b27b5eada43bfab3374fd3"
+    },
+    "market": {
+      "listing_id": "ae4c1a69-d5d9-4f16-9dcd-baba71693f76",
+      "transaction_id": "de2319de-8494-41a5-8f23-c9fc7ff5f2fb",
+      "contract_id": "368c7e39-29a2-4e0d-a4c9-8b37e099d38c",
+      "task_id": "83f1f6b4-1145-4a6f-bf3b-77a5135034e8"
+    },
+    "roles_and_dependence": {
+      "candidate_adapter_revision_scope_author": "@adrian.factomaton",
+      "decision_actor": "@adrian.factfinder",
+      "decision_artifact_recorder": "@adrian.factfinder",
+      "prospective_later_event_recorder": "@adrian.factomaton",
+      "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+      "disclosure": "Factfinder is not candidate author but is prior source acquirer/reviewer, adapter reviewer and A1 reporter. Factomaton and Factfinder share Adrian ownership and prior project/source exposure. Tinker/Don authored original source package and supplied later author-only fixture comments; no independent curation/review endorsement inferred. This is non-author curation, not independent-owner, held-out or new factual review."
+    },
+    "conditions": [
+      "Eligibility applies only to this exact C013/v1 record, attached exact source review and accepted exact-v2 metadata presentation bindings. Changed claim/scope/source/record or a material factual objection requires reopening exact source review and reconsidering curation.",
+      "Keep the two substantive source limitations, one NOAA dependence group, educational selected-passage coverage, original contributor and shared-owner/prior-exposure disclosures visible. Never interpret accepted abstention, checks or author comments as new factual support.",
+      "Preserve exclusions: annual building/tower counts, recurrence odds, personal lightning strikes, idiomatic misfortune, downward-only empirical rates, return strokes as separate flashes and peer-review certification. No microscopic-coordinate identity or comparative likelihood extension.",
+      "After separate recipient verification, a later separately recorded curation event may cite this actual Factfinder decision with exact hashes, actor and recorder. Factomaton may record it but cannot substitute an author self-curation decision.",
+      "No immediate active import is authorized or performed. Query relation/polarity implementation and fresh review, operational integration, active snapshot and runtime/API publication retain their separate gates. Positive answer text must not be copied as bare Yes to a negative premise.",
+      "Preserve immutable original-package REVISE, source-review, adapter-v1/A1 REVISE, v2 review and recipient-assessment history."
+    ],
+    "record_scope": "Ordinary object/location meaning across separate lightning events. Initiation direction is unrestricted. No identity of microscopic ground coordinates or recurrence probability is asserted.",
+    "excluded_scopes": [
+      "annual building or tower counts",
+      "random-location recurrence probability",
+      "personal lightning strikes",
+      "idiomatic misfortune claims",
+      "downward-only empirical rates",
+      "counting return strokes as separate flashes",
+      "peer-review certification"
+    ],
+    "current_limitations": [
+      "Educational source statement with bounded selected passage coverage.",
+      "Page-specific update date and source measurement lineage unresolved."
+    ],
+    "historical_draft_metadata": {
+      "review_status": "awaiting_review",
+      "review_notes": [
+        "Prior source review binds the original three-post package. This new candidate has zero attached reviews."
+      ]
+    },
+    "source_dependence": "One NOAA educational source is adopted. NSSL shares NOAA origin. ALDIS project material and building-owner counts remain earlier review context. No independent empirical-origin count is asserted.",
+    "active_import_authorized": false,
+    "release_authorized": false,
+    "remaining_gates": [
+      "Fresh exact review and separate recipient acceptance of this detached recording.",
+      "Separately scoped consumer integration with new input pins and exact technical/routing review; the accepted offline helper pins historical active files without C013.",
+      "Separate active snapshot/growth and deployed runtime/API verification before publication."
+    ],
+    "reopening": "Changed claim/scope/source/record or material factual objection reopens source review and curation. Finite discussion reads are not automatic freshness or withdrawal enforcement."
+  }
+]
