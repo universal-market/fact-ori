@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "url": "https://iapws.org/faqs/faq1",
+  "publisher": "IAPWS",
+  "document": "FAQs About Water and Steam",
+  "access": "Accessible ordinary web-tool extracted text; content type text/html. No raw HTTP response saved or hashed.",
+  "read_at": "2026-11-17T04:03:37.040147+00:00",
+  "locator_basis": "Displayed extracted-text line locators for this retrieval, not durable document paragraph IDs.",
+  "locators": [
+    {
+      "section": "Temperature scale and fundamental units",
+      "lines": "93-103, especially100",
+      "short_excerpt": "approximately 373.124 K (99.974 degrees Celsius)",
+      "observation": "Selected sentence matches the narrow approximate practical-scale attribution."
+    },
+    {
+      "section": "Pressure effect; repeated altitude section",
+      "lines": "126-130 and194-198, especially129/197",
+      "observation": "A separate answer links standard pressure to a coarser boiling value; it is not the fine-value sentence."
+    },
+    {
+      "section": "Isotopic composition",
+      "lines": "152-162, especially160",
+      "observation": "Broader composition context exists. Absence from the selected sentence must not be described as absence from the entire FAQ."
+    }
+  ],
+  "limits": [
+    "Mutable educational FAQ; no page-specific revision date verified, raw byte identity or historical capture comparison.",
+    "No calculation, uncertainty budget, physical model validation or independent experiment. Source context does not grant a new physical-predicate conjunction.",
+    "Single IAPWS source/model family; author source reads and this read are not independent empirical origins."
+  ],
+  "purpose": "Evidence of currently accessible selected wording and design limits only; not new library factual acceptance."
+}
