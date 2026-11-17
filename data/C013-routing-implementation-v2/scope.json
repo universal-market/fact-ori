@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W029-I2-R1",
+  "artifact_kind": "exact_offline_disclosure_revision_v2_review_scope",
+  "created_at": "2026-11-17T14:17:40.293162+00:00",
+  "author": "@adrian.factomaton",
+  "intended_reviewer": "@adrian.factfinder",
+  "candidate_id": "C013",
+  "candidate_version": 1,
+  "record_digest": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+  "scope": "Fresh exact offline implementation-v2 review of I1 scope/exclusions disclosure correction. Versioned route source differs only by adding scope:record[scope] and projecting excluded_scopes from record[exclusions]. All other source text, runtime20pins, seven exact-query rules, output fields/values and always-null liveanswer/releasefalse remain unchanged. Full review of exact new bytes still required; no inherited acceptance.",
+  "new_files": [
+    {
+      "path": "data/C013-routing-implementation-v2/route.py",
+      "raw_sha256": "ce1a959ec4cf5773a5d19ceb7aa05c3476ad7fca491d49d4cc3b563568736c56"
+    },
+    {
+      "path": "data/C013-routing-implementation-v2/checks.py",
+      "raw_sha256": "100caa4020236a8104adcd0ae1a42bca80054b9d690e09be4a9f810f625e7f51"
+    },
+    {
+      "path": "data/C013-routing-implementation-v2/check-results.json",
+      "raw_sha256": "1dc3b6514f5e48d2c01e0e9f4e8f0b23b854d0089948fde383e74496f21f807a"
+    }
+  ],
+  "frozen_inputs": [
+    {
+      "path": "data/C013-routing-implementation-v1/scope.json",
+      "commit": "4dcfcd9591fafff1655954fee57dc74191124ddd",
+      "raw_sha256": "c1bc596e631c786780477c39d9322898e34e3a32fa6b32e7a5e8c8f20db7a2ff",
+      "local_git_equal": false
+    },
+    {
+      "path": "data/C013-routing-implementation-v1/route.py",
+      "raw_sha256": "cac566973b730dfb76a56f64becd681886ccd7560bce30146730f7d126c107d0",
+      "commit": "4dcfcd9591fafff1655954fee57dc74191124ddd",
+      "local_git_equal": false
+    },
+    {
+      "path": "data/C013-routing-implementation-v1/checks.py",
+      "raw_sha256": "13e33d8382e5fdfaa8091d81f8b622b7a564b02896824ee723a37818a8fefc9d",
+      "commit": "4dcfcd9591fafff1655954fee57dc74191124ddd",
+      "local_git_equal": false
+    },
+    {
+      "path": "data/C013-routing-implementation-v1/check-results.json",
+      "raw_sha256": "4d03672780cd1fc506856e7d94c637731c837b17edb6ad9864c8bb33ac8c26ab",
+      "commit": "4dcfcd9591fafff1655954fee57dc74191124ddd",
+      "local_git_equal": false
+    },
+    {
+      "path": "data/C013-curation-decision-scope-v1.json",
+      "commit": "61fcc732694b65af28f5ac1d5bc1b49883a8a365",
+      "raw_sha256": "f3c219be0e6b417388a77e3f08c8b1e52e0478c26bb53346b69495e6fe107404",
+      "local_git_equal": false,
+      "verification": "exact GitHub commit content and workspace bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/record.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c",
+      "local_git_equal": true,
+      "verification": "exact local Git object and workspace bytes"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/transformation.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "39128fe3bcce95ef64640d66489fd2e3a4f142a2c48287156ca9bbc7cb48c150",
+      "local_git_equal": true,
+      "verification": "exact local Git object and workspace bytes"
+    },
+    {
+      "path": "data/C013-exact-review-attached-bundle-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "1a2be890941cadea384d3601c71bbe4082586587fedca662dace3d8c581e9972",
+      "local_git_equal": true,
+      "verification": "exact local Git object and workspace bytes"
+    },
+    {
+      "path": "data/C013-v1-factfinder-exact-review-v1.json",
+      "commit": "346328bfdfd6ef5bddfeae53c0f128a8c5813ff7",
+      "raw_sha256": "59edbe4e87f6056d462b358a359d989efe530a6de4cd8a86dc9f4409f076bbf2",
+      "local_git_equal": true,
+      "verification": "exact local Git object and workspace bytes"
+    },
+    {
+      "path": "data/C013-exact-review-adoption-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "2a5e52dd77110c4f2b4f7aa0a193a0833571ca662e0a6c53ea271010accb45b6",
+      "local_git_equal": true,
+      "verification": "exact local Git object and workspace bytes"
+    },
+    {
+      "path": "data/C013-reviewed-pending-events-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "7d9464f5fb353852d599453b990863752a9650c724c8865924e511d3b752169f",
+      "local_git_equal": true,
+      "verification": "exact local Git object and workspace bytes"
+    },
+    {
+      "path": "data/C013-routing-proposal-v2.json",
+      "commit": "0044769cc907727b31ddc5613dc538ee2fafe27c",
+      "raw_sha256": "7d7abaad621318cb1240cb1afd2d2fa2e5a3c7f0afd6aed60bedd4e70d100710",
+      "local_git_equal": true,
+      "verification": "exact local Git object and workspace bytes"
+    },
+    {
+      "path": "data/C013-routing-design-factfinder-review-v1.json",
+      "commit": "a110917a944d4e435fbc7bc892733ff6193ea4ad",
+      "raw_sha256": "906f5a91eccd011346ae30075d20117414d565fa0d4db6913bef3d04048fef28",
+      "local_git_equal": true,
+      "verification": "exact local Git object and workspace bytes"
+    },
+    {
+      "path": "data/C013-routing-design-factomaton-recipient-assessment-v1.json",
+      "commit": "ed0204d1e156257fcc6d12ad173fc147d18e4bfb",
+      "raw_sha256": "8c77f0c17efc17ebfb3dd9282aebc601274a920c4145fb47d3f2ed293fc53afa",
+      "local_git_equal": true,
+      "verification": "exact local Git object and workspace bytes"
+    },
+    {
+      "path": "data/C013-reviewed-pending-view-v2.json",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "67167689a1ffc079eecbd877187560dc23770f73b796138eec5a0e54c80fda1e",
+      "local_git_equal": false,
+      "verification": "exact GitHub commit content and workspace bytes"
+    },
+    {
+      "path": "data/C013-pending-metadata-revision-v2/scope.json",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "a27ba0026bd525ca81d033df309744adbc9693f5018e56cafe7e2b36eab8c9e0",
+      "local_git_equal": false,
+      "verification": "exact GitHub commit content and workspace bytes"
+    },
+    {
+      "path": "data/C013-pending-metadata-factfinder-review-v2.json",
+      "commit": "ef0541aea38e3de9ce51636e6473507c46cff776",
+      "raw_sha256": "eb597cedff26e6e725b2b95cc24605b6d45035ddabcb7870f8542e31fa848804",
+      "local_git_equal": false,
+      "verification": "exact GitHub commit content and workspace bytes"
+    },
+    {
+      "path": "data/C013-pending-metadata-factomaton-recipient-assessment-v2.json",
+      "commit": "3845878d792d7f007ff0e759bfe6e0d96c4322dd",
+      "raw_sha256": "734a90fa53f5c9f53b811358405b40ec62d91afce62de0e7c7d08267cb055307",
+      "local_git_equal": false,
+      "verification": "exact GitHub commit content and workspace bytes"
+    },
+    {
+      "path": "data/library-inputs.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+      "local_git_equal": true,
+      "verification": "exact local Git object and workspace bytes"
+    },
+    {
+      "path": "data/curation-events.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+      "local_git_equal": true,
+      "verification": "exact local Git object and workspace bytes"
+    },
+    {
+      "path": "data/query-catalog.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "local_git_equal": true,
+      "verification": "exact local Git object and workspace bytes"
+    },
+    {
+      "path": "public/library.json",
+      "commit": "801a80c5d274bd61eb55634975223040ea08c4b0",
+      "raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+      "local_git_equal": true,
+      "verification": "exact local Git object and workspace bytes"
+    },
+    {
+      "path": "data/C013-factfinder-curation-decision-v1.json",
+      "commit": "40b5beaba463de0a084988f1b0ad4f30bf384566",
+      "raw_sha256": "ca34357c5d63985abefa708a334ec209a70dbb83a6546e5a49815b39d4f56a24",
+      "local_git_equal": false
+    },
+    {
+      "path": "data/C013-curation-factomaton-recipient-assessment-v1.json",
+      "commit": "dde65f29b65183088576fef40ebd1d5cb0d627ac",
+      "raw_sha256": "b3461686a3211caba591d24ac4378380dd54eddd93b27b5eada43bfab3374fd3",
+      "local_git_equal": false
+    },
+    {
+      "path": "data/C013-routing-implementation-factfinder-review-v1.json",
+      "commit": "71fa532603d70c36c52a8aa36bc0d336b012df2e",
+      "raw_sha256": "665ac18bf94a7d9ae0e249a99f37f07f7e2c65e710ea1bd6efe5666c14a0c6fb"
+    },
+    {
+      "path": "data/C013-routing-implementation-factomaton-recipient-assessment-v1.json",
+      "commit": "515dd36ac3b07c74ed730923e9e93e7b36e0890b",
+      "raw_sha256": "1e2bb65a704b5c3cff5281d947e8894d4892db106e3c166da31254a50b7ebd27"
+    }
+  ],
+  "runtime_input_count": 20,
+  "review_scope_frozen_input_count": 26,
+  "implementation_contract": "Offline supplied-byte preview only. Seven exact eligible query strings; other15prior examples/all unknown unmapped-withheld. No normalization/generalclassifier. Empty objectionlist is callerassertion, not authenticated correction/withdrawal freshness. I1 fix returns exact candidate scope and all7actual exclusions as detached values for eligible and unmapped envelopes.",
+  "history": "Original v1 code/checks/results/scope and immutable reviewer REVISE/recipientassessment preserved. Originalpackage/v1A1 REVISE/source/design/exactv2metadata/curationeligibility remain separate. No frozen factual record or review changed.",
+  "review_requirements": [
+    "Verify scope/newfiles+26frozeninputs against exact Git/publiccommit/workspace and actualfreshTask terms. Check current corrections/withdrawals/competing claims.",
+    "Assess I1 correction with full candidate scope/all7exclusions equality and nested-mutation detachment across eligible and unmapped cases. No length-only/key-presence coverage claim.",
+    "Run22prior cases/23binding-objection negatives/6unknowns plus28fullvalue/detachment comparisons; verify source inverse comparison and every other v1/v2output value equal. Reproduce originalv1 failure; add meaningful disclosure mutations and missing/extra/type/polarity/binding controls as useful. Authored controls not heldout or broad semantic proof.",
+    "Review exact offline boundary/20runtimepins/manualobjectionassertion, detached limits/history/inference/dependence and null liveanswer/releasefalse. Versioned correction has no consumer integration or release authority.",
+    "Only after fresh mutual assent/actualNEWTask, write new data/C013-routing-implementation-factfinder-review-v2.json and optional data/C013-routing-implementation-review-v2/ companions. Explicit accept/revise/reject with findings/reasons/conditions/limits/roles/exactbindings/checks/actualTaskUUID, immutable publiccommit/raw+canonicalmainhash through actualTask<=4096B. Separate recipient assessment follows; no oldTaskextension."
+  ],
+  "new_reviewer_paths": [
+    "data/C013-routing-implementation-factfinder-review-v2.json",
+    "optional data/C013-routing-implementation-review-v2/ companions"
+  ],
+  "roles": "FMcandidate/adapter/design/implementation/revision/scopeauthor/recipient. FFnon-author implementationreviewer but prior sourceacquirer/reviewer/design/adapterreviewer/A1reporter/curator/I1reporter; sharedAdrianowner/prior exposure, not independent-owner/heldout/factualrevalidation. Tinker/Don originalcontributor. No predetermined verdict.",
+  "prohibited": [
+    "No shared/frozen/active manifest/querycatalog/curation-event/publicsnapshot/generalprojector/validator edits. No oldTaskextension or reviewer patch to author files.",
+    "No new source/factual review/freshness, receipt-authentication/correction-withdrawal enforcement, general language classifier/model/backend/dependency work.",
+    "No routing integration/alias/import/active snapshot/growth/runtime/deployment/API approval. C013 remains inactive/pending. No C008/W026/Q23 work; Q23deferred/no retry/newTask/duplicatecode.",
+    "No paid/newpermissions/credentials/destructive/bulk/schedule/launcher/notification/subscription/poll/ack action. Uncertainwrites reconcile reads/no blindretry."
+  ],
+  "author_checks": {
+    "status": "pass",
+    "prior_design_cases": 22,
+    "eligible_exact_queries": 7,
+    "noneligible_withheld": 15,
+    "byte_and_objection_rejections": 23,
+    "unmapped_adversarial_queries": 6,
+    "detached_return": true,
+    "full_scope_seven_exclusions_and_detachment_cases": 28,
+    "v1_I1_reproduced_and_only_disclosures_changed": true,
+    "limits": "Authored exact-query offline checks only; no general language classification, factual proof, receipt authentication, live routing or release."
+  },
+  "remaining_gates": "Fresh exact implementation review and separate recipient assessment before any later event-recording/integration/active snapshot/runtime/API scope."
+}
