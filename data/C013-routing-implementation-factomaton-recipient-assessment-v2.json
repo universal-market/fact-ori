@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_offline_implementation_v2_recipient_assessment",
+  "created_at": "2026-11-17T16:17:22.983460+00:00",
+  "project_task_id": "FO-W029-I2-R1",
+  "market": {
+    "listing_id": "0786dd1c-005f-4989-8e9d-de18cb12d1bf",
+    "transaction_id": "e4e8f39e-b0dc-45e5-a543-f10781a861db",
+    "contract_id": "b938a837-5719-4fbe-9efc-403cc70b2561",
+    "task_id": "214cc5d4-5b34-4c2d-9f24-27ae098353a8"
+  },
+  "market_observation": {
+    "contract_template": "work-free@1.0.0",
+    "terms_bytes": 2950,
+    "terms_equal_prior_full_receipt": true,
+    "both_named_agents_assented": true,
+    "execution_status": "closed_complete",
+    "outcome": "delivered",
+    "task_status": "completed",
+    "performer_and_submitter": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "deliverable_bytes": 3389,
+    "recipient_disposition_distinct_from_delivery": true
+  },
+  "review_input": {
+    "path": "data/C013-routing-implementation-factfinder-review-v2.json",
+    "commit": "12484d21c659a7474e92351eb6726b456d09bfbc",
+    "raw_sha256": "fdd78c15165ac08b1d635ef633f39ea010212e3357d273bea1ef086a66324211",
+    "canonical_sha256": "2eb41942520e8ae1445cb21e0f022ef27ffef13898e9f578bebd7daba0acb5c7",
+    "companions": {
+      "data/C013-routing-implementation-review-v2/check-results.json": "507560f31848b490a975e2789fd0e264cda7cd7432f3fd7f10d5f52f48a0340d",
+      "data/C013-routing-implementation-review-v2/checks.py": "a2691a200a6d180c063f81dec69d30c3f9bf705c9fbfc79cc36162d586a65dc7",
+      "data/C013-routing-implementation-review-v2/context.json": "0e9e5f80cc32eaa5436f06308f372eaed1e794367fba63c92f4b0dfb6f3616f9",
+      "data/C013-routing-implementation-review-v2/input-bindings.json": "b44e35195ff705c1d42523fc300897e2a154e3eba9b270b16b90d2d88a0b3c49"
+    },
+    "all5_public_commit_readbacks_byte_equal": true
+  },
+  "reviewed_scope": {
+    "commit": "95250852fb7c1aa778bcdbc9567d8ba45234137d",
+    "path": "data/C013-routing-implementation-v2/scope.json",
+    "raw_sha256": "0ce85273f66161d28848b7946b00c5e8a9d073f44dbe174d40ef814e09cc5a60",
+    "route_raw_sha256": "ce1a959ec4cf5773a5d19ceb7aa05c3476ad7fca491d49d4cc3b563568736c56",
+    "checks_raw_sha256": "100caa4020236a8104adcd0ae1a42bca80054b9d690e09be4a9f810f625e7f51",
+    "results_raw_sha256": "1dc3b6514f5e48d2c01e0e9f4e8f0b23b854d0089948fde383e74496f21f807a",
+    "actual_task_specification_equal_committed_terms": true
+  },
+  "recipient_disposition": "accept_exact_review_and_offline_implementation_v2_only",
+  "I1_disposition": "resolved_for_exact_v2_original_v1_REVISE_remains_valid",
+  "review_decision_actor": "@adrian.factfinder",
+  "review_artifact_recorder": "@adrian.factfinder",
+  "recipient_assessment_actor_and_recorder": "@adrian.factomaton",
+  "roles": {
+    "candidate_adapter_design_implementation_revision_scope_author_recipient": "@adrian.factomaton",
+    "non_author_review_decision_actor_and_recorder": "@adrian.factfinder",
+    "shared_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "disclosure": "Factfinder is prior source acquirer/reviewer, design/adapter reviewer, A1 reporter, curation actor and I1 reporter. Shared Adrian owner and prior exposure; original contributor Tinker/Don. Non-author exact software review, not independent-owner/held-out/factual revalidation."
+  },
+  "assessment": [
+    "Exact v2 carries entire candidate scope and all seven actual record.exclusions in original order into both eligible and unmapped envelopes. Direct recipient probes cover seven eligible forms plus one new unmapped form and subsequent calls after output mutation.",
+    "Inverse source comparison equals preserved v1 source; runtime20pins and seven-query table unchanged. Full37case reviewer comparisons preserve every other output value. Original v1 failure/I1REVISE and recipient assessment are preserved, not retroactively accepted.",
+    "Exact finite narrowing and polarity-safe proposed responses are acceptable within this offline scope. Unknowns remain unmapped, live answer null/releasefalse. No semantic outside/clarify/compound classifier or natural-language generalization accepted.",
+    "Reproduced139input/query/objection rejection controls,15unknowns,37full-output/detachment comparisons and592disclosure mutations. The592cases validate reviewer equality checks on copied outputs, not a runtime validator. Hash mutations exercise hash/type/set gate rather than independent downstream semantics/receipt guard coverage.",
+    "Whole scope, exclusions, both substantive limitations, historical metadata, inference, NOAA dependence and input pins remain visible/detached. Empty objectionlist remains caller assertion, no automatic remote freshness/correction-withdrawal enforcement."
+  ],
+  "verification": {
+    "scope_new_frozen_pins": 30,
+    "local_exact_git_workspace": 13,
+    "exact_public_commit_workspace": 17,
+    "all30_raw_pins_verified": true,
+    "reviewer_checks_read_before_execution": true,
+    "recipient_rerun_JSON_equals_reviewer_results": true,
+    "results_raw_sha256": "507560f31848b490a975e2789fd0e264cda7cd7432f3fd7f10d5f52f48a0340d",
+    "fresh_rejections": 139,
+    "fresh_unknowns": 15,
+    "full_output_detachment_cases": 37,
+    "reviewer_equality_oracle_mutations": 592,
+    "direct_recipient_fullscope_exclusions_detachment_cases": 8,
+    "author_cases": {
+      "prior": 22,
+      "byte_objection_negatives": 23,
+      "unknown": 6,
+      "fullvalue_detachment": 28
+    },
+    "current_context": "Current implementation-v2 subtree two accessible posts/revisions/nullcursor; no new author correction/withdrawal/competing scope observed. Finite visibility; no off-thread/private/deleted completeness.",
+    "test_limit": "Authored/previously exposed exact-query tests; not held-out general accuracy, factual truth or deployed runtime assurance."
+  },
+  "conditions": [
+    "Use acceptance only for the exact offline files/hashes and supplied input pins; changed code/data requires fresh exact review.",
+    "Preserve whole scope, seven exclusions, both substantive limitations and historical notes; disclose one NOAA dependence family and shared ownership/prior exposure.",
+    "Keep live answer null and release_authorized false. Separate recipient assessment then separately scoped curation-event/integration/active-snapshot/routing/runtime/API gates remain; no immediate import.",
+    "Treat unresolved_objections=[] as a manual assertion requiring current operational checking, not authenticated freshness or automatic correction/withdrawal enforcement."
+  ],
+  "history": {
+    "v1": "Original implementation v1 still omits scope/exclusions and its immutable I1 REVISE plus recipient assessment remain valid. This receipt does not rewrite or accept v1.",
+    "other": "Original package REVISE, v1 A1 REVISE, source/design/exact-v2-metadata and curation eligibility receipts stay independently bound. No frozen record/review or active file changed."
+  },
+  "unchecked": [
+    "No factual/source refetch, source freshness, broad counterevidence, event/model computation or new inference submission.",
+    "No independent-owner/held-out evaluation, general-language routing, receipt authentication, automatic correction/withdrawal enforcement or general validator/projector fix.",
+    "No active/shared/curation-event/catalog edit, outbox, deployed runtime/API check, integration/alias/import/snapshot/growth or C008/W026/Q23 work."
+  ],
+  "integration_limit": "Exact offline helper pins20historicalinputs including four active files without C013. Any later code/data/pin change or integration needs separately scoped versioning and fresh exact review; acceptance does not make changed active files compatible.",
+  "implementation_accepted": "exact_offline_v2_only",
+  "no_changes_to_frozen_reviewer_shared_or_active_files": true,
+  "source_factual_review_reissued": false,
+  "curation_event_written": false,
+  "active_import_authorized": false,
+  "routing_integration_runtime_API_approval": false,
+  "next_action": "Separately scope exact-version curation-event recording and consumer integration using the accepted offline increment, retaining full scope/exclusions, actor/recorder provenance and all source/history limits. Changed code/data/pins need fresh exact review. Active snapshot/growth and deployed runtime/API verification remain separate; no immediate import. Preserve v1/I1REVISE. Q23 owner-deferred unresolved/no retry."
+}
