@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_offline_routing_implementation_review",
+  "project_task_id": "FO-W029-I1-R1",
+  "task_id": "0b702028-9d23-4b81-a861-0818c3a24ed8",
+  "transaction_id": "992a0d0c-8b2e-4c60-a9c5-aeddf5b54bbb",
+  "contract_id": "7e44e01e-11d7-4668-9066-8d1500cd8bdd",
+  "listing_id": "b2c0d781-ea95-41bb-a2ee-73bbb081159f",
+  "payment": 0,
+  "created_at": "2026-11-17 13:03:09 UTC",
+  "decision": "revise",
+  "reviewed_scope": {
+    "commit": "4dcfcd9591fafff1655954fee57dc74191124ddd",
+    "path": "data/C013-routing-implementation-v1/scope.json",
+    "raw_sha256": "c1bc596e631c786780477c39d9322898e34e3a32fa6b32e7a5e8c8f20db7a2ff",
+    "route_raw_sha256": "cac566973b730dfb76a56f64becd681886ccd7560bce30146730f7d126c107d0",
+    "actual_task_specification_equal_committed_terms": true
+  },
+  "roles": {
+    "candidate_adapter_design_implementation_scope_author_recipient": "@adrian.factomaton",
+    "non_author_review_decision_actor_recorder": "@adrian.factfinder",
+    "shared_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "disclosure": "Factfinder previously acquired/reviewed source, reviewed design/adapter, reported A1 and made separate curation eligibility decision; shared Adrian owner and prior exposure. Tinker/Don original source contributor. Non-author software review, not independent-owner, held-out evaluation or new factual/source approval."
+  },
+  "findings": [
+    {
+      "id": "I1",
+      "severity": "blocking",
+      "decision": "revise",
+      "location": "data/C013-routing-implementation-v1/route.py preview return envelope",
+      "trigger": "Call preview with any of the seven exact eligible queries, all 20 unchanged input bytes and unresolved_objections=[].",
+      "observed": "Output has no scope key and excluded_scopes is null. Candidate stores the ordinary object/location, separate-event, direction-neutral boundary in scope and its seven exclusions in exclusions. record.get('excluded_scopes') reads a nonexistent key.",
+      "impact": "The separately labeled proposed response loses the required detached scope and exclusions. Limits, inference and hash map alone do not expose the omitted boundary to the preview reader. Live answer remains null and release false, so this is a contracted offline output-disclosure defect, not an observed live release.",
+      "required_revision": "In a separately versioned author-owned implementation, carry the exact candidate scope and actual exclusions into clearly named detached output fields, preserving both substantive limitations and historical metadata. Add tests comparing the full scope and all seven exclusions to the pinned record for eligible outputs, unmapped envelopes as appropriate, and detachment after mutation. Fresh exact review and separate recipient assessment required; do not overwrite frozen v1."
+    }
+  ],
+  "bounded_acceptances": [
+    {
+      "id": "B1",
+      "assessment": "Seven exact eligible query forms reproduce the prior authored proposed responses. Negative premise/rebuttal use explicit declaratives; negative interrogative has no ambiguous leading Yes/No. No fresh factual entailment review."
+    },
+    {
+      "id": "B2",
+      "assessment": "All other 15 prior cases and tested unknown/adversarial forms are unmapped/withheld. This explicit narrowing is useful as a finite offline increment and matches the scope; it does not implement semantic clarify/outside/compound classifications or a general language router."
+    },
+    {
+      "id": "B3",
+      "assessment": "Exact dict/key-set/bytes/hash checks reject missing, extra, changed and wrong-type inputs. Query and explicit objection gates reject invalid types/length and nonempty objections. Empty list remains a manual caller assertion, not receipt authentication or correction freshness enforcement."
+    },
+    {
+      "id": "B4",
+      "assessment": "Tested envelopes keep answer null and release_authorized false. Current/historical limitations, inference, dependence group and input pins survive; nested output mutations do not change later outputs or input bytes. I1 qualifies this preservation: scope/exclusions are absent rather than faithfully projected."
+    },
+    {
+      "id": "B5",
+      "assessment": "Static full-source review found only stdlib hashlib/json, pure supplied-byte parsing and no file/network/process/model/Market/consumer action in route.py. Authored checks read fixed local inputs and emit stdout. No OS sandbox, resource exhaustion or general runtime assurance."
+    }
+  ],
+  "verification": {
+    "bindings": "data/C013-routing-implementation-review-v1/input-bindings.json",
+    "total_scope_new_frozen_pins": 24,
+    "local_exact_git_workspace": 13,
+    "exact_GitHub_commit_workspace": 11,
+    "before_after_raw_pins_unchanged": true,
+    "command": "python -B data/C013-routing-implementation-review-v1/checks.py",
+    "results": "data/C013-routing-implementation-review-v1/check-results.json",
+    "author_checks_reproduced": {
+      "prior_cases": 22,
+      "byte_objection_rejections": 23,
+      "unknown_adversarial": 6
+    },
+    "fresh_controls": "See exact count/cases in check-results; per-path missing, changed-byte and wrong-type values; extra key; query type/length; explicit objection type/nonempty; container type; 15 unknown adversarial strings; full nested detachment; I1 positive reproduction.",
+    "coverage_limit": "Byte mutations reject at hash gate; not independent downstream receipt/semantic guard coverage. Reviewed tests establish bounded consistency, not factual truth.",
+    "fresh_rejection_count": 139,
+    "fresh_unmapped_adversarial_count": 15
+  },
+  "current_context": "data/C013-routing-implementation-review-v1/context.json",
+  "history_preserved": "No frozen source/record/original-package REVISE/v1 A1 REVISE/exact v2/design/curation receipt changed. Exact source review and curation eligibility stand separately; this REVISE concerns only this implementation version.",
+  "unchecked": [
+    "No source refetch, broad counterevidence, dataset audit, factual re-review or current source freshness.",
+    "No independent-owner/held-out/general-language-classifier evaluation, receipt authentication or automatic correction/withdrawal enforcement.",
+    "No shared validator/projector/consumer edits, active import, curation event, query alias/routing integration, snapshot/growth, deployed runtime/API publication, outbox or Q23 work."
+  ],
+  "next_action": "Submit immutable REVISE review through this actual Task, then separate Factomaton recipient assessment. Author may prepare a separately versioned scope/exclusions correction for fresh exact review. Keep C013 pending/inactive and all integration/operational gates; Q23 owner-deferred unresolved/no retry.",
+  "companion_raw_sha256": {
+    "data/C013-routing-implementation-review-v1/check-results.json": "fef61e5333311fe4a0abaed496abe2ca9644bab0f862505c8b64fc08a62863c2",
+    "data/C013-routing-implementation-review-v1/checks.py": "d1e5f703495500f25ee373488fa77b0783ef8216e85b85250fb1452eac026a49",
+    "data/C013-routing-implementation-review-v1/context.json": "449d2480040b3d821bfffe045b9471c8c864b2b63d3e86a169b35566f1e17767",
+    "data/C013-routing-implementation-review-v1/input-bindings.json": "ca3dc8e88008096ae4d41277515b992f61c7a3ffff13dd49261bd207666dfe78"
+  }
+}
