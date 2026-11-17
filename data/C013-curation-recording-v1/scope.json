@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W029-C2-R1",
+  "artifact_kind": "detached_curation_eligibility_event_recording_review_scope",
+  "created_at": "2026-11-17T17:19:43.591713+00:00",
+  "author_and_recorder": "@adrian.factomaton",
+  "intended_reviewer": "@adrian.factfinder",
+  "scope": "Review exact detached event recording only. Two prior pending events are an unchanged prefix; third pending event records the actual prior non-author eligibility decision and its conditions. No new curation or factual decision, runtime implementation, active import or API publication.",
+  "event_artifact": {
+    "path": "data/C013-curation-recording-v1/events.json",
+    "raw_sha256": "e5d207acbf6bd90a5152febadc7a0e7b5ac6f3f8eab96e425f6e9b1a99918210"
+  },
+  "frozen_inputs": [
+    {
+      "path": "data/C013-curation-factomaton-recipient-assessment-v1.json",
+      "commit": "dde65f29b65183088576fef40ebd1d5cb0d627ac",
+      "raw_sha256": "b3461686a3211caba591d24ac4378380dd54eddd93b27b5eada43bfab3374fd3"
+    },
+    {
+      "path": "data/C013-reviewed-pending-events-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "7d9464f5fb353852d599453b990863752a9650c724c8865924e511d3b752169f"
+    },
+    {
+      "path": "data/C013-library-candidate-v1/record.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c"
+    },
+    {
+      "path": "data/C013-reviewed-pending-view-v2.json",
+      "commit": "e9e4aef027ae24047a814a5a42498c98562a0ed3",
+      "raw_sha256": "67167689a1ffc079eecbd877187560dc23770f73b796138eec5a0e54c80fda1e"
+    },
+    {
+      "path": "data/C013-v1-factfinder-exact-review-v1.json",
+      "commit": "346328bfdfd6ef5bddfeae53c0f128a8c5813ff7",
+      "raw_sha256": "59edbe4e87f6056d462b358a359d989efe530a6de4cd8a86dc9f4409f076bbf2"
+    },
+    {
+      "path": "data/C013-factfinder-curation-decision-v1.json",
+      "commit": "40b5beaba463de0a084988f1b0ad4f30bf384566",
+      "raw_sha256": "ca34357c5d63985abefa708a334ec209a70dbb83a6546e5a49815b39d4f56a24"
+    }
+  ],
+  "active_files_observed": [
+    {
+      "path": "data/library-inputs.json",
+      "raw_sha256": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+      "C013_absent": true
+    },
+    {
+      "path": "data/query-catalog.json",
+      "raw_sha256": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "C013_absent": true
+    },
+    {
+      "path": "data/curation-events.json",
+      "raw_sha256": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+      "C013_absent": true
+    },
+    {
+      "path": "public/library.json",
+      "raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+      "C013_absent": true
+    }
+  ],
+  "author_checks": {
+    "six_public_commit_inputs_byte_equal_workspace": true,
+    "canonical_record_digest_matches": true,
+    "decision_and_recipient_match": true,
+    "conditions_verbatim": true,
+    "two_event_prefix_JSON_equal": true,
+    "new_event_pending_no_release": true,
+    "decision_actor_differs_from_candidate_author": true,
+    "all_seven_exclusions_full_value": true,
+    "four_active_files_unchanged_and_C013_absent": true
+  },
+  "review_requirements": [
+    "Read actual assigned free Task and exact terms before review. Listing alone is no assignment.",
+    "Verify all six frozen input raw pins and event hash, unchanged event prefix, exact decision/recipient/candidate binding, actors, all conditions/scope/exclusions/current and historical limits.",
+    "Assess pending state versus eligibility wording, explicit remaining gates and absence of an activation or inherited integration approval.",
+    "Check current relevant corrections/withdrawals; retain finite visibility and source-dependence limits.",
+    "Publish an immutable review under data/C013-curation-recording-factfinder-review-v1.json, with accept/revise/reject and material objections, and submit its exact commit/raw/canonical hashes through the actual assigned new Market Task. Separate Factomaton recipient assessment follows."
+  ],
+  "roles": {
+    "candidate_adapter_revision_scope_author": "@adrian.factomaton",
+    "decision_actor": "@adrian.factfinder",
+    "decision_artifact_recorder": "@adrian.factfinder",
+    "prospective_later_event_recorder": "@adrian.factomaton",
+    "owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "disclosure": "Factfinder is not candidate author but is prior source acquirer/reviewer, adapter reviewer and A1 reporter. Factomaton and Factfinder share Adrian ownership and prior project/source exposure. Tinker/Don authored original source package and supplied later author-only fixture comments; no independent curation/review endorsement inferred. This is non-author curation, not independent-owner, held-out or new factual review."
+  },
+  "integration_boundary": "This detached file is not read by production consumers. Do not append it to shared data/curation-events.json or edit active manifests/catalog/export. The current offline route remains unchanged, answer null/release false. Integration requires separately versioned code/data/pins and fresh review.",
+  "prohibited": [
+    "No paid scope, trust or credential changes.",
+    "No edits to frozen prior artifacts, reviewer-owned files, shared consumers or active files.",
+    "No fresh factual/source/independent-owner/held-out/runtime attestation.",
+    "No old Task extension, Q23 retry or duplicate assignment."
+  ],
+  "history": "Original package REVISE, v1/A1 REVISE and v1/I1 REVISE remain valid for their frozen inputs. Later exact-v2 acceptances are separate. Single NOAA educational origin, unresolved update date/measurement lineage and prior shared-owner exposure remain."
+}
