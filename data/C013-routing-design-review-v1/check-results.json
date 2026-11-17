@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "scope": "offline exact artifacts; no router or source research",
+  "bindings": [
+    {
+      "path": "data/C013-routing-proposal-input-v2.json",
+      "commit": "0044769cc907727b31ddc5613dc538ee2fafe27c",
+      "raw_sha256": "b7d8cb516f5a8dd6b3997ed496388f7a9b8be34ccec14543f60650a56ad2b342",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-routing-proposal-v2.json",
+      "commit": "0044769cc907727b31ddc5613dc538ee2fafe27c",
+      "raw_sha256": "7d7abaad621318cb1240cb1afd2d2fa2e5a3c7f0afd6aed60bedd4e70d100710",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-library-candidate-v1/record.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-library-candidate-v1/bundle.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "832a39e42ae62f91e030c3ea3c6aaf6cf25cb0578ee83f4931dcc2c8f879064d",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-library-candidate-v1/post-revisions.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "9e20b2de9b16d80a63c185ad03cb762c640e2d9064f41f33c38d695e20b96720",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-library-candidate-v1/pending-events.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "b1366f3b97c5ed77ee15fa7315e3abeaf270eb643440a64b15749cad28e278b5",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-library-candidate-v1/pending-view.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "ecc257e3c5ebd755c9ae32077ba1b132253234361107518ba9897517e047d78d",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-library-candidate-v1/transformation.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "39128fe3bcce95ef64640d66489fd2e3a4f142a2c48287156ca9bbc7cb48c150",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-library-candidate-v1/checks.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "6753d5f0187ce94cb3275f93665a1ef51a8d0d664911f3eed7effbada3dc0aef",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-library-candidate-v1/file-hashes.json",
+      "commit": "761709cbe004ee0b6c74fc8758f36aa663bae1d6",
+      "raw_sha256": "f76f5b4dbf683dd8c9c9f9dd4721e578010a08b8f51eb266d328a67e560f1e3e",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-v1-factfinder-exact-review-v1.json",
+      "commit": "346328bfdfd6ef5bddfeae53c0f128a8c5813ff7",
+      "raw_sha256": "59edbe4e87f6056d462b358a359d989efe530a6de4cd8a86dc9f4409f076bbf2",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-exact-review-attached-bundle-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "1a2be890941cadea384d3601c71bbe4082586587fedca662dace3d8c581e9972",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-exact-review-adoption-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "2a5e52dd77110c4f2b4f7aa0a193a0833571ca662e0a6c53ea271010accb45b6",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-reviewed-pending-view-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "a05a21601e291bb982288c8fc5b8a41da9b09ec0aa101dae9fe0d046b15df733",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-reviewed-pending-events-v1.json",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "7d9464f5fb353852d599453b990863752a9650c724c8865924e511d3b752169f",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-routing-proposal-v1.json",
+      "commit": "e6f39c0ed45a6446a5e3bf4999c4bd28ac4f262c",
+      "raw_sha256": "cd57b0133bf2d5a6c25c8e1b964773247efbd5295984c5b30c4747a20678c6d9",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-routing-proposal-input-v1.json",
+      "commit": "e6f39c0ed45a6446a5e3bf4999c4bd28ac4f262c",
+      "raw_sha256": "5fb1b72c9bde457909732dd992d574b5b0151299fab26e35b95f37f9790d53cb",
+      "git_workspace_equal": true
+    },
+    {
+      "path": "data/C013-routing-contributor-note-r1-2026-11-15.json",
+      "commit": "0044769cc907727b31ddc5613dc538ee2fafe27c",
+      "raw_sha256": "51b43b02c86940b8e7732d731d4dd91baca01622f678c129905de0c6f3ae288d",
+      "git_workspace_equal": true
+    }
+  ],
+  "auxiliary_projection_code": [
+    {
+      "path": "scripts/validate_pilot.py",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "b93d22ffcdda98e78286895ef0104b0dacbf2fe97bb5f372ee8a2b713360050f"
+    },
+    {
+      "path": "scripts/library_view.py",
+      "commit": "87994ebd4dd103e0b9f416b105a932807cbfeec5",
+      "raw_sha256": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e"
+    }
+  ],
+  "checks": {
+    "exact_pins": 18,
+    "original_fixtures_preserved": 20,
+    "authored_fixture_total": 22,
+    "all_current_answers_withheld": true,
+    "frozen_record_exact": true,
+    "source_review_raw_and_canonical_bindings": true,
+    "coverage_roles_routing_limits_preserved": true,
+    "projection_matches_published": true,
+    "original_event_prefix_preserved": true,
+    "one_noaa_group_preserved": true
+  },
+  "negative_controls": [
+    {
+      "case": "record_digest",
+      "rejected": true,
+      "error": "event record hash mismatch"
+    },
+    {
+      "case": "anchor_revision",
+      "rejected": true,
+      "error": "event post revision mismatch"
+    },
+    {
+      "case": "duplicate_review",
+      "rejected": true,
+      "error": "reviews[1]: duplicate review receipt"
+    },
+    {
+      "case": "wrong_claim_version",
+      "rejected": true,
+      "error": "reviews[0]: reviewed claim/version does not exist"
+    }
+  ],
+  "observed_defect": {
+    "id": "A1",
+    "path": "data/C013-reviewed-pending-view-v1.json",
+    "pointer": "/claims/0/limitations/2",
+    "value": "Prior source review binds the original three-post package. This new candidate has zero attached reviews.",
+    "current_review_state": "accepted",
+    "attached_review_count": 1,
+    "historical_review_notes": []
+  },
+  "unchecked_enforcement": {
+    "receipt_hash_mutation_ignored_by_consistency_projector": true,
+    "meaning": "Current exact external receipt bytes verified separately above; no runtime receipt-authentication or general binding-rejection implementation acceptance."
+  }
+}
