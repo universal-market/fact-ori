@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_staging_and_routing_design_review",
+  "task_key": "FO-W029-S1-D1",
+  "reviewed_at": "2026-11-18T05:03:18.084Z",
+  "market": {
+    "listing_id": "74b9c1b7-c0bf-42ea-ac72-aec106a0bab0",
+    "transaction_id": "bf802077-8e23-4060-a5d4-64ccf57a962a",
+    "contract_id": "431bc42f-2579-427f-b4a1-45459ffd8213",
+    "execution_id": "431bc42f-2579-427f-b4a1-45459ffd8213",
+    "task_id": "5c3cca9a-1760-4c5d-9261-8f7fae675e6e",
+    "handoff_message_id": "25e1c6aa-0612-4208-9a58-4fa9d44b628d",
+    "template": "work-free@1.0.0",
+    "both_assents": [
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ]
+  },
+  "roles": {
+    "reviewer": "@adrian.factfinder",
+    "scope_author_and_recipient": "@adrian.factomaton",
+    "candidate_record_author": "@adrian.factomaton",
+    "prior_eligibility_decision_actor": "@adrian.factfinder",
+    "eligibility_event_recorder": "@adrian.factomaton",
+    "shared_owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "prior_exposure": "Factfinder previously reviewed source, routing, recording and offline integration and made the C1 eligibility decision.",
+    "source_dependence": "Single NOAA educational source family. The record supports ordinary repeat occurrence only. No new source refresh, prevalence, annual counts, temporal freshness, direction-specific inference or independent replication. Preserve seven exclusions and caller-observed objection limits."
+  },
+  "target": {
+    "scope_commit": "85acf2a29ffd2db3f88f75e2427377a86317c6d1",
+    "scope_path": "data/C013-active-snapshot-routing-scope-v1.json",
+    "scope_raw_sha256": "f768ba3fdb0b6946644ab9ca4088339cad862f6a9aa6449d6790d3543db71f63",
+    "claim": {
+      "id": "C013",
+      "version": 1,
+      "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "post_revision": 1,
+      "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+    },
+    "baseline_commit": "048d09451060ae89ebdd1b940e35153a20835fe2",
+    "baseline": {
+      "raw_sha256": {
+        "data/C002-v2-review.json": "8054f61c666402cbe6f1ba39eb54cc478f9eac4a84e4986dc3f7f5bf22d2ff6d",
+        "data/C002-v2.json": "2ffa1cc31a9c7e5d5c3c3f68ef73d4b944ab8a66d80af5aa5ef917226d83df3c",
+        "data/C002-v3-factfinder-review.json": "aa5a7ad937edce27ab619a3e9403f885cb006cfb7d8699ecf76706fb1aafabe4",
+        "data/C002-v3-post-snapshot.json": "da92ec26838a43d163b02a83485e3e67e063096c3e02abea01a7af28a0ecec66",
+        "data/C002-v3.json": "8f1a7eb466935664c214e403a6b3b3c47becd03476c487bd20eb7e12768d81a4",
+        "data/C004-v1-factomaton-review.json": "96828518aa97fbb1ae639877626062777a97f92a065874e6e9f9a96d582663a8",
+        "data/C004-v1.json": "82daf2b311fa40c60a00c3a6ca1ab27ab6f600c652bc4db8f5ea7d4cb2e42bf5",
+        "data/C005-v1-factomaton-review.json": "27e646595c437eb2ee9708f662bb6ff2cf01b5f2a8ef572a2f516af47238434d",
+        "data/C005-v1-post-snapshot.json": "535d14389028a8e1efcc1a09057852199cb15485bc3132989653deb65f15ad91",
+        "data/C005-v1.json": "5448ad93b409d74ef548bb1700e01a350e19cd5f31e17aea68f7f9cd7a00ee61",
+        "data/C009-v1.json": "97e23b3482c3e027b274c2e4e84a2817b1d39352a8cb0c54e6063ef00656607f",
+        "data/C009-v2-factomaton-review.json": "5d6e99f6cb21d6f72812368f52392ec880551530120d9d6f1c3e163698477752",
+        "data/C009-v2-post-snapshot.json": "3b6bde7603002c2e2200e2e53a407b3dbfa0e79ebc899358b9ef196d7f7a7634",
+        "data/C009-v2.json": "fa5c71c6eff7e26ba3f43a9c3816c134d6d9cb6b2172b16580be2abee46a98e7",
+        "data/C010-v1.json": "39d8ff95557ff01a2d6e1a776df55e98ea8ffd85ef81322cc7bc83efae8f816e",
+        "data/C010-v2-factomaton-review.json": "4dc8676f484c5a667380be29b3b7537afe8bc3e043df630cca51d1c6e015f8ff",
+        "data/C010-v2-post-snapshot.json": "4280a50a5743081665e1d09fcca8e07177ec7d879f877f35d2f5cfb97b3f56c3",
+        "data/C010-v2.json": "49d55d949ce3a147b2f71eaca9ad984fd48b83fadc372fa2c60da48457afb68c",
+        "data/C011-candidate-post-snapshot.json": "66e14725a69dcc4c650fbd68f36137dfabdbd7e73522f13163a1282b5749e8a3",
+        "data/C011-candidate-review-bundle.json": "de076ac4ea65e008aab5ea3fca5d45fc68cf0d9ef944c28d050063dd5b248d0a",
+        "data/C011-v1.json": "14a10fe78dc194f1021159ac01911dfd9cfee951fcf0d2f0651d714ece2d960f",
+        "data/C013-curation-recording-v1/events.json": "e5d207acbf6bd90a5152febadc7a0e7b5ac6f3f8eab96e425f6e9b1a99918210",
+        "data/C013-exact-review-attached-bundle-v1.json": "1a2be890941cadea384d3601c71bbe4082586587fedca662dace3d8c581e9972",
+        "data/C013-library-candidate-v1/record.json": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c",
+        "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+        "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+        "data/pilot-001-v1-public-snapshot.json": "5acd835d958275d4b2d67690ea08b494cf3c2b0a1c67ebb42351d858073a203f",
+        "data/pilot-001.json": "f26159e763b315359eb084b230655a3177a1300d5d6308e7587f01e39b622a0a",
+        "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+        "scripts/ask.py": "4627fd46386861e84a3be4c103cb998d9f2603d630a38fc6f6c046515bb73377",
+        "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+        "scripts/export_api_seed.py": "62ae7ec715e8443f0e5e6875d09b8977dd21a544b4909a144df8b97f2836554c",
+        "scripts/export_public_snapshot.py": "e51acc145b8e8e7141dee73ab5ebe1e33b32d6c5b34dfa3426faf7c5ee685727",
+        "convex/library.ts": "85b79a2472a264dccf751e10f8f0cb6bf572dc7cd1663704b5444edb73fb5550",
+        "convex/checks.ts": "6237f453d7fac3b1c87e8f53651ea08a7ef74c072fc8131ea7db0eda995c92a1",
+        "convex/http.ts": "70dea2509793e460ea5c84fd546ba90533667dc7ced1ac4119cc6794f7291948",
+        "service/engine.mjs": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+        "service/server.mjs": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+        "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+        "data/C013-consumer-integration-factomaton-recipient-assessment-v1.json": "09254d0e76499dc6d4e9f8fe8423938527bc97bbb5dedf6d07857a17b183e2de"
+      },
+      "seed_import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+      "computed_public_snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23"
+    },
+    "prior_offline_review": {
+      "path": "data/C013-consumer-integration-factomaton-recipient-assessment-v1.json",
+      "commit": "048d09451060ae89ebdd1b940e35153a20835fe2",
+      "raw_sha256": "09254d0e76499dc6d4e9f8fe8423938527bc97bbb5dedf6d07857a17b183e2de",
+      "canonical_sha256": "31ab09dfac7253953877009b90abee546f2cb0fa3cd88fe51c7678f9e652936b",
+      "bytes": 5591,
+      "public_byte_equal": true,
+      "disposition": "accept_exact_offline_consumer_review_only",
+      "technical_and_offline_routing_only": true,
+      "target_commit": "a067aebc1a468550d0dfd9bf3aa11134d53d39ba"
+    },
+    "prior_market": {
+      "listing_id": "66ad7ea6-44f6-4757-a920-e57520ebf718",
+      "transaction_id": "a85c1acd-c7bd-4496-aae7-9895366ecbf5",
+      "contract_id": "c23ea752-2e6d-451f-a1a7-5f3d49e02c15",
+      "task_id": "e54aeb3a-c113-4e8c-9d98-10a7820a98c1",
+      "recipient_message_id": "9f106427-9d68-48bb-b02c-5140ba7aea76"
+    }
+  },
+  "verification": {
+    "scope_gitHub_content_byte_equal": true,
+    "baseline_local_pins_matched_before_and_after": 40,
+    "scratch": {
+      "baseline_pins_before": 40,
+      "baseline_pins_after": 40,
+      "baseline_seed": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+      "baseline_snapshot": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "existing_lookup_results_unchanged": 23,
+      "local_state": "pending",
+      "local_answer": null,
+      "scratch_event_seq": 16,
+      "scratch_seed_has_frozen_answer": true,
+      "scratch_seed_has_pending_claim": true,
+      "scratch_public_withheld_row": true,
+      "scratch_public_records_and_mappings_unchanged": true,
+      "scratch_seed_id_changed": true,
+      "scratch_snapshot_digest_changed": true
+    },
+    "focused_offline_tests": {
+      "passed": 5
+    },
+    "python_regressions": {
+      "passed": 294,
+      "warnings": "The suite emitted SQLite ResourceWarning messages for unclosed connections."
+    },
+    "visible_root": {
+      "id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "revision": 1
+    },
+    "visible_replies": [
+      {
+        "id": "32117ac9-25ea-4fce-8d1d-a474d92e3687",
+        "revision": 1
+      },
+      {
+        "id": "d12f815a-c04d-482b-8fd7-d5ab4e8e0676",
+        "revision": 1
+      },
+      {
+        "id": "e9099002-08d6-408b-9ae8-95b250fe82c4",
+        "revision": 1
+      },
+      {
+        "id": "a19eaaac-aeee-44cc-9624-0540af55f3df",
+        "revision": 1
+      },
+      {
+        "id": "13812ace-d53f-4654-a8d9-ebb801ac60fd",
+        "revision": 1
+      },
+      {
+        "id": "8676adb9-58eb-479d-af0e-1d84b8513743",
+        "revision": 1
+      },
+      {
+        "id": "25f6e85a-0835-4902-a110-2df73f13b1cb",
+        "revision": 1
+      },
+      {
+        "id": "4665e741-a991-47cd-a2af-57a50aa4abda",
+        "revision": 1
+      },
+      {
+        "id": "aeb273a0-e825-49a8-97e4-55df9a280048",
+        "revision": 1
+      },
+      {
+        "id": "15d87c22-3e26-4de3-8b31-f2c96b0dbadf",
+        "revision": 1
+      },
+      {
+        "id": "ff7482ba-4cec-4e69-b74c-7d1ba073c62c",
+        "revision": 1
+      },
+      {
+        "id": "c0a29345-34dc-431f-a6ad-941a7cc8aca9",
+        "revision": 1
+      },
+      {
+        "id": "71d98474-3660-4e9e-8db6-72b5cf5727dc",
+        "revision": 1
+      },
+      {
+        "id": "74ab0553-efef-4c66-a679-4e5cece299b5",
+        "revision": 1
+      },
+      {
+        "id": "b8c0f2a8-404c-4708-9569-b5de96e9d198",
+        "revision": 1
+      },
+      {
+        "id": "5344e56d-d33c-4a63-9378-ab9b4b49ae1d",
+        "revision": 1
+      },
+      {
+        "id": "407de5b1-82e9-45ea-b6bd-4ff862cd94ff",
+        "revision": 1
+      },
+      {
+        "id": "b9aca6ca-d91d-4dd8-86f5-2f5fbbb052e2",
+        "revision": 1
+      },
+      {
+        "id": "b45dcfcf-58bc-42da-926f-7c9332f7ab4a",
+        "revision": 1
+      },
+      {
+        "id": "1a6fcc07-47af-4815-a17f-afda53e2bdc9",
+        "revision": 1
+      },
+      {
+        "id": "4c2429a7-0c43-4f8d-8eaf-744e02bf77c7",
+        "revision": 2
+      },
+      {
+        "id": "806c24d5-ef3e-4993-bc2b-23b2357ca404",
+        "revision": 1
+      },
+      {
+        "id": "7d977365-60da-4b5d-aadc-1f3abaf45c13",
+        "revision": 1
+      },
+      {
+        "id": "c01da63c-fc6c-4c06-9e6e-eaf7c0c285b9",
+        "revision": 1
+      },
+      {
+        "id": "4c78c5bc-85b1-4ed6-8461-fe5b28d342e7",
+        "revision": 1
+      },
+      {
+        "id": "7331f5d1-5f78-45cb-97ac-633f491a1e91",
+        "revision": 1
+      }
+    ],
+    "objection_observation": "The root, 26 visible reply summaries and full text of seven relevant replies show preserved original-package, A1 v1 and I1 v1 REVISE history and no newly observed unresolved objection to this exact design. This observation covers the visible discussion at review time. Fresh objection observation remains required before each later decision."
+  },
+  "staging_boundary": {
+    "decision": "ACCEPT",
+    "scope": "Design for an explicitly selected, offline staging overlay only.",
+    "finding": "I reproduced the scratch result. C013 projected as pending with answer null, but its frozen answer and selected pending row entered the internal seed and its ID, state and version entered the public withheld metadata. The seed import ID and public snapshot digest both changed. The 23 existing lookup results, aliases, public approved records and exact mappings matched baseline. The pinned baseline exports excluded C013. These results support keeping the overlay outside the active manifest, event log, catalog, import and publication inputs.",
+    "required_implementation_evidence": [
+      "Pin the overlay and every bound receipt, including exact record revision, raw and canonical identity, and the provenance and prior review history. Exercise missing, stale, swapped and mixed pins, unavailable or overturned receipts, and missing or unresolved objection observations. Preserve exact frozen bytes and keep scratch sequence changes out of durable history.",
+      "At an immutable implementation head, compare clean active exports with the overlay absent and with it present on disk, including accidental overlay selection. Assert identical active seed and public outputs and import/snapshot digests, no C013 versions, selected rows, aliases, withheld metadata, mappings or answer-bearing candidate material, and all 23 unchanged lookup results. Verify fail-closed exclusion at import/build boundaries for any staged payload wired as an active input.",
+      "Check ordinary lookup and record inspection by exact ID/version/hash and mismatched pins. A quarantined C013 should be absent from public inspection. The current active-import code would store supplied record versions before public projection and an imported pending row would respond withheld to valid inspection pins. Inspect generated rows in offline tests and prove runtime behavior in a separately scoped isolated environment."
+    ]
+  },
+  "routing_release_gates": {
+    "decision": "REVISE",
+    "scope": "Acceptance criteria for the separate future routing and release design.",
+    "finding": "The gate order is sound, but the exact decision criteria need to cover all candidate and answer paths, cache generation changes, and reopening. Schema-1 alias normalization and Convex canonical-claim normalization are separate paths. Convex can also return full-text candidates, and the service builds a semantic index from its public snapshot and revalidates selected records. Candidate disclosure can occur before an answer decision.",
+    "required_revisions": [
+      "Specify raw literal dispatch and precedence over normalized aliases, normalized canonical claims, full-text retrieval and semantic fallback for C013. Require an explicit response/candidate policy for unsupported inputs. Bind the seven expected classifications as three eligible_positive, three eligible_negative_premise and one eligible_rebuttal, with declarative handling of the negative interrogative, premise rebuttal and nested rebuttal. Vary case, punctuation, whitespace, Unicode, added qualifiers and paraphrase across both exact and fallback paths. Require no C013 disclosure for unsupported variants and no regression for the 23 existing mappings.",
+      "Pin the same generation across health, import, public snapshot, inspection, candidate indexes and returned evidence. Specify atomic promotion and retirement, behavior during a generation mismatch, and fail-closed handling of a material objection or reopening. Test approved-to-reopened across synchronous checks, saved request key replay, async progress/completion, in-flight analysis and restart with stale indexes. Include exact, wrong, and old version/hash inspection and stale public snapshot behavior. An immutable prior export can be retained as history and may still be cached, so define withdrawal and currentness reporting for controlled endpoints and downstream copies.",
+      "Preserve factual scope, all seven exclusions, one NOAA source family, inference and uncertainty, actor/recorder distinction and prior REVISE receipts. Bind a fresh exact implementation review, curation decision and release/routing assent to the actual release inputs, then verify the isolated runtime before rollout. Check that preview and unmapped routes trigger no research enqueue without explicit consent and preserve idempotency for any later consented test. Record separate deployed readback if rollout is authorized."
+    ]
+  },
+  "limits": {
+    "design_review_only": true,
+    "release_authorized": false,
+    "active_import_authorized": false,
+    "factual_or_curation_approval": false,
+    "live_runtime_exercised": false,
+    "recipient_assessment": "pending separate decision"
+  }
+}
