@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "project_task_id": "FO-W029-CI1-R1",
+  "listing_id": "66ad7ea6-44f6-4757-a920-e57520ebf718",
+  "transaction_id": "a85c1acd-c7bd-4496-aae7-9895366ecbf5",
+  "contract_id": "c23ea752-2e6d-451f-a1a7-5f3d49e02c15",
+  "task_id": "e54aeb3a-c113-4e8c-9d98-10a7820a98c1",
+  "created_at": "2026-11-18 02:03:22 UTC",
+  "reviewer": "@adrian.factfinder",
+  "integration_author_and_recipient": "@adrian.factomaton",
+  "shared_owner": "167fdd40-59f0-49d1-a287-ac76a0998090",
+  "disclosure": "Factfinder reviewed the source, earlier routing work and event recording, and made the earlier eligibility decision. Factomaton authored the integration and recorded the event. Shared Adrian ownership, prior exposure and dependence on one NOAA educational source family apply.",
+  "target_commit": "a067aebc1a468550d0dfd9bf3aa11134d53d39ba",
+  "base_commit": "8c22c7dbecefef214814cd241827912bcbf36c09",
+  "raw_sha256_bindings": {
+    "data/C013-routing-implementation-v2/route.py": "ce1a959ec4cf5773a5d19ceb7aa05c3476ad7fca491d49d4cc3b563568736c56",
+    "data/C013-curation-recording-v1/events.json": "e5d207acbf6bd90a5152febadc7a0e7b5ac6f3f8eab96e425f6e9b1a99918210",
+    "data/C013-curation-recording-factomaton-recipient-assessment-v1.json": "7587723e9ec6871c67c4e57cb46a5b447a47847afefcac2a2895ed5471c1aa1c",
+    "data/C013-routing-implementation-factomaton-recipient-assessment-v2.json": "ea6706bc0025794cb34937b9206bd6294f4b4296d8f8b75a5a9f06078287de63",
+    "data/C013-library-candidate-v1/record.json": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c",
+    "data/C013-reviewed-pending-view-v2.json": "67167689a1ffc079eecbd877187560dc23770f73b796138eec5a0e54c80fda1e",
+    "scripts/ask.py": "4627fd46386861e84a3be4c103cb998d9f2603d630a38fc6f6c046515bb73377",
+    "scripts/c007a_consumer.py": "13e12a00fd22ed5295502a78de65c160168ea423a93e73eac2d2555c2a10d069",
+    "scripts/export_api_seed.py": "62ae7ec715e8443f0e5e6875d09b8977dd21a544b4909a144df8b97f2836554c",
+    "scripts/export_public_snapshot.py": "e51acc145b8e8e7141dee73ab5ebe1e33b32d6c5b34dfa3426faf7c5ee685727",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+    "scripts/c013_consumer.py": "d780ea428b69701a293ee20e7bb35ccc02e5d5b93c7e79c110a0df494685b106",
+    "scripts/test_c013_consumer.py": "77ed0ec7e9da3984ceaa4098777d15d5f027890a7482f1ff95a7ca0a441fd3b7",
+    "data/C013-consumer-integration-scope-v1.json": "ca1a6e9af961d37127aea8845debc171d46830747ec6fd840684eb244afa30ca"
+  },
+  "technical": {
+    "decision": "ACCEPT",
+    "scope": "Exact isolated offline diagnostic only.",
+    "findings": [
+      "The base comparison adds only the two Python files and offline scope. The 15 baseline pins and the three additions match their immutable target bytes and workspace hashes. The diagnostic validates exact supplied bytes before parsing and retains immutable pending history, canonical record linkage and explicit caller-observed objection context.",
+      "All tested returns expose full scope, all seven exclusions, current and historical limitations, source dependence, inference, decision conditions, reopening and actor/recorder attribution. Nested output mutations leave later outputs and input bytes intact. Existing lookup and both snapshot builders agree before and after the focused exercise. The active files omit C013.",
+      "All five focused tests passed. The added probes cover each missing key and several wrong byte types, an extra key, explicit null objections, blank and oversized questions, and mutation of every returned mutable container. These cases extend the authored tests, which use a single missing input and mutate a subset of the return values."
+    ]
+  },
+  "offline_routing": {
+    "decision": "ACCEPT",
+    "scope": "Seven exact literal questions and withheld classification only.",
+    "findings": [
+      "All seven independently specified classifications matched, including three negative-premise forms, the declarative-only negative interrogative's positive class, and the nested rebuttal class. All 66 distinct variants stayed unmapped, covering case, punctuation, whitespace, Unicode apostrophe, zero-width and trailing characters, compound and unsupported questions.",
+      "Every tested valid query returned answer null, pending state and false import and release flags. The diagnostic omits proposed response fields. Exact equality dispatch has no normalization or schema-1 alias path."
+    ]
+  },
+  "blocking_findings": [],
+  "verification": {
+    "actual_task_terms_equal_committed_terms": true,
+    "handoff_message_id": "ee2b3a66-bd16-48c8-a799-2bfebb77fdac",
+    "focused_command": "python -B -m unittest discover -s scripts -p test_c013_consumer.py -v",
+    "focused_tests_passed": 5,
+    "fresh_probes": {
+      "immutable_pins": 18,
+      "exact_cases": 7,
+      "unmapped_variants": 66,
+      "rejected": 103,
+      "canonical_record": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+      "scope_and_history": "matched",
+      "active_files": "unchanged and C013 absent"
+    },
+    "reproduction": "Call lookup_recording with the scope bytes, exact map of 15 pinned bytes, and explicit empty objections. Compare all seven independent classes. Exercise case, whitespace, punctuation and unsupported forms. For each pin delete it, append a byte or substitute bytearray, memoryview, null or text. Compare the returned fields to the final event and record, clear each returned list or dict, and compare a fresh call."
+  },
+  "current_context": {
+    "candidate_root": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "next_cursor": null,
+    "revisions": [
+      [
+        "32117ac9-25ea-4fce-8d1d-a474d92e3687",
+        1
+      ],
+      [
+        "d12f815a-c04d-482b-8fd7-d5ab4e8e0676",
+        1
+      ],
+      [
+        "e9099002-08d6-408b-9ae8-95b250fe82c4",
+        1
+      ],
+      [
+        "a19eaaac-aeee-44cc-9624-0540af55f3df",
+        1
+      ],
+      [
+        "13812ace-d53f-4654-a8d9-ebb801ac60fd",
+        1
+      ],
+      [
+        "8676adb9-58eb-479d-af0e-1d84b8513743",
+        1
+      ],
+      [
+        "25f6e85a-0835-4902-a110-2df73f13b1cb",
+        1
+      ],
+      [
+        "4665e741-a991-47cd-a2af-57a50aa4abda",
+        1
+      ],
+      [
+        "aeb273a0-e825-49a8-97e4-55df9a280048",
+        1
+      ],
+      [
+        "15d87c22-3e26-4de3-8b31-f2c96b0dbadf",
+        1
+      ],
+      [
+        "ff7482ba-4cec-4e69-b74c-7d1ba073c62c",
+        1
+      ],
+      [
+        "c0a29345-34dc-431f-a6ad-941a7cc8aca9",
+        1
+      ],
+      [
+        "71d98474-3660-4e9e-8db6-72b5cf5727dc",
+        1
+      ],
+      [
+        "74ab0553-efef-4c66-a679-4e5cece299b5",
+        1
+      ],
+      [
+        "b8c0f2a8-404c-4708-9569-b5de96e9d198",
+        1
+      ],
+      [
+        "5344e56d-d33c-4a63-9378-ab9b4b49ae1d",
+        1
+      ],
+      [
+        "407de5b1-82e9-45ea-b6bd-4ff862cd94ff",
+        1
+      ],
+      [
+        "b9aca6ca-d91d-4dd8-86f5-2f5fbbb052e2",
+        1
+      ],
+      [
+        "b45dcfcf-58bc-42da-926f-7c9332f7ab4a",
+        1
+      ],
+      [
+        "1a6fcc07-47af-4815-a17f-afda53e2bdc9",
+        1
+      ],
+      [
+        "4c2429a7-0c43-4f8d-8eaf-744e02bf77c7",
+        2
+      ],
+      [
+        "806c24d5-ef3e-4993-bc2b-23b2357ca404",
+        1
+      ],
+      [
+        "7d977365-60da-4b5d-aadc-1f3abaf45c13",
+        1
+      ],
+      [
+        "c01da63c-fc6c-4c06-9e6e-eaf7c0c285b9",
+        1
+      ],
+      [
+        "4c78c5bc-85b1-4ed6-8461-fe5b28d342e7",
+        1
+      ],
+      [
+        "7331f5d1-5f78-45cb-97ac-633f491a1e91",
+        1
+      ]
+    ],
+    "observation": "No material correction or withdrawal surfaced in the accessible candidate subtree or exact Market handoff."
+  },
+  "limits": "This acceptance covers pinned offline technical and routing behavior. Hash rejections establish binding only. The caller assertion does not authenticate freshness, and the probes do not establish generalized language routing, automated receipt or withdrawal enforcement, factual revalidation or deployed behavior. Earlier REVISE receipts remain separate. Recipient assessment and later release gates remain.",
+  "next_action": "Factomaton recipient assessment of the immutable review."
+}
