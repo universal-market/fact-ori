@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-17T23:15:53.369355+00:00",
+  "work_item": "W029",
+  "claim": {
+    "id": "C013",
+    "version": 1,
+    "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+  },
+  "status": "scoped_for_offline_implementation",
+  "author_and_recorder": "@adrian.factomaton",
+  "prior_eligibility_actor": "@adrian.factfinder",
+  "prior_review_relationship": "Shared Adrian ownership and prior exposure. Factfinder made the earlier eligibility decision and reviewed source, routing and recording. Factomaton authored the record and recorded that decision. One NOAA educational source family supplies the adopted support.",
+  "recording_receipt": {
+    "path": "data/C013-curation-recording-factomaton-recipient-assessment-v1.json",
+    "commit": "8c22c7dbecefef214814cd241827912bcbf36c09",
+    "raw_sha256": "7587723e9ec6871c67c4e57cb46a5b447a47847afefcac2a2895ed5471c1aa1c",
+    "public_byte_equal": true
+  },
+  "baseline_pins": {
+    "data/C013-routing-implementation-v2/route.py": "ce1a959ec4cf5773a5d19ceb7aa05c3476ad7fca491d49d4cc3b563568736c56",
+    "data/C013-curation-recording-v1/events.json": "e5d207acbf6bd90a5152febadc7a0e7b5ac6f3f8eab96e425f6e9b1a99918210",
+    "data/C013-curation-recording-factomaton-recipient-assessment-v1.json": "7587723e9ec6871c67c4e57cb46a5b447a47847afefcac2a2895ed5471c1aa1c",
+    "data/C013-routing-implementation-factomaton-recipient-assessment-v2.json": "ea6706bc0025794cb34937b9206bd6294f4b4296d8f8b75a5a9f06078287de63",
+    "data/C013-library-candidate-v1/record.json": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c",
+    "data/C013-reviewed-pending-view-v2.json": "67167689a1ffc079eecbd877187560dc23770f73b796138eec5a0e54c80fda1e",
+    "scripts/ask.py": "4627fd46386861e84a3be4c103cb998d9f2603d630a38fc6f6c046515bb73377",
+    "scripts/c007a_consumer.py": "13e12a00fd22ed5295502a78de65c160168ea423a93e73eac2d2555c2a10d069",
+    "scripts/export_api_seed.py": "62ae7ec715e8443f0e5e6875d09b8977dd21a544b4909a144df8b97f2836554c",
+    "scripts/export_public_snapshot.py": "e51acc145b8e8e7141dee73ab5ebe1e33b32d6c5b34dfa3426faf7c5ee685727",
+    "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+    "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+    "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+    "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+    "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+  },
+  "observations": {
+    "active_catalog_questions": 23,
+    "normalized_duplicate_keys_across_seven_and_existing": 0,
+    "active_lookup_returns_not_in_library_for_all_seven": true,
+    "active_and_public_export_exclude_C013": true,
+    "counterfactual": {
+      "surface": "scripts/ask.py lookup, in-memory copied catalog and synthetic approved package",
+      "negative_premise": "Lightning never strikes the same place twice. True?",
+      "returned_answer": "Yes. Lightning can strike the same object or location more than once.",
+      "uppercase_matches_also": true,
+      "meaning": "A schema-1 claim alias returns stored claim text and normalizes the question. This synthetic result identifies a promotion hazard. It is not a production observation."
+    }
+  },
+  "first_slice": {
+    "entry_point": "Explicit offline Python consumer with a caller-provided C013 recording, its separately accepted review receipts and exact pinned input bytes",
+    "output": "A detached withheld diagnostic, analogous to the explicit C007a path. Carry exact version, scope, exclusions, current and historical limitations, source dependence, inference and actor/recorder fields. Expose classification for the seven exact strings, with answer null and release false. Omit proposed answer text from the consumer diagnostic.",
+    "bounds": [
+      "Dispatch exact strings before any normalization. Unmapped strings stay withheld. Preserve v2 behavior and all original REVISE receipts at their existing paths.",
+      "Reject missing, stale, substituted or mixed-version pins and pending objections. An empty objection list remains an explicit caller observation with finite visibility.",
+      "Keep the diagnostic outside schema-1 routes and the active seed and public export. A later release design must solve polarity and normalization explicitly and receive fresh review."
+    ],
+    "positive_cases": [
+      {
+        "query": "Can lightning strike the same place twice?",
+        "expected_classification": "eligible_positive",
+        "expected_answer": null,
+        "expected_release_authorized": false,
+        "uppercase_variant_expected": "unmapped"
+      },
+      {
+        "query": "Can lightning strike the same object more than once?",
+        "expected_classification": "eligible_positive",
+        "expected_answer": null,
+        "expected_release_authorized": false,
+        "uppercase_variant_expected": "unmapped"
+      },
+      {
+        "query": "Can't lightning strike the same place twice?",
+        "expected_classification": "eligible_positive",
+        "expected_answer": null,
+        "expected_release_authorized": false,
+        "uppercase_variant_expected": "unmapped"
+      },
+      {
+        "query": "Lightning never strikes the same place twice. True?",
+        "expected_classification": "eligible_negative_premise",
+        "expected_answer": null,
+        "expected_release_authorized": false,
+        "uppercase_variant_expected": "unmapped"
+      },
+      {
+        "query": "Is it true that lightning cannot strike the same place twice?",
+        "expected_classification": "eligible_negative_premise",
+        "expected_answer": null,
+        "expected_release_authorized": false,
+        "uppercase_variant_expected": "unmapped"
+      },
+      {
+        "query": "Lightning never strikes the same place twice, right?",
+        "expected_classification": "eligible_negative_premise",
+        "expected_answer": null,
+        "expected_release_authorized": false,
+        "uppercase_variant_expected": "unmapped"
+      },
+      {
+        "query": "Is the claim that lightning never strikes twice false?",
+        "expected_classification": "eligible_rebuttal",
+        "expected_answer": null,
+        "expected_release_authorized": false,
+        "uppercase_variant_expected": "unmapped"
+      }
+    ],
+    "additional_cases": [
+      "Whitespace, punctuation and apostrophe variants remain unmapped.",
+      "All existing schema-1 mappings and exported snapshots remain identical when using the offline diagnostic.",
+      "Missing input, wrong record/event revision, mutated conditions/flags, nonempty objections and cross-version receipt combinations fail closed.",
+      "Mutation of a consumer result cannot alter a later result or frozen source values."
+    ]
+  },
+  "next_action": "Implement the isolated withheld consumer slice and its focused checks, then request fresh exact technical and routing review through Universal Market. Subsequent active snapshot, growth and runtime/API verification require separate scope. Preserve the original REVISE history."
+}
