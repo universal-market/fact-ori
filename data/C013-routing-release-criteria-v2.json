@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "routing_and_release_criteria_design",
+  "design_version": 2,
+  "created_at": "2026-11-18T06:14:56.195Z",
+  "task_key": "FO-W029-S1-D2",
+  "status": "draft_for_fresh_exact_design_review",
+  "author": "@adrian.factomaton",
+  "claim": {
+    "id": "C013",
+    "version": 1,
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1,
+    "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+  },
+  "prior_split_assessment": {
+    "commit": "522c8839d8a3a9a469e6a3f584d80ba979013d7c",
+    "path": "data/C013-staging-routing-design-factomaton-recipient-assessment-v1.json",
+    "raw_sha256": "ecb36d90afc1347c8457c8871e5c002101da51492d57e478275009ce9fc04fa2",
+    "canonical_sha256": "8ce5f74edea89b09edc0032223e2436bde9720920728667630a25cfc08b0528f",
+    "byte_equal": true,
+    "disposition": "accept_delivered_review_with_split_findings",
+    "staging_boundary": "ACCEPT",
+    "routing_release_gates": "REVISE",
+    "staging_design": "ACCEPT, explicit offline overlay only; preserve v1 without amendment.",
+    "routing_release_criteria": "REVISE, addressed in this separate design proposal.",
+    "task_id": "5c3cca9a-1760-4c5d-9261-8f7fae675e6e",
+    "message_id": "168d70f1-488a-4ded-b999-c37b35a1007f"
+  },
+  "roles": {
+    "author_and_prior_event_recorder": "@adrian.factomaton",
+    "requested_reviewer_and_prior_eligibility_actor": "@adrian.factfinder",
+    "shared_owner": "Adrian",
+    "prior_exposure": "Factfinder previously assessed source, eligibility, recording, offline consumer and v1 design. Distinct agents, shared owner."
+  },
+  "provenance": "One NOAA educational source family. Preserve the bounded literal recurrence predicate, seven exclusions, inference, version-specific history, earlier REVISE, source freshness limitation and caller-observed objection context. Prior review does not attest independent empirical replication or current source truth.",
+  "inputs": {
+    "data/C013-active-snapshot-routing-scope-v1.json": {
+      "commit": "85acf2a29ffd2db3f88f75e2427377a86317c6d1",
+      "raw_sha256": "f768ba3fdb0b6946644ab9ca4088339cad862f6a9aa6449d6790d3543db71f63",
+      "byte_equal": true
+    },
+    "data/C013-staging-routing-design-factomaton-recipient-assessment-v1.json": {
+      "commit": "522c8839d8a3a9a469e6a3f584d80ba979013d7c",
+      "raw_sha256": "ecb36d90afc1347c8457c8871e5c002101da51492d57e478275009ce9fc04fa2",
+      "byte_equal": true
+    },
+    "data/C013-staging-routing-design-factfinder-review-v1.json": {
+      "commit": "0006694dff1a39daee8efa50317840f452d57630",
+      "raw_sha256": "d72f158209c2b962864d0e60cbd0ab80aa049c924f549cb267055ae6e56871e3",
+      "byte_equal": true
+    },
+    "data/C013-routing-implementation-v2/route.py": {
+      "commit": "a067aebc1a468550d0dfd9bf3aa11134d53d39ba",
+      "raw_sha256": "ce1a959ec4cf5773a5d19ceb7aa05c3476ad7fca491d49d4cc3b563568736c56",
+      "byte_equal": true
+    },
+    "convex/checks.ts": {
+      "commit": "048d09451060ae89ebdd1b940e35153a20835fe2",
+      "raw_sha256": "6237f453d7fac3b1c87e8f53651ea08a7ef74c072fc8131ea7db0eda995c92a1",
+      "byte_equal": true
+    },
+    "convex/contract.ts": {
+      "commit": "048d09451060ae89ebdd1b940e35153a20835fe2",
+      "raw_sha256": "18d5775e8623d37d7f1a2c4097cde629e86040fd50295a8015353fb092072767",
+      "byte_equal": true
+    },
+    "convex/library.ts": {
+      "commit": "048d09451060ae89ebdd1b940e35153a20835fe2",
+      "raw_sha256": "85b79a2472a264dccf751e10f8f0cb6bf572dc7cd1663704b5444edb73fb5550",
+      "byte_equal": true
+    },
+    "convex/http.ts": {
+      "commit": "048d09451060ae89ebdd1b940e35153a20835fe2",
+      "raw_sha256": "70dea2509793e460ea5c84fd546ba90533667dc7ced1ac4119cc6794f7291948",
+      "byte_equal": true
+    },
+    "service/engine.mjs": {
+      "commit": "048d09451060ae89ebdd1b940e35153a20835fe2",
+      "raw_sha256": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+      "byte_equal": true
+    },
+    "service/server.mjs": {
+      "commit": "048d09451060ae89ebdd1b940e35153a20835fe2",
+      "raw_sha256": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+      "byte_equal": true
+    },
+    "service/snapshot-boundary.mjs": {
+      "commit": "048d09451060ae89ebdd1b940e35153a20835fe2",
+      "raw_sha256": "7cac6c4ef040bb231b8d046c896bdaa9158d214367814832693680090c9c552d",
+      "byte_equal": true
+    },
+    "public/library.json": {
+      "commit": "048d09451060ae89ebdd1b940e35153a20835fe2",
+      "raw_sha256": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+      "byte_equal": true
+    },
+    "data/query-catalog.json": {
+      "commit": "048d09451060ae89ebdd1b940e35153a20835fe2",
+      "raw_sha256": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "byte_equal": true
+    }
+  },
+  "routing": {
+    "literal_cases": [
+      {
+        "id": "L1",
+        "query": "Can lightning strike the same place twice?",
+        "classification": "eligible_positive",
+        "response_rule": "Affirm within exact recurrence scope."
+      },
+      {
+        "id": "L2",
+        "query": "Can lightning strike the same object more than once?",
+        "classification": "eligible_positive",
+        "response_rule": "Affirm within exact recurrence scope."
+      },
+      {
+        "id": "L3",
+        "query": "Can't lightning strike the same place twice?",
+        "classification": "eligible_positive",
+        "response_rule": "Declarative positive recurrence sentence; no bare yes/no."
+      },
+      {
+        "id": "L4",
+        "query": "Lightning never strikes the same place twice. True?",
+        "classification": "eligible_negative_premise",
+        "response_rule": "Reject the literal never-twice premise explicitly, then state scoped recurrence."
+      },
+      {
+        "id": "L5",
+        "query": "Is it true that lightning cannot strike the same place twice?",
+        "classification": "eligible_negative_premise",
+        "response_rule": "Reject the literal never-twice premise explicitly, then state scoped recurrence."
+      },
+      {
+        "id": "L6",
+        "query": "Lightning never strikes the same place twice, right?",
+        "classification": "eligible_negative_premise",
+        "response_rule": "Reject the literal never-twice premise explicitly, then state scoped recurrence."
+      },
+      {
+        "id": "L7",
+        "query": "Is the claim that lightning never strikes twice false?",
+        "classification": "eligible_rebuttal",
+        "response_rule": "Identify the quoted never-twice assertion as false; no bare yes/no."
+      }
+    ],
+    "candidate_policy": [
+      "Define exact input as the decoded full single-query string before trimming, normalization, Unicode folding, punctuation stripping, or claim decomposition. Dispatch the reviewed table before generic route paths. Fragments extracted from longer requests cannot enter the C013 literal path.",
+      "Before release no ordinary response may disclose C013. In a separately authorized future generation, only the raw exact table plus separately reviewed exact response bytes and evidence pins may yield a C013 query answer. If a literal matches while state or generation is unavailable, withhold it without falling back to candidate retrieval or intake.",
+      "Make C013 ineligible for generic normalized aliases, normalized canonical-claim match, full-text candidates and semantic index retrieval. Enforce exclusion when constructing those projections/candidate pools before ranking or scoring, with defense-in-depth validation before response. Unsupported inputs may still receive unrelated ordinary results; they cannot receive C013 ID, snippets, candidate scores, evidence or answer.",
+      "Reject a proposed configuration if any of the seven raw literals would change an existing approved mapping. Maintain byte-equivalent active seed/public export during offline staging, and semantic equality of 23 current lookup results. Any approved future export requires separate scope to decide which C013 publication surfaces are enabled."
+    ],
+    "inspection": "Separate explicit current record inspection from text matching. In withheld/staged/reopened generations treat C013 as absent on ordinary ID/version/hash inspection. In an authorized generation disclose only the exact active approved ID/version/hash and generation. Wrong, old, stale or mixed pins return no evidence or answer."
+  },
+  "generation": {
+    "fields": [
+      "authoritative non-reused serving epoch",
+      "library import ID",
+      "snapshot digest",
+      "routing policy and literal-table digest",
+      "engine and candidate index generation",
+      "record revision/hash and curation state bound in the same manifest"
+    ],
+    "promotion": "Prepare and verify all staged artifacts without changing the serving pointer. Activate one manifest with an atomic compare-and-set from the expected epoch; only an epoch whose artifacts and required decisions agree is eligible to serve. Mismatch during prepare, restart, promotion or retirement returns a generation-unavailable response without evidence, answer or positive readiness. Do not pretend filesystem and database replacement are one transaction.",
+    "reopening": "On a recorded material objection or reopening publish a newer authoritative epoch revoking C013 before subsequent reads can serve it. Prior epoch is never reused. Until all components agree with that epoch, answer paths fail closed. Advance without deleting frozen data, past receipts or local authorized historical artifacts.",
+    "request_contract": "Pin each sync request, idempotency record, async job, index and saved result to its starting epoch. At each public response or progress/completion disclosure, validate authoritative current epoch and eligibility; classify expired saved requests as stale with no old response payload. For in-flight work, validate before result persistence and again before disclosure, and fail closed on uncertainty. Linearization is the authoritative read/conditional write that validates the epoch. Delivery after that check and copies already obtained cannot be recalled.",
+    "cache_and_withdrawal": "Health and controlled current snapshot/inspection endpoints must carry generation and explicit currentness and require authoritative validation, with no-store for currentness-sensitive routes. Mark old immutable exports historical, report withdrawn epoch/routing eligibility on the controlled current index, and require consumers to verify currentness before reuse. Already-downloaded third-party copies may persist."
+  },
+  "intake": {
+    "preview": "Offline preview and blocked literals are side-effect free even if an optional consent field is present.",
+    "unmapped": "An unsupported input may enter standard missing-coverage intake only with explicit public_review:true on that request and a verified current generation. No request flag or stale request-key replay implies consent. Bind an intake effect to stable scoped job identity with one readback-confirmed enqueue; reuse identical requests and return conflict for changed payload/consent under the same key. Separate job acceptance from claim approval. Fence the enqueue with a generation check in the same authoritative transaction that writes the intake effect. If that coupling is unavailable, return unavailable without enqueue.",
+    "staging": "Use only disposable test data and an isolated outbox sink for positive consent tests. Do not publish the test question."
+  },
+  "acceptance_matrix": [
+    {
+      "id": "R1",
+      "test": "Seven literal classifications and exact response semantics; no proposal text in preview",
+      "expected": "3 positive, 3 negative-premise, 1 rebuttal; answer null and no release in preview"
+    },
+    {
+      "id": "R2",
+      "test": "Apply case, spacing, punctuation, apostrophe/Unicode, qualifiers and paraphrases; supply candidate-producing normalized, full-text and semantic controls",
+      "expected": "All unsupported variants return no C013 disclosure, including candidate metadata and extracted fragments; existing 23 mapped results preserved"
+    },
+    {
+      "id": "G1",
+      "test": "Inject previously valid evidence, exact/wrong/old inspection pins, mixed health/import/snapshot/index and changed manifest during a request",
+      "expected": "Only current approved exact inspection after separate release; mismatches expose no evidence or answer and no positive readiness"
+    },
+    {
+      "id": "G2",
+      "test": "Exercise approved-to-reopened on sync, existing request-key replay, async progress and final, in-flight request, restart with old index, and stale snapshot",
+      "expected": "Old epoch yields no evidence or stale answer on controlled paths, subsequent C013 remains withdrawn, old artifact is historical"
+    },
+    {
+      "id": "I1",
+      "test": "Preview, blocked or unmapped query without consent; same-key retry with consent; payload or consent changed at same key; stale epoch before enqueue",
+      "expected": "No nonconsented effect, at most one isolated job for the eligible identical request, conflict on key mutation, no stale enqueue"
+    },
+    {
+      "id": "S1",
+      "test": "Overlay absent, present, or accidentally selected. Compare active exports and record/candidate surfaces and mutate exact receipt hashes and objection input",
+      "expected": "Active seed/public bytes and digests unchanged, no C013 metadata or frozen answer, fail closed on mixed or missing receipts and unresolved objections"
+    }
+  ],
+  "gates": [
+    "Fresh exact v2 design review and separate recipient assessment.",
+    "Exact implementation review at immutable head and separate eligibility/curation and routing decisions bound to actual content generation. Earlier design assessments only establish their stated scope.",
+    "Collect isolated runtime review evidence on the exact proposed generation before an explicit release decision. Separately verify deployed readback only if rollout later receives authorization."
+  ],
+  "active_import_authorized": false,
+  "routing_release_authorized": false,
+  "api_publication_authorized": false
+}
