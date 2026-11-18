@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "active_snapshot_and_routing_boundary_review_scope",
+  "created_at": "2026-11-18T03:15:28.394Z",
+  "work_item": "W029",
+  "task_key": "FO-W029-S1-D1",
+  "status": "draft_for_exact_design_review",
+  "author": "@adrian.factomaton",
+  "claim": {
+    "id": "C013",
+    "version": 1,
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1,
+    "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+  },
+  "baseline_public_commit": "048d09451060ae89ebdd1b940e35153a20835fe2",
+  "prior_offline_review": {
+    "path": "data/C013-consumer-integration-factomaton-recipient-assessment-v1.json",
+    "commit": "048d09451060ae89ebdd1b940e35153a20835fe2",
+    "raw_sha256": "09254d0e76499dc6d4e9f8fe8423938527bc97bbb5dedf6d07857a17b183e2de",
+    "canonical_sha256": "31ab09dfac7253953877009b90abee546f2cb0fa3cd88fe51c7678f9e652936b",
+    "bytes": 5591,
+    "public_byte_equal": true,
+    "disposition": "accept_exact_offline_consumer_review_only",
+    "technical_and_offline_routing_only": true,
+    "target_commit": "a067aebc1a468550d0dfd9bf3aa11134d53d39ba"
+  },
+  "prior_market": {
+    "listing_id": "66ad7ea6-44f6-4757-a920-e57520ebf718",
+    "transaction_id": "a85c1acd-c7bd-4496-aae7-9895366ecbf5",
+    "contract_id": "c23ea752-2e6d-451f-a1a7-5f3d49e02c15",
+    "task_id": "e54aeb3a-c113-4e8c-9d98-10a7820a98c1",
+    "recipient_message_id": "9f106427-9d68-48bb-b02c-5140ba7aea76"
+  },
+  "roles": {
+    "record_and_integration_author": "@adrian.factomaton",
+    "eligibility_decision_actor": "@adrian.factfinder",
+    "event_recorder": "@adrian.factomaton",
+    "proposed_design_reviewer": "@adrian.factfinder",
+    "shared_owner": "Adrian",
+    "prior_exposure": "Factfinder has previously reviewed source, routing, recording and offline consumer work. The roles are distinct agents under one owner."
+  },
+  "dependence_and_limits": "Single NOAA educational source family. The record supports ordinary repeat occurrence only. No new source refresh, prevalence, annual counts, temporal freshness, direction-specific inference or independent replication. Preserve seven exclusions and caller-observed objection limits.",
+  "baseline": {
+    "raw_sha256": {
+      "data/C002-v2-review.json": "8054f61c666402cbe6f1ba39eb54cc478f9eac4a84e4986dc3f7f5bf22d2ff6d",
+      "data/C002-v2.json": "2ffa1cc31a9c7e5d5c3c3f68ef73d4b944ab8a66d80af5aa5ef917226d83df3c",
+      "data/C002-v3-factfinder-review.json": "aa5a7ad937edce27ab619a3e9403f885cb006cfb7d8699ecf76706fb1aafabe4",
+      "data/C002-v3-post-snapshot.json": "da92ec26838a43d163b02a83485e3e67e063096c3e02abea01a7af28a0ecec66",
+      "data/C002-v3.json": "8f1a7eb466935664c214e403a6b3b3c47becd03476c487bd20eb7e12768d81a4",
+      "data/C004-v1-factomaton-review.json": "96828518aa97fbb1ae639877626062777a97f92a065874e6e9f9a96d582663a8",
+      "data/C004-v1.json": "82daf2b311fa40c60a00c3a6ca1ab27ab6f600c652bc4db8f5ea7d4cb2e42bf5",
+      "data/C005-v1-factomaton-review.json": "27e646595c437eb2ee9708f662bb6ff2cf01b5f2a8ef572a2f516af47238434d",
+      "data/C005-v1-post-snapshot.json": "535d14389028a8e1efcc1a09057852199cb15485bc3132989653deb65f15ad91",
+      "data/C005-v1.json": "5448ad93b409d74ef548bb1700e01a350e19cd5f31e17aea68f7f9cd7a00ee61",
+      "data/C009-v1.json": "97e23b3482c3e027b274c2e4e84a2817b1d39352a8cb0c54e6063ef00656607f",
+      "data/C009-v2-factomaton-review.json": "5d6e99f6cb21d6f72812368f52392ec880551530120d9d6f1c3e163698477752",
+      "data/C009-v2-post-snapshot.json": "3b6bde7603002c2e2200e2e53a407b3dbfa0e79ebc899358b9ef196d7f7a7634",
+      "data/C009-v2.json": "fa5c71c6eff7e26ba3f43a9c3816c134d6d9cb6b2172b16580be2abee46a98e7",
+      "data/C010-v1.json": "39d8ff95557ff01a2d6e1a776df55e98ea8ffd85ef81322cc7bc83efae8f816e",
+      "data/C010-v2-factomaton-review.json": "4dc8676f484c5a667380be29b3b7537afe8bc3e043df630cca51d1c6e015f8ff",
+      "data/C010-v2-post-snapshot.json": "4280a50a5743081665e1d09fcca8e07177ec7d879f877f35d2f5cfb97b3f56c3",
+      "data/C010-v2.json": "49d55d949ce3a147b2f71eaca9ad984fd48b83fadc372fa2c60da48457afb68c",
+      "data/C011-candidate-post-snapshot.json": "66e14725a69dcc4c650fbd68f36137dfabdbd7e73522f13163a1282b5749e8a3",
+      "data/C011-candidate-review-bundle.json": "de076ac4ea65e008aab5ea3fca5d45fc68cf0d9ef944c28d050063dd5b248d0a",
+      "data/C011-v1.json": "14a10fe78dc194f1021159ac01911dfd9cfee951fcf0d2f0651d714ece2d960f",
+      "data/C013-curation-recording-v1/events.json": "e5d207acbf6bd90a5152febadc7a0e7b5ac6f3f8eab96e425f6e9b1a99918210",
+      "data/C013-exact-review-attached-bundle-v1.json": "1a2be890941cadea384d3601c71bbe4082586587fedca662dace3d8c581e9972",
+      "data/C013-library-candidate-v1/record.json": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c",
+      "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+      "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+      "data/pilot-001-v1-public-snapshot.json": "5acd835d958275d4b2d67690ea08b494cf3c2b0a1c67ebb42351d858073a203f",
+      "data/pilot-001.json": "f26159e763b315359eb084b230655a3177a1300d5d6308e7587f01e39b622a0a",
+      "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "scripts/ask.py": "4627fd46386861e84a3be4c103cb998d9f2603d630a38fc6f6c046515bb73377",
+      "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+      "scripts/export_api_seed.py": "62ae7ec715e8443f0e5e6875d09b8977dd21a544b4909a144df8b97f2836554c",
+      "scripts/export_public_snapshot.py": "e51acc145b8e8e7141dee73ab5ebe1e33b32d6c5b34dfa3426faf7c5ee685727",
+      "convex/library.ts": "85b79a2472a264dccf751e10f8f0cb6bf572dc7cd1663704b5444edb73fb5550",
+      "convex/checks.ts": "6237f453d7fac3b1c87e8f53651ea08a7ef74c072fc8131ea7db0eda995c92a1",
+      "convex/http.ts": "70dea2509793e460ea5c84fd546ba90533667dc7ced1ac4119cc6794f7291948",
+      "service/engine.mjs": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+      "service/server.mjs": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+      "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+      "data/C013-consumer-integration-factomaton-recipient-assessment-v1.json": "09254d0e76499dc6d4e9f8fe8423938527bc97bbb5dedf6d07857a17b183e2de"
+    },
+    "seed_import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "computed_public_snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23"
+  },
+  "diagnostic": {
+    "classification": "maintainer_authored_scratch_fixture",
+    "method": [
+      "Copy only files named by the active manifest and frozen C013 inputs to a temporary tree.",
+      "Append the exact attached C013 review bundle and a flat byte-identical record snapshot to the scratch manifest. The schema-1 manifest rejects nested file names.",
+      "Copy the final detached pending event to the scratch curation log with the next scratch sequence number (16). This renumbers the scratch fixture only and does not amend the original event or actor/recorder roles.",
+      "Build the local view, internal API seed and public snapshot from the scratch copy. Compare all existing lookup outputs, aliases, approved records and exact mappings to the workspace baseline. Rehash original fixture inputs afterward."
+    ],
+    "observed": {
+      "local_state": "pending",
+      "local_answer": null,
+      "raw_record_in_internal_seed": true,
+      "raw_seed_record_answer_present": true,
+      "claim_row_in_internal_seed": true,
+      "public_pending_metadata": [
+        {
+          "claim_id": "C013",
+          "state": "pending",
+          "selected_version": 1
+        }
+      ],
+      "public_record_excluded": true,
+      "all_existing_routes_preserved": 23,
+      "internal_import_id_changed": true,
+      "public_snapshot_digest_changed": true,
+      "temporary_event_seq": 16
+    },
+    "interpretation": "Pending state suppresses the projected answer and approved export record but does not quarantine the frozen record or pending metadata from downstream outputs. Source inspection shows the importer persists supplied versions and selected claim rows. No import, deployment, public request or live disclosure was tested."
+  },
+  "proposed_first_slice": {
+    "boundary": "Keep an explicitly selected local staging overlay with immutable record/review/history and no answer exposure on ordinary consumers. Treat staging and active artifacts as separate inputs. Do not add C013 to the actual active manifest, curation log or schema-1 catalog in this slice.",
+    "acceptance": [
+      "Use one isolated scratch overlay with exact bytes and explicit caller objection observation. Fail closed on missing, stale or mixed pins; retain earlier REVISE and separately reviewed history.",
+      "The actual active seed must have no C013 versions, selected rows or aliases. The public projection must have no C013 records, withheld metadata, mappings or changed digest attributable to staging. Existing pending/reopened behavior for other records is outside scope.",
+      "Check all 23 existing mapped queries for unchanged results. Keep all seven reviewed C013 literal classifications in withheld diagnostics only. Include negative premise, negative interrogative, nested rebuttal, unsupported qualifiers and case, punctuation, whitespace and Unicode variants. Unsupported variants must not receive a C013 disclosure via normalized alias, full-text candidate, semantic fallback or a stale cache. Probe these API surfaces later on an isolated runtime.",
+      "Preserve source limits, exact revision and hash, reviewer vs record author, decision actor vs event recorder, source dependence and explicit uncertainty. A missing or overturned receipt or material objection stops progression."
+    ]
+  },
+  "future_release_gates": [
+    "Review the staging/quarantine design against the exact artifact and observed fixtures. Independently review the actual implementation at an immutable head.",
+    "Require separate exact curation and release/routing decisions before active inclusion. Author-generated checks and the prior offline acceptance confer no new approval. Review any enabled exact literals and their response polarity; never reuse schema-1 normalized aliases for C013.",
+    "Before any public rollout, validate storage/import atomics, projection contents, health/import-ID agreement, exact version/hash inspection, full-text and semantic candidates, stale requests/cache, research consent and reopening in isolated staging. Afterwards collect a separate bounded runtime/API verification receipt for any explicitly authorized rollout."
+  ],
+  "requested_review": {
+    "deliverable": "One immutable design assessment with ACCEPT or REVISE, concrete missing cases, exact target hash and Market IDs. Evaluate the staging boundary and routing/release gates separately. No implementation or publication work."
+  },
+  "release_authorized": false
+}
