@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "routing_release_criteria_consent_erratum",
+  "design_version": 3,
+  "created_at": "2026-11-18T09:18:45.791Z",
+  "task_key": "FO-W029-S1-D3",
+  "status": "draft_for_exact_review",
+  "author": "@adrian.factomaton",
+  "claim": {
+    "id": "C013",
+    "version": 1,
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1,
+    "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+  },
+  "base": {
+    "path": "data/C013-routing-release-criteria-v2.json",
+    "commit": "c94ab2ee1d445e17648bcc679e60da08d8b48a31",
+    "raw_sha256": "ab0975b4d9e261cce742ce039b7c348ba6dc0ef0ecbf8233867cca38d8cdab74",
+    "apply_only": [
+      "/intake",
+      "/acceptance_matrix (replace the unique element with id I1)"
+    ],
+    "unchanged": "Read all other criteria directly from the pinned immutable v2 blob. Preserve its literal/candidate and generation/reopening ACCEPT and the existing release gate order. The v2 artifact is retained without edits."
+  },
+  "review_history": {
+    "v2_reviewer": {
+      "path": "data/C013-routing-release-criteria-factfinder-review-v2.json",
+      "commit": "3541b8e5fd75131927ca92fe287e63fe096a40c4",
+      "raw_sha256": "36816ab6ed8ea56ac32137c28f65fa3aada75904773dc425659f300f619c911a",
+      "canonical_sha256": "4237f141bb15609d33083b911f96a1b77b5eaeab4e96fea3f1eec70b9b635a9c",
+      "canonical_format": "UTF-8 compact JSON, sorted keys, ensure_ascii=true."
+    },
+    "v2_recipient": {
+      "commit": "7bd39d1ee4b0212eb723510bbee01ec3dd3bd540",
+      "path": "data/C013-routing-release-criteria-factomaton-recipient-assessment-v2.json",
+      "raw_sha256": "d61000853846efe9836d47bd2bcbd9f4a225ab8abe0859a75557e8e2eff720d7",
+      "byte_equal": true,
+      "disposition": "accept_delivered_review_with_two_accept_one_revise",
+      "raw_literal": "ACCEPT",
+      "generation_reopening": "ACCEPT",
+      "intake_consent": "REVISE"
+    },
+    "v2_market_disposition_message_id": "85641aca-3b8e-49b0-9001-bcc6a6419efc",
+    "v2_market_task_id": "63651a66-5ca4-4bb2-a039-eac746d189ea"
+  },
+  "roles": {
+    "design_author_and_event_recorder": "@adrian.factomaton",
+    "proposed_reviewer_and_prior_eligibility_decision_actor": "@adrian.factfinder",
+    "shared_owner": "Adrian",
+    "prior_exposure": "Retain v2 shared owner and prior review disclosure."
+  },
+  "provenance": "Inherits exact v2 factual scope, seven exclusions, one NOAA educational source family, uncertainty and version-specific history. The erratum changes only intake criteria.",
+  "replacements": {
+    "intake": {
+      "precedence": "Validate the optional public Boolean field at the public API boundary; invalid values reject without an intake effect. Offline preview and blocked exact literals never enter intake even if an optional Boolean true is supplied. A released/mapped literal also stays out of missing-coverage intake. Only an otherwise eligible unmapped request may proceed to consent and generation admission.",
+      "sole_consent": "The current eligible unmapped request's explicitly supplied JSON Boolean public_review:true is the only consent signal. Absent and Boolean false confer no consent. Other types are invalid. Do not coerce or infer consent from a request key, a previous request, or a saved result.",
+      "idempotency": "For an eligible unmapped request, compare any existing scoped request-key binding before admitting a new effect. Bind the original validated payload, the presence and value of the optional Boolean, and the admitted serving epoch to the scoped identity. At the current epoch, identical concurrent consented requests resolve to one stable job. An already-bound key with different payload or consent yields conflict with no new effect. An expired generation returns stale with no old result or job disclosure. No intake-side key binding is created by absent/false/invalid consent, preview or blocked literals.",
+      "generation_fence": "Check that the authorized serving epoch still matches inside the same authoritative transaction that guards the unique scoped key and writes the enqueue effect. If the epoch has changed or cannot be checked atomically with the write, perform no enqueue. Compare the expected epoch again during response disclosure as required by v2. Do not claim an enqueue to an external sink is transactional when it is not.",
+      "staging": "Use disposable inputs and an isolated outbox sink for all positive consent and concurrent tests. No public request or live job is part of this erratum. Preserve the reviewed order of implementation, curation/routing, isolated runtime, release and deployed readback."
+    },
+    "acceptance_matrix_I1": {
+      "id": "I1",
+      "description": "Isolated consent, idempotency and generation admission fixtures.",
+      "cases": [
+        {
+          "id": "I1a",
+          "condition": "Offline preview with public_review:true.",
+          "expected": "Return offline preview with no job, no intake idempotency write and no outbox action.",
+          "enqueue_count": 0
+        },
+        {
+          "id": "I1b",
+          "condition": "Blocked exact literal with public_review:true.",
+          "expected": "Return withheld, with no fallback or intake-side write.",
+          "enqueue_count": 0
+        },
+        {
+          "id": "I1c",
+          "condition": "Eligible unmapped request with public_review absent.",
+          "expected": "Return ordinary missing coverage without an intake effect.",
+          "enqueue_count": 0
+        },
+        {
+          "id": "I1d",
+          "condition": "Eligible unmapped request with public_review:false.",
+          "expected": "Return ordinary missing coverage without an intake effect.",
+          "enqueue_count": 0
+        },
+        {
+          "id": "I1e",
+          "condition": "public_review is present as null, string, number, array or object.",
+          "expected": "Reject invalid public_review at the public request boundary without coercion or any intake effect.",
+          "enqueue_count": 0
+        },
+        {
+          "id": "I1f",
+          "condition": "Eligible unmapped request with explicit public_review:true at the current generation.",
+          "expected": "Create one scoped job in an isolated sink. Bind the result to the request key, fingerprint and admitted epoch.",
+          "enqueue_count": 1
+        },
+        {
+          "id": "I1g",
+          "condition": "Two concurrent eligible requests with identical key, payload, Boolean true and current generation.",
+          "expected": "Exactly one job and one stable job identity across both successes. No separate queued effect for the replay.",
+          "enqueue_count": 1
+        },
+        {
+          "id": "I1h",
+          "condition": "After a scoped key is bound, use the same key with changed payload.",
+          "expected": "Return conflict without a new effect.",
+          "enqueue_count": 0
+        },
+        {
+          "id": "I1i",
+          "condition": "After a scoped key is bound, use the same key with Boolean false or absent in place of true.",
+          "expected": "Return conflict without a new effect.",
+          "enqueue_count": 0
+        },
+        {
+          "id": "I1j",
+          "condition": "Advance the authoritative epoch after preliminary validation but before the enqueue transaction linearizes.",
+          "expected": "Fail closed with no stale effect; retry requires a separately current and properly consented admission.",
+          "enqueue_count": 0
+        },
+        {
+          "id": "I1k",
+          "condition": "Generation check and enqueue cannot share one authoritative transaction.",
+          "expected": "Return unavailable and no enqueue.",
+          "enqueue_count": 0
+        },
+        {
+          "id": "I1l",
+          "condition": "Replay a consented saved key from a revoked epoch, including with Boolean true.",
+          "expected": "Return stale without prior response or job disclosure and without new enqueue.",
+          "enqueue_count": 0
+        },
+        {
+          "id": "I1m",
+          "condition": "Future released exact literal with public_review:true and eligible current answer.",
+          "expected": "Use the separately authorized answer path without research enqueue.",
+          "enqueue_count": 0
+        }
+      ]
+    }
+  },
+  "release_authorizations": {
+    "active_import": false,
+    "routing_release": false,
+    "api_publication": false
+  },
+  "next_action": "Obtain fresh exact review limited to the consent erratum and preservation of v2 bindings. Review runtime behavior separately."
+}
