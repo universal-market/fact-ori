@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "serving_adapter_admission_check_scope",
+  "task_key": "FO-W029-S1-D4",
+  "status": "proposed_for_exact_review",
+  "authored_at": "2026-11-18T18:15:17.307Z",
+  "claim": {
+    "id": "C013",
+    "version": 1,
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1,
+    "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+  },
+  "roles": {
+    "author_and_eligibility_event_recorder": "@adrian.factomaton",
+    "requested_reviewer_and_earlier_eligibility_actor": "@adrian.factfinder",
+    "shared_owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "prior_exposure": true,
+    "source_dependence": "One NOAA educational source family. Preserve the exact factual scope and seven exclusions."
+  },
+  "baseline": {
+    "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef",
+    "source_and_receipt_pins": [
+      {
+        "path": "service/server.mjs",
+        "raw_sha256": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+        "git_blob": "3992d9d9f35cf06e94cbc890f5116f2369391d6b"
+      },
+      {
+        "path": "service/engine.mjs",
+        "raw_sha256": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+        "git_blob": "b38fa5b475f7d585ef0268165d98bb85d112a6ab"
+      },
+      {
+        "path": "convex/checks.ts",
+        "raw_sha256": "6237f453d7fac3b1c87e8f53651ea08a7ef74c072fc8131ea7db0eda995c92a1",
+        "git_blob": "68320312d433dda959379a973566c4c0e18a97f1"
+      },
+      {
+        "path": "convex/http.ts",
+        "raw_sha256": "70dea2509793e460ea5c84fd546ba90533667dc7ced1ac4119cc6794f7291948",
+        "git_blob": "d33ecde2f5f8dd77e835304fbc8460558af09de5"
+      },
+      {
+        "path": "convex/library.ts",
+        "raw_sha256": "85b79a2472a264dccf751e10f8f0cb6bf572dc7cd1663704b5444edb73fb5550",
+        "git_blob": "716045944b47731471cfad9f7b05dc93043fd38e"
+      },
+      {
+        "path": "convex/schema.ts",
+        "raw_sha256": "5b38f500d31b2129f2bad6825ae950394bb58de386200407893f93a863d3a20d",
+        "git_blob": "7362d4bb5e8dabcb582b465ff4de9ff9a709e245"
+      },
+      {
+        "path": "data/C013-consent-admission-fixture-factomaton-recipient-assessment-v2.json",
+        "raw_sha256": "63b51ca5aaae15b45c2a768d254443d13c718c3e7e722cebf6cdc2782b4792ab",
+        "git_blob": "53499a170b6761fa220b1785290d0d7c35c7a05d"
+      }
+    ],
+    "fixture_head": "f9a4116ac4f964f3a2324f10472ff53bde3ece91",
+    "fixture_market_task_id": "667d4649-3ed1-4710-bc06-a57c0c1ae2c4",
+    "fixture_disposition_message_id": "ac5c9362-1cba-475b-863e-20f58c2afccc",
+    "design_pins": [
+      {
+        "path": "data/C013-routing-release-criteria-v2.json",
+        "commit": "c94ab2ee1d445e17648bcc679e60da08d8b48a31",
+        "raw_sha256": "ab0975b4d9e261cce742ce039b7c348ba6dc0ef0ecbf8233867cca38d8cdab74"
+      },
+      {
+        "path": "data/C013-routing-release-criteria-v3-consent-erratum.json",
+        "commit": "593798f2fa5308e4a4e1f2f12952b7fd4b787444",
+        "raw_sha256": "a2ca5d8cb9af3355cd7af6f02b140a8643503ea3d5647af756c3cff18f224247"
+      }
+    ]
+  },
+  "observed_source_boundary": [
+    {
+      "path": "service/engine.mjs",
+      "observation": "FactEngine.run checks the backend import ID against its snapshot before exact matching and semantic extraction. A later research POST sends submission text and Boolean true to the general check route without carrying forward that generation or a per-effect key."
+    },
+    {
+      "path": "service/server.mjs",
+      "observation": "The HTTP idempotency key controls saved analyses in local SQLite. It does not bind the per-claim research effect. Saved result checks use the backend import ID and local engine revision."
+    },
+    {
+      "path": "convex/http.ts and convex/checks.ts",
+      "observation": "The general HTTP route invokes check. The mutation reads the current library row and can create jobs and requestKeys, with lookup by normalized text or existing key. Its inputs have no expected non-reused serving epoch."
+    },
+    {
+      "path": "convex/library.ts and convex/schema.ts",
+      "observation": "The current library row carries a content import ID and timestamp. Neither is an authoritative non-reused epoch covering policy changes, reopening and restoration of identical bytes."
+    }
+  ],
+  "proposal": {
+    "transaction_owner": "Use the disposable Convex mutation as the authoritative boundary. Its current manifest read, scoped intake binding and jobs/outbox insertion must commit together. Reuse jobs as the outbox. Keep semantic SQLite as analysis state only.",
+    "generation": "A trusted fixture activation advances a non-reused epoch through compare-and-set. Bind the active import, routing policy and engine/index compatibility to that epoch. The server captures the expected epoch and uses it when asking for admission. Compare it to the authoritative manifest inside the mutation, before inspecting an old binding or writing. Fail unavailable when authority is absent.",
+    "routing": "The public input remains text and optional consent. Preview and protected literal routing use server-owned configuration under the pinned generation. Recheck exact classification in the mutation against that generation, retaining blocked or mapped precedence. A semantic missing-coverage result is evidence for admission only if the adapter is using the same current engine/index manifest. Invalid consent is rejected. Missing or false consent cannot admit a new effect, and replay checks preserve stale and current-key-conflict behavior.",
+    "identity": "Use synthetic namespaces and stable per-effect keys in fixtures. Freeze the exact validated payload and consent presence/value within each binding. Bind a per-claim effect to a deterministic claim position from the saved analysis. Establish production scope and the private invocation boundary with existing authorization before wiring any route that mutates intake. Synthetic namespaces do not prove production caller isolation.",
+    "response": "Test one adapter projection covering immediate admission and saved-progress disclosure. Revalidate authority before persistence and disclosure where applicable. An expired result exposes neither old job metadata nor old answer/evidence. Keep complete sync, async, restart and withdrawal surface coverage as a separate runtime gate.",
+    "isolation": "Run Convex test transactions with seeded synthetic state and an in-process semantic adapter with stub models. Supply no production URL, no live queue or operator call and no credential setup. Keep current gateway responses and active data out of this increment.",
+    "regression_baseline": "Recompute both active export digests, verify 23 established mappings still resolve in the baseline, and retain C013’s absence from active files. Do this from pinned local inputs without public API calls."
+  },
+  "proposed_checks": [
+    {
+      "id": "A1",
+      "case": "Barrier pauses between the server generation read and admission. Advance authority while retaining the same import digest. Resume the old request.",
+      "expected": "Stale with no key, job, or prior job data. No committed changes in the two intake tables."
+    },
+    {
+      "id": "A2",
+      "case": "An otherwise eligible, consented request proceeds with missing or unreadable authoritative state.",
+      "expected": "Unavailable with no committed intake effects."
+    },
+    {
+      "id": "A3",
+      "case": "Two eligible same-scope requests with identical payload and Boolean true race on a stable binding.",
+      "expected": "One key and one job. Both return the same confirmed job for that generation."
+    },
+    {
+      "id": "A4",
+      "case": "A current binding receives changed exact payload or absent/false consent. Repeat the replay after advancing the epoch.",
+      "expected": "Conflict in the current epoch, stale after advance. No new effect or stale job disclosure."
+    },
+    {
+      "id": "A5",
+      "case": "Preview, protected literal, mapped literal, absent/false and invalid consent. Include no public shortcut that accepts caller-supplied route or generation.",
+      "expected": "No intake writes. Blocked literals disclose no C013 evidence and enter neither fallback nor intake."
+    },
+    {
+      "id": "A6",
+      "case": "Inject a failure after job creation and before binding in the disposable transaction.",
+      "expected": "Rollback of both tables. Verify committed state before and after."
+    },
+    {
+      "id": "A7",
+      "case": "Advance the epoch after a successful disposable commit and before response or saved-progress projection.",
+      "expected": "Suppress old job/evidence on projection. Preserve the historical committed job without retrying or deleting it."
+    }
+  ],
+  "observed_checks": {
+    "source_matches_immutable_blobs": true,
+    "stubbed_engine_baseline_passed": true,
+    "visible_claim_revision": 1,
+    "visible_reply_revisions": 26,
+    "new_material_objection_observed": false
+  },
+  "limits": {
+    "prospective_only": true,
+    "serving_code_changed": false,
+    "live_intake_exercised": false,
+    "active_import_authorized": false,
+    "routing_release_authorized": false,
+    "api_publication_authorized": false,
+    "C013_withheld": true
+  }
+}
