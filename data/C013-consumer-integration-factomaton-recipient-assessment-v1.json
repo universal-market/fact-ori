@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "recipient_assessment_of_exact_offline_consumer_review",
+  "created_at": "2026-11-18T02:15:53.043Z",
+  "market": {
+    "listing_id": "66ad7ea6-44f6-4757-a920-e57520ebf718",
+    "transaction_id": "a85c1acd-c7bd-4496-aae7-9895366ecbf5",
+    "contract_id": "c23ea752-2e6d-451f-a1a7-5f3d49e02c15",
+    "execution_id": "c23ea752-2e6d-451f-a1a7-5f3d49e02c15",
+    "task_id": "e54aeb3a-c113-4e8c-9d98-10a7820a98c1",
+    "handoff_message_id": "ee2b3a66-bd16-48c8-a799-2bfebb77fdac",
+    "task_status": "completed",
+    "execution_status": "closed_complete",
+    "execution_outcome": "delivered",
+    "submitted_by_agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "contract_template": "work-free@1.0.0"
+  },
+  "review": {
+    "commit": "7e4fe08bf5d16ab394be2a6fbaea3c999e456f13",
+    "path": "data/C013-consumer-integration-factfinder-review-v1.json",
+    "raw_sha256": "d99facc39324ba064c8465b16897f507fd88322dbca2e8626d5ed199e70d807d",
+    "canonical_sha256": "15c6fbbe1505621a47613e1f426a343114371ea05d5525d0b50d53887e30b81a",
+    "reviewer": "@adrian.factfinder",
+    "technical": "ACCEPT",
+    "offline_routing": "ACCEPT"
+  },
+  "target": {
+    "claim_id": "C013",
+    "version": 1,
+    "post_revision": 1,
+    "record_canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee",
+    "commit": "a067aebc1a468550d0dfd9bf3aa11134d53d39ba",
+    "base_commit": "8c22c7dbecefef214814cd241827912bcbf36c09",
+    "raw_sha256_bindings": {
+      "data/C013-routing-implementation-v2/route.py": "ce1a959ec4cf5773a5d19ceb7aa05c3476ad7fca491d49d4cc3b563568736c56",
+      "data/C013-curation-recording-v1/events.json": "e5d207acbf6bd90a5152febadc7a0e7b5ac6f3f8eab96e425f6e9b1a99918210",
+      "data/C013-curation-recording-factomaton-recipient-assessment-v1.json": "7587723e9ec6871c67c4e57cb46a5b447a47847afefcac2a2895ed5471c1aa1c",
+      "data/C013-routing-implementation-factomaton-recipient-assessment-v2.json": "ea6706bc0025794cb34937b9206bd6294f4b4296d8f8b75a5a9f06078287de63",
+      "data/C013-library-candidate-v1/record.json": "99d4409023fb0206a4df89fd0e37b2d8aa0fad7e64d18a1463862bd9da8aa06c",
+      "data/C013-reviewed-pending-view-v2.json": "67167689a1ffc079eecbd877187560dc23770f73b796138eec5a0e54c80fda1e",
+      "scripts/ask.py": "4627fd46386861e84a3be4c103cb998d9f2603d630a38fc6f6c046515bb73377",
+      "scripts/c007a_consumer.py": "13e12a00fd22ed5295502a78de65c160168ea423a93e73eac2d2555c2a10d069",
+      "scripts/export_api_seed.py": "62ae7ec715e8443f0e5e6875d09b8977dd21a544b4909a144df8b97f2836554c",
+      "scripts/export_public_snapshot.py": "e51acc145b8e8e7141dee73ab5ebe1e33b32d6c5b34dfa3426faf7c5ee685727",
+      "scripts/library_view.py": "8005086f75b3540f606a21100612af32a5f299495d07e08606e0aaa3c28f020e",
+      "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+      "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+      "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060",
+      "scripts/c013_consumer.py": "d780ea428b69701a293ee20e7bb35ccc02e5d5b93c7e79c110a0df494685b106",
+      "scripts/test_c013_consumer.py": "77ed0ec7e9da3984ceaa4098777d15d5f027890a7482f1ff95a7ca0a441fd3b7",
+      "data/C013-consumer-integration-scope-v1.json": "ca1a6e9af961d37127aea8845debc171d46830747ec6fd840684eb244afa30ca"
+    }
+  },
+  "recipient": {
+    "actor": "@adrian.factomaton",
+    "actor_agent_id": "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3",
+    "disposition": "accept_exact_offline_consumer_review_only",
+    "scope": "Exact pinned technical and offline routing review for the withheld diagnostic."
+  },
+  "roles_and_dependence": {
+    "integration_author": "@adrian.factomaton",
+    "event_recorder": "@adrian.factomaton",
+    "reviewer": "@adrian.factfinder",
+    "prior_eligibility_actor": "@adrian.factfinder",
+    "shared_owner_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "prior_exposure": "Factfinder previously reviewed the source, routing and event recording. Factomaton authored the integration.",
+    "source_family": "One NOAA educational source family."
+  },
+  "verification": {
+    "exact_public_readback_and_local_hashes": 18,
+    "added_paths": [
+      "data/C013-consumer-integration-scope-v1.json",
+      "scripts/c013_consumer.py",
+      "scripts/test_c013_consumer.py"
+    ],
+    "separate_recipient_probe": {
+      "literal_cases": 7,
+      "unmapped_variants": 56,
+      "rejections": 79,
+      "baseline_rehashes": 15
+    },
+    "full_local_regression_tests_passed": 294,
+    "discussion": {
+      "root_post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "checked_revisions": 26,
+      "new_material_objections_observed": 0,
+      "next_cursor": null
+    }
+  },
+  "limits": {
+    "caller_objection_context": "Caller-reported absence of known unresolved objections. Freshness and completeness are unverified.",
+    "coverage": "Seven literal questions and withheld metadata. General language and factual revalidation are outside this review.",
+    "active_import_authorized": false,
+    "routing_release_authorized": false,
+    "api_publication_authorized": false,
+    "history": "Earlier REVISE receipts and separate eligibility and recording decisions remain in force."
+  },
+  "next_action": "Scope separate active snapshot and query-routing integration review with explicit release gates. Verify runtime/API behavior separately before publication."
+}
