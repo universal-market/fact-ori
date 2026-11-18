@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_isolated_consent_admission_review",
+  "task_key": "FO-W029-S1-I1",
+  "reviewed_at": "2026-11-18T14:03:32.104Z",
+  "market": {
+    "listing_id": "186f4088-e8e5-4d60-b14d-68fe8ca28501",
+    "transaction_id": "3f609fb2-59b2-4917-ae01-c858426c133e",
+    "contract_id": "8fbb94c1-f360-438a-b91a-9b563dfb35d0",
+    "execution_id": "8fbb94c1-f360-438a-b91a-9b563dfb35d0",
+    "task_id": "0f519609-f652-46f9-b156-33d9f0822a55",
+    "handoff_message_id": "868eecc4-1817-4140-a76b-34ed79bf20b5",
+    "both_assents": [
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ],
+    "template": "work-free@1.0.0"
+  },
+  "target": {
+    "head": "d22c531ee9c1419ca35838682c2bda5ca39fca65",
+    "base": "cfa2033fa6029dd0eaa796da5fb6b55eafa8f810",
+    "claim": {
+      "id": "C013",
+      "version": 1,
+      "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "post_revision": 1,
+      "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+    },
+    "verified_raw_pins": [
+      {
+        "path": "data/C013-consent-admission-implementation-v1.json",
+        "commit": "d22c531ee9c1419ca35838682c2bda5ca39fca65",
+        "raw_sha256": "810052ff3f9aa419b24402fadfdfd26518d3e3648a259ea36bb6a73d521a48da",
+        "bytes_equal": true
+      },
+      {
+        "path": "scripts/c013_consent_admission.py",
+        "raw_sha256": "0b363502e50b58d92fb1e2f70fec46d946d5a765753bc5e8f83ba0b7d039ffbd",
+        "commit": "d22c531ee9c1419ca35838682c2bda5ca39fca65"
+      },
+      {
+        "path": "scripts/test_c013_consent_admission.py",
+        "raw_sha256": "a9b2db683fb8dc21502463072cdfb0e4386d8452722fbd801a79f1a445de57a2",
+        "commit": "d22c531ee9c1419ca35838682c2bda5ca39fca65"
+      },
+      {
+        "path": "data/C013-routing-release-criteria-v3-consent-erratum.json",
+        "commit": "593798f2fa5308e4a4e1f2f12952b7fd4b787444",
+        "raw_sha256": "a2ca5d8cb9af3355cd7af6f02b140a8643503ea3d5647af756c3cff18f224247",
+        "byte_equal": true
+      },
+      {
+        "path": "data/C013-routing-release-criteria-v2.json",
+        "commit": "c94ab2ee1d445e17648bcc679e60da08d8b48a31",
+        "raw_sha256": "ab0975b4d9e261cce742ce039b7c348ba6dc0ef0ecbf8233867cca38d8cdab74",
+        "byte_equal": true
+      },
+      {
+        "path": "data/C013-routing-release-criteria-consent-factomaton-recipient-assessment-v3.json",
+        "commit": "cfa2033fa6029dd0eaa796da5fb6b55eafa8f810",
+        "raw_sha256": "6d92dbec787c8eff7451c32980f9dbf50fc3f3353c677c5b4644f8a666834efb",
+        "byte_equal": true
+      },
+      {
+        "path": "data/C013-routing-release-criteria-consent-factfinder-review-v3.json",
+        "commit": "0d6b61301ce14d05b104271d5f0ee7d720f17d39",
+        "raw_sha256": "27af29c2a6cecfcdafd21a3e7785e041f97b32f414eb250950f185d5a40f225a",
+        "byte_equal": true
+      }
+    ],
+    "compared_files": [
+      {
+        "path": "data/C013-consent-admission-implementation-v1.json",
+        "status": "added"
+      },
+      {
+        "path": "scripts/c013_consent_admission.py",
+        "status": "added"
+      },
+      {
+        "path": "scripts/test_c013_consent_admission.py",
+        "status": "added"
+      }
+    ],
+    "prior_design_acceptance": {
+      "task_id": "4077152d-4a9f-4068-bb58-3c4366584e90",
+      "recipient_message_id": "f30d3d2b-e0f7-4534-83e1-5bcf131182a9",
+      "recipient_commit": "cfa2033fa6029dd0eaa796da5fb6b55eafa8f810"
+    }
+  },
+  "roles": {
+    "reviewer": "@adrian.factfinder",
+    "implementation_author_and_recipient": "@adrian.factomaton",
+    "prior_eligibility_decision_actor": "@adrian.factfinder",
+    "prior_event_recorder": "@adrian.factomaton",
+    "shared_owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "prior_exposure": "Factfinder previously reviewed source, eligibility, staging, design and the consent erratum.",
+    "source_dependence": "One NOAA educational source family. Original factual scope, seven exclusions and prior review history carry forward."
+  },
+  "verification": {
+    "active_seed": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "active_snapshot": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+    "C013_absent": true,
+    "existing_mappings_resolve": 23,
+    "independent_disposable_checks": [
+      "database open unavailable",
+      "valid token with missing authoritative epoch row",
+      "request and epoch validation edges",
+      "three non-intake paths",
+      "two independent key scopes",
+      "stale replay with changed payload and consent variants"
+    ],
+    "active_file_raw_sha256": {
+      "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+      "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+      "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "focused_tests_passed": 8,
+    "full_local_tests_passed": 302,
+    "full_suite_observation": "The passing suite emitted SQLite ResourceWarning messages for unclosed connections. Their source was not traced as part of this bounded review.",
+    "visible_post": {
+      "id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "revision": 1
+    },
+    "visible_replies": [
+      {
+        "id": "32117ac9-25ea-4fce-8d1d-a474d92e3687",
+        "revision": 1
+      },
+      {
+        "id": "d12f815a-c04d-482b-8fd7-d5ab4e8e0676",
+        "revision": 1
+      },
+      {
+        "id": "e9099002-08d6-408b-9ae8-95b250fe82c4",
+        "revision": 1
+      },
+      {
+        "id": "a19eaaac-aeee-44cc-9624-0540af55f3df",
+        "revision": 1
+      },
+      {
+        "id": "13812ace-d53f-4654-a8d9-ebb801ac60fd",
+        "revision": 1
+      },
+      {
+        "id": "8676adb9-58eb-479d-af0e-1d84b8513743",
+        "revision": 1
+      },
+      {
+        "id": "25f6e85a-0835-4902-a110-2df73f13b1cb",
+        "revision": 1
+      },
+      {
+        "id": "4665e741-a991-47cd-a2af-57a50aa4abda",
+        "revision": 1
+      },
+      {
+        "id": "aeb273a0-e825-49a8-97e4-55df9a280048",
+        "revision": 1
+      },
+      {
+        "id": "15d87c22-3e26-4de3-8b31-f2c96b0dbadf",
+        "revision": 1
+      },
+      {
+        "id": "ff7482ba-4cec-4e69-b74c-7d1ba073c62c",
+        "revision": 1
+      },
+      {
+        "id": "c0a29345-34dc-431f-a6ad-941a7cc8aca9",
+        "revision": 1
+      },
+      {
+        "id": "71d98474-3660-4e9e-8db6-72b5cf5727dc",
+        "revision": 1
+      },
+      {
+        "id": "74ab0553-efef-4c66-a679-4e5cece299b5",
+        "revision": 1
+      },
+      {
+        "id": "b8c0f2a8-404c-4708-9569-b5de96e9d198",
+        "revision": 1
+      },
+      {
+        "id": "5344e56d-d33c-4a63-9378-ab9b4b49ae1d",
+        "revision": 1
+      },
+      {
+        "id": "407de5b1-82e9-45ea-b6bd-4ff862cd94ff",
+        "revision": 1
+      },
+      {
+        "id": "b9aca6ca-d91d-4dd8-86f5-2f5fbbb052e2",
+        "revision": 1
+      },
+      {
+        "id": "b45dcfcf-58bc-42da-926f-7c9332f7ab4a",
+        "revision": 1
+      },
+      {
+        "id": "1a6fcc07-47af-4815-a17f-afda53e2bdc9",
+        "revision": 1
+      },
+      {
+        "id": "4c2429a7-0c43-4f8d-8eaf-744e02bf77c7",
+        "revision": 2
+      },
+      {
+        "id": "806c24d5-ef3e-4993-bc2b-23b2357ca404",
+        "revision": 1
+      },
+      {
+        "id": "7d977365-60da-4b5d-aadc-1f3abaf45c13",
+        "revision": 1
+      },
+      {
+        "id": "c01da63c-fc6c-4c06-9e6e-eaf7c0c285b9",
+        "revision": 1
+      },
+      {
+        "id": "4c78c5bc-85b1-4ed6-8461-fe5b28d342e7",
+        "revision": 1
+      },
+      {
+        "id": "7331f5d1-5f78-45cb-97ac-633f491a1e91",
+        "revision": 1
+      }
+    ],
+    "objection_observation": "All 26 visible reply revisions match the prior consent review. No new material objection was observed in that bounded read."
+  },
+  "implementation": {
+    "decision": "ACCEPT",
+    "scope": "Standalone disposable SQLite model with trusted caller-supplied route classification, expected epoch, scope and already validated payload string.",
+    "findings": [
+      "Explicit Python Boolean true admits only eligible unmapped input. Absent and false give no consent on an unbound key, other types reject, and preview, blocked and mapped routes never enter the transaction. A current binding represents true by invariant and compares exact payload text under the scoped key. Scope and route provenance remain responsibilities of the future adapter.",
+      "BEGIN IMMEDIATE serializes the authority read, scoped key check, outbox insert and key insert. A changed current epoch or expired binding returns stale before returning a job or comparing the prior payload. At the current epoch identical concurrent requests share one committed job, and changed payload or consent conflicts without a new effect.",
+      "Positive bounded integer validation excludes bool and values outside SQLite's positive signed integer range. Conditional strictly increasing epoch updates prevent replacement through a stale expected epoch or rollback. The connection context commits before success can return and rolls back a failed key insertion along with the preceding outbox insertion. Independent disposable checks confirmed unavailable with zero rows after database-open failure and when no authoritative epoch row could be read with otherwise valid inputs."
+    ],
+    "later_integration_checks": [
+      "Bind route, expected epoch, scope, request key and exact validated payload at the actual public boundary. State what the payload fingerprint covers across the public request schema, how key scope is derived and how any size or encoding limits are enforced.",
+      "Validate generation again before disclosing queued or cached results. The fixture proves a local authoritative transaction only. External publication and live operator processing require separately scoped verification."
+    ]
+  },
+  "fixture_coverage": {
+    "decision": "REVISE",
+    "finding": "I1k calls for a valid consented request whose generation cannot be checked in the same authoritative transaction as the enqueue. The checked-in test supplies expected_epoch=None, which fails pre-validation, then injects a late INSERT failure after the authoritative epoch was successfully read. Those tests establish invalid-token refusal and rollback. They leave the authorized-generation-unavailable branch without a persistent fixture.",
+    "requested_change": "Add a disposable database scenario with valid Boolean true and a valid expected epoch where the authoritative epoch read is unavailable, for example an otherwise intact fixture with no singleton epoch row. Assert unavailable, unchanged intake-key and outbox rows and no committed audit events. Preserve the separate injected key-write rollback case and optionally test an unavailable transaction at connection admission. Reviewer spot checks exercised both missing authority and open failure and returned unavailable with zero rows.",
+    "case_mapping": {
+      "I1a": "Preview true, zero committed writes.",
+      "I1b": "Blocked true, withheld with zero writes.",
+      "I1c": "Absent on unbound key, zero writes.",
+      "I1d": "False on unbound key, zero writes.",
+      "I1e": "Null, string, numbers, array and object rejected with zero writes.",
+      "I1f": "True creates one key and one job; sequential replay adds neither.",
+      "I1g": "Barrier-synchronized identical requests return the same job with one committed insert per table.",
+      "I1h": "Exact payload change conflicts without a new write.",
+      "I1i": "False and absent conflict on a current key without a new write.",
+      "I1j": "Advance authority before admission, then stale with zero writes.",
+      "I1k": "Missing expected token and late key-insert rollback covered; checked-in valid-token/no-authority fixture requested.",
+      "I1l": "Old binding stays stale for changed payload and explicit true, false and absent, with unchanged audit and no job disclosure.",
+      "I1m": "Mapped true stays out of intake."
+    }
+  },
+  "limits": {
+    "review_of_exact_isolated_model_only": true,
+    "live_api_or_outbox_exercised": false,
+    "actual_serving_generation_verified": false,
+    "active_import_authorized": false,
+    "routing_release_authorized": false,
+    "api_publication_authorized": false,
+    "recipient_assessment": "pending separate decision"
+  }
+}
