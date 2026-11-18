@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "isolated_consent_admission_implementation_review_scope",
+  "created_at": "2026-11-18T12:16:49.847Z",
+  "task_key": "FO-W029-S1-I1",
+  "claim": {
+    "id": "C013",
+    "version": 1,
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1,
+    "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+  },
+  "status": "authored_fixture_pending_exact_review",
+  "author": "@adrian.factomaton",
+  "requested_reviewer": "@adrian.factfinder",
+  "review_relationship": "Distinct agents under Adrian with prior exposure. Factomaton authored this slice and recorded the earlier eligibility event. Factfinder made that eligibility decision and reviewed the design. The record has one NOAA educational source family.",
+  "base_commit": "cfa2033fa6029dd0eaa796da5fb6b55eafa8f810",
+  "design_bindings": [
+    {
+      "path": "data/C013-routing-release-criteria-v3-consent-erratum.json",
+      "commit": "593798f2fa5308e4a4e1f2f12952b7fd4b787444",
+      "raw_sha256": "a2ca5d8cb9af3355cd7af6f02b140a8643503ea3d5647af756c3cff18f224247",
+      "byte_equal": true
+    },
+    {
+      "path": "data/C013-routing-release-criteria-v2.json",
+      "commit": "c94ab2ee1d445e17648bcc679e60da08d8b48a31",
+      "raw_sha256": "ab0975b4d9e261cce742ce039b7c348ba6dc0ef0ecbf8233867cca38d8cdab74",
+      "byte_equal": true
+    },
+    {
+      "path": "data/C013-routing-release-criteria-consent-factomaton-recipient-assessment-v3.json",
+      "commit": "cfa2033fa6029dd0eaa796da5fb6b55eafa8f810",
+      "raw_sha256": "6d92dbec787c8eff7451c32980f9dbf50fc3f3353c677c5b4644f8a666834efb",
+      "byte_equal": true
+    },
+    {
+      "path": "data/C013-routing-release-criteria-consent-factfinder-review-v3.json",
+      "commit": "0d6b61301ce14d05b104271d5f0ee7d720f17d39",
+      "raw_sha256": "27af29c2a6cecfcdafd21a3e7785e041f97b32f414eb250950f185d5a40f225a",
+      "byte_equal": true
+    }
+  ],
+  "v3_design_acceptance": {
+    "task_id": "4077152d-4a9f-4068-bb58-3c4366584e90",
+    "recipient_message_id": "f30d3d2b-e0f7-4534-83e1-5bcf131182a9",
+    "recipient_commit": "cfa2033fa6029dd0eaa796da5fb6b55eafa8f810"
+  },
+  "implemented_paths": [
+    {
+      "path": "scripts/c013_consent_admission.py",
+      "raw_sha256": "0b363502e50b58d92fb1e2f70fec46d946d5a765753bc5e8f83ba0b7d039ffbd"
+    },
+    {
+      "path": "scripts/test_c013_consent_admission.py",
+      "raw_sha256": "a9b2db683fb8dc21502463072cdfb0e4386d8452722fbd801a79f1a445de57a2"
+    }
+  ],
+  "contract_boundary": "Disposable SQLite model with a caller-provided route and expected epoch. Begin an immediate transaction for the scoped key and serving epoch. Write outbox and key together. Return stale without prior job disclosure, conflict for current mutations and unavailable when the write cannot complete. No adapter is wired into the serving or operator pipeline.",
+  "fixture_coverage": {
+    "focused_tests_passed": 8,
+    "design_ids": [
+      "I1a",
+      "I1b",
+      "I1c",
+      "I1d",
+      "I1e",
+      "I1f",
+      "I1g",
+      "I1h",
+      "I1i",
+      "I1j",
+      "I1k",
+      "I1l",
+      "I1m"
+    ],
+    "additional": [
+      "Expired replay with changed payload and true/false/absent.",
+      "Audit committed writes to both intake-key and outbox tables for no-effect paths.",
+      "Injected failure between outbox and key writes to check rollback.",
+      "Monotonic conditional epoch changes."
+    ],
+    "full_local_tests_passed": 302,
+    "baseline": {
+      "active_pins": 4,
+      "seed_import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+      "public_snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "C013_absent": true
+    }
+  },
+  "review_limits": [
+    "This tests only the standalone model against disposable data. It does not prove current serving behavior, distributed epoch coupling, active routing, late response validation or deployment.",
+    "Require later review for actual routing/admission integration, serving generation, isolated runtime and explicit release. Do not run live job submission or curation."
+  ],
+  "authorization": {
+    "active_import": false,
+    "routing_release": false,
+    "public_api_release": false
+  },
+  "next_action": "Factfinder to review exact branch head, four design bindings, transaction and rollback semantics, and all named I1 fixture cases in the assigned Market Task."
+}
