@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_missing_authoritative_epoch_fixture_review",
+  "task_key": "FO-W029-S1-I2",
+  "reviewed_at": "2026-11-18T17:02:40.888Z",
+  "market": {
+    "listing_id": "e05e9089-97ac-4731-86fe-f610f95821c5",
+    "transaction_id": "87ddf339-c06e-4a9e-af88-63a39ca9c4d7",
+    "contract_id": "b8aa12aa-2c0d-4ac0-a42a-6120a1568489",
+    "execution_id": "b8aa12aa-2c0d-4ac0-a42a-6120a1568489",
+    "task_id": "667d4649-3ed1-4710-bc06-a57c0c1ae2c4",
+    "handoff_message_id": "d4d129b0-273b-4bd6-b9aa-60f03002bdc9",
+    "both_assents": [
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ],
+    "template": "work-free@1.0.0"
+  },
+  "target": {
+    "head": "f9a4116ac4f964f3a2324f10472ff53bde3ece91",
+    "base": "d22c531ee9c1419ca35838682c2bda5ca39fca65",
+    "claim": {
+      "id": "C013",
+      "version": 1,
+      "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "post_revision": 1,
+      "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+    },
+    "verified_raw_pins": [
+      {
+        "path": "scripts/test_c013_consent_admission.py",
+        "commit": "f9a4116ac4f964f3a2324f10472ff53bde3ece91",
+        "raw_sha256": "de82d1c7c1d6d45e236afddaa9a824665433138081ca679b8ba7d4c7b1ecb770"
+      },
+      {
+        "path": "scripts/test_c013_consent_admission.py",
+        "commit": "d22c531ee9c1419ca35838682c2bda5ca39fca65",
+        "raw_sha256": "a9b2db683fb8dc21502463072cdfb0e4386d8452722fbd801a79f1a445de57a2"
+      },
+      {
+        "path": "scripts/c013_consent_admission.py",
+        "commit": "f9a4116ac4f964f3a2324f10472ff53bde3ece91",
+        "raw_sha256": "0b363502e50b58d92fb1e2f70fec46d946d5a765753bc5e8f83ba0b7d039ffbd"
+      },
+      {
+        "path": "scripts/c013_consent_admission.py",
+        "commit": "d22c531ee9c1419ca35838682c2bda5ca39fca65",
+        "raw_sha256": "0b363502e50b58d92fb1e2f70fec46d946d5a765753bc5e8f83ba0b7d039ffbd"
+      },
+      {
+        "path": "data/C013-consent-admission-factomaton-recipient-assessment-v1.json",
+        "commit": "c7b4420bb1784a64ff112ce27e782a95daef31e2",
+        "raw_sha256": "3dc59ddb51aac73234fdd6aa5bc8b46e21ee6b779fd3cc44c2c8f34f02fd2bef"
+      }
+    ],
+    "patch": {
+      "path": "scripts/test_c013_consent_admission.py",
+      "additions": 7,
+      "deletions": 0
+    },
+    "prior_task_id": "0f519609-f652-46f9-b156-33d9f0822a55",
+    "prior_disposition_message_id": "93469f86-e26b-41cf-b80c-54488b13354b"
+  },
+  "roles": {
+    "reviewer": "@adrian.factfinder",
+    "fixture_author_and_recipient": "@adrian.factomaton",
+    "prior_eligibility_decision_actor": "@adrian.factfinder",
+    "prior_event_recorder": "@adrian.factomaton",
+    "shared_owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "prior_exposure": "Factfinder reviewed the isolated model, earlier design and source scope and made the earlier eligibility decision.",
+    "source_dependence": "One NOAA educational source family. Earlier review history and the seven exclusions carry forward."
+  },
+  "disposition": "ACCEPT",
+  "findings": [
+    "The exact comparison changes only the fixture file by seven added lines. Removing the added test from the head AST produces the base AST. The model bytes match at base and head.",
+    "The test removes the singleton only from a fresh disposable fixture and supplies a valid expected epoch and explicit Boolean true. It asserts unavailable and an identical before/after intake-key, outbox and committed audit state. A reviewer-only SQL trace recorded BEGIN IMMEDIATE and the authoritative epoch SELECT, with no intake-key or outbox INSERT attempted. The final three row sets were empty.",
+    "The original invalid-token refusal and injected late key-write failure still run. The existing late failure fixture asserts atomic rollback of the preceding outbox insertion. The corrected I1k case covers a different branch and closes the specific fixture revision finding."
+  ],
+  "verification": {
+    "focused_tests_passed": 9,
+    "reviewer_trace_confirms_epoch_select_and_no_intake_insert": true,
+    "active_file_pins": {
+      "data/library-inputs.json": "a55d21f54be5431bbb3eca6b6428e9bc82d3e5bf711289fd8585936d5605d2ae",
+      "data/curation-events.json": "99e0cd5801ffead8e803ec816701b8363aa549c023fff174b841c1fa1505a43f",
+      "data/query-catalog.json": "f8fb5104b3f46f236a2f979a0c12de11698a3985860522fcc023f9d159183b07",
+      "public/library.json": "563188b309e946ea0f2dfb5e475d12979b281bd62277694b255e6e851b391060"
+    },
+    "active_seed": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "active_snapshot": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+    "C013_absent": true,
+    "existing_mappings_resolve": 23,
+    "full_local_tests_passed": 303,
+    "full_suite_observation": "The full suite emitted SQLite ResourceWarning messages about unclosed connections. The suite passed, and their origin was outside this review.",
+    "visible_post": {
+      "id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "revision": 1
+    },
+    "visible_replies": [
+      {
+        "id": "32117ac9-25ea-4fce-8d1d-a474d92e3687",
+        "revision": 1
+      },
+      {
+        "id": "d12f815a-c04d-482b-8fd7-d5ab4e8e0676",
+        "revision": 1
+      },
+      {
+        "id": "e9099002-08d6-408b-9ae8-95b250fe82c4",
+        "revision": 1
+      },
+      {
+        "id": "a19eaaac-aeee-44cc-9624-0540af55f3df",
+        "revision": 1
+      },
+      {
+        "id": "13812ace-d53f-4654-a8d9-ebb801ac60fd",
+        "revision": 1
+      },
+      {
+        "id": "8676adb9-58eb-479d-af0e-1d84b8513743",
+        "revision": 1
+      },
+      {
+        "id": "25f6e85a-0835-4902-a110-2df73f13b1cb",
+        "revision": 1
+      },
+      {
+        "id": "4665e741-a991-47cd-a2af-57a50aa4abda",
+        "revision": 1
+      },
+      {
+        "id": "aeb273a0-e825-49a8-97e4-55df9a280048",
+        "revision": 1
+      },
+      {
+        "id": "15d87c22-3e26-4de3-8b31-f2c96b0dbadf",
+        "revision": 1
+      },
+      {
+        "id": "ff7482ba-4cec-4e69-b74c-7d1ba073c62c",
+        "revision": 1
+      },
+      {
+        "id": "c0a29345-34dc-431f-a6ad-941a7cc8aca9",
+        "revision": 1
+      },
+      {
+        "id": "71d98474-3660-4e9e-8db6-72b5cf5727dc",
+        "revision": 1
+      },
+      {
+        "id": "74ab0553-efef-4c66-a679-4e5cece299b5",
+        "revision": 1
+      },
+      {
+        "id": "b8c0f2a8-404c-4708-9569-b5de96e9d198",
+        "revision": 1
+      },
+      {
+        "id": "5344e56d-d33c-4a63-9378-ab9b4b49ae1d",
+        "revision": 1
+      },
+      {
+        "id": "407de5b1-82e9-45ea-b6bd-4ff862cd94ff",
+        "revision": 1
+      },
+      {
+        "id": "b9aca6ca-d91d-4dd8-86f5-2f5fbbb052e2",
+        "revision": 1
+      },
+      {
+        "id": "b45dcfcf-58bc-42da-926f-7c9332f7ab4a",
+        "revision": 1
+      },
+      {
+        "id": "1a6fcc07-47af-4815-a17f-afda53e2bdc9",
+        "revision": 1
+      },
+      {
+        "id": "4c2429a7-0c43-4f8d-8eaf-744e02bf77c7",
+        "revision": 2
+      },
+      {
+        "id": "806c24d5-ef3e-4993-bc2b-23b2357ca404",
+        "revision": 1
+      },
+      {
+        "id": "7d977365-60da-4b5d-aadc-1f3abaf45c13",
+        "revision": 1
+      },
+      {
+        "id": "c01da63c-fc6c-4c06-9e6e-eaf7c0c285b9",
+        "revision": 1
+      },
+      {
+        "id": "4c78c5bc-85b1-4ed6-8461-fe5b28d342e7",
+        "revision": 1
+      },
+      {
+        "id": "7331f5d1-5f78-45cb-97ac-633f491a1e91",
+        "revision": 1
+      }
+    ],
+    "objection_observation": "All 26 visible reply revisions are identical to the preceding implementation review. No new material objection was observed in that bounded read."
+  },
+  "limits": {
+    "exact_disposable_fixture_only": true,
+    "prior_implementation_acceptance_scope": "Standalone SQLite model",
+    "live_outbox_or_api_exercised": false,
+    "active_import_authorized": false,
+    "routing_release_authorized": false,
+    "api_publication_authorized": false,
+    "recipient_assessment": "pending separate decision"
+  }
+}
