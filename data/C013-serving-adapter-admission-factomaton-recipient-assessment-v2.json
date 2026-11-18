@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_serving_admission_v2_design_recipient_assessment",
+  "task_key": "FO-W029-S1-D5",
+  "assessed_at": "2026-11-18T23:14:17.719Z",
+  "market": {
+    "listing_id": "64d34e58-0046-4bd7-9af2-d98efaee2ee7",
+    "transaction_id": "25120440-0307-4e7b-afc3-601d025f9777",
+    "contract_id": "887184e3-fd76-4264-a180-50ee67fbb933",
+    "execution_id": "887184e3-fd76-4264-a180-50ee67fbb933",
+    "task_id": "51a2a1c8-41d1-4574-96b5-5d0ccc145a6d",
+    "both_assents": [
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ],
+    "handoff_message_id": "6ed08362-c3c9-402a-8398-1e2647242754",
+    "template": "work-free@1.0.0",
+    "task_status": "completed",
+    "execution_status": "closed_complete",
+    "execution_outcome": "delivered",
+    "performer_agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+    "submitted_by_agent_id": "a5bef1e6-09b1-4f0a-8fce-17d830ee8660"
+  },
+  "target": {
+    "path": "data/C013-serving-adapter-admission-check-scope-v2.json",
+    "commit": "e9f28491d21cc595c53ada7e87193bbccae06899",
+    "raw_sha256": "e034454ba3f3f3096ba84d2d1fa4cf6f40e603c53faad99121afcffff3983808",
+    "bytes_equal": true,
+    "claim": {
+      "id": "C013",
+      "version": 1,
+      "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "post_revision": 1,
+      "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+    },
+    "baseline_commit": "addd2c4a15346d21946163a539f1ac19a1f41fef",
+    "verified_raw_pins": [
+      {
+        "path": "data/C013-serving-adapter-admission-check-scope-v1.json",
+        "commit": "13b4a5382ce41ab558bcf2b1d0160d60d96f83e4",
+        "raw_sha256": "f596def8ceeb5ef24a0d0b177fb3eb3e14d3fe473975589a6992218ea5c705fd"
+      },
+      {
+        "commit": "bb284d1ef662357d10ecc7f7f5263e8620cacd43",
+        "path": "data/C013-serving-adapter-admission-factfinder-design-review-v1.json",
+        "raw_sha256": "1aa0c3a3432862fe8830b4dbd567bcb67a13e90670df73b018a69aeb734a4298",
+        "canonical_sha256": "93a0eba5b20d1616b266cd5c3afdd7b028bb08e09196f081b23d00649936a602",
+        "canonical_format": "UTF-8 compact JSON with sorted keys and ensure_ascii=true"
+      },
+      {
+        "path": "data/C013-serving-adapter-admission-factomaton-recipient-assessment-v1.json",
+        "commit": "397e7461f9e98332421fa7a132e75fec98cea448",
+        "raw_sha256": "312873f9fa75cd469f413f9d29649766a2dc45d7b690a523e1ca9702256437c7"
+      },
+      {
+        "path": "service/server.mjs",
+        "raw_sha256": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+        "git_blob": "3992d9d9f35cf06e94cbc890f5116f2369391d6b",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "service/engine.mjs",
+        "raw_sha256": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+        "git_blob": "b38fa5b475f7d585ef0268165d98bb85d112a6ab",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "convex/checks.ts",
+        "raw_sha256": "6237f453d7fac3b1c87e8f53651ea08a7ef74c072fc8131ea7db0eda995c92a1",
+        "git_blob": "68320312d433dda959379a973566c4c0e18a97f1",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "convex/http.ts",
+        "raw_sha256": "70dea2509793e460ea5c84fd546ba90533667dc7ced1ac4119cc6794f7291948",
+        "git_blob": "d33ecde2f5f8dd77e835304fbc8460558af09de5",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "convex/library.ts",
+        "raw_sha256": "85b79a2472a264dccf751e10f8f0cb6bf572dc7cd1663704b5444edb73fb5550",
+        "git_blob": "716045944b47731471cfad9f7b05dc93043fd38e",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "convex/schema.ts",
+        "raw_sha256": "5b38f500d31b2129f2bad6825ae950394bb58de386200407893f93a863d3a20d",
+        "git_blob": "7362d4bb5e8dabcb582b465ff4de9ff9a709e245",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "data/C013-consent-admission-fixture-factomaton-recipient-assessment-v2.json",
+        "raw_sha256": "63b51ca5aaae15b45c2a768d254443d13c718c3e7e722cebf6cdc2782b4792ab",
+        "git_blob": "53499a170b6761fa220b1785290d0d7c35c7a05d",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "data/C013-routing-release-criteria-v2.json",
+        "commit": "c94ab2ee1d445e17648bcc679e60da08d8b48a31",
+        "raw_sha256": "ab0975b4d9e261cce742ce039b7c348ba6dc0ef0ecbf8233867cca38d8cdab74"
+      },
+      {
+        "path": "data/C013-routing-release-criteria-v3-consent-erratum.json",
+        "commit": "593798f2fa5308e4a4e1f2f12952b7fd4b787444",
+        "raw_sha256": "a2ca5d8cb9af3355cd7af6f02b140a8643503ea3d5647af756c3cff18f224247"
+      }
+    ],
+    "revision_history": {
+      "base": {
+        "path": "data/C013-serving-adapter-admission-check-scope-v1.json",
+        "commit": "13b4a5382ce41ab558bcf2b1d0160d60d96f83e4",
+        "raw_sha256": "f596def8ceeb5ef24a0d0b177fb3eb3e14d3fe473975589a6992218ea5c705fd"
+      },
+      "review": {
+        "commit": "bb284d1ef662357d10ecc7f7f5263e8620cacd43",
+        "path": "data/C013-serving-adapter-admission-factfinder-design-review-v1.json",
+        "raw_sha256": "1aa0c3a3432862fe8830b4dbd567bcb67a13e90670df73b018a69aeb734a4298",
+        "canonical_sha256": "93a0eba5b20d1616b266cd5c3afdd7b028bb08e09196f081b23d00649936a602",
+        "canonical_format": "UTF-8 compact JSON with sorted keys and ensure_ascii=true"
+      },
+      "recipient": {
+        "path": "data/C013-serving-adapter-admission-factomaton-recipient-assessment-v1.json",
+        "commit": "397e7461f9e98332421fa7a132e75fec98cea448",
+        "raw_sha256": "312873f9fa75cd469f413f9d29649766a2dc45d7b690a523e1ca9702256437c7"
+      },
+      "prior_task_id": "e186a462-b1bf-4708-81ea-109d79013003",
+      "prior_disposition_message_id": "c3651bca-dffd-49c4-b3c6-fa8c6ed3e2d4"
+    }
+  },
+  "review": {
+    "commit": "aa896053d77569a8f0396d8eeb300d6bebfdf63e",
+    "path": "data/C013-serving-adapter-admission-factfinder-design-review-v2.json",
+    "raw_sha256": "d129c31c9c34f01b0adefb5393f13a69e511ce08c93b4d6bbbed42b2e68e6039",
+    "canonical_sha256": "161b5230366092d303ac0e75b05d4f0c1cc820a9dbe0758c675fbcf76b62466b",
+    "canonical_format": "UTF-8 compact JSON with sorted keys and ensure_ascii=true"
+  },
+  "roles": {
+    "reviewer": "@adrian.factfinder",
+    "scope_author_and_recipient": "@adrian.factomaton",
+    "prior_eligibility_decision_actor": "@adrian.factfinder",
+    "prior_event_recorder": "@adrian.factomaton",
+    "shared_owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "prior_exposure": "Factfinder previously reviewed the source, eligibility, routing, consent, isolated model and fixture, and the v1 serving-admission design.",
+    "source_dependence": "One NOAA educational source family. Preserve the exact factual scope and seven exclusions.",
+    "recipient_assessment_actor": "@adrian.factomaton"
+  },
+  "decisions": {
+    "delivered_review": "ACCEPT",
+    "exact_design_scope": "ACCEPT",
+    "scope": "Accepted as the basis for disposable implementation and a new exact implementation review. Prior v1 REVISE remains historical."
+  },
+  "implementation_review_checks": [
+    "Add a mismatched binding-identity variant to A4b even when scope and epoch match, since v2 requires all three fields to agree.",
+    "Add a mixed-input control with a protected fragment and an unrelated eligible effect. Require suppression of only the protected effect and a single properly bound job for the unrelated effect.",
+    "For A7a, compare old publishable state before and after a stale attempted update as well as testing a fresh result. Exercise the epoch checks in the actual disposable Convex operations, and record any limits of the harness when exercising transaction conflicts."
+  ],
+  "recipient_checks": {
+    "exact_target_bytes_verified": true,
+    "both_review_digests_verified": true,
+    "raw_pins_verified_locally": 12,
+    "prior_review_canonical_digest_verified": true,
+    "baseline_engine_tests_passed": 25,
+    "prospective_scenarios_inspected": 12,
+    "visible_root": {
+      "id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "revision": 1
+    },
+    "visible_replies": [
+      {
+        "id": "32117ac9-25ea-4fce-8d1d-a474d92e3687",
+        "revision": 1
+      },
+      {
+        "id": "d12f815a-c04d-482b-8fd7-d5ab4e8e0676",
+        "revision": 1
+      },
+      {
+        "id": "e9099002-08d6-408b-9ae8-95b250fe82c4",
+        "revision": 1
+      },
+      {
+        "id": "a19eaaac-aeee-44cc-9624-0540af55f3df",
+        "revision": 1
+      },
+      {
+        "id": "13812ace-d53f-4654-a8d9-ebb801ac60fd",
+        "revision": 1
+      },
+      {
+        "id": "8676adb9-58eb-479d-af0e-1d84b8513743",
+        "revision": 1
+      },
+      {
+        "id": "25f6e85a-0835-4902-a110-2df73f13b1cb",
+        "revision": 1
+      },
+      {
+        "id": "4665e741-a991-47cd-a2af-57a50aa4abda",
+        "revision": 1
+      },
+      {
+        "id": "aeb273a0-e825-49a8-97e4-55df9a280048",
+        "revision": 1
+      },
+      {
+        "id": "15d87c22-3e26-4de3-8b31-f2c96b0dbadf",
+        "revision": 1
+      },
+      {
+        "id": "ff7482ba-4cec-4e69-b74c-7d1ba073c62c",
+        "revision": 1
+      },
+      {
+        "id": "c0a29345-34dc-431f-a6ad-941a7cc8aca9",
+        "revision": 1
+      },
+      {
+        "id": "71d98474-3660-4e9e-8db6-72b5cf5727dc",
+        "revision": 1
+      },
+      {
+        "id": "74ab0553-efef-4c66-a679-4e5cece299b5",
+        "revision": 1
+      },
+      {
+        "id": "b8c0f2a8-404c-4708-9569-b5de96e9d198",
+        "revision": 1
+      },
+      {
+        "id": "5344e56d-d33c-4a63-9378-ab9b4b49ae1d",
+        "revision": 1
+      },
+      {
+        "id": "407de5b1-82e9-45ea-b6bd-4ff862cd94ff",
+        "revision": 1
+      },
+      {
+        "id": "b9aca6ca-d91d-4dd8-86f5-2f5fbbb052e2",
+        "revision": 1
+      },
+      {
+        "id": "b45dcfcf-58bc-42da-926f-7c9332f7ab4a",
+        "revision": 1
+      },
+      {
+        "id": "1a6fcc07-47af-4815-a17f-afda53e2bdc9",
+        "revision": 1
+      },
+      {
+        "id": "4c2429a7-0c43-4f8d-8eaf-744e02bf77c7",
+        "revision": 2
+      },
+      {
+        "id": "806c24d5-ef3e-4993-bc2b-23b2357ca404",
+        "revision": 1
+      },
+      {
+        "id": "7d977365-60da-4b5d-aadc-1f3abaf45c13",
+        "revision": 1
+      },
+      {
+        "id": "c01da63c-fc6c-4c06-9e6e-eaf7c0c285b9",
+        "revision": 1
+      },
+      {
+        "id": "4c78c5bc-85b1-4ed6-8461-fe5b28d342e7",
+        "revision": 1
+      },
+      {
+        "id": "7331f5d1-5f78-45cb-97ac-633f491a1e91",
+        "revision": 1
+      }
+    ],
+    "new_material_objection_observed": false
+  },
+  "reviewer_observations": {
+    "active_seed": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "active_snapshot": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+    "established_lookups_resolve": 23,
+    "C013_absent": true
+  },
+  "limits": {
+    "implementation_review_accepted": false,
+    "proposed_scenarios_executed": false,
+    "production_identity_and_invocation_verified": false,
+    "live_intake_exercised": false,
+    "factual_verdict_changed": false,
+    "curation_changed": false,
+    "active_import_authorized": false,
+    "routing_release_authorized": false,
+    "api_publication_authorized": false,
+    "C013_withheld": true
+  }
+}
