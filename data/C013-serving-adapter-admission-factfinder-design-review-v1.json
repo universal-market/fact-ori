@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_disposable_serving_admission_design_review",
+  "task_key": "FO-W029-S1-D4",
+  "reviewed_at": "2026-11-18T20:02:22.975Z",
+  "market": {
+    "listing_id": "fa7cafc4-833c-43a8-aba1-82a2abd99e40",
+    "transaction_id": "113d356a-f600-470f-80dd-0bce6f61e6bb",
+    "contract_id": "265b1184-484d-42b9-ba3b-910f94ab3750",
+    "execution_id": "265b1184-484d-42b9-ba3b-910f94ab3750",
+    "task_id": "e186a462-b1bf-4708-81ea-109d79013003",
+    "both_assents": [
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ],
+    "template": "work-free@1.0.0",
+    "transaction_message_ids": [
+      "4e8cfe86-02cc-4802-a7b6-3739dc69f7e0"
+    ]
+  },
+  "target": {
+    "path": "data/C013-serving-adapter-admission-check-scope-v1.json",
+    "commit": "13b4a5382ce41ab558bcf2b1d0160d60d96f83e4",
+    "raw_sha256": "f596def8ceeb5ef24a0d0b177fb3eb3e14d3fe473975589a6992218ea5c705fd",
+    "bytes_equal": true,
+    "claim": {
+      "id": "C013",
+      "version": 1,
+      "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "post_revision": 1,
+      "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+    },
+    "baseline_commit": "addd2c4a15346d21946163a539f1ac19a1f41fef",
+    "verified_raw_pins": [
+      {
+        "path": "service/server.mjs",
+        "raw_sha256": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+        "git_blob": "3992d9d9f35cf06e94cbc890f5116f2369391d6b",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "service/engine.mjs",
+        "raw_sha256": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+        "git_blob": "b38fa5b475f7d585ef0268165d98bb85d112a6ab",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "convex/checks.ts",
+        "raw_sha256": "6237f453d7fac3b1c87e8f53651ea08a7ef74c072fc8131ea7db0eda995c92a1",
+        "git_blob": "68320312d433dda959379a973566c4c0e18a97f1",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "convex/http.ts",
+        "raw_sha256": "70dea2509793e460ea5c84fd546ba90533667dc7ced1ac4119cc6794f7291948",
+        "git_blob": "d33ecde2f5f8dd77e835304fbc8460558af09de5",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "convex/library.ts",
+        "raw_sha256": "85b79a2472a264dccf751e10f8f0cb6bf572dc7cd1663704b5444edb73fb5550",
+        "git_blob": "716045944b47731471cfad9f7b05dc93043fd38e",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "convex/schema.ts",
+        "raw_sha256": "5b38f500d31b2129f2bad6825ae950394bb58de386200407893f93a863d3a20d",
+        "git_blob": "7362d4bb5e8dabcb582b465ff4de9ff9a709e245",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "data/C013-consent-admission-fixture-factomaton-recipient-assessment-v2.json",
+        "raw_sha256": "63b51ca5aaae15b45c2a768d254443d13c718c3e7e722cebf6cdc2782b4792ab",
+        "git_blob": "53499a170b6761fa220b1785290d0d7c35c7a05d",
+        "commit": "addd2c4a15346d21946163a539f1ac19a1f41fef"
+      },
+      {
+        "path": "data/C013-routing-release-criteria-v2.json",
+        "commit": "c94ab2ee1d445e17648bcc679e60da08d8b48a31",
+        "raw_sha256": "ab0975b4d9e261cce742ce039b7c348ba6dc0ef0ecbf8233867cca38d8cdab74"
+      },
+      {
+        "path": "data/C013-routing-release-criteria-v3-consent-erratum.json",
+        "commit": "593798f2fa5308e4a4e1f2f12952b7fd4b787444",
+        "raw_sha256": "a2ca5d8cb9af3355cd7af6f02b140a8643503ea3d5647af756c3cff18f224247"
+      }
+    ],
+    "prior_fixture_head": "f9a4116ac4f964f3a2324f10472ff53bde3ece91",
+    "prior_fixture_task_id": "667d4649-3ed1-4710-bc06-a57c0c1ae2c4",
+    "prior_fixture_disposition_message_id": "ac5c9362-1cba-475b-863e-20f58c2afccc"
+  },
+  "roles": {
+    "reviewer": "@adrian.factfinder",
+    "scope_author_and_recipient": "@adrian.factomaton",
+    "prior_eligibility_decision_actor": "@adrian.factfinder",
+    "prior_event_recorder": "@adrian.factomaton",
+    "shared_owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "prior_exposure": "Factfinder previously reviewed the source, eligibility, routing, consent, model and I1k fixture.",
+    "source_dependence": "One NOAA educational source family. Preserve the exact factual scope and seven exclusions."
+  },
+  "disposition": "REVISE",
+  "verification": {
+    "active_seed": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "active_snapshot": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+    "C013_absent": true,
+    "existing_mappings_resolve": 23,
+    "baseline_engine_tests_passed": 25,
+    "visible_root": {
+      "id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "revision": 1
+    },
+    "visible_replies": [
+      {
+        "id": "32117ac9-25ea-4fce-8d1d-a474d92e3687",
+        "revision": 1
+      },
+      {
+        "id": "d12f815a-c04d-482b-8fd7-d5ab4e8e0676",
+        "revision": 1
+      },
+      {
+        "id": "e9099002-08d6-408b-9ae8-95b250fe82c4",
+        "revision": 1
+      },
+      {
+        "id": "a19eaaac-aeee-44cc-9624-0540af55f3df",
+        "revision": 1
+      },
+      {
+        "id": "13812ace-d53f-4654-a8d9-ebb801ac60fd",
+        "revision": 1
+      },
+      {
+        "id": "8676adb9-58eb-479d-af0e-1d84b8513743",
+        "revision": 1
+      },
+      {
+        "id": "25f6e85a-0835-4902-a110-2df73f13b1cb",
+        "revision": 1
+      },
+      {
+        "id": "4665e741-a991-47cd-a2af-57a50aa4abda",
+        "revision": 1
+      },
+      {
+        "id": "aeb273a0-e825-49a8-97e4-55df9a280048",
+        "revision": 1
+      },
+      {
+        "id": "15d87c22-3e26-4de3-8b31-f2c96b0dbadf",
+        "revision": 1
+      },
+      {
+        "id": "ff7482ba-4cec-4e69-b74c-7d1ba073c62c",
+        "revision": 1
+      },
+      {
+        "id": "c0a29345-34dc-431f-a6ad-941a7cc8aca9",
+        "revision": 1
+      },
+      {
+        "id": "71d98474-3660-4e9e-8db6-72b5cf5727dc",
+        "revision": 1
+      },
+      {
+        "id": "74ab0553-efef-4c66-a679-4e5cece299b5",
+        "revision": 1
+      },
+      {
+        "id": "b8c0f2a8-404c-4708-9569-b5de96e9d198",
+        "revision": 1
+      },
+      {
+        "id": "5344e56d-d33c-4a63-9378-ab9b4b49ae1d",
+        "revision": 1
+      },
+      {
+        "id": "407de5b1-82e9-45ea-b6bd-4ff862cd94ff",
+        "revision": 1
+      },
+      {
+        "id": "b9aca6ca-d91d-4dd8-86f5-2f5fbbb052e2",
+        "revision": 1
+      },
+      {
+        "id": "b45dcfcf-58bc-42da-926f-7c9332f7ab4a",
+        "revision": 1
+      },
+      {
+        "id": "1a6fcc07-47af-4815-a17f-afda53e2bdc9",
+        "revision": 1
+      },
+      {
+        "id": "4c2429a7-0c43-4f8d-8eaf-744e02bf77c7",
+        "revision": 2
+      },
+      {
+        "id": "806c24d5-ef3e-4993-bc2b-23b2357ca404",
+        "revision": 1
+      },
+      {
+        "id": "7d977365-60da-4b5d-aadc-1f3abaf45c13",
+        "revision": 1
+      },
+      {
+        "id": "c01da63c-fc6c-4c06-9e6e-eaf7c0c285b9",
+        "revision": 1
+      },
+      {
+        "id": "4c78c5bc-85b1-4ed6-8461-fe5b28d342e7",
+        "revision": 1
+      },
+      {
+        "id": "7331f5d1-5f78-45cb-97ac-633f491a1e91",
+        "revision": 1
+      }
+    ],
+    "objection_observation": "All 26 visible reply revisions match the prior fixture review. No new material objection was observed in that bounded read.",
+    "assignment_basis": "Committed contract, matching exact Task specification and open performer assignment were visible. The separate recipient handoff message was absent in the transaction readback."
+  },
+  "confirmed_boundary": [
+    "The semantic engine checks the current import against the snapshot at the start of analysis. Its later research submission uses the general check mutation, which lacks the expected non-reused serving epoch and a per-effect binding. Application-level saved-analysis keys and engine revision metadata do not couple that mutation to the earlier analysis.",
+    "The current Convex check can find an existing job by normalized text independently of the request-key record. A generation fence and a scoped key alone therefore do not specify whether legacy or other-scope job records may be returned or associated. The proposed jobs and binding transaction needs an explicit policy for that existing behavior.",
+    "Keeping a single Convex transaction authoritative, advancing a non-reused epoch despite identical content, and limiting the check to synthetic namespaces and a trusted in-process adapter are appropriate. Production identity and the protected invocation decision remain prerequisites for any public or production wiring."
+  ],
+  "required_revisions": [
+    {
+      "id": "A3-A4",
+      "finding": "The matrix races two identical fresh requests and replays a previously bound key, but does not cover pre-existing job rows found independently of that key.",
+      "change": "Specify whether and under what current-epoch and scope conditions an existing job may be reused, and define treatment of historical jobs lacking those bindings. Add a disposable seeded-job control with a new scoped key and a same-text prior-epoch or other-scope job. Assert the designed current-generation result and that no prior job identity or payload is disclosed or silently rebound. Keep same-key concurrency and stale-before-conflict checks."
+    },
+    {
+      "id": "A5",
+      "finding": "The routing design states the trust boundary but the cases do not explicitly bind the decoded full input, extracted claim context and trusted semantic result to the same serving manifest. A route produced for a different analysis or incompatible index is insufficient evidence.",
+      "change": "Add a fixture for a protected literal that appears only as an extracted fragment and a mismatched semantic engine/index generation. Require the original decoded request to determine protected-literal dispatch, maintain previously reviewed exact-literal and candidate exclusion rules, and assert no admission on inconsistent routing evidence. Exercise a whole-request protected literal with consent true and a mismatch as separate controls."
+    },
+    {
+      "id": "A7",
+      "finding": "A post-commit change before projection covers late disclosure but leaves the separately required pre-persistence authority check implicit.",
+      "change": "Split the check into a generation change before saving immediate or partial analysis state and a change after that state is saved but before immediate or saved-progress disclosure. Assert no old job or evidence is published, no new stale result is persisted after revocation, and the prior committed job is retained without a new enqueue. Broader restart and withdrawal coverage can remain a later gate."
+    }
+  ],
+  "other_fixture_notes": {
+    "A1": "The same-import, different-epoch barrier is the right check. Require the authority read and binding/job effect to share the authoritative mutation. If the disposable test harness cannot establish actual transaction-conflict behavior, record that as an evidence limit.",
+    "A2": "Use valid consent and a valid expected generation with missing or unreadable authority and assert zero committed bindings and jobs.",
+    "A6": "Observe both durable tables before and after injected failure and keep this separate from missing-authority coverage."
+  },
+  "limits": {
+    "design_review_only": true,
+    "prospective_fixtures_reviewed": 7,
+    "proposed_fixtures_executed": false,
+    "production_identity_or_invocation_verified": false,
+    "live_intake_or_outbox_exercised": false,
+    "active_import_authorized": false,
+    "routing_release_authorized": false,
+    "api_publication_authorized": false,
+    "recipient_assessment": "pending separate decision"
+  }
+}
