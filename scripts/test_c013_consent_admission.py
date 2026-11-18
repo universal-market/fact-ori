@@ -130,6 +130,13 @@ class ConsentAdmissionTests(unittest.TestCase):
         self.assert_no_effect("stale", expected_epoch=1, public_review=True)
         self.assert_one_job(original["job_id"])
 
+    def test_missing_authoritative_epoch_has_no_committed_effect(self):
+        with closing(sqlite3.connect(self.db)) as connection, connection:
+            connection.execute("DELETE FROM serving_epoch WHERE singleton = 1")
+
+        self.assert_no_effect("unavailable", expected_epoch=1, public_review=True)
+        self.assertEqual(self.state(), ([], [], []))
+
     def test_missing_or_failed_transaction_has_no_committed_effect(self):
         self.assert_no_effect("unavailable", public_review=True, expected_epoch=None)
         with closing(sqlite3.connect(self.db)) as connection, connection:
