@@ -43,11 +43,10 @@ type AdmissionRequest = {
   publicReview?: boolean;
 };
 
-type Dependencies<T> = {
+export type RoutingDependencies = {
   readGeneration: () => Promise<ServingGeneration | null>;
   extract: (text: string) => Effect[];
   classify: (request: Omit<RouteProof, "route">) => RouteProof;
-  admit: (request: AdmissionRequest) => Promise<T>;
 };
 
 function readPublicInput(input: unknown) {
@@ -66,7 +65,7 @@ function readPublicInput(input: unknown) {
 export async function routeFixtureRequest<T>(
   input: unknown,
   context: { scope: string; analysisId: string; preview: boolean },
-  deps: Dependencies<T>,
+  deps: RoutingDependencies & { admit: (request: AdmissionRequest) => Promise<T> },
 ) {
   const request = readPublicInput(input);
   if (!request) return { status: "invalid" } as const;
