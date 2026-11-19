@@ -1,7 +1,9 @@
-import { defineSchema, defineTable } from "convex/server";
+import { defineSchema, defineTable, type DataModelFromSchemaDefinition,
+  type GenericQueryCtx } from "convex/server";
 import { defineTestApp } from "convex-test";
 import { v, type Infer } from "convex/values";
-import { exactRoute, generationIdentity, matchesGeneration } from "./c013-serving-routing";
+import { exactRoute, generationIdentity, matchesGeneration, routeFixtureRequest,
+  type RoutingDependencies } from "./c013-serving-routing";
 
 const payload = v.object({
   answer: v.string(),
@@ -46,6 +48,26 @@ const schema = defineSchema({
 });
 
 const app = defineTestApp({ schema });
+type FixtureDb = GenericQueryCtx<DataModelFromSchemaDefinition<typeof schema>>["db"];
+
+function findBinding(db: FixtureDb, scope: string, key: string) {
+  return db.query("bindings")
+    .withIndex("by_scope_and_key", (q) => q.eq("scope", scope).eq("key", key)).unique();
+}
+
+async function eligibleJob(db: FixtureDb, binding: NonNullable<Awaited<ReturnType<typeof findBinding>>>) {
+  const job = await db.get("jobs", binding.jobId);
+  return job && job.scope === binding.scope && job.epoch === binding.epoch &&
+    job.bindingKey === binding.key && job.text === binding.effectText ? job : null;
+}
+
+async function resultJobMatches(
+  db: FixtureDb, scope: string, key: string, epoch: number, jobId: Infer<typeof payload>["jobId"],
+) {
+  const binding = await findBinding(db, scope, key);
+  return binding?.epoch === epoch && binding.jobId === jobId && !!await eligibleJob(db, binding);
+}
+
 const admissionResult = v.union(
   v.object({ status: v.literal("admitted"), jobId: v.id("jobs") }),
   unavailable,
@@ -77,19 +99,15 @@ const admission = app.internalMutation({
     }
 
     const { scope, key, originalText, effectText, publicReview } = args;
-    const existing = await ctx.db.query("bindings")
-      .withIndex("by_scope_and_key", (q) => q.eq("scope", scope).eq("key", key)).unique();
+    const existing = await findBinding(ctx.db, scope, key);
     if (existing) {
       if (existing.epoch !== authority.epoch) return { status: "stale" };
       if (existing.originalText !== originalText || existing.effectText !== effectText ||
           publicReview !== true) {
         return { status: "conflict" };
       }
-      const job = await ctx.db.get("jobs", existing.jobId);
-      if (!job || job.scope !== scope || job.epoch !== authority.epoch ||
-          job.bindingKey !== key || job.text !== effectText) {
-        return { status: "unavailable" };
-      }
+      const job = await eligibleJob(ctx.db, existing);
+      if (!job) return { status: "unavailable" };
       return { status: "admitted", jobId: job._id };
     }
 
@@ -125,8 +143,7 @@ const save = app.internalMutation({
       (q) => q.eq("scope", scope).eq("key", key).eq("kind", kind)).unique();
     if (prior && prior.epoch !== authority.epoch) return { status: "stale" };
 
-    const job = await ctx.db.get("jobs", args.payload.jobId);
-    if (!job || job.epoch !== authority.epoch || job.scope !== scope) {
+    if (!await resultJobMatches(ctx.db, scope, key, authority.epoch, args.payload.jobId)) {
       return { status: "unavailable" };
     }
     if (prior) await ctx.db.patch("results", prior._id, { payload: args.payload });
@@ -155,6 +172,9 @@ const project = app.internalQuery({
       (q) => q.eq("scope", args.scope).eq("key", args.key).eq("kind", args.kind)).unique();
     if (!result) return { status: "missing" };
     if (result.epoch !== authority.epoch) return { status: "stale" };
+    if (!await resultJobMatches(ctx.db, args.scope, args.key, result.epoch, result.payload.jobId)) {
+      return { status: "unavailable" };
+    }
     return { status: "current", payload: result.payload };
   },
 });
@@ -174,3 +194,34 @@ const generation = app.internalQuery({
 export const servingAdmissionFixture = app.defineModules({
   fixture: { admission, save, project, generation },
 });
+
+type FixtureClient = Pick<ReturnType<typeof servingAdmissionFixture.createTest>, "mutation" | "query">;
+
+export function serveFixtureResults(
+  client: FixtureClient,
+  input: unknown,
+  context: Parameters<typeof routeFixtureRequest>[1],
+  kind: Infer<typeof stateKind>,
+  result: Pick<Infer<typeof payload>, "answer" | "evidence">,
+  routing: RoutingDependencies,
+  barriers: { beforeSave?: () => Promise<unknown>; beforeProject?: () => Promise<unknown> } = {},
+) {
+  const { fixture } = servingAdmissionFixture.internal;
+  return routeFixtureRequest(input, context, {
+    ...routing,
+    admit: async (request) => {
+      const admitted = await client.mutation(fixture.admission, request);
+      if (admitted.status !== "admitted") return admitted;
+      // The admission key encodes the trusted analysis ID and effect position.
+      const identity = { scope: request.scope, key: request.key,
+        expectedEpoch: request.expectedEpoch, kind };
+      await barriers.beforeSave?.();
+      const saved = await client.mutation(fixture.save, {
+        ...identity, payload: { ...result, jobId: admitted.jobId },
+      });
+      if (saved.status !== "saved") return saved;
+      await barriers.beforeProject?.();
+      return client.query(fixture.project, identity);
+    },
+  });
+}
