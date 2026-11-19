@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { servingAdmissionFixture } from "./fixtures/c013-serving-admission";
+import { serveFixtureResults, servingAdmissionFixture } from "./fixtures/c013-serving-admission";
 import {
   mappedLiteral, protectedLiteral, routeFixtureRequest, type RouteProof,
 } from "./fixtures/c013-serving-routing";
@@ -257,7 +257,7 @@ async function prepareResult(t: Fixture, kind: "immediate" | "partial") {
   const result = await t.mutation(internal.fixture.admission, request);
   if (result.status !== "admitted") throw new Error("Expected a disposable job");
   return {
-    identity: { scope: request.scope, key: "analysis-1", expectedEpoch: 1, kind },
+    identity: { scope: request.scope, key: request.key, expectedEpoch: 1, kind },
     payload: { answer: "Synthetic answer", evidence: "Synthetic support", jobId: result.jobId },
   };
 }
@@ -282,6 +282,114 @@ test.each(["immediate", "partial"] as const)(
     expect(await intakeState(t)).toEqual(historicalIntake);
   },
 );
+
+const analysis = { scope: request.scope, analysisId: "analysis-result", preview: false };
+const analysisRequest = { text: "Synthetic request for a result", public_review: true };
+const resultPayload = { answer: "Synthetic answer", evidence: "Synthetic support" };
+
+function serve(t: Fixture, kind: "immediate" | "partial",
+  barriers?: Parameters<typeof serveFixtureResults>[6], answer = resultPayload.answer) {
+  return serveFixtureResults(t, analysisRequest, analysis, kind, {
+    ...resultPayload, answer,
+  }, {
+    readGeneration: () => t.query(internal.fixture.generation),
+    extract: (text) => [{ position: 0, text }],
+    classify: (proof) => ({ ...proof, route: "unmapped" }),
+  }, barriers);
+}
+
+const staleResponse = { status: "checked", results: [{ status: "stale" }] };
+
+test.each(["immediate", "partial"] as const)(
+  "A7 adapter: pre-save revocation prevents fresh %s persistence",
+  async (kind) => {
+    const { t, authority } = await setup();
+    let admitted: Awaited<ReturnType<typeof intakeState>> | undefined;
+    const response = await serve(t, kind, {
+      beforeSave: async () => {
+        admitted = await intakeState(t);
+        expect(admitted.jobs).toHaveLength(1);
+        expect(admitted.bindings).toHaveLength(1);
+        await t.run((ctx) => ctx.db.patch("authority", authority, { epoch: 2 }));
+      },
+      beforeProject: async () => { throw new Error("Stale save must stop projection"); },
+    });
+    expect(response).toEqual(staleResponse);
+    expect(await t.run((ctx) => ctx.db.query("results").take(10))).toEqual([]);
+    expect(await intakeState(t)).toEqual(admitted);
+  },
+);
+
+test.each(["immediate", "partial"] as const)(
+  "A7 adapter: pre-save revocation preserves a prior %s result and its job",
+  async (kind) => {
+    const { t, authority } = await setup();
+    const response = await serve(t, kind);
+    const intake = await intakeState(t);
+    const saved = await t.run((ctx) => ctx.db.query("results").take(10));
+    expect(intake.jobs).toHaveLength(1);
+    expect(saved).toHaveLength(1);
+    expect(saved[0]).toMatchObject({
+      scope: analysis.scope, key: JSON.stringify([analysis.analysisId, 0]), kind, epoch: 1,
+      payload: { ...resultPayload, jobId: intake.jobs[0]._id },
+    });
+    expect(response).toEqual({ status: "checked", results: [
+      { status: "current", payload: saved[0].payload },
+    ] });
+
+    const stale = await serve(t, kind, {
+      beforeSave: () => t.run((ctx) => ctx.db.patch("authority", authority, { epoch: 2 })),
+      beforeProject: async () => { throw new Error("Stale save must stop projection"); },
+    }, "Attempted new answer");
+    expect(stale).toEqual(staleResponse);
+    expect(await t.run((ctx) => ctx.db.query("results").take(10))).toEqual(saved);
+    expect(await intakeState(t)).toEqual(intake);
+  },
+);
+
+test.each(["immediate", "partial"] as const)(
+  "A7 adapter: revocation after a %s save suppresses disclosure",
+  async (kind) => {
+    const { t, authority } = await setup();
+    const readResults = () => t.run((ctx) => ctx.db.query("results").take(10));
+    let saved: Awaited<ReturnType<typeof readResults>> | undefined;
+    let admitted: Awaited<ReturnType<typeof intakeState>> | undefined;
+    const response = await serve(t, kind, {
+      beforeProject: async () => {
+        saved = await readResults();
+        admitted = await intakeState(t);
+        expect(admitted.jobs).toHaveLength(1);
+        expect(admitted.bindings).toHaveLength(1);
+        expect(saved).toHaveLength(1);
+        expect(saved[0]).toMatchObject({
+          key: admitted.bindings[0].key, kind, epoch: 1,
+          payload: { ...resultPayload, jobId: admitted.jobs[0]._id },
+        });
+        await t.run((ctx) => ctx.db.patch("authority", authority, { epoch: 2 }));
+      },
+    });
+    expect(response).toEqual(staleResponse);
+    expect(await readResults()).toEqual(saved);
+    expect(await intakeState(t)).toEqual(admitted);
+  },
+);
+
+test("A7 binding: same-scope current jobs from another analysis cannot be saved or disclosed", async () => {
+  const { t } = await setup();
+  const { identity, payload } = await prepareResult(t, "immediate");
+  const other = await t.mutation(internal.fixture.admission, { ...request, key: "other-analysis" });
+  if (other.status !== "admitted") throw new Error("Expected a second disposable job");
+  const wrongPayload = { ...payload, jobId: other.jobId };
+  expect(await t.mutation(internal.fixture.save, { ...identity, payload: wrongPayload }))
+    .toEqual({ status: "unavailable" });
+  expect(await t.query(internal.fixture.project, identity)).toEqual({ status: "missing" });
+  await t.mutation(internal.fixture.save, { ...identity, payload });
+  await t.run(async (ctx) => {
+    const [row] = await ctx.db.query("results").take(1);
+    await ctx.db.patch("results", row._id, { payload: wrongPayload });
+  });
+  expect(await t.query(internal.fixture.project, identity)).toEqual({ status: "unavailable" });
+});
 
 test.each(["immediate", "partial"] as const)(
   "A7b: projection withholds a previously saved %s payload after revocation",
