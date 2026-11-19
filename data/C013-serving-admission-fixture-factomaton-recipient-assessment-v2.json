@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W029-S1-I4",
+  "observed_at": "2026-11-19T06:15:29.169Z",
+  "recipient_assessment_actor": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "delivery": "ACCEPT",
+  "disposable_fixture_disposition": "ACCEPT",
+  "scope": "Exact three-file disposable A7 adapter revision and its reviewed per-effect behavior.",
+  "market": {
+    "listing_id": "a263f372-56ca-48ae-8540-77085c8bfd3b",
+    "transaction_id": "c98826bc-e2c2-4b44-970d-96f822b2562e",
+    "contract_id": "be34d899-7be5-4f24-ad0a-9b2aa40aacff",
+    "execution_id": "be34d899-7be5-4f24-ad0a-9b2aa40aacff",
+    "task_id": "9d287227-e949-48a8-95ac-5a6f878f956d"
+  },
+  "head": "e97eecc381566cf9797a37c4a04b9529a66c7eda",
+  "base": "cec80b42ae8cbdeecd6ff1902c10aefb1a3a4c9e",
+  "reviewed_claim": {
+    "id": "C013",
+    "version": 1,
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1,
+    "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+  },
+  "review_artifact": {
+    "commit": "fd76c0b91c0548411d012a2e51191d5dff42016f",
+    "path": "data/C013-serving-admission-fixture-factfinder-implementation-review-v2.json",
+    "raw_sha256": "9389fec123c952e04ed8afc02055a40d807420c440d787b0ef5675d5055f8820",
+    "canonical_sha256": "86c236d3c4a1a21ab16a170a81c2d8953b6de57ddecabaa3a5a575c065f30f7f",
+    "canonical_format": "UTF-8 compact JSON with sorted keys and ensure_ascii=true"
+  },
+  "input_raw_sha256": {
+    "tests/fixtures/c013-serving-routing.ts": "fa5361390113970d6afb85bfcda2394c304e4e6edb9546474d826af4a23d14b3",
+    "tests/fixtures/c013-serving-admission.ts": "ece6a5a4e2c061cf84f212b6a52370a9e8c26a0fd3718cab105fb48f62c79c39",
+    "tests/c013-serving-admission.test.ts": "191bb9cc5ca5b511640bae00daf49156655e14779c75adfc251954fabad3b220",
+    "data/C013-serving-admission-fixture-factfinder-implementation-review-v1.json": "81e747709223967a9a761280d55542d86a86f70adb1e76532587cec51d0271db",
+    "data/C013-serving-admission-fixture-factomaton-recipient-assessment-v1.json": "dd789ba4983bd17b2d09db740894afdf6707f413f6db055b5d0663e8f9a4660a"
+  },
+  "prior_review": {
+    "task_id": "279ae273-efef-47e5-ab74-58b85b8097b9",
+    "artifact": {
+      "commit": "c751a5a6f76a24dcf3170c2a38f7aecdcb7b253a",
+      "path": "data/C013-serving-admission-fixture-factfinder-implementation-review-v1.json",
+      "raw_sha256": "81e747709223967a9a761280d55542d86a86f70adb1e76532587cec51d0271db",
+      "canonical_sha256": "9e7f60c23ed9c61be7758b112b3ec3e20a7650943893c0b2e49b189625d65af2",
+      "canonical_format": "UTF-8 compact JSON with sorted keys and ensure_ascii=true"
+    },
+    "text_sha256": "5af9fc9fd578be09a1e14b4a090a4c4fa1e25c71306982308e94ddbc94dc2fe3"
+  },
+  "prior_recipient_assessment": {
+    "commit": "833c618f9021f63c4c00ecd1332be7256335d8f7",
+    "path": "data/C013-serving-admission-fixture-factomaton-recipient-assessment-v1.json",
+    "raw_sha256": "dd789ba4983bd17b2d09db740894afdf6707f413f6db055b5d0663e8f9a4660a",
+    "git_blob": "50d72ae4858b8c1389be04d3d4bab1fc25878989",
+    "actor": "@adrian.factomaton",
+    "message_id": "4d3c536e-ce96-4eb6-ac03-5aa7e2628158",
+    "sequence": 3,
+    "readback_verified": true
+  },
+  "recipient_checks": {
+    "artifact_and_inputs_match": true,
+    "changed_test_files": 3,
+    "focused_tests_passed": 31,
+    "typescript": "passed",
+    "python_tests_passed": 303,
+    "exports": {
+      "seed_import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+      "public_snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "lookups": 23,
+      "claim_lookups": 15,
+      "c013_absent": true
+    },
+    "added_cases": "Six immediate/partial revocation tests across fresh save, existing save and disclosure, plus one test that checks a wrong job at both save and projection.",
+    "candidate_reply_revision_changes": 0,
+    "full_vitest": "Reviewer's execution was incomplete because of subprocess restrictions in unchanged suites. Prior author run had 81 passes and the existing seed-count assertion failure. Recipient reran focused Vitest, TypeScript and Python."
+  },
+  "roles": {
+    "fixture_author": "@adrian.factomaton",
+    "earlier_eligibility_decision_actor": "@adrian.factfinder",
+    "earlier_eligibility_event_recorder": "@adrian.factomaton",
+    "shared_owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "source_dependence": "One NOAA educational source family. Reviewer had prior exposure."
+  },
+  "limits": [
+    "Disposable in-memory harness with per-effect projection.",
+    "Deployed concurrency, grouped responses, production caller identity and candidate retrieval completeness remain open."
+  ],
+  "release_state": "C013 withheld. Live intake, factual disposition, curation, routing activation, deployment and API publication remain separate."
+}
