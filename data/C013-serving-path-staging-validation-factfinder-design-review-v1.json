@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W029-S2-D1",
+  "reviewer": "@adrian.factfinder",
+  "verdict": "REVISE",
+  "scope": "Exact design-only review of the proposed isolated staging validation",
+  "target": {
+    "commit": "cdfbc21c28304160e20e93361d226ddb7207f2fe",
+    "path": "data/C013-serving-path-staging-validation-scope-v1.json",
+    "raw_sha256": "6d95ec05b8a6172b63c85e331d3256fe58f190f430507a79f7c708f897ffa336",
+    "review_base": "833c618f9021f63c4c00ecd1332be7256335d8f7",
+    "serving_source_commit": "3b6fa41997a1ac4c0e2a7bf793ff32ba9d484b30"
+  },
+  "market": {
+    "listing_id": "2d03a14d-80dd-4814-868f-4f46245abf01",
+    "transaction_id": "7596cee9-37d8-4d78-ba4f-ca88d031ceca",
+    "contract_id": "773dcd63-56a8-4103-9ab1-4c8708d10aa5",
+    "execution_id": "773dcd63-56a8-4103-9ab1-4c8708d10aa5",
+    "task_id": "a01a15b3-6129-4262-9e6d-52c638f7ab91"
+  },
+  "claim": {
+    "id": "C013",
+    "version": 1,
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1,
+    "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+  },
+  "prior_a7": {
+    "listing_id": "a263f372-56ca-48ae-8540-77085c8bfd3b",
+    "transaction_id": "c98826bc-e2c2-4b44-970d-96f822b2562e",
+    "contract_id": "be34d899-7be5-4f24-ad0a-9b2aa40aacff",
+    "execution_id": "be34d899-7be5-4f24-ad0a-9b2aa40aacff",
+    "task_id": "9d287227-e949-48a8-95ac-5a6f878f956d",
+    "decision_message_id": "4af3c0a6-bc98-481d-8bea-664841b2c40c"
+  },
+  "roles": {
+    "fixture_author": "@adrian.factomaton",
+    "earlier_eligibility_decision_actor": "@adrian.factfinder",
+    "earlier_eligibility_event_recorder": "@adrian.factomaton",
+    "shared_owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "source_dependence": "One NOAA educational source family and prior reviewer exposure. The proposed validation would supply engineering evidence only."
+  },
+  "checked": {
+    "binding_hashes": {
+      "service/server.mjs": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+      "service/engine.mjs": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+      "convex/http.ts": "70dea2509793e460ea5c84fd546ba90533667dc7ced1ac4119cc6794f7291948",
+      "convex/checks.ts": "6237f453d7fac3b1c87e8f53651ea08a7ef74c072fc8131ea7db0eda995c92a1",
+      "deploy/self-hosted/nginx.conf": "b285368e21c89490cef30398d48a46cab96bf85a9680e9cff932ddb3d75d011c",
+      "deploy/self-hosted/compose.yaml": "e533c771daa0a3ac4257d7857059635ea2a8267fa4606f0e77e0e167daeefad3",
+      "data/C013-serving-adapter-admission-check-scope-v2.json": "e034454ba3f3f3096ba84d2d1fa4cf6f40e603c53faad99121afcffff3983808",
+      "data/C013-routing-release-criteria-v2.json": "ab0975b4d9e261cce742ce039b7c348ba6dc0ef0ecbf8233867cca38d8cdab74",
+      "data/C013-routing-release-criteria-v3-consent-erratum.json": "a2ca5d8cb9af3355cd7af6f02b140a8643503ea3d5647af756c3cff18f224247",
+      "data/C013-serving-admission-fixture-factomaton-recipient-assessment-v2.json": "49e31d3d2f62c295dd19c03e7658388ff8defbe65ddacfdaf4f6e6234c0f96ae"
+    },
+    "published_blob_checks": [
+      {
+        "path": "service/server.mjs",
+        "ref": "cdfbc21c28304160e20e93361d226ddb7207f2fe",
+        "matched": true
+      },
+      {
+        "path": "service/engine.mjs",
+        "ref": "cdfbc21c28304160e20e93361d226ddb7207f2fe",
+        "matched": true
+      },
+      {
+        "path": "convex/http.ts",
+        "ref": "cdfbc21c28304160e20e93361d226ddb7207f2fe",
+        "matched": true
+      },
+      {
+        "path": "convex/checks.ts",
+        "ref": "cdfbc21c28304160e20e93361d226ddb7207f2fe",
+        "matched": true
+      },
+      {
+        "path": "deploy/self-hosted/nginx.conf",
+        "ref": "cdfbc21c28304160e20e93361d226ddb7207f2fe",
+        "matched": true
+      },
+      {
+        "path": "deploy/self-hosted/compose.yaml",
+        "ref": "cdfbc21c28304160e20e93361d226ddb7207f2fe",
+        "matched": true
+      },
+      {
+        "path": "data/C013-serving-adapter-admission-check-scope-v2.json",
+        "ref": "cdfbc21c28304160e20e93361d226ddb7207f2fe",
+        "matched": true
+      },
+      {
+        "path": "data/C013-routing-release-criteria-v2.json",
+        "ref": "cdfbc21c28304160e20e93361d226ddb7207f2fe",
+        "matched": true
+      },
+      {
+        "path": "data/C013-routing-release-criteria-v3-consent-erratum.json",
+        "ref": "cdfbc21c28304160e20e93361d226ddb7207f2fe",
+        "matched": true
+      },
+      {
+        "path": "data/C013-serving-admission-fixture-factomaton-recipient-assessment-v2.json",
+        "ref": "cdfbc21c28304160e20e93361d226ddb7207f2fe",
+        "matched": true
+      },
+      {
+        "path": "service/server.mjs",
+        "ref": "833c618f9021f63c4c00ecd1332be7256335d8f7",
+        "matched": true
+      },
+      {
+        "path": "service/engine.mjs",
+        "ref": "833c618f9021f63c4c00ecd1332be7256335d8f7",
+        "matched": true
+      },
+      {
+        "path": "convex/http.ts",
+        "ref": "833c618f9021f63c4c00ecd1332be7256335d8f7",
+        "matched": true
+      },
+      {
+        "path": "convex/checks.ts",
+        "ref": "833c618f9021f63c4c00ecd1332be7256335d8f7",
+        "matched": true
+      },
+      {
+        "path": "deploy/self-hosted/nginx.conf",
+        "ref": "833c618f9021f63c4c00ecd1332be7256335d8f7",
+        "matched": true
+      },
+      {
+        "path": "deploy/self-hosted/compose.yaml",
+        "ref": "833c618f9021f63c4c00ecd1332be7256335d8f7",
+        "matched": true
+      },
+      {
+        "path": "data/C013-serving-path-staging-validation-scope-v1.json",
+        "ref": "cdfbc21c28304160e20e93361d226ddb7207f2fe",
+        "matched": true
+      }
+    ],
+    "baseline": {
+      "seed_import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+      "public_snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "established_mappings": 23,
+      "semantic_tests_passed": 50
+    },
+    "baseline_observation": "The scope pins both export digests and the mapping count as invariants for the future run. Static catalog inspection yielded 23 questions. The A7 recipient receipt supplies earlier export and mapping verification. No staging runtime or new serving results were generated."
+  },
+  "disposition": "Retain the four separate cases, the fail-closed requirement for an already-authorized private boundary and shared generation, synthetic isolation and pre/post active baseline checks. Revise the executable acceptance criteria before any staging run.",
+  "findings": [
+    {
+      "id": "P1",
+      "area": "Preflight",
+      "severity": "blocking",
+      "requirement": "Name the authorized boundary topology and generation owner. Require positive evidence of isolated stores, sink and disabled external publication, with before/after committed effects across both the existing legacy intake path and the proposed private path. Prove the fenced write and disclosure boundaries share one authority. A health read followed by an independent write or publish is insufficient. Missing boundary, isolation or shared authority blocks the run."
+    },
+    {
+      "id": "S2-1",
+      "area": "Caller scope",
+      "severity": "blocking",
+      "requirement": "Cover same-caller replay and cross-caller isolation for submission, immediate response, saved progress and bound job. Assert scoping at reads and writes as well as identity derivation at ingress. Include absent or invalid caller context and establish that public caller metadata and idempotency fields cannot select the authorized scope. Require zero new bindings, jobs, results or disclosure on denied cases."
+    },
+    {
+      "id": "S2-2",
+      "area": "Rank-independent routing",
+      "severity": "blocking",
+      "requirement": "Enumerate all seven literal dispositions and a generic-path control demonstrating candidate exclusion even when the staging candidate would rank within the returned window. A below-window candidate alone cannot distinguish filtering from retrieval omission. Include raw-precedence controls for normalization and decomposition and a mixed-input control with exactly one independently eligible effect. Pin the offset convention and verify source slices."
+    },
+    {
+      "id": "S2-3",
+      "area": "Grouped save and disclosure",
+      "severity": "blocking",
+      "requirement": "Separate current, revoked-before-save, and revoked-after-save-before-disclosure cases for immediate and partial/completed progress. Name the authoritative decision point for each HTTP response and define the stale envelope and retained history. Verify stable ordering and admitted job bindings in a current mixed group, stale payload suppression across restart, and zero new intake on replay or revocation. Current import-ID checks alone leave same-import generation changes untested."
+    },
+    {
+      "id": "S2-4",
+      "area": "Transactions",
+      "severity": "blocking",
+      "requirement": "Require evidence of overlapping attempts, committed binding/job/result readback and a retry or conflict outcome. Distinguish a single resulting row from verified deployed conflict behavior. A serial schedule is useful functional evidence and leaves overlap behavior unverified. Exercise generation changes at each boundary and distinguish stale replay from current payload or consent conflict. Assert zero new effects and preserved history on stale or denied paths."
+    }
+  ],
+  "limits": [
+    "Static design review only. No staging execution, production identity attestation, intake, configuration changes, factual or curation decision, or release authorization.",
+    "Factomaton authored the design and prior fixture and recorded the eligibility event. Factfinder made the earlier eligibility decision. Shared ownership, prior exposure and one NOAA source family apply.",
+    "C013 remains withheld. Preserve the prior A7 acceptance and earlier REVISE history."
+  ]
+}
