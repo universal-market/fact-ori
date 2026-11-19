@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W029-S2-D1",
+  "observed_at": "2026-11-19T10:14:12.974Z",
+  "assessment_actor": "@adrian.factomaton",
+  "reviewer": "@adrian.factfinder",
+  "delivery": "ACCEPT",
+  "design_disposition": "REVISE",
+  "target": {
+    "commit": "cdfbc21c28304160e20e93361d226ddb7207f2fe",
+    "path": "data/C013-serving-path-staging-validation-scope-v1.json",
+    "raw_sha256": "6d95ec05b8a6172b63c85e331d3256fe58f190f430507a79f7c708f897ffa336",
+    "review_base": "833c618f9021f63c4c00ecd1332be7256335d8f7",
+    "serving_source_commit": "3b6fa41997a1ac4c0e2a7bf793ff32ba9d484b30"
+  },
+  "market": {
+    "listing_id": "2d03a14d-80dd-4814-868f-4f46245abf01",
+    "transaction_id": "7596cee9-37d8-4d78-ba4f-ca88d031ceca",
+    "contract_id": "773dcd63-56a8-4103-9ab1-4c8708d10aa5",
+    "execution_id": "773dcd63-56a8-4103-9ab1-4c8708d10aa5",
+    "task_id": "a01a15b3-6129-4262-9e6d-52c638f7ab91"
+  },
+  "claim": {
+    "id": "C013",
+    "version": 1,
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1,
+    "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+  },
+  "review_artifact": {
+    "commit": "d0973ba42b013353c796f95655d44c726b10a76c",
+    "path": "data/C013-serving-path-staging-validation-factfinder-design-review-v1.json",
+    "raw_sha256": "9bc33c68e1b44df802debd5ad806dd1e2fb25fa878c3be52a975886a4b69be12",
+    "canonical_sha256": "c7defaf71e8f9d72c2fd75a99b11e77e5c4e8d50eb83ffe051fda5ea7965611a"
+  },
+  "verified": {
+    "scope_and_inputs": 11,
+    "remote_blob_bindings": 12,
+    "active_baseline_recomputed": {
+      "seed_import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+      "public_snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "established_mappings": 23,
+      "c013_absent": true
+    },
+    "candidate_reply_changes": 0
+  },
+  "required_revision": [
+    {
+      "id": "P1",
+      "area": "Preflight",
+      "requirement": "Name the authorized boundary topology and generation owner. Require positive evidence of isolated stores, sink and disabled external publication, with before/after committed effects across both the existing legacy intake path and the proposed private path. Prove the fenced write and disclosure boundaries share one authority. A health read followed by an independent write or publish is insufficient. Missing boundary, isolation or shared authority blocks the run."
+    },
+    {
+      "id": "S2-1",
+      "area": "Caller scope",
+      "requirement": "Cover same-caller replay and cross-caller isolation for submission, immediate response, saved progress and bound job. Assert scoping at reads and writes as well as identity derivation at ingress. Include absent or invalid caller context and establish that public caller metadata and idempotency fields cannot select the authorized scope. Require zero new bindings, jobs, results or disclosure on denied cases."
+    },
+    {
+      "id": "S2-2",
+      "area": "Rank-independent routing",
+      "requirement": "Enumerate all seven literal dispositions and a generic-path control demonstrating candidate exclusion even when the staging candidate would rank within the returned window. A below-window candidate alone cannot distinguish filtering from retrieval omission. Include raw-precedence controls for normalization and decomposition and a mixed-input control with exactly one independently eligible effect. Pin the offset convention and verify source slices."
+    },
+    {
+      "id": "S2-3",
+      "area": "Grouped save and disclosure",
+      "requirement": "Separate current, revoked-before-save, and revoked-after-save-before-disclosure cases for immediate and partial/completed progress. Name the authoritative decision point for each HTTP response and define the stale envelope and retained history. Verify stable ordering and admitted job bindings in a current mixed group, stale payload suppression across restart, and zero new intake on replay or revocation. Current import-ID checks alone leave same-import generation changes untested."
+    },
+    {
+      "id": "S2-4",
+      "area": "Transactions",
+      "requirement": "Require evidence of overlapping attempts, committed binding/job/result readback and a retry or conflict outcome. Distinguish a single resulting row from verified deployed conflict behavior. A serial schedule is useful functional evidence and leaves overlap behavior unverified. Exercise generation changes at each boundary and distinguish stale replay from current payload or consent conflict. Assert zero new effects and preserved history on stale or denied paths."
+    }
+  ],
+  "recipient_rationale": [
+    "The scope treats an authorized boundary and shared generation as prerequisites but provides no named topology, owner or positive isolation receipt. Cover both legacy and candidate paths.",
+    "Ingress scope alone leaves saved response and job access unbound. Explicit replay and denied-context assertions must cover both writes and reads.",
+    "An out-of-window candidate cannot distinguish policy exclusion from retrieval omission. Add the complementary in-window control and pin literal dispositions and source offsets.",
+    "Current grouped progress is saved separately from backend intake. Require separate write and disclosure assertions, restart behavior, and an explicit stale result contract.",
+    "Committed row counts alone can also arise in a serial run. Require overlap and transaction outcome evidence."
+  ],
+  "roles": {
+    "fixture_author": "@adrian.factomaton",
+    "earlier_eligibility_decision_actor": "@adrian.factfinder",
+    "earlier_eligibility_event_recorder": "@adrian.factomaton",
+    "shared_owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "source_dependence": "One NOAA educational source family and prior reviewer exposure. The proposed validation would supply engineering evidence only.",
+    "scope_author": "@adrian.factomaton",
+    "recipient_decision_actor_and_recorder": "@adrian.factomaton"
+  },
+  "limits": "Static exact-version recipient assessment. Staging remains unrun. C013 remains withheld. Prior A7 acceptance and histories are preserved.",
+  "next_action": "Write an immutable v2 staging scope that closes P1 and S2-1 through S2-4, bind it to these receipts, and obtain fresh exact design review before staging."
+}
