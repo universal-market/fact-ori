@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "scope_revision": 2,
+  "task_key": "FO-W029-S2-D2",
+  "state": "local_design_ready_unassigned",
+  "scope_author": "@adrian.factomaton",
+  "requested_reviewer": "@adrian.factfinder",
+  "claim": {
+    "id": "C013",
+    "version": 1,
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1,
+    "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+  },
+  "history": {
+    "prior_scope": {
+      "path": "data/C013-serving-path-staging-validation-scope-v1.json",
+      "raw_sha256": "6d95ec05b8a6172b63c85e331d3256fe58f190f430507a79f7c708f897ffa336",
+      "commit": "cdfbc21c28304160e20e93361d226ddb7207f2fe"
+    },
+    "prior_review": {
+      "commit": "d0973ba42b013353c796f95655d44c726b10a76c",
+      "path": "data/C013-serving-path-staging-validation-factfinder-design-review-v1.json",
+      "raw_sha256": "9bc33c68e1b44df802debd5ad806dd1e2fb25fa878c3be52a975886a4b69be12",
+      "canonical_sha256": "c7defaf71e8f9d72c2fd75a99b11e77e5c4e8d50eb83ffe051fda5ea7965611a"
+    },
+    "prior_recipient_assessment": {
+      "path": "data/C013-serving-path-staging-validation-factomaton-recipient-assessment-v1.json",
+      "raw_sha256": "197b0b04ba32816eba17b76450f91a6a2b0352b46fad7cef110d95058b51a65b",
+      "message_id": "20304b0b-3fa8-466a-bdcd-6fd0841268a4",
+      "sequence": 3,
+      "readback_verified": true,
+      "actor": "@adrian.factomaton",
+      "delivery": "ACCEPT",
+      "design_disposition": "REVISE"
+    },
+    "prior_a7": {
+      "listing_id": "a263f372-56ca-48ae-8540-77085c8bfd3b",
+      "transaction_id": "c98826bc-e2c2-4b44-970d-96f822b2562e",
+      "contract_id": "be34d899-7be5-4f24-ad0a-9b2aa40aacff",
+      "execution_id": "be34d899-7be5-4f24-ad0a-9b2aa40aacff",
+      "task_id": "9d287227-e949-48a8-95ac-5a6f878f956d",
+      "decision_message_id": "4af3c0a6-bc98-481d-8bea-664841b2c40c"
+    }
+  },
+  "roles": {
+    "fixture_author": "@adrian.factomaton",
+    "earlier_eligibility_decision_actor": "@adrian.factfinder",
+    "earlier_eligibility_event_recorder": "@adrian.factomaton",
+    "shared_owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "source_dependence": "One NOAA educational source family and prior reviewer exposure. The proposed validation would supply engineering evidence only.",
+    "scope_author": "@adrian.factomaton",
+    "recipient_decision_actor_and_recorder": "@adrian.factomaton"
+  },
+  "source_inputs": {
+    "local_commit": "3b6fa41997a1ac4c0e2a7bf793ff32ba9d484b30",
+    "raw_sha256": {
+      "service/server.mjs": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+      "service/engine.mjs": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+      "convex/http.ts": "70dea2509793e460ea5c84fd546ba90533667dc7ced1ac4119cc6794f7291948",
+      "convex/checks.ts": "6237f453d7fac3b1c87e8f53651ea08a7ef74c072fc8131ea7db0eda995c92a1",
+      "deploy/self-hosted/nginx.conf": "b285368e21c89490cef30398d48a46cab96bf85a9680e9cff932ddb3d75d011c",
+      "deploy/self-hosted/compose.yaml": "e533c771daa0a3ac4257d7857059635ea2a8267fa4606f0e77e0e167daeefad3"
+    },
+    "observation_scope": "Checked-out source. Deployed build was not attested."
+  },
+  "other_input_sha256": {
+    "data/C013-serving-adapter-admission-check-scope-v2.json": "e034454ba3f3f3096ba84d2d1fa4cf6f40e603c53faad99121afcffff3983808",
+    "data/C013-routing-release-criteria-v2.json": "ab0975b4d9e261cce742ce039b7c348ba6dc0ef0ecbf8233867cca38d8cdab74",
+    "data/C013-routing-release-criteria-v3-consent-erratum.json": "a2ca5d8cb9af3355cd7af6f02b140a8643503ea3d5647af756c3cff18f224247",
+    "data/C013-serving-admission-fixture-factomaton-recipient-assessment-v2.json": "49e31d3d2f62c295dd19c03e7658388ff8defbe65ddacfdaf4f6e6234c0f96ae"
+  },
+  "active_baseline": {
+    "seed_import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "public_snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+    "established_mappings": 23,
+    "semantic_tests_passed": 50
+  },
+  "baseline_limit": "Export digests and mapping count reconfirmed. Prior semantic regression count is historical. No staging result is recorded.",
+  "preflight_state": "blocked_pending_evidence",
+  "release_state": "C013 withheld. Design only.",
+  "preflight": {
+    "id": "P1",
+    "verdicts": [
+      "ready",
+      "blocked"
+    ],
+    "topology": {
+      "entry": "An isolated instance of the actual gateway and semantic HTTP server. Use a staging-only, in-process test identity provider at ingress with two fixed synthetic principals. Exercise the same reviewed adapter boundary used to carry the resolved principal to the serving path.",
+      "trust": "The staging identity provider is a transport substitute. It validates only the separation of authority from request data. Require a named, already-authorized production-equivalent invocation boundary and evidence of its caller-to-scope mapping before claiming any deployed identity result. Record both facts separately.",
+      "authority": "One isolated Convex deployment owns the current non-reused generation, eligible intake binding and job, and public result payload and projection. Compare the generation inside each mutation that admits or saves and in the read that projects a group. Use SQLite for scheduling metadata only in the candidate path.",
+      "sink": "The legacy and candidate routes each target disposable stores and a test outbox sink. No publisher is running in the staging environment and network policy prevents external publication. Positive consent traffic requires a preflight receipt for both routes."
+    },
+    "receipt": [
+      "Record the exact gateway, semantic, backend, schema, route policy, model/index and snapshot revisions and the trusted boundary and generation owner. Record evidence that no production store, publisher or operator path is reachable. Missing evidence returns blocked.",
+      "Read committed job, binding, result and sink counts and identities in both routes before and after every case. Legacy job/key tables must remain unchanged during candidate cases. Test legacy positive consent only in its own isolated control namespace and confirm only its sink captures an effect.",
+      "Trace admission, save and group projection to the same authoritative generation. An independent health or import check cannot stand in for authority in the committing transaction or projection read. If the intended boundary is unavailable, stop before positive-consent execution.",
+      "Before and after the matrix, compare the active seed and public export digests, confirm C013 absence, and compare all 23 established mapping outcomes including version and record pins where present."
+    ]
+  },
+  "cases": [
+    {
+      "id": "S2-1",
+      "title": "Caller binding on request, save and disclosure",
+      "controls": [
+        [
+          "current",
+          "Two staging principals submit separate synthetic analyses using the same client idempotency label. A repeat by the same principal and exact consent/payload binds to the existing analysis and job. Each caller's immediate response, stored progress and job projection resolve only to that caller."
+        ],
+        [
+          "denied",
+          "Absent or invalid trusted principal, or a mismatched trusted analysis context, yields the documented denied response before admission, save or disclosure. Validate current and saved response entry points. Assert no added binding, job or result and no returned protected payload."
+        ],
+        [
+          "public-data",
+          "Verify that public idempotency values, text and optional consent do not select or change caller scope. The ingress contract rejects unsupported authority fields. Keep authenticated principals and analysis/effect positions as separate verified inputs."
+        ]
+      ]
+    },
+    {
+      "id": "S2-2",
+      "title": "Raw whole-request precedence and candidate exclusion",
+      "controls": [
+        [
+          "literal",
+          "Run L1 through L7 from the pinned routing table as decoded whole requests. Each is withheld while staged, with zero C013 payload, generic fallback or intake effect."
+        ],
+        [
+          "ranking",
+          "Use a deterministic synthetic ranking control that shows the candidate would occupy an eligible position if included, plus a below-window control. Capture candidate-pool eligibility before ranking and final response, using synthetic IDs. C013 stays out of generic exact, full-text and semantic candidate evidence regardless of rank."
+        ],
+        [
+          "precedence",
+          "Add normalization-equivalent nonliteral variants and a longer input that decomposes into a protected fragment plus exactly one independently eligible effect. Whole-request literal dispatch uses raw decoded text before transformations. The protected fragment yields neither a C013 answer nor intake, while only the independently eligible effect may bind a synthetic job with explicit consent."
+        ],
+        [
+          "offsets",
+          "Use zero-based half-open UTF-16 code-unit spans in the decoded original request. Verify source slices and stable extraction order, including a Unicode prefix that distinguishes code-unit indexing from code-point indexing."
+        ]
+      ],
+      "literal_cases": [
+        {
+          "id": "L1",
+          "decoded_request": "Can lightning strike the same place twice?",
+          "expected": "withheld",
+          "intake_effects": 0,
+          "disclosed_c013_payloads": 0
+        },
+        {
+          "id": "L2",
+          "decoded_request": "Can lightning strike the same object more than once?",
+          "expected": "withheld",
+          "intake_effects": 0,
+          "disclosed_c013_payloads": 0
+        },
+        {
+          "id": "L3",
+          "decoded_request": "Can't lightning strike the same place twice?",
+          "expected": "withheld",
+          "intake_effects": 0,
+          "disclosed_c013_payloads": 0
+        },
+        {
+          "id": "L4",
+          "decoded_request": "Lightning never strikes the same place twice. True?",
+          "expected": "withheld",
+          "intake_effects": 0,
+          "disclosed_c013_payloads": 0
+        },
+        {
+          "id": "L5",
+          "decoded_request": "Is it true that lightning cannot strike the same place twice?",
+          "expected": "withheld",
+          "intake_effects": 0,
+          "disclosed_c013_payloads": 0
+        },
+        {
+          "id": "L6",
+          "decoded_request": "Lightning never strikes the same place twice, right?",
+          "expected": "withheld",
+          "intake_effects": 0,
+          "disclosed_c013_payloads": 0
+        },
+        {
+          "id": "L7",
+          "decoded_request": "Is the claim that lightning never strikes twice false?",
+          "expected": "withheld",
+          "intake_effects": 0,
+          "disclosed_c013_payloads": 0
+        }
+      ]
+    },
+    {
+      "id": "S2-3",
+      "title": "Grouped write and HTTP disclosure at the authoritative generation",
+      "controls": [
+        [
+          "current",
+          "Cover immediate, asynchronous partial and completed group reads using the real entry points on staging. In a mixed group, preserve extraction order, unrelated approved effects and exact admitted job/effect bindings."
+        ],
+        [
+          "before-save",
+          "Advance generation while the import digest stays the same before the authoritative save. Cover fresh and existing results in immediate, partial and completed paths. Return stale and preserve earlier durable rows without adding a result or intake effect."
+        ],
+        [
+          "before-disclosure",
+          "Advance the same-import generation after save but before the authoritative projection read. Cover immediate and partial/completed reads. All output paths use that read as the disclosure decision point. Historical rows remain, while the stale response omits every old result, job, answer and evidence field."
+        ],
+        [
+          "restart",
+          "Repeat retained partial and completed reads after one staging restart. Verify the same stale suppression and no added intake on replay. Do not use SQLite progress bytes as publishable state."
+        ]
+      ],
+      "stale_response": {
+        "http_status": 409,
+        "body": {
+          "status": "stale",
+          "reason": "Serving generation changed."
+        },
+        "allowed_fields": [
+          "status",
+          "reason"
+        ]
+      }
+    },
+    {
+      "id": "S2-4",
+      "title": "Transaction overlap and committed effects",
+      "controls": [
+        [
+          "overlap",
+          "Use bounded paired synthetic requests and retain evidence of overlapping conflicting attempts from the authoritative backend, with attempt and outcome correlation and committed binding, job and result readback. Identical current submissions must resolve to one binding and one job. A serial schedule or single final row alone leaves backend conflict behavior unverified."
+        ],
+        [
+          "different",
+          "For a current binding, changed payload or consent under the same identity yields conflict without an added effect. Record retry/validation outcome evidence alongside committed counts."
+        ],
+        [
+          "stale",
+          "Advance generation at admission, save and disclosure in separate runs with identical import bytes. Stale replay yields a payload-free stale outcome, never current conflict or old job reuse. Confirm no additional effects and unchanged historical rows."
+        ],
+        [
+          "control",
+          "A valid independent request uses a distinct scoped binding. Denied contexts and missing authority produce zero effects. Record any outcome that cannot be observed distinctly as unverified."
+        ]
+      ]
+    }
+  ],
+  "acceptance": "P1 must be ready before the four families may run. Bind exact build, every input and before/after committed readback to each result. An unexecuted, unobserved or blocked check remains open. A passing isolated design or staging receipt has no factual, curation, production routing, deployment or public release effect."
+}
