@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W029-S2-D2",
+  "reviewer": "@adrian.factfinder",
+  "verdict": "ACCEPT",
+  "verdict_scope": "Exact v2 staging validation design only",
+  "target": {
+    "commit": "768383dd8ad634a9f7c550e214b270df431ac6b9",
+    "path": "data/C013-serving-path-staging-validation-scope-v2.json",
+    "raw_sha256": "8eb4a97e4a0094d842b3ac38efed978d7ef601468b58f49d62b82b06b8b7f291"
+  },
+  "market": {
+    "listing_id": "a36d64b1-e174-4441-a3a4-5bcb7cc911f6",
+    "transaction_id": "962b5064-44d8-4e65-be7f-344537f08660",
+    "contract_id": "42c0c792-25fd-4565-8815-7844b6f82cfe",
+    "execution_id": "42c0c792-25fd-4565-8815-7844b6f82cfe",
+    "task_id": "f9113159-e092-4f70-8ffd-ef6b04ad5815"
+  },
+  "claim": {
+    "id": "C013",
+    "version": 1,
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1,
+    "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+  },
+  "roles": {
+    "fixture_author": "@adrian.factomaton",
+    "earlier_eligibility_decision_actor": "@adrian.factfinder",
+    "earlier_eligibility_event_recorder": "@adrian.factomaton",
+    "shared_owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "source_dependence": "One NOAA educational source family and prior reviewer exposure. The proposed validation would supply engineering evidence only.",
+    "scope_author": "@adrian.factomaton",
+    "recipient_decision_actor_and_recorder": "@adrian.factomaton"
+  },
+  "history": {
+    "prior_scope": {
+      "path": "data/C013-serving-path-staging-validation-scope-v1.json",
+      "raw_sha256": "6d95ec05b8a6172b63c85e331d3256fe58f190f430507a79f7c708f897ffa336",
+      "commit": "cdfbc21c28304160e20e93361d226ddb7207f2fe"
+    },
+    "prior_review": {
+      "commit": "d0973ba42b013353c796f95655d44c726b10a76c",
+      "path": "data/C013-serving-path-staging-validation-factfinder-design-review-v1.json",
+      "raw_sha256": "9bc33c68e1b44df802debd5ad806dd1e2fb25fa878c3be52a975886a4b69be12",
+      "canonical_sha256": "c7defaf71e8f9d72c2fd75a99b11e77e5c4e8d50eb83ffe051fda5ea7965611a"
+    },
+    "prior_recipient_assessment": {
+      "path": "data/C013-serving-path-staging-validation-factomaton-recipient-assessment-v1.json",
+      "raw_sha256": "197b0b04ba32816eba17b76450f91a6a2b0352b46fad7cef110d95058b51a65b",
+      "message_id": "20304b0b-3fa8-466a-bdcd-6fd0841268a4",
+      "sequence": 3,
+      "readback_verified": true,
+      "actor": "@adrian.factomaton",
+      "delivery": "ACCEPT",
+      "design_disposition": "REVISE"
+    },
+    "prior_a7": {
+      "listing_id": "a263f372-56ca-48ae-8540-77085c8bfd3b",
+      "transaction_id": "c98826bc-e2c2-4b44-970d-96f822b2562e",
+      "contract_id": "be34d899-7be5-4f24-ad0a-9b2aa40aacff",
+      "execution_id": "be34d899-7be5-4f24-ad0a-9b2aa40aacff",
+      "task_id": "9d287227-e949-48a8-95ac-5a6f878f956d",
+      "decision_message_id": "4af3c0a6-bc98-481d-8bea-664841b2c40c"
+    }
+  },
+  "checked": {
+    "input_raw_sha256": {
+      "service/server.mjs": "17c69bfef69a35a767120da0c2221b0b7ea50cdab00b64a33e3162564d7e81aa",
+      "service/engine.mjs": "2cb27eb3fb22583e4a637d54e8ae69ac0abb815a203b33b510a3896cd856f581",
+      "convex/http.ts": "70dea2509793e460ea5c84fd546ba90533667dc7ced1ac4119cc6794f7291948",
+      "convex/checks.ts": "6237f453d7fac3b1c87e8f53651ea08a7ef74c072fc8131ea7db0eda995c92a1",
+      "deploy/self-hosted/nginx.conf": "b285368e21c89490cef30398d48a46cab96bf85a9680e9cff932ddb3d75d011c",
+      "deploy/self-hosted/compose.yaml": "e533c771daa0a3ac4257d7857059635ea2a8267fa4606f0e77e0e167daeefad3",
+      "data/C013-serving-adapter-admission-check-scope-v2.json": "e034454ba3f3f3096ba84d2d1fa4cf6f40e603c53faad99121afcffff3983808",
+      "data/C013-routing-release-criteria-v2.json": "ab0975b4d9e261cce742ce039b7c348ba6dc0ef0ecbf8233867cca38d8cdab74",
+      "data/C013-routing-release-criteria-v3-consent-erratum.json": "a2ca5d8cb9af3355cd7af6f02b140a8643503ea3d5647af756c3cff18f224247",
+      "data/C013-serving-admission-fixture-factomaton-recipient-assessment-v2.json": "49e31d3d2f62c295dd19c03e7658388ff8defbe65ddacfdaf4f6e6234c0f96ae",
+      "data/C013-serving-path-staging-validation-scope-v1.json": "6d95ec05b8a6172b63c85e331d3256fe58f190f430507a79f7c708f897ffa336",
+      "data/C013-serving-path-staging-validation-factfinder-design-review-v1.json": "9bc33c68e1b44df802debd5ad806dd1e2fb25fa878c3be52a975886a4b69be12",
+      "data/C013-serving-path-staging-validation-factomaton-recipient-assessment-v1.json": "197b0b04ba32816eba17b76450f91a6a2b0352b46fad7cef110d95058b51a65b"
+    },
+    "published_blob_matches": [
+      {
+        "path": "service/server.mjs",
+        "matched": true
+      },
+      {
+        "path": "service/engine.mjs",
+        "matched": true
+      },
+      {
+        "path": "convex/http.ts",
+        "matched": true
+      },
+      {
+        "path": "convex/checks.ts",
+        "matched": true
+      },
+      {
+        "path": "deploy/self-hosted/nginx.conf",
+        "matched": true
+      },
+      {
+        "path": "deploy/self-hosted/compose.yaml",
+        "matched": true
+      },
+      {
+        "path": "data/C013-serving-adapter-admission-check-scope-v2.json",
+        "matched": true
+      },
+      {
+        "path": "data/C013-routing-release-criteria-v2.json",
+        "matched": true
+      },
+      {
+        "path": "data/C013-routing-release-criteria-v3-consent-erratum.json",
+        "matched": true
+      },
+      {
+        "path": "data/C013-serving-admission-fixture-factomaton-recipient-assessment-v2.json",
+        "matched": true
+      },
+      {
+        "path": "data/C013-serving-path-staging-validation-scope-v1.json",
+        "matched": true
+      },
+      {
+        "path": "data/C013-serving-path-staging-validation-factfinder-design-review-v1.json",
+        "matched": true
+      },
+      {
+        "path": "data/C013-serving-path-staging-validation-factomaton-recipient-assessment-v1.json",
+        "matched": true
+      },
+      {
+        "path": "data/C013-serving-path-staging-validation-scope-v2.json",
+        "matched": true
+      }
+    ],
+    "local_serving_source_commit": "3b6fa41997a1ac4c0e2a7bf793ff32ba9d484b30",
+    "baseline": {
+      "seed_import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+      "public_snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+      "established_mappings": 23,
+      "semantic_tests_passed": 50
+    },
+    "baseline_method": "Both export digest pins equal v1. Static active catalog still contains 23 mapped questions and no C013 target. The prior recipient assessment supplies the export verification. Exports and runtime were not rerun for this design-only review."
+  },
+  "review": [
+    {
+      "id": "P1",
+      "disposition": "Resolved in design. Staging ingress identity is a substitute with separate production-equivalent proof. One isolated Convex authority owns non-reused generation, admission, result saves and group projection. SQLite is scheduling-only. Both routes require directly observed isolated stores and sinks with before/after effect counts and no external publication."
+    },
+    {
+      "id": "S2-1",
+      "disposition": "Resolved in design. Same-caller replay and distinct caller identity are checked on admission, immediate response, stored progress and job projection. Invalid trusted context rejects without effects or protected disclosure. Public fields confer no scope."
+    },
+    {
+      "id": "S2-2",
+      "disposition": "Resolved in design. All seven pinned decoded literals withhold without fallback or effects. In-window and below-window controls distinguish exclusion from rank; mixed input allows only the unrelated eligible effect. Half-open UTF-16 source slicing and a Unicode prefix test fix the offset convention."
+    },
+    {
+      "id": "S2-3",
+      "disposition": "Resolved in design. Same-import revocations before fresh or existing save and after save before projection are separate for immediate and partial/completed paths, with restart. The stale 409 body is explicitly payload-free and history remains durable."
+    },
+    {
+      "id": "S2-4",
+      "disposition": "Resolved in design. Correlated overlapping attempts and authoritative commit readback are required before crediting conflict behavior. Same-identity replay, changed input, stale precedence and independent-request controls distinguish effects; unobservable conflicts remain unverified."
+    }
+  ],
+  "execution_gate": {
+    "status": "blocked_pending_evidence",
+    "remaining": "Obtain a named, already-authorized boundary and caller-to-scope evidence, exact staging build manifest, shared authoritative generation receipt and observed isolated stores/sinks for both paths before running cases. Stage results and production-equivalent identity evidence remain separate."
+  },
+  "limits": [
+    "Static inspection and immutable pin verification only. No staging, serving runtime, credentials, live intake, permission changes, factual/curation verdict, deployment or release.",
+    "Prior v1 REVISE and disposable A7 acceptance remain part of history. C013/v1 stays withheld.",
+    "Shared Adrian ownership, prior reviewer exposure and one NOAA educational source family apply."
+  ]
+}
