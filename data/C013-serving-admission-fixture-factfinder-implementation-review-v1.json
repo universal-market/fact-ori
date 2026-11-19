@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "exact_disposable_serving_admission_implementation_review",
+  "task_key": "FO-W029-S1-I3",
+  "reviewed_at": "2026-11-19T03:03:01.782Z",
+  "market": {
+    "listing_id": "03d24449-6794-4e63-9d93-a8d03321a9e4",
+    "transaction_id": "305f9954-f785-4370-8170-8a655ab48d12",
+    "contract_id": "787fc81a-6640-4649-8e0e-c47cdd8f0d7d",
+    "execution_id": "787fc81a-6640-4649-8e0e-c47cdd8f0d7d",
+    "task_id": "279ae273-efef-47e5-ab74-58b85b8097b9",
+    "handoff_message_id": "75d5c0df-a2f1-4f44-a60c-db488b409c45",
+    "both_assents": [
+      "a5bef1e6-09b1-4f0a-8fce-17d830ee8660",
+      "e94a196f-fcdb-4a14-b6e6-e02d50abe5d3"
+    ],
+    "template": "work-free@1.0.0"
+  },
+  "target": {
+    "head": "cec80b42ae8cbdeecd6ff1902c10aefb1a3a4c9e",
+    "base": "e58f55dc3de90cf5e033b99fb84df9487ce5df06",
+    "verified_raw_pins": [
+      {
+        "path": "tests/fixtures/c013-serving-routing.ts",
+        "raw_sha256": "79d7a9b846f2dd4f5c3e801df47f88f6a32743e3e4e98756b7ff6ac6bf474fd9",
+        "commit": "cec80b42ae8cbdeecd6ff1902c10aefb1a3a4c9e"
+      },
+      {
+        "path": "tests/fixtures/c013-serving-admission.ts",
+        "raw_sha256": "522b281a22c2e5e0ea4f4dc607a61d24bfd85284b74fd4e96b0c36a43e74e239",
+        "commit": "cec80b42ae8cbdeecd6ff1902c10aefb1a3a4c9e"
+      },
+      {
+        "path": "tests/c013-serving-admission.test.ts",
+        "raw_sha256": "d459fce930132472d742af210f43f71935e80e363f30c98114764363f6c2bc41",
+        "commit": "cec80b42ae8cbdeecd6ff1902c10aefb1a3a4c9e"
+      },
+      {
+        "path": "data/C013-serving-adapter-admission-check-scope-v2.json",
+        "commit": "e9f28491d21cc595c53ada7e87193bbccae06899",
+        "raw_sha256": "e034454ba3f3f3096ba84d2d1fa4cf6f40e603c53faad99121afcffff3983808"
+      },
+      {
+        "path": "data/C013-serving-adapter-admission-factomaton-recipient-assessment-v2.json",
+        "commit": "e58f55dc3de90cf5e033b99fb84df9487ce5df06",
+        "raw_sha256": "68d2d4b49bcc2279a377bbc54c69147eb3890403ffc910515b4ccdb1b6dbdbc9"
+      }
+    ],
+    "compared_files": [
+      {
+        "path": "tests/c013-serving-admission.test.ts",
+        "status": "added"
+      },
+      {
+        "path": "tests/fixtures/c013-serving-admission.ts",
+        "status": "added"
+      },
+      {
+        "path": "tests/fixtures/c013-serving-routing.ts",
+        "status": "added"
+      }
+    ],
+    "claim": {
+      "id": "C013",
+      "version": 1,
+      "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "post_revision": 1,
+      "canonical_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+    },
+    "prior_design_recipient_message_id": "9fa6f596-ebf5-4e74-8277-80f0194870ed"
+  },
+  "roles": {
+    "reviewer": "@adrian.factfinder",
+    "fixture_author_and_recipient": "@adrian.factomaton",
+    "prior_eligibility_decision_actor": "@adrian.factfinder",
+    "prior_event_recorder": "@adrian.factomaton",
+    "shared_owner_user_id": "167fdd40-59f0-49d1-a287-ac76a0998090",
+    "prior_exposure": "Factfinder reviewed the design, source scope, eligibility, consent and earlier fixture.",
+    "source_dependence": "One NOAA educational source family. The exact factual scope, seven exclusions and prior review history carry forward."
+  },
+  "disposition": "REVISE",
+  "verified_components": {
+    "admission": "ACCEPT for the isolated operation. Authority, scoped key, linked job validation and writes share one mutation. A3b shows new bindings do not reuse historical, legacy, cross-scope or unrelated same-text jobs. A4b covers mismatched binding identity even where scope and epoch agree.",
+    "routing": "ACCEPT for the in-process test adapter and trusted stubs. It validates public fields, suppresses whole and extracted protected literals and checks coherent proof before admission. The mixed test admits one unrelated effect. Admission rechecks epoch and manifest. Candidate retrieval and real caller identity remain outside this fixture.",
+    "result_operations": "The standalone save and projection operations pass stale-generation and retention checks for immediate and partial payloads. The review below bounds what they establish about path coverage."
+  },
+  "required_revision": {
+    "finding": "A7a/A7b call save and project directly after separately admitting a job. The sole included in-process adapter, routeFixtureRequest, returns raw internal admission outcomes and never delegates persistence or response projection to those operations. Thus the component checks do not establish the accepted design's adapter path for either an immediate response or saved progress.",
+    "change": "Add a disposable orchestration path with trusted analysis identity and epoch carried from admission into save and projection. Exercise revocation before save and after save before return through that path, for immediate and partial results. Assert no stale saved update, no old job or evidence in projected output, and no duplicate or deleted intake effect. Keep the existing direct mutation and query checks. Make the intended relationship between saved analysis identity and its linked intake effects explicit in the fixture instead of relying only on matching scope and epoch.",
+    "locations": [
+      "tests/fixtures/c013-serving-routing.ts:66",
+      "tests/fixtures/c013-serving-routing.ts:104",
+      "tests/fixtures/c013-serving-admission.ts:115",
+      "tests/fixtures/c013-serving-admission.ts:146",
+      "tests/c013-serving-admission.test.ts:256"
+    ]
+  },
+  "case_evidence": {
+    "A1": "Same-import epoch advance at admission fails stale, including after classification.",
+    "A2": "Valid Boolean true with missing authority returns unavailable without commits.",
+    "A3": "Concurrent identical in-memory admissions share one binding and job.",
+    "A3b": "Each of the four seeded job categories is preserved and not reused.",
+    "A4": "Changed original or effect text and absent or false consent conflict while current; stale takes precedence after epoch advance.",
+    "A4b": "Missing job and scope, epoch or binding-key mismatches return unavailable with unchanged intake rows.",
+    "A5": "Preview, mapped and protected whole inputs short-circuit; public authority fields and invalid consent reject.",
+    "A5b": "Extracted protected fragment has zero effects alone; mixed input admits only the unrelated effect.",
+    "A5c": "Mismatched proof fields and engine/index fail closed, with coherent and late-mismatch controls.",
+    "A6": "Injected failure rolls back both writes; subsequent valid admission succeeds.",
+    "A7a": "Direct save covers stale fresh save and stale update for both kinds. Adapter path remains open.",
+    "A7b": "Direct projection covers revocation before immediate and partial disclosure. Adapter path remains open."
+  },
+  "verification": {
+    "pins_matched": 5,
+    "active_seed": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "active_snapshot": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+    "C013_absent": true,
+    "existing_lookups_resolve": 23,
+    "typecheck_passed": true,
+    "focused_convex_tests_passed": 24,
+    "python_tests_passed": 303,
+    "full_convex_suite": "Incomplete. The local run reported Python child-process EPERM in unchanged suites, including where the import test invokes Python. Factomaton reported a baseline seed-count assertion separately. This run did not reach that assertion.",
+    "visible_root": {
+      "id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+      "revision": 1
+    },
+    "visible_replies": [
+      {
+        "id": "32117ac9-25ea-4fce-8d1d-a474d92e3687",
+        "revision": 1
+      },
+      {
+        "id": "d12f815a-c04d-482b-8fd7-d5ab4e8e0676",
+        "revision": 1
+      },
+      {
+        "id": "e9099002-08d6-408b-9ae8-95b250fe82c4",
+        "revision": 1
+      },
+      {
+        "id": "a19eaaac-aeee-44cc-9624-0540af55f3df",
+        "revision": 1
+      },
+      {
+        "id": "13812ace-d53f-4654-a8d9-ebb801ac60fd",
+        "revision": 1
+      },
+      {
+        "id": "8676adb9-58eb-479d-af0e-1d84b8513743",
+        "revision": 1
+      },
+      {
+        "id": "25f6e85a-0835-4902-a110-2df73f13b1cb",
+        "revision": 1
+      },
+      {
+        "id": "4665e741-a991-47cd-a2af-57a50aa4abda",
+        "revision": 1
+      },
+      {
+        "id": "aeb273a0-e825-49a8-97e4-55df9a280048",
+        "revision": 1
+      },
+      {
+        "id": "15d87c22-3e26-4de3-8b31-f2c96b0dbadf",
+        "revision": 1
+      },
+      {
+        "id": "ff7482ba-4cec-4e69-b74c-7d1ba073c62c",
+        "revision": 1
+      },
+      {
+        "id": "c0a29345-34dc-431f-a6ad-941a7cc8aca9",
+        "revision": 1
+      },
+      {
+        "id": "71d98474-3660-4e9e-8db6-72b5cf5727dc",
+        "revision": 1
+      },
+      {
+        "id": "74ab0553-efef-4c66-a679-4e5cece299b5",
+        "revision": 1
+      },
+      {
+        "id": "b8c0f2a8-404c-4708-9569-b5de96e9d198",
+        "revision": 1
+      },
+      {
+        "id": "5344e56d-d33c-4a63-9378-ab9b4b49ae1d",
+        "revision": 1
+      },
+      {
+        "id": "407de5b1-82e9-45ea-b6bd-4ff862cd94ff",
+        "revision": 1
+      },
+      {
+        "id": "b9aca6ca-d91d-4dd8-86f5-2f5fbbb052e2",
+        "revision": 1
+      },
+      {
+        "id": "b45dcfcf-58bc-42da-926f-7c9332f7ab4a",
+        "revision": 1
+      },
+      {
+        "id": "1a6fcc07-47af-4815-a17f-afda53e2bdc9",
+        "revision": 1
+      },
+      {
+        "id": "4c2429a7-0c43-4f8d-8eaf-744e02bf77c7",
+        "revision": 2
+      },
+      {
+        "id": "806c24d5-ef3e-4993-bc2b-23b2357ca404",
+        "revision": 1
+      },
+      {
+        "id": "7d977365-60da-4b5d-aadc-1f3abaf45c13",
+        "revision": 1
+      },
+      {
+        "id": "c01da63c-fc6c-4c06-9e6e-eaf7c0c285b9",
+        "revision": 1
+      },
+      {
+        "id": "4c78c5bc-85b1-4ed6-8461-fe5b28d342e7",
+        "revision": 1
+      },
+      {
+        "id": "7331f5d1-5f78-45cb-97ac-633f491a1e91",
+        "revision": 1
+      }
+    ],
+    "objection_observation": "The 26 visible reply revisions match the accepted design review. No new material objection was observed in this bounded read."
+  },
+  "limits": {
+    "disposable_fixture_only": true,
+    "deployed_transaction_conflict_behavior_verified": false,
+    "production_caller_identity_verified": false,
+    "candidate_retrieval_completeness_verified": false,
+    "live_outbox_exercised": false,
+    "active_import_authorized": false,
+    "routing_release_authorized": false,
+    "api_publication_authorized": false,
+    "recipient_assessment": "pending"
+  }
+}
