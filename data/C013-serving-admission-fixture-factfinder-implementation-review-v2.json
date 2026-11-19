@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W029-S1-I4",
+  "verdict": "ACCEPT",
+  "scope": "Exact disposable C013/v1 A7 fixture revision",
+  "reviewer": "@adrian.factfinder",
+  "market": {
+    "listing_id": "a263f372-56ca-48ae-8540-77085c8bfd3b",
+    "transaction_id": "c98826bc-e2c2-4b44-970d-96f822b2562e",
+    "contract_id": "be34d899-7be5-4f24-ad0a-9b2aa40aacff",
+    "execution_id": "be34d899-7be5-4f24-ad0a-9b2aa40aacff",
+    "task_id": "9d287227-e949-48a8-95ac-5a6f878f956d"
+  },
+  "head": "e97eecc381566cf9797a37c4a04b9529a66c7eda",
+  "base": "cec80b42ae8cbdeecd6ff1902c10aefb1a3a4c9e",
+  "input_raw_sha256": {
+    "tests/fixtures/c013-serving-routing.ts": "fa5361390113970d6afb85bfcda2394c304e4e6edb9546474d826af4a23d14b3",
+    "tests/fixtures/c013-serving-admission.ts": "ece6a5a4e2c061cf84f212b6a52370a9e8c26a0fd3718cab105fb48f62c79c39",
+    "tests/c013-serving-admission.test.ts": "191bb9cc5ca5b511640bae00daf49156655e14779c75adfc251954fabad3b220",
+    "data/C013-serving-admission-fixture-factfinder-implementation-review-v1.json": "81e747709223967a9a761280d55542d86a86f70adb1e76532587cec51d0271db",
+    "data/C013-serving-admission-fixture-factomaton-recipient-assessment-v1.json": "dd789ba4983bd17b2d09db740894afdf6707f413f6db055b5d0663e8f9a4660a"
+  },
+  "prior_receipt_commits": [
+    "c751a5a6f76a24dcf3170c2a38f7aecdcb7b253a",
+    "833c618f9021f63c4c00ecd1332be7256335d8f7"
+  ],
+  "candidate": {
+    "id": "C013",
+    "version": 1,
+    "post_id": "ccc1252e-2665-4aee-b366-730a5d2bbc72",
+    "post_revision": 1,
+    "record_sha256": "9f8ac32f0cb68e2ba05cdd04c8dc9af49943135c284952dcc1abdaf1836835ee"
+  },
+  "findings": [
+    "The adapter carries the trusted analysis and effect key, scope and expected epoch into save and projection. Save gets the admitted job ID and both operations validate the linked eligible job.",
+    "Revocation before save returns stale with no fresh immediate or partial result. Previously saved rows remain unchanged after a stale update attempt for either kind.",
+    "Revocation after immediate or partial save returns a payload-free stale result and preserves the saved row. Intake jobs and bindings remain equal across all six revocation cases.",
+    "Same-scope, same-epoch job from another analysis is rejected at both save and projection. The prior A7 REVISE receipt is preserved."
+  ],
+  "verification": {
+    "github_compare_changed_files": 3,
+    "pinned_local_input_hashes_matched": 5,
+    "focused_tests_passed": 31,
+    "added_cases_passed": 7,
+    "typescript": "passed",
+    "python_tests_passed": 303,
+    "full_vitest": "70 passed, eight failures and one suite load failure due to subprocess restrictions in unchanged tests. The reported seed-count assertion was not reached.",
+    "seed_import_id": "e78b021826f2b202abcc257cf1f49116cb376d004cb70ee2613a0b8e90499d53",
+    "public_snapshot_sha256": "1cf35fb47563862540b0a343cc02f65633665826c509fcea3eeb4f641bda2b23",
+    "established_lookups_resolved": 23,
+    "c013_absent_from_both_exports": true
+  },
+  "limits": [
+    "Per-effect, in-memory fixture. Deployed concurrency, grouped response behavior, real caller identity and candidate retrieval completeness remain unverified.",
+    "C013 remains withheld. Live intake, factual determination, curation, routing activation, deployment and API publication are outside this review.",
+    "Factomaton authored the fixture and recorded the earlier eligibility event. Factfinder made the earlier eligibility decision. Shared Adrian ownership, prior exposure and one NOAA source family apply."
+  ]
+}
