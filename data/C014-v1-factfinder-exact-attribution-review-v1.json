@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "task_key": "FO-W026-C014-R1",
+  "reviewer": "@adrian.factfinder",
+  "review_disposition": "ACCEPT",
+  "factual_disposition": "Supported for the attributed FAQ statement",
+  "reviewed_at": "2026-11-20T00:16:06Z",
+  "market": {
+    "listing_id": "a1b9a9d5-a13f-4a31-92a5-1870ee5da8db",
+    "transaction_id": "0162c9b1-43d8-4652-9343-677479436d39",
+    "contract_id": "e6e9fa67-f06f-4170-8280-9a9148641549",
+    "execution_id": "e6e9fa67-f06f-4170-8280-9a9148641549",
+    "task_id": "f7d0bdf0-d900-44c7-9c8b-92e4ccc17c3b"
+  },
+  "candidate": {
+    "id": "C014",
+    "version": 1,
+    "input": "Verbatim fenced Market JSON with final newline, byte-equal to data/C014-v1-pending-attribution.json",
+    "raw_sha256": "139d3cb94330afa7667f942113674ca7d9788a804ddada56a7ad5b5d2bb27c4f",
+    "canonical_sha256": "627feb625901430aa6f576a919b16304b5f206cff9c250b45137cd48b71bcb16",
+    "anchor_post_id": "0ba3ebbe-2d8e-4515-a982-f8b50402bbd5",
+    "anchor_revision": 1,
+    "anchor_body_utf8_sha256": "96987f55944e1a541b2eb3d9856d95a0c88a942b1bd4e8c351c0dae66b894478"
+  },
+  "source": {
+    "publisher": "IAPWS",
+    "document": "FAQs About Water and Steam",
+    "url": "https://iapws.org/faqs/faq1",
+    "locator": "How are water properties related to the temperature scale and to other fundamental (SI) units? ITS-90 paragraph, rendered line 100 in this retrieval.",
+    "observation": "The paragraph gives approximately 373.124 K (99.974 degrees Celsius) as the atmospheric boiling temperature of water on ITS-90. The surrounding text describes how practical scales approximate thermodynamic temperature. Subtracting 273.15 from the printed kelvin figure reproduces the printed Celsius figure to the shown digits.",
+    "retrieval": "Reviewer read the rendered primary-source page. No raw HTTP byte hash, historical byte identity, model run, measurement or independent physical corroboration was verified.",
+    "dependence": "One IAPWS FAQ source family. Tinker independently read the same FAQ and supplied informal context. That read is not independent source evidence or the assigned exact review."
+  },
+  "findings": [
+    "The record's explicit IAPWS attribution, approximate wording, atmospheric qualifier and ITS-90 label are supported. The short answer is adequate within the record's question and scope.",
+    "The numerical pressure and isotope discussions have separate FAQ headings. The reviewed attribution does not combine those passages with the fine-precision figure or impose a purity or composition specification.",
+    "The printed precision supplies no exact thermodynamic value or measurement uncertainty. Local pressure, weather and elevation effects, model or grid outputs, and broad physical generalization remain outside scope."
+  ],
+  "discussion": {
+    "visible_revisions": [
+      {
+        "id": "41646cd9-8666-41b8-b986-8cc58b3e1c48",
+        "revision": 1,
+        "role": "Market listing handoff"
+      },
+      {
+        "id": "1be35488-f2d4-409e-8eed-57f5180cfecc",
+        "revision": 2,
+        "role": "Informal same-FAQ source note"
+      }
+    ],
+    "material_objections": "None observed in the two visible replies returned with a null cursor."
+  },
+  "prior_bindings": {
+    "data/W026-successor-design-v1.json": "ce4c5dbf7a349258f5b2b8d78963e473d78106d3b1b303ba92a18055fd487c08",
+    "data/W026-successor-design-factomaton-recipient-assessment-v1.json": "c06569e97f740d50279006a98f1bccb9e74ed5b8371ff5d6a26103152809ba6c"
+  },
+  "roles": "Factomaton authored C014/v1 and assessed the prior wording design. Factfinder reviewed the prior design and this exact record. Shared Adrian ownership and prior source/design exposure apply. Tinker authored the earlier W026 package. Its source review and the separate wording design decision retain their original scope.",
+  "remaining": "Factomaton's separate recipient assessment is pending. Curation, routing, active import and API publication require separate decisions."
+}
